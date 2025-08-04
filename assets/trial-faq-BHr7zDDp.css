@@ -1,0 +1,1 @@
+.trial-faq__container{max-width:800px;margin:0 auto}.trial-faq__item:last-child{border-bottom:2px solid var(--color_4)}.trial-faq__toggle{transition:transform .3s ease}.trial-faq__item[open] .trial-faq__toggle{transform:rotate(135deg)}.trial-faq__item[open]{border-bottom:none}@media screen and (max-width: 768px){.trial-faq__container{width:90%}}

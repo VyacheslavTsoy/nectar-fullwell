@@ -1,0 +1,165 @@
+@use '../config/all-config' as cfg;
+
+.btn {
+  @include cfg.font(bold, 16px, 20px);
+
+  display: inline-block;
+  background-color: var(--color_1);
+  color: var(--color-white);
+  cursor: pointer;
+  border: 2px solid var(--color_1);
+  padding: 1.4rem 2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+
+  &.btn-disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.5;
+
+    &:hover {
+      transform: translateY(0);
+    }
+  }
+
+  &.btn-mini {
+    padding: 7px 15px 5px;
+    min-width: 70px;
+    border-radius: 5px;
+  }
+
+  &.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.btn-primary {
+  background-color: var(--color_1);
+  border-color: var(--color_1);
+
+  &:hover {
+    background-color: var(--color_1_tertiary);
+    color: var(--color_1);
+  }
+}
+
+.btn-secondary {
+  background-color: var(--color_2);
+  border-color: var(--color_2);
+
+  &:hover {
+    background-color: var(--color_2_tertiary);
+    color: var(--color_2);
+  }
+
+  &.m-invert {
+    background-color: var(--color_2_tertiary);
+    color: var(--color_2);
+
+    &:hover {
+      background-color: var(--color_2);
+      border-color: var(--color_2);
+    }
+  }
+}
+
+.btn-tertiary,
+.template-product.m-product-landing-page .l-product__main .btn.btn-primary {
+  background-color: var(--color_3);
+  border-color: var(--color_3);
+
+  &:hover {
+    background-color: var(--color_3_tertiary);
+    color: var(--color_3);
+  }
+
+  &.m-invert {
+    background-color: var(--color_3_tertiary);
+    color: var(--color_3);
+
+    &:hover {
+      background-color: var(--color_3);
+      border-color: var(--color_3);
+    }
+  }
+}
+
+.btn-fourth {
+  background-color: var(--color_4);
+  border-color: var(--color_4);
+
+  &:hover {
+    background-color: var(--color_4_secondary);
+    color: var(--color_4);
+  }
+
+  &.m-invert {
+    background-color: var(--color_4_secondary);
+    color: var(--color_4);
+
+    &:hover {
+      background-color: var(--color_4);
+      border-color: var(--color_4);
+    }
+  }
+}
+
+.btn-fifth {
+  background-color: var(--color_5);
+  border-color: var(--color_5);
+
+  &:hover {
+    background-color: var(--color_5_secondary);
+    color: var(--color_5);
+  }
+
+  &.m-invert {
+    background-color: var(--color_5_secondary);
+    color: var(--color_5);
+
+    &:hover {
+      background-color: var(--color_5);
+      border-color: var(--color_5);
+    }
+  }
+}
+
+.btn-sixth {
+  background-color: var(--color_6);
+  border-color: var(--color_6);
+
+  &:hover {
+    background-color: var(--color_6_secondary);
+    color: var(--color_6);
+  }
+
+  &.m-invert {
+    background-color: var(--color_6_secondary);
+    color: var(--color_6);
+
+    &:hover {
+      background-color: var(--color_6);
+      border-color: var(--color_6);
+    }
+  }
+}
+
+// .btn-invert {
+//   font-weight: 800;
+//   font-size: 16px;
+//   line-height: 20px;
+//   padding: 12px 15px 12px;
+//   text-transform: uppercase;
+//   background-color: var(--color-white);
+//   color: var(--color_1);
+
+//   &:hover {
+//     background-color: var(--color_1-hover);
+//     color: var(--color-white);
+//   }
+// }

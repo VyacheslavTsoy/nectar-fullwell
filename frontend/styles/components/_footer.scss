@@ -1,0 +1,36 @@
+@use '../config/all-config' as cfg;
+
+.b-footer {
+  &-input {
+    background-color: var(--color-body-bg);
+    border: 2px solid var(--color_1);
+    border-radius:  5px;
+    color: var(--color_1);
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding: 13px 15px 14px;
+    width: 300px;
+
+    &::placeholder {
+      color: var(--color_1);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    @include cfg.media(max-t) {
+      width: 100%;
+      max-width: 380px;
+    }
+  }
+
+  &-btn {
+    width: 145px;
+
+    @include cfg.media(max-t) {
+      width: 100%;
+      max-width: 380px;
+    }
+  }
+}

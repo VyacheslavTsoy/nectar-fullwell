@@ -1,0 +1,67 @@
+{% comment %} 
+  Properties:
+    - image: Image 
+    - max_width: number
+    - alt: string
+    - class: string
+    - preload: boolean (optional)
+    - lazy: boolean (optional)
+{% endcomment %}
+
+{% comment %} {% render 'img-compressor',
+    image: product.featured_image,
+    max_width: 800,
+    alt: product.title,
+    class: 'product-image' %} {% endcomment %}
+ {% comment %} Load Your Hero Image First
+ 
+ {% render 'img-compressor',
+    image: section.settings.hero_image,
+    max_width: 1200,
+    alt: 'Hero banner',
+    class: 'hero-image',
+    preload: true %} {% endcomment %}
+ {% comment %} Lazy Load Product Grids
+ 
+ {% for product in collection.products %}
+   {% render 'img-compressor',
+      image: product.featured_image,
+      max_width: 400,
+      alt: product.title,
+      class: 'product-grid-image',
+      lazy: true %}
+ {% endfor %} {% endcomment %}
+
+{% assign widths = "100,200,300,400,600,800,1000" | split: "," %}
+{% assign srcset_values = " " %}
+{% assign max_width = max_width | plus: 0 | default: 1000 %}
+
+{% for width in widths %}
+  {% assign width_num = width | plus: 0 %}
+  {% if width_num <= max_width %}
+    {% assign srcset_item = image | image_url: width: width_num | append: " " | append: width | append: "w" %}
+    {% if srcset_values != "" %}
+      {% assign srcset_values = srcset_values | append: ", " %}
+    {% endif %}
+    {% assign srcset_values = srcset_values | append: srcset_item %}
+  {% endif %}
+{% endfor %}
+
+<img src="{{ image | image_url: width: max_width }}" 
+    srcset="{{ srcset_values }}"
+    sizes="
+           (max-width: 480px) 400px,
+           (max-width: 768px) 600px,
+           (max-width: 992px) 600px,
+           (max-width: 1200px) 800px,
+           {{ max_width }}px"
+    width="{{ max_width }}" height="{{ max_width }}" 
+    alt="{{ alt }}" 
+    class="{{ class }}"
+    {% if preload == true %}
+      fetchpriority="high"
+    {% endif %}
+    {% if lazy == true %}
+      loading="lazy"
+    {% endif %}
+/>

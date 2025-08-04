@@ -1,0 +1,101 @@
+
+@use "sass:map";
+@use "sass:list";
+
+// Duplicate variables from tailwind.config.js
+$breakpoint-xs:     480px; // var(--small-resolution);
+$breakpoint-mobile: 768px; // var(--mobile-resolution);
+$breakpoint-tablet: 976px; // var(--tablet-resolution);
+$breakpoint-large:  1300px;// var(--desktop-resolution);
+
+$media: (
+    max-xs: 'screen and (max-width: #{$breakpoint-xs - 1})',
+    min-xs: 'screen and (min-width: #{$breakpoint-xs})',
+    // Mobile
+    max-m: 'screen and (max-width: #{$breakpoint-mobile - 1})',
+    min-m: 'screen and (min-width: #{$breakpoint-mobile})',
+    // Tablet
+    tablet: 'screen and (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1})',
+    max-t: 'screen and (max-width: #{$breakpoint-tablet - 1})',
+    min-t: 'screen and (min-width: #{$breakpoint-tablet})',
+    // Desktop
+    min-l: 'screen and (min-width: #{$breakpoint-large})',
+    max-l: 'screen and (max-width: #{$breakpoint-large - 1})',
+    // Large Desktop
+    min-xl: 'screen and (min-width: #{$breakpoint-large})',
+);
+
+// stylelint-disable
+@mixin media($query) {
+  $__query: ();
+
+  @each $type in $query {
+      @if map.has-key($media, $type) {
+          $__query: list.append($__query, map.get($media, $type), $separator: comma);
+      } @else {
+          @warn "Unknown media query: #{$type}";
+      }
+  }
+
+  @media #{$__query} {
+      @content;
+  }
+}
+
+/*md
+# Media queries (breakpoints)
+
+`media()` mixin for make it easier to implement responsive styling via media queries.
+
+## Configuration
+
+Our `variables` for generating media-queries(from tailwind.config.js):
+```
+$breakpoint-xs:     var(--small-resolution);
+$breakpoint-mobile: var(--mobile-resolution);
+$breakpoint-tablet: var(--tablet-resolution);
+$breakpoint-large:  var(--desktop-resolution);
+```
+
+`media` mixin works with `$media` map where there're key-value pairs:
+`media-name: media query`
+
+This is how `$media` map looks:
+
+```scss
+$media: (
+    max-xs: 'screen and (max-width: #{$breakpoint-xs - 1})',
+    min-xs: 'screen and (min-width: #{$breakpoint-xs})',
+    // Mobile
+    max-m: 'screen and (max-width: #{$breakpoint-mobile - 1})',
+    min-m: 'screen and (min-width: #{$breakpoint-mobile})',
+    // Tablet
+    tablet: 'screen and (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1})',
+    max-t: 'screen and (max-width: #{$breakpoint-tablet - 1})',
+    min-t: 'screen and (min-width: #{$breakpoint-tablet})',
+    // Desktop
+    min-l: 'screen and (min-width: #{$breakpoint-large})',
+    max-l: 'screen and (max-width: #{$breakpoint-large - 1})',
+    // Large Desktop
+    min-xl: 'screen and (min-width: #{$breakpoint-large})',
+);
+```
+
+## Usage
+
+Here is how to use `media()` mixin:
+```scss
+.b-block {
+    // styles outside of a media query
+
+    @include media(max-m) {
+        // styles for 'mobile' viewports
+    };
+
+    @include media(max-m min-l) {
+        // styles for 'mobile' and 'desktop' viewports
+    };
+}
+```
+Simply edit this file and add your own media queries to `$media` map.
+*/

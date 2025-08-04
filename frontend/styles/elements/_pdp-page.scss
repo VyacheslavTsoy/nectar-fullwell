@@ -1,0 +1,377 @@
+@use '../config/all-config' as cfg;
+
+.l-product {
+    padding-bottom: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+  &__main {
+    &.m-landing {
+
+      margin-top: -120px;
+      // border: 4px solid var(--secondary-color);
+      background-color: var(--color-white);
+      border-radius: 8px;
+      padding: 20px;
+      align-items: center;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+
+      @media (min-width: 768px) {
+        padding: 40px;
+      }
+
+      .l-product__gallery {
+        background-color: var(--color_4_secondary);
+      }
+    }
+  }
+
+  &__info {
+    padding-bottom: 20px;
+
+    @include cfg.media(max-m) {
+      padding-bottom: 0;
+    }
+  }
+
+  &__gallery {
+
+  }
+
+  &__gallery--skeleton {
+    background-color: #f3f3f3;
+    padding-bottom: 100%;
+  }
+}
+
+
+/* Product Tabs Selector CSS */
+
+.tab-radio {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.tabs-product-selector__labels {
+  display: flex;
+  flex-wrap: wrap;
+
+  .tab-label {
+    position: relative;
+    padding: 19px 30px;
+
+    @include cfg.media(max-m) {
+      padding: 6px 15px;
+    }
+
+    &.active{
+      font-weight: bold;
+      opacity: 1;
+
+      &::after  {
+        background-color: var(--secondary-color) !important;
+      }
+
+      &::before {
+        background-color: #ffffff !important;
+      }
+    }
+
+    &::after {
+      position: static;
+      content: "";
+      width: 16px;
+      min-width: 16px;
+      height: 16px;
+      background-color: #ffffff;
+      border: 2px solid white;
+      outline: 2px solid var(--secondary-color);
+      z-index: 10;
+      border-radius: 50%;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      top: 100%;
+      bottom: -3px;
+      height: 4px;
+      background-color: transparent;
+      z-index: 10;
+    }
+  }
+}
+
+.tab-label {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 8px;
+  margin: 0;
+  gap: 10px;
+  flex: 1;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  word-break: break-word;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #ffffff;
+  opacity: 0.5;
+  // border: 2px solid var(--secondary-color);
+  border-bottom: none;
+  color: var(--secondary-color);
+  transition: all 0.25s ease-in-out 0s;
+
+  @include cfg.media(max-m) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &-discount {
+    padding-left: 5px;
+  }
+}
+
+.tab-label::after {
+  position: static;
+  content: "";
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: transparent;
+  z-index: 10;
+  /* transition: all 0.25s ease-in-out 0s; */
+}
+
+.product-selector__item .alternate_title {
+  position: static !important;
+  /* bottom: 0 !important;
+  left: 0 !important; */
+  width: 100% !important;
+  height: auto !important;
+  object-fit: unset !important;
+  top: unset !important;
+  text-align: center !important;
+  padding: 10px 10px !important;
+  line-height: 20px !important;
+  font-size: 16px !important;
+  color: var(--secondary-color);
+  text-decoration: none !important;
+  /* background: #fff !important; */
+}
+
+.tab-panel {
+  width: 100%;
+  display: none;
+  word-break: break-word;
+  padding: 20px;
+  background: #ffffff;
+  // border: 2px solid var(--tertiary-color);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  /*box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;*/
+}
+
+.product-selector__items {
+  /* display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--grid-desktop-horizontal-spacing);
+  row-gap: var(--grid-desktop-vertical-spacing); */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  &.m-bundle {
+    grid-template-columns: 1fr;
+
+    .product-selector__item {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+
+      @media (max-width: 767px) {
+        // flex-direction: column;
+      }
+      .alternate_title {
+        padding: 0 0 10px !important;
+        text-align: left !important;
+      }
+    }
+
+    .product-selector__item-link  {
+      display: flex;
+      flex-grow: 1;
+    }
+
+    .product-selector__item-desc {
+      padding: 10px 10px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .media {
+      width: 100px;
+      height: 100px;
+      min-width: 100px;
+      // border: 2px solid var(--secondary-color);
+      border-radius: 8px;
+
+      @media (max-width: 767px) {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+      }
+    }
+
+    .b-quantity {
+      width: 70px;
+      min-width: 70px;
+      height: 35px;
+      border-radius: 5px;
+    }
+  }
+
+  .product-selector__item {
+    border: 2px solid transparent;
+
+
+    &.m-active {
+      pointer-events: none;
+      border-color: var(--secondary-color);
+      border-radius: 8px;
+
+      .alternate_title {
+        font-weight: bold;
+      }
+    }
+
+    &.m-mix-match {
+      grid-column: 2 / 4;
+      grid-row: 2;
+      // padding: 10px;
+
+      @media (max-width: 767px) {
+        grid-column: span 3;
+      }
+
+      .product-selector__item-link   {
+        border: 2px solid var(--secondary-color);
+        border-radius: 8px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+        height: 100%;
+
+        .media picture {
+          display: block;
+          height: 100%;
+        }
+      }
+
+      .product-selector__item-desc {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .media {
+
+      }
+    }
+  }
+
+}
+
+// Benefits
+
+.main-product__benefits {
+  padding: 20px 0;
+}
+
+@media (max-width: 767px) {
+  .main-product__benefits {
+    padding: 20px 0;
+  }
+}
+
+
+.main-product__benefits-list {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-product__benefits-icon {
+  background-color: var(--secondary-color);
+  margin: 0;
+  padding: 4px;
+  border-radius: 50%;
+
+}
+
+.main-product__benefits-image {
+  display: block;
+  min-width: 64px;
+  width: 64px;
+}
+
+.main-product__benefits-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.main-product__benefits-text {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .main-product__benefits-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.b-pdp_accordion {
+  &--item {
+
+  }
+
+  &--item_btn {
+
+  }
+
+  &--item_content {
+
+  }
+
+  &--item_image {
+    width: 120px;
+    height: 120px;
+  }
+}

@@ -1,0 +1,453 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Theme Contara",
+    "theme_version": "0.1.0",
+    "theme_author": "Contara",
+    "theme_documentation_url": "https://www.contara.com/",
+    "theme_support_url": "https://www.contara.com/"
+  },
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "select",
+        "id": "header_layout",
+        "label": "Header Layout",
+        "options": [
+          {
+            "value": "left",
+            "label": "Logo Left Aligned"
+          },
+          {
+            "value": "center",
+            "label": "Logo Center Aligned"
+          },
+          {
+            "value": "above",
+            "label": "Logo Above Aligned"
+          }
+        ],
+        "default": "center"
+      },
+      {
+        "type": "image_picker",
+        "id": "header_logo",
+        "label": "Header Logo"
+      },
+      {
+        "type": "color",
+        "id": "header_bg",
+        "label": "Header Background"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_promo",
+        "label": "Promo banner show/hide",
+        "default": true
+      },
+      {
+        "type": "url",
+        "id": "show_promo_link",
+        "label": "Promo banner link"
+      },
+      {
+        "type": "richtext",
+        "id": "promo_text",
+        "label": "Promo Banner Text"
+      },
+      {
+        "type": "link_list",
+        "id": "header_menu_1",
+        "label": "Header Menu 1"
+      },
+      {
+        "type": "link_list",
+        "id": "header_menu_2",
+        "label": "Header Menu 2"
+      }
+    ]
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color_scheme_group",
+        "id": "color_schemes",
+        "definition": [
+          {
+            "type": "color",
+            "id": "background",
+            "label": "Background",
+            "default": "#FFFFFF"
+          },
+          {
+            "type": "color_background",
+            "id": "background_gradient",
+            "label": "Background Gradient",
+            "info": "Background Gradient"
+          },
+          {
+            "type": "color",
+            "id": "text",
+            "label": "Text",
+            "default": "#121212"
+          },
+          {
+            "type": "color",
+            "id": "color_primary",
+            "label": "Primary Color",
+            "default": "#FFFFFF"
+          },
+          {
+            "type": "color",
+            "id": "color_secondary",
+            "label": "Secondary Color",
+            "default": "#FFFFFF"
+          },
+          {
+            "type": "color",
+            "id": "color_tertiary",
+            "label": "Tertiary Color",
+            "default": "#FFFFFF"
+          },
+        ],
+        "role": {
+          "text": "text",
+          "background": {
+            "solid": "background",
+            "gradient": "background_gradient"
+          },
+          "links": "color_secondary",
+          "icons": "color_primary",
+          "primary_button": "color_primary",
+          "on_primary_button": "color_secondary",
+          "primary_button_border": "color_primary",
+          "secondary_button": "color_secondary",
+          "on_secondary_button": "color_primary",
+          "secondary_button_border": "color_secondary"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Megamenu",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Megamenu"
+      },
+      {
+        "type": "checkbox",
+        "id": "is_enabled_megamenu",
+        "label": "Enable Megamenu",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "category_column_size",
+        "label": "Category Column Size",
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "default": 2
+      },
+      {
+        "type": "range",
+        "id": "featured_blocks_column_size",
+        "label": "Featured Blocks Column Size",
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "default": 2
+      },
+      {
+        "type": "text",
+        "id": "megamenu_title",
+        "label": "Megamenu Title",
+        "default": "Custom Menu Title"
+      },
+      {
+        "type": "header",
+        "content": "Featured Blocks"
+      },
+      {
+        "type": "text",
+        "id": "featured_blocks_title",
+        "label": "Featured Blocks Title",
+        "default": "Featured"
+      },
+      {
+        "type": "checkbox",
+        "id": "is_enabled_featured_blocks_mobile",
+        "label": "Enable Featured Blocks in Mobile Menu",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Featured Block #1"
+      },
+      {
+        "type": "image_picker",
+        "id": "featured_block_1_image",
+        "label": "Featured Block Image"
+      },
+      {
+        "type": "text",
+        "id": "featured_block_1_title",
+        "label": "Featured Block Title",
+        "default": "Featured Block"
+      },
+      {
+        "type": "text",
+        "id": "featured_block_1_description",
+        "label": "Featured Block Description",
+        "default": "Featured Block Description"
+      },
+      {
+        "type": "url",
+        "id": "featured_block_1_link",
+        "label": "Featured Block Link"
+      },
+      {
+        "type": "header",
+        "content": "Featured Block #2"
+      },
+      {
+        "type": "image_picker",
+        "id": "featured_block_2_image",
+        "label": "Featured Block Image"
+      },
+      {
+        "type": "text",
+        "id": "featured_block_2_title",
+        "label": "Featured Block Title",
+        "default": "Featured Block"
+      },
+      {
+        "type": "text",
+        "id": "featured_block_2_description",
+        "label": "Featured Block Description",
+        "default": "Featured Block Description"
+      },
+      {
+        "type": "url",
+        "id": "featured_block_2_link",
+        "label": "Featured Block Link"
+      },
+      {
+        "type": "header",
+        "content": "Featured Block #3"
+      },
+      {
+        "type": "image_picker",
+        "id": "featured_block_3_image",
+        "label": "Featured Block Image"
+      },
+      {
+        "type": "text",
+        "id": "featured_block_3_title",
+        "label": "Featured Block Title",
+        "default": "Featured Block"
+      },
+      {
+        "type": "text",
+        "id": "featured_block_3_description",
+        "label": "Featured Block Description",
+        "default": "Featured Block Description"
+      },
+      {
+        "type": "url",
+        "id": "featured_block_3_link",
+        "label": "Featured Block Link"
+      }
+    ]
+  },
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "type": "color",
+        "id": "footer_bg",
+        "label": "Footer Background",
+        "default": "#E55454"
+      },
+      {
+        "type": "text",
+        "id": "footer_menu_title_1",
+        "label": "Menu title 1",
+        "default": "Shop"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_menu_1",
+        "label": "Footer Menu 1"
+      },
+      {
+        "type": "text",
+        "id": "footer_menu_title_2",
+        "label": "Menu title 2",
+        "default": "About"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_menu_2",
+        "label": "Footer Menu 2"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_title",
+        "label": "Newsletter Title",
+        "default": "Sign up to get email updates"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_placeholder",
+        "label": "Newsletter Placeholder",
+        "default": "email@gmail.com"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_button_text",
+        "label": "Newsletter Button Text",
+        "default": "SIGN UP"
+      },
+      {
+        "type": "text",
+        "id": "social_title",
+        "label": "Social Title",
+        "default": "Follow Us:"
+      },
+      {
+        "type": "text",
+        "id": "social_facebook",
+        "label": "Facebook Link"
+      },
+      {
+        "type": "image_picker",
+        "id": "social_facebook_icon",
+        "label": "Facebook Icon"
+      },
+      {
+        "type": "text",
+        "id": "social_instagram",
+        "label": "Instagram Link"
+      },
+      {
+        "type": "image_picker",
+        "id": "social_instagram_icon",
+        "label": "Instagram Icon"
+      },
+      {
+        "type": "text",
+        "id": "social_twitter",
+        "label": "Twitter Link"
+      },
+      {
+        "type": "image_picker",
+        "id": "social_twitter_icon",
+        "label": "Twitter Icon"
+      },
+      {
+        "type": "text",
+        "id": "social_youtube",
+        "label": "YouTube Link"
+      },
+      {
+        "type": "image_picker",
+        "id": "social_youtube_icon",
+        "label": "YouTube Icon"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_menu_3",
+        "label": "Footer Menu 3"
+      },
+      {
+        "type": "text",
+        "id": "copyright_text",
+        "label": "Copyright Text",
+        "default": "© 2024 Shop Name | All Rights Reserved"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Use typography to present your design and content as clearly and efficiently as possible."
+      },
+      {
+        "type": "header",
+        "content": "Headings"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_heading",
+        "default": "inter_n7",
+        "label": "Font",
+        "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https://help.shopify.com/en/manual/online-store/os/store-speed/improving-speed#fonts)"
+      },
+      {
+        "type": "header",
+        "content": "Body"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_body",
+        "default": "inter_n5",
+        "label": "Font",
+        "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https://help.shopify.com/en/manual/online-store/os/store-speed/improving-speed#fonts)"
+      }
+    ]
+  },
+  {
+    "name": "Cart",
+    "settings": [
+      {
+        "type": "select",
+        "id": "cart_type",
+        "options": [
+          {
+            "value": "drawer",
+            "label": "Drawer"
+          },
+          {
+            "value": "page",
+            "label": "Page"
+          }
+        ],
+        "default": "page",
+        "label": "Cart type"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_cart_products_carousel",
+        "label": "Show Cart Products Carousel",
+        "default": true
+      },
+      {
+        "type": "product_list",
+        "id": "cart_products",
+        "label": "Cart Products Carousel",
+      }
+    ]
+  },
+  {
+    "name": "Currency",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Currency codes"
+      },
+      {
+        "type": "checkbox",
+        "id": "currency_code_enabled",
+        "label": "Show currency codes",
+        "info": "Cart and checkout prices always show currency codes. Example: $1.00 USD.",
+        "default": true
+      }
+    ]
+  }
+]

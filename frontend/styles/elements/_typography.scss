@@ -1,0 +1,112 @@
+
+
+.shopify-policy__container {
+  line-height: 1.2em;
+
+  h1, h2, h3, h4, h5, .h0, .h1, .h2, .h3, .h4, .h5 {
+    font-family: 'Gazpacho', 'Arial', sans-serif;
+    font-style: var(--font-heading-style);
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.2em;
+    word-break: break-word;
+  }
+
+  h1,
+  .h1 {
+    font-size: 25px;
+    padding: 10px 0;
+  }
+
+  @media only screen and (min-width: 750px) {
+    h1,
+    .h1 {
+      font-size: 35px;
+    }
+  }
+
+  h2,
+  .h2 {
+    font-size: 20px;
+    padding: 10px 0;
+  }
+
+  @media only screen and (min-width: 750px) {
+    h2,
+    .h2 {
+      font-size: 24px;
+    }
+  }
+
+  h3,
+  .h3 {
+    font-size: 17px;
+    padding: 10px 0;
+  }
+
+  @media only screen and (min-width: 750px) {
+    h3,
+    .h3 {
+      font-size: 18px;
+    }
+  }
+
+  h4,
+  .h4 {
+    font-size: 15px;
+    padding: 10px 0;
+  }
+
+  h5,
+  .h5 {
+    font-size: 12px;
+  }
+
+  @media only screen and (min-width: 750px) {
+    h5,
+    .h5 {
+      font-size: 13px;
+    }
+  }
+
+  h6,
+  .h6 {
+    color: rgba(var(--color-foreground), 0.75);
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+  }
+
+  ul {
+    list-style-type: disc;
+
+    li {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  p {
+    margin-bottom: 1.6rem;
+    line-height: 1.4em;
+  }
+
+  table:not([class]) {
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 1.4rem;
+    border-style: hidden;
+    box-shadow: 0 0 0 0.1rem var(--color-body-content);
+    margin-bottom: 1.6rem;
+    /* draws the table border  */
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+  }
+
+  table:not([class]) td,
+  table:not([class]) th {
+    padding: 1em;
+    border: 0.1rem solid var(--color-body-content);
+  }
+}

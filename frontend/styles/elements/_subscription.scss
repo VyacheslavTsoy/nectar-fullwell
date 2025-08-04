@@ -1,0 +1,79 @@
+@use '../config/all-config' as cfg;
+
+.b-subscription {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  &__option {
+    position: relative;
+    padding: 10px 10px 10px 40px;
+    border-radius: .25rem;
+    display: block;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid var(--secondary-color);
+    font-weight: 600;
+    box-shadow: #000000 0 3px 8px;
+    color: var(--secondary-color);
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1.2em;
+  }
+
+  &__radio {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    accent-color: var(--secondary-color);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__label {
+
+  }
+
+  &__select {
+    @include cfg.font(bold, 16px, 1.2em);
+
+    display: flex;
+    position: relative;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+
+    &.is-open {
+      .b-subscription__select-arrow {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+
+  &__select-arrow {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  &__select-field {
+    appearance: none;
+    cursor: pointer;
+    width: 100%;
+    outline: none;
+    border: 2px solid var(--secondary-color);
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 18px;
+  }
+
+  &__select-option {
+    cursor: pointer;
+  }
+}

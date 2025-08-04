@@ -1,0 +1,9 @@
+input[type="number"] {
+  -moz-appearance: textfield; /* Убираем кнопки в Firefox */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* Убираем кнопки в Chrome, Safari, Edge */
+  margin: 0; /* Убираем отступы */
+}

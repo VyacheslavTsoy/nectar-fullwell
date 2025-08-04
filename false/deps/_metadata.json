@@ -1,0 +1,15 @@
+{
+  "hash": "c61094e7",
+  "configHash": "d7e34bef",
+  "lockfileHash": "1d07ef34",
+  "browserHash": "79d1f573",
+  "optimized": {
+    "alpinejs": {
+      "src": "../../node_modules/alpinejs/dist/module.esm.js",
+      "file": "alpinejs.js",
+      "fileHash": "5d3f0619",
+      "needsInterop": false
+    }
+  },
+  "chunks": {}
+}

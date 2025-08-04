@@ -1,0 +1,20 @@
+// Tailwind CSS v2.2.19
+@use '../styles/components/base-tailwind';
+
+// All config
+// @use './config/all-config' as cfg; If we need some config variables or mixins, we can use them separately (@include cfg.center-flex;) or all together
+@use '../styles/config/all-config';
+
+// All elements
+// @use './elements/all-elements' as elements;
+@use '../styles/elements/all-elements';
+
+// All Modules
+@use '../styles/modules/all-modules';
+
+// All components
+@use '../styles/components/critical-components';
+
+// All sections
+// @use '../styles/sections/homepage-community';
+
