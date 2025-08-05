@@ -32,11 +32,19 @@
 
   </head>
   <body>
+    {% comment %} Announcement bar {% endcomment %}
     {% section 'announcement-bar' %}
 
+    {% comment %} Header {% endcomment %}
+    {% sections 'header-group' %}
+
+    {% comment %} Main content {% endcomment %}
     <main>
         {{ content_for_layout }}
     </main>
+    
+    {% comment %} Footer {% endcomment %}
+    {% sections 'footer-group' %}
 
   </body>
 </html>
