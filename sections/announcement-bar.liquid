@@ -1,0 +1,239 @@
+<style>
+    #{{ section.id }} {
+        background-color: {{ section.settings.background_color }};
+        padding: {{ section.settings.vertical_indent }}px 0;
+        color: {{ section.settings.text_color }};
+        justify-content: {{ section.settings.text_alignment }};
+    }
+
+    #{{ section.id }} .announcement-bar__inner {
+        gap: {{ section.settings.gap }}px;
+    }
+</style>
+
+{% assign timer = section.blocks | where: 'type', 'timer' | first %}
+
+{%- capture h_align -%}
+    {%- if section.settings.text_alignment == "left" -%}
+        justify-start
+    {%- elsif section.settings.text_alignment == "center" -%}
+        justify-center
+    {%- elsif section.settings.text_alignment == "right" -%}
+        justify-end
+    {%- endif -%}
+{%- endcapture -%}
+
+<div class="announcement-bar" id="{{ section.id }}">
+    <div class="announcement-bar__inner flex {{ h_align }} items-center">
+        {% for block in section.blocks %}
+            {%- case block.type -%}
+              {%- when "text" -%}
+                <div class="announcement-bar__text flex items-center gap-2">
+                    {% if block.settings.icon != blank %}
+                        {{ block.settings.icon }}
+                    {% endif %}
+                    {{ block.settings.title }}
+                </div>
+              {%- when "badge" -%}
+                <div class="announcement-bar__badge flex items-center gap-2" style="background-color: {{ block.settings.background_color }};">
+                    {{ block.settings.text }}
+                </div>
+              {%- when "timer" -%}
+                <div class="announcement-bar__timer" data-timer="{{ block.settings.end_date }}">
+                    <div class="timer-block flex items-center gap-2">
+                        {% unless timer.settings.hide_days %}
+                        <div class="timer-block__cell flex flex-col items-center justify-center">
+                            <span data-cell="days">00</span>
+                            <span>Dys</span>
+                        </div>
+                        <span class="timer-block__divider flex flex-col items-center justify-center"></span>
+                        {% endunless %}
+                        
+                        <div class="timer-block__cell flex flex-col items-center justify-center">
+                            <span data-cell="hours">05</span>
+                            <span>Hrs</span>
+                        </div>
+                        <span class="timer-block__divider flex flex-col items-center justify-center"></span>
+                        <div class="timer-block__cell flex flex-col items-center justify-center">
+                            <span data-cell="minutes">33</span>
+                            <span>Min</span>
+                        </div>
+                        <span class="timer-block__divider flex flex-col items-center justify-center"></span>
+                        <div class="timer-block__cell flex flex-col items-center justify-center">
+                            <span data-cell="seconds">47</span>
+                            <span>Sec</span>
+                        </div>
+                    </div>
+                </div>
+            {% endcase %}
+          {% endfor %}
+    </div>
+</div>
+
+{% if timer != blank %}
+    <script>
+        (function () {
+          const section = document.querySelector("#{{ section.id }}");
+          const timerElement = section.querySelector("[data-timer]");
+          const attributes = ["days","hours","minutes","seconds"]
+
+          {% if timer.settings.hide_days %}
+            attributes.splice(0, 1);
+          {% endif %}
+          
+          function parseDateInput(dateStr) {
+            const [datePart, timePart] = dateStr.trim().split(" ");
+            const [day, month, year] = datePart.split("-").map(Number);
+          
+            let hours = 0, minutes = 0;
+            if (timePart) {
+              [hours, minutes] = timePart.split(":").map(Number);
+            }
+            return new Date(Date.UTC(year, month - 1, day, hours, minutes));
+          }
+      
+          function startCountdown(endDateStr) {
+            const endTime = endDateStr ? parseDateInput(endDateStr) : new Date().setHours(23, 59, 59);
+        
+            function updateTimer() {
+              const now = new Date();
+              const timeDiff = endTime - now;
+        
+              if (timeDiff <= 0) {
+                clearInterval(timerInterval);
+                return;
+              }
+        
+              const params = {
+                days: Math.floor(timeDiff / (1000 * 60 * 60 * 24)),
+                hours: Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+                minutes: Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60)),
+                seconds: Math.floor((timeDiff % (1000 * 60)) / 1000)
+              }
+              attributes.forEach(attribute => {
+                timerElement.querySelector(`[data-cell="${attribute}"]`).textContent = String(params[attribute]).padStart(2, '0')
+              })
+            }
+        
+            const timerInterval = setInterval(updateTimer, 900);
+            updateTimer();
+          }
+        
+          startCountdown("{{ timer.settings.end_date }}");
+        })()
+    </script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "settings": [
+    {
+      "type": "color",
+      "label": "Background Color",
+      "id": "background_color",
+      "default": "#0D3063"
+    },
+    {
+      "type": "color",
+      "label": "Text Color",
+      "id": "text_color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "label": "Vertical Indent",
+      "id": "vertical_indent",
+      "min": 0,
+      "max": 100,
+      "default": 6,
+      "step": 2
+    },
+    {
+      "type": "range",
+      "label": "Gap Between Blocks",
+      "id": "gap",
+      "min": 0,
+      "max": 100,
+      "default": 10,
+      "step": 2
+    },
+    {
+      "type": "select",
+      "label": "Horizontal Text Alignment",
+      "id": "text_alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },   
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "center"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Text",
+      "type": "text",
+      "settings": [
+        {
+          "type": "range",
+          "label": "Font Size",
+          "id": "font_size",
+          "min": 10,
+          "max": 48,
+          "default": 14,
+          "step": 2
+        },
+        {
+          "type": "textarea",
+          "label": "Icon",
+          "id": "icon"
+        },
+        {
+          "type": "richtext",
+          "label": "Text",
+          "id": "title",
+          "default": "<p>Summer Sale</p>"
+        }
+      ]
+    },
+    {
+      "name": "Badge",
+      "type": "badge",
+      "settings": [
+        {
+          "type": "color",
+          "label": "Background Color",
+          "id": "background_color",
+          "default": "#E30000"
+        },
+        {
+          "type": "text",
+          "label": "Text",
+          "id": "text",
+          "default": "UP TO 60% OFF"
+        }
+      ]
+    },
+    {
+      "name": "Timer",
+      "type": "timer",
+      "settings": [
+        {
+          "type": "checkbox",
+          "label": "Hide Days",
+          "id": "hide_days",
+          "default": true
+        },
+        {
+          "type": "text",
+          "label": "End Date",
+          "id": "end_date",
+          "info": "Format: DD-MM-YYYY HH:MM",
+          "default": "23-07-2027 12:00"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

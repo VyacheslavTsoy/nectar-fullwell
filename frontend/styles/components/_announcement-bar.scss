@@ -1,0 +1,46 @@
+.announcement-bar {
+
+    &__badge {
+        font-weight: 700;
+        padding: 0rem .9rem;
+        line-height: 2.8rem;
+        border-radius: 0.6rem;
+        font-size: 1.2rem;
+    }
+
+    .timer-block {
+        &__cell {
+            width: 2.8rem;
+            height: 2.8rem;
+            background-color: #fff;
+            border-radius: .4rem;
+            padding: .2rem;
+            font-weight: 400;
+            font-size: .7rem;
+            line-height: 140%;
+            letter-spacing: 0;
+            color: #0D3063;
+        }
+        
+        [data-cell] {
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+        
+        &__divider {
+            height: fit-content;
+            width: .1rem;
+            gap: .4rem;
+        }
+        
+        &__divider::after,
+        &__divider::before {
+            content: "";
+            width: 5px;
+            height: 5px;
+            display: block;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+    }
+}
