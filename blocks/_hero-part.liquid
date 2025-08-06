@@ -1,0 +1,51 @@
+<style>
+    #{{ block.id }} {
+        padding-top: {{ block.settings.vertical_padding }}px;
+        padding-bottom: {{ block.settings.vertical_padding }}px;
+    }
+
+    #{{ block.id }} .hero__part-inner {
+        gap: {{ block.settings.gap_between_items }}px;
+    }
+</style>
+
+<div class="hero__part" id="{{ block.id }}">
+    <div class="container">
+        <div class="hero__part-inner flex flex-col">
+            {% content_for "blocks" %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Hero Part",
+  "tag": null,
+  "settings": [
+    {
+      "type": "range",
+      "label": "Vertical padding",
+      "id": "vertical_padding",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 14
+    },
+    {
+      "type": "range",
+      "label": "Gap between items",
+      "id": "gap_between_items",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 6
+    }
+  ],
+  "blocks": [{"type": "heading"}, {"type": "text"}, {"type": "button"}, {"type": "review-badge"}],
+  "presets": [
+    {
+      "name": "Hero Part"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,73 @@
+{% render 'entry' with '@/styles/sections/hero.scss' %}
+{% assign sst = section.settings %}
+
+<style>
+    .hero {
+        text-align: {{ sst.text_alignment }};
+    }
+</style>
+
+<section class="hero relative">
+    <div class="hero__img">
+        <picture>
+            <source srcset="{{ sst.desktop_image | image_url: width: 1920 }}" media="(min-width: 1024px)">
+            <img src="{{ sst.mobile_image | image_url: width: 768 }}" alt="{{ settings.desktop_image.alt }}" width="100%" height="100%">
+        </picture>
+    </div>
+
+    <div class="hero__content flex flex-col justify-between">
+        {% content_for "blocks" %}
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    {
+        "type": "header",
+        "content": "Desktop"
+    },
+    {
+        "type": "image_picker",
+        "label": "Desktop Image",
+        "id": "desktop_image"
+    },
+    {
+        "type": "header",
+        "content": "Mobile"
+    },
+    {
+        "type": "image_picker",
+        "label": "Mobile Image",
+        "id": "mobile_image"
+    },
+    {
+        "type": "select",
+        "label": "Text alignment",
+        "id": "text_alignment",
+        "options": [
+            {
+                "value": "left",
+                "label": "Left"
+            },
+            {
+                "value": "center",
+                "label": "Center"
+            },
+            {
+                "value": "right",
+                "label": "Right"
+            }
+        ],
+        "default": "center"
+    }
+  ],
+  "blocks": [{"type": "_hero-part"}],
+  "presets": [
+    {
+      "name": "Hero"
+    }
+  ]
+}
+{% endschema %}

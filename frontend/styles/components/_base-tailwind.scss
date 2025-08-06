@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    .text-right {
+      text-align: right;
+    }
+}
+
 @layer base {
   html {
     text-size-adjust: 100%;
@@ -15,45 +21,19 @@
   body {
     font-size: 1.6rem;
     line-height: 1.2em;
-    background: var(--color-body-bg);
-    color: var(--color-body-content);
-    font-family: 'Aksen', 'Arial', sans-serif;
+    background: #fff;
+    color: #0D3063;
+    font-family: 'Values Sans', 'Arial', sans-serif;
     max-width: 100%;
-    // overflow-x: hidden;
 
 
     &.no-scroll {
       overflow: hidden;
-      // padding-right: var(--body-scrollbar-width, 20px);
-      // padding-right: 20px;
-      @screen md {
-        padding-right: 20px;
-      }
     }
   }
 
-  .l-overlay {
-    background: rgba(0,0,0, 0.3);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 999;
-    display: none;
-
-    body.no-scroll & {
-      display: block;
-    }
-  }
-
-  #l-main {
-    overflow: hidden;
-    width: 100%;
-
-    &.m-header-sticky {
-
-    }
+  .container {
+    max-width: 146rem;
   }
 
   details > summary {
@@ -140,41 +120,3 @@
   }
 }
 
-// Icons
-.icon {
-  width: 24px;
-  height: 24px;
-
-  &.m-small {
-    width: 16px;
-    height: 16px;
-  }
-}
-
-//
-.shopify-challenge__container {
-  padding: 30px 0;
-}
-
-.shopify-challenge__message {
-  padding: 10px 0;
-}
-
-.container.m-responsive {
-  @media (max-width: 767px) {
-    max-width: 100%;
-  }
-}
-
-@layer components {
-  .link-underline {
-    @apply relative transition-colors duration-300
-    before:absolute after:absolute
-    before:bottom-[-2px] after:bottom-[-2px]
-    before:left-0 after:right-0
-    before:w-0 after:w-0 hover:before:w-[50%] hover:after:w-[50%]
-    before:h-[2px] after:h-[2px]
-    before:bg-color_1 after:bg-color_1
-    before:transition-[width] before:duration-300 after:transition-[width] after:duration-300;
-  }
-}

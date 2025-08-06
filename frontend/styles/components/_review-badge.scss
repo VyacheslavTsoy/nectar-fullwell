@@ -1,0 +1,15 @@
+@use '../config/all-config' as *;
+
+.review-badge {
+    font-family: $poppins;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+    font-weight: 600;
+
+    &__inner {
+        background-color: $nyanza;
+        border: 2px dashed $laSalleGreen;
+        padding: 0 1.6rem;
+        border-radius: 1.6rem;
+    }
+}

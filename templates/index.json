@@ -7,11 +7,84 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
-  "sections": {
-    
-  },
-  "order": [
-    
-  ]
-}
+ {
+    "sections": {
+      "hero_xeBXpg": {
+        "type": "hero",
+        "blocks": {
+          "hero_part_imTNKE": {
+            "type": "_hero-part",
+            "name": "Hero Part",
+            "settings": {
+              "vertical_padding": 14,
+              "gap_between_items": 10
+            },
+            "blocks": {
+              "heading_jF3Vgf": {
+                "type": "heading",
+                "name": "Heading",
+                "settings": {
+                  "title": "<h2>Finally, Clean Hydration That Actually Tastes Good</h2>",
+                  "heading_size": "xl",
+                  "font_weight": "black",
+                  "font_family": "values-sans"
+                },
+                "blocks": {}
+              },
+              "review_badge_9PcRFA": {
+                "type": "review-badge",
+                "name": "Review Badge",
+                "settings": {
+                  "title": "1 Million+ Happy Customers",
+                  "stars_quantity": 5,
+                  "badge_alignment": "justify-center"
+                },
+                "blocks": {}
+              }
+            },
+            "block_order": [
+              "heading_jF3Vgf",
+              "review_badge_9PcRFA"
+            ]
+          },
+          "hero_part_gqqYDw": {
+            "type": "_hero-part",
+            "name": "Hero Part",
+            "settings": {
+              "vertical_padding": 14,
+              "gap_between_items": 6
+            },
+            "blocks": {
+              "heading_ttn9Tz": {
+                "type": "heading",
+                "name": "Heading",
+                "settings": {
+                  "title": "<h2>Heading 2</h2>",
+                  "heading_size": "lg",
+                  "font_weight": "bold",
+                  "font_family": "values-sans"
+                },
+                "blocks": {}
+              }
+            },
+            "block_order": [
+              "heading_ttn9Tz"
+            ]
+          }
+        },
+        "block_order": [
+          "hero_part_imTNKE",
+          "hero_part_gqqYDw"
+        ],
+        "name": "Hero",
+        "settings": {
+          "mobile_image": "shopify://shop_images/hero-bg.png",
+          "text_alignment": "center"
+        }
+      }
+    },
+    "order": [
+      "hero_xeBXpg"
+    ]
+  }
+  

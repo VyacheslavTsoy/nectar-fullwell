@@ -20,11 +20,6 @@ export default {
       xl: '1300px',
       '2xl': '1300px'
     },
-    container: {
-      screens: {
-        '2xl': '1300px'
-      }
-    },
     extend: {
       fontFamily: {
         'cenzo': ['CenzoFlare', 'system-ui'],

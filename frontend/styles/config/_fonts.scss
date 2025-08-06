@@ -1,64 +1,40 @@
-@charset 'UTF-8';
-@use 'sass:map';
-@use 'sass:meta';
-$fonts_locale: null !default;
-$fonts: (
-    default: (
-        regular: (
-            font-family: ('Aksen', 'Arial', sans-serif),
-            font-weight: 400,
-        ),
-        bold: (
-            font-family: ('Aksen', 'Arial', sans-serif),
-            font-weight: 700,
-        ),
-        gaspacho: (
-            font-family: ('Gazpacho', 'Arial', sans-serif),
-            font-weight: normal,
-        ),
-        gumbo_regular: (
-            font-family: ('Gumbo_Regular', 'Arial', sans-serif),
-            font-weight: normal,
-        ),
-    ),
-);
 
-/* stylelint-disable
-    scss/at-function-named-arguments,
-    function-comma-space-after
-*/
-
-@mixin font(
-    $type: main,
-    $size: null,
-    $line-height: null
-) {
-    @if $type {
-        $__fonts_map: map.get($fonts, default);
-
-        @if $fonts_locale {
-            $__fonts_map: map.merge(
-                map.get($fonts, default),
-                map.get($fonts, $fonts_locale)
-            );
-        }
-
-        $__current_font_type_map: map.get($__fonts_map, $type);
-
-        @if meta.type-of($__current_font_type_map) == 'map' {
-            @each $property, $value in $__current_font_type_map {
-                #{$property}: $value;
-            }
-        } @else {
-            @warn('There is no such font type:' + $type);
-        }
-    }
-
-    font-size: $size;
-    line-height: $line-height;
+@font-face {
+    font-family:'Values Sans';
+	src: url('/public/fonts/values-sans/ValueSansPro-Regular.woff2')
+        format('woff2'),
+      url('/public/fonts/values-sans/ValueSansPro-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
 }
 
-@mixin font-smoothing {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+@font-face {
+    font-family:'Values Sans';
+	src: url('/public/fonts/values-sans/ValueSansPro-Medium.woff2')
+        format('woff2'),
+      url('/public/fonts/values-sans/ValueSansPro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family:'Values Sans';
+	src: url('/public/fonts/values-sans/ValueSansPro-Bold.woff2')
+        format('woff2'),
+      url('/public/fonts/values-sans/ValueSansPro-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family:'Values Sans';
+	src: url('/public/fonts/values-sans/ValueSansPro-Black.woff2')
+        format('woff2'),
+      url('/public/fonts/values-sans/ValueSansPro-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
 }

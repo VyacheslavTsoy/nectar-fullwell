@@ -1,3 +1,5 @@
+@use '../config/all-config' as *;
+
 .announcement-bar {
 
     &__badge {
@@ -12,14 +14,14 @@
         &__cell {
             width: 2.8rem;
             height: 2.8rem;
-            background-color: #fff;
+            background-color: $white;
             border-radius: .4rem;
             padding: .2rem;
             font-weight: 400;
             font-size: .7rem;
             line-height: 140%;
             letter-spacing: 0;
-            color: #0D3063;
+            color: $coolBlack;
         }
         
         [data-cell] {
@@ -39,7 +41,7 @@
             width: 5px;
             height: 5px;
             display: block;
-            background-color: #fff;
+            background-color: $white;
             border-radius: 5px;
         }
     }

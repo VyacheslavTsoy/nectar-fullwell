@@ -1,6 +1,6 @@
 {
   "frontend/entrypoints/main.scss": {
-    "file": "main-Cywfb04a.css",
+    "file": "main-t_zUDtVm.css",
     "src": "frontend/entrypoints/main.scss",
     "isEntry": true
   },
@@ -11,7 +11,8 @@
     "isEntry": true
   },
   "frontend/entrypoints/page-pdp.scss": {
-    "file": "page-pdp-Dwdxf5Hg.css",
+    "file": "page-pdp-l0sNRNKZ.js",
+    "name": "page-pdp",
     "src": "frontend/entrypoints/page-pdp.scss",
     "isEntry": true
   },
@@ -27,56 +28,9 @@
     "src": "frontend/scripts/sections/main-product.js",
     "isEntry": true
   },
-  "frontend/styles/sections/be-all-in.scss": {
-    "file": "be-all-in-C8DHlvle.css",
-    "src": "frontend/styles/sections/be-all-in.scss",
-    "isEntry": true
-  },
-  "frontend/styles/sections/blog-featured.scss": {
-    "file": "blog-featured-CC38AZfP.css",
-    "src": "frontend/styles/sections/blog-featured.scss",
-    "isEntry": true
-  },
-  "frontend/styles/sections/blog-post-list.scss": {
-    "file": "blog-post-list-l0sNRNKZ.js",
-    "name": "blog-post-list",
-    "src": "frontend/styles/sections/blog-post-list.scss",
-    "isEntry": true
-  },
-  "frontend/styles/sections/feature-section-custom.scss": {
-    "file": "feature-section-custom-CJbhMsoX.css",
-    "src": "frontend/styles/sections/feature-section-custom.scss",
-    "isEntry": true
-  },
-  "frontend/styles/sections/footer-image-carousel.scss": {
-    "file": "footer-image-carousel-CZXdh6Uz.css",
-    "src": "frontend/styles/sections/footer-image-carousel.scss",
-    "isEntry": true
-  },
-  "frontend/styles/sections/homepage-community.scss": {
-    "file": "homepage-community-CNjGE-v8.css",
-    "src": "frontend/styles/sections/homepage-community.scss",
-    "isEntry": true
-  },
-  "frontend/styles/sections/non-profit.scss": {
-    "file": "non-profit-Brx1pw4E.css",
-    "src": "frontend/styles/sections/non-profit.scss",
-    "isEntry": true
-  },
-  "frontend/styles/sections/our-mission.scss": {
-    "file": "our-mission-l0sNRNKZ.js",
-    "name": "our-mission",
-    "src": "frontend/styles/sections/our-mission.scss",
-    "isEntry": true
-  },
-  "frontend/styles/sections/review-section.scss": {
-    "file": "review-section-BdDn4zGL.css",
-    "src": "frontend/styles/sections/review-section.scss",
-    "isEntry": true
-  },
-  "frontend/styles/sections/trial-faq.scss": {
-    "file": "trial-faq-BHr7zDDp.css",
-    "src": "frontend/styles/sections/trial-faq.scss",
+  "frontend/styles/sections/hero.scss": {
+    "file": "hero-BqddpM5h.css",
+    "src": "frontend/styles/sections/hero.scss",
     "isEntry": true
   }
 }
