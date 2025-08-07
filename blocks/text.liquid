@@ -1,0 +1,108 @@
+{% assign bst = block.settings %}
+<style>
+    #{{ block.id }} {
+        font-size: {{ bst.font_size }}px;
+        font-weight: var(--font-weight-{{ bst.font_weight }});
+        font-family: var(--font-family-{{ bst.font_family }});
+        line-height: 1.2;
+    }
+
+    @media (max-width: 768px) {
+        #{{ block.id }} {
+            font-size: {{ bst.font_size_mobile }}px;
+        }
+    }
+</style>
+{% stylesheet %}
+  
+{% endstylesheet %}
+
+<div class="block-text" id="{{ block.id }}">
+    {{ bst.title }}
+</div>
+
+{% schema %}
+{
+  "name": "Text",
+  "tag": null,
+  "settings": [
+    {
+        "type": "richtext",
+        "label": "Title",
+        "id": "title",
+        "default": "<p>Text Goes Here</p>"
+    },
+    {
+        "type": "select",
+        "label": "Font family",
+        "id": "font_family",
+        "options": [
+          {
+            "value": "poppins",
+            "label": "Poppins"
+          },
+          {
+            "value": "values-sans",
+            "label": "Values Sans"
+          }
+        ],
+        "default": "values-sans"
+    },
+    {
+      "type": "select",
+      "label": "Font weight",
+      "id": "font_weight",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "bold",
+          "label": "Bold"
+        },
+        {
+          "value": "black",
+          "label": "Black"
+        }
+      ],
+      "default": "normal"
+    },
+    {
+        "type": "header",
+        "content": "Desktop"
+    },
+    {
+        "type": "range",
+        "label": "Font size",
+        "id": "font_size",
+        "min": 10,
+        "max": 100,
+        "step": 2,
+        "default": 16
+    },
+    {
+        "type": "header",
+        "content": "Mobile"
+    },
+    {
+        "type": "range",
+        "label": "Font size",
+        "id": "font_size_mobile",
+        "min": 10,
+        "max": 100,
+        "step": 2,
+        "default": 16
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text"
+    }
+  ]
+}
+{% endschema %}

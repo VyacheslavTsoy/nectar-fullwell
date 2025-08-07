@@ -1,0 +1,46 @@
+{% assign bst = block.settings %}
+
+<a href="{{ bst.button_link }}" class="btn w-full btn--{{ bst.button_type }}">
+    {{ bst.button_text }}
+</a>
+
+{% schema %}
+{
+  "name": "Button",
+  "tag": null,
+  "settings": [
+    {
+        "type": "text",
+        "label": "Button Text",
+        "id": "button_text",
+        "default": "Button Text"
+    },
+    {
+        "type": "url",
+        "label": "Button Link",
+        "id": "button_link"
+    },
+    {
+        "type": "select",
+        "label": "Button Type",
+        "id": "button_type",
+        "options": [
+            {
+                "value": "primary",
+                "label": "Primary"
+            },
+            {
+                "value": "secondary",
+                "label": "Secondary"
+            }
+        ],
+        "default": "primary"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Button"
+    }
+  ]
+}
+{% endschema %}

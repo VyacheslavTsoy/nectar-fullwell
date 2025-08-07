@@ -9,14 +9,16 @@
             </svg>
         {% endfor %}
         </div>
-        <div class="review-badge__title">
+        <div class="review-badge__title" style="color: {{ bst.text_color }};">
             {{ bst.title }}
         </div>
     </div>
 </div>
+
 {% schema %}
 {
   "name": "Review Badge",
+  "tag": null,
   "settings": [
     {
       "type": "text",
@@ -32,6 +34,12 @@
       "max": 5,
       "default": 5,
       "step": 1
+    },
+    {
+      "type": "color",
+      "label": "Text Color",
+      "id": "text_color",
+      "default": "#0D3063"
     },
     {
       "type": "select",

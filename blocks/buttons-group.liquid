@@ -1,0 +1,139 @@
+{% assign bst = block.settings %}
+
+<style>
+    #{{ block.id }} {
+        padding-top: {{ bst.top_padding_mobile }}px;
+        padding-bottom: {{ bst.bottom_padding_mobile }}px;
+        gap: {{ bst.gap_between_buttons_mobile }}px;
+        justify-content: {{ bst.buttons_alignment_mobile }};
+    }
+
+    @media (min-width: 768px) {
+        #{{ block.id }} {
+            padding-top: {{ bst.top_padding_desktop }}px;
+            padding-bottom: {{ bst.bottom_padding_desktop }}px;
+            gap: {{ bst.gap_between_buttons_desktop }}px;
+            justify-content: {{ bst.buttons_alignment_desktop }};
+        }
+    }
+</style>
+
+<div class="buttons-group" id="{{ block.id }}">
+    {% content_for 'blocks' %}
+</div>
+
+{% schema %}
+{
+  "name": "Buttons Group",
+  "settings": [
+    {
+        "type": "header",
+        "content": "Desktop"
+    },
+    {
+        "type": "range",
+        "label": "Gap between buttons",
+        "id": "gap_between_buttons_desktop",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "default": 10
+    },
+    {
+        "type": "select",
+        "label": "Buttons Alignment",
+        "id": "buttons_alignment",
+        "options": [
+            {
+                "value": "justify-start",
+                "label": "Left"
+            },
+            {
+                "value": "justify-center",
+                "label": "Center"
+            },
+            {
+                "value": "justify-end",
+                "label": "Right"
+            }
+        ],
+        "default": "justify-center"
+    },
+    {
+        "type": "range",
+        "label": "Top paddings",
+        "id": "top_padding_desktop",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "default": 0
+    },
+    {
+        "type": "range",
+        "label": "Bottom padding",
+        "id": "bottom_padding_desktop",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "default": 0
+    },
+    {
+        "type": "header",
+        "content": "Mobile"
+    },
+    {
+        "type": "range",
+        "label": "Gap between buttons",
+        "id": "gap_between_buttons_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "default": 0
+    },
+    {
+        "type": "select",
+        "label": "Buttons Alignment",
+        "id": "buttons_alignment_mobile",
+        "options": [
+            {
+                "value": "justify-start",
+                "label": "Left"
+            },
+            {
+                "value": "justify-center",
+                "label": "Center"
+            },
+            {
+                "value": "justify-end",
+                "label": "Right"
+            }
+        ],
+        "default": "justify-center"
+    },
+    {
+        "type": "range",
+        "label": "Top padding",
+        "id": "top_padding_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "default": 0
+    },
+    {
+        "type": "range",
+        "label": "Bottom padding",
+        "id": "bottom_padding_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "default": 0
+    },
+  ],
+  "blocks": [{"type": "button"}],
+  "presets": [
+    {
+      "name": "Buttons Group"
+    }
+  ]
+}
+{% endschema %}

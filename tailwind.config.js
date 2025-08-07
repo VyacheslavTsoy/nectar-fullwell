@@ -16,6 +16,7 @@ export default {
       xl: ['2.8rem', '3.2rem'],
       '2xl': ['3rem', '3.6rem'],
       '3xl': ['3.6rem', '4rem'],
+      '4xl': ['4.4rem', '5.2rem'],
     },
     fontWeight: {
       normal: 400,
@@ -147,6 +148,7 @@ export default {
           '--font-size-xl': theme('fontSize.xl'),
           '--font-size-2xl': theme('fontSize.2xl'),
           '--font-size-3xl': theme('fontSize.3xl'),
+          '--font-size-4xl': theme('fontSize.4xl'),
           '--font-weight-normal': String(theme('fontWeight.normal')),
           '--font-weight-medium': String(theme('fontWeight.medium')),
           '--font-weight-bold': String(theme('fontWeight.bold')),

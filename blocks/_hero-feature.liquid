@@ -1,0 +1,30 @@
+<div class="hero__feature flex gap-3 justify-center items-center font-bold text-sm md:text-base">
+    <div class="w-9">
+        {{ block.settings.icon }}
+    </div>
+    <div>{{ block.settings.title }}</div>
+</div>
+
+{% schema %}
+{
+  "name": "Feature",
+  "settings": [
+    {
+        "type": "textarea",
+        "label": "Icon",
+        "id": "icon"
+    },
+    {
+        "type": "text",
+        "label": "Title",
+        "id": "title",
+        "default": "Feature"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature"
+    }
+  ]
+}
+{% endschema %}
