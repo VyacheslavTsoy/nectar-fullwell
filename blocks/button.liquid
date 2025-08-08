@@ -1,6 +1,15 @@
 {% assign bst = block.settings %}
 
-<a href="{{ bst.button_link }}" class="btn w-full btn--{{ bst.button_type }}">
+{% if bst.hide_on_mobile %}
+    <style>
+        @media (max-width: 768px) {
+            #{{ block.id }} {
+                display: none;
+            }
+        }
+    </style>
+{% endif %}
+<a href="{{ bst.button_link }}" class="btn w-full btn--{{ bst.button_type }}" id="{{ block.id }}">
     {{ bst.button_text }}
 </a>
 
@@ -35,6 +44,12 @@
             }
         ],
         "default": "primary"
+    },
+    {
+        "type": "checkbox",
+        "label": "Hide on mobile",
+        "id": "hide_on_mobile",
+        "default": false
     }
   ],
   "presets": [

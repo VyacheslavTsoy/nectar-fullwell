@@ -1,18 +1,17 @@
 {% assign sst = section.settings %}
 
-<section class="blank-section py-[var(--padding-mobile)] md:py-[var(--padding-desktop)] bg-[var(--bg-color)]"
+<section class="blank-section py-[var(--padding-mobile)] lg:py-[var(--padding-desktop)] bg-[var(--bg-color)]"
 style="
---padding-mobile: {{ sst.mobile_padding_top }}px;
---padding-desktop: {{ sst.desktop_padding_top }}px;
---desktop-max-width: {{ sst.desktop_max_width }}px;
---bg-color: {{ sst.desktop_background_color }};
---text-color: {{ sst.desktop_text_color }};
---gap-between-blocks-mobile: {{ sst.mobile_gap_between_blocks }}px;
---gap-between-blocks-desktop: {{ sst.desktop_gap_between_blocks }}px;
+--padding-mobile: {{ sst.mobile_padding_top | times: 0.1 }}rem;
+--padding-desktop: {{ sst.desktop_padding_top | times: 0.1 }}rem;
+--desktop-max-width: {{ sst.desktop_max_width | times: 0.1 }}rem;
+--bg-color: {{ sst.bg_color }};
+--gap-between-blocks-mobile: {{ sst.mobile_gap_between_blocks | times: 0.1 }}rem;
+--gap-between-blocks-desktop: {{ sst.desktop_gap_between_blocks | times: 0.1 }}rem;
 "
 >
     <div class="container max-w-[var(--desktop-max-width)]">
-        <div class="blank-section__content grid grid-cols-1 gap-[var(--gap-between-blocks-mobile)] md:gap-[var(--gap-between-blocks-desktop)]">
+        <div class="blank-section__content grid grid-cols-1 gap-[var(--gap-between-blocks-mobile)] lg:gap-[var(--gap-between-blocks-desktop)]">
             {% content_for 'blocks' %}
         </div>
     </div>
@@ -27,54 +26,50 @@ style="
       "content": "Desktop Settings"
     },
     {
-      "type": "range",
-      "id": "desktop_padding_top",
-      "min": 0,
-      "max": 200,
-      "step": 10,
-      "unit": "px",
-      "label": "Desktop Vertical Padding",
-      "default": 40
+        "type": "range",
+        "id": "desktop_padding_top",
+        "min": 0,
+        "max": 200,
+        "step": 10,
+        "label": "Desktop Vertical Padding",
+        "default": 40
     },
     {
-      "type": "range",
-      "id": "desktop_gap_between_blocks",
-      "min": 0,
-      "max": 100,
-      "step": 10,
-      "unit": "px",
-      "label": "Desktop Gap Between Blocks",
-      "default": 20
+        "type": "range",
+        "id": "desktop_gap_between_blocks",
+        "min": 0,
+        "max": 100,
+        "step": 10,
+        "label": "Desktop Gap Between Blocks",
+        "default": 20
     },
     {
-      "type": "color",
-      "id": "desktop_text_color",
-      "label": "Text Color",
-      "default": "#0D3063"
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color",
+        "default": "#ffffff"
     },
     {
-      "type": "range",
-      "id": "desktop_max_width",
-      "min": 400,
-      "max": 1400,
-      "step": 50,
-      "unit": "px",
-      "label": "Desktop Max Container Width",
-      "default": 1200
+        "type": "range",
+        "id": "desktop_max_width",
+        "min": 400,
+        "max": 1400,
+        "step": 20,
+        "label": "Desktop Max Container Width",
+        "default": 1200
     },
     {
-      "type": "header",
-      "content": "Mobile Settings"
+        "type": "header",
+        "content": "Mobile Settings"
     },
     {
-      "type": "range",
-      "id": "mobile_padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "unit": "px",
-      "label": "Mobile Vertical Padding",
-      "default": 30
+        "type": "range",
+        "id": "mobile_padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "label": "Mobile Vertical Padding",
+        "default": 30
     },
     {
         "type": "range",
@@ -82,7 +77,6 @@ style="
         "min": 0,
         "max": 100,
         "step": 10,
-        "unit": "px",
         "label": "Mobile Gap Between Blocks",
         "default": 10
     },

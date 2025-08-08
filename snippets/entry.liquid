@@ -4,9 +4,9 @@
 {% endcomment %}
 {% assign path = entry | replace: '~/', '../../' | replace: '@/', '../' %}
 {% if path == "/frontend/entrypoints/main.scss" or path == "main.scss" %}
-  {{ 'main-B3nQ07pt.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+  {{ 'main-fhhcNp1Y.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/frontend/entrypoints/main.theme.js" or path == "main.theme.js" %}
-  <script src="{{ 'main.theme-yAH8z4Ac.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
+  <script src="{{ 'main.theme-m1Xg_rcT.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
 {% elsif path == "/frontend/entrypoints/page-pdp.scss" or path == "page-pdp.scss" %}
   {{ 'page-pdp-l0sNRNKZ.js' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/frontend/entrypoints/theme.product.js" or path == "theme.product.js" %}
@@ -14,7 +14,7 @@
 {% elsif path == "/frontend/scripts/sections/main-product.js" or path == "../scripts/sections/main-product.js" %}
   <script src="{{ 'main-product-DyTyat1O.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
 {% elsif path == "/frontend/styles/sections/hero.scss" or path == "../styles/sections/hero.scss" %}
-  {{ 'hero-KOAf-WKM.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+  {{ 'hero-CBfofd19.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/frontend/styles/sections/scrollable-features.scss" or path == "../styles/sections/scrollable-features.scss" %}
   {{ 'scrollable-features-w25j7Gae.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% endif %}

@@ -1,12 +1,19 @@
+<div class="accordion">
+    {% content_for 'blocks' %}
+</div>
+
 {% schema %}
 {
   "name": "Accordion",
   "tag": null,
-  "settings": [
+  "blocks": [
     {
-      "type": "text",
-      "id": "title",
-      "label": "Title"
+      "type": "_accordion-item"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Accordion"
     }
   ]
 }   

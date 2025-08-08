@@ -1,6 +1,6 @@
 {% if question and answer %}
-<details class="accordion-item py-2.5">
-    <summary class="accordion-item__summary flex items-center justify-between text-base font-medium text-coolBlack">
+<details class="accordion-item {% if large_title %}py-5 {% else %}py-2.5 {% endif %}" {% if open_by_default %}open{% endif %}>
+    <summary class="accordion-item__summary flex items-center justify-between font-medium text-coolBlack {% if large_title %}text-baseLg {% else %}text-base {% endif %}">
         {{ question }}
 
         <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">

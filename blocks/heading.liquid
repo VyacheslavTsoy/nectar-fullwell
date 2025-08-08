@@ -8,6 +8,11 @@
         text-align: {{ bst.text_alignment }};
     }
 
+    #{{ block.id }} b,
+    #{{ block.id }} strong {
+        color: var(--color-brilliantAzure);
+    }
+
     {% if bst.use_mobile_settings %}
     @media (max-width: 1024px) {
         #{{ block.id }} {
@@ -34,6 +39,12 @@
       "label": "Title",
       "id": "title",
       "default": "<h2>Heading</h2>"
+    },
+    {
+      "type": "color",
+      "label": "Text color",
+      "id": "text_color",
+      "default": "#123456"
     },
     {
       "type": "select",

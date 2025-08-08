@@ -1,11 +1,11 @@
 <style>
     #{{ block.id }} {
-        padding-top: {{ block.settings.vertical_padding }}px;
-        padding-bottom: {{ block.settings.vertical_padding }}px;
+        padding-top: {{ block.settings.vertical_padding | times: 0.1 }}rem;
+        padding-bottom: {{ block.settings.vertical_padding | times: 0.1 }}rem;
     }
 
     #{{ block.id }} .hero__part-inner {
-        gap: {{ block.settings.gap_between_items }}px;
+        gap: {{ block.settings.gap_between_items | times: 0.1 }}rem;
     }
 </style>
 

@@ -1,15 +1,16 @@
 {% assign bst = block.settings %}
 <style>
     #{{ block.id }} {
-        font-size: {{ bst.font_size }}px;
+        font-size: {{ bst.font_size | times: 0.1 }}rem;
         font-weight: var(--font-weight-{{ bst.font_weight }});
         font-family: var(--font-family-{{ bst.font_family }});
         line-height: 1.2;
+        text-align: {{ bst.text_alignment }};
     }
 
     @media (max-width: 768px) {
         #{{ block.id }} {
-            font-size: {{ bst.font_size_mobile }}px;
+            font-size: {{ bst.font_size_mobile | times: 0.1 }}rem;
         }
     }
 </style>
@@ -31,6 +32,26 @@
         "label": "Title",
         "id": "title",
         "default": "<p>Text Goes Here</p>"
+    },
+    {
+        "type": "select",
+        "label": "Text alignment",
+        "id": "text_alignment",
+        "default": "left",
+        "options": [
+            {
+                "value": "left",
+                "label": "Left"
+            },
+            {
+                "value": "center",
+                "label": "Center"
+            },
+            {
+                "value": "right",
+                "label": "Right"
+            }
+        ]
     },
     {
         "type": "select",

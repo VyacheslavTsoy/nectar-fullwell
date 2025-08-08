@@ -1,12 +1,31 @@
+{% assign bst = block.settings %}
+
+<div class="table" id="{{ block.id }}">
+    <div class="table__image bg-white p-10 rounded-xl border-1 overflow-hidden" style="
+        --padding: {{ bst.desktop_padding | times: 0.1 }}rem;
+        border: 1px solid #42A4FF;
+    ">
+        <picture>
+            <source srcset="{{ bst.image | image_url: width: 1000 }}" media="(min-width: 1024px)">
+            <img src="{{ bst.image | image_url: width: 768 }}" alt="{{ bst.image.alt }}" width="768" height="768">
+        </picture>
+    </div>
+</div>
+
 {% schema %}
 {
   "name": "Table",
   "tag": null,
   "settings": [
     {
-      "type": "text",
-      "id": "title",
-      "label": "Title"
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Table"
     }
   ]
 }

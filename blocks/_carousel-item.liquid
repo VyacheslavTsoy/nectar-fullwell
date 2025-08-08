@@ -1,0 +1,37 @@
+{% assign bst = block.settings %}
+<figure class="swiper-slide">
+    <div class="carousel-item__content">
+        <div class="carousel-item__image">
+            {% if bst.image %}
+                {{ bst.image | image_url: width: 400, height: 600 | image_tag }}
+            {% endif %}
+            {% if bst.video_url %}
+                <video src="{{ bst.video_url }}" autoplay muted loop></video>
+            {% endif %}
+        </div>
+    </div>
+</figure>
+
+{% schema %}
+{
+  "name": "Carousel Item",
+  "tag": null,
+  "settings": [
+        {
+          "type": "image_picker",
+          "label": "Image",
+          "id": "image"
+        },
+        {
+          "type": "text",
+          "label": "Video URL",
+          "id": "video_url"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Carousel Item"
+        }
+    ]
+}
+{% endschema %}

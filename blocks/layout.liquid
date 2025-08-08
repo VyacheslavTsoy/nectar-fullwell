@@ -1,11 +1,14 @@
 {% assign bst = block.settings %}
 
 <div class="block-layout" id="{{ block.id }}" style="
-    --padding: {{ bst.desktop_padding }}px;
+    --padding: {{ bst.desktop_padding | times: 0.1 }}rem;
+    --mobile-padding: {{ bst.mobile_padding | times: 0.1 }}rem;
     --columns-per-row-desktop: {{ bst.desktop_columns_per_row }};
     --columns-per-row-mobile: {{ bst.mobile_columns_per_row }};
+    --gap: {{ bst.desktop_gap | times: 0.1 }}rem;
+    --mobile-gap: {{ bst.mobile_gap | times: 0.1 }}rem;
 ">
-    <div class="block-layout__content grid grid-cols-1 gap-4 md:grid-cols-[repeat(var(--columns-per-row-desktop),1fr)]">
+    <div class="block-layout__content grid grid-cols-[repeat(var(--columns-per-row-mobile),1fr)] gap-[var(--mobile-gap)] md:grid-cols-[repeat(var(--columns-per-row-desktop),1fr)] md:gap-[var(--gap)] py-[var(--mobile-padding)] md:py-[var(--padding)]">
         {% content_for 'blocks' %}
     </div>
 </div>
@@ -30,6 +33,15 @@
     },
     {
         "type": "range",
+        "label": "Gap",
+        "id": "desktop_gap",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "default": 16
+    },
+    {
+        "type": "range",
         "label": "Columns per row",
         "id": "desktop_columns_per_row",
         "min": 1,
@@ -49,6 +61,15 @@
         "max": 200,
         "step": 10,
         "default": 0
+    },
+    {
+        "type": "range",
+        "label": "Gap",
+        "id": "mobile_gap",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "default": 14
     },
     {
         "type": "range",

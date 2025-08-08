@@ -1,0 +1,63 @@
+{% assign sst = section.settings %}
+<footer class="footer text-base pt-[3rem] md:pt-[5rem] pb-[2rem]" style="background-color: {{ sst.background_color }}; color: {{ sst.text_color }}">
+    <div class="container">
+        <div class="footer__content flex flex-col gap-y-5 md:gap-y-7">
+            <div class="footer__content-item p-4" style="border-radius: 1.2rem; border: 1px solid #FFFFFF;">
+                {{ sst.text_1 }}
+            </div>
+            <div class="footer__content-item">
+                {{ sst.text_2 }}
+            </div>
+
+            <div class="footer__content-item text-center pt-2 md:pt-4">
+                {{ sst.copyright }}
+            </div>
+
+            <ul class="footer__policies flex justify-center gap-x-4 text-sm md:text-base">
+                {%- for policy in shop.policies -%}
+                    {%- if policy != blank -%}
+                      <li>
+                        <a href="{{ policy.url }}">{{ policy.title | escape }}</a>
+                      </li>
+                    {%- endif -%}
+                  {%- endfor -%}
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "color",
+      "label": "Background color",
+      "id": "background_color",
+      "default": "#0D3063"
+    },
+    {
+      "type": "color",
+      "label": "Text color",
+      "id": "text_color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "richtext",
+      "label": "Text 1",
+      "id": "text_1"
+    },
+    {
+      "type": "richtext",
+      "label": "Text 2",
+      "id": "text_2"
+    },
+    {
+      "type": "richtext",
+      "label": "Copyright",
+      "id": "copyright"
+    }
+  ]
+}
+{% endschema %}

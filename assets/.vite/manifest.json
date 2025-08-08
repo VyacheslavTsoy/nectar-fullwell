@@ -1,11 +1,11 @@
 {
   "frontend/entrypoints/main.scss": {
-    "file": "main-B3nQ07pt.css",
+    "file": "main-fhhcNp1Y.css",
     "src": "frontend/entrypoints/main.scss",
     "isEntry": true
   },
   "frontend/entrypoints/main.theme.js": {
-    "file": "main.theme-yAH8z4Ac.js",
+    "file": "main.theme-m1Xg_rcT.js",
     "name": "main.theme",
     "src": "frontend/entrypoints/main.theme.js",
     "isEntry": true
@@ -29,7 +29,7 @@
     "isEntry": true
   },
   "frontend/styles/sections/hero.scss": {
-    "file": "hero-KOAf-WKM.css",
+    "file": "hero-CBfofd19.css",
     "src": "frontend/styles/sections/hero.scss",
     "isEntry": true
   },
@@ -37,5 +37,37 @@
     "file": "scrollable-features-w25j7Gae.css",
     "src": "frontend/styles/sections/scrollable-features.scss",
     "isEntry": true
+  },
+  "public/fonts/values-sans/ValueSansPro-Black.woff": {
+    "file": "ValueSansPro-Black-mc8XTytr.woff",
+    "src": "public/fonts/values-sans/ValueSansPro-Black.woff"
+  },
+  "public/fonts/values-sans/ValueSansPro-Black.woff2": {
+    "file": "ValueSansPro-Black-8Y7zA2vF.woff2",
+    "src": "public/fonts/values-sans/ValueSansPro-Black.woff2"
+  },
+  "public/fonts/values-sans/ValueSansPro-Bold.woff": {
+    "file": "ValueSansPro-Bold-BJEj63zH.woff",
+    "src": "public/fonts/values-sans/ValueSansPro-Bold.woff"
+  },
+  "public/fonts/values-sans/ValueSansPro-Bold.woff2": {
+    "file": "ValueSansPro-Bold-B9J_n0iy.woff2",
+    "src": "public/fonts/values-sans/ValueSansPro-Bold.woff2"
+  },
+  "public/fonts/values-sans/ValueSansPro-Medium.woff": {
+    "file": "ValueSansPro-Medium-C1v-Ogae.woff",
+    "src": "public/fonts/values-sans/ValueSansPro-Medium.woff"
+  },
+  "public/fonts/values-sans/ValueSansPro-Medium.woff2": {
+    "file": "ValueSansPro-Medium-B4moudHY.woff2",
+    "src": "public/fonts/values-sans/ValueSansPro-Medium.woff2"
+  },
+  "public/fonts/values-sans/ValueSansPro-Regular.woff": {
+    "file": "ValueSansPro-Regular--f78p1Ga.woff",
+    "src": "public/fonts/values-sans/ValueSansPro-Regular.woff"
+  },
+  "public/fonts/values-sans/ValueSansPro-Regular.woff2": {
+    "file": "ValueSansPro-Regular-1veTUK0b.woff2",
+    "src": "public/fonts/values-sans/ValueSansPro-Regular.woff2"
   }
 }

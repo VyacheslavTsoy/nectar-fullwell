@@ -5,16 +5,16 @@
     .hero {
         text-align: {{ sst.text_alignment }};
         color: {{ sst.text_color_mobile }};
-        min-height: {{ sst.height_mobile }}px;
+        min-height: {{ sst.height_mobile | times: 0.1 }}rem;
     }
 
     .hero__img {
-        min-height: {{ sst.height_mobile }}px;
+        min-height: {{ sst.height_mobile | times: 0.1 }}rem;
     }
 
     @media (min-width: 1024px) {
         .hero {
-            min-height: {{ sst.height }}px;
+            min-height: {{ sst.height | times: 0.1 }}rem;
             color: {{ sst.text_color_desktop }};
         }
 
@@ -23,7 +23,7 @@
         }
 
         .hero__img {
-            min-height: {{ sst.height }}px;
+            min-height: {{ sst.height | times: 0.1 }}rem;
         }
     }
 </style>

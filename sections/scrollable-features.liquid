@@ -3,9 +3,9 @@
 {% assign sst = section.settings %}
 <style>
     #{{ section.id }} .scrollable-features__inner{
-        padding-top: {{ sst.vertical_padding }}px;
-        padding-bottom: {{ sst.vertical_padding }}px;
-        gap: {{ sst.gap_between_items }}px;
+        padding-top: {{ sst.vertical_padding | times: 0.1 }}rem;
+        padding-bottom: {{ sst.vertical_padding | times: 0.1 }}rem;
+        gap: {{ sst.gap_between_items | times: 0.1 }}rem;
     }
 </style>
 

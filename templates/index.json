@@ -37,6 +37,7 @@
                 "name": "Heading",
                 "settings": {
                   "title": "<h2>Finally, Clean Hydration <br/>That Actually Tastes Good</h2>",
+                  "text_color": "rgba(0,0,0,0)",
                   "text_alignment": "center",
                   "heading_size": "4xl",
                   "font_weight": "black",
@@ -53,6 +54,7 @@
                 "name": "Text",
                 "settings": {
                   "title": "<p>Sugar-free, low sodium and flavored with <br/>real organic fruit - it’s refreshingly simple.</p>",
+                  "text_alignment": "center",
                   "font_family": "poppins",
                   "font_weight": "medium",
                   "font_size": 22,
@@ -65,11 +67,11 @@
                 "name": "Buttons Group",
                 "settings": {
                   "gap_between_buttons_desktop": 10,
-                  "buttons_alignment": "justify-center",
+                  "buttons_alignment": "center",
                   "top_padding_desktop": 10,
                   "bottom_padding_desktop": 0,
                   "gap_between_buttons_mobile": 10,
-                  "buttons_alignment_mobile": "justify-center",
+                  "buttons_alignment_mobile": "center",
                   "top_padding_mobile": 0,
                   "bottom_padding_mobile": 0
                 },
@@ -80,7 +82,8 @@
                     "settings": {
                       "button_text": "See All Nectar",
                       "button_link": "#",
-                      "button_type": "primary"
+                      "button_type": "primary",
+                      "hide_on_mobile": false
                     },
                     "blocks": {}
                   }
@@ -131,6 +134,7 @@
                 "name": "Heading",
                 "settings": {
                   "title": "<h2>Finally, Clean Hydration <br/>That Actually Tastes Good</h2>",
+                  "text_color": "#020617",
                   "text_alignment": "center",
                   "heading_size": "xl",
                   "font_weight": "black",
@@ -173,6 +177,7 @@
                 "name": "Text",
                 "settings": {
                   "title": "<p>Sugar-free, low sodium and flavored with <br/>real organic fruit - it’s refreshingly simple.</p>",
+                  "text_alignment": "center",
                   "font_family": "poppins",
                   "font_weight": "medium",
                   "font_size": 22,
@@ -185,11 +190,11 @@
                 "name": "Buttons Group",
                 "settings": {
                   "gap_between_buttons_desktop": 10,
-                  "buttons_alignment": "justify-center",
+                  "buttons_alignment": "center",
                   "top_padding_desktop": 10,
                   "bottom_padding_desktop": 0,
                   "gap_between_buttons_mobile": 10,
-                  "buttons_alignment_mobile": "justify-center",
+                  "buttons_alignment_mobile": "center",
                   "top_padding_mobile": 0,
                   "bottom_padding_mobile": 0
                 },
@@ -200,7 +205,8 @@
                     "settings": {
                       "button_text": "See All Nectar",
                       "button_link": "#",
-                      "button_type": "primary"
+                      "button_type": "primary",
+                      "hide_on_mobile": false
                     },
                     "blocks": {}
                   }
@@ -332,6 +338,7 @@
             "name": "Heading",
             "settings": {
               "title": "<h2>Find Your Nectar</h2>",
+              "text_color": "rgba(0,0,0,0)",
               "text_alignment": "center",
               "heading_size": "4xl",
               "font_weight": "black",
@@ -405,8 +412,947 @@
         "settings": {
           "desktop_padding_top": 40,
           "desktop_gap_between_blocks": 20,
-          "desktop_text_color": "#0d3063",
+          "bg_color": "#ffffff",
           "desktop_max_width": 1200,
+          "mobile_padding_top": 30,
+          "mobile_gap_between_blocks": 10
+        }
+      },
+      "blank_section_pdQUVV": {
+        "type": "blank-section",
+        "blocks": {
+          "review_badge_pREbUH": {
+            "type": "review-badge",
+            "name": "Review Badge",
+            "settings": {
+              "title": "Over 50 Million Servings Sold",
+              "stars_quantity": 5,
+              "text_color": "#0d3063",
+              "badge_alignment": "justify-center"
+            },
+            "blocks": {}
+          },
+          "heading_gUWdwc": {
+            "type": "heading",
+            "name": "Heading",
+            "settings": {
+              "title": "<h3>Clean Ingredients. Half The <br/>Price. Better Results.</h3>",
+              "text_color": "rgba(0,0,0,0)",
+              "text_alignment": "center",
+              "heading_size": "4xl",
+              "font_weight": "bold",
+              "font_family": "values-sans",
+              "use_mobile_settings": true,
+              "text_alignment_mobile": "center",
+              "heading_size_mobile": "lg",
+              "font_weight_mobile": "bold"
+            },
+            "blocks": {}
+          },
+          "tabs_YAXKJd": {
+            "type": "tabs",
+            "name": "Tabs",
+            "settings": {},
+            "blocks": {
+              "tab_item_qTqm8r": {
+                "type": "_tab-item",
+                "settings": {
+                  "title": "Calm",
+                  "desktop_padding": 10,
+                  "gap_between_blocks": 20,
+                  "mobile_padding": 10,
+                  "mobile_gap_between_blocks": 20
+                },
+                "blocks": {
+                  "table_DqX7U6": {
+                    "type": "table",
+                    "name": "Table",
+                    "settings": {
+                      "image": "shopify://shop_images/table-calm.png"
+                    },
+                    "blocks": {}
+                  },
+                  "buttons_group_dxqq9r": {
+                    "type": "buttons-group",
+                    "name": "Buttons Group",
+                    "settings": {
+                      "gap_between_buttons_desktop": 10,
+                      "buttons_alignment": "center",
+                      "top_padding_desktop": 0,
+                      "bottom_padding_desktop": 0,
+                      "gap_between_buttons_mobile": 0,
+                      "buttons_alignment_mobile": "center",
+                      "top_padding_mobile": 0,
+                      "bottom_padding_mobile": 0
+                    },
+                    "blocks": {
+                      "button_cPhYPM": {
+                        "type": "button",
+                        "name": "Button",
+                        "settings": {
+                          "button_text": "See More Details",
+                          "button_link": "",
+                          "button_type": "secondary",
+                          "hide_on_mobile": true
+                        },
+                        "blocks": {}
+                      },
+                      "button_gAPPkA": {
+                        "type": "button",
+                        "name": "Button",
+                        "settings": {
+                          "button_text": "Choose Package",
+                          "button_link": "",
+                          "button_type": "primary",
+                          "hide_on_mobile": false
+                        },
+                        "blocks": {}
+                      }
+                    },
+                    "block_order": [
+                      "button_cPhYPM",
+                      "button_gAPPkA"
+                    ]
+                  }
+                },
+                "block_order": [
+                  "table_DqX7U6",
+                  "buttons_group_dxqq9r"
+                ]
+              },
+              "tab_item_tXhtJ4": {
+                "type": "_tab-item",
+                "settings": {
+                  "title": "Hydration",
+                  "desktop_padding": 10,
+                  "gap_between_blocks": 20,
+                  "mobile_padding": 10,
+                  "mobile_gap_between_blocks": 20
+                },
+                "blocks": {
+                  "table_RpyRnn": {
+                    "type": "table",
+                    "name": "Table",
+                    "settings": {
+                      "image": "shopify://shop_images/table.png"
+                    },
+                    "blocks": {}
+                  },
+                  "buttons_group_DgUjMy": {
+                    "type": "buttons-group",
+                    "name": "Buttons Group",
+                    "settings": {
+                      "gap_between_buttons_desktop": 10,
+                      "buttons_alignment": "center",
+                      "top_padding_desktop": 0,
+                      "bottom_padding_desktop": 0,
+                      "gap_between_buttons_mobile": 0,
+                      "buttons_alignment_mobile": "center",
+                      "top_padding_mobile": 0,
+                      "bottom_padding_mobile": 0
+                    },
+                    "blocks": {
+                      "button_RReE9H": {
+                        "type": "button",
+                        "name": "Button",
+                        "settings": {
+                          "button_text": "See More Details",
+                          "button_link": "",
+                          "button_type": "secondary",
+                          "hide_on_mobile": true
+                        },
+                        "blocks": {}
+                      },
+                      "button_FMEeLf": {
+                        "type": "button",
+                        "name": "Button",
+                        "settings": {
+                          "button_text": "Choose Package",
+                          "button_link": "",
+                          "button_type": "primary",
+                          "hide_on_mobile": false
+                        },
+                        "blocks": {}
+                      }
+                    },
+                    "block_order": [
+                      "button_RReE9H",
+                      "button_FMEeLf"
+                    ]
+                  }
+                },
+                "block_order": [
+                  "table_RpyRnn",
+                  "buttons_group_DgUjMy"
+                ]
+              },
+              "tab_item_EG4tdf": {
+                "type": "_tab-item",
+                "settings": {
+                  "title": "Energy",
+                  "desktop_padding": 10,
+                  "gap_between_blocks": 20,
+                  "mobile_padding": 10,
+                  "mobile_gap_between_blocks": 20
+                },
+                "blocks": {
+                  "table_WqxjnV": {
+                    "type": "table",
+                    "name": "Table",
+                    "settings": {
+                      "image": "shopify://shop_images/table-energy.png"
+                    },
+                    "blocks": {}
+                  },
+                  "buttons_group_XTMAYE": {
+                    "type": "buttons-group",
+                    "name": "Buttons Group",
+                    "settings": {
+                      "gap_between_buttons_desktop": 10,
+                      "buttons_alignment": "center",
+                      "top_padding_desktop": 0,
+                      "bottom_padding_desktop": 0,
+                      "gap_between_buttons_mobile": 0,
+                      "buttons_alignment_mobile": "center",
+                      "top_padding_mobile": 0,
+                      "bottom_padding_mobile": 0
+                    },
+                    "blocks": {
+                      "button_fHeWdL": {
+                        "type": "button",
+                        "name": "Button",
+                        "settings": {
+                          "button_text": "See More Details",
+                          "button_link": "",
+                          "button_type": "secondary",
+                          "hide_on_mobile": true
+                        },
+                        "blocks": {}
+                      },
+                      "button_JDL7Xj": {
+                        "type": "button",
+                        "name": "Button",
+                        "settings": {
+                          "button_text": "Choose Package",
+                          "button_link": "",
+                          "button_type": "primary",
+                          "hide_on_mobile": false
+                        },
+                        "blocks": {}
+                      }
+                    },
+                    "block_order": [
+                      "button_fHeWdL",
+                      "button_JDL7Xj"
+                    ]
+                  }
+                },
+                "block_order": [
+                  "table_WqxjnV",
+                  "buttons_group_XTMAYE"
+                ]
+              }
+            },
+            "block_order": [
+              "tab_item_qTqm8r",
+              "tab_item_tXhtJ4",
+              "tab_item_EG4tdf"
+            ]
+          }
+        },
+        "block_order": [
+          "review_badge_pREbUH",
+          "heading_gUWdwc",
+          "tabs_YAXKJd"
+        ],
+        "name": "Ingredients Tabs",
+        "settings": {
+          "desktop_padding_top": 50,
+          "desktop_gap_between_blocks": 10,
+          "bg_color": "#e9f4ff",
+          "desktop_max_width": 900,
+          "mobile_padding_top": 30,
+          "mobile_gap_between_blocks": 10
+        }
+      },
+      "blank_section_UL7bkY": {
+        "type": "blank-section",
+        "blocks": {
+          "heading_VN989j": {
+            "type": "heading",
+            "name": "Heading",
+            "settings": {
+              "title": "<h2>Join 1,000,000+ others Who Have Changed <br/>their lives with nectar</h2>",
+              "text_color": "rgba(0,0,0,0)",
+              "text_alignment": "center",
+              "heading_size": "4xl",
+              "font_weight": "bold",
+              "font_family": "values-sans",
+              "use_mobile_settings": true,
+              "text_alignment_mobile": "center",
+              "heading_size_mobile": "lg",
+              "font_weight_mobile": "bold"
+            },
+            "blocks": {}
+          },
+          "tabs_naxAfz": {
+            "type": "tabs",
+            "name": "Tabs",
+            "settings": {},
+            "blocks": {
+              "tab_item_FwH3mL": {
+                "type": "_tab-item",
+                "settings": {
+                  "title": "Calm",
+                  "desktop_padding": 10,
+                  "gap_between_blocks": 20,
+                  "mobile_padding": 20,
+                  "mobile_gap_between_blocks": 10
+                },
+                "blocks": {
+                  "reviews_pkMPFy": {
+                    "type": "reviews",
+                    "name": "Reviews",
+                    "settings": {
+                      "reviews": [
+                        "reviews-ngko8ewg",
+                        "diana-moor",
+                        "jason-statham"
+                      ],
+                      "desktop_padding": 0,
+                      "desktop_columns_per_row": 3,
+                      "desktop_gap": 20,
+                      "mobile_padding": 0,
+                      "mobile_columns_per_row": 1,
+                      "mobile_gap": 10
+                    },
+                    "blocks": {}
+                  },
+                  "carousel_8BpzaC": {
+                    "type": "carousel",
+                    "name": "Carousel",
+                    "settings": {
+                      "items_per_view": 4,
+                      "gap": 14,
+                      "items_per_view_mobile": 1,
+                      "gap_mobile": 0
+                    },
+                    "blocks": {
+                      "carousel_item_eiCa4k": {
+                        "type": "_carousel-item",
+                        "name": "Carousel Item",
+                        "settings": {
+                          "image": "shopify://shop_images/Frame_1484581378_3.png",
+                          "video_url": "https://cdn.shopify.com/videos/c/o/v/f471d161dca04cc8ba9d8743e226d2c1.mp4"
+                        },
+                        "blocks": {}
+                      },
+                      "carousel_item_bGeUbG": {
+                        "type": "_carousel-item",
+                        "name": "Carousel Item",
+                        "settings": {
+                          "image": "shopify://shop_images/Calm_PDP_Picture_Sticks.png",
+                          "video_url": ""
+                        },
+                        "blocks": {}
+                      },
+                      "carousel_item_M6m9qT": {
+                        "type": "_carousel-item",
+                        "name": "Carousel Item",
+                        "settings": {
+                          "image": "shopify://shop_images/7473299259786715751gif_6__12x16_-ezgif.com-video-to-gif-converter.gif",
+                          "video_url": ""
+                        },
+                        "blocks": {}
+                      },
+                      "carousel_item_L9iXHb": {
+                        "type": "_carousel-item",
+                        "name": "Carousel Item",
+                        "settings": {
+                          "image": "shopify://shop_images/Calm_PDP_Picture_Sticks_1.png",
+                          "video_url": ""
+                        },
+                        "blocks": {}
+                      },
+                      "carousel_item_y6aQjb": {
+                        "type": "_carousel-item",
+                        "name": "Carousel Item",
+                        "settings": {
+                          "image": "shopify://shop_images/hero-bg.png",
+                          "video_url": ""
+                        },
+                        "blocks": {}
+                      }
+                    },
+                    "block_order": [
+                      "carousel_item_eiCa4k",
+                      "carousel_item_bGeUbG",
+                      "carousel_item_M6m9qT",
+                      "carousel_item_L9iXHb",
+                      "carousel_item_y6aQjb"
+                    ]
+                  }
+                },
+                "block_order": [
+                  "reviews_pkMPFy",
+                  "carousel_8BpzaC"
+                ]
+              },
+              "tab_item_XqdXxN": {
+                "type": "_tab-item",
+                "settings": {
+                  "title": "Hydration",
+                  "desktop_padding": 10,
+                  "gap_between_blocks": 20,
+                  "mobile_padding": 20,
+                  "mobile_gap_between_blocks": 10
+                },
+                "blocks": {
+                  "reviews_ynecUg": {
+                    "type": "reviews",
+                    "name": "Reviews",
+                    "settings": {
+                      "reviews": [
+                        "diana-moor",
+                        "jason-statham"
+                      ],
+                      "desktop_padding": 0,
+                      "desktop_columns_per_row": 2,
+                      "desktop_gap": 20,
+                      "mobile_padding": 0,
+                      "mobile_columns_per_row": 1,
+                      "mobile_gap": 10
+                    },
+                    "blocks": {}
+                  },
+                  "carousel_yKqWtL": {
+                    "type": "carousel",
+                    "name": "Carousel",
+                    "settings": {
+                      "items_per_view": 4,
+                      "gap": 14,
+                      "items_per_view_mobile": 1,
+                      "gap_mobile": 0
+                    },
+                    "blocks": {
+                      "carousel_item_npJ4QF": {
+                        "type": "_carousel-item",
+                        "name": "Carousel Item",
+                        "settings": {
+                          "image": "shopify://shop_images/Calm_PDP_Picture_Sticks.png",
+                          "video_url": ""
+                        },
+                        "blocks": {}
+                      },
+                      "carousel_item_A8bBUd": {
+                        "type": "_carousel-item",
+                        "name": "Carousel Item",
+                        "settings": {
+                          "image": "shopify://shop_images/7473299259786715751gif_6__12x16_-ezgif.com-video-to-gif-converter.gif",
+                          "video_url": ""
+                        },
+                        "blocks": {}
+                      },
+                      "carousel_item_TwrYhj": {
+                        "type": "_carousel-item",
+                        "name": "Carousel Item",
+                        "settings": {
+                          "image": "shopify://shop_images/Frame_1484581378_3.png",
+                          "video_url": "https://cdn.shopify.com/videos/c/o/v/f471d161dca04cc8ba9d8743e226d2c1.mp4"
+                        },
+                        "blocks": {}
+                      },
+                      "carousel_item_JQELWF": {
+                        "type": "_carousel-item",
+                        "name": "Carousel Item",
+                        "settings": {
+                          "image": "shopify://shop_images/Calm_PDP_Picture_Sticks_1.png",
+                          "video_url": ""
+                        },
+                        "blocks": {}
+                      },
+                      "carousel_item_qA6XNQ": {
+                        "type": "_carousel-item",
+                        "name": "Carousel Item",
+                        "settings": {
+                          "image": "shopify://shop_images/hero-bg.png",
+                          "video_url": ""
+                        },
+                        "blocks": {}
+                      }
+                    },
+                    "block_order": [
+                      "carousel_item_npJ4QF",
+                      "carousel_item_A8bBUd",
+                      "carousel_item_TwrYhj",
+                      "carousel_item_JQELWF",
+                      "carousel_item_qA6XNQ"
+                    ]
+                  }
+                },
+                "block_order": [
+                  "reviews_ynecUg",
+                  "carousel_yKqWtL"
+                ]
+              },
+              "tab_item_AfabA3": {
+                "type": "_tab-item",
+                "settings": {
+                  "title": "Energy",
+                  "desktop_padding": 10,
+                  "gap_between_blocks": 20,
+                  "mobile_padding": 20,
+                  "mobile_gap_between_blocks": 10
+                },
+                "blocks": {
+                  "reviews_YKWENi": {
+                    "type": "reviews",
+                    "name": "Reviews",
+                    "settings": {
+                      "reviews": [
+                        "jason-statham"
+                      ],
+                      "desktop_padding": 0,
+                      "desktop_columns_per_row": 1,
+                      "desktop_gap": 20,
+                      "mobile_padding": 0,
+                      "mobile_columns_per_row": 1,
+                      "mobile_gap": 10
+                    },
+                    "blocks": {}
+                  },
+                  "carousel_fkTJpM": {
+                    "type": "carousel",
+                    "name": "Carousel",
+                    "settings": {
+                      "items_per_view": 4,
+                      "gap": 14,
+                      "items_per_view_mobile": 1,
+                      "gap_mobile": 0
+                    },
+                    "blocks": {
+                      "carousel_item_iVAxWY": {
+                        "type": "_carousel-item",
+                        "name": "Carousel Item",
+                        "settings": {
+                          "image": "shopify://shop_images/hero-bg.png",
+                          "video_url": ""
+                        },
+                        "blocks": {}
+                      },
+                      "carousel_item_m88pY3": {
+                        "type": "_carousel-item",
+                        "name": "Carousel Item",
+                        "settings": {
+                          "image": "shopify://shop_images/Frame_1484581378_3.png",
+                          "video_url": "https://cdn.shopify.com/videos/c/o/v/f471d161dca04cc8ba9d8743e226d2c1.mp4"
+                        },
+                        "blocks": {}
+                      },
+                      "carousel_item_JM6f8E": {
+                        "type": "_carousel-item",
+                        "name": "Carousel Item",
+                        "settings": {
+                          "image": "shopify://shop_images/Calm_PDP_Picture_Sticks.png",
+                          "video_url": ""
+                        },
+                        "blocks": {}
+                      },
+                      "carousel_item_7iRwaQ": {
+                        "type": "_carousel-item",
+                        "name": "Carousel Item",
+                        "settings": {
+                          "image": "shopify://shop_images/7473299259786715751gif_6__12x16_-ezgif.com-video-to-gif-converter.gif",
+                          "video_url": ""
+                        },
+                        "blocks": {}
+                      },
+                      "carousel_item_N6rwEn": {
+                        "type": "_carousel-item",
+                        "name": "Carousel Item",
+                        "settings": {
+                          "image": "shopify://shop_images/Calm_PDP_Picture_Sticks_1.png",
+                          "video_url": ""
+                        },
+                        "blocks": {}
+                      }
+                    },
+                    "block_order": [
+                      "carousel_item_iVAxWY",
+                      "carousel_item_m88pY3",
+                      "carousel_item_JM6f8E",
+                      "carousel_item_7iRwaQ",
+                      "carousel_item_N6rwEn"
+                    ]
+                  }
+                },
+                "block_order": [
+                  "reviews_YKWENi",
+                  "carousel_fkTJpM"
+                ]
+              }
+            },
+            "block_order": [
+              "tab_item_FwH3mL",
+              "tab_item_XqdXxN",
+              "tab_item_AfabA3"
+            ]
+          }
+        },
+        "block_order": [
+          "heading_VN989j",
+          "tabs_naxAfz"
+        ],
+        "name": "Testimonials",
+        "settings": {
+          "desktop_padding_top": 40,
+          "desktop_gap_between_blocks": 20,
+          "bg_color": "#ffffff",
+          "desktop_max_width": 1200,
+          "mobile_padding_top": 30,
+          "mobile_gap_between_blocks": 10
+        }
+      },
+      "blank_section_BhCWiW": {
+        "type": "blank-section",
+        "blocks": {
+          "heading_aXLmTH": {
+            "type": "heading",
+            "name": "Heading",
+            "settings": {
+              "title": "<h2>Six Light, Refreshing Flavors</h2>",
+              "text_color": "rgba(0,0,0,0)",
+              "text_alignment": "center",
+              "heading_size": "3xl",
+              "font_weight": "bold",
+              "font_family": "values-sans",
+              "use_mobile_settings": true,
+              "text_alignment_mobile": "center",
+              "heading_size_mobile": "lg",
+              "font_weight_mobile": "bold"
+            },
+            "blocks": {}
+          },
+          "text_QrQcxm": {
+            "type": "text",
+            "name": "Text",
+            "settings": {
+              "title": "<p>Real organic fruit flavors you can enjoy Sipping all day long</p>",
+              "text_alignment": "center",
+              "font_family": "poppins",
+              "font_weight": "normal",
+              "font_size": 18,
+              "font_size_mobile": 16
+            },
+            "blocks": {}
+          },
+          "layout_LHrmwk": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 20,
+              "desktop_gap": 16,
+              "desktop_columns_per_row": 3,
+              "mobile_padding": 10,
+              "mobile_gap": 14,
+              "mobile_columns_per_row": 2
+            },
+            "blocks": {
+              "layout_item_cXbxFi": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {},
+                "blocks": {
+                  "image_bY3ymz": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/card_3.png",
+                      "image_url": "",
+                      "image_ratio": "1/1",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_bY3ymz"
+                ]
+              },
+              "layout_item_Fy7Ph4": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {},
+                "blocks": {
+                  "image_Yy3MNT": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/card_6.png",
+                      "image_url": "",
+                      "image_ratio": "1/1",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_Yy3MNT"
+                ]
+              },
+              "layout_item_xPTk3x": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {},
+                "blocks": {
+                  "image_XcQUrz": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/card_1.png",
+                      "image_url": "",
+                      "image_ratio": "1/1",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_XcQUrz"
+                ]
+              },
+              "layout_item_Q9ErLU": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {},
+                "blocks": {
+                  "image_m8gRQB": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/card_2.png",
+                      "image_url": "",
+                      "image_ratio": "1/1",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_m8gRQB"
+                ]
+              },
+              "layout_item_HWtj4i": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {},
+                "blocks": {
+                  "image_YUPERM": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/card_5.png",
+                      "image_url": "",
+                      "image_ratio": "1/1",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_YUPERM"
+                ]
+              },
+              "layout_item_UVdMA3": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {},
+                "blocks": {
+                  "image_CaiJyc": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/card_4.png",
+                      "image_url": "",
+                      "image_ratio": "1/1",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_CaiJyc"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_cXbxFi",
+              "layout_item_Fy7Ph4",
+              "layout_item_xPTk3x",
+              "layout_item_Q9ErLU",
+              "layout_item_HWtj4i",
+              "layout_item_UVdMA3"
+            ]
+          }
+        },
+        "block_order": [
+          "heading_aXLmTH",
+          "text_QrQcxm",
+          "layout_LHrmwk"
+        ],
+        "name": "Flavors",
+        "settings": {
+          "desktop_padding_top": 40,
+          "desktop_gap_between_blocks": 10,
+          "bg_color": "#e9f4ff",
+          "desktop_max_width": 900,
+          "mobile_padding_top": 30,
+          "mobile_gap_between_blocks": 10
+        }
+      },
+      "blank_section_ePWPtd": {
+        "type": "blank-section",
+        "blocks": {
+          "layout_pUkUbf": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 0,
+              "desktop_gap": 30,
+              "desktop_columns_per_row": 2,
+              "mobile_padding": 0,
+              "mobile_gap": 14,
+              "mobile_columns_per_row": 1
+            },
+            "blocks": {
+              "layout_item_W6dFge": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {},
+                "blocks": {
+                  "heading_nT9CJw": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<h2>Still Not Sure? Here Are The Top 8 Questions We Get About <strong>Nectar</strong></h2>",
+                      "text_color": "#123456",
+                      "text_alignment": "left",
+                      "heading_size": "4xl",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "center",
+                      "heading_size_mobile": "xl",
+                      "font_weight_mobile": "bold"
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "heading_nT9CJw"
+                ]
+              },
+              "layout_item_jBXrbU": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {},
+                "blocks": {
+                  "accordion_NmDLi4": {
+                    "type": "accordion",
+                    "name": "Accordion",
+                    "settings": {},
+                    "blocks": {
+                      "accordion_item_CiKUDb": {
+                        "type": "_accordion-item",
+                        "name": "Accordion Item",
+                        "settings": {
+                          "open_by_default": true,
+                          "question": "Shipping Details",
+                          "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+                        },
+                        "blocks": {}
+                      },
+                      "accordion_item_KhCnAC": {
+                        "type": "_accordion-item",
+                        "name": "Accordion Item",
+                        "settings": {
+                          "open_by_default": false,
+                          "question": "Shipping Details",
+                          "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+                        },
+                        "blocks": {}
+                      },
+                      "accordion_item_JapnWD": {
+                        "type": "_accordion-item",
+                        "name": "Accordion Item",
+                        "settings": {
+                          "open_by_default": false,
+                          "question": "Who Needs Nectar?",
+                          "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+                        },
+                        "blocks": {}
+                      },
+                      "accordion_item_dgD93C": {
+                        "type": "_accordion-item",
+                        "name": "Accordion Item",
+                        "settings": {
+                          "open_by_default": false,
+                          "question": "Ingredients & Nutrition",
+                          "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+                        },
+                        "blocks": {}
+                      },
+                      "accordion_item_LztkKC": {
+                        "type": "_accordion-item",
+                        "name": "Accordion Item",
+                        "settings": {
+                          "open_by_default": false,
+                          "question": "Directions For Use",
+                          "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+                        },
+                        "blocks": {}
+                      },
+                      "accordion_item_A8L4GD": {
+                        "type": "_accordion-item",
+                        "name": "Accordion Item",
+                        "settings": {
+                          "open_by_default": false,
+                          "question": "What Does It Taste Like?",
+                          "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+                        },
+                        "blocks": {}
+                      }
+                    },
+                    "block_order": [
+                      "accordion_item_CiKUDb",
+                      "accordion_item_KhCnAC",
+                      "accordion_item_JapnWD",
+                      "accordion_item_dgD93C",
+                      "accordion_item_LztkKC",
+                      "accordion_item_A8L4GD"
+                    ]
+                  }
+                },
+                "block_order": [
+                  "accordion_NmDLi4"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_W6dFge",
+              "layout_item_jBXrbU"
+            ]
+          }
+        },
+        "block_order": [
+          "layout_pUkUbf"
+        ],
+        "name": "FAQ",
+        "settings": {
+          "desktop_padding_top": 50,
+          "desktop_gap_between_blocks": 20,
+          "bg_color": "#ffffff",
+          "desktop_max_width": 1100,
           "mobile_padding_top": 30,
           "mobile_gap_between_blocks": 10
         }
@@ -415,7 +1361,11 @@
     "order": [
       "hero_xeBXpg",
       "scrollable_features_fYfbLY",
-      "blank_section_Lk6NCn"
+      "blank_section_Lk6NCn",
+      "blank_section_pdQUVV",
+      "blank_section_UL7bkY",
+      "blank_section_BhCWiW",
+      "blank_section_ePWPtd"
     ]
   }
   

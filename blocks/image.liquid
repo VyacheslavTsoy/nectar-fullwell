@@ -1,0 +1,76 @@
+{% assign bst = block.settings %}
+
+<style>
+    #{{ block.id }} {
+        width: var(--image-width);
+        aspect-ratio: var(--aspect-ratio);
+    }
+    #{{ block.id }} img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+
+<div class="block-image" id="{{ block.id }}" style="
+    --image-width: {{ bst.image_width }}%;
+    --aspect-ratio: {{ bst.image_ratio }};
+    ">
+    <a class="block-image__link block" href="{{ bst.image_url }}">
+        {% render 'img', image: bst.image, max_width: 480 %}    
+    </a>
+</div>
+
+
+{% schema %}
+{
+  "name": "Image",
+  "tag": null,
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Image",
+      "id": "image"
+    },
+    {
+      "type": "url",
+      "label": "Image URL",
+      "id": "image_url"
+    },
+    {
+      "type": "select",
+      "label": "Image ration",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "16/ы9",
+          "label": "16/9"
+        },
+        {
+          "value": "4/3",
+          "label": "4/3"
+        },
+        {
+          "value": "1/1",
+          "label": "1/1"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "label": "Image width in percent",
+      "id": "image_width",
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "default": 100,
+      "info": "If you want to use the full width of the screen, set it to 100"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image"
+    }
+  ]
+}
+{% endschema %}

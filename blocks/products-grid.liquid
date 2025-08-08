@@ -9,18 +9,18 @@
 </style>
 
 <div class="products-grid" id="{{ block.id }}" style="
-    --padding: {{ bst.desktop_padding }}px;
+    --padding: {{ bst.desktop_padding | times: 0.1 }}rem;
     --columns-per-row-desktop: {{ bst.desktop_columns_per_row }};
     --columns-per-row-mobile: {{ bst.mobile_columns_per_row }};
 " x-data="productsGrid">
-    <div class="btn-group flex gap-2 justify-center mb-4 md:hidden">
+    <div class="btn-group flex gap-2 justify-center mb-4 lg:hidden">
         <div class="btn-group__inner py-1.5 px-1.5 flex gap-2">
             <template x-for="puprose in puproses" :key="puprose">
                 <button class="btn-sm" x-text="puprose" @click="activePuprose = puprose" :class="{ 'btn-sm--active': puprose === activePuprose }"></button>
             </template>
         </div>
     </div>
-    <div class="products-grid__content grid grid-cols-1 gap-4 lg:grid-cols-[repeat(var(--columns-per-row-desktop),1fr)]">
+    <div class="products-grid__content grid grid-cols-1 gap-8 lg:grid-cols-[repeat(var(--columns-per-row-desktop),1fr)]">
         {% content_for 'blocks' %}
     </div>
 </div>

@@ -1,12 +1,120 @@
+{% assign bst = block.settings %}
+{% assign reviews = bst.reviews %}
+
+<div class="reviews" id="{{ block.id }}">
+    <div class="reviews__content grid grid-cols-1 gap-[var(--gap)] lg:grid-cols-[var(--desktop-columns-per-row)] lg:gap-[var(--desktop-gap)]"
+    style="
+        --padding-top: {{ bst.mobile_padding | times: 0.1 }}rem;
+        --padding-bottom: {{ bst.mobile_padding | times: 0.1 }}rem;
+        --columns-per-row: {{ bst.mobile_columns_per_row }};
+        --desktop-columns-per-row: repeat({{ bst.desktop_columns_per_row }}, 1fr);
+        --gap: {{ bst.mobile_gap | times: 0.1 }}rem;
+        --desktop-gap: {{ bst.desktop_gap | times: 0.1 }}rem;
+    "
+    >
+        {% for review in reviews %}
+            <div class="review bg-lightGrey">
+                <div class="review__header flex items-center justify-between pb-3 mb-3">
+                    <div class="flex items-center gap-4">
+                        <div class="review__author">
+                            {{ review.name }}
+                        </div>
+                        <div class="review__rating">
+                            {% render 'stars', score: review.score %}
+                        </div>
+                    </div>
+                    {% if review.verified_buyer %}
+                        <div class="review__verified-badge">Verified Buyer</div>
+                    {% endif %}
+                </div>
+                <div class="review__content">
+                    <div class="review__text">
+                        {{ review.text | metafield_tag }}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
 {% schema %}
 {
-  "name": "Reviews",
-  "tag": null,
-  "settings": [
+    "name": "Reviews",
+    "tag": null,
+    "settings": [
     {
-      "type": "text",
-      "id": "title",
-      "label": "Title"
+        "type": "metaobject_list",
+        "id": "reviews",
+        "label": "Reviews",
+        "metaobject_type": "reviews"
+    },
+    {
+        "type": "header",
+        "content": "Desktop"
+    },
+    {
+        "type": "range",
+        "label": "Vertical Padding",
+        "id": "desktop_padding",
+        "min": 0,
+        "max": 200,
+        "step": 10,
+        "default": 0
+    },
+    {
+        "type": "range",
+        "label": "Columns per row",
+        "id": "desktop_columns_per_row",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "default": 3
+    },
+    {
+        "type": "range",
+        "label": "Gap between reviews",
+        "id": "desktop_gap",
+        "min": 0,
+        "max": 200,
+        "step": 10,
+        "default": 20
+    },
+    {
+        "type": "header",
+        "content": "Mobile"
+    },
+    {
+        "type": "range",
+        "label": "Vertical Padding",
+        "id": "mobile_padding",
+        "min": 0,
+        "max": 200,
+        "step": 10,
+        "default": 0
+    },
+    {
+        "type": "range",
+        "label": "Columns per row",
+        "id": "mobile_columns_per_row",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "default": 1
+    },
+    {
+        "type": "range",
+        "label": "Gap between reviews",
+        "id": "mobile_gap",
+        "min": 0,
+        "max": 200,
+        "step": 10,
+        "default": 10
+    }
+  ],
+  "presets": [
+    {
+      "name": "Reviews"
     }
   ]
 }

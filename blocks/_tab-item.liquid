@@ -1,12 +1,73 @@
+{% assign bst = block.settings %}
+
+<div class="tab-item" id="{{ block.id }}" data-tab-name="{{ block.settings.title }}" style="
+    --padding: {{ bst.desktop_padding | times: 0.1 }}rem;
+    --gap-between-blocks: {{ bst.gap_between_blocks | times: 0.1 }}rem;
+">
+    <div class="tab-item__content py-[var(--padding)] lg:py-[var(--padding)] grid grid-cols-1 gap-[var(--gap-between-blocks)] lg:gap-[var(--gap-between-blocks)]">
+        {% content_for 'blocks' %}
+    </div>
+</div>
+
 {% schema %}
 {
   "name": "Tab Item",
   "tag": null,
+  "blocks": [{"type": "@theme"}],
   "settings": [
     {
       "type": "text",
       "id": "title",
       "label": "Title"
+    },
+    {
+      "type": "header",
+      "content": "Desktop Settings"
+    },
+    {
+      "type": "range",
+      "id": "desktop_padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "label": "Vertical Padding",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "gap_between_blocks",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "label": "Gap Between Blocks",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Mobile Settings"
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "label": "Vertical Padding",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "mobile_gap_between_blocks",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "label": "Gap Between Blocks",
+      "default": 10
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tab Item"
     }
   ]
 }

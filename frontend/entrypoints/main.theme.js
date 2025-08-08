@@ -18,9 +18,3 @@ Swiper.use([Navigation, Pagination]);
 
 Alpine.plugin(persist);
 Alpine.start();
-
-import { variantSelect } from '../components/variant-select';
-import { headerSticky } from '../components/header';
-
-headerSticky();
-variantSelect();

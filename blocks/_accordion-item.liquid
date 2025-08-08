@@ -1,12 +1,30 @@
+{% render 'accordion-item', question: block.settings.question, answer: block.settings.answer, open_by_default: block.settings.open_by_default, large_title: true %}
+
 {% schema %}
 {
   "name": "Accordion Item",
   "tag": null,
   "settings": [
     {
+      "type": "checkbox",
+      "id": "open_by_default",
+      "label": "Open by default",
+      "default": false
+    },
+    {
       "type": "text",
-      "id": "title",
-      "label": "Title"
+      "id": "question",
+      "label": "Question"
+    },
+    {
+      "type": "richtext",
+      "id": "answer",
+      "label": "Answer"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Accordion Item"
     }
   ]
 }

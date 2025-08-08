@@ -2,23 +2,23 @@
 
 <style>
     #{{ block.id }} {
-        padding-top: {{ bst.top_padding_mobile }}px;
-        padding-bottom: {{ bst.bottom_padding_mobile }}px;
-        gap: {{ bst.gap_between_buttons_mobile }}px;
+        padding-top: {{ bst.top_padding_mobile | times: 0.1 }}rem;
+        padding-bottom: {{ bst.bottom_padding_mobile | times: 0.1 }}rem;
+        gap: {{ bst.gap_between_buttons_mobile | times: 0.1 }}rem;
         justify-content: {{ bst.buttons_alignment_mobile }};
     }
 
     @media (min-width: 768px) {
         #{{ block.id }} {
-            padding-top: {{ bst.top_padding_desktop }}px;
-            padding-bottom: {{ bst.bottom_padding_desktop }}px;
-            gap: {{ bst.gap_between_buttons_desktop }}px;
-            justify-content: {{ bst.buttons_alignment_desktop }};
+            padding-top: {{ bst.top_padding_desktop | times: 0.1 }}rem;
+            padding-bottom: {{ bst.bottom_padding_desktop | times: 0.1 }}rem;
+            gap: {{ bst.gap_between_buttons_desktop | times: 0.1 }}rem;
+            justify-content: {{ bst.buttons_alignment }};
         }
     }
 </style>
 
-<div class="buttons-group" id="{{ block.id }}">
+<div class="buttons-group flex flex-col md:flex-row items-center" id="{{ block.id }}">
     {% content_for 'blocks' %}
 </div>
 
@@ -45,19 +45,19 @@
         "id": "buttons_alignment",
         "options": [
             {
-                "value": "justify-start",
+                "value": "flex-start",
                 "label": "Left"
             },
             {
-                "value": "justify-center",
+                "value": "center",
                 "label": "Center"
             },
             {
-                "value": "justify-end",
+                "value": "flex-end",
                 "label": "Right"
             }
         ],
-        "default": "justify-center"
+        "default": "center"
     },
     {
         "type": "range",
@@ -96,19 +96,19 @@
         "id": "buttons_alignment_mobile",
         "options": [
             {
-                "value": "justify-start",
+                "value": "flex-start",
                 "label": "Left"
             },
             {
-                "value": "justify-center",
+                "value": "center",
                 "label": "Center"
             },
             {
-                "value": "justify-end",
+                "value": "flex-end",
                 "label": "Right"
             }
         ],
-        "default": "justify-center"
+        "default": "center"
     },
     {
         "type": "range",

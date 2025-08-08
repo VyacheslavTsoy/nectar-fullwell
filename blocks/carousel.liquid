@@ -1,0 +1,90 @@
+<div class="carousel overflow-hidden w-full" id="{{ block.id }}">
+    <div class="carousel__content swiper">
+        <div class="swiper-wrapper">
+            {% content_for 'blocks' %}
+        </div>
+
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const swiper = new Swiper('#{{ block.id }} .swiper', {
+            slidesPerView: {{ block.settings.items_per_view_mobile }},
+            spaceBetween: {{ block.settings.gap_mobile }},
+            breakpoints: {
+                768: {
+                    slidesPerView: {{ block.settings.items_per_view }},
+                    spaceBetween: {{ block.settings.gap }},
+                }
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            }
+        });
+    });
+</script>
+
+{% schema %}
+{
+  "name": "Carousel",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Desktop"
+    },
+    {
+      "type": "range",
+      "label": "Items per view",
+      "id": "items_per_view",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 1
+    },
+    {
+      "type": "range",
+      "label": "Gap between items",
+      "id": "gap",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "label": "Items per view",
+      "id": "items_per_view_mobile",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 1
+    },
+    {
+      "type": "range",
+      "label": "Gap between items",
+      "id": "gap_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "_carousel-item",
+    }
+  ],
+  "presets": [
+    {
+      "name": "Carousel"
+    }
+  ]
+}
+{% endschema %}
