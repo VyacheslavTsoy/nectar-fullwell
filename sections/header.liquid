@@ -11,7 +11,9 @@
 
             {% if ss.logo != blank %}
                 <div class="header__logo max-w-[9rem] md:max-w-[15rem]">
-                    {{ ss.logo | image_url: width: 240 | image_tag }}
+                    <a href="/" class="block">
+                        {{ ss.logo | image_url: width: 240 | image_tag }}
+                    </a>
                 </div>
             {% endif %}
 

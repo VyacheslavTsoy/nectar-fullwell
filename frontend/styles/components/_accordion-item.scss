@@ -1,0 +1,29 @@
+.accordion-item {
+    border-bottom: 1px solid #E9EAEB;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &[open] {
+        svg {
+            transform: rotate(45deg);
+        }
+    }
+
+    &__summary {
+        cursor: pointer;
+
+        svg {
+            transition: transform 0.15s ease;
+        }
+
+        &:active svg {
+            transform: rotate(5deg);
+        }
+    }
+
+    &__content {
+        
+    }
+}

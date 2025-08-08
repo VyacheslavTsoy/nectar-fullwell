@@ -9,7 +9,8 @@
     &__inner {
         background-color: $nyanza;
         border: 2px dashed $laSalleGreen;
-        padding: 0 1.6rem;
+        padding: 0 1.2rem;
         border-radius: 1.6rem;
+        white-space: nowrap;
     }
 }

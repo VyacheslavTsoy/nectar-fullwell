@@ -1,0 +1,135 @@
+{% assign bst = block.settings %}
+
+<style>
+    @media (max-width: 768px) {
+        .products-grid__content .product-card:not(:first-child) {
+            display: none;
+        }
+    }
+</style>
+
+<div class="products-grid" id="{{ block.id }}" style="
+    --padding: {{ bst.desktop_padding }}px;
+    --columns-per-row-desktop: {{ bst.desktop_columns_per_row }};
+    --columns-per-row-mobile: {{ bst.mobile_columns_per_row }};
+" x-data="productsGrid">
+    <div class="btn-group flex gap-2 justify-center mb-4 md:hidden">
+        <div class="btn-group__inner py-1.5 px-1.5 flex gap-2">
+            <template x-for="puprose in puproses" :key="puprose">
+                <button class="btn-sm" x-text="puprose" @click="activePuprose = puprose" :class="{ 'btn-sm--active': puprose === activePuprose }"></button>
+            </template>
+        </div>
+    </div>
+    <div class="products-grid__content grid grid-cols-1 gap-4 lg:grid-cols-[repeat(var(--columns-per-row-desktop),1fr)]">
+        {% content_for 'blocks' %}
+    </div>
+</div>
+
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('productsGrid', () => ({
+            puproses: [],
+            activePuprose: null,
+          
+            collectPurposes() {
+              const parentEl = this.$el.closest('.products-grid');
+              const products = parentEl.querySelectorAll('.product-card[data-puprose]');
+          
+              const uniquePurposes = new Set();
+          
+              products.forEach(product => {
+                const puprose = product.dataset.puprose;
+                if (puprose) uniquePurposes.add(puprose);
+              });
+          
+              this.puproses = Array.from(uniquePurposes);
+            },
+          
+            filterByPuprose() {
+                const parentEl = this.$el.closest('.products-grid');
+                const products = parentEl.querySelectorAll('.product-card[data-puprose]');
+
+                if (window.innerWidth > 768 || !this.activePuprose) return;
+            
+                products.forEach(product => {
+                    product.style.display =
+                    product.dataset.puprose === this.activePuprose ? 'block' : 'none';
+                });
+            },
+          
+            init() {
+              this.collectPurposes();
+              this.activePuprose = this.puproses[0] || null;
+          
+              this.$watch('activePuprose', () => {
+                this.filterByPuprose();
+              });
+        
+              this.filterByPuprose();
+            }
+          }));
+    });
+</script>
+
+{% schema %}
+{
+  "name": "Products Grid",
+  "tag": null,
+  "settings": [
+    {
+        "type": "header",
+        "content": "Desktop"
+    },
+    {
+        "type": "range",
+        "label": "Vertical Padding",
+        "id": "desktop_padding",
+        "min": 0,
+        "max": 200,
+        "step": 10,
+        "default": 0
+    },
+    {
+        "type": "range",
+        "label": "Columns per row",
+        "id": "desktop_columns_per_row",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "default": 3
+    },
+    {
+        "type": "header",
+        "content": "Mobile"
+    },
+    {
+        "type": "range",
+        "label": "Vertical Padding",
+        "id": "mobile_padding",
+        "min": 0,
+        "max": 200,
+        "step": 10,
+        "default": 0
+    },
+    {
+        "type": "range",
+        "label": "Columns per row",
+        "id": "mobile_columns_per_row",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "default": 1
+    }
+  ],
+  "blocks": [
+    {
+      "type": "_product-card"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Products Grid"
+    }
+  ]
+}
+{% endschema %}

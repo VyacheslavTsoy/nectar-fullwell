@@ -2,10 +2,9 @@
 
 export default {
     content: [
-        './**/*.{liquid,json,js,ts}',
-        '!./node_modules',
+        './**/*.{liquid,html,js,json}',
         '!./node_modules/**/*',
-    ],
+      ],
   theme: {
     fontSize: {
       xs: ['1.2rem', '1.6rem'],
@@ -27,7 +26,7 @@ export default {
     screens: {
       sm: '480px',
       md: '768px',
-      lg: '976px',
+      lg: '1024px',
       xl: '1300px',
     },
     container: {

@@ -1,0 +1,23 @@
+<div class="layout-item">
+    {% content_for 'blocks' %}
+</div>
+
+{% schema %}
+{
+  "name": "Products Grid Item",
+  "tag": null,
+  "blocks": [
+    {
+        "type": "@theme"
+    },
+    {
+        "type": "_product-card"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Products Grid Item"
+    }
+  ]
+}
+{% endschema %}

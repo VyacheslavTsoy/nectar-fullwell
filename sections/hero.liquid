@@ -28,7 +28,7 @@
     }
 </style>
 
-<section class="hero relative text-[{{ sst.text_color_mobile }}] md:text-[{{ sst.text_color_desktop }}]">
+<section class="hero relative text-[{{ sst.text_color_mobile }}] lg:text-[{{ sst.text_color_desktop }}]">
     <div class="hero__img">
         <picture>
             <source srcset="{{ sst.desktop_image | image_url: width: 1920 }}" media="(min-width: 1024px)">
@@ -36,7 +36,7 @@
         </picture>
     </div>
 
-    <div class="hero__content flex flex-col justify-between md:justify-center items-center">
+    <div class="hero__content flex flex-col justify-between lg:justify-center items-center">
         {% content_for "blocks" %}
     </div>
 </section>

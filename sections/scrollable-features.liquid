@@ -1,0 +1,130 @@
+{% render 'entry' with '@/styles/sections/scrollable-features.scss' %}
+
+{% assign sst = section.settings %}
+<style>
+    #{{ section.id }} .scrollable-features__inner{
+        padding-top: {{ sst.vertical_padding }}px;
+        padding-bottom: {{ sst.vertical_padding }}px;
+        gap: {{ sst.gap_between_items }}px;
+    }
+</style>
+
+<section 
+  id="{{ section.id }}"
+  class="scrollable-features overflow-x-auto"
+  style="background-color: {{ sst.bg_color }};"
+>
+    <div 
+      class="scrollable-features__inner flex justify-center px-4"
+    >
+        {% for block in section.blocks %}
+            {% assign bst = block.settings %}
+            <div 
+            class="flex items-center gap-4 px-7 pt-5 pb-5 rounded-2xl min-w-max"
+            style="background-color: {{ sst.block_bg_color }};"
+            >
+            <span class="w-13 h-13 flex items-center justify-center">{% if bst.icon %}{{ bst.icon }}{% endif %}</span>
+                <span 
+                    class="text-baseLg"
+                    style="color: {{ sst.text_color }};"
+                >
+                    {{ bst.title }}
+                </span>
+            </div>
+        {% endfor %}
+
+        {% for block in section.blocks %}
+            {% assign bst = block.settings %}
+            <div 
+            class="flex items-center gap-4 px-7 pt-5 pb-5 rounded-2xl min-w-max"
+            style="background-color: {{ sst.block_bg_color }};"
+            >
+            <span class="w-13 h-13 flex items-center justify-center">{% if bst.icon %}{{ bst.icon }}{% endif %}</span>
+                <span 
+                    class="text-baseLg"
+                    style="color: {{ sst.text_color }};"
+                >
+                    {{ bst.title }}
+                </span>
+            </div>
+        {% endfor %}
+    </div>
+  
+</section>
+
+{% schema %}
+{
+  "name": "Scrollable Features",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Section background color",
+      "default": "#F8FAFF"
+    },
+    {
+      "type": "color",
+      "id": "block_bg_color",
+      "label": "Block background color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#0D3063"
+    },
+    {
+      "type": "range",
+      "id": "gap_between_items",
+      "label": "Gap between items (px)",
+      "min": 4,
+      "max": 64,
+      "step": 2,
+      "default": 26
+    },
+    {
+      "type": "range",
+      "id": "vertical_padding",
+      "label": "Vertical padding (px)",
+      "min": 10,
+      "max": 100,
+      "step": 2,
+      "default": 16
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "icon",
+          "label": "SVG Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Feature"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "Scrollable Features",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Feature text"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

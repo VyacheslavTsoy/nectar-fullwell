@@ -1,0 +1,74 @@
+{% assign bst = block.settings %}
+
+<div class="block-layout" id="{{ block.id }}" style="
+    --padding: {{ bst.desktop_padding }}px;
+    --columns-per-row-desktop: {{ bst.desktop_columns_per_row }};
+    --columns-per-row-mobile: {{ bst.mobile_columns_per_row }};
+">
+    <div class="block-layout__content grid grid-cols-1 gap-4 md:grid-cols-[repeat(var(--columns-per-row-desktop),1fr)]">
+        {% content_for 'blocks' %}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Layout",
+  "tag": null,
+  "settings": [
+    {
+        "type": "header",
+        "content": "Desktop"
+    },
+    {
+        "type": "range",
+        "label": "Vertical Padding",
+        "id": "desktop_padding",
+        "min": 0,
+        "max": 200,
+        "step": 10,
+        "default": 0
+    },
+    {
+        "type": "range",
+        "label": "Columns per row",
+        "id": "desktop_columns_per_row",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "default": 3
+    },
+    {
+        "type": "header",
+        "content": "Mobile"
+    },
+    {
+        "type": "range",
+        "label": "Vertical Padding",
+        "id": "mobile_padding",
+        "min": 0,
+        "max": 200,
+        "step": 10,
+        "default": 0
+    },
+    {
+        "type": "range",
+        "label": "Columns per row",
+        "id": "mobile_columns_per_row",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "default": 1
+    }
+  ],
+  "blocks": [
+    {
+      "type": "_layout-item"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Layout"
+    }
+  ]
+}
+{% endschema %}

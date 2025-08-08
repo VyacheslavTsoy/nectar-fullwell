@@ -5,7 +5,19 @@
         font-weight: var(--font-weight-{{ bst.font_weight }});
         font-family: var(--font-family-{{ bst.font_family }});
         line-height: 1.2;
+        text-align: {{ bst.text_alignment }};
     }
+
+    {% if bst.use_mobile_settings %}
+    @media (max-width: 1024px) {
+        #{{ block.id }} {
+            font-size: var(--font-size-{{ bst.heading_size_mobile }});
+            font-weight: var(--font-weight-{{ bst.font_weight_mobile }});
+            font-family: var(--font-family-{{ bst.font_family_mobile }});
+            text-align: {{ bst.text_alignment_mobile }};
+        }
+    }
+    {% endif %}
 </style>
 
 <div class="block-heading" id="{{ block.id }}">
@@ -22,6 +34,26 @@
       "label": "Title",
       "id": "title",
       "default": "<h2>Heading</h2>"
+    },
+    {
+      "type": "select",
+      "label": "Text alignment",
+      "id": "text_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
     },
     {
       "type": "select",
@@ -102,7 +134,100 @@
         }
       ],
       "default": "poppins"
-    }
+    },
+    {
+      "type": "checkbox",
+      "label": "Use mobile settings",
+      "id": "use_mobile_settings",
+      "default": false
+    },
+    {
+        "type": "select",
+        "label": "Text alignment",
+        "id": "text_alignment_mobile",
+        "visible_if": "{{ block.settings.use_mobile_settings }}",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
+      },
+      {
+        "type": "select",
+        "label": "Heading size",
+        "id": "heading_size_mobile",
+        "visible_if": "{{ block.settings.use_mobile_settings }}",
+        "options": [
+          {
+            "value": "4xl",
+            "label": "4XL"
+          },
+          {
+            "value": "3xl",
+            "label": "3XL"
+          },
+          {
+            "value": "2xl",
+            "label": "2XL"
+          },
+          {
+            "value": "xl",
+            "label": "XL"
+          },
+          {
+            "value": "lg",
+            "label": "LG"
+          },
+          {
+            "value": "md",
+            "label": "MD"
+          },
+          {
+            "value": "sm",
+            "label": "SM"
+          },
+          {
+            "value": "xs",
+            "label": "XS"
+          }
+        ],
+        "default": "xl"
+      },
+      {
+        "type": "select",
+        "label": "Font weight",
+        "id": "font_weight_mobile",
+        "visible_if": "{{ block.settings.use_mobile_settings }}",
+        "options": [
+          {
+            "value": "normal",
+            "label": "Normal"
+          },
+          {
+            "value": "medium",
+            "label": "Medium"
+          },
+          {
+            "value": "bold",
+            "label": "Bold"
+          },
+          {
+            "value": "black",
+            "label": "Black"
+          }
+        ],
+        "default": "normal"
+      },
   ],
   "presets": [
     {

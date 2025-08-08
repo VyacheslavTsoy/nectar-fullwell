@@ -1,0 +1,20 @@
+.scrollable-features {
+    overflow: hidden;
+
+    &__inner {
+        animation: marquee linear infinite;
+        animation-play-state: running;
+        animation-duration: 15s;
+        width: fit-content;
+    }
+}
+
+
+@keyframes marquee {
+    from {
+      transform:translateZ(0)
+    } 
+    to {
+      transform:translate3d(-25%,0,0)
+    }
+  }
