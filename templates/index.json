@@ -360,11 +360,12 @@
               "mobile_columns_per_row": 2
             },
             "blocks": {
-              "product_card_y9crTy": {
+              "product_card_TggHYL": {
                 "type": "_product-card",
                 "name": "Product Card",
                 "settings": {
-                  "product": "essential-daily-hydration-1",
+                  "use_as_default": false,
+                  "product": "essential-daily-energy",
                   "text_rating": "<p>Excellent <strong>4.9</strong> | 12,000+ Trusted Reviews</p>",
                   "title": "{{ closest.product.title }}",
                   "description": "{{ closest.product.metafields.my_fields.info.value }}",
@@ -372,11 +373,12 @@
                 },
                 "blocks": {}
               },
-              "product_card_TggHYL": {
+              "product_card_y9crTy": {
                 "type": "_product-card",
                 "name": "Product Card",
                 "settings": {
-                  "product": "essential-daily-energy",
+                  "use_as_default": true,
+                  "product": "essential-daily-hydration-1",
                   "text_rating": "<p>Excellent <strong>4.9</strong> | 12,000+ Trusted Reviews</p>",
                   "title": "{{ closest.product.title }}",
                   "description": "{{ closest.product.metafields.my_fields.info.value }}",
@@ -388,6 +390,7 @@
                 "type": "_product-card",
                 "name": "Product Card",
                 "settings": {
+                  "use_as_default": false,
                   "product": "essential-daily-calm",
                   "text_rating": "<p>Excellent <strong>4.9</strong> | 12,000+ Trusted Reviews</p>",
                   "title": "{{ closest.product.title }}",
@@ -398,8 +401,8 @@
               }
             },
             "block_order": [
-              "product_card_y9crTy",
               "product_card_TggHYL",
+              "product_card_y9crTy",
               "product_card_iJniqt"
             ]
           }
@@ -414,6 +417,7 @@
           "desktop_gap_between_blocks": 20,
           "bg_color": "#ffffff",
           "desktop_max_width": 1200,
+          "hide_on_mobile": false,
           "mobile_padding_top": 30,
           "mobile_gap_between_blocks": 10
         }
@@ -692,6 +696,7 @@
           "desktop_gap_between_blocks": 10,
           "bg_color": "#e9f4ff",
           "desktop_max_width": 900,
+          "hide_on_mobile": false,
           "mobile_padding_top": 30,
           "mobile_gap_between_blocks": 10
         }
@@ -1033,6 +1038,7 @@
           "desktop_gap_between_blocks": 20,
           "bg_color": "#ffffff",
           "desktop_max_width": 1200,
+          "hide_on_mobile": false,
           "mobile_padding_top": 30,
           "mobile_gap_between_blocks": 10
         }
@@ -1230,6 +1236,7 @@
           "desktop_gap_between_blocks": 10,
           "bg_color": "#e9f4ff",
           "desktop_max_width": 900,
+          "hide_on_mobile": false,
           "mobile_padding_top": 30,
           "mobile_gap_between_blocks": 10
         }
@@ -1377,6 +1384,7 @@
           "desktop_gap_between_blocks": 20,
           "bg_color": "#ffffff",
           "desktop_max_width": 1100,
+          "hide_on_mobile": false,
           "mobile_padding_top": 30,
           "mobile_gap_between_blocks": 10
         }
@@ -1494,7 +1502,10 @@
             "type": "reviews-total",
             "name": "Reviews Total",
             "settings": {
-              "text_0": ""
+              "score_1": "4.9",
+              "text_1": "<p>Based on 14,802 reviews</p>",
+              "score_2": "99%",
+              "text_2": "<p>Of reviewers would recommend this product to a friend</p>"
             },
             "blocks": {}
           }
@@ -1511,6 +1522,7 @@
           "desktop_gap_between_blocks": 10,
           "bg_color": "#f4f9ff",
           "desktop_max_width": 840,
+          "hide_on_mobile": false,
           "mobile_padding_top": 30,
           "mobile_gap_between_blocks": 10
         }
@@ -1588,6 +1600,7 @@
           "desktop_gap_between_blocks": 20,
           "bg_color": "#fafafa",
           "desktop_max_width": 1200,
+          "hide_on_mobile": true,
           "mobile_padding_top": 30,
           "mobile_gap_between_blocks": 10
         }

@@ -1,6 +1,6 @@
 {% assign sst = section.settings %}
 
-<section class="blank-section py-[var(--padding-mobile)] lg:py-[var(--padding-desktop)] bg-[var(--bg-color)]"
+<section class="blank-section py-[var(--padding-mobile)] lg:py-[var(--padding-desktop)] bg-[var(--bg-color)] {% if sst.hide_on_mobile %}hidden lg:block{% endif %}"
 style="
 --padding-mobile: {{ sst.mobile_padding_top | times: 0.1 }}rem;
 --padding-desktop: {{ sst.desktop_padding_top | times: 0.1 }}rem;
@@ -61,6 +61,12 @@ style="
     {
         "type": "header",
         "content": "Mobile Settings"
+    },
+    {
+        "type": "checkbox",
+        "id": "hide_on_mobile",
+        "label": "Hide on Mobile",
+        "default": false
     },
     {
         "type": "range",

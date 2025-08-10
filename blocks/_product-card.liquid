@@ -3,7 +3,7 @@
 {% assign faqs = product.metafields.custom.product_section_faq.value %}
 {% assign productPuprose = product.metafields.custom.product_puprose %}
 
-<div class="product-card" data-puprose="{{ productPuprose }}">
+<div class="product-card" data-puprose="{{ productPuprose }}" {% if bst.use_as_default %}x-init="activePuprose = '{{ productPuprose }}'"{% endif %}>
     <div class="product-card__image">
         <a href="{{ product.url }}" class="block">
             {% render 'img', image: product.featured_image, max_width: 400, alt: product.title %}
@@ -76,6 +76,12 @@
   "name": "Product Card",
   "tag": null,
   "settings": [
+    {
+      "type": "checkbox",
+      "label": "Use as Default",
+      "id": "use_as_default",
+      "default": false
+    },
     {
       "type": "product",
       "label": "Related Product",
