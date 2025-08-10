@@ -1489,12 +1489,21 @@
               "gallery_item_TgpDRk",
               "gallery_item_fqkTF6"
             ]
+          },
+          "reviews_total_ggY7MN": {
+            "type": "reviews-total",
+            "name": "Reviews Total",
+            "settings": {
+              "text_0": ""
+            },
+            "blocks": {}
           }
         },
         "block_order": [
           "heading_NNKdzX",
           "text_Ddkc4E",
-          "gallery_Ht9Hnb"
+          "gallery_Ht9Hnb",
+          "reviews_total_ggY7MN"
         ],
         "name": "Gallery",
         "settings": {

@@ -1,0 +1,109 @@
+<style>
+    #{{ block.id }} {
+        border: 1px solid #CCCCCC;
+        border-radius: 1rem;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.8rem;
+        line-height: 1.2;
+        color: #222222;
+    }
+
+    #{{ block.id }} svg {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .reviews-total__item-score {
+        border-radius: .5rem;
+        border: 2px solid #469AFF;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #469AFF;
+        background-color: rgba(70, 154, 255, 0.1);
+    }
+
+    .reviews-total__item-score--green {
+        border-color: #037C2B;
+        color: #037C2B;
+        background-color: rgba(3, 124, 43, 0.1);
+    }
+    
+    @media (max-width: 768px) {
+        #{{ block.id }} {
+            font-size: 1.4rem;
+        }
+
+        .reviews-total__item-score {
+            font-size: 1.6rem;
+        }
+
+        .reviews-total__item:not(:last-child) {
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #CCCCCC;
+        }
+    }
+</style>
+
+<div class="reviews-total flex flex-col md:flex-row lg:items-center gap-4 md:gap-[3rem] py-4 px-6 bg-white rounded-xl" id="{{ block.id }}">
+    
+        <div class="reviews-total__item flex items-center gap-4">
+            <div class="reviews-total__item-score reviews-total__item-score--blue min-w-[5rem] md:min-w-[8.5rem] min-h-[5rem] flex items-center justify-center">
+                <span class="reviews-total__item-score-number">{{ block.settings.score_1 }}</span>
+            </div>
+
+            <div class="reviews-total__item-text whitespace-nowrap flex flex-col gap-4 md:gap-0">
+                {% render 'stars', score: 5  %}
+                {{ block.settings.text_1 }}
+            </div>
+
+        </div>
+
+        <div class="reviews-total__item flex items-center gap-4">
+            <div class="reviews-total__item-score reviews-total__item-score--green min-w-[5rem] md:min-w-[8.5rem] min-h-[5rem] flex items-center justify-center">
+                <span class="reviews-total__item-score-number">{{ block.settings.score_2 }}</span>
+            </div>
+
+            <div class="reviews-total__item-text">
+                {{ block.settings.text_2 }}
+            </div>
+
+        </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "Reviews Total",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Score 1",
+      "id": "score_1",
+      "default": "4.9"
+    },
+    {
+      "type": "richtext",
+      "label": "Text 1",
+      "id": "text_1",
+      "default": "<p>Based on 14,802 reviews</p>"
+    },
+    {
+      "type": "text",
+      "label": "Score 2",
+      "id": "score_2",
+      "default": "99%"
+    },
+    {
+      "type": "richtext",
+      "label": "Text 2",
+      "id": "text_2",
+      "default": "<p>Of reviewers would recommend this product to a friend</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Reviews Total"
+    }
+  ]
+}
+{% endschema %}
