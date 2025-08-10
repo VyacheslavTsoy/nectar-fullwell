@@ -1,0 +1,95 @@
+{% assign bst = block.settings %}
+
+<div class="gallery">
+    <div class="gallery__items gap-[var(--gap-mobile)] columns-[var(--columns-mobile)] md:gap-[var(--gap)] md:columns-[var(--columns)] py-[var(--vertical-padding-mobile)] md:py-[var(--vertical-padding-desktop)]" style="
+        --gap: {{ bst.gap_desktop | times: 0.1 }}rem;
+        --gap-mobile: {{ bst.gap_mobile | times: 0.1 }}rem;
+        --columns: {{ bst.columns_desktop }};
+        --columns-mobile: {{ bst.columns_mobile }};
+        --vertical-padding-desktop: {{ bst.vertical_padding_desktop | times: 0.1 }}rem;
+        --vertical-padding-mobile: {{ bst.vertical_padding_mobile | times: 0.1 }}rem;
+        ">
+        {% content_for 'blocks' %}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Gallery",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Desktop"
+    },
+    {
+      "type": "range",
+      "label": "Gap between items",
+      "id": "gap_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 10
+    },
+    {
+      "type": "range",
+      "label": "Number of columns",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "label": "Vertical padding",
+      "id": "vertical_padding_desktop",
+      "info": "Only for desktop",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "label": "Gap between items",
+      "id": "gap_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 10
+    },
+    {
+      "type": "range",
+      "label": "Number of columns",
+      "id": "columns_mobile",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "label": "Vertical padding",
+      "id": "vertical_padding_mobile",
+      "info": "Only for mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 10
+    }
+  ],
+  "blocks": [
+    {"type": "_gallery-item"}
+  ],
+  "presets": [
+    {
+      "name": "Gallery"
+    }
+  ]
+}
+{% endschema %}

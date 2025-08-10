@@ -31,8 +31,8 @@
 <section class="hero relative text-[{{ sst.text_color_mobile }}] lg:text-[{{ sst.text_color_desktop }}]">
     <div class="hero__img">
         <picture>
-            <source srcset="{{ sst.desktop_image | image_url: width: 1920 }}" media="(min-width: 1024px)">
-            <img src="{{ sst.mobile_image | image_url: width: 1050}}" alt="{{ settings.mobile_image.alt }}" width="100%" height="100%">
+            <source srcset="{{ sst.desktop_image | image_url: width: 2050 }}" media="(min-width: 1024px)">
+            {{ sst.mobile_image | image_url: width: 1050 | image_tag: class: 'w-full h-full object-cover' }}
         </picture>
     </div>
 

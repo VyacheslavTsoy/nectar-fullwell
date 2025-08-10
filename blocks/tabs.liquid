@@ -5,8 +5,8 @@
         <div class="tabs__nav">
             <div class="btn-group flex gap-2 justify-center mb-4">
                 <div class="btn-group__inner py-1.5 px-1.5 flex gap-2 bg-white">
-                    <template x-for="tab in tabs" :key="tab">
-                        <button class="btn-sm" x-text="tab" @click="activeTab = tab" :class="{ 'btn-sm--active': tab === activeTab }"></button>
+                    <template x-for="tab in tabs" :key="tab.handle">
+                        <button class="btn-sm" x-text="tab.title" @click="activeTab = tab.handle" :class="{ 'btn-sm--active': tab.handle === activeTab }"></button>
                     </template>
                 </div>
             </div>
@@ -26,31 +26,38 @@
           
             collectTabs() {
               const parentEl = this.$el.closest('.tabs');
-              const tabs = parentEl.querySelectorAll('.tab-item[data-tab-name]');
+              const tabElements = parentEl.querySelectorAll('.tab-item[data-tab-name][data-tab-handle]');
           
-              const uniqueTabs = new Set();
+              const uniqueTabs = new Map();
           
-              tabs.forEach(tab => {
+              tabElements.forEach(tab => {
                 const tabName = tab.dataset.tabName;
-                if (tabName) uniqueTabs.add(tabName);
+                const tabHandle = tab.dataset.tabHandle;
+                
+                if (tabName && tabHandle) {
+                  uniqueTabs.set(tabHandle, {
+                    title: tabName,
+                    handle: tabHandle
+                  });
+                }
               });
           
-              this.tabs = Array.from(uniqueTabs);
+              this.tabs = Array.from(uniqueTabs.values());
             },
 
             filterByTab() {
                 const parentEl = this.$el.closest('.tabs');
-                const tabs = parentEl.querySelectorAll('.tab-item[data-tab-name]');
+                const tabs = parentEl.querySelectorAll('.tab-item[data-tab-handle]');
 
                 tabs.forEach(tab => {
                     tab.style.display =
-                    tab.dataset.tabName === this.activeTab ? 'block' : 'none';
+                    tab.dataset.tabHandle === this.activeTab ? 'block' : 'none';
                 });
             },
           
             init() {
               this.collectTabs();
-              this.activeTab = this.tabs[0] || null;
+              this.activeTab = this.tabs[0]?.handle || null;
           
               this.$watch('activeTab', () => {
                 this.filterByTab();

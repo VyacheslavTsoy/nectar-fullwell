@@ -1,0 +1,112 @@
+@use '../config/all-config' as *;
+
+.table-block {
+
+    @include down(md) {
+        margin-right: -2rem;
+    }
+
+    &__wrapper {
+        overflow-x: scroll;
+        border-radius: 1.2rem;
+    }
+
+    &__label {
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.2;
+        color: #222222;
+    }
+
+    table {
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+    thead tr {
+        &:first-child {
+            th {
+                min-width: 7rem;
+                
+                &:first-child {
+                    min-width: 12rem;
+                }
+
+                &:nth-child(3) {
+                    background-color: $brilliantAzure !important;
+                    color: $white !important;
+                    border-radius: 1rem 1rem 0 0;
+                }
+            }
+        }
+    }
+
+    tbody tr {
+        &:nth-child(even) td{
+            background-color: #e9f4ff;
+        }
+
+        &:last-child  {
+            td:nth-child(3) {
+                border-radius: 0 0 1rem 1rem;
+            }
+        }
+    }
+
+    td {
+        padding: .5rem 1.6rem;
+        text-align: center;
+        color: #222222;
+        vertical-align: middle;
+
+        &:first-child {
+            text-align: left;
+            line-height: 1.2;
+            border-radius: 1rem 0 0 1rem;
+        }
+
+        &:nth-child(3) {
+            background-color: $brilliantAzure !important;
+            color: $white !important;
+        }
+
+        &:last-child {
+            border-radius: 0 1rem 1rem 0;
+        }
+    }
+
+    th {
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    thead,
+    tbody {
+        tr {
+            td:nth-child(1),
+            th:nth-child(1) {
+                @include down(md) {
+                    position: sticky;
+                    left: 0;
+                    z-index: 1;
+                    border-radius: 0;
+                    background-color: $white;
+                }
+            }
+
+            
+            &:nth-child(even) td{
+                background-color: #e9f4ff;
+            }
+
+            td:nth-child(3),
+            th:nth-child(3) {
+                @include down(md) { 
+                    position: sticky;
+                    left: 12rem;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}

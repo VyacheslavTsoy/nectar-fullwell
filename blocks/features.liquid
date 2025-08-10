@@ -1,12 +1,47 @@
+{% assign bst = block.settings %}
+
+<section class="features">
+  <div class="features__items flex justify-center items-center gap-[var(--gap-desktop)] flex-wrap" style="--gap-desktop: {{ bst.gap_desktop | times: 0.1 }}rem; --item-width: {{ bst.width_desktop }}px;">
+    {% content_for 'blocks' %}
+  </div>
+</section>
+
 {% schema %}
 {
   "name": "Features",
   "tag": null,
   "settings": [
     {
-      "type": "text",
-      "id": "title",
-      "label": "Title"
+      "type": "header",
+      "content": "Desktop"
+    },
+    {
+      "type": "range",
+      "id": "gap_desktop",
+      "label": "Gap between items",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "width_desktop",
+      "label": "Width of items",
+      "min": 0,
+      "max": 300,
+      "step": 10,
+      "default": 190
+    }
+  ],
+  "blocks": [
+    {
+      "type": "_features-item"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Features"
     }
   ]
 }

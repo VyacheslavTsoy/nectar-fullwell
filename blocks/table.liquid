@@ -1,16 +1,81 @@
 {% assign bst = block.settings %}
+{% assign items = bst.table_items %}
+{% assign block_handle = block.id | handleize | replace: '_', '' %}
 
-<div class="table" id="{{ block.id }}">
-    <div class="table__image bg-white p-10 rounded-xl border-1 overflow-hidden" style="
+<div class="table-block" id="{{ block.id }}" x-data="table{{ block_handle }}">
+    <div class="table__wrapper bg-white p-0 py-4 md:p-10 rounded-xl border-1  overflow-scroll w-full" style="
         --padding: {{ bst.desktop_padding | times: 0.1 }}rem;
         border: 1px solid #42A4FF;
     ">
-        <picture>
-            <source srcset="{{ bst.image | image_url: width: 1000 }}" media="(min-width: 1024px)">
-            <img src="{{ bst.image | image_url: width: 768 }}" alt="{{ bst.image.alt }}" width="768" height="768">
-        </picture>
+        <table class="table-auto w-full">
+            <thead>
+                <tr>
+                    <th></th>
+                    <template x-for="item in tableItems" :key="item.title">
+                    <th>
+                        <img :src="item.image" class="w-auto max-h-[8.4rem] mx-auto" />
+                    </th>
+                    </template>
+                </tr>
+            </thead>
+            <tbody>
+            <template x-for="metric in metrics" :key="metric.key">
+                <tr>
+                    <td>
+                        <div class="table__label min-h-[3.6rem] flex items-center" x-text="metric.label"></div>
+                    </td>
+                    <template x-for="item in tableItems" :key="item.title + metric.key">
+                        <td x-text="item[metric.key]"></td>
+                    </template>
+                </tr>
+            </template>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="table__tooltip flex items-center justify-center pt-4 text-sm">
+        Slide to Scroll
     </div>
 </div>
+
+
+
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data("table{{ block_handle }}", () => ({
+            tableItems: [
+                {% for item in items %}
+                    {
+                        image: "{{ item.image | img_url: 'master' }}",
+                        title: "{{ item.title }}",
+                        cost_per_serving: "{{ item.cost_per_serving }}",
+                        sugar: "{{ item.sugar }}",
+                        calories: "{{ item.calories }}",
+                        sodium: "{{ item.sodium }}",
+                        potassium: "{{ item.potassium }}",
+                        magnesium: "{{ item.magnesium }}",
+                        sweetness: "{{ item.sweetness }}",
+                        saltiness: "{{ item.saltiness }}",
+                    },
+                {% endfor %}
+            ],
+            metrics: [
+                { label: "Cost Per Serving", key: "cost_per_serving" },
+                { label: "Sugar", key: "sugar" },
+                { label: "Calories", key: "calories" },
+                { label: "Sodium", key: "sodium" },
+                { label: "Potassium", key: "potassium" },
+                { label: "Magnesium", key: "magnesium" },
+                { label: "Sweetness", key: "sweetness" },
+                { label: "Saltiness", key: "saltiness" },
+            ],
+            activeItem: null,
+            init() {
+                console.log(`Init table for block: `, this.tableItems);
+            },
+        }));
+    });
+</script>
 
 {% schema %}
 {
@@ -18,9 +83,10 @@
   "tag": null,
   "settings": [
     {
-      "type": "image_picker",
-      "id": "image",
-      "label": "Image"
+      "type": "metaobject_list",
+      "id": "table_items",
+      "label": "Table Items",
+      "metaobject_type": "table_item"
     }
   ],
   "presets": [

@@ -1,12 +1,33 @@
+{% assign bst = block.settings %}
+
+<div class="features__item flex flex-col justify-center items-center gap-5 w-[var(--item-width)] bg-white rounded-lg p-4 min-h-[10.5rem]" style="border: 1px solid #CCCCCC; --item-height: {{ bst.height }}px;">
+  <div class="features__item-icon">
+    {{ bst.icon }}
+  </div>
+  <div class="features__item-title">
+    {{ bst.title }}
+  </div>
+</div>
+
 {% schema %}
 {
   "name": "Features Item",
   "tag": null,
   "settings": [
     {
+      "type": "textarea",
+      "id": "icon",
+      "label": "Icon"
+    },
+    {
       "type": "text",
       "id": "title",
       "label": "Title"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Features Item"
     }
   ]
 }

@@ -1,5 +1,23 @@
-@mixin center-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@use "sass:map";
+
+@use './variables' as *;
+
+$breakpoints: (
+  xl: 1100px,
+  lg: 1100px,
+  md: 767px,
+  sm: 575px,
+  xs: 480px
+);
+
+@mixin down($breakpoint) {
+  @media (max-width: map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin up($breakpoint) {
+  @media (min-width: map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
 }

@@ -1,10 +1,12 @@
 {% assign bst = block.settings %}
 
-<div class="tab-item" id="{{ block.id }}" data-tab-name="{{ block.settings.title }}" style="
+<div class="tab-item" id="{{ block.id }}" data-tab-name="{{ block.settings.title }}" data-tab-handle="{{ block.settings.title | handleize }}" style="
     --padding: {{ bst.desktop_padding | times: 0.1 }}rem;
+    --mobile-padding: {{ bst.mobile_padding | times: 0.1 }}rem;
     --gap-between-blocks: {{ bst.gap_between_blocks | times: 0.1 }}rem;
-">
-    <div class="tab-item__content py-[var(--padding)] lg:py-[var(--padding)] grid grid-cols-1 gap-[var(--gap-between-blocks)] lg:gap-[var(--gap-between-blocks)]">
+    --mobile-gap-between-blocks: {{ bst.mobile_gap_between_blocks | times: 0.1 }}rem;
+" {% if bst.default %}x-init="activeTab = '{{ block.settings.title | handleize }}'"{% endif %}>
+    <div class="tab-item__content py-[var(--padding)] md:py-[var(--mobile-padding)] grid grid-cols-1 gap-[var(--mobile-gap-between-blocks)] md:gap-[var(--gap-between-blocks)] lg:gap-[var(--gap-between-blocks)]">
         {% content_for 'blocks' %}
     </div>
 </div>
@@ -15,6 +17,13 @@
   "tag": null,
   "blocks": [{"type": "@theme"}],
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "default",
+      "label": "Default",
+      "default": false,
+      "info": "If checked, this tab will be the default tab"
+    },
     {
       "type": "text",
       "id": "title",

@@ -1,0 +1,46 @@
+{% assign bst = block.settings %}
+
+{%- capture aspect_ratio -%}
+    {%- case bst.aspect_ratio -%}
+        {%- when 'portrait' -%}
+            aspect-[9/16]
+        {%- when 'landscape' -%}
+            aspect-[16/9]
+        {%- when 'square' -%}
+            aspect-[1/1]
+    {%- endcase -%}
+{%- endcapture -%}
+
+<div class="gallery__item break-inside-avoid mb-[var(--gap-mobile)] md:mb-[var(--gap)] {{ aspect_ratio }}">
+    {% render 'img', image: bst.image, max_width: 600, class: 'w-full h-full object-cover' %}
+</div>
+
+{% schema %}
+{
+  "name": "Gallery Item",
+  "tag": null,
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Image",
+      "id": "image"
+    },
+    {
+      "type": "select",
+      "label": "Aspect ratio",
+      "id": "aspect_ratio",
+      "options": [
+        { "value": "portrait", "label": "Portrait" },
+        { "value": "landscape", "label": "Landscape" },
+        { "value": "square", "label": "Square" }
+      ],
+      "default": "portrait"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gallery Item"
+    }
+  ]
+}
+{% endschema %}
