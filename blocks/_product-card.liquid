@@ -2,11 +2,12 @@
 {% assign product = bst.product %}
 {% assign faqs = product.metafields.custom.product_section_faq.value %}
 {% assign productPuprose = product.metafields.custom.product_puprose %}
+{% assign featured_image = bst.featured_image | default: product.featured_image %}
 
 <div class="product-card" data-puprose="{{ productPuprose }}" {% if bst.use_as_default %}x-init="activePuprose = '{{ productPuprose }}'"{% endif %}>
     <div class="product-card__image">
         <a href="{{ product.url }}" class="block">
-            {% render 'img', image: product.featured_image, max_width: 400, alt: product.title %}
+            {% render 'img', image: featured_image, max_width: 400, alt: product.title %}
         </a>
     </div>
     <div class="product-card__content pt-5">
@@ -33,7 +34,7 @@
                 </svg>
                     
             </div>
-            <div class="text-xs">
+            <div class="text-sm">
                 {{ bst.text_rating }}
             </div>
         </div>
@@ -86,6 +87,12 @@
       "type": "product",
       "label": "Related Product",
       "id": "product"
+    },
+    {
+      "type": "image_picker",
+      "label": "Featured Image",
+      "id": "featured_image",
+      "info": "If not set, the product's featured image will be used"
     },
     {
       "type": "richtext",

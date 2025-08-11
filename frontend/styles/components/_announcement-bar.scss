@@ -4,8 +4,8 @@
 
     &__badge {
         font-weight: 700;
-        padding: 0rem .9rem;
-        line-height: 2.8rem;
+        padding: .1rem .9rem 0;
+        line-height: 2.7rem;
         border-radius: 0.6rem;
         font-size: 1.2rem;
     }
@@ -22,6 +22,11 @@
             line-height: 140%;
             letter-spacing: 0;
             color: $coolBlack;
+
+            span {
+                display: block;
+                line-height: 1;
+            }
         }
         
         [data-cell] {

@@ -58,5 +58,13 @@
             }
         }
     }
+
+    &__description {
+        @include down(md) {
+            b, strong {
+                font-weight: 500;
+            }
+        }
+    }
     
 }
