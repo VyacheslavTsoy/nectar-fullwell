@@ -547,7 +547,7 @@
                 "desktop_padding": 10,
                 "gap_between_blocks": 20,
                 "mobile_padding": 10,
-                "mobile_gap_between_blocks": 20
+                "mobile_gap_between_blocks": 10
               },
               "blocks": {
                 "table_TwDXzU": {
@@ -620,7 +620,7 @@
                 "desktop_padding": 10,
                 "gap_between_blocks": 20,
                 "mobile_padding": 10,
-                "mobile_gap_between_blocks": 20
+                "mobile_gap_between_blocks": 10
               },
               "blocks": {
                 "table_X9nbiE": {
