@@ -2,6 +2,13 @@
 
 .announcement-bar {
 
+    &__text {
+        svg {
+            line-height: 0;
+            display: block;
+        }
+    }
+
     &__badge {
         font-weight: 700;
         padding: .1rem .9rem 0;

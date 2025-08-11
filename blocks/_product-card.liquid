@@ -11,7 +11,7 @@
         </a>
     </div>
     <div class="product-card__content pt-5">
-        <div class="product-card__rating flex gap-2 items-center pb-2 font-family-poppins">
+        <div class="product-card__rating flex gap-2 items-center pb-4 font-family-poppins">
             <div class="flex tems-center gap-0.5">
                 <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.06758 0.447605C6.19789 0.128771 6.64939 0.128771 6.7797 0.447605L8.1445 3.78695C8.19971 3.92205 8.32663 4.01427 8.47219 4.02503L12.0698 4.29112C12.4133 4.31652 12.5529 4.74592 12.2899 4.96838L9.53573 7.29829C9.42431 7.39256 9.37583 7.54176 9.41057 7.68351L10.2692 11.1873C10.3512 11.5218 9.98596 11.7872 9.69313 11.6059L6.62616 9.7065C6.50208 9.62966 6.3452 9.62966 6.22112 9.7065L3.15416 11.6059C2.86133 11.7872 2.49606 11.5218 2.57804 11.1873L3.43672 7.68351C3.47146 7.54176 3.42298 7.39256 3.31155 7.29829L0.557389 4.96838C0.294428 4.74592 0.433949 4.31652 0.777445 4.29112L4.3751 4.02503C4.52065 4.01427 4.64757 3.92205 4.70279 3.78695L6.06758 0.447605Z" fill="#F89500"/>
@@ -38,15 +38,15 @@
                 {{ bst.text_rating }}
             </div>
         </div>
-        <div class="product-card__title md:text-lg font-bold font-family-poppins mb-3">
+        <div class="product-card__title md:text-lg font-bold font-family-poppins mb-4">
             <a href="{{ product.url }}" class="block">
                 {{ bst.title }}
             </a>
         </div>
-        <div class="product-card__description md:min-h-[7rem] mb-2 md:mb-4">
+        <div class="product-card__description md:min-h-[7rem] mb-4">
             {{ bst.description }}
         </div>
-        <div class="product-card__features mb-4 md:mb-9">
+        <div class="product-card__features mb-6 md:mb-9">
             {{ bst.features }}
         </div>
 
@@ -60,7 +60,7 @@
             </a>
         </div>
 
-        <div class="product-card__faqs mt-6 pb-3">
+        <div class="product-card__faqs mt-3 md:mt-6 pb-3">
             {% assign answer_1 = faqs.answer_1 | metafield_tag %}
             {% assign answer_2 = faqs.answer_2 | metafield_tag %}
             {% assign answer_3 = faqs.answer_3 | metafield_tag %}
