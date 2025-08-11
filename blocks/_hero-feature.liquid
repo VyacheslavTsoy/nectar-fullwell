@@ -1,5 +1,5 @@
-<div class="hero__feature flex gap-3 justify-center items-center font-bold text-sm md:text-base">
-    <div class="w-9">
+<div class="hero__feature gap-3 justify-center items-center font-bold text-xs md:text-sm md:text-base {% if block.settings.hide_on_mobile %}hidden md:flex {% else %}flex {% endif %}">
+    <div class="w-6 md:w-9">
         {{ block.settings.icon }}
     </div>
     <div>{{ block.settings.title }}</div>
@@ -19,6 +19,12 @@
         "label": "Title",
         "id": "title",
         "default": "Feature"
+    },
+    {
+      "type": "checkbox",
+      "label": "Hide on mobile",
+      "id": "hide_on_mobile",
+      "default": false
     }
   ],
   "presets": [

@@ -2,33 +2,39 @@
 {% assign sst = section.settings %}
 
 <style>
-    .hero {
+    #{{ section.id }} {
         text-align: {{ sst.text_alignment }};
         color: {{ sst.text_color_mobile }};
         min-height: {{ sst.height_mobile | times: 0.1 }}rem;
     }
 
-    .hero__img {
+    #{{ section.id }} .hero__img {
         min-height: {{ sst.height_mobile | times: 0.1 }}rem;
     }
 
+    @media (max-width: 1024px) {
+        #{{ section.id }} .btn {
+            font-size: 1.6rem;
+        }
+    }
+
     @media (min-width: 1024px) {
-        .hero {
+        #{{ section.id }} {
             min-height: {{ sst.height | times: 0.1 }}rem;
             color: {{ sst.text_color_desktop }};
         }
 
-        .hero__content {
+        #{{ section.id }} .hero__content {
             max-width: {{ sst.content_width }}%;
         }
 
-        .hero__img {
+        #{{ section.id }} .hero__img {
             min-height: {{ sst.height | times: 0.1 }}rem;
         }
     }
 </style>
 
-<section class="hero relative text-[{{ sst.text_color_mobile }}] lg:text-[{{ sst.text_color_desktop }}]">
+<section class="hero relative text-[{{ sst.text_color_mobile }}] lg:text-[{{ sst.text_color_desktop }}]" id="{{ section.id }}">
     <div class="hero__img">
         <picture>
             <source srcset="{{ sst.desktop_image | image_url: width: 2050 }}" media="(min-width: 1024px)">

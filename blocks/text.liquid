@@ -18,7 +18,7 @@
   
 {% endstylesheet %}
 
-<div class="block-text" id="{{ block.id }}">
+<div class="block-text" id="{{ block.id }}" {% if bst.text_color != 'rgba(0,0,0,0)' %}style="color: {{ bst.text_color }};"{% endif %}>
     {{ bst.title }}
 </div>
 
@@ -92,6 +92,12 @@
         }
       ],
       "default": "normal"
+    },
+    {
+        "type": "color",
+        "label": "Text color",
+        "id": "text_color",
+        "default": "transparent"
     },
     {
         "type": "header",

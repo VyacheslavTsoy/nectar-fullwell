@@ -1,10 +1,13 @@
 @use '../config/all-config' as *;
 
 .product-card {
-    background-color: $aliceBlue;
     border-radius: 1rem;
-    padding: 1.5rem;
     min-height: 100%;
+    
+    @screen md {
+        background-color: $aliceBlue;
+        padding: 1.5rem;
+    }
 
     &__image {
 
@@ -13,6 +16,12 @@
             height: 100%;
             border-radius: 1rem;
             object-fit: cover;
+        }
+    }
+
+    &__title {
+        @include down(md) {
+            font-size: 2.3rem;
         }
     }
 
@@ -39,6 +48,14 @@
     &__cta {
         .btn {
             width: 50%;
+        }
+    }
+
+    .accordion-item {
+        &__summary {
+            @include down(md) {
+                font-size: 1.8rem;
+            }
         }
     }
     

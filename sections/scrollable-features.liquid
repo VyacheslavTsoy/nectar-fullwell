@@ -3,9 +3,17 @@
 {% assign sst = section.settings %}
 <style>
     #{{ section.id }} .scrollable-features__inner{
-        padding-top: {{ sst.vertical_padding | times: 0.1 }}rem;
-        padding-bottom: {{ sst.vertical_padding | times: 0.1 }}rem;
-        gap: {{ sst.gap_between_items | times: 0.1 }}rem;
+        padding-top: {{ sst.vertical_padding_mobile | times: 0.1 }}rem;
+        padding-bottom: {{ sst.vertical_padding_mobile | times: 0.1 }}rem;
+        gap: {{ sst.gap_between_items_mobile | times: 0.1 }}rem;
+    }
+
+    @media (min-width: 1024px) {
+        #{{ section.id }} .scrollable-features__inner {
+            padding-top: {{ sst.vertical_padding | times: 0.1 }}rem;
+            padding-bottom: {{ sst.vertical_padding | times: 0.1 }}rem;
+            gap: {{ sst.gap_between_items | times: 0.1 }}rem;
+        }
     }
 </style>
 
@@ -20,12 +28,12 @@
         {% for block in section.blocks %}
             {% assign bst = block.settings %}
             <div 
-            class="flex items-center gap-4 px-7 pt-5 pb-5 rounded-2xl min-w-max"
+            class="flex items-center gap-4 px-4 py-3 md:px-7 md:pt-5 md:pb-5 rounded-2xl min-w-max"
             style="background-color: {{ sst.block_bg_color }};"
             >
-            <span class="w-13 h-13 flex items-center justify-center">{% if bst.icon %}{{ bst.icon }}{% endif %}</span>
+            <span class="w-[2rem] h-[2rem] md:w-13 md:h-13 flex items-center justify-center">{% if bst.icon %}{{ bst.icon }}{% endif %}</span>
                 <span 
-                    class="text-baseLg"
+                    class="text-xs md:text-baseLg"
                     style="color: {{ sst.text_color }};"
                 >
                     {{ bst.title }}
@@ -36,12 +44,12 @@
         {% for block in section.blocks %}
             {% assign bst = block.settings %}
             <div 
-            class="flex items-center gap-4 px-7 pt-5 pb-5 rounded-2xl min-w-max"
+            class="flex items-center gap-4 px-4 py-3 md:px-7 md:pt-5 md:pb-5 rounded-2xl min-w-max"
             style="background-color: {{ sst.block_bg_color }};"
             >
-            <span class="w-13 h-13 flex items-center justify-center">{% if bst.icon %}{{ bst.icon }}{% endif %}</span>
+            <span class="w-[2rem] h-[2rem] md:w-13 md:h-13 flex items-center justify-center">{% if bst.icon %}{{ bst.icon }}{% endif %}</span>
                 <span 
-                    class="text-baseLg"
+                    class="text-xs md:text-baseLg"
                     style="color: {{ sst.text_color }};"
                 >
                     {{ bst.title }}
@@ -57,40 +65,66 @@
   "name": "Scrollable Features",
   "settings": [
     {
-      "type": "color",
-      "id": "bg_color",
-      "label": "Section background color",
-      "default": "#F8FAFF"
+        "type": "color",
+        "id": "bg_color",
+        "label": "Section background color",
+        "default": "#F8FAFF"
     },
     {
-      "type": "color",
-      "id": "block_bg_color",
-      "label": "Block background color",
-      "default": "#FFFFFF"
+        "type": "color",
+        "id": "block_bg_color",
+        "label": "Block background color",
+        "default": "#FFFFFF"
     },
     {
-      "type": "color",
-      "id": "text_color",
-      "label": "Text color",
-      "default": "#0D3063"
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color",
+        "default": "#0D3063"
     },
     {
-      "type": "range",
-      "id": "gap_between_items",
-      "label": "Gap between items (px)",
-      "min": 4,
-      "max": 64,
-      "step": 2,
-      "default": 26
+        "type": "header",
+        "content": "Desktop"
     },
     {
-      "type": "range",
-      "id": "vertical_padding",
-      "label": "Vertical padding (px)",
-      "min": 10,
-      "max": 100,
-      "step": 2,
-      "default": 16
+        "type": "range",
+        "id": "gap_between_items",
+        "label": "Gap between items (px)",
+        "min": 4,
+        "max": 64,
+        "step": 2,
+        "default": 26
+    },
+    {
+        "type": "range",
+        "id": "vertical_padding",
+        "label": "Vertical padding (px)",
+        "min": 10,
+        "max": 100,
+        "step": 2,
+        "default": 16
+    },
+    {
+        "type": "header",
+        "content": "Mobile"
+    },
+    {
+        "type": "range",
+        "id": "gap_between_items_mobile",
+        "label": "Gap between items (px)",
+        "min": 4,
+        "max": 64,
+        "step": 2,
+        "default": 10
+    },
+    {
+        "type": "range",
+        "id": "vertical_padding_mobile",
+        "label": "Vertical padding (px)",
+        "min": 10,
+        "max": 100,
+        "step": 2,
+        "default": 10
     }
   ],
   "blocks": [

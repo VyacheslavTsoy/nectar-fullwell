@@ -37,15 +37,15 @@
                 {{ bst.text_rating }}
             </div>
         </div>
-        <div class="product-card__title text-lg font-bold font-family-poppins mb-3">
+        <div class="product-card__title md:text-lg font-bold font-family-poppins mb-3">
             <a href="{{ product.url }}" class="block">
                 {{ bst.title }}
             </a>
         </div>
-        <div class="product-card__description min-h-[7rem] mb-4">
-            {{ product.description }}
+        <div class="product-card__description md:min-h-[7rem] mb-2 md:mb-4">
+            {{ bst.description }}
         </div>
-        <div class="product-card__features mb-9">
+        <div class="product-card__features mb-4 md:mb-9">
             {{ bst.features }}
         </div>
 
@@ -99,7 +99,7 @@
       "id": "title"
     },
     {
-      "type": "text",
+      "type": "richtext",
       "label": "Description",
       "id": "description"
     },

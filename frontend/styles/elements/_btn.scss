@@ -47,13 +47,17 @@
 
     &-sm {
         line-height: 3.2rem;
-        padding: 0 1.8rem;
+        padding: 0 1.2rem;
         font-weight: 700;
         border-radius: .6rem;
 
+        @screen md {
+            padding: 0 1.8rem;
+        }
+
         &:hover,
         &--active {
-            background-color: var(--color-lightAzure);
+            background-color: var(--color-brilliantAzure);
             color: var(--color-white);
         }
     }
