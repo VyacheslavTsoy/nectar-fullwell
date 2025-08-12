@@ -14,6 +14,8 @@
         &::-webkit-scrollbar {
             width: .4rem;
             height: .4rem;
+            visibility: hidden;
+            opacity: 0;
         }
         
         &::-webkit-scrollbar-thumb {
@@ -76,16 +78,26 @@
         text-align: center;
         color: #222222;
         vertical-align: middle;
-
+        
         &:first-child {
             text-align: left;
             line-height: 1.2;
             border-radius: 1rem 0 0 1rem;
+
+            @screen md {
+                width: 16rem;
+                min-width: 16rem;
+            }
         }
 
         &:nth-child(3) {
             background-color: $brilliantAzure !important;
             color: $white !important;
+
+            @screen md {
+                width: 13rem;
+                min-width: 13rem;
+            }
         }
 
         &:last-child {

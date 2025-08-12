@@ -1,6 +1,7 @@
 {% assign bst = block.settings %}
 {% assign items = bst.table_items %}
 {% assign block_handle = block.id | handleize | replace: '_', '' %}
+{% assign smileUrl = 'https://cdn.shopify.com/s/files/1/0309/2257/1835/files/sadness-smile.png?v=1754987601' %}
 
 <div class="table-block" id="{{ block.id }}" x-data="table{{ block_handle }}">
     <div class="table__wrapper bg-white p-0 py-4 md:p-10 rounded-xl border-1  overflow-scroll w-full" style="
@@ -12,9 +13,9 @@
                 <tr>
                     <th></th>
                     <template x-for="item in tableItems" :key="item.title">
-                    <th>
-                        <img :src="item.image" class="w-auto max-h-[8.4rem] mx-auto" />
-                    </th>
+                        <th>
+                            <img :src="item.image" class="w-auto max-w-[7rem] max-h-[7rem] mx-auto" />
+                        </th>
                     </template>
                 </tr>
             </thead>
@@ -25,7 +26,21 @@
                         <div class="table__label min-h-[3.6rem] flex items-center" x-text="metric.label"></div>
                     </td>
                     <template x-for="item in tableItems" :key="item.title + metric.key">
-                        <td x-text="item[metric.key]"></td>
+                        <td>
+                            <template x-if="item.ingredients">
+                                <div x-data="{currentItem: item.ingredients.find(ing => ing.handle === metric.key)}">
+                                    <template x-if="currentItem.value.includes('sadness_smile')">
+                                        <img :src="'{{ smileUrl }}'" class="w-[3rem] h-[3rem] mx-auto" alt="Sadness smile" width="32" height="32" />
+                                    </template>
+                                    <template x-if="!currentItem.value.includes('sadness_smile')">
+                                        <span x-text="currentItem.value"></span>
+                                    </template>
+                                </div>
+                            </template>
+                            <template x-if="!item.ingredients">
+                                <span>-</span>
+                            </template>
+                        </td>
                     </template>
                 </tr>
             </template>
@@ -38,8 +53,6 @@
     </div>
 </div>
 
-
-
 <script>
     document.addEventListener('alpine:init', () => {
         Alpine.data("table{{ block_handle }}", () => ({
@@ -48,30 +61,51 @@
                     {
                         image: "{{ item.image | img_url: 'master' }}",
                         title: "{{ item.title }}",
-                        cost_per_serving: "{{ item.cost_per_serving }}",
-                        sugar: "{{ item.sugar }}",
-                        calories: "{{ item.calories }}",
-                        sodium: "{{ item.sodium }}",
-                        potassium: "{{ item.potassium }}",
-                        magnesium: "{{ item.magnesium }}",
-                        sweetness: "{{ item.sweetness }}",
-                        saltiness: "{{ item.saltiness }}",
+                        ingredients: [
+                        {%- for ingredient in item.ingredients.value -%}
+                            {%- assign key = ingredient | split: ':' -%}
+                            {%- assign label = key.first -%}
+                            {%- assign value = key.last -%}
+                            {
+                                "label" : "{{ label }}",
+                                "handle" : "{{ label | handleize }}",
+                                "value" : "{{ value }}"
+                            }{% unless forloop.last %},{% endunless %}
+                        {%- endfor -%}
+                        ]
                     },
                 {% endfor %}
             ],
-            metrics: [
-                { label: "Cost Per Serving", key: "cost_per_serving" },
-                { label: "Sugar", key: "sugar" },
-                { label: "Calories", key: "calories" },
-                { label: "Sodium", key: "sodium" },
-                { label: "Potassium", key: "potassium" },
-                { label: "Magnesium", key: "magnesium" },
-                { label: "Sweetness", key: "sweetness" },
-                { label: "Saltiness", key: "saltiness" },
-            ],
+            get metrics() {
+                const allMetrics = new Map();
+                
+                this.tableItems.forEach(item => {
+                    if (item.ingredients && Array.isArray(item.ingredients)) {
+                        item.ingredients.forEach(ingredient => {
+                            if (ingredient.label && ingredient.handle) {
+                                allMetrics.set(ingredient.handle, {
+                                    label: ingredient.label,
+                                    key: ingredient.handle
+                                });
+                            }
+                        });
+                    }
+                });
+                
+                return Array.from(allMetrics.values());
+            },
+            collectMetrics(item) {
+                return this.metrics.map(metric => {
+                    const ingredient = item.ingredients?.find(ing => ing.handle === metric.key);
+                    return {
+                        label: metric.label,
+                        value: ingredient ? ingredient.value : '',
+                        handle: metric.key
+                    }
+                })
+            },
             activeItem: null,
             init() {
-                console.log(`Init table for block: `, this.tableItems);
             },
         }));
     });
