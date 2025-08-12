@@ -5,11 +5,11 @@
     #{{ section.id }} {
         text-align: {{ sst.text_alignment }};
         color: {{ sst.text_color_mobile }};
-        min-height: {{ sst.height_mobile | times: 0.1 }}rem;
     }
 
-    #{{ section.id }} .hero__img {
+    #{{ section.id }} .hero__content {
         min-height: {{ sst.height_mobile | times: 0.1 }}rem;
+        height: calc(100vh - 9.4rem);
     }
 
     @media (max-width: 1024px) {
@@ -20,29 +20,29 @@
 
     @media (min-width: 1024px) {
         #{{ section.id }} {
-            min-height: {{ sst.height | times: 0.1 }}rem;
             color: {{ sst.text_color_desktop }};
         }
 
         #{{ section.id }} .hero__content {
-            max-width: {{ sst.content_width }}%;
+            min-height: {{ sst.height | times: 0.1 }}rem;
         }
 
-        #{{ section.id }} .hero__img {
-            min-height: {{ sst.height | times: 0.1 }}rem;
+        #{{ section.id }} .hero__part-inner {
+            max-width: {{ sst.content_width }}%;
+            width: 100%;
         }
     }
 </style>
 
-<section class="hero relative text-[{{ sst.text_color_mobile }}] lg:text-[{{ sst.text_color_desktop }}]" id="{{ section.id }}">
+<section class="hero flex flex-col lg:justify-center relative text-[{{ sst.text_color_mobile }}] lg:text-[{{ sst.text_color_desktop }}]" id="{{ section.id }}">
     <div class="hero__img">
         <picture>
-            <source srcset="{{ sst.desktop_image | image_url: width: 2050 }}" media="(min-width: 1024px)">
+            <source srcset="{{ sst.desktop_image | image_url: width: 1920 }}" media="(min-width: 1024px)">
             {{ sst.mobile_image | image_url: width: 1050 | image_tag: class: 'w-full h-full object-cover' }}
         </picture>
     </div>
 
-    <div class="hero__content flex flex-col justify-between lg:justify-center items-center">
+    <div class="hero__content flex flex-col justify-between lg:justify-center items-center lg:items-start">
         {% content_for "blocks" %}
     </div>
 </section>

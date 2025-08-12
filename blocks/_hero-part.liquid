@@ -9,7 +9,7 @@
     }
 </style>
 
-<div class="hero__part {% if block.settings.visible_on == 'desktop' %}hidden lg:block {% else %}block lg:hidden{% endif %}" id="{{ block.id }}">
+<div class="hero__part w-full {% if block.settings.visible_on == 'desktop' %}hidden lg:block {% else %}block lg:hidden{% endif %}" id="{{ block.id }}">
     <div class="container">
         <div class="hero__part-inner flex flex-col">
             {% content_for "blocks" %}
