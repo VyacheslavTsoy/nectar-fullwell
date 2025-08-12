@@ -1538,6 +1538,26 @@
         "mobile_gap_between_blocks": 10
       }
     },
+    "1755006892d878426d": {
+      "type": "apps",
+      "blocks": {
+        "junip_junip_reviews_zzKBz3": {
+          "type": "shopify://apps/junip/blocks/junip-reviews/dc14f5a8-ed15-41b1-ad08-cfba23f9789b",
+          "settings": {
+            "layout": "list",
+            "reviewsType": "all",
+            "showSummary": false,
+            "showMediaGallery": false,
+            "reviewsCount": 10,
+            "containerClass": ""
+          }
+        }
+      },
+      "block_order": [
+        "junip_junip_reviews_zzKBz3"
+      ],
+      "settings": {}
+    },
     "blank_section_qb3e4P": {
       "type": "blank-section",
       "blocks": {
@@ -1615,26 +1635,6 @@
         "mobile_padding_top": 30,
         "mobile_gap_between_blocks": 10
       }
-    },
-    "1755006892d878426d": {
-      "type": "apps",
-      "blocks": {
-        "junip_junip_reviews_zzKBz3": {
-          "type": "shopify://apps/junip/blocks/junip-reviews/dc14f5a8-ed15-41b1-ad08-cfba23f9789b",
-          "settings": {
-            "layout": "list",
-            "reviewsType": "all",
-            "showSummary": true,
-            "showMediaGallery": false,
-            "reviewsCount": 10,
-            "containerClass": ""
-          }
-        }
-      },
-      "block_order": [
-        "junip_junip_reviews_zzKBz3"
-      ],
-      "settings": {}
     }
   },
   "order": [
