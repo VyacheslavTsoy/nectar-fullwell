@@ -15,18 +15,19 @@
     }
 
     &__verified-badge {
-        background-color: rgba(var(--color-slimyGreen), 0.08);
+        background-color: rgba(#1DA372, 0.08);
         border-radius: 1.2rem;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 500;
         font-family: var(--font-family-poppins);
         color: var(--color-slimyGreen);
-        border: 1px solid var(--color-slimyGreen);
+        border: 1px solid #1DA372;
         text-align: center;
         line-height: 2rem;
         padding: 0 0.5rem;
         display: flex;
         align-items: center;
+        font-family: $poppins;
         gap: 0.5rem;
 
         @include down(md) {

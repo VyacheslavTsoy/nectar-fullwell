@@ -1,1 +1,0 @@
-.scrollable-features{overflow:hidden}.scrollable-features__inner{animation:marquee linear infinite;animation-play-state:running;animation-duration:15s;width:-moz-fit-content;width:fit-content}@keyframes marquee{0%{transform:translateZ(0)}to{transform:translate3d(-25%,0,0)}}
