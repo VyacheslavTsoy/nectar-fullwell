@@ -260,7 +260,7 @@
         "text_color_desktop": "#ffffff",
         "content_width": 50,
         "mobile_image": "shopify://shop_images/hero-bg.png",
-        "height_mobile": 560,
+        "height_mobile": 440,
         "text_color_mobile": "#0d3063",
         "text_alignment": "center"
       }
