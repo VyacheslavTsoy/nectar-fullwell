@@ -6,6 +6,10 @@
         svg {
             line-height: 0;
             display: block;
+
+            @screen md {
+                margin-top: -0.3rem;
+            }
         }
     }
 

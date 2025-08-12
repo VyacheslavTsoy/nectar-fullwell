@@ -1,0 +1,22 @@
+<div class="hero__badges max-w-[36rem] mx-auto">
+    {{ block.settings.text }}
+</div>
+
+{% schema %}
+{
+  "name": "Badges",
+  "settings": [
+    {
+      "type": "richtext",
+      "label": "Text",
+      "id": "text",
+      "info": "Use list to add multiple badges, one per line"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Badges"
+    }
+  ]
+}
+{% endschema %}
