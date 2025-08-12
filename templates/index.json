@@ -374,6 +374,7 @@
               "settings": {
                 "use_as_default": false,
                 "product": "essential-daily-energy",
+                "featured_image": "shopify://shop_images/Product_Image_3.png",
                 "text_rating": "<p>Excellent <strong>4.9</strong> | 12,000+ Trusted Reviews</p>",
                 "title": "{{ closest.product.title }}",
                 "description": "<p>A clean, <em><strong>Daily Hydration</strong></em> mix optimized to hydrate you faster and more efficiently than water alone.</p>",
@@ -387,11 +388,11 @@
               "settings": {
                 "use_as_default": true,
                 "product": "essential-daily-hydration-1",
-                "featured_image": "shopify://shop_images/featured-image.jpg",
+                "featured_image": "shopify://shop_images/Product_Image_4.png",
                 "text_rating": "<p>Excellent <strong>4.9</strong> | 12,000+ Trusted Reviews</p>",
                 "title": "{{ closest.product.title }}",
                 "description": "<p>A clean, <em><strong>Daily Hydration</strong></em> mix optimized to hydrate you faster and more efficiently than water alone.</p>",
-                "features": "<p>{{ closest.product.metafields.custom.features_list | metafield_tag }}</p>"
+                "features": "{{ closest.product.metafields.custom.features_list | metafield_tag }}"
               },
               "blocks": {}
             },
@@ -401,6 +402,7 @@
               "settings": {
                 "use_as_default": false,
                 "product": "essential-daily-calm",
+                "featured_image": "shopify://shop_images/Product_Image_5.png",
                 "text_rating": "<p>Excellent <strong>4.9</strong> | 12,000+ Trusted Reviews</p>",
                 "title": "{{ closest.product.title }}",
                 "description": "<p>A clean, <em><strong>Daily Hydration</strong></em> mix optimized to hydrate you faster and more efficiently than water alone.</p>",
