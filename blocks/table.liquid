@@ -4,7 +4,7 @@
 {% assign smileUrl = 'https://cdn.shopify.com/s/files/1/0309/2257/1835/files/sadness-smile.png?v=1754987601' %}
 
 <div class="table-block" id="{{ block.id }}" x-data="table{{ block_handle }}">
-    <div class="table__wrapper bg-white p-0 py-4 md:p-10 rounded-xl border-1  overflow-scroll w-full" style="
+    <div class="table__wrapper bg-white p-0 py-4 md:p-10 rounded-xl border-1 overflow-scroll w-full lg:overflow-hidden" style="
         --padding: {{ bst.desktop_padding | times: 0.1 }}rem;
         border: 1px solid #42A4FF;
     ">
@@ -48,7 +48,7 @@
         </table>
     </div>
 
-    <div class="table__tooltip flex items-center justify-center pt-4 text-sm">
+    <div class="table__tooltip flex items-center justify-center pt-4 text-sm lg:hidden">
         Slide to Scroll
     </div>
 </div>

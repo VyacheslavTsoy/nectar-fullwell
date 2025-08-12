@@ -10,16 +10,16 @@
             </button>
 
             {% if ss.logo != blank %}
-                <div class="header__logo max-w-[9rem] md:max-w-[15rem]">
-                    <a href="/" class="block">
+                <div class="header__logo lg:w-[25%]">
+                    <a href="/" class="block max-w-[9rem] md:max-w-[15rem]">
                         {{ ss.logo | image_url: width: 240 | image_tag }}
                     </a>
                 </div>
             {% endif %}
 
             {% if ss.header_menu != blank %}
-            <div class="header__nav hidden md:block">
-                <ul class="header__nav-list flex gap-[3rem]">
+            <div class="header__nav hidden md:block lg:w-[50%] lg:justify-center">
+                <ul class="header__nav-list flex gap-[3rem] lg:justify-center">
                     {% for link in ss.header_menu.links %}
                         <li class="header__nav-item">
                             <a href="{{ link.url }}" class="header__nav-link">{{ link.title }}</a>
@@ -29,7 +29,7 @@
             </div>
             {% endif %}
 
-            <div class="header__tools flex items-center gap-8">
+            <div class="header__tools flex items-center gap-8 lg:w-[25%] lg:justify-end">
                 <a href="/account" class="header__tools-button w-12 h-12 hidden lg:block">
                     <svg width="33" height="34" viewBox="0 0 33 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_98_9894)">
