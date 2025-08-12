@@ -1556,6 +1556,9 @@
       "block_order": [
         "junip_junip_reviews_zzKBz3"
       ],
+      "custom_css": [
+        ".junip-reviews-tab-switcher-container {display: none !important;}"
+      ],
       "settings": {}
     },
     "blank_section_qb3e4P": {
