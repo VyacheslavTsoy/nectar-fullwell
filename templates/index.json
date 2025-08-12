@@ -1557,7 +1557,7 @@
         "junip_junip_reviews_zzKBz3"
       ],
       "custom_css": [
-        ".junip-reviews-tab-switcher-container {display: none !important;}"
+        ".junip-reviews-tab-switcher-container,.junip-filters{display: none !important;}"
       ],
       "settings": {}
     },
