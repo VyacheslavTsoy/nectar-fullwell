@@ -255,7 +255,7 @@
       ],
       "name": "Hero",
       "settings": {
-        "desktop_image": "shopify://shop_images/banner-desktop.png",
+        "desktop_image": "shopify://shop_images/hero-img.jpg",
         "height": 660,
         "text_color_desktop": "#ffffff",
         "content_width": 50,
