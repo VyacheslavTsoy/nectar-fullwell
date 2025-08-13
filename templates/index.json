@@ -1245,7 +1245,7 @@
         "desktop_max_width": 900,
         "hide_on_mobile": false,
         "mobile_padding_top": 30,
-        "mobile_gap_between_blocks": 0
+        "mobile_gap_between_blocks": 5
       }
     },
     "blank_section_ePWPtd": {
