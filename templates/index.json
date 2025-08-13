@@ -369,9 +369,9 @@
                 "use_as_default": false,
                 "product": "essential-daily-energy",
                 "featured_image": "shopify://shop_images/Product_Image_7.png",
-                "text_rating": "<p>Excellent <strong>4.9</strong> | 12,000+ Trusted Reviews</p>",
+                "text_rating": "<p>Excellent <strong>4.8</strong> | 6,000+ Verified Reviews</p>",
                 "title": "{{ closest.product.title }}",
-                "description": "<p>A clean, <em><strong>Daily Hydration</strong></em> mix optimized to hydrate you faster and more efficiently than water alone.</p>",
+                "description": "<p>A clean, <em><strong>Daily Electrolyte + Energy</strong></em> mix with Organic Caffeine, L-theanine, and Vitamin B - smooth, all-day energy without the crash.</p>",
                 "features": "{{ closest.product.metafields.custom.features_list | metafield_tag }}"
               },
               "blocks": {}
