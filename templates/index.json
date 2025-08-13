@@ -383,9 +383,9 @@
                 "use_as_default": true,
                 "product": "essential-daily-hydration-1",
                 "featured_image": "shopify://shop_images/Product_Image_6.png",
-                "text_rating": "<p>Excellent <strong>4.9</strong> | 12,000+ Trusted Reviews</p>",
+                "text_rating": "<p>Excellent <strong>4.9</strong> | 12,000+ Verified Reviews</p>",
                 "title": "{{ closest.product.title }}",
-                "description": "<p>A clean, <em><strong>Daily Hydration</strong></em> mix optimized to hydrate you faster and more efficiently than water alone.</p>",
+                "description": "<p>A clean, <em><strong>Daily Electrolyte</strong></em> mix optimized to hydrate you at the cellular level, faster and more efficiently than water alone.</p>",
                 "features": "{{ closest.product.metafields.custom.features_list | metafield_tag }}"
               },
               "blocks": {}
