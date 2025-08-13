@@ -702,7 +702,7 @@
           "bg_color": "#e9f4ff",
           "desktop_max_width": 960,
           "hide_on_mobile": false,
-          "mobile_padding_top": 30,
+          "mobile_padding_top": 40,
           "mobile_gap_between_blocks": 10
         }
       },

@@ -6,7 +6,7 @@
     --gap-between-blocks: {{ bst.gap_between_blocks | times: 0.1 }}rem;
     --mobile-gap-between-blocks: {{ bst.mobile_gap_between_blocks | times: 0.1 }}rem;
 " {% if bst.default %}x-init="activeTab = '{{ block.settings.title | handleize }}'"{% endif %}>
-    <div class="tab-item__content py-[var(--padding)] md:py-[var(--mobile-padding)] grid grid-cols-1 gap-[var(--mobile-gap-between-blocks)] md:gap-[var(--gap-between-blocks)] lg:gap-[var(--gap-between-blocks)]">
+    <div class="tab-item__content py-[var(--padding)] pb-0 md:py-[var(--mobile-padding)] grid grid-cols-1 gap-[var(--mobile-gap-between-blocks)] md:gap-[var(--gap-between-blocks)] lg:gap-[var(--gap-between-blocks)]">
         {% content_for 'blocks' %}
     </div>
 </div>
