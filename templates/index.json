@@ -397,9 +397,9 @@
                 "use_as_default": false,
                 "product": "essential-daily-calm",
                 "featured_image": "shopify://shop_images/Product_Image_8.png",
-                "text_rating": "<p>Excellent <strong>4.9</strong> | 12,000+ Trusted Reviews</p>",
+                "text_rating": "<p>Excellent <strong>4.9</strong> | 1,000+ Verified Reviews</p>",
                 "title": "{{ closest.product.title }}",
-                "description": "<p>A clean, <em><strong>Daily Calming</strong></em> mix optimized to help you relax, sleep deeper, and wake up clear. </p>",
+                "description": "<p>A clean, <em><strong>Daily Calming</strong></em> mix with clinically studied ingredients - formulated to lower cortisol, reduce stress, and improve deep sleep.</p>",
                 "features": "{{ closest.product.metafields.custom.features_list | metafield_tag }}"
               },
               "blocks": {}
