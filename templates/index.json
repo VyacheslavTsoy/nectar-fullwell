@@ -1555,7 +1555,7 @@
       ],
       "custom_css": [
         ".junip-reviews-tab-switcher-container,.junip-filters {display: none !important;}",
-        ".junip-product-review-container {background-color: #F1FAFF;}"
+        ".junip-product-review-container {background-color: #f1faff; padding: 0 2rem;}"
       ],
       "settings": {}
     },
