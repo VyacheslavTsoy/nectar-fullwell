@@ -347,7 +347,7 @@
             "font_family": "values-sans",
             "use_mobile_settings": true,
             "text_alignment_mobile": "center",
-            "heading_size_mobile": "xl",
+            "heading_size_mobile": "2xl",
             "font_weight_mobile": "black"
           },
           "blocks": {}
