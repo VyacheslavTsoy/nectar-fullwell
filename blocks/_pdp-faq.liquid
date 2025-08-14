@@ -1,0 +1,50 @@
+{% assign productFaq = product.metafields.custom.product_section_faq.value %}
+
+
+<div class="product__faq mt-8" style="border-top: 0.1rem solid #E9EAEB;" x-data="{ open: false }" :class="{ 'product__faq--open': open }">
+    {% for i in (1..10) %}
+        {% assign q_key = 'question_' | append: i %}
+        {% assign a_key = 'answer_' | append: i %}
+        {% assign open_by_default = false %}
+
+        {% if i == 1 %}
+            {% assign open_by_default = true %}
+        {% endif %}
+    
+        {% if productFaq[q_key] %}
+            {% assign question = productFaq[q_key] %}
+            {% assign answer = productFaq[a_key] | metafield_tag %}
+            {% render 'accordion-item', question: question, answer: answer, open_by_default: open_by_default %}
+        {% endif %}
+    {% endfor %}
+
+    <div class="product__faq-button mt-6 text-[#181D27] text-center font-medium">
+        <button class="underline underline-offset-4" @click="open = !open" x-text="open ? 'See Less FAQs' : 'See More FAQs'"></button>
+    </div>
+</div>
+
+{% stylesheet %}
+.product__faq:not(.product__faq--open) .accordion-item:nth-child(n+6) {
+    display: none;
+}
+
+.accordion-item__content {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding-top: 0.6rem;
+    color: #535862;
+}
+{% endstylesheet %}
+
+
+{% schema %}
+{
+  "name": "FAQ",
+  "tag": null,
+  "presets": [
+    {
+      "name": "FAQ"
+    }
+  ]
+}
+{% endschema %}

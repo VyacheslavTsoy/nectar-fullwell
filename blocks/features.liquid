@@ -1,9 +1,15 @@
 {% assign bst = block.settings %}
 
 <section class="features">
-  <div class="features__items flex justify-center items-center gap-[var(--gap-desktop)] flex-wrap" style="--gap-desktop: {{ bst.gap_desktop | times: 0.1 }}rem; --item-width: {{ bst.width_desktop }}px;">
-    {% content_for 'blocks' %}
-  </div>
+  {% if bst.use_grid_layout %}
+    <div class="features__grid-layout grid grid-cols-[repeat(var(--columns-mobile),1fr)] md:grid-cols-[repeat(var(--columns-desktop),1fr)] gap-[var(--gap-mobile)] md:gap-[var(--gap-desktop)]" style="--gap-desktop: {{ bst.layout_gap_desktop | times: 0.1 }}rem; --columns-desktop: {{ bst.columns_desktop }}; --columns-mobile: {{ bst.columns_mobile }}; --gap-mobile: {{ bst.layout_gap_mobile | times: 0.1 }}rem;">
+        {% content_for 'blocks' %}
+    </div>
+    {% else %}
+        <div class="features__items flex justify-center items-center gap-[var(--gap-desktop)] flex-wrap" style="--gap-desktop: {{ bst.gap_desktop | times: 0.1 }}rem; --item-width: {{ bst.width_desktop }}px;">
+            {% content_for 'blocks' %}
+        </div>
+  {% endif %}
 </section>
 
 {% schema %}
@@ -12,26 +18,80 @@
   "tag": null,
   "settings": [
     {
-      "type": "header",
-      "content": "Desktop"
+        "type": "header",
+        "content": "Desktop"
     },
     {
-      "type": "range",
-      "id": "gap_desktop",
-      "label": "Gap between items",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "default": 10
+        "type": "range",
+        "id": "gap_desktop",
+        "label": "Gap between items",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "default": 10
     },
     {
-      "type": "range",
-      "id": "width_desktop",
-      "label": "Width of items",
-      "min": 0,
-      "max": 300,
-      "step": 10,
-      "default": 190
+        "type": "range",
+        "id": "width_desktop",
+        "label": "Width of items",
+        "min": 0,
+        "max": 300,
+        "step": 10,
+        "default": 190
+    },
+    {
+        "type": "checkbox",
+        "id": "use_grid_layout",
+        "label": "Use grid layout",
+        "default": false
+    },
+    {
+        "type": "header",
+        "content": "Desktop",
+        "visible_if": "{{ block.settings.use_grid_layout }}"
+    },
+    {
+        "type": "range",
+        "id": "columns_desktop",
+        "label": "Columns",
+        "min": 1,
+        "max": 4,
+        "default": 2,
+        "visible_if": "{{ block.settings.use_grid_layout }}"
+    },
+    {
+        "type": "range",
+        "id": "layout_gap_desktop",
+        "label": "Gap",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "default": 10,
+        "visible_if": "{{ block.settings.use_grid_layout }}"
+    },
+    {
+        "type": "header",
+        "content": "Mobile",
+        "visible_if": "{{ block.settings.use_grid_layout }}"
+    },
+    {
+        "type": "range",
+        "id": "columns_mobile",
+        "label": "Columns",
+        "min": 1,
+        "max": 4,
+        "default": 2,
+        "visible_if": "{{ block.settings.use_grid_layout }}"
+    },
+    {
+        "type": "range",
+        "id": "layout_gap_mobile",
+        "label": "Gap",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "default": 10,
+        "visible_if": "{{ block.settings.use_grid_layout }}"
     }
   ],
   "blocks": [

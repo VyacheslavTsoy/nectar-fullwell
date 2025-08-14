@@ -1,4 +1,6 @@
-<div class="layout-item">
+{% assign bst = block.settings %}
+
+<div class="layout-item grid grid-cols-1 gap-[var(--gap-mobile)] md:gap-[var(--gap-desktop)]" style="--gap-desktop: {{ bst.gap_desktop }}px; --gap-mobile: {{ bst.gap_mobile }}px;">
     {% content_for 'blocks' %}
 </div>
 
@@ -6,6 +8,26 @@
 {
   "name": "Column",
   "tag": null,
+  "settings": [
+    {
+      "type": "range",
+      "id": "gap_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "label": "Desktop Gap",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "gap_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "label": "Mobile Gap",
+      "default": 0
+    }
+  ],
   "blocks": [
     {
         "type": "@theme"

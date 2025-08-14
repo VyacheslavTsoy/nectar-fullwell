@@ -1,0 +1,98 @@
+
+<div class="swiper main-gallery w-full overflow-hidden relative">
+    <div class="swiper-wrapper">
+        {% for image in product.images %}
+        <div class="swiper-slide">
+            {% render 'img', image: image, max_width: 1400 %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="swiper thumbnail-gallery mt-[1.2rem] w-full overflow-hidden">
+    <div class="swiper-wrapper">
+        {% for image in product.images %}
+        <div class="swiper-slide">
+            <div class="thumbnail-gallery__item">
+                {% render 'img', image: image, max_width: 240 %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+<style>
+    .thumbnail-gallery .swiper-slide {
+        width: calc(20% - 1.8rem);
+        margin-right: 2.2rem;
+    }
+
+    .thumbnail-gallery__item {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border: 0.2rem solid #ccc;
+        cursor: pointer;
+        aspect-ratio: 1/1;
+        padding: 0.8rem;
+    }
+
+    .thumbnail-gallery__item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .thumbnail-gallery__item--active {
+        border-color: #5299FF !important;
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+   
+    const thumbnailSwiper = new Swiper('.thumbnail-gallery', {
+        slidesPerView: 'auto',
+        freeMode: true,
+        watchSlidesProgress: true,
+        speed: 1000,
+    });
+
+ 
+    const mainSwiper = new Swiper('.main-gallery', {
+        spaceBetween: 10,
+        slidesPerView: 1,
+        thumbs: {
+            swiper: thumbnailSwiper
+        }
+    });
+
+    
+    const thumbnailItems = document.querySelectorAll('.thumbnail-gallery__item');
+    
+    thumbnailItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            mainSwiper.slideTo(index);
+            
+            thumbnailItems.forEach(thumb => thumb.classList.remove('thumbnail-gallery__item--active'));
+            item.classList.add('thumbnail-gallery__item--active');
+        });
+    });
+
+    
+    mainSwiper.on('slideChange', function () {
+        const activeIndex = mainSwiper.activeIndex;
+        
+        thumbnailItems.forEach(thumb => thumb.classList.remove('thumbnail-gallery__item--active'));
+        
+        if (thumbnailItems[activeIndex]) {
+            thumbnailItems[activeIndex].classList.add('thumbnail-gallery__item--active');
+        }
+    });
+
+    if (thumbnailItems[0]) {
+        thumbnailItems[0].classList.add('thumbnail-gallery__item--active');
+    }
+});
+</script>
