@@ -1,0 +1,37 @@
+{% assign bst = block.settings %}
+
+<div class="swiper-slide">
+    <figure class="image-with-caption__item">
+        {% render 'img', image: bst.image, max_width: 400, class: 'w-full h-full object-cover' %}
+
+        {% if bst.caption != blank %}
+            <figcaption class="image-with-caption__caption">
+                {{ bst.caption }}
+            </figcaption>
+        {% endif %}
+    </figure>
+</div>
+
+{% schema %}
+{
+  "name": "Image with caption",
+  "tag": null,
+  "settings": [
+    {
+        "type": "image_picker",
+        "label": "Image",
+        "id": "image"
+    },
+    {
+        "type": "richtext",
+        "label": "Caption",
+        "id": "caption"
+    },
+  ],
+  "presets": [
+    {
+      "name": "Image with caption"
+    }
+  ]
+}
+{% endschema %}

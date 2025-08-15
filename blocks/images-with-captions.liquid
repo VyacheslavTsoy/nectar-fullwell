@@ -1,0 +1,79 @@
+{% assign bst = block.settings %}
+{% assign id = block.id | handleize | replace: '_', '' %}
+
+<div class="images-with-captions swiper" id="{{ id }}">
+    <div class="swiper-wrapper">
+        {% content_for 'blocks' %}
+    </div>
+
+    <div class="swiper-pagination images-with-captions__pagination md:hidden"></div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const swiper = new Swiper('#{{ id }}', {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            breakpoints: {
+                768: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 20,
+                }
+            },
+            pagination: {
+                el: '#{{ id }} .swiper-pagination',
+                clickable: true,
+            }
+        });
+    });
+</script>
+
+<style>
+    #{{ id }} .swiper-slide {
+        width: 34rem;
+        border-radius: 1.2rem;
+        overflow: hidden;
+        margin-right: 2rem;
+    }
+
+    #{{ id }} .image-with-caption__item {
+        padding: 1.6rem 1.6rem;
+        border: 2px solid #75BDFF;
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+
+    #{{ id }} .image-with-caption__item img {
+        border-radius: 1rem;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #{{ id }} .image-with-caption__item figcaption {
+        font-weight: 500;
+        text-align: center;
+        padding-top: 1rem;
+    }
+
+    #{{ id }} .images-with-captions__pagination {
+        display: none !important;
+    }
+</style>
+
+{% schema %}
+{
+  "name": "Images with captions",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "_image-with-caption",
+    }
+  ],
+  "presets": [
+    {   
+      "name": "Images with captions"
+    }
+  ]
+}
+{% endschema %}

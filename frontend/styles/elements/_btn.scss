@@ -73,4 +73,13 @@
             border: 1px solid var(--color-coolBlack);
         }
     }
+
+    &--aqua {
+        border-color: #4B8ECB;
+        background-color: #75BDFF;
+
+        &:hover {
+            background-color: #4B8ECB;
+        }
+    }
 }

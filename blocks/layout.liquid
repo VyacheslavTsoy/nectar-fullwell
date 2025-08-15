@@ -3,12 +3,17 @@
 <div class="block-layout" id="{{ block.id }}" style="
     --padding: {{ bst.desktop_padding | times: 0.1 }}rem;
     --mobile-padding: {{ bst.mobile_padding | times: 0.1 }}rem;
-    --columns-per-row-desktop: {{ bst.desktop_columns_per_row }};
     --columns-per-row-mobile: {{ bst.mobile_columns_per_row }};
     --gap: {{ bst.desktop_gap | times: 0.1 }}rem;
     --mobile-gap: {{ bst.mobile_gap | times: 0.1 }}rem;
+    --align-items: {{ bst.align_items }};
+    {% if bst.custom_column_width %}
+        --columns-per-row-desktop: {{ bst.column_width }};
+    {% else %}
+        --columns-per-row-desktop: repeat({{ bst.desktop_columns_per_row }}, 1fr);
+    {% endif %}
 ">
-    <div class="block-layout__content grid grid-cols-[repeat(var(--columns-per-row-mobile),1fr)] gap-[var(--mobile-gap)] md:grid-cols-[repeat(var(--columns-per-row-desktop),1fr)] md:gap-[var(--gap)] py-[var(--mobile-padding)] md:py-[var(--padding)]">
+    <div class="block-layout__content grid items-{{ bst.align_items }} grid-cols-[repeat(var(--columns-per-row-mobile),1fr)] gap-[var(--mobile-gap)] md:grid-cols-[var(--columns-per-row-desktop)] md:gap-[var(--gap)] py-[var(--mobile-padding)] md:py-[var(--padding)]">
         {% content_for 'blocks' %}
     </div>
 </div>
@@ -48,6 +53,31 @@
         "max": 6,
         "step": 1,
         "default": 3
+    },
+    {
+        "type": "select",
+        "label": "Align items",
+        "id": "align_items",
+        "options": [
+            { "value": "center", "label": "Center" },
+            { "value": "start", "label": "Start" },
+            { "value": "end", "label": "End" }
+        ],
+        "default": "center"
+    },
+    {
+        "type": "checkbox",
+        "label": "Custom column width",
+        "id": "custom_column_width",
+        "default": false
+    },
+    {
+        "type": "text",
+        "label": "Custom columns width",
+        "id": "column_width",
+        "default": "1fr 1fr",
+        "info": "Enter the width of each column separated by a space. Example: 1fr 1fr",
+        "visible_if": "{{ block.settings.custom_column_width }}"
     },
     {
         "type": "header",

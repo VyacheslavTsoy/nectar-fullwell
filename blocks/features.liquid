@@ -1,16 +1,26 @@
 {% assign bst = block.settings %}
 
-<section class="features">
-  {% if bst.use_grid_layout %}
-    <div class="features__grid-layout grid grid-cols-[repeat(var(--columns-mobile),1fr)] md:grid-cols-[repeat(var(--columns-desktop),1fr)] gap-[var(--gap-mobile)] md:gap-[var(--gap-desktop)]" style="--gap-desktop: {{ bst.layout_gap_desktop | times: 0.1 }}rem; --columns-desktop: {{ bst.columns_desktop }}; --columns-mobile: {{ bst.columns_mobile }}; --gap-mobile: {{ bst.layout_gap_mobile | times: 0.1 }}rem;">
-        {% content_for 'blocks' %}
-    </div>
+<section class="features" id="{{ block.id }}">
+    {% if bst.use_grid_layout %}
+        <div class="features__grid-layout grid grid-cols-[repeat(var(--columns-mobile),1fr)] md:grid-cols-[repeat(var(--columns-desktop),1fr)] gap-[var(--gap-mobile)] md:gap-[var(--gap-desktop)]" style="--gap-desktop: {{ bst.layout_gap_desktop | times: 0.1 }}rem; --columns-desktop: {{ bst.columns_desktop }}; --columns-mobile: {{ bst.columns_mobile }}; --gap-mobile: {{ bst.layout_gap_mobile | times: 0.1 }}rem;">
     {% else %}
         <div class="features__items flex justify-center items-center gap-[var(--gap-desktop)] flex-wrap" style="--gap-desktop: {{ bst.gap_desktop | times: 0.1 }}rem; --item-width: {{ bst.width_desktop }}px;">
-            {% content_for 'blocks' %}
-        </div>
-  {% endif %}
+    {% endif %}
+
+        {% content_for 'blocks' %}
+    </div>
 </section>
+
+{% if bst.light_blue_color_scheme %}
+    <style>
+        #{{ block.id }} .features__item {
+            background-color: #F4F9FF;
+            border: 2px solid #75BDFF !important;
+            font-weight: 700;
+            color: #0D3063;
+        }
+    </style>
+{% endif %}
 
 {% schema %}
 {
@@ -38,6 +48,12 @@
         "max": 300,
         "step": 10,
         "default": 190
+    },
+    {
+        "type": "checkbox",
+        "id": "light_blue_color_scheme",
+        "label": "Light blue color scheme",
+        "default": false
     },
     {
         "type": "checkbox",
