@@ -58,5 +58,12 @@
     &__description {
         font-weight: 500;
     }
+
+    &__rating {
+        svg {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+    }
     
 }

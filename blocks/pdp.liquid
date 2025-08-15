@@ -1,8 +1,8 @@
 {% assign featuredReview = product.metafields.custom.featured_review.value %}
 
 <div class="product">
-    <div class="flex gap-4 md:gap-[4rem] flex-col md:flex-row">
-        <div class="product__gallery flex-shrink-0 md:w-[50%] lg:w-[62.6rem] md:max-w-[60%]">
+    <div class="flex gap-4 md:gap-[3rem] flex-col md:flex-row">
+        <div class="product__gallery flex-shrink-0 md:w-[50%] lg:w-[54rem]">
             {% render 'product-gallery' %}
 
             {% if featuredReview %}

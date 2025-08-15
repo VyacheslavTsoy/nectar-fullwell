@@ -37,11 +37,15 @@
   }
 
   .container {
-    max-width: 124rem;
+    max-width: 114rem;
   }
 
   .font-family-poppins {
     font-family: 'Poppins', sans-serif;
+  }
+
+  .junip-product-review-container {
+    max-width: 114rem !important;
   }
 
   details > summary {

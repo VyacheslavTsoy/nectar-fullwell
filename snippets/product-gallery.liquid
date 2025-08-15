@@ -1,50 +1,72 @@
-
-<div class="swiper main-gallery w-full overflow-hidden relative">
-    <div class="swiper-wrapper">
-        {% for image in product.images %}
-        <div class="swiper-slide">
-            {% render 'img', image: image, max_width: 1400 %}
-        </div>
-        {% endfor %}
-    </div>
-</div>
-
-<div class="swiper thumbnail-gallery mt-[0.8rem] md:mt-[1.2rem] w-full overflow-hidden">
-    <div class="swiper-wrapper">
-        {% for image in product.images %}
-        <div class="swiper-slide">
-            <div class="thumbnail-gallery__item">
-                {% render 'img', image: image, max_width: 240 %}
+<div class="product__gallery-inner flex flex-col-reverse lg:flex-row gap-4">
+    <div class="swiper thumbnail-gallery swiper-vertical overflow-hidden flex-shrink-0">
+        <div class="swiper-wrapper">
+            {% for image in product.images %}
+            <div class="swiper-slide">
+                <div class="thumbnail-gallery__item overflow-hidden rounded-[0.8rem]">
+                    {% render 'img', image: image, max_width: 240 %}
+                </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
+    </div>
+
+    <div class="swiper main-gallery w-full overflow-hidden relative">
+        <div class="swiper-wrapper">
+            {% for image in product.images %}
+            <div class="swiper-slide">
+                {% render 'img', image: image, max_width: 1400 %}
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </div>
 
 {% stylesheet %}
     .thumbnail-gallery .swiper-slide {
-        width: calc(20% - 1.8rem);
-        margin-right: 2.2rem;
+        width: calc(20% - 0.6rem);
+        flex-shrink: 0;
+        margin-bottom: 0.8rem;
     }
 
     .thumbnail-gallery__item {
         width: 100%;
         height: 100%;
+        aspect-ratio: 1/1;
         overflow: hidden;
         border: 0.2rem solid #ccc;
         cursor: pointer;
         aspect-ratio: 1/1;
-        padding: 0.8rem;
+        padding: 0.4rem;
     }
 
     .thumbnail-gallery__item img {
         width: 100%;
         height: 100%;
+        border-radius: 0.3rem;
         object-fit: cover;
     }
 
     .thumbnail-gallery__item--active {
         border-color: #5299FF !important;
+    }
+
+    @media (min-width: 1024px) {
+        .swiper-vertical>.swiper-wrapper {
+            flex-direction: column;
+        }
+
+        .thumbnail-gallery {
+            height: 45rem;
+        }
+
+        .thumbnail-gallery .swiper-slide {
+            margin-right: 0;
+            width: 8.3rem;
+            height: 8.3rem;
+            flex-shrink: 0;
+            margin-bottom: 0.8rem;
+        }
     }
 
     @media (max-width: 768px) {
@@ -65,9 +87,16 @@ document.addEventListener('DOMContentLoaded', function() {
    
     const thumbnailSwiper = new Swiper('.thumbnail-gallery', {
         slidesPerView: 'auto',
+        spaceBetween: 6,
         freeMode: true,
         watchSlidesProgress: true,
         speed: 1000,
+        breakpoints: {
+            1024: {
+                spaceBetween: 0,
+                direction: 'vertical'
+            }
+        },
     });
 
  

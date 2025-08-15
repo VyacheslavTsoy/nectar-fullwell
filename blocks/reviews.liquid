@@ -1,8 +1,20 @@
 {% assign bst = block.settings %}
 {% assign reviews = bst.reviews %}
 
-<div class="reviews" id="{{ block.id }}">
-    <div class="reviews__content grid grid-cols-1 gap-[var(--gap)] lg:grid-cols-[var(--desktop-columns-per-row)] lg:gap-[var(--desktop-gap)]"
+<div class="reviews pb-4" id="{{ block.id }}" {% if bst.activate_filters %}x-data="reviews"{% endif %}>
+    {% if bst.activate_filters %}
+    <div class="review-filters flex flex-wrap justify-between md:justify-center gap-x-3 gap-y-4 md:gap-x-3 mb-8 md:mb-[3.2rem]">
+        <template x-for="type in reviewTypes" :key="type.handle">
+          <button 
+            class="btn btn-outline w-full max-w-[48%] md:max-w-[100%] md:w-auto md:min-w-[14rem]" 
+            :class="{'btn-outline--active': activeReviewType === type.handle}" 
+            @click="activeReviewType = type.handle"
+            x-text="type.title">
+          </button>
+        </template>
+    </div>
+    {% endif %}
+    <div class="reviews__content grid grid-cols-1 gap-[var(--gap)] lg:grid-cols-[var(--desktop-columns-per-row)] lg:gap-[var(--desktop-gap)] justify-center"
     style="
         --padding-top: {{ bst.mobile_padding | times: 0.1 }}rem;
         --padding-bottom: {{ bst.mobile_padding | times: 0.1 }}rem;
@@ -13,7 +25,11 @@
     "
     >
         {% for review in reviews %}
-            <div class="review bg-lightGrey">
+            {% assign review_types = review.review_type.value %}
+            {%- capture review_types_string -%}
+                {%- for review_type in review_types -%}{{ review_type }}{% unless forloop.last %}, {% endunless %}{%- endfor -%}
+            {%- endcapture -%}
+            <div class="review bg-lightGrey" data-types="{{ review_types_string }}">
                 <div class="review__header flex items-center justify-between pb-3 mb-3">
                     <div class="flex items-center gap-4">
                         <div class="review__author">
@@ -37,6 +53,61 @@
     </div>
 </div>
 
+<script>
+    document.addEventListener('alpine:init', () => {
+      Alpine.data('reviews', () => ({
+        reviewTypes: [],
+        activeReviewType: null,
+        
+        collectReviewTypes() {
+          const parentEl = this.$el.closest('.reviews');
+          const reviewElements = parentEl.querySelectorAll('.review[data-types]');
+    
+          const uniqueTypes = new Map();
+    
+          reviewElements.forEach(el => {
+            const types = el.dataset.types.split(',').map(t => t.trim());
+            
+            types.forEach(type => {
+              const handle = type.toLowerCase().replace(/\s+/g, '-');
+              if (!uniqueTypes.has(handle)) {
+                uniqueTypes.set(handle, { title: type, handle });
+              }
+            });
+          });
+    
+          this.reviewTypes = Array.from(uniqueTypes.values());
+    
+          this.activeReviewType = this.reviewTypes[0]?.handle || null;
+        },
+    
+        filterReviews() {
+          const parentEl = this.$el.closest('.reviews');
+          const reviewElements = parentEl.querySelectorAll('.review[data-types]');
+    
+          reviewElements.forEach(el => {
+            const types = el.dataset.types
+              .split(',')
+              .map(t => t.trim().toLowerCase().replace(/\s+/g, '-'));
+    
+            if (!this.activeReviewType || types.includes(this.activeReviewType)) {
+              el.style.display = '';
+            } else {
+              el.style.display = 'none';
+            }
+          });
+        },
+    
+        init() {
+          this.collectReviewTypes();
+    
+          this.$watch('activeReviewType', () => this.filterReviews());
+    
+          this.filterReviews();
+        }
+      }));
+    });
+</script>
 
 {% schema %}
 {
@@ -48,6 +119,12 @@
         "id": "reviews",
         "label": "Reviews",
         "metaobject_type": "reviews"
+    },
+    {
+        "type": "checkbox",
+        "id": "activate_filters",
+        "label": "Activate filters",
+        "default": false
     },
     {
         "type": "header",

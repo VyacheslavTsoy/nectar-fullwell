@@ -28,7 +28,8 @@
                   "title": "1 Million+ Happy Customers",
                   "stars_quantity": 5,
                   "text_color": "#0d3063",
-                  "badge_alignment": "justify-center"
+                  "badge_alignment": "justify-center",
+                  "badge_alignment_mobile": "justify-start"
                 },
                 "blocks": {}
               },
@@ -67,10 +68,12 @@
                 "type": "buttons-group",
                 "name": "Buttons Group",
                 "settings": {
+                  "hide_on_desktop": false,
                   "gap_between_buttons_desktop": 10,
                   "buttons_alignment": "center",
                   "top_padding_desktop": 10,
                   "bottom_padding_desktop": 0,
+                  "hide_on_mobile": false,
                   "gap_between_buttons_mobile": 10,
                   "buttons_alignment_mobile": "center",
                   "top_padding_mobile": 0,
@@ -179,7 +182,8 @@
                   "title": "1 Million+ Happy Customers",
                   "stars_quantity": 5,
                   "text_color": "#0d3063",
-                  "badge_alignment": "justify-center"
+                  "badge_alignment": "justify-center",
+                  "badge_alignment_mobile": "justify-start"
                 },
                 "blocks": {}
               },
@@ -187,10 +191,12 @@
                 "type": "buttons-group",
                 "name": "Buttons Group",
                 "settings": {
+                  "hide_on_desktop": false,
                   "gap_between_buttons_desktop": 10,
                   "buttons_alignment": "center",
                   "top_padding_desktop": 10,
                   "bottom_padding_desktop": 0,
+                  "hide_on_mobile": false,
                   "gap_between_buttons_mobile": 10,
                   "buttons_alignment_mobile": "center",
                   "top_padding_mobile": 0,
@@ -421,7 +427,7 @@
           "desktop_padding_top": 40,
           "desktop_gap_between_blocks": 20,
           "bg_color": "#ffffff",
-          "desktop_max_width": 1200,
+          "desktop_max_width": 1140,
           "hide_on_mobile": false,
           "mobile_padding_top": 30,
           "mobile_gap_between_blocks": 10
@@ -437,7 +443,8 @@
               "title": "Over 50 Million Servings Sold",
               "stars_quantity": 5,
               "text_color": "#0d3063",
-              "badge_alignment": "justify-center"
+              "badge_alignment": "justify-center",
+              "badge_alignment_mobile": "justify-start"
             },
             "blocks": {}
           },
@@ -492,10 +499,12 @@
                     "type": "buttons-group",
                     "name": "Buttons Group",
                     "settings": {
+                      "hide_on_desktop": false,
                       "gap_between_buttons_desktop": 10,
                       "buttons_alignment": "center",
                       "top_padding_desktop": 0,
                       "bottom_padding_desktop": 0,
+                      "hide_on_mobile": false,
                       "gap_between_buttons_mobile": 0,
                       "buttons_alignment_mobile": "center",
                       "top_padding_mobile": 0,
@@ -565,10 +574,12 @@
                     "type": "buttons-group",
                     "name": "Buttons Group",
                     "settings": {
+                      "hide_on_desktop": false,
                       "gap_between_buttons_desktop": 10,
                       "buttons_alignment": "center",
                       "top_padding_desktop": 0,
                       "bottom_padding_desktop": 0,
+                      "hide_on_mobile": false,
                       "gap_between_buttons_mobile": 0,
                       "buttons_alignment_mobile": "center",
                       "top_padding_mobile": 0,
@@ -638,10 +649,12 @@
                     "type": "buttons-group",
                     "name": "Buttons Group",
                     "settings": {
+                      "hide_on_desktop": false,
                       "gap_between_buttons_desktop": 10,
                       "buttons_alignment": "center",
                       "top_padding_desktop": 0,
                       "bottom_padding_desktop": 0,
+                      "hide_on_mobile": false,
                       "gap_between_buttons_mobile": 0,
                       "buttons_alignment_mobile": "center",
                       "top_padding_mobile": 0,
@@ -1043,7 +1056,7 @@
           "desktop_padding_top": 40,
           "desktop_gap_between_blocks": 20,
           "bg_color": "#ffffff",
-          "desktop_max_width": 1200,
+          "desktop_max_width": 1140,
           "hide_on_mobile": false,
           "mobile_padding_top": 30,
           "mobile_gap_between_blocks": 10
@@ -1090,6 +1103,9 @@
               "desktop_padding": 20,
               "desktop_gap": 16,
               "desktop_columns_per_row": 3,
+              "align_items": "center",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
               "mobile_padding": 10,
               "mobile_gap": 14,
               "mobile_columns_per_row": 2
@@ -1276,6 +1292,9 @@
               "desktop_padding": 0,
               "desktop_gap": 30,
               "desktop_columns_per_row": 2,
+              "align_items": "start",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
               "mobile_padding": 0,
               "mobile_gap": 14,
               "mobile_columns_per_row": 1
@@ -1414,7 +1433,7 @@
           "desktop_padding_top": 50,
           "desktop_gap_between_blocks": 20,
           "bg_color": "#ffffff",
-          "desktop_max_width": 1100,
+          "desktop_max_width": 1140,
           "hide_on_mobile": false,
           "mobile_padding_top": 30,
           "mobile_gap_between_blocks": 10
@@ -1610,6 +1629,7 @@
             "settings": {
               "gap_desktop": 20,
               "width_desktop": 190,
+              "light_blue_color_scheme": false,
               "use_grid_layout": false,
               "columns_desktop": 2,
               "layout_gap_desktop": 10,

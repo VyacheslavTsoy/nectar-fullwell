@@ -1,6 +1,6 @@
 {% assign bst = block.settings %}
 
-<div class="ingredients pt-4">
+<div class="ingredients pt-4" x-data="ingredients">
     <div class="ingredients__grid grid md:grid-cols-2 gap-4">
         {% for ingredient in bst.related_ingredients %}
             <div class="ingredients__item flex gap-[3.5rem] justify-between items-center py-[2rem] px-[1.5rem] bg-[#FAFAFA] border-[0.1rem] border-[#CCCCCC] rounded-xl text-[#555555]">
@@ -14,17 +14,137 @@
             </div>
         {% endfor %}
     </div>
+    {% if bst.btn_text != blank or bst.ingredient_modal_image_desktop or bst.ingredient_modal_image_mobile %}
+    <div class="buttons-group flex flex-col md:flex-row justify-center items-center mt-8">
+    
+        <button class="btn btn--aqua" @click="openModal = !openModal">
+            {{ bst.btn_text }}
+        </button>
+    </div>
+    {% endif %}
+
+    {% if bst.ingredient_modal_image_desktop or bst.ingredient_modal_image_mobile or bst.ingredient_caption != blank %}
+    <div class="ingredients__modal flex items-start justify-center" :class="{ 'active': openModal }">
+        <div class="ingredients__modal-overlay fixed inset-0 bg-black opacity-50" @click="openModal = false"></div>
+        <div class="ingredients__modal-content w-full max-w-[99.6rem] p-[1.6rem] md:p-[3rem] mx-auto bg-white md:bg-[#E2F0FF] border-[3px] border-[#4B8ECB] rounded-[2rem] relative">
+
+            <button class="ingredients__modal-close absolute top-[1.6rem] right-[1.6rem] w-[3.6rem] h-[3.6rem] md:w-[5.4rem] md:h-[5.4rem] bg-white rounded-full flex items-center justify-center" @click="openModal = false">
+                <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[1.6rem] h-[1.6rem] md:w-[2.2rem] md:h-[2.3rem]">
+                    <path d="M14.63 11.4079L21.436 4.60193C22.188 3.84993 22.188 2.63077 21.436 1.87995L20.5286 0.97263C19.7764 0.220404 18.5573 0.220404 17.8064 0.97263L11.0007 7.77838L4.1947 0.97122C3.44271 0.219229 2.22354 0.219229 1.47273 0.97122L0.563993 1.87854C-0.187998 2.63077 -0.187998 3.84993 0.563993 4.60075L7.37116 11.4079L0.565403 18.2137C-0.186823 18.9659 -0.186823 20.1851 0.565403 20.9359L1.47273 21.8432C2.22472 22.5952 3.44388 22.5952 4.1947 21.8432L11.0007 15.0372L17.8064 21.8432C18.5587 22.5952 19.7778 22.5952 20.5286 21.8432L21.436 20.9359C22.188 20.1836 22.188 18.9645 21.436 18.2137L14.63 11.4079Z" fill="#0D3063"/>
+                </svg> 
+            </button>
+
+            {% if bst.ingredient_modal_logo != blank %}
+                <div class="ingredients__modal-logo flex justify-center md:justify-start mb-[1.4rem] md:mb-[2.4rem]">
+                    {{ bst.ingredient_modal_logo }}
+                </div>
+            {% endif %}
+
+            <div class="ingredients__modal-image">
+                <div class="ingredients__modal-image-desktop hidden md:block">
+                    {% render 'img', image: bst.ingredient_modal_image_desktop, max_width: 1400 %}
+                </div>
+                <div class="ingredients__modal-image-mobile block md:hidden">
+                    {% render 'img', image: bst.ingredient_modal_image_mobile, max_width: 1400 %}
+                </div>
+            </div>
+
+            {% if bst.ingredient_caption != blank %}
+                <div class="grid md:grid-cols-[var(--desktop-layout)] pt-6 gap-[2.4rem]" style="--desktop-layout: 1fr 35rem;">
+                    <div class="ingredients__modal-caption font-family-poppins text-xs md:text-baseLg">
+                        {{ bst.ingredient_caption }}
+                    </div>
+                    <div class="ingredients__modal-cta flex flex-col text-center gap-3">
+                        <a href="#" class="btn w-full btn-lg max-w-[40rem]">
+                            Choose Your Package
+                        </a>
+                        <a href="#" class="link underline font-medium">
+                            See More Details
+                        </a>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
 </div>
+
+{% stylesheet %}
+  .ingredients__modal {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    overflow-y: auto;
+    padding: 1.6rem;
+  }
+
+  .ingredients__modal.active {
+    visibility: visible;
+    opacity: 1;
+  }
+{% endstylesheet %}
+
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('ingredients', () => ({
+            openModal: false,
+          
+            init() {
+                this.openModal = false;
+            }
+          }));
+    });
+</script>
 
 {% schema %}
 {
   "name": "Ingredients",
   "settings": [
     {
+      "type": "header",
+      "content": "Ingredients"
+    },
+    {
       "type": "metaobject_list",
       "label": "Related ingredients",
       "id": "related_ingredients",
       "metaobject_type": "product_ingredients"
+    },
+    {
+      "type": "header",
+      "content": "Modal settings"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button text",
+      "default": "See Ingredients &amp; Nutrition Facts"
+    },
+    {
+      "type": "textarea",
+      "id": "ingredient_modal_logo",
+      "label": "Ingredient modal logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "ingredient_modal_image_desktop",
+      "label": "Ingredient modal image desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "ingredient_modal_image_mobile",
+      "label": "Ingredient modal image mobile"
+    },
+    {
+      "type": "richtext",
+      "id": "ingredient_caption",
+      "label": "Ingredient caption"
     }
   ],
   "presets": [

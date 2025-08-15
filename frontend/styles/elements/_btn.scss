@@ -14,7 +14,6 @@
     padding: 0 0.8rem;
     font-weight: 700;
     transition: all 0.3s ease;
-    max-width: 30rem;
     text-align: center;
 
     &:hover {
@@ -86,6 +85,22 @@
 
         &:hover {
             background-color: #4B8ECB;
+        }
+    }
+
+    &-outline {
+        line-height: 3.9rem;
+        border-color: var(--color-coolBlack);
+        background-color: transparent;
+        color: var(--color-coolBlack);
+        border-width: 1px;
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+
+        &:hover,
+        &--active {
+            background-color: #75BDFF;
+            border-color: #4B8ECB;
         }
     }
 }

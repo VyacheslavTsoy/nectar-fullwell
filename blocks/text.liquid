@@ -10,6 +10,7 @@
 
     @media (max-width: 768px) {
         #{{ block.id }} {
+            text-align: {{ bst.text_alignment_mobile }};
             font-size: {{ bst.font_size_mobile | times: 0.1 }}rem;
         }
     }
@@ -124,6 +125,26 @@
         "max": 100,
         "step": 2,
         "default": 16
+    },
+    {
+        "type": "select",
+        "label": "Text alignment",
+        "id": "text_alignment_mobile",
+        "default": "left",
+        "options": [
+            {
+                "value": "left",
+                "label": "Left"
+            },
+            {
+                "value": "center",
+                "label": "Center"
+            },
+            {
+                "value": "right",
+                "label": "Right"
+            }
+        ]
     }
   ],
   "presets": [
