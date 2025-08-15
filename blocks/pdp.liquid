@@ -1,33 +1,24 @@
 {% assign featuredReview = product.metafields.custom.featured_review.value %}
 
 <div class="product">
-    <div class="flex gap-[4rem]">
-        <div class="product__gallery flex-shrink-0 w-[62.6rem] max-w-[60%]">
+    <div class="flex gap-4 md:gap-[4rem] flex-col md:flex-row">
+        <div class="product__gallery flex-shrink-0 md:w-[50%] lg:w-[62.6rem] md:max-w-[60%]">
             {% render 'product-gallery' %}
 
             {% if featuredReview %}
-                <div class="product__feature-review flex items-center gap-3 p-4 bg-[#FAFAFA] rounded-[1.2rem] border border-[#CCCCCC] mt-8 text-sm font-family-poppins">
-                    <div class="product__feature-review-image overflow-hidden rounded-[.6rem] w-[7rem] h-[7rem] flex-shrink-0">
-                        {% render 'img', image: featuredReview.author_image, max_width: 120 %}
-                    </div>
-                    <div class="product__feature-review-content">
-                        <div class="flex items-center gap-2">
-                            <div class="product__feature-review-name font-medium text-[#000000]">
-                                {{ featuredReview.name }}
-                            </div>
-                            <div class="product__feature-review-rating text-[#181D27]">
-                                {% render 'stars', score: 5 %}
-                            </div>
-                        </div>
-                        <div class="product__feature-review-text text-[#444444]">
-                            {{ featuredReview.text | metafield_tag }}
-                        </div>
-                    </div>
+                <div class="hidden md:block">
+                    {% render 'featured-review', name: featuredReview.name, image: featuredReview.author_image, text: featuredReview.text %}
                 </div>
             {% endif %}
         </div>
         <div class="product__info">
             {% content_for 'blocks' %}
+
+            {% if featuredReview %}
+                <div class="block md:hidden">
+                    {% render 'featured-review', name: featuredReview.name, image: featuredReview.author_image, text: featuredReview.text %}
+                </div>
+            {% endif %}
         </div>
     </div>
 </div>

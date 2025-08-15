@@ -1,5 +1,6 @@
 {% assign bst = block.settings %}
 
+
 <style>
     #{{ block.id }} {
         padding-top: {{ bst.top_padding_mobile | times: 0.1 }}rem;
@@ -16,6 +17,22 @@
             justify-content: {{ bst.buttons_alignment }};
         }
     }
+
+    {% if bst.hide_on_mobile %}
+        @media (max-width: 768px) {
+          #{{ block.id }} {
+            display: none !important;
+          }
+        }
+      {% endif %}
+      
+      {% if bst.hide_on_desktop %}
+        @media (min-width: 769px) {
+          #{{ block.id }} {
+            display: none !important;
+          }
+        }
+      {% endif %}
 </style>
 
 <div class="buttons-group flex flex-col md:flex-row items-center" id="{{ block.id }}">
@@ -29,6 +46,12 @@
     {
         "type": "header",
         "content": "Desktop"
+    },
+    {
+        "type": "checkbox",
+        "label": "Hide on Desktop",
+        "id": "hide_on_desktop",
+        "default": false
     },
     {
         "type": "range",
@@ -80,6 +103,12 @@
     {
         "type": "header",
         "content": "Mobile"
+    },
+    {
+        "type": "checkbox",
+        "label": "Hide on Mobile",
+        "id": "hide_on_mobile",
+        "default": false
     },
     {
         "type": "range",

@@ -1,14 +1,14 @@
 {% assign bst = block.settings %}
 
 <div class="ingredients pt-4">
-    <div class="ingredients__grid grid grid-cols-2 gap-4">
+    <div class="ingredients__grid grid md:grid-cols-2 gap-4">
         {% for ingredient in bst.related_ingredients %}
             <div class="ingredients__item flex gap-[3.5rem] justify-between items-center py-[2rem] px-[1.5rem] bg-[#FAFAFA] border-[0.1rem] border-[#CCCCCC] rounded-xl text-[#555555]">
                 <div class="ingredients__item-content">
-                    <h3 class="ingredients__item-name text-[#222222] mb-3 text-xl font-black">{{ ingredient.name }}</h3>
-                    <div class="ingredients__item-description">{{ ingredient.description | metafield_tag }}</div>
+                    <h3 class="ingredients__item-name text-[#222222] md:mb-3 text-baseLg md:text-xl font-black">{{ ingredient.name }}</h3>
+                    <div class="ingredients__item-description text-sm md:text-base">{{ ingredient.description | metafield_tag }}</div>
                 </div>
-                <div class="ingredients__item-image w-[12rem] flex-shrink-0">
+                <div class="ingredients__item-image w-[8rem] md:w-[12rem] flex-shrink-0">
                     {% render 'img', image: ingredient.image, max_width: 240, class: 'w-full h-full object-cover' %}
                 </div>
             </div>

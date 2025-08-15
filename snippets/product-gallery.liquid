@@ -9,7 +9,7 @@
     </div>
 </div>
 
-<div class="swiper thumbnail-gallery mt-[1.2rem] w-full overflow-hidden">
+<div class="swiper thumbnail-gallery mt-[0.8rem] md:mt-[1.2rem] w-full overflow-hidden">
     <div class="swiper-wrapper">
         {% for image in product.images %}
         <div class="swiper-slide">
@@ -21,8 +21,7 @@
     </div>
 </div>
 
-
-<style>
+{% stylesheet %}
     .thumbnail-gallery .swiper-slide {
         width: calc(20% - 1.8rem);
         margin-right: 2.2rem;
@@ -47,7 +46,19 @@
     .thumbnail-gallery__item--active {
         border-color: #5299FF !important;
     }
-</style>
+
+    @media (max-width: 768px) {
+        .thumbnail-gallery .swiper-slide {
+            width: calc(20% - 0.6rem);
+            margin-right: 0.6rem;
+        }
+
+        .thumbnail-gallery__item {
+            border-width: 0.1rem;
+            padding: 0.5rem;
+        }
+    }
+{% endstylesheet %}
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {

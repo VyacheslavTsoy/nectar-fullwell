@@ -35,10 +35,10 @@
                   "heading_size": "4xl",
                   "font_weight": "bold",
                   "font_family": "values-sans",
-                  "use_mobile_settings": false,
+                  "use_mobile_settings": true,
                   "text_alignment_mobile": "left",
-                  "heading_size_mobile": "xl",
-                  "font_weight_mobile": "normal"
+                  "heading_size_mobile": "lg",
+                  "font_weight_mobile": "bold"
                 },
                 "blocks": {}
               },
@@ -103,7 +103,7 @@
           "bg_color": "#ffffff",
           "desktop_max_width": 1240,
           "hide_on_mobile": false,
-          "mobile_padding_top": 30,
+          "mobile_padding_top": 15,
           "mobile_gap_between_blocks": 10
         }
       },
@@ -121,7 +121,7 @@
               "custom_column_width": false,
               "column_width": "1fr 1fr",
               "mobile_padding": 0,
-              "mobile_gap": 14,
+              "mobile_gap": 20,
               "mobile_columns_per_row": 1
             },
             "blocks": {
@@ -130,7 +130,7 @@
                 "name": "Column",
                 "settings": {
                   "gap_desktop": 6,
-                  "gap_mobile": 0
+                  "gap_mobile": 6
                 },
                 "blocks": {
                   "heading_n44bBT": {
@@ -143,10 +143,10 @@
                       "heading_size": "lg",
                       "font_weight": "bold",
                       "font_family": "values-sans",
-                      "use_mobile_settings": false,
-                      "text_alignment_mobile": "left",
-                      "heading_size_mobile": "xl",
-                      "font_weight_mobile": "normal"
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "center",
+                      "heading_size_mobile": "lg",
+                      "font_weight_mobile": "bold"
                     },
                     "blocks": {}
                   },
@@ -155,7 +155,7 @@
                     "name": "Text",
                     "settings": {
                       "title": "<p>Most people walk around chronically dehydrated without realizing it. If you're dealing with afternoon fatigue, brain fog, or mood dips - here's what will change when you're actually hydrated:</p>",
-                      "text_alignment": "left",
+                      "text_alignment": "center",
                       "font_family": "values-sans",
                       "font_weight": "normal",
                       "text_color": "#535862",
@@ -169,6 +169,8 @@
                     "name": "Doctor Review",
                     "settings": {
                       "title": "Meet Our Expert Advisor",
+                      "hide_on_mobile": true,
+                      "hide_on_desktop": false,
                       "image": "shopify://shop_images/model-with-leather-jacket-over-shoulders.jpg",
                       "text": "<p>I’ve reviewed many electrolyte mixes, yet Nectar consistently ranks at the top of my list!</p>",
                       "name": "Dr. John Doe"
@@ -187,7 +189,7 @@
                 "name": "Column",
                 "settings": {
                   "gap_desktop": 0,
-                  "gap_mobile": 0
+                  "gap_mobile": 18
                 },
                 "blocks": {
                   "features_LtNYBr": {
@@ -201,7 +203,7 @@
                       "columns_desktop": 3,
                       "layout_gap_desktop": 10,
                       "columns_mobile": 3,
-                      "layout_gap_mobile": 10
+                      "layout_gap_mobile": 6
                     },
                     "blocks": {
                       "features_item_BcDAfk": {
@@ -267,10 +269,24 @@
                       "features_item_3XQjqq",
                       "features_item_gAd47m"
                     ]
+                  },
+                  "doctor_review_wyCNDn": {
+                    "type": "doctor-review",
+                    "name": "Doctor Review",
+                    "settings": {
+                      "title": "Meet Our Expert Advisor",
+                      "hide_on_mobile": false,
+                      "hide_on_desktop": true,
+                      "image": "shopify://shop_images/model-with-leather-jacket-over-shoulders.jpg",
+                      "text": "<p>I’ve reviewed many electrolyte mixes, yet Nectar consistently ranks at the top of my list!</p>",
+                      "name": "Dr. John Doe"
+                    },
+                    "blocks": {}
                   }
                 },
                 "block_order": [
-                  "features_LtNYBr"
+                  "features_LtNYBr",
+                  "doctor_review_wyCNDn"
                 ]
               }
             },
@@ -307,10 +323,10 @@
               "heading_size": "3xl",
               "font_weight": "bold",
               "font_family": "values-sans",
-              "use_mobile_settings": false,
-              "text_alignment_mobile": "left",
-              "heading_size_mobile": "xl",
-              "font_weight_mobile": "normal"
+              "use_mobile_settings": true,
+              "text_alignment_mobile": "center",
+              "heading_size_mobile": "lg",
+              "font_weight_mobile": "bold"
             },
             "blocks": {}
           },
@@ -324,7 +340,7 @@
               "font_weight": "normal",
               "text_color": "#555555",
               "font_size": 16,
-              "font_size_mobile": 16
+              "font_size_mobile": 14
             },
             "blocks": {}
           },
@@ -340,10 +356,12 @@
             "type": "buttons-group",
             "name": "Buttons Group",
             "settings": {
+              "hide_on_desktop": false,
               "gap_between_buttons_desktop": 10,
               "buttons_alignment": "center",
               "top_padding_desktop": 10,
               "bottom_padding_desktop": 0,
+              "hide_on_mobile": false,
               "gap_between_buttons_mobile": 0,
               "buttons_alignment_mobile": "center",
               "top_padding_mobile": 10,
@@ -373,7 +391,7 @@
           "ingredients_mfWAjV",
           "buttons_group_YkFdMK"
         ],
-        "name": "Ingredients",
+        "name": "Ingredients Section",
         "settings": {
           "desktop_padding_top": 50,
           "desktop_gap_between_blocks": 10,
@@ -381,7 +399,7 @@
           "desktop_max_width": 980,
           "hide_on_mobile": false,
           "mobile_padding_top": 30,
-          "mobile_gap_between_blocks": 10
+          "mobile_gap_between_blocks": 5
         }
       },
       "blank_section_t7rBTB": {
@@ -407,7 +425,7 @@
                 "name": "Column",
                 "settings": {
                   "gap_desktop": 10,
-                  "gap_mobile": 0
+                  "gap_mobile": 10
                 },
                 "blocks": {
                   "review_badge_bK8Nxi": {
@@ -417,7 +435,8 @@
                       "title": "Over 50 Million Servings Sold",
                       "stars_quantity": 5,
                       "text_color": "#0d3063",
-                      "badge_alignment": "justify-start"
+                      "badge_alignment": "justify-start",
+                      "badge_alignment_mobile": "justify-center"
                     },
                     "blocks": {}
                   },
@@ -431,10 +450,10 @@
                       "heading_size": "4xl",
                       "font_weight": "bold",
                       "font_family": "values-sans",
-                      "use_mobile_settings": false,
-                      "text_alignment_mobile": "left",
-                      "heading_size_mobile": "xl",
-                      "font_weight_mobile": "normal"
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "center",
+                      "heading_size_mobile": "lg",
+                      "font_weight_mobile": "bold"
                     },
                     "blocks": {}
                   },
@@ -442,10 +461,12 @@
                     "type": "buttons-group",
                     "name": "Buttons Group",
                     "settings": {
+                      "hide_on_desktop": false,
                       "gap_between_buttons_desktop": 10,
                       "buttons_alignment": "flex-start",
                       "top_padding_desktop": 10,
                       "bottom_padding_desktop": 0,
+                      "hide_on_mobile": true,
                       "gap_between_buttons_mobile": 0,
                       "buttons_alignment_mobile": "center",
                       "top_padding_mobile": 0,
@@ -480,7 +501,7 @@
                 "name": "Column",
                 "settings": {
                   "gap_desktop": 0,
-                  "gap_mobile": 0
+                  "gap_mobile": 10
                 },
                 "blocks": {
                   "table_FqD7MQ": {
@@ -496,10 +517,43 @@
                       ]
                     },
                     "blocks": {}
+                  },
+                  "buttons_group_w8C783": {
+                    "type": "buttons-group",
+                    "name": "Buttons Group",
+                    "settings": {
+                      "hide_on_desktop": true,
+                      "gap_between_buttons_desktop": 10,
+                      "buttons_alignment": "flex-start",
+                      "top_padding_desktop": 10,
+                      "bottom_padding_desktop": 0,
+                      "hide_on_mobile": false,
+                      "gap_between_buttons_mobile": 0,
+                      "buttons_alignment_mobile": "center",
+                      "top_padding_mobile": 0,
+                      "bottom_padding_mobile": 0
+                    },
+                    "blocks": {
+                      "button_rTpQWG": {
+                        "type": "button",
+                        "name": "Button",
+                        "settings": {
+                          "button_text": "Choose Your Package",
+                          "button_link": "",
+                          "button_type": "primary",
+                          "hide_on_mobile": false
+                        },
+                        "blocks": {}
+                      }
+                    },
+                    "block_order": [
+                      "button_rTpQWG"
+                    ]
                   }
                 },
                 "block_order": [
-                  "table_FqD7MQ"
+                  "table_FqD7MQ",
+                  "buttons_group_w8C783"
                 ]
               }
             },
@@ -875,10 +929,10 @@
               "heading_size": "3xl",
               "font_weight": "bold",
               "font_family": "values-sans",
-              "use_mobile_settings": false,
-              "text_alignment_mobile": "left",
-              "heading_size_mobile": "xl",
-              "font_weight_mobile": "normal"
+              "use_mobile_settings": true,
+              "text_alignment_mobile": "center",
+              "heading_size_mobile": "lg",
+              "font_weight_mobile": "bold"
             },
             "blocks": {}
           },
@@ -928,8 +982,8 @@
               "gap_desktop": 10,
               "width_desktop": 190,
               "light_blue_color_scheme": true,
-              "use_grid_layout": false,
-              "columns_desktop": 2,
+              "use_grid_layout": true,
+              "columns_desktop": 4,
               "layout_gap_desktop": 10,
               "columns_mobile": 2,
               "layout_gap_mobile": 10
@@ -1010,7 +1064,7 @@
               "custom_column_width": true,
               "column_width": "450px 1fr",
               "mobile_padding": 0,
-              "mobile_gap": 14,
+              "mobile_gap": 0,
               "mobile_columns_per_row": 1
             },
             "blocks": {
@@ -1032,10 +1086,10 @@
                       "heading_size": "3xl",
                       "font_weight": "bold",
                       "font_family": "values-sans",
-                      "use_mobile_settings": false,
-                      "text_alignment_mobile": "left",
-                      "heading_size_mobile": "xl",
-                      "font_weight_mobile": "normal"
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "center",
+                      "heading_size_mobile": "lg",
+                      "font_weight_mobile": "bold"
                     },
                     "blocks": {}
                   }
@@ -1139,7 +1193,7 @@
           "desktop_max_width": 1080,
           "hide_on_mobile": false,
           "mobile_padding_top": 30,
-          "mobile_gap_between_blocks": 10
+          "mobile_gap_between_blocks": 0
         }
       },
       "blank_section_RMCiDb": {
@@ -1360,7 +1414,7 @@
           "desktop_gap_between_blocks": 20,
           "bg_color": "#fafafa",
           "desktop_max_width": 1200,
-          "hide_on_mobile": false,
+          "hide_on_mobile": true,
           "mobile_padding_top": 30,
           "mobile_gap_between_blocks": 10
         }

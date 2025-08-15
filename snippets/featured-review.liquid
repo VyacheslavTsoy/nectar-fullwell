@@ -1,0 +1,20 @@
+
+
+<div class="product__feature-review flex items-center gap-3 p-4 bg-[#FAFAFA] rounded-[1.2rem] border border-[#CCCCCC] mt-8 text-xs md:text-sm font-family-poppins">
+    <div class="product__feature-review-image overflow-hidden rounded-[.6rem] w-[7rem] h-[7rem] flex-shrink-0">
+        {% render 'img', image: image, max_width: 120 %}
+    </div>
+    <div class="product__feature-review-content">
+        <div class="flex items-center gap-2">
+            <div class="product__feature-review-name font-medium text-[#000000] text-sm">
+                {{ name }}
+            </div>
+            <div class="product__feature-review-rating text-[#181D27]">
+                {% render 'stars', score: 5 %}
+            </div>
+        </div>
+        <div class="product__feature-review-text text-[#444444]">
+            {{ text | metafield_tag }}
+        </div>
+    </div>
+</div>

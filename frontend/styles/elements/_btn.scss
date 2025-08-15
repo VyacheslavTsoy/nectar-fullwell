@@ -1,3 +1,5 @@
+@use '../config/all-config' as *;
+
 .btn {
     display: inline-block;
     white-space: nowrap;
@@ -65,6 +67,10 @@
     &-lg {
         line-height: 5.8rem;
         max-width: 100%;
+
+        @include down(md) {
+            line-height: 4.8rem;
+        }
     }
 
     &-group {

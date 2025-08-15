@@ -1,6 +1,6 @@
 {% assign bst = block.settings %}
 
-<div class="review-badge flex {{ bst.badge_alignment }}" id="{{ block.id }}">
+<div class="review-badge flex" id="{{ block.id }}">
     <div class="review-badge__inner flex items-center gap-3">
         <div class="review-badge__stars">
             {% render 'stars', score: bst.stars_quantity %}
@@ -10,6 +10,31 @@
         </div>
     </div>
 </div>
+
+<style>
+    #{{ block.id }} {
+        {% if bst.badge_alignment_mobile == 'justify-start' %}
+            justify-content: flex-start;
+        {% elsif bst.badge_alignment_mobile == 'justify-center' %}
+            justify-content: center;
+        {% elsif bst.badge_alignment_mobile == 'justify-end' %}
+            justify-content: flex-end;
+        {% endif %}
+    }
+
+    @media (min-width: 768px) {
+        #{{ block.id }} {
+            {% if bst.badge_alignment == 'justify-start' %}
+                justify-content: flex-start;
+            {% elsif bst.badge_alignment == 'justify-center' %}
+                justify-content: center;
+            {% elsif bst.badge_alignment == 'justify-end' %}
+                justify-content: flex-end;
+            {% endif %}
+        }
+    }
+</style>
+
 
 {% schema %}
 {
@@ -56,6 +81,26 @@
         }
       ],
       "default": "justify-center"
+    },
+    {
+      "type": "select",
+      "label": "Badge alignment on mobile",
+      "id": "badge_alignment_mobile",
+      "options": [
+        {
+          "value": "justify-start",
+          "label": "Left"
+        },
+        {
+          "value": "justify-center",
+          "label": "Center"
+        },
+        {
+          "value": "justify-end",
+          "label": "Right"
+        }
+      ],
+      "default": "justify-start"
     }
   ],
   "presets": [

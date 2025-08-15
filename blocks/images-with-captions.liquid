@@ -1,7 +1,7 @@
 {% assign bst = block.settings %}
 {% assign id = block.id | handleize | replace: '_', '' %}
 
-<div class="images-with-captions swiper" id="{{ id }}">
+<div class="images-with-captions swiper mx-[-2rem] px-[2rem] overflow-hidden" id="{{ id }}">
     <div class="swiper-wrapper">
         {% content_for 'blocks' %}
     </div>
@@ -33,7 +33,12 @@
         width: 34rem;
         border-radius: 1.2rem;
         overflow: hidden;
-        margin-right: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        #{{ id }} .swiper-slide {
+            width: 30rem;
+        }
     }
 
     #{{ id }} .image-with-caption__item {

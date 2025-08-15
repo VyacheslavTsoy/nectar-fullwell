@@ -1,6 +1,26 @@
 {% assign bst = block.settings %}
 
-<div class="doctor-review flex items-center mt-2 gap-4 p-4 bg-[#ffffff] rounded-[1.2rem] border border-[#CCCCCC] rounded-[.8rem]">
+{% if bst.hide_on_mobile or bst.hide_on_desktop %}
+  <style>
+    {% if bst.hide_on_mobile %}
+      @media (max-width: 768px) {
+        #{{ block.id }} {
+          display: none !important;
+        }
+      }
+    {% endif %}
+    
+    {% if bst.hide_on_desktop %}
+      @media (min-width: 769px) {
+        #{{ block.id }} {
+          display: none !important;
+        }
+      }
+    {% endif %}
+  </style>
+{% endif %}
+
+<div class="doctor-review flex items-center mt-2 gap-4 p-4 bg-[#ffffff] rounded-[1.2rem] border border-[#CCCCCC] rounded-[.8rem]" id="{{ block.id }}">
     <div class="doctor-review__image flex-shrink-0 overflow-hidden rounded-[.6rem]">
         {% render 'img', image: bst.image, max_width: 160 %}
     </div>
@@ -47,6 +67,18 @@
       "default": "Meet Our Expert Advisor"
     },
     {
+      "type": "checkbox",
+      "label": "Hide on mobile",
+      "id": "hide_on_mobile",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "label": "Hide on desktop",
+      "id": "hide_on_desktop",
+      "default": false
+    },
+    {
       "type": "image_picker",
       "label": "Image",
       "id": "image"
@@ -55,7 +87,7 @@
       "type": "richtext",
       "label": "Text",
       "id": "text",
-      "default": "<p>I’ve reviewed many electrolyte mixes, yet Nectar consistently ranks at the top of my list!</p>"
+      "default": "<p>I've reviewed many electrolyte mixes, yet Nectar consistently ranks at the top of my list!</p>"
     },
     {
       "type": "text",

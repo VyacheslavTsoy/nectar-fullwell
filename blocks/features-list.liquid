@@ -1,6 +1,6 @@
 {% assign bst = block.settings %}
 
-<div class="features-list text-[1.8rem]">
+<div class="features-list text-sm md:text-[1.8rem]">
     {{ bst.title }}
 </div>
 
@@ -18,6 +18,20 @@
     background-repeat: no-repeat;
     background-position: 0 0;
     padding: .2rem 0 0rem 2.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .features-list {
+        padding: 0.3rem 0;
+    }
+    .features-list ul {
+        gap: .5rem;
+    }
+    .features-list li{
+      background-size: 1.5rem;
+      padding: 0 0 0 2.2rem;
+      background-position: 0 0.2rem;
+    }
   }
 {% endstylesheet %}
 
