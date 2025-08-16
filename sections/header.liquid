@@ -3,7 +3,7 @@
 <header class="header bg-lightAzure text-white">
     <div class="container">
         <div class="header__inner flex justify-between items-center">
-            <button class="header__burger flex flex-col justify-center items-center gap-2 md:hidden">
+            <button class="header__burger flex flex-col justify-center items-center gap-2 md:hidden" @click="$store.mobileNav.isOpen = !$store.mobileNav.isOpen" x-data>
                 <span class="header__burger-line bg-white"></span>
                 <span class="header__burger-line bg-white"></span>
                 <span class="header__burger-line bg-white"></span>

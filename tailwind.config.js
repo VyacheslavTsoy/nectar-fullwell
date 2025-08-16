@@ -44,6 +44,7 @@ export default {
       fontFamily: {
         ValuesSans: ['Values Sans', 'sans-serif'],
         Poppins: ['Poppins', 'sans-serif'],
+        Atkinson: ['Atkinson', 'sans-serif'],
       },
       container: {
         center: true,
@@ -154,6 +155,7 @@ export default {
           '--font-weight-black': String(theme('fontWeight.black')),
           '--font-family-poppins': String(theme('fontFamily.Poppins')),
           '--font-family-values-sans': String(theme('fontFamily.ValuesSans')),
+          '--font-family-atkinson': String(theme('fontFamily.Atkinson')),
         },
       });
     },

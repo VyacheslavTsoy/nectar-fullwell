@@ -38,3 +38,60 @@
     font-style: normal;
     font-stretch: normal;
 }
+
+
+@font-face {
+    font-family: 'Atkinson';
+    src: url('/public/fonts/atkinson/AtkinsonHyperlegibleNext-Regular.woff2') format('woff2'),
+         url('/public/fonts/atkinson/AtkinsonHyperlegibleNext-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Atkinson';
+    src: url('/public/fonts/atkinson/AtkinsonHyperlegibleNext-RegularItalic.woff2') format('woff2'),
+         url('/public/fonts/atkinson/AtkinsonHyperlegibleNext-RegularItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Atkinson';
+    src: url('/public/fonts/atkinson/AtkinsonHyperlegibleNext-Medium.woff2') format('woff2'),
+         url('/public/fonts/atkinson/AtkinsonHyperlegibleNext-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Atkinson';
+    src: url('/public/fonts/atkinson/AtkinsonHyperlegibleNext-MediumItalic.woff2') format('woff2'),
+         url('/public/fonts/atkinson/AtkinsonHyperlegibleNext-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Atkinson';
+    src: url('/public/fonts/atkinson/AtkinsonHyperlegibleNext-Bold.woff2') format('woff2'),
+         url('/public/fonts/atkinson/AtkinsonHyperlegibleNext-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Atkinson';
+    src: url('/public/fonts/atkinson/AtkinsonHyperlegibleNext-BoldItalic.woff2') format('woff2'),
+         url('/public/fonts/atkinson/AtkinsonHyperlegibleNext-BoldItalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Atkinson';
+    src: url('/public/fonts/atkinson/AtkinsonHyperlegibleNext-ExtraBold.woff2') format('woff2'),
+         url('/public/fonts/atkinson/AtkinsonHyperlegibleNext-ExtraBold.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}

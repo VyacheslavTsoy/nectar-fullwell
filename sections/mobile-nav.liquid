@@ -1,0 +1,288 @@
+{% render 'entry' with '@/styles/sections/mobile-nav.scss' %}
+{% assign sst = section.settings %}
+{% assign title = sst.title %}
+{% assign rating_subtitle = sst.rating_subtitle %}
+{% assign products_list = section.blocks %}
+{% assign reviews = sst.reviews %}
+{% assign guarantee_text = sst.guarantee_text %}
+{% assign guarantee_image = sst.guarantee_image %}
+{% assign links = sst.links %}
+
+<div class="mobile-nav-wrapper" x-data="$store.mobileNav">
+    <div class="mobile-nav" :class="{ 'mobile-nav--active': $store.mobileNav.isOpen }">
+        <button class="mobile-nav__close absolute bg-white w-[3.6rem] rounded-full h-[3.6rem] flex items-center justify-center" :class="{ 'mobile-nav__close--active': $store.mobileNav.isOpen }" @click="$store.mobileNav.isOpen = !$store.mobileNav.isOpen">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.7836 8.11125L15.794 3.10081C16.3476 2.54721 16.3476 1.64969 15.794 1.09695L15.1261 0.428995C14.5723 -0.124779 13.6748 -0.124779 13.122 0.428995L8.11177 5.43926L3.10133 0.427957C2.54773 -0.125644 1.6502 -0.125644 1.09747 0.427957L0.428476 1.09591C-0.125125 1.64969 -0.125125 2.54721 0.428476 3.09995L5.43978 8.11125L0.429514 13.1215C-0.12426 13.6753 -0.12426 14.5728 0.429514 15.1255L1.09747 15.7935C1.65107 16.3471 2.5486 16.3471 3.10133 15.7935L8.11177 10.7831L13.122 15.7935C13.6758 16.3471 14.5733 16.3471 15.1261 15.7935L15.794 15.1255C16.3476 14.5718 16.3476 13.6742 15.794 13.1215L10.7836 8.11125Z" fill="#0D3063"/>
+            </svg>
+        </button>
+
+        <div class="mobile-nav__inner">
+            
+            {% if title != blank %}
+            <div class="mobile-nav__header mb-4">
+                <h3 class="mobile-nav__title text-lg font-bold mb-2">{{ title }}</h3>
+                {% if rating_subtitle != blank %}
+                    <div class="mobile-nav__rating flex gap-2 items-center font-family-poppins">
+                        <div class="flex items-center gap-1">
+                            {% render 'stars', score: 5 %}
+                        </div>
+                        <div class="text-sm pt-1">
+                            <p>{{ rating_subtitle }}</p>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+            {% endif %}
+
+            {% if products_list != blank %}
+            <div class="mobile-nav__products grid grid-cols-1 gap-4 mb-8">
+                {% for item in products_list %}
+                {% assign bst = item.settings %}
+                <figure class="mobile-nav__product flex items-center gap-4">
+                    <div class="mobile-nav__product-image w-[7rem] h-[7rem]">
+                        {% render 'img', image: bst.product_image, max_width: 140, lazy: true, class: 'w-full h-full object-cover rounded-lg' %}
+                    </div>
+                    <figcaption class="mobile-nav__product-content">
+                        {% if bst.sold_badge != blank %}
+                            <div class="mobile-nav__product-badge mb-2">
+                                {{ bst.sold_badge }}
+                            </div>
+                        {% endif %}
+                        {% if bst.product_url != blank %}
+                        <h4 class="mobile-nav__product-name">
+                            <a href="{{ bst.product_url }}">
+                                {{ bst.product_title }}
+                            </a>
+                        </h4>
+                        {% endif %}
+                        {% if bst.review_badge != blank %}
+                        <div class="mobile-nav__product-rating flex items-center gap-2">
+                            <div class="flex items-center gap-1">
+                                {% render 'stars', score: 1 %}
+                            </div>
+
+                            <div class="text-sm pt-1 font-family-poppins">
+                                {{ bst.review_badge }}
+                            </div>
+                        </div>
+                        {% endif %}
+                    </figcaption>
+                </figure>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            {% if reviews != blank %}
+            <div class="carousel overflow-hidden w-full mb-[2.4rem]" id="mobile-nav-reviews">
+                <div class="carousel__content swiper">
+                    <div class="swiper-wrapper">
+                        {% for review in reviews %}
+                            <div class="swiper-slide">
+                                <div class="review bg-lightGrey">
+                                    <div class="review__header flex items-center justify-between pb-3 mb-3">
+                                        <div class="flex items-center gap-4">
+                                            <div class="review__author">
+                                                {{ review.name }}
+                                            </div>
+                                            <div class="review__rating">
+                                                {% render 'stars', score: review.score %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review__content">
+                                        <div class="review__text text-xs">
+                                            {{ review.text | metafield_tag }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const swiper = new Swiper('#mobile-nav-reviews .swiper', {
+                        slidesPerView: 1,
+                        spaceBetween: 12,
+                        autoHeight: true,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        }
+                    });
+                });
+            </script>
+            {% endif %}
+
+            {% if guarantee_image != blank %}
+            <div class="guarantee-badges mb-8 font-family-poppins font-medium">
+                <div class="guarantee-badge flex items-center gap-4">
+                    <div class="guarantee-badge__icon flex-shrink-0 w-[5.2rem] h-[5.2rem]">
+                        {% render 'img', image: guarantee_image, max_width: 100, lazy: true, class: 'w-full h-full object-cover' %}
+                    </div>
+                    <div class="guarantee-badge__text text-xs text-[#222222]">
+                        {{ guarantee_text }}
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if links != blank %}
+            <ul class="mobile-nav__list mt-[2rem] py-[2rem] border-t border-[#CCCCCC] flex gap-[2rem]">
+                {% for link in linklists[links].links %}
+                <li class="mobile-nav__list-item font-family-poppins text-sm">
+                    <h3 class="mobile-nav__list-title text-[#444444] mb-4">{{ link.title }}</h3>
+
+                    {% if link.links != blank %}
+                    <ul class="mobile-nav__list-sublist flex flex-col gap-3">
+                        {% for link in link.links %}
+                        <li class="mobile-nav__list-subitem">
+                            <a href="{{ link.url }}" class="font-bold">
+                                {{ link.title }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="mobile-nav-overlay" :class="{ 'mobile-nav-overlay--active': $store.mobileNav.isOpen }" @click="$store.mobileNav.isOpen = false"></div>
+</div>
+
+
+{% stylesheet %}
+    #mobile-nav-reviews .swiper-pagination .swiper-pagination-bullet {
+        background-color: #EAEAEA;
+        border: 4px solid #EAEAEA;
+        width: 1.5rem;
+        height: 1.5rem;
+        flex-shrink: 0;
+    }
+    #mobile-nav-reviews .swiper-pagination .swiper-pagination-bullet-active {
+        border-color: #5299FF!important;
+    }
+{% endstylesheet %}
+
+<script>
+    document.addEventListener('alpine:init', () => {
+      Alpine.store('mobileNav', {
+        isOpen: false,
+    
+        init() {
+          this.isOpen = false;
+        }
+      });
+    });
+</script>
+
+{% schema %}
+{
+  "name": "Mobile Navigation",
+  "settings": [
+    {
+        "type": "text",
+        "label": "Title",
+        "id": "title",
+        "default": "Shop Nectar Essentials"
+    },
+    {
+        "type": "text",
+        "label": "Rating subtitle",
+        "id": "rating_subtitle",
+        "default": "14,000+ Trusted Reviews"
+    },
+    {
+        "type": "header",
+        "content": "Products"
+    },
+    {
+        "type": "product_list",
+        "label": "Products list",
+        "id": "products_list"
+    },
+    {
+        "type": "header",
+        "content": "Review"
+    },
+    {
+        "type": "metaobject_list",
+        "label": "Reviews",
+        "id": "reviews",
+        "metaobject_type": "reviews"
+    },
+    {
+        "type": "header",
+        "content": "Guarantee badges"
+    },
+    {
+        "type": "richtext",
+        "label": "Guarantee text",
+        "id": "guarantee_text",
+        "default": "<p>Try Nectar with no risk! If you’re not 100% satisfied, you can trust in our 90-day money back gaurantee.*</p>"
+    },
+    {
+        "type": "image_picker",
+        "label": "Guarantee image",
+        "id": "guarantee_image"
+    },
+    {
+        "type": "header",
+        "content": "Links"
+    },
+    {
+        "type": "link_list",
+        "label": "Links",
+        "id": "links"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Product Image",
+          "id": "product_image"
+        },
+        {
+          "type": "url",
+          "label": "Product URL",
+          "id": "product_url"
+        },
+        {
+          "type": "text",
+          "label": "Product Title",
+          "id": "product_title",
+          "default": "Essential Daily Hydration"
+        },
+        {
+          "type": "richtext",
+          "label": "Sold Badge",
+          "id": "sold_badge",
+          "default": "<p>In Last 24 Hours <b>1200+ Sold!</b></p>"
+        },
+        {
+          "type": "richtext",
+          "label": "Review Badge",
+          "id": "review_badge",
+          "default": "<p>4.9 <b>13,212 Reviews</b></p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Mobile Navigation"
+    }
+  ]
+}
+{% endschema %}

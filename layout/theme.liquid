@@ -38,9 +38,23 @@
     
     {{ content_for_header }}
 
+    <style>
+      :root {
+        {% if settings.primary_font == 'poppins' %}
+          --font-family-primary: 'Poppins', sans-serif;
+        {% elsif settings.primary_font == 'value_sans' %}
+          --font-family-primary: 'Values Sans', sans-serif;
+        {% elsif settings.primary_font == 'atkinson' %}
+          --font-family-primary: 'Atkinson', sans-serif;
+        {% endif %}
+      }
+      body {
+        font-family: var(--font-family-primary);
+    }
+    </style>
+
   </head>
   <body>
-
     
     {% comment %} Announcement bar {% endcomment %}
     {% section 'announcement-bar' %}
@@ -55,5 +69,8 @@
     
     {% comment %} Footer {% endcomment %}
     {% sections 'footer-group' %}
+
+    {% comment %} Mobile nav {% endcomment %}
+    {% section 'mobile-nav' %}
   </body>
 </html>

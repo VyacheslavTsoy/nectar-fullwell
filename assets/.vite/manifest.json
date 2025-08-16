@@ -1,6 +1,6 @@
 {
   "frontend/entrypoints/main.scss": {
-    "file": "main-BBR6yVls.css",
+    "file": "main-B4qddD0g.css",
     "src": "frontend/entrypoints/main.scss",
     "isEntry": true
   },
@@ -29,14 +29,47 @@
     "isEntry": true
   },
   "frontend/styles/sections/hero.scss": {
-    "file": "hero-C6KpH91g.css",
+    "file": "hero-Cq0lft6R.css",
     "src": "frontend/styles/sections/hero.scss",
+    "isEntry": true
+  },
+  "frontend/styles/sections/mobile-nav.scss": {
+    "file": "mobile-nav-B9swzqCz.css",
+    "src": "frontend/styles/sections/mobile-nav.scss",
     "isEntry": true
   },
   "frontend/styles/sections/scrollable-features.scss": {
     "file": "scrollable-features-w25j7Gae.css",
     "src": "frontend/styles/sections/scrollable-features.scss",
     "isEntry": true
+  },
+  "public/fonts/atkinson/AtkinsonHyperlegibleNext-Bold.woff2": {
+    "file": "AtkinsonHyperlegibleNext-Bold-D_7jdogo.woff2",
+    "src": "public/fonts/atkinson/AtkinsonHyperlegibleNext-Bold.woff2"
+  },
+  "public/fonts/atkinson/AtkinsonHyperlegibleNext-BoldItalic.woff2": {
+    "file": "AtkinsonHyperlegibleNext-BoldItalic-CWS1Xf8A.woff2",
+    "src": "public/fonts/atkinson/AtkinsonHyperlegibleNext-BoldItalic.woff2"
+  },
+  "public/fonts/atkinson/AtkinsonHyperlegibleNext-ExtraBold.woff2": {
+    "file": "AtkinsonHyperlegibleNext-ExtraBold-BX6Day46.woff2",
+    "src": "public/fonts/atkinson/AtkinsonHyperlegibleNext-ExtraBold.woff2"
+  },
+  "public/fonts/atkinson/AtkinsonHyperlegibleNext-Medium.woff2": {
+    "file": "AtkinsonHyperlegibleNext-Medium-BEsaGZSQ.woff2",
+    "src": "public/fonts/atkinson/AtkinsonHyperlegibleNext-Medium.woff2"
+  },
+  "public/fonts/atkinson/AtkinsonHyperlegibleNext-MediumItalic.woff2": {
+    "file": "AtkinsonHyperlegibleNext-MediumItalic-CJgiFZLe.woff2",
+    "src": "public/fonts/atkinson/AtkinsonHyperlegibleNext-MediumItalic.woff2"
+  },
+  "public/fonts/atkinson/AtkinsonHyperlegibleNext-Regular.woff2": {
+    "file": "AtkinsonHyperlegibleNext-Regular-BunSwk7v.woff2",
+    "src": "public/fonts/atkinson/AtkinsonHyperlegibleNext-Regular.woff2"
+  },
+  "public/fonts/atkinson/AtkinsonHyperlegibleNext-RegularItalic.woff2": {
+    "file": "AtkinsonHyperlegibleNext-RegularItalic-9aJwnWY2.woff2",
+    "src": "public/fonts/atkinson/AtkinsonHyperlegibleNext-RegularItalic.woff2"
   },
   "public/fonts/values-sans/ValueSansPro-Black.woff": {
     "file": "ValueSansPro-Black-mc8XTytr.woff",
