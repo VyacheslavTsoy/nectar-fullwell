@@ -6,10 +6,6 @@
         {% assign q_key = 'question_' | append: i %}
         {% assign a_key = 'answer_' | append: i %}
         {% assign open_by_default = false %}
-
-        {% if i == 1 %}
-            {% assign open_by_default = true %}
-        {% endif %}
     
         {% if productFaq[q_key] %}
             {% assign question = productFaq[q_key] %}
@@ -24,15 +20,19 @@
 </div>
 
 {% stylesheet %}
-.product__faq:not(.product__faq--open) .accordion-item:nth-child(n+4) {
+.product__faq:not(.product__faq--open) .accordion-item:nth-child(n+6) {
     display: none;
 }
 
+.accordion-item__summary {
+    font-size: 2rem;
+}
+
 .accordion-item__content {
-    font-size: 1.5rem;
     line-height: 1.5;
+    font-size: 1.6rem;
     padding-top: 0.6rem;
-    color: #535862;
+    color: #000;
 }
 {% endstylesheet %}
 

@@ -1,29 +1,89 @@
-{% assign featuredReview = product.metafields.custom.featured_review.value %}
+{% assign featuredReviews = product.metafields.custom.featured_reviews.value %}
 
 <div class="product">
     <div class="flex gap-4 md:gap-[3rem] flex-col md:flex-row">
         <div class="product__gallery flex-shrink-0 md:w-[50%] lg:w-[54rem]">
             {% render 'product-gallery' %}
 
-            {% if featuredReview %}
+            {% if featuredReviews != blank %}
                 <div class="hidden md:block">
-                    {% render 'featured-review', name: featuredReview.name, image: featuredReview.author_image, text: featuredReview.text %}
+                    {% if featuredReviews != blank %}
+                        <div class="carousel overflow-hidden w-full mt-[1.6rem]" id="featured-reviews-desktop">
+                            <div class="carousel__content swiper">
+                                <div class="swiper-wrapper">
+                                    {% for review in featuredReviews %}
+                                        <div class="swiper-slide">
+                                            {% render 'featured-review', name: review.name, image: review.author_image, text: review.text %}
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    
+                        <script>
+                            document.addEventListener('DOMContentLoaded', () => {
+                                const swiper = new Swiper('#featured-reviews-desktop .swiper', {
+                                    slidesPerView: 1,
+                                    spaceBetween: 12,
+                                    autoHeight: true,
+                                    pagination: {
+                                        el: '.swiper-pagination',
+                                        clickable: true,
+                                    }
+                                });
+                            });
+                        </script>
+                    {% endif %}
                 </div>
             {% endif %}
         </div>
         <div class="product__info">
             {% content_for 'blocks' %}
 
-            {% if featuredReview %}
+            {% if featuredReviews != blank %}
                 <div class="block md:hidden">
-                    {% render 'featured-review', name: featuredReview.name, image: featuredReview.author_image, text: featuredReview.text %}
+                    {% if featuredReviews != blank %}
+                        <div class="carousel overflow-hidden w-full mt-[1.6rem]" id="featured-reviews-mobile">
+                            <div class="carousel__content swiper">
+                                <div class="swiper-wrapper">
+                                    {% for review in featuredReviews %}
+                                        <div class="swiper-slide">
+                                            {% render 'featured-review', name: review.name, image: review.author_image, text: review.text %}
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    
+                        <script>
+                            document.addEventListener('DOMContentLoaded', () => {
+                                const swiper = new Swiper('#featured-reviews-mobile .swiper', {
+                                    slidesPerView: 1,
+                                    spaceBetween: 12,
+                                    autoHeight: true,
+                                    pagination: {
+                                        el: '.swiper-pagination',
+                                        clickable: true,
+                                    }
+                                });
+                            });
+                        </script>
+                    {% endif %}
                 </div>
             {% endif %}
         </div>
     </div>
 </div>
 
+
+
 {% stylesheet %}
+.swiper-pagination  {
+    padding-top: 1.6rem !important;
+}
+
 .product__feature-review-image img {
     object-fit: cover;
     width: 100%;

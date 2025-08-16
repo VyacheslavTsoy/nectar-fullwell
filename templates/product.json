@@ -21,7 +21,7 @@
                 "type": "inline-review",
                 "name": "Inline Review",
                 "settings": {
-                  "title": "<p>Excellent <strong>4.8</strong> 12,000+ Trusted Reviews</p>"
+                  "title": "<p>Excellent <strong>4.8</strong> | 12,000+ Trusted Reviews</p>"
                 },
                 "blocks": {}
               },
@@ -51,7 +51,7 @@
                   "font_family": "values-sans",
                   "font_weight": "normal",
                   "text_color": "#42a4ff",
-                  "font_size": 20,
+                  "font_size": 24,
                   "font_size_mobile": 16,
                   "text_alignment_mobile": "left"
                 },

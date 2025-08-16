@@ -78,23 +78,7 @@
                     <div class="swiper-wrapper">
                         {% for review in reviews %}
                             <div class="swiper-slide">
-                                <div class="review bg-lightGrey">
-                                    <div class="review__header flex items-center justify-between pb-3 mb-3">
-                                        <div class="flex items-center gap-4">
-                                            <div class="review__author">
-                                                {{ review.name }}
-                                            </div>
-                                            <div class="review__rating">
-                                                {% render 'stars', score: review.score %}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="review__content">
-                                        <div class="review__text text-xs">
-                                            {{ review.text | metafield_tag }}
-                                        </div>
-                                    </div>
-                                </div>
+                                {% render 'featured-review', name: review.name, image: false, text: review.text %}
                             </div>
                         {% endfor %}
                     </div>
