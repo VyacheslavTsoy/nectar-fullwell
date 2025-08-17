@@ -35,7 +35,7 @@
             {% endif %}
 
             {% if products_list != blank %}
-            <div class="mobile-nav__products grid grid-cols-1 gap-4 mb-8">
+            <div class="mobile-nav__products grid grid-cols-1 gap-4 mb-[2.4rem]">
                 {% for item in products_list %}
                 {% assign bst = item.settings %}
                 <figure class="mobile-nav__product flex items-center gap-4">
@@ -44,7 +44,7 @@
                     </div>
                     <figcaption class="mobile-nav__product-content">
                         {% if bst.sold_badge != blank %}
-                            <div class="mobile-nav__product-badge mb-2">
+                            <div class="mobile-nav__product-badge">
                                 {{ bst.sold_badge }}
                             </div>
                         {% endif %}

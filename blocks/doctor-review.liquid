@@ -24,7 +24,7 @@
     <div class="doctor-review__image flex-shrink-0 overflow-hidden rounded-[.6rem]">
         {% render 'img', image: bst.image, max_width: 160 %}
     </div>
-    <div class="doctor-review__content text-sm">
+    <div class="doctor-review__content">
         {% if bst.title != empty %}
             <div class="doctor-review__title font-bold text-bold mb-1">
                 {{ bst.title }}
@@ -36,7 +36,7 @@
             </div>
         {% endif %}
         {% if bst.name != empty %}
-            <div class="doctor-review__name" style="color: #333333;">
+            <div class="doctor-review__name text-sm" style="color: #333333;">
                 {{ bst.name }}
             </div>
         {% endif %}

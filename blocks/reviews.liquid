@@ -3,7 +3,7 @@
 
 <div class="reviews pb-4" id="{{ block.id }}" {% if bst.activate_filters %}x-data="reviews"{% endif %}>
     {% if bst.activate_filters %}
-    <div class="review-filters flex flex-wrap justify-between md:justify-center gap-x-3 gap-y-4 md:gap-x-3 mb-8 md:mb-[3.2rem]">
+    <div class="review-filters flex flex-wrap justify-center gap-x-3 gap-y-4 md:gap-x-3 mb-8 md:mb-[3.2rem]">
         <template x-for="type in reviewTypes" :key="type.handle">
           <button 
             class="btn btn-outline w-full max-w-[48%] md:max-w-[100%] md:w-auto md:min-w-[14rem]" 

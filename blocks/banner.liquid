@@ -1,0 +1,60 @@
+{% assign bst = block.settings %}
+
+<div class="banner py-[var(--vertical-padding-mobile)] md:py-[var(--vertical-padding-desktop)]" style="--vertical-padding-desktop: {{ bst.vertical_padding_desktop | times: 0.1 }}rem; --vertical-padding-mobile: {{ bst.vertical_padding_mobile | times: 0.1 }}rem;">
+    <div class="banner__image hidden md:block">
+        {% render 'img', image: bst.image, max_width: 1920 %}
+    </div>
+    <div class="banner__image md:hidden">
+        {% render 'img', image: bst.image_mobile, max_width: 768 %}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Banner",
+  "tag": null,
+  "settings": [
+    {
+        "type": "header",
+        "content": "Desktop"
+    },
+    {
+        "type": "range",
+        "id": "vertical_padding_desktop",
+        "label": "Vertical Padding",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "default": 0
+    },
+    {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Desktop Image"
+    },
+    {
+        "type": "header",
+        "content": "Mobile"
+    },
+    {
+        "type": "range",
+        "id": "vertical_padding_mobile",
+        "label": "Vertical Padding",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "default": 0
+    },
+    {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "Mobile Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner"
+    }
+  ]
+}
+{% endschema %}

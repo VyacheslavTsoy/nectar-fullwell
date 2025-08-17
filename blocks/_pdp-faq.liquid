@@ -14,7 +14,7 @@
         {% endif %}
     {% endfor %}
 
-    <div class="product__faq-button mt-6 text-[#181D27] text-center font-medium">
+    <div class="product__faq-button hidden md:block mt-6 text-[#181D27] text-center font-medium">
         <button class="underline underline-offset-4" @click="open = !open" x-text="open ? 'See Less FAQs' : 'See More FAQs'"></button>
     </div>
 </div>
@@ -24,8 +24,14 @@
     display: none;
 }
 
-.accordion-item__summary {
-    font-size: 2rem;
+.product__faq:not(.product__faq--open) .accordion-item:nth-child(n+6) {
+    display: none;
+}
+
+@media (min-width: 768px) {   
+    .accordion-item__summary {
+        font-size: 1.8rem;
+    }
 }
 
 .accordion-item__content {

@@ -38,7 +38,7 @@
                 </div>
             {% endif %}
         </div>
-        <div class="product__info">
+        <div class="product__info md:w-[50%]">
             {% content_for 'blocks' %}
 
             {% if featuredReviews != blank %}
@@ -80,15 +80,31 @@
 
 
 {% stylesheet %}
-.swiper-pagination  {
-    padding-top: 1.6rem !important;
-}
+    .swiper-pagination  {
+        padding-top: 1.6rem !important;
+    }
 
-.product__feature-review-image img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
+    .product__feature-review-image img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .product__cta-button .btn   {
+        font-size: 2rem;
+    }
+
+    @media (min-width: 768px) {
+        .product__cta-button .btn {
+            font-size: 2.6rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .product__info h1 {
+            font-size: 7.4vw;
+        }
+    }
 {% endstylesheet %}
 
 {% schema %}

@@ -1479,81 +1479,16 @@
             },
             "blocks": {}
           },
-          "gallery_Ht9Hnb": {
-            "type": "gallery",
-            "name": "Gallery",
+          "banner_mhpkGW": {
+            "type": "banner",
+            "name": "Banner",
             "settings": {
-              "gap_desktop": 10,
-              "columns_desktop": 3,
               "vertical_padding_desktop": 10,
-              "gap_mobile": 10,
-              "columns_mobile": 3,
-              "vertical_padding_mobile": 10
+              "image": "shopify://shop_images/image-banner.png",
+              "vertical_padding_mobile": 0,
+              "image_mobile": "shopify://shop_images/image-banner-mobile.png"
             },
-            "blocks": {
-              "gallery_item_bYcAx9": {
-                "type": "_gallery-item",
-                "name": "Gallery Item",
-                "settings": {
-                  "image": "shopify://shop_images/Pineapple.jpg",
-                  "aspect_ratio": "square"
-                },
-                "blocks": {}
-              },
-              "gallery_item_eaYNBg": {
-                "type": "_gallery-item",
-                "name": "Gallery Item",
-                "settings": {
-                  "image": "shopify://shop_images/All_Sticks_1.png",
-                  "aspect_ratio": "square"
-                },
-                "blocks": {}
-              },
-              "gallery_item_UMUByX": {
-                "type": "_gallery-item",
-                "name": "Gallery Item",
-                "settings": {
-                  "image": "shopify://shop_images/Peach_2.jpg",
-                  "aspect_ratio": "landscape"
-                },
-                "blocks": {}
-              },
-              "gallery_item_cxwqAf": {
-                "type": "_gallery-item",
-                "name": "Gallery Item",
-                "settings": {
-                  "image": "shopify://shop_images/Rectangle_2116.png",
-                  "aspect_ratio": "portrait"
-                },
-                "blocks": {}
-              },
-              "gallery_item_TgpDRk": {
-                "type": "_gallery-item",
-                "name": "Gallery Item",
-                "settings": {
-                  "image": "shopify://shop_images/GIF_4_12x16_1.png",
-                  "aspect_ratio": "square"
-                },
-                "blocks": {}
-              },
-              "gallery_item_fqkTF6": {
-                "type": "_gallery-item",
-                "name": "Gallery Item",
-                "settings": {
-                  "image": "shopify://shop_images/Energy_MainV1copy_2_1.png",
-                  "aspect_ratio": "square"
-                },
-                "blocks": {}
-              }
-            },
-            "block_order": [
-              "gallery_item_bYcAx9",
-              "gallery_item_eaYNBg",
-              "gallery_item_UMUByX",
-              "gallery_item_cxwqAf",
-              "gallery_item_TgpDRk",
-              "gallery_item_fqkTF6"
-            ]
+            "blocks": {}
           },
           "reviews_total_ggY7MN": {
             "type": "reviews-total",
@@ -1570,7 +1505,7 @@
         "block_order": [
           "heading_NNKdzX",
           "text_Ddkc4E",
-          "gallery_Ht9Hnb",
+          "banner_mhpkGW",
           "reviews_total_ggY7MN"
         ],
         "name": "Gallery",
@@ -1602,11 +1537,7 @@
         "block_order": [
           "junip_junip_reviews_zzKBz3"
         ],
-        "custom_css": [
-          ".junip-reviews-tab-switcher-container,.junip-filters {display: none !important;}",
-          ".junip-product-review-container {background-color: #f4f9ff; padding: 0 2rem;}",
-          ".junip-review-section {background-color: #f4f9ff;}"
-        ],
+        "custom_css": [],
         "settings": {}
       },
       "blank_section_qb3e4P": {

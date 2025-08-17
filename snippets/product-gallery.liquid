@@ -26,7 +26,7 @@
     .thumbnail-gallery .swiper-slide {
         width: calc(20% - 0.6rem);
         flex-shrink: 0;
-        margin-bottom: 0.8rem;
+        margin-bottom: 0;
     }
 
     .thumbnail-gallery__item {
@@ -69,14 +69,8 @@
     }
 
     @media (max-width: 768px) {
-        .thumbnail-gallery .swiper-slide {
-            width: calc(20% - 0.6rem);
-            margin-right: 0.6rem;
-        }
-
         .thumbnail-gallery__item {
             border-width: 0.1rem;
-            padding: 0.5rem;
         }
     }
 {% endstylesheet %}
@@ -85,13 +79,14 @@
 document.addEventListener('DOMContentLoaded', function() {
    
     const thumbnailSwiper = new Swiper('.thumbnail-gallery', {
-        slidesPerView: 'auto',
+        slidesPerView: 5,
         spaceBetween: 6,
         freeMode: true,
         watchSlidesProgress: true,
         speed: 1000,
         breakpoints: {
             1024: {
+                slidesPerView: 'auto',
                 spaceBetween: 0,
                 direction: 'vertical'
             }

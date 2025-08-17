@@ -52,7 +52,7 @@
                   "font_weight": "normal",
                   "text_color": "#42a4ff",
                   "font_size": 24,
-                  "font_size_mobile": 16,
+                  "font_size_mobile": 18,
                   "text_alignment_mobile": "left"
                 },
                 "blocks": {}
@@ -118,7 +118,7 @@
               "desktop_padding": 0,
               "desktop_gap": 54,
               "desktop_columns_per_row": 2,
-              "align_items": "center",
+              "align_items": "start",
               "custom_column_width": false,
               "column_width": "1fr 1fr",
               "mobile_padding": 0,
@@ -340,9 +340,9 @@
               "text_alignment": "center",
               "font_family": "poppins",
               "font_weight": "normal",
-              "text_color": "#555555",
+              "text_color": "#000000",
               "font_size": 16,
-              "font_size_mobile": 14,
+              "font_size_mobile": 16,
               "text_alignment_mobile": "center"
             },
             "blocks": {}
@@ -559,7 +559,7 @@
             "type": "heading",
             "name": "Heading",
             "settings": {
-              "title": "<h2>join 1,000,000+ others Who Have Changed <br/>their lives with nectar</h2>",
+              "title": "<h2>join 1,000,000+ others Who Have <br/>Changed their lives with nectar</h2>",
               "text_color": "rgba(0,0,0,0)",
               "text_alignment": "center",
               "heading_size": "4xl",
@@ -707,7 +707,7 @@
               "text_color": "#222222",
               "font_size": 18,
               "font_size_mobile": 16,
-              "text_alignment_mobile": "left"
+              "text_alignment_mobile": "center"
             },
             "blocks": {}
           },
@@ -1096,7 +1096,7 @@
                         "type": "_accordion-item",
                         "name": "Accordion Item",
                         "settings": {
-                          "open_by_default": true,
+                          "open_by_default": false,
                           "question": "Shipping Details",
                           "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
                         },
@@ -1141,6 +1141,36 @@
                           "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
                         },
                         "blocks": {}
+                      },
+                      "accordion_item_bFCEne": {
+                        "type": "_accordion-item",
+                        "name": "Accordion Item",
+                        "settings": {
+                          "open_by_default": false,
+                          "question": "What Does It Taste Like?",
+                          "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+                        },
+                        "blocks": {}
+                      },
+                      "accordion_item_LpwjPD": {
+                        "type": "_accordion-item",
+                        "name": "Accordion Item",
+                        "settings": {
+                          "open_by_default": false,
+                          "question": "What Does It Taste Like?",
+                          "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+                        },
+                        "blocks": {}
+                      },
+                      "accordion_item_DHKLpa": {
+                        "type": "_accordion-item",
+                        "name": "Accordion Item",
+                        "settings": {
+                          "open_by_default": false,
+                          "question": "What Does It Taste Like?",
+                          "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+                        },
+                        "blocks": {}
                       }
                     },
                     "block_order": [
@@ -1148,7 +1178,10 @@
                       "accordion_item_bJ4Q9r",
                       "accordion_item_QcP6LE",
                       "accordion_item_nepMpB",
-                      "accordion_item_4FDNj7"
+                      "accordion_item_4FDNj7",
+                      "accordion_item_bFCEne",
+                      "accordion_item_LpwjPD",
+                      "accordion_item_DHKLpa"
                     ]
                   }
                 },
@@ -1212,81 +1245,16 @@
             },
             "blocks": {}
           },
-          "gallery_RdXXtE": {
-            "type": "gallery",
-            "name": "Gallery",
+          "banner_MYBpWP": {
+            "type": "banner",
+            "name": "Banner",
             "settings": {
-              "gap_desktop": 10,
-              "columns_desktop": 3,
               "vertical_padding_desktop": 10,
-              "gap_mobile": 10,
-              "columns_mobile": 3,
-              "vertical_padding_mobile": 10
+              "image": "shopify://shop_images/image-banner.png",
+              "vertical_padding_mobile": 0,
+              "image_mobile": "shopify://shop_images/image-banner-mobile.png"
             },
-            "blocks": {
-              "gallery_item_Ean6KU": {
-                "type": "_gallery-item",
-                "name": "Gallery Item",
-                "settings": {
-                  "image": "shopify://shop_images/Pineapple.jpg",
-                  "aspect_ratio": "square"
-                },
-                "blocks": {}
-              },
-              "gallery_item_gmA9cP": {
-                "type": "_gallery-item",
-                "name": "Gallery Item",
-                "settings": {
-                  "image": "shopify://shop_images/All_Sticks_1.png",
-                  "aspect_ratio": "square"
-                },
-                "blocks": {}
-              },
-              "gallery_item_8ABfxh": {
-                "type": "_gallery-item",
-                "name": "Gallery Item",
-                "settings": {
-                  "image": "shopify://shop_images/Peach_2.jpg",
-                  "aspect_ratio": "landscape"
-                },
-                "blocks": {}
-              },
-              "gallery_item_P9TxE6": {
-                "type": "_gallery-item",
-                "name": "Gallery Item",
-                "settings": {
-                  "image": "shopify://shop_images/Rectangle_2116.png",
-                  "aspect_ratio": "portrait"
-                },
-                "blocks": {}
-              },
-              "gallery_item_jqExJi": {
-                "type": "_gallery-item",
-                "name": "Gallery Item",
-                "settings": {
-                  "image": "shopify://shop_images/GIF_4_12x16_1.png",
-                  "aspect_ratio": "square"
-                },
-                "blocks": {}
-              },
-              "gallery_item_7Dppd8": {
-                "type": "_gallery-item",
-                "name": "Gallery Item",
-                "settings": {
-                  "image": "shopify://shop_images/Energy_MainV1copy_2_1.png",
-                  "aspect_ratio": "square"
-                },
-                "blocks": {}
-              }
-            },
-            "block_order": [
-              "gallery_item_Ean6KU",
-              "gallery_item_gmA9cP",
-              "gallery_item_8ABfxh",
-              "gallery_item_P9TxE6",
-              "gallery_item_jqExJi",
-              "gallery_item_7Dppd8"
-            ]
+            "blocks": {}
           },
           "reviews_total_eQLfVb": {
             "type": "reviews-total",
@@ -1303,7 +1271,7 @@
         "block_order": [
           "heading_Fhh6c3",
           "text_V34Dxk",
-          "gallery_RdXXtE",
+          "banner_MYBpWP",
           "reviews_total_eQLfVb"
         ],
         "name": "Gallery",
@@ -1316,6 +1284,26 @@
           "mobile_padding_top": 30,
           "mobile_gap_between_blocks": 10
         }
+      },
+      "apps_magpri": {
+        "type": "apps",
+        "blocks": {
+          "junip_junip_reviews_aNkBnH": {
+            "type": "shopify://apps/junip/blocks/junip-reviews/dc14f5a8-ed15-41b1-ad08-cfba23f9789b",
+            "settings": {
+              "layout": "list",
+              "reviewsType": "all",
+              "showSummary": false,
+              "showMediaGallery": false,
+              "reviewsCount": 10,
+              "containerClass": ""
+            }
+          }
+        },
+        "block_order": [
+          "junip_junip_reviews_aNkBnH"
+        ],
+        "settings": {}
       },
       "blank_section_G9Cdxg": {
         "type": "blank-section",
@@ -1412,6 +1400,7 @@
       "blank_section_WccRpi",
       "blank_section_EwVzUa",
       "blank_section_RMCiDb",
+      "apps_magpri",
       "blank_section_G9Cdxg"
     ]
   }
