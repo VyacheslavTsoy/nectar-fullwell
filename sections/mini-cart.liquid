@@ -3,8 +3,15 @@
 <div class="mini-cart fixed z-50 top-0 px-[1.7rem] py-[2rem] right-0 w-[39.3rem] h-full bg-white" x-data="$store.miniCart" :class="{ 'mini-cart--open': $store.miniCart.isOpen }">
     <div class="mini-cart__inner flex flex-col h-full">
         
-        <div class="mini-cart__header mb-6">
+        <div class="mini-cart__header mb-6 flex items-center justify-between">
             <h3 class="mini-cart__title text-lg font-bold">{{ section.settings.title }}</h3>
+
+            <button class="mini-cart__close w-[3.6rem] h-[3.6rem] rounded-full bg-[#E9F4FF] flex items-center justify-center" x-data @click="$store.miniCart.isOpen = false">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.825 8.5001L15.8354 3.48967C16.389 2.93607 16.389 2.03854 15.8354 1.4858L15.1675 0.81785C14.6137 0.264076 13.7162 0.264076 13.1634 0.81785L8.15318 5.82811L3.14274 0.816812C2.58914 0.263211 1.69162 0.263211 1.13888 0.816812L0.469888 1.48477C-0.0837128 2.03854 -0.0837128 2.93607 0.469888 3.4888L5.48119 8.5001L0.470926 13.5104C-0.0828478 14.0641 -0.0828478 14.9617 0.470926 15.5144L1.13888 16.1824C1.69248 16.736 2.59001 16.736 3.14274 16.1824L8.15318 11.1719L13.1634 16.1824C13.7172 16.736 14.6147 16.736 15.1675 16.1824L15.8354 15.5144C16.389 14.9606 16.389 14.0631 15.8354 13.5104L10.825 8.5001Z" fill="#0D3063"/>
+                    </svg>                    
+            </button>
+
         </div>
 
         <div class="mini-cart__shipping mb-8 rounded-[.5rem] bg-[#E9F4FF] p-[0.8rem]">
