@@ -18,6 +18,7 @@
 
     &:hover {
         background-color: var(--color-laSalleGreen);
+        border-color: var(--color-slimyGreen);
     }
 
     &--secondary {
@@ -27,11 +28,25 @@
 
         &:hover {
             background-color: #4B8ECB;
+            border-color: #4B8ECB;
         }
     }
 
     @screen lg {
         font-size: 1.6rem;
+    }
+
+    &--add {
+        line-height: 3rem;
+        white-space: nowrap;
+        border-radius: 0.8rem;
+        background-color: #0D3063;
+        border-color: #0D3063;
+        color: #fff;
+        font-size: 1.4rem;
+        font-weight: 500;
+        padding: 0 1.2rem;
+        display: block;
     }
 
     &--cart {
@@ -89,18 +104,17 @@
     }
 
     &-outline {
-        line-height: 3.9rem;
-        border-color: var(--color-coolBlack);
+        border-color: #CCCCCC;
         background-color: transparent;
-        color: var(--color-coolBlack);
+        color: #222222;
         border-width: 1px;
         padding-left: 1.6rem;
         padding-right: 1.6rem;
 
         &:hover,
         &--active {
-            background-color: #75BDFF;
-            border-color: #4B8ECB;
+            background-color: var(--color-coolBlack);
+            color: #fff;
         }
     }
 }

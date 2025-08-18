@@ -1,0 +1,319 @@
+{% render 'entry' with '@/styles/sections/mini-cart.scss' %}
+
+<div class="mini-cart fixed z-50 top-0 px-[1.7rem] py-[2rem] right-0 w-[39.3rem] h-full bg-white" x-data="$store.miniCart" :class="{ 'mini-cart--open': $store.miniCart.isOpen }">
+    <div class="mini-cart__inner flex flex-col h-full">
+        
+        <div class="mini-cart__header mb-6">
+            <h3 class="mini-cart__title text-lg font-bold">{{ section.settings.title }}</h3>
+        </div>
+
+        <div class="mini-cart__shipping mb-8 rounded-[.5rem] bg-[#E9F4FF] p-[0.8rem]">
+            <div class="mini-cart__shipping-bar bg-white rounded-full">
+                <div class="mini-cart__shipping-bar-inner w-1/2 bg-[#42A4FF] rounded-full h-[0.8rem]">
+                </div>
+            </div>
+            <div class="mini-cart__shipping-text text-center text-sm pt-2">
+                You are $9.99 Away from <b><i>Free Shipping</i></b>
+            </div>
+
+            <div class="bg-white flex items-center justify-between rounded-[3rem] px-2 py-2 md:py-[.25rem] md:px-[0.8rem] text-xs mt-2">
+                <div class="product__cta-shipping-label">
+                    <div class="flex items-center gap-1">
+                        <div class="w-[1.6rem] h-[1.6rem] mr-1 bg-[#7FB190] rounded-full blink-animation"></div>
+                        Ships by
+        
+                        <b><em>Mon, Aug 18</em></b>
+                    </div>
+                </div>
+                <div class="product__cta-shipping-label flex items-center gap-2">
+                    <svg width="22" height="20" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4.09277H0V20.0929H24V4.09277Z" fill="white"></path>
+                        <path d="M24 6.09253H0V8.09236H24V6.09253Z" fill="#D80027"></path>
+                        <path d="M24 10.0928H0V12.0926H24V10.0928Z" fill="#D80027"></path>
+                        <path d="M24 14.0923H0V16.0921H24V14.0923Z" fill="#D80027"></path>
+                        <path d="M24 18.0925H0V20.0924H24V18.0925Z" fill="#D80027"></path>
+                        <path d="M12 4.09277H0V12.7083H12V4.09277Z" fill="#2E52B2"></path>
+                        <path d="M4.67923 7.62207L4.48596 8.21663H3.86084L4.36667 8.5839L4.1734 9.17841L4.67923 8.81115L5.18473 9.17841L4.99151 8.5839L5.49734 8.21663H4.87217L4.67923 7.62207Z" fill="white"></path>
+                        <path d="M4.87217 10.3621L4.67923 9.76758L4.48596 10.3621H3.86084L4.36667 10.7294L4.1734 11.3239L4.67923 10.9566L5.18473 11.3239L4.99151 10.7294L5.49734 10.3621H4.87217Z" fill="white"></path>
+                        <path d="M2.23012 10.3621L2.03714 9.76758L1.84388 10.3621H1.21875L1.72458 10.7294L1.53131 11.3239L2.03714 10.9566L2.54269 11.3239L2.34947 10.7294L2.8552 10.3621H2.23012Z" fill="white"></path>
+                        <path d="M2.03714 7.62207L1.84388 8.21663H1.21875L1.72458 8.5839L1.53131 9.17841L2.03714 8.81115L2.54269 9.17841L2.34947 8.5839L2.8552 8.21663H2.23012L2.03714 7.62207Z" fill="white"></path>
+                        <path d="M4.67923 5.47632L4.48596 6.07093H3.86084L4.36667 6.43824L4.1734 7.03276L4.67923 6.66544L5.18473 7.03276L4.99151 6.43824L5.49734 6.07093H4.87217L4.67923 5.47632Z" fill="white"></path>
+                        <path d="M2.03714 5.47632L1.84388 6.07093H1.21875L1.72458 6.43824L1.53131 7.03276L2.03714 6.66544L2.54269 7.03276L2.34947 6.43824L2.8552 6.07093H2.23012L2.03714 5.47632Z" fill="white"></path>
+                        <path d="M7.32127 7.62207L7.12805 8.21663H6.50293L7.00871 8.5839L6.81554 9.17841L7.32127 8.81115L7.82687 9.17841L7.6336 8.5839L8.13943 8.21663H7.5143L7.32127 7.62207Z" fill="white"></path>
+                        <path d="M7.5143 10.3621L7.32127 9.76758L7.12805 10.3621H6.50293L7.00871 10.7294L6.81554 11.3239L7.32127 10.9566L7.82687 11.3239L7.6336 10.7294L8.13943 10.3621H7.5143Z" fill="white"></path>
+                        <path d="M10.1559 10.3621L9.96288 9.76758L9.76961 10.3621H9.14453L9.65027 10.7294L9.45705 11.3239L9.96288 10.9566L10.4684 11.3239L10.2752 10.7294L10.781 10.3621H10.1559Z" fill="white"></path>
+                        <path d="M9.96288 7.62207L9.76961 8.21663H9.14453L9.65027 8.5839L9.45705 9.17841L9.96288 8.81115L10.4684 9.17841L10.2752 8.5839L10.781 8.21663H10.1559L9.96288 7.62207Z" fill="white"></path>
+                        <path d="M7.32127 5.47632L7.12805 6.07093H6.50293L7.00871 6.43824L6.81554 7.03276L7.32127 6.66544L7.82687 7.03276L7.6336 6.43824L8.13943 6.07093H7.5143L7.32127 5.47632Z" fill="white"></path>
+                        <path d="M9.96288 5.47632L9.76961 6.07093H9.14453L9.65027 6.43824L9.45705 7.03276L9.96288 6.66544L10.4684 7.03276L10.2752 6.43824L10.781 6.07093H10.1559L9.96288 5.47632Z" fill="white"></path>
+                        </svg>
+        
+                        <p>Expedited <strong>USPS</strong> Shipping</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mini-cart__products">
+            <div class="mini-cart__product flex items-center gap-4">
+                <div class="mini-cart__product-image bg-[#E9F4FF] w-[7.1rem] h-[7.1rem] p-3 rounded-[.5rem]">
+                    <img src="/cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1400" srcset=" , /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=100 100w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=200 200w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=300 300w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=400 400w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=600 600w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=800 800w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1000 1000w" sizes="
+                        (max-width: 480px) 400px,
+                        (max-width: 768px) 600px,
+                        (max-width: 992px) 600px,
+                        (max-width: 1200px) 800px,
+                        1400px" width="1400" height="1400" alt="" class="">
+                </div>
+
+                <div class="mini-cart__product-info text-sm">
+                    <h4 class="mini-cart__product-title text-base font-bold">Essential Daily Energy</h4>
+                    <div class="mini-cart__product-variant font-medium mt-[-.3rem]">
+                        Variety Pack
+                    </div>
+                    <div class="mini-cart__product-selling-plan">
+                        One-time purchase
+                    </div>
+                </div>
+
+                <div class="mini-cart__product-cta w-[10rem] flex flex-col items-end self-end">
+                    <div class="qty-picker flex items-center gap-2 mb-2 text-[#111111]">
+                        <button class="qty-picker__btn">
+                            <svg width="10" height="3" viewBox="0 0 10 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.534084 2.14009H8.87706C9.1046 2.14009 9.25629 1.9884 9.25629 1.76086V1.00241C9.25629 0.774875 9.1046 0.623184 8.87706 0.623184H0.534084C0.306549 0.623184 0.154859 0.774875 0.154859 1.00241V1.76086C0.154859 1.9884 0.306549 2.14009 0.534084 2.14009Z" fill="#3D3D3D"/>
+                            </svg>                                
+                        </button>
+                        <input type="number" class="qty-picker__input text-center w-[2.4rem]" value="1">
+                        <button class="qty-picker__btn">
+                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.594739 5.00245V5.7609C0.594739 5.98844 0.746429 6.14013 0.973965 6.14013H4.387V9.55317C4.387 9.7807 4.53869 9.93239 4.76623 9.93239H5.52468C5.75221 9.93239 5.90391 9.7807 5.90391 9.55317V6.14013H9.31694C9.54448 6.14013 9.69617 5.98844 9.69617 5.7609V5.00245C9.69617 4.77492 9.54448 4.62322 9.31694 4.62322H5.90391V1.21019C5.90391 0.982654 5.75221 0.830963 5.52468 0.830963H4.76623C4.53869 0.830963 4.387 0.982654 4.387 1.21019V4.62322H0.973965C0.746429 4.62322 0.594739 4.77492 0.594739 5.00245Z" fill="#3D3D3D"/>
+                            </svg>                                
+                        </button>
+                    </div>
+
+                    <div class="mini-cart__product-price font-family-poppins flex items-center gap-2 text-sm text-[#199A47] font-bold" data-compare-price="$151.80">$89.95</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mini-cart__footer mt-auto pt-[1.2rem]">
+            <h3 class="mini-cart__footer-title text-sm font-medium mb-4 text-[#111111]">Frequently Bought Together:</h3>
+            <div class="mini-cart__upsell swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="mini-cart__upsell-product gap-4 flex bg-[#E9F4FF] rounded-[.5rem] py-5 px-4">
+                            <div class="mini-cart__upsell-image w-[7.2rem] h-[7.2rem] flex-shrink-0">
+                                <img src="/cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1400" srcset=" , /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=100 100w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=200 200w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=300 300w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=400 400w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=600 600w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=800 800w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1000 1000w" sizes="
+                                    (max-width: 480px) 400px,
+                                    (max-width: 768px) 600px,
+                                    (max-width: 992px) 600px,
+                                    (max-width: 1200px) 800px,
+                                    1400px" width="1400" height="1400" alt="" class=" w-full h-full object-cover">
+                            </div>
+
+                            <div class="mini-cart__upsell-info w-full relative">
+                                <h4 class="mini-cart__upsell-title text-base font-bold">Essential Daily Energy</h4>
+                                <div class="mini-cart__upsell-variant text-xs font-medium mt-0">
+                                    Wild Berry
+                                </div>
+                                <div class="mini-cart__upsell-selling-plan text-xs mt-1 text-[#222222]">
+                                    One Time Add On
+                                </div>
+                                <div class="mini-cart__upsell-price text-xs mt-1 text-[#199A47] font-bold" data-compare-price="$151.80">$89.95</div>
+
+                                <button class="mini-cart__upsell-btn absolute bottom-0 right-0">
+                                    Add+
+                                </button>     
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="mini-cart__upsell-product gap-4 flex bg-[#E9F4FF] rounded-[.5rem] py-5 px-4">
+                            <div class="mini-cart__upsell-image w-[7.2rem] h-[7.2rem] flex-shrink-0">
+                                <img src="/cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1400" srcset=" , /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=100 100w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=200 200w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=300 300w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=400 400w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=600 600w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=800 800w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1000 1000w" sizes="
+                                    (max-width: 480px) 400px,
+                                    (max-width: 768px) 600px,
+                                    (max-width: 992px) 600px,
+                                    (max-width: 1200px) 800px,
+                                    1400px" width="1400" height="1400" alt="" class=" w-full h-full object-cover">
+                            </div>
+
+                            <div class="mini-cart__upsell-info w-full relative">
+                                <h4 class="mini-cart__upsell-title text-base font-bold">Essential Daily Energy</h4>
+                                <div class="mini-cart__upsell-variant text-xs font-medium mt-0">
+                                    Wild Berry
+                                </div>
+                                <div class="mini-cart__upsell-selling-plan text-xs mt-1 text-[#222222]">
+                                    One Time Add On
+                                </div>
+                                <div class="mini-cart__upsell-price text-xs mt-1 text-[#199A47] font-bold" data-compare-price="$151.80">$89.95</div>
+
+                                <button class="mini-cart__upsell-btn absolute bottom-0 right-0">
+                                    Add+
+                                </button>     
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="mini-cart__upsell-product gap-4 flex bg-[#E9F4FF] rounded-[.5rem] py-5 px-4">
+                            <div class="mini-cart__upsell-image w-[7.2rem] h-[7.2rem] flex-shrink-0">
+                                <img src="/cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1400" srcset=" , /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=100 100w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=200 200w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=300 300w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=400 400w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=600 600w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=800 800w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1000 1000w" sizes="
+                                    (max-width: 480px) 400px,
+                                    (max-width: 768px) 600px,
+                                    (max-width: 992px) 600px,
+                                    (max-width: 1200px) 800px,
+                                    1400px" width="1400" height="1400" alt="" class=" w-full h-full object-cover">
+                            </div>
+
+                            <div class="mini-cart__upsell-info w-full relative">
+                                <h4 class="mini-cart__upsell-title text-base font-bold">Essential Daily Energy</h4>
+                                <div class="mini-cart__upsell-variant text-xs font-medium mt-0">
+                                    Wild Berry
+                                </div>
+                                <div class="mini-cart__upsell-selling-plan text-xs mt-1 text-[#222222]">
+                                    One Time Add On
+                                </div>
+                                <div class="mini-cart__upsell-price text-xs mt-1 text-[#199A47] font-bold" data-compare-price="$151.80">$89.95</div>
+
+                                <button class="mini-cart__upsell-btn absolute bottom-0 right-0">
+                                    Add+
+                                </button>     
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="mini-cart__upsell-product gap-4 flex bg-[#E9F4FF] rounded-[.5rem] py-5 px-4">
+                            <div class="mini-cart__upsell-image w-[7.2rem] h-[7.2rem] flex-shrink-0">
+                                <img src="/cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1400" srcset=" , /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=100 100w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=200 200w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=300 300w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=400 400w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=600 600w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=800 800w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1000 1000w" sizes="
+                                    (max-width: 480px) 400px,
+                                    (max-width: 768px) 600px,
+                                    (max-width: 992px) 600px,
+                                    (max-width: 1200px) 800px,
+                                    1400px" width="1400" height="1400" alt="" class=" w-full h-full object-cover">
+                            </div>
+
+                            <div class="mini-cart__upsell-info w-full relative">
+                                <h4 class="mini-cart__upsell-title text-base font-bold">Essential Daily Energy</h4>
+                                <div class="mini-cart__upsell-variant text-xs font-medium mt-0">
+                                    Wild Berry
+                                </div>
+                                <div class="mini-cart__upsell-selling-plan text-xs mt-1 text-[#222222]">
+                                    One Time Add On
+                                </div>
+                                <div class="mini-cart__upsell-price text-xs mt-1 text-[#199A47] font-bold" data-compare-price="$151.80">$89.95</div>
+
+                                <button class="mini-cart__upsell-btn absolute bottom-0 right-0">
+                                    Add+
+                                </button>     
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+    
+            <div class="mini-cart__cta">
+                <button class="btn btn-primary w-full mini-cart__cta-btn" data-off-label="Get 40% off Today">
+                    <span class="mini-cart__cta-btn-text">Save With Subscription</span>
+                    <span class="mini-cart__cta-btn-price">
+                        <u>$151.80</u>
+                        <b>$89.95</b>
+                    </span>
+                </button>
+    
+                <div class="mini-cart__subscription-features py-[.6rem]">
+                    <ul class="grid grid-cols-2 gap-0 text-[#222222]">
+                        <li>
+                            <b>FREE SHIPPING</b> on first order
+                        </li>
+                        <li>
+                            <b>FREE SHIPPING</b> on every order
+                        </li>
+                        <li>
+                            <b>SURPRISE GIFT</b> with 3rd refill
+                        </li>
+                        <li>
+                            <b>OUT OF STOCK PROTECTION</b>
+                        </li>
+                    </ul>
+                </div>
+    
+                <button class="btn w-full btn-outline mini-cart__cta-btn">
+                    <span class="mini-cart__cta-btn-text">Continue One-time Purchase</span>
+                    <span class="mini-cart__cta-btn-price">
+                        $109.95
+                    </span>
+                </button>
+    
+                <div class="mini-cart__features text-xs flex flex-col gap-2 items-center mt-[1.2rem]">
+                    <div class="mini-cart__features-item flex items-center gap-2">
+                        <b>4.8</b> {% render 'stars', score: 5 %} 1,000,000+ Happy Customers
+                    </div>
+                    <div class="mini-cart__features-item flex items-center gap-[.3rem]">
+                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.0282 3.51543C11.0183 2.47079 9.71125 1.80653 8.29277 1.60446L8.69707 1.20016C8.85725 1.03998 8.85725 0.780294 8.69707 0.620114C8.53692 0.459962 8.27721 0.459962 8.11703 0.620114L7.07832 1.65879C6.91814 1.81895 6.91814 2.07866 7.07832 2.23884L8.117 3.27752C8.19709 3.35761 8.30206 3.39766 8.40701 3.39766C8.51195 3.39766 8.61695 3.35761 8.69702 3.27752C8.8572 3.11736 8.8572 2.85765 8.69702 2.69747L8.46473 2.46519C9.59165 2.68572 10.6252 3.24446 11.4383 4.08555C12.4639 5.14638 13.0286 6.54343 13.0286 8.0193C13.0287 11.1404 10.4895 13.6797 7.36836 13.6797C4.24726 13.6797 1.70801 11.1404 1.70801 8.01933C1.70801 6.82837 2.07351 5.68913 2.76504 4.72477C3.4422 3.7804 4.37572 3.07572 5.46474 2.68695C5.67807 2.61077 5.78925 2.3761 5.7131 2.16274C5.63695 1.9494 5.40223 1.83822 5.1889 1.91438C3.94194 2.35956 2.87326 3.16609 2.09837 4.24674C1.30633 5.35132 0.887695 6.65586 0.887695 8.01936C0.887695 9.75041 1.5618 11.3778 2.78584 12.6019C4.00989 13.8258 5.63731 14.5 7.36836 14.5C9.09941 14.5 10.7268 13.8259 11.9509 12.6018C13.1749 11.3778 13.849 9.75038 13.849 8.01933C13.849 6.32954 13.2023 4.73002 12.0282 3.51543Z" fill="#0D3063"/>
+                            <path d="M3.15424 8.01934C3.15424 10.343 5.04467 12.2334 7.36834 12.2334C9.69199 12.2334 11.5824 10.343 11.5824 8.01934C11.5824 5.6957 9.69199 3.80521 7.36834 3.80521C5.04465 3.80521 3.15424 5.69567 3.15424 8.01934ZM7.62013 8.38441C7.02972 8.17569 6.68765 8.01119 6.43948 7.81653C6.13405 7.57698 5.99424 7.16324 6.07458 6.73681C6.16175 6.27421 6.48435 5.90594 6.91652 5.77576C6.9225 5.77396 6.92838 5.77251 6.93435 5.77076V5.6056C6.93435 5.37909 7.11799 5.19544 7.3445 5.19544C7.57102 5.19544 7.75466 5.37909 7.75466 5.6056V5.74464C8.04103 5.81172 8.24091 5.94261 8.32171 6.00301C8.50314 6.13867 8.54027 6.39567 8.40464 6.57712C8.26899 6.75858 8.01204 6.79566 7.83054 6.66006C7.74369 6.59514 7.504 6.45547 7.15312 6.56118C6.94583 6.62364 6.89221 6.82765 6.8807 6.88871C6.85797 7.00929 6.88409 7.1228 6.94569 7.17109C7.16026 7.33933 7.5452 7.48789 7.89348 7.61099C8.53059 7.83619 8.88486 8.42641 8.77504 9.07962C8.72112 9.40034 8.55979 9.69792 8.3207 9.9176C8.15628 10.0686 7.96468 10.1761 7.75466 10.2366V10.433C7.75466 10.6595 7.57102 10.8432 7.3445 10.8432C7.11799 10.8432 6.93435 10.6595 6.93435 10.433V10.277C6.66148 10.2449 6.43379 10.1609 6.12757 9.96056C5.93799 9.83655 5.88486 9.58234 6.00887 9.39276C6.13287 9.20316 6.38711 9.15006 6.57666 9.27407C6.86057 9.45981 6.96792 9.47687 7.34177 9.47428C7.70984 9.47182 7.9234 9.19748 7.96608 8.94362C7.98697 8.81964 7.99498 8.51692 7.62013 8.38441Z" fill="#0D3063"/>
+                            </svg>
+                             <b>100% Money Back Guarantee</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div x-data class="mini-cart-overlay" :class="{ 'mini-cart-overlay--active': $store.miniCart.isOpen }" @click="$store.miniCart.isOpen = false"></div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const swiper = new Swiper('.mini-cart__upsell.swiper', {
+            slidesPerView: 'auto',
+            spaceBetween: 6,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            }
+        });
+    });
+
+
+    document.addEventListener('alpine:init', () => {
+        Alpine.store('miniCart', {
+          isOpen: false,
+      
+          init() {
+            console.log('init');
+          }
+        });
+      });
+</script>
+
+{% schema %}
+{
+  "name": "Mini Cart",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title",
+      "default": "Your Cart"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Block Name",
+      "type": "block_name",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Text 0",
+          "id": "text_0"
+        },
+        {
+          "type": "image_picker",
+          "label": "Image Picker 1",
+          "id": "image_picker_1"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
