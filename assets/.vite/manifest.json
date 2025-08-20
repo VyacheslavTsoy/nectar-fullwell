@@ -1,6 +1,6 @@
 {
   "frontend/entrypoints/main.scss": {
-    "file": "main-DGJKh9QL.css",
+    "file": "main-DRfVtr9v.css",
     "src": "frontend/entrypoints/main.scss",
     "isEntry": true
   },
@@ -29,17 +29,17 @@
     "isEntry": true
   },
   "frontend/styles/sections/hero.scss": {
-    "file": "hero-DHi64TwY.css",
+    "file": "hero-Bv1pyxkY.css",
     "src": "frontend/styles/sections/hero.scss",
     "isEntry": true
   },
   "frontend/styles/sections/mini-cart.scss": {
-    "file": "mini-cart-BLq2sTPr.css",
+    "file": "mini-cart-C_00Mlyg.css",
     "src": "frontend/styles/sections/mini-cart.scss",
     "isEntry": true
   },
   "frontend/styles/sections/mobile-nav.scss": {
-    "file": "mobile-nav-B1Bx_yCt.css",
+    "file": "mobile-nav-D01ba8A3.css",
     "src": "frontend/styles/sections/mobile-nav.scss",
     "isEntry": true
   },

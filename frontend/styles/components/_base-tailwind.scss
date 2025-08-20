@@ -121,18 +121,17 @@
     padding-top: 2rem;
     padding-bottom: 0;
     justify-content: center;
-    gap: 1.6rem;
+    gap: 1rem !important;
     position: static !important;
     width: 100% !important;
     display: flex !important;
 
     .swiper-pagination-bullet {
       background: #D9D9D9;
-      border: 1px solid #0D3063;
       opacity: 1;
       display: block;
-      width: 1rem;
-      height: 1rem;
+      width: .8rem;
+      height: .8rem;
       border-radius: 50%;
 
       &:hover,

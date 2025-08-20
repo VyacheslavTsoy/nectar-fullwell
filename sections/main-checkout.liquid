@@ -1,253 +1,19 @@
-<div class="checkout">
-    <div class="checkout__inner max-w-[39.3rem] mx-auto px-[2rem] py-[2.4rem]">
-        <section class="checkout__part mb-[1.6rem]">
-            <h2 class="checkout__part-title text-baseLg flex items-center gap-2 justify-between font-bold mb-8">Select Quantity</h2>
+{% assign sst = section.settings %}
+{% assign blocks = section.blocks %}
 
-            <div class="checkout__variants flex justify-between flex-wrap gap-4">
-                <label class="checkout__variant block w-[calc(50%-1.1rem)]">
-                    <input type="radio" name="variant" value="4 Pouches">
-                    
-                    <div class="checkout__variant-inner" data-blue-label="Best Value">
-                        <div class="checkout__variant-title font-bold">4 Pouches</div>
-                        <div class="checkout__variant-price mt-[-.2rem] font-medium text-xs text-[#333333]">120 Packets</div>
-                        <div class="checkout__variant-saving">Save 60%</div>
-                    </div>
-                </label>
-
-                <label class="checkout__variant block w-[calc(50%-1.1rem)]">
-                    <input type="radio" name="variant" value="3 Pouches">
-                    
-                    <div class="checkout__variant-inner" data-yellow-label="Most Popular">
-                        <div class="checkout__variant-title font-bold">3 Pouches</div>
-                        <div class="checkout__variant-price mt-[-.2rem] font-medium text-xs text-[#333333]">120 Packets</div>
-                        <div class="checkout__variant-saving">Save 50%</div>
-                    </div>
-                </label>
-
-                <label class="checkout__variant block w-[calc(50%-1.1rem)]">
-                    <input type="radio" name="variant" value="2 Pouches">
-                    
-                    <div class="checkout__variant-inner">
-                        <div class="checkout__variant-title font-bold">2 Pouches</div>
-                        <div class="checkout__variant-price mt-[-.2rem] font-medium text-xs text-[#333333]">120 Packets</div>
-                        <div class="checkout__variant-saving">Save 40%</div>
-                    </div>
-                </label>
-
-                <label class="checkout__variant block w-[calc(50%-1.1rem)]">
-                    <input type="radio" name="variant" value="1 Pouches">
-                    
-                    <div class="checkout__variant-inner">
-                        <div class="checkout__variant-title font-bold">1 Pouches</div>
-                        <div class="checkout__variant-price mt-[-.2rem] font-medium text-xs text-[#333333]">120 Packets</div>
-                        <div class="checkout__variant-saving">Save 10%</div>
-                    </div>
-                </label>
-                
-            </div>
-        </section>
-
-        <section class="checkout__part mb-[1.6rem]">
-            <h2 class="checkout__part-title text-baseLg flex items-center gap-2 justify-between font-bold mb-4">
-                Select Flavors
-
-                <span class="inline-flex text-xs items-center justify-center uppercase text-[#0D3063] bg-[#E9F4FF] rounded-[2.6rem] font-poppins font-medium px-[.8rem] h-[2rem]">
-                    3 Pouches to go
-                </span>
-            </h2>
-
-            <div class="checkout__flavors flex flex-col gap-[.8rem]">
-                <div class="checkout__flavor flex items-center gap-6">
-                    <div class="checkout__flavor-image w-[5.2rem] h-[5.2rem] overflow-hidden flex-shrink-0">
-                        <img src="https://cdn.shopify.com/s/files/1/0309/2257/1835/files/Pineapple.jpg?v=1750277563" alt="Flavor 1">
-                    </div>
-
-                    <div class="checkout__flavor-content w-[50%]">
-                        <div class="checkout__flavor-title font-bold">
-                            Variety Pack
-                        </div>
-
-                        <div class="text-sm text-[#333]">
-                            Try all 6 flavors
-                        </div>
-                    </div>
-
-                    <div class="checkout__flavor-qty w-[9.3rem] flex-shrink-0 mr-4">
-                        <div class="qty-picker flex items-center gap-2 mb-2 text-[#111111]">
-                            <button class="qty-picker__btn">
-                                <svg width="14" height="3" viewBox="0 0 10 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0.534084 2.14009H8.87706C9.1046 2.14009 9.25629 1.9884 9.25629 1.76086V1.00241C9.25629 0.774875 9.1046 0.623184 8.87706 0.623184H0.534084C0.306549 0.623184 0.154859 0.774875 0.154859 1.00241V1.76086C0.154859 1.9884 0.306549 2.14009 0.534084 2.14009Z" fill="currentColor"/>
-                                </svg>                                
-                            </button>
-                            <input type="number" class="qty-picker__input text-center w-[2.4rem]" value="1">
-                            <button class="qty-picker__btn">
-                                <svg width="12" height="12" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0.594739 5.00245V5.7609C0.594739 5.98844 0.746429 6.14013 0.973965 6.14013H4.387V9.55317C4.387 9.7807 4.53869 9.93239 4.76623 9.93239H5.52468C5.75221 9.93239 5.90391 9.7807 5.90391 9.55317V6.14013H9.31694C9.54448 6.14013 9.69617 5.98844 9.69617 5.7609V5.00245C9.69617 4.77492 9.54448 4.62322 9.31694 4.62322H5.90391V1.21019C5.90391 0.982654 5.75221 0.830963 5.52468 0.830963H4.76623C4.53869 0.830963 4.387 0.982654 4.387 1.21019V4.62322H0.973965C0.746429 4.62322 0.594739 4.77492 0.594739 5.00245Z" fill="currentColor"/>
-                                </svg>                                
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="checkout__flavor flex items-center gap-6">
-                    <div class="checkout__flavor-image w-[5.2rem] h-[5.2rem] overflow-hidden flex-shrink-0">
-                        <img src="https://cdn.shopify.com/s/files/1/0309/2257/1835/files/Pineapple.jpg?v=1750277563" alt="Flavor 1">
-                    </div>
-
-                    <div class="checkout__flavor-content w-[50%]">
-                        <div class="checkout__flavor-title font-bold">
-                            Variety Pack
-                        </div>
-                    </div>
-
-                    <div class="checkout__flavor-qty w-[9.3rem] flex-shrink-0 mr-4">
-                        <button class="btn btn--add w-full">Add+</button>
-                    </div>
-                </div>
-
-                <div class="checkout__flavor flex items-center gap-6">
-                    <div class="checkout__flavor-image w-[5.2rem] h-[5.2rem] overflow-hidden flex-shrink-0">
-                        <img src="https://cdn.shopify.com/s/files/1/0309/2257/1835/files/Pineapple.jpg?v=1750277563" alt="Flavor 1">
-                    </div>
-
-                    <div class="checkout__flavor-content w-[50%]">
-                        <div class="checkout__flavor-title font-bold">
-                            Variety Pack
-                        </div>
-                    </div>
-
-                    <div class="checkout__flavor-qty w-[9.3rem] flex-shrink-0 mr-4">
-                        <button class="btn btn--add w-full">Add+</button>
-                    </div>
-                </div>
-
-                <div class="checkout__flavor flex items-center gap-6">
-                    <div class="checkout__flavor-image w-[5.2rem] h-[5.2rem] overflow-hidden flex-shrink-0">
-                        <img src="https://cdn.shopify.com/s/files/1/0309/2257/1835/files/Pineapple.jpg?v=1750277563" alt="Flavor 1">
-                    </div>
-
-                    <div class="checkout__flavor-content w-[50%]">
-                        <div class="checkout__flavor-title font-bold">
-                            Variety Pack
-                        </div>
-                    </div>
-
-                    <div class="checkout__flavor-qty w-[9.3rem] flex-shrink-0 mr-4">
-                        <button class="btn btn--add w-full">Add+</button>
-                    </div>
-                </div>
-
-                <div class="checkout__flavor flex items-center gap-6">
-                    <div class="checkout__flavor-image w-[5.2rem] h-[5.2rem] overflow-hidden flex-shrink-0">
-                        <img src="https://cdn.shopify.com/s/files/1/0309/2257/1835/files/Pineapple.jpg?v=1750277563" alt="Flavor 1">
-                    </div>
-
-                    <div class="checkout__flavor-content w-[50%]">
-                        <div class="checkout__flavor-title font-bold">
-                            Variety Pack
-                        </div>
-                    </div>
-
-                    <div class="checkout__flavor-qty w-[9.3rem] flex-shrink-0 mr-4">
-                        <button class="btn btn--add w-full">Add+</button>
-                    </div>
-                </div>
-
-                <div class="checkout__flavor flex items-center gap-6">
-                    <div class="checkout__flavor-image w-[5.2rem] h-[5.2rem] overflow-hidden flex-shrink-0">
-                        <img src="https://cdn.shopify.com/s/files/1/0309/2257/1835/files/Pineapple.jpg?v=1750277563" alt="Flavor 1">
-                    </div>
-
-                    <div class="checkout__flavor-content w-[50%]">
-                        <div class="checkout__flavor-title font-bold">
-                            Variety Pack
-                        </div>
-                    </div>
-
-                    <div class="checkout__flavor-qty w-[9.3rem] flex-shrink-0 mr-4">
-                        <button class="btn btn--add w-full">Add+</button>
-                    </div>
-                </div>
-
-                <div class="checkout__flavor flex items-center gap-6">
-                    <div class="checkout__flavor-image w-[5.2rem] h-[5.2rem] overflow-hidden flex-shrink-0">
-                        <img src="https://cdn.shopify.com/s/files/1/0309/2257/1835/files/Pineapple.jpg?v=1750277563" alt="Flavor 1">
-                    </div>
-
-                    <div class="checkout__flavor-content w-[50%]">
-                        <div class="checkout__flavor-title font-bold">
-                            Variety Pack
-                        </div>
-                    </div>
-
-                    <div class="checkout__flavor-qty w-[9.3rem] flex-shrink-0 mr-4">
-                        <button class="btn btn--add w-full">Add+</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="checkout__part">
-            <h2 class="checkout__part-title text-baseLg flex items-center gap-2 justify-between font-bold mb-6">Select Frequency</h2>
-
-            <div class="checkout__frequency text-sm flex flex-col font-family-poppins gap-4">
-                <label class="checkout__frequency-item block">
-                    <input type="radio" name="frequency" value="1">
-                    <div class="checkout__frequency-header mb-[.6rem] flex items-center justify-between gap-4">
-                        <div class="checkout__frequency-title items-center font-medium flex gap-3 text-[#333333]">
-                            Subscribe and Save 50%
-                        </div>
-
-                        <div class="checkout__frequency-price" data-compare-price="$151.80">
-                            <div class="price" data-compare-price="$151.80">$89.95</div>
-
-                            <div class="text-xs font-medium text-[#333333]">
-                                ($0.75 / packet)
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="checkout__frequency-content">
-                        <div class="flex items-center justify-between gap-2 mb-[.6rem]">
-                            <div class="text-sm text-[#222222] flex items-center gap-3">
-                                Delivery Every
-                            </div>
-
-                            <select class="text-sm font-medium text-[#333333] w-[20rem]">
-                                <option>Every 1 Month</option>
-                                <option>Every 2 Months</option>
-                                <option>Every 3 Months</option>
-                            </select>
-                        </div>
-
-                        <ul class="checkout__frequency-features text-xs flex flex-col gap-1 text-[#333333]">
-                            <li>
-                                <b><em>Free Expedited Shipping*</em></b>
-                            </li>
-                            <li>
-                                <b><em>Free $35.99 Mystery Gift</em></b> on Order #3
-                            </li>
-                            <li>
-                                Easily Pause, Cancel or Adjust Flavors <b><em>Any Time</em></b>
-                            </li>
-                        </ul>
-                    </div>
-                </label>
-
-                <label class="checkout__frequency-item block">
-                    <input type="radio" name="frequency" value="1">
-                    <div class="checkout__frequency-header flex items-center justify-between gap-4">
-                        <div class="checkout__frequency-title items-center font-medium flex gap-3 text-[#333333]">
-                            Subscribe and Save 50%
-                        </div>
-
-                        <div class="checkout__frequency-price">
-                            <div class="price price--dark">$109.95</div>
-                        </div>
-                    </div>
-                </label>
-            </div>
-        </section>
+{% if sst.products != blank %}
+<div class="checkout" x-data="checkout">
+    <div class="checkout__inner max-w-[39.5rem] mx-auto px-[2rem] py-[2.4rem]">
+        {% for block in blocks %}
+            {% case block.type %}
+                {% when 'quantity' %}
+                    {% render 'checkout-quantity', block: block, index: forloop.index %}
+                {% when 'flavors' %}
+                    {% render 'checkout-flavors', block: block, index: forloop.index %}
+                {% when 'frequency' %}
+                    {% render 'checkout-frequency', block: block, index: forloop.index %}
+            {% endcase %}
+        {% endfor %}
     </div>
 
     <div class="checkout__cta sticky bottom-0 left-0 right-0">
@@ -272,6 +38,62 @@
     </div>
 </div>
 
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('checkout', () => ({
+            minQty: 1,
+            products: [
+                {% for product in section.settings.products %}
+                    {% assign sellingPlanGroup = product.selling_plan_groups | where: 'app_id', 'SKIO' | first %}
+                    {
+                        handle: '{{ product.handle }}',
+                        title: '{{ product.title }}',
+                        price: {{ product.price | default: 0 }},
+                        comparePrice: {{ product.compare_at_price | default: 0 }},
+                        sellingPlans: {{ sellingPlanGroup.selling_plans | json }},
+                        variants: [
+                            {% for variant in product.variants %}
+                                {
+                                    id: {{ variant.id | default: 0 }},
+                                    image: '{{ variant.metafields.custom.variant_image | default: variant.image | image_url: width: 250 }}',
+                                    title: '{{ variant.title }}',
+                                    description: '{{ variant.metafields.custom.variant_description }}',
+                                    price: {{ variant.price | default: 0 }},
+                                    comparePrice: {{ variant.compare_at_price | default: 0 }},
+                                    selling_plan_allocations: [
+                                        {% for sellingPlanAllocation in variant.selling_plan_allocations %}
+                                            {
+                                                selling_plan_id: '{{ sellingPlanAllocation.selling_plan.id }}',
+                                                price: {{ sellingPlanAllocation.price | default: 0 }},
+                                            } {% unless forloop.last %},{% endunless %}
+                                        {% endfor %}
+                                    ]
+                                } {% unless forloop.last %},{% endunless %}
+                            {% endfor %}
+                        ]
+                    } {% unless forloop.last %},{% endunless %}
+                {% endfor %}
+            ],
+            currentProduct: null,
+            
+            setUpCurrentProduct() {
+                const productHandle = new URLSearchParams(window.location.search).get('product-handle');
+
+                if (!productHandle) {
+                    this.currentProduct = this.products[1];
+                } else {
+                    this.currentProduct = this.products.find(product => product.handle === productHandle);
+                }
+            },
+
+            init() {
+                this.setUpCurrentProduct();
+                console.log(this.currentProduct);
+            }
+        }))
+    })
+</script>
+{% endif %}
 {% stylesheet %}
   .checkout__flavor {
     border-radius: 0.6rem;
@@ -420,3 +242,66 @@
     cursor: not-allowed;
   }
 {% endstylesheet %}
+
+
+{% schema %}
+{
+  "name": "Checkout",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Products"
+    },
+    {
+      "type": "product_list",
+      "label": "Products",
+      "id": "products",
+      "info": "Choose all available products"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quantity",
+      "name": "Quantity",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Select Quantity"
+        },
+        {
+          "type": "metaobject_list",
+          "id": "related_pouches",
+          "label": "Related Pouches",
+          "metaobject_type": "pouche"
+        }
+      ]
+    },
+    {
+        "type": "flavors",
+        "name": "Flavors",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Select Flavors"
+          }
+        ]
+    },
+    {
+      "type": "frequency",
+      "name": "Frequency",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Select Frequency"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

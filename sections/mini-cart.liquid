@@ -1,13 +1,13 @@
 {% render 'entry' with '@/styles/sections/mini-cart.scss' %}
 
-<div class="mini-cart fixed z-50 top-0 px-[1.7rem] py-[2rem] right-0 w-[39.3rem] h-full bg-white" x-data="$store.miniCart" :class="{ 'mini-cart--open': $store.miniCart.isOpen }">
+<div class="mini-cart fixed z-50 top-0 px-[1.7rem] py-[1.2rem] right-0 w-[39.3rem] md:w-[58rem] h-full bg-white" x-data="$store.miniCart" :class="{ 'mini-cart--open': $store.miniCart.isOpen }">
     <div class="mini-cart__inner flex flex-col h-full">
         
-        <div class="mini-cart__header mb-6 flex items-center justify-between">
+        <div class="mini-cart__header mb-4 flex items-center justify-between">
             <h3 class="mini-cart__title text-lg font-bold">{{ section.settings.title }}</h3>
 
-            <button class="mini-cart__close w-[3.6rem] h-[3.6rem] rounded-full bg-[#E9F4FF] flex items-center justify-center" x-data @click="$store.miniCart.isOpen = false">
-                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="mini-cart__close w-[2.5rem] h-[2.5rem] rounded-full bg-[#E9F4FF] flex items-center justify-center" x-data @click="$store.miniCart.isOpen = false">
+                <svg width="10" height="10" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.825 8.5001L15.8354 3.48967C16.389 2.93607 16.389 2.03854 15.8354 1.4858L15.1675 0.81785C14.6137 0.264076 13.7162 0.264076 13.1634 0.81785L8.15318 5.82811L3.14274 0.816812C2.58914 0.263211 1.69162 0.263211 1.13888 0.816812L0.469888 1.48477C-0.0837128 2.03854 -0.0837128 2.93607 0.469888 3.4888L5.48119 8.5001L0.470926 13.5104C-0.0828478 14.0641 -0.0828478 14.9617 0.470926 15.5144L1.13888 16.1824C1.69248 16.736 2.59001 16.736 3.14274 16.1824L8.15318 11.1719L13.1634 16.1824C13.7172 16.736 14.6147 16.736 15.1675 16.1824L15.8354 15.5144C16.389 14.9606 16.389 14.0631 15.8354 13.5104L10.825 8.5001Z" fill="#0D3063"/>
                     </svg>                    
             </button>
@@ -19,11 +19,11 @@
                 <div class="mini-cart__shipping-bar-inner w-1/2 bg-[#42A4FF] rounded-full h-[0.8rem]">
                 </div>
             </div>
-            <div class="mini-cart__shipping-text text-center text-sm pt-2">
+            <div class="mini-cart__shipping-text text-center text-sm pt-2 text-[#000]">
                 You are $9.99 Away from <b><i>Free Shipping</i></b>
             </div>
 
-            <div class="bg-white flex items-center justify-between rounded-[3rem] px-2 py-2 md:py-[.25rem] md:px-[0.8rem] text-xs mt-2">
+            <div class="bg-white flex items-center justify-between rounded-[3rem] px-2 py-2 md:py-[.25rem] md:px-[0.8rem] text-xs mt-2 max-w-[33.8rem] mx-auto">
                 <div class="product__cta-shipping-label">
                     <div class="flex items-center gap-1">
                         <div class="w-[1.6rem] h-[1.6rem] mr-1 bg-[#7FB190] rounded-full blink-animation"></div>
@@ -61,7 +61,7 @@
 
         <div class="mini-cart__products">
             <div class="mini-cart__product flex items-center gap-4">
-                <div class="mini-cart__product-image bg-[#E9F4FF] w-[7.1rem] h-[7.1rem] p-3 rounded-[.5rem]">
+                <div class="mini-cart__product-image flex-shrink-0 bg-[#E9F4FF] w-[8.2rem] h-[8.2rem] p-3 rounded-[.5rem]">
                     <img src="/cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1400" srcset=" , /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=100 100w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=200 200w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=300 300w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=400 400w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=600 600w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=800 800w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1000 1000w" sizes="
                         (max-width: 480px) 400px,
                         (max-width: 768px) 600px,
@@ -70,17 +70,18 @@
                         1400px" width="1400" height="1400" alt="" class="">
                 </div>
 
-                <div class="mini-cart__product-info text-sm">
-                    <h4 class="mini-cart__product-title text-base font-bold">Essential Daily Energy</h4>
-                    <div class="mini-cart__product-variant font-medium mt-[-.3rem]">
+                <div class="mini-cart__product-info w-[90%] text-sm">
+                    <h4 class="mini-cart__product-title mb-2 text-sm font-bold">Essential Daily Energy</h4>
+                    <div class="mini-cart__product-variant text-xs font-medium mt-[-.3rem]">
                         Variety Pack
                     </div>
-                    <div class="mini-cart__product-selling-plan">
+                    <div class="mini-cart__product-selling-plan mb-1 text-[1rem] text-[#5D5D5D]">
                         One-time purchase
                     </div>
+                    <div class="mini-cart__product-price font-family-poppins flex items-center gap-2 text-xs text-[#199A47] font-bold mt-[-0.4rem]" data-compare-price="$151.80">$89.95</div>
                 </div>
 
-                <div class="mini-cart__product-cta w-[10rem] flex flex-col items-end self-end">
+                <div class="mini-cart__product-cta w-[10rem] flex-shrink-0">
                     <div class="qty-picker flex items-center gap-2 mb-2 text-[#111111]">
                         <button class="qty-picker__btn">
                             <svg width="10" height="3" viewBox="0 0 10 3" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,19 +95,17 @@
                             </svg>                                
                         </button>
                     </div>
-
-                    <div class="mini-cart__product-price font-family-poppins flex items-center gap-2 text-sm text-[#199A47] font-bold" data-compare-price="$151.80">$89.95</div>
                 </div>
             </div>
         </div>
 
         <div class="mini-cart__footer mt-auto pt-[1.2rem]">
-            <h3 class="mini-cart__footer-title text-sm font-medium mb-4 text-[#111111]">Frequently Bought Together:</h3>
+            <h3 class="mini-cart__footer-title text-sm font-bold mb-2 text-[#111111]">Frequently Bought Together:</h3>
             <div class="mini-cart__upsell swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="mini-cart__upsell-product gap-4 flex bg-[#E9F4FF] rounded-[.5rem] py-5 px-4">
-                            <div class="mini-cart__upsell-image w-[7.2rem] h-[7.2rem] flex-shrink-0">
+                        <div class="mini-cart__upsell-product gap-4 flex bg-[#E9F4FF] py-2 px-2">
+                            <div class="mini-cart__upsell-image w-[4.7rem] h-[4.7rem] flex-shrink-0">
                                 <img src="/cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1400" srcset=" , /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=100 100w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=200 200w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=300 300w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=400 400w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=600 600w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=800 800w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1000 1000w" sizes="
                                     (max-width: 480px) 400px,
                                     (max-width: 768px) 600px,
@@ -115,25 +114,28 @@
                                     1400px" width="1400" height="1400" alt="" class=" w-full h-full object-cover">
                             </div>
 
-                            <div class="mini-cart__upsell-info w-full relative">
-                                <h4 class="mini-cart__upsell-title text-base font-bold">Essential Daily Energy</h4>
+                            <div class="mini-cart__upsell-info text-xs w-full relative">
+                                <h4 class="mini-cart__upsell-title text-xs mb-1 text-base font-bold">Essential Daily Energy</h4>
                                 <div class="mini-cart__upsell-variant text-xs font-medium mt-0">
                                     Wild Berry
                                 </div>
-                                <div class="mini-cart__upsell-selling-plan text-xs mt-1 text-[#222222]">
+                                <div class="mini-cart__upsell-selling-plan text-[1rem] mt-1 text-[#222222]">
                                     One Time Add On
                                 </div>
-                                <div class="mini-cart__upsell-price text-xs mt-1 text-[#199A47] font-bold" data-compare-price="$151.80">$89.95</div>
+                            </div>
 
-                                <button class="mini-cart__upsell-btn absolute bottom-0 right-0">
+                            <div class="mini-cart__upsell-cta flex flex-col items-end">
+                                <div class="mini-cart__upsell-price text-sm mb-2 font-bold">$89.95</div>
+
+                                <button class="mini-cart__upsell-btn">
                                     Add+
-                                </button>     
+                                </button>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="mini-cart__upsell-product gap-4 flex bg-[#E9F4FF] rounded-[.5rem] py-5 px-4">
-                            <div class="mini-cart__upsell-image w-[7.2rem] h-[7.2rem] flex-shrink-0">
+                        <div class="mini-cart__upsell-product gap-4 flex bg-[#E9F4FF] py-2 px-2">
+                            <div class="mini-cart__upsell-image w-[4.7rem] h-[4.7rem] flex-shrink-0">
                                 <img src="/cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1400" srcset=" , /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=100 100w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=200 200w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=300 300w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=400 400w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=600 600w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=800 800w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1000 1000w" sizes="
                                     (max-width: 480px) 400px,
                                     (max-width: 768px) 600px,
@@ -142,25 +144,28 @@
                                     1400px" width="1400" height="1400" alt="" class=" w-full h-full object-cover">
                             </div>
 
-                            <div class="mini-cart__upsell-info w-full relative">
-                                <h4 class="mini-cart__upsell-title text-base font-bold">Essential Daily Energy</h4>
+                            <div class="mini-cart__upsell-info text-xs w-full relative">
+                                <h4 class="mini-cart__upsell-title text-xs mb-1 text-base font-bold">Essential Daily Energy</h4>
                                 <div class="mini-cart__upsell-variant text-xs font-medium mt-0">
                                     Wild Berry
                                 </div>
-                                <div class="mini-cart__upsell-selling-plan text-xs mt-1 text-[#222222]">
+                                <div class="mini-cart__upsell-selling-plan text-[1rem] mt-1 text-[#222222]">
                                     One Time Add On
                                 </div>
-                                <div class="mini-cart__upsell-price text-xs mt-1 text-[#199A47] font-bold" data-compare-price="$151.80">$89.95</div>
+                            </div>
 
-                                <button class="mini-cart__upsell-btn absolute bottom-0 right-0">
+                            <div class="mini-cart__upsell-cta flex flex-col items-end">
+                                <div class="mini-cart__upsell-price text-sm mb-2 font-bold">$89.95</div>
+
+                                <button class="mini-cart__upsell-btn">
                                     Add+
-                                </button>     
+                                </button>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="mini-cart__upsell-product gap-4 flex bg-[#E9F4FF] rounded-[.5rem] py-5 px-4">
-                            <div class="mini-cart__upsell-image w-[7.2rem] h-[7.2rem] flex-shrink-0">
+                        <div class="mini-cart__upsell-product gap-4 flex bg-[#E9F4FF] py-2 px-2">
+                            <div class="mini-cart__upsell-image w-[4.7rem] h-[4.7rem] flex-shrink-0">
                                 <img src="/cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1400" srcset=" , /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=100 100w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=200 200w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=300 300w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=400 400w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=600 600w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=800 800w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1000 1000w" sizes="
                                     (max-width: 480px) 400px,
                                     (max-width: 768px) 600px,
@@ -169,25 +174,28 @@
                                     1400px" width="1400" height="1400" alt="" class=" w-full h-full object-cover">
                             </div>
 
-                            <div class="mini-cart__upsell-info w-full relative">
-                                <h4 class="mini-cart__upsell-title text-base font-bold">Essential Daily Energy</h4>
+                            <div class="mini-cart__upsell-info text-xs w-full relative">
+                                <h4 class="mini-cart__upsell-title text-xs mb-1 text-base font-bold">Essential Daily Energy</h4>
                                 <div class="mini-cart__upsell-variant text-xs font-medium mt-0">
                                     Wild Berry
                                 </div>
-                                <div class="mini-cart__upsell-selling-plan text-xs mt-1 text-[#222222]">
+                                <div class="mini-cart__upsell-selling-plan text-[1rem] mt-1 text-[#222222]">
                                     One Time Add On
                                 </div>
-                                <div class="mini-cart__upsell-price text-xs mt-1 text-[#199A47] font-bold" data-compare-price="$151.80">$89.95</div>
+                            </div>
 
-                                <button class="mini-cart__upsell-btn absolute bottom-0 right-0">
+                            <div class="mini-cart__upsell-cta flex flex-col items-end">
+                                <div class="mini-cart__upsell-price text-sm mb-2 font-bold">$89.95</div>
+
+                                <button class="mini-cart__upsell-btn">
                                     Add+
-                                </button>     
+                                </button>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="mini-cart__upsell-product gap-4 flex bg-[#E9F4FF] rounded-[.5rem] py-5 px-4">
-                            <div class="mini-cart__upsell-image w-[7.2rem] h-[7.2rem] flex-shrink-0">
+                        <div class="mini-cart__upsell-product gap-4 flex bg-[#E9F4FF] py-2 px-2">
+                            <div class="mini-cart__upsell-image w-[4.7rem] h-[4.7rem] flex-shrink-0">
                                 <img src="/cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1400" srcset=" , /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=100 100w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=200 200w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=300 300w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=400 400w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=600 600w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=800 800w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1000 1000w" sizes="
                                     (max-width: 480px) 400px,
                                     (max-width: 768px) 600px,
@@ -196,19 +204,22 @@
                                     1400px" width="1400" height="1400" alt="" class=" w-full h-full object-cover">
                             </div>
 
-                            <div class="mini-cart__upsell-info w-full relative">
-                                <h4 class="mini-cart__upsell-title text-base font-bold">Essential Daily Energy</h4>
+                            <div class="mini-cart__upsell-info text-xs w-full relative">
+                                <h4 class="mini-cart__upsell-title text-xs mb-1 text-base font-bold">Essential Daily Energy</h4>
                                 <div class="mini-cart__upsell-variant text-xs font-medium mt-0">
                                     Wild Berry
                                 </div>
-                                <div class="mini-cart__upsell-selling-plan text-xs mt-1 text-[#222222]">
+                                <div class="mini-cart__upsell-selling-plan text-[1rem] mt-1 text-[#222222]">
                                     One Time Add On
                                 </div>
-                                <div class="mini-cart__upsell-price text-xs mt-1 text-[#199A47] font-bold" data-compare-price="$151.80">$89.95</div>
+                            </div>
 
-                                <button class="mini-cart__upsell-btn absolute bottom-0 right-0">
+                            <div class="mini-cart__upsell-cta flex flex-col items-end">
+                                <div class="mini-cart__upsell-price text-sm mb-2 font-bold">$89.95</div>
+
+                                <button class="mini-cart__upsell-btn">
                                     Add+
-                                </button>     
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -220,22 +231,30 @@
             <div class="mini-cart__cta">
                 <button class="btn btn-primary w-full mini-cart__cta-btn" data-off-label="Get 40% off Today">
                     <span class="mini-cart__cta-btn-text">Save With Subscription</span>
-                    <span class="mini-cart__cta-btn-price">
-                        <u>$151.80</u>
-                        <b>$89.95</b>
+                    <span class="mini-cart__cta-btn-price flex items-center">
+                        <span class="inline-flex items-center gap-2">
+                            <u>$151.80</u>
+                            <span>$89.95</span>
+                        </span>
+
+                        <span class="inline-block ml-2">
+                            <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.0433226 1.25751L0.927489 0.330008L5.74332 5.38488C5.82095 5.46588 5.88256 5.5622 5.9246 5.66829C5.96664 5.77438 5.98828 5.88816 5.98828 6.00307C5.98828 6.11798 5.96664 6.23176 5.9246 6.33785C5.88256 6.44394 5.82095 6.54026 5.74332 6.62126L0.927489 11.6788L0.0441556 10.7513L4.56416 6.00438L0.0433226 1.25751Z" fill="currentColor"/>
+                            </svg>
+                        </span>
                     </span>
                 </button>
     
-                <div class="mini-cart__subscription-features py-[.6rem]">
+                <div class="mini-cart__subscription-features py-[.6rem] max-w-[34rem] mx-auto">
                     <ul class="grid grid-cols-2 gap-0 text-[#222222]">
                         <li>
                             <b>FREE SHIPPING</b> on first order
                         </li>
                         <li>
-                            <b>FREE SHIPPING</b> on every order
+                            <b>NO CONTRACT</b> cancel with ease
                         </li>
                         <li>
-                            <b>SURPRISE GIFT</b> with 3rd refill
+                            <b>SURPRISE GIFT</b> with 2rd refill
                         </li>
                         <li>
                             <b>OUT OF STOCK PROTECTION</b>
@@ -245,21 +264,20 @@
     
                 <button class="btn w-full btn-outline mini-cart__cta-btn">
                     <span class="mini-cart__cta-btn-text">Continue One-time Purchase</span>
-                    <span class="mini-cart__cta-btn-price">
+                    <span class="mini-cart__cta-btn-price flex items-center gap-1">
                         $109.95
-                    </span>
+
+                        <span class="inline-block ml-2">
+                            <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.0433226 1.25751L0.927489 0.330008L5.74332 5.38488C5.82095 5.46588 5.88256 5.5622 5.9246 5.66829C5.96664 5.77438 5.98828 5.88816 5.98828 6.00307C5.98828 6.11798 5.96664 6.23176 5.9246 6.33785C5.88256 6.44394 5.82095 6.54026 5.74332 6.62126L0.927489 11.6788L0.0441556 10.7513L4.56416 6.00438L0.0433226 1.25751Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                    </span>      
                 </button>
     
-                <div class="mini-cart__features text-xs flex flex-col gap-2 items-center mt-[1.2rem]">
+                <div class="mini-cart__features text-xs flex flex-col gap-2 items-center mt-[0.8rem] font-bold">
                     <div class="mini-cart__features-item flex items-center gap-2">
                         <b>4.8</b> {% render 'stars', score: 5 %} 1,000,000+ Happy Customers
-                    </div>
-                    <div class="mini-cart__features-item flex items-center gap-[.3rem]">
-                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.0282 3.51543C11.0183 2.47079 9.71125 1.80653 8.29277 1.60446L8.69707 1.20016C8.85725 1.03998 8.85725 0.780294 8.69707 0.620114C8.53692 0.459962 8.27721 0.459962 8.11703 0.620114L7.07832 1.65879C6.91814 1.81895 6.91814 2.07866 7.07832 2.23884L8.117 3.27752C8.19709 3.35761 8.30206 3.39766 8.40701 3.39766C8.51195 3.39766 8.61695 3.35761 8.69702 3.27752C8.8572 3.11736 8.8572 2.85765 8.69702 2.69747L8.46473 2.46519C9.59165 2.68572 10.6252 3.24446 11.4383 4.08555C12.4639 5.14638 13.0286 6.54343 13.0286 8.0193C13.0287 11.1404 10.4895 13.6797 7.36836 13.6797C4.24726 13.6797 1.70801 11.1404 1.70801 8.01933C1.70801 6.82837 2.07351 5.68913 2.76504 4.72477C3.4422 3.7804 4.37572 3.07572 5.46474 2.68695C5.67807 2.61077 5.78925 2.3761 5.7131 2.16274C5.63695 1.9494 5.40223 1.83822 5.1889 1.91438C3.94194 2.35956 2.87326 3.16609 2.09837 4.24674C1.30633 5.35132 0.887695 6.65586 0.887695 8.01936C0.887695 9.75041 1.5618 11.3778 2.78584 12.6019C4.00989 13.8258 5.63731 14.5 7.36836 14.5C9.09941 14.5 10.7268 13.8259 11.9509 12.6018C13.1749 11.3778 13.849 9.75038 13.849 8.01933C13.849 6.32954 13.2023 4.73002 12.0282 3.51543Z" fill="#0D3063"/>
-                            <path d="M3.15424 8.01934C3.15424 10.343 5.04467 12.2334 7.36834 12.2334C9.69199 12.2334 11.5824 10.343 11.5824 8.01934C11.5824 5.6957 9.69199 3.80521 7.36834 3.80521C5.04465 3.80521 3.15424 5.69567 3.15424 8.01934ZM7.62013 8.38441C7.02972 8.17569 6.68765 8.01119 6.43948 7.81653C6.13405 7.57698 5.99424 7.16324 6.07458 6.73681C6.16175 6.27421 6.48435 5.90594 6.91652 5.77576C6.9225 5.77396 6.92838 5.77251 6.93435 5.77076V5.6056C6.93435 5.37909 7.11799 5.19544 7.3445 5.19544C7.57102 5.19544 7.75466 5.37909 7.75466 5.6056V5.74464C8.04103 5.81172 8.24091 5.94261 8.32171 6.00301C8.50314 6.13867 8.54027 6.39567 8.40464 6.57712C8.26899 6.75858 8.01204 6.79566 7.83054 6.66006C7.74369 6.59514 7.504 6.45547 7.15312 6.56118C6.94583 6.62364 6.89221 6.82765 6.8807 6.88871C6.85797 7.00929 6.88409 7.1228 6.94569 7.17109C7.16026 7.33933 7.5452 7.48789 7.89348 7.61099C8.53059 7.83619 8.88486 8.42641 8.77504 9.07962C8.72112 9.40034 8.55979 9.69792 8.3207 9.9176C8.15628 10.0686 7.96468 10.1761 7.75466 10.2366V10.433C7.75466 10.6595 7.57102 10.8432 7.3445 10.8432C7.11799 10.8432 6.93435 10.6595 6.93435 10.433V10.277C6.66148 10.2449 6.43379 10.1609 6.12757 9.96056C5.93799 9.83655 5.88486 9.58234 6.00887 9.39276C6.13287 9.20316 6.38711 9.15006 6.57666 9.27407C6.86057 9.45981 6.96792 9.47687 7.34177 9.47428C7.70984 9.47182 7.9234 9.19748 7.96608 8.94362C7.98697 8.81964 7.99498 8.51692 7.62013 8.38441Z" fill="#0D3063"/>
-                            </svg>
-                             <b>100% Money Back Guarantee</b>
                     </div>
                 </div>
             </div>

@@ -21,12 +21,12 @@
     &__upsell {
         overflow: hidden;
         margin-right: -1.7rem;
+        padding-right: 1.8rem;
 
         .swiper-pagination {
             justify-content: flex-start;
-            gap: 6px;
-            padding-top: 1.2rem;
-            padding-bottom: 2rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
         }
 
         &-price {
@@ -34,20 +34,25 @@
             align-items: center;
             gap: .3rem;
             
-            &[data-compare-price]::before {
-                text-decoration: line-through;
-                color: #FF5C5C;
-                font-weight: 400;
-                content: attr(data-compare-price);
+            
+            &[data-compare-price] {
+                color: #199A47;
+
+                &::before{
+                    text-decoration: line-through;
+                    color: #FF5C5C;
+                    font-weight: 400;
+                    content: attr(data-compare-price);
+                }
             }
         }
 
         &-btn {
-            padding: 0 2.4rem;
-            height: 3.2rem;
+            padding: 0 1.4rem;
+            height: 2.4rem;
             background-color: #0D3063;
             color: #fff;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-weight: 500;
             border-radius: .7rem;
             border: none;
@@ -61,7 +66,7 @@
 
     &__cta {
         border-top: 1px solid #CCCCCC;
-        padding-top: 3.9rem;
+        padding-top: 3rem;
 
         &-btn {
             position: relative;
@@ -73,6 +78,7 @@
             padding-right: 1.6rem;
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
+            border-radius: 0.6rem;
 
             &-price {
                 u {
@@ -80,6 +86,10 @@
                     font-size: 1.2rem;
                     font-weight: 400;
                 }
+            }
+
+            &[data-off-label] {
+                line-height: 5.8rem;
             }
 
             &[data-off-label]::before {
@@ -94,8 +104,8 @@
                 background-color: #FF5C5C;
                 color: #fff;
                 font-size: 1.2rem;
-                line-height: 2.2rem;
-                font-weight: 500;
+                line-height: 2rem;
+                font-weight: 600;
                 padding: 0 1.3rem;
                 transform: translateX(-50%);
             }
@@ -111,7 +121,7 @@
                     background-image: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.526 0.731442C8.67953 3.16793 6.32033 6.65163 4.56791 10.4236C4.52106 10.5266 4.37581 10.5243 4.32895 10.4236C3.27235 8.07607 2.16889 6.3518 0.922522 5.44981C0.812417 5.37019 0.882698 5.19677 1.01624 5.21318C2.37038 5.3842 3.85101 6.26275 4.44844 7.16475C6.08605 4.31121 8.37262 2.191 11.3761 0.518211C11.5143 0.440909 11.6455 0.628344 11.526 0.731442Z' fill='%2375BDFF'/%3E%3C/svg%3E%0A");
                     background-repeat: no-repeat;
                     background-position: 0 .3rem;
-                    padding-left: 1.4rem;
+                    padding-left: 1.6rem;
                 }
             }
         }

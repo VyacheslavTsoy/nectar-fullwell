@@ -1,0 +1,35 @@
+{% assign bst = block.settings %}
+{% assign pouches = bst.related_pouches %}
+
+<section class="checkout__part mb-[2rem]">
+    <div class="checkout__part-header flex items-center justify-between mb-8">
+        <h2 class="checkout__part-title text-baseLg flex items-center gap-2 font-bold"><span class="inline-flex items-center justify-center w-[1.8rem] h-[1.8rem] bg-[#0D3063] rounded-full text-white text-sm font-family-poppins mt-[-.2rem]">{{ index }}</span> {{ bst.title }}</h2>
+    </div>
+
+    <div class="checkout__variants flex justify-between flex-wrap gap-4">
+        {%- for pouch in pouches -%}
+            {%- capture badge -%}
+                {%- if pouch.badge_text != blank %}
+                    {% assign badge_text = pouch.badge_text | downcase %}
+                    {%- if badge_text contains 'best' -%}
+                        data-blue-label="Best Value"
+                    {%- endif -%}
+
+                    {%- if badge_text contains 'most' -%}
+                        data-yellow-label="Most Popular"
+                    {% endif %}
+                {% endif %}
+            {% endcapture %}
+            
+        <label class="checkout__variant block w-[calc(50%-1.1rem)]">
+            <input type="radio" name="variant" value="1 Pouches">
+            
+            <div class="checkout__variant-inner" {{ badge }}>
+                <div class="checkout__variant-title font-bold">{{ pouch.title }}</div>
+                <div class="checkout__variant-price mt-[-.2rem] font-medium text-xs text-[#333333]">{{ pouch.quantity }}</div>
+                <div class="checkout__variant-saving">{{ pouch.saving_percent }}</div>
+                </div>
+            </label>
+        {% endfor %}
+    </div>
+</section>
