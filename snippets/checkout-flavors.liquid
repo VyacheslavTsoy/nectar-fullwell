@@ -1,16 +1,22 @@
 <section class="checkout__part mb-[1.6rem]">
-    <div class="checkout__part-header mb-6 flex items-center justify-between">
+    <div class="checkout__part-header flex items-center justify-between">
         <h2 class="checkout__part-title text-baseLg flex items-center gap-2 font-bold">
             <span class="inline-flex items-center justify-center w-[1.8rem] h-[1.8rem] bg-[#0D3063] rounded-full text-white text-sm font-family-poppins mt-[-.2rem]">{{ index }}</span> 
             Select Flavors
         </h2>
 
-        <span class="inline-flex text-sm items-center justify-center uppercase text-[#0D3063] bg-[#E9F4FF] rounded-[2.6rem] font-poppins font-medium px-[.8rem] h-[2.2rem] font-family-poppins">
-            3 Pouches to go
+        <span class="inline-flex text-sm items-center justify-center uppercase text-[#0D3063] bg-[#E9F4FF] rounded-[2.6rem] font-family-poppins font-medium px-[.8rem] h-[2.2rem]">
+            <span x-show="currentQty < minQty">
+                <span class="inline-block" x-text="minQty - currentQty"></span> Pouches to go
+            </span>
+            <span class="text-xs" x-show="currentQty >= minQty">
+                All Set! (You can add more)
+            </span>
         </span>
     </div>
 
     <div class="checkout__flavors flex flex-col gap-[.8rem]" x-show="currentProduct.variants.length > 0">
+        <div x-effect="countAmountOfChoosedFlavors()"></div>
         <template x-for="variant in currentProduct.variants" :key="variant.id">
             <div class="checkout__flavor flex items-center">
                 <div class="checkout__flavor-image mr-6 w-[5.2rem] h-[5.2rem] overflow-hidden flex-shrink-0">
@@ -26,14 +32,19 @@
                 </div>
 
                 <div class="checkout__flavor-qty w-[9.3rem] flex-shrink-0 mr-4">
-                    <div class="qty-picker flex items-center gap-2 mb-2 text-[#111111]">
-                        <button class="qty-picker__btn">
+
+                    <div class="checkout__flavor-qty w-[9.3rem] flex-shrink-0 mr-4" x-show="variant.quantity == 0">
+                        <button class="btn btn--add w-full" @click="variant.quantity++; countAmountOfChoosedFlavors()">Add+</button>
+                    </div>
+
+                    <div class="qty-picker flex items-center gap-2 mb-2 text-[#111111]" x-show="variant.quantity > 0">
+                        <button class="qty-picker__btn" @click="variant.quantity > 0 && variant.quantity--; countAmountOfChoosedFlavors()">
                             <svg width="14" height="3" viewBox="0 0 10 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.534084 2.14009H8.87706C9.1046 2.14009 9.25629 1.9884 9.25629 1.76086V1.00241C9.25629 0.774875 9.1046 0.623184 8.87706 0.623184H0.534084C0.306549 0.623184 0.154859 0.774875 0.154859 1.00241V1.76086C0.154859 1.9884 0.306549 2.14009 0.534084 2.14009Z" fill="currentColor"/>
                             </svg>                                
                         </button>
-                        <input type="number" class="qty-picker__input text-center w-[2.4rem]" value="1">
-                        <button class="qty-picker__btn">
+                        <input type="number" class="qty-picker__input text-center w-[2.4rem]" :value="variant.quantity" @change="variant.quantity = $event.target.value; countAmountOfChoosedFlavors()">
+                        <button class="qty-picker__btn" @click="variant.quantity++; countAmountOfChoosedFlavors()">
                             <svg width="12" height="12" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.594739 5.00245V5.7609C0.594739 5.98844 0.746429 6.14013 0.973965 6.14013H4.387V9.55317C4.387 9.7807 4.53869 9.93239 4.76623 9.93239H5.52468C5.75221 9.93239 5.90391 9.7807 5.90391 9.55317V6.14013H9.31694C9.54448 6.14013 9.69617 5.98844 9.69617 5.7609V5.00245C9.69617 4.77492 9.54448 4.62322 9.31694 4.62322H5.90391V1.21019C5.90391 0.982654 5.75221 0.830963 5.52468 0.830963H4.76623C4.53869 0.830963 4.387 0.982654 4.387 1.21019V4.62322H0.973965C0.746429 4.62322 0.594739 4.77492 0.594739 5.00245Z" fill="currentColor"/>
                             </svg>                                

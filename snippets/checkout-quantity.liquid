@@ -6,7 +6,7 @@
         <h2 class="checkout__part-title text-baseLg flex items-center gap-2 font-bold"><span class="inline-flex items-center justify-center w-[1.8rem] h-[1.8rem] bg-[#0D3063] rounded-full text-white text-sm font-family-poppins mt-[-.2rem]">{{ index }}</span> {{ bst.title }}</h2>
     </div>
 
-    <div class="checkout__variants flex justify-between flex-wrap gap-4">
+    <div class="checkout__sizes flex justify-between flex-wrap gap-4">
         {%- for pouch in pouches -%}
             {%- capture badge -%}
                 {%- if pouch.badge_text != blank %}
@@ -20,14 +20,16 @@
                     {% endif %}
                 {% endif %}
             {% endcapture %}
+
+            {% assign minQTY = pouch.title | split: ' ' | first %}
             
-        <label class="checkout__variant block w-[calc(50%-1.1rem)]">
-            <input type="radio" name="variant" value="1 Pouches">
-            
-            <div class="checkout__variant-inner" {{ badge }}>
-                <div class="checkout__variant-title font-bold">{{ pouch.title }}</div>
-                <div class="checkout__variant-price mt-[-.2rem] font-medium text-xs text-[#333333]">{{ pouch.quantity }}</div>
-                <div class="checkout__variant-saving">{{ pouch.saving_percent }}</div>
+            <label class="checkout__size block w-[calc(50%-1.1rem)]" x-init="if (minQty == 0) minQty = {{ minQTY }}">
+                <input type="radio" name="pouches" value="{{ minQTY }}" {% if forloop.first %}checked{% endif %} x-model="minQty">
+                
+                <div class="checkout__size-inner" {{ badge }}>
+                    <div class="checkout__size-title font-bold">{{ pouch.title }}</div>
+                    <div class="checkout__size-price mt-[-.2rem] font-medium text-xs text-[#333333]">{{ pouch.quantity }}</div>
+                    <div class="checkout__size-saving">{{ pouch.saving_percent }}</div>
                 </div>
             </label>
         {% endfor %}

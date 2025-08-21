@@ -1,10 +1,14 @@
 {% render 'entry' with '@/styles/sections/mini-cart.scss' %}
 
+{% assign sst = section.settings %}
+
 <div class="mini-cart fixed z-50 top-0 px-[1.7rem] py-[1.2rem] right-0 w-[39.3rem] md:w-[58rem] h-full bg-white" x-data="$store.miniCart" :class="{ 'mini-cart--open': $store.miniCart.isOpen }">
     <div class="mini-cart__inner flex flex-col h-full">
         
         <div class="mini-cart__header mb-4 flex items-center justify-between">
-            <h3 class="mini-cart__title text-lg font-bold">{{ section.settings.title }}</h3>
+            {% if sst.title != blank %}
+                <h3 class="mini-cart__title text-lg font-bold">{{ sst.title }}</h3>
+            {% endif %}
 
             <button class="mini-cart__close w-[2.5rem] h-[2.5rem] rounded-full bg-[#E9F4FF] flex items-center justify-center" x-data @click="$store.miniCart.isOpen = false">
                 <svg width="10" height="10" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -100,24 +104,28 @@
         </div>
 
         <div class="mini-cart__footer mt-auto pt-[1.2rem]">
-            <h3 class="mini-cart__footer-title text-sm font-bold mb-2 text-[#111111]">Frequently Bought Together:</h3>
+            {% if sst.upsell_products != blank %}
+            <h3 class="mini-cart__footer-title text-sm font-bold mb-2 text-[#111111]">{{ sst.frequently_bought_together }}:</h3>
             <div class="mini-cart__upsell swiper">
                 <div class="swiper-wrapper">
+                    {% for upsellProduct in sst.upsell_products %}
+
+                    {% assign relVariant = upsellProduct.first_available_variant %}
+                    
                     <div class="swiper-slide">
                         <div class="mini-cart__upsell-product gap-4 flex bg-[#E9F4FF] py-2 px-2">
                             <div class="mini-cart__upsell-image w-[4.7rem] h-[4.7rem] flex-shrink-0">
-                                <img src="/cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1400" srcset=" , /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=100 100w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=200 200w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=300 300w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=400 400w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=600 600w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=800 800w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1000 1000w" sizes="
-                                    (max-width: 480px) 400px,
-                                    (max-width: 768px) 600px,
-                                    (max-width: 992px) 600px,
-                                    (max-width: 1200px) 800px,
-                                    1400px" width="1400" height="1400" alt="" class=" w-full h-full object-cover">
+                                <a href="{{ upsellProduct.url }}">
+                                    {% render 'img', image: upsellProduct.featured_image, max_width: 240, class: 'w-full h-full object-cover' %}
+                                </a>
                             </div>
 
                             <div class="mini-cart__upsell-info text-xs w-full relative">
-                                <h4 class="mini-cart__upsell-title text-xs mb-1 text-base font-bold">Essential Daily Energy</h4>
+                                <h4 class="mini-cart__upsell-title text-xs mb-1 text-base font-bold">
+                                    <a href="{{ upsellProduct.url }}">{{ upsellProduct.title }}</a>
+                                </h4>
                                 <div class="mini-cart__upsell-variant text-xs font-medium mt-0">
-                                    Wild Berry
+                                    {{ relVariant.title }}
                                 </div>
                                 <div class="mini-cart__upsell-selling-plan text-[1rem] mt-1 text-[#222222]">
                                     One Time Add On
@@ -133,104 +141,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="mini-cart__upsell-product gap-4 flex bg-[#E9F4FF] py-2 px-2">
-                            <div class="mini-cart__upsell-image w-[4.7rem] h-[4.7rem] flex-shrink-0">
-                                <img src="/cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1400" srcset=" , /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=100 100w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=200 200w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=300 300w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=400 400w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=600 600w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=800 800w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1000 1000w" sizes="
-                                    (max-width: 480px) 400px,
-                                    (max-width: 768px) 600px,
-                                    (max-width: 992px) 600px,
-                                    (max-width: 1200px) 800px,
-                                    1400px" width="1400" height="1400" alt="" class=" w-full h-full object-cover">
-                            </div>
-
-                            <div class="mini-cart__upsell-info text-xs w-full relative">
-                                <h4 class="mini-cart__upsell-title text-xs mb-1 text-base font-bold">Essential Daily Energy</h4>
-                                <div class="mini-cart__upsell-variant text-xs font-medium mt-0">
-                                    Wild Berry
-                                </div>
-                                <div class="mini-cart__upsell-selling-plan text-[1rem] mt-1 text-[#222222]">
-                                    One Time Add On
-                                </div>
-                            </div>
-
-                            <div class="mini-cart__upsell-cta flex flex-col items-end">
-                                <div class="mini-cart__upsell-price text-sm mb-2 font-bold">$89.95</div>
-
-                                <button class="mini-cart__upsell-btn">
-                                    Add+
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="mini-cart__upsell-product gap-4 flex bg-[#E9F4FF] py-2 px-2">
-                            <div class="mini-cart__upsell-image w-[4.7rem] h-[4.7rem] flex-shrink-0">
-                                <img src="/cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1400" srcset=" , /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=100 100w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=200 200w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=300 300w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=400 400w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=600 600w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=800 800w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1000 1000w" sizes="
-                                    (max-width: 480px) 400px,
-                                    (max-width: 768px) 600px,
-                                    (max-width: 992px) 600px,
-                                    (max-width: 1200px) 800px,
-                                    1400px" width="1400" height="1400" alt="" class=" w-full h-full object-cover">
-                            </div>
-
-                            <div class="mini-cart__upsell-info text-xs w-full relative">
-                                <h4 class="mini-cart__upsell-title text-xs mb-1 text-base font-bold">Essential Daily Energy</h4>
-                                <div class="mini-cart__upsell-variant text-xs font-medium mt-0">
-                                    Wild Berry
-                                </div>
-                                <div class="mini-cart__upsell-selling-plan text-[1rem] mt-1 text-[#222222]">
-                                    One Time Add On
-                                </div>
-                            </div>
-
-                            <div class="mini-cart__upsell-cta flex flex-col items-end">
-                                <div class="mini-cart__upsell-price text-sm mb-2 font-bold">$89.95</div>
-
-                                <button class="mini-cart__upsell-btn">
-                                    Add+
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="mini-cart__upsell-product gap-4 flex bg-[#E9F4FF] py-2 px-2">
-                            <div class="mini-cart__upsell-image w-[4.7rem] h-[4.7rem] flex-shrink-0">
-                                <img src="/cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1400" srcset=" , /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=100 100w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=200 200w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=300 300w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=400 400w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=600 600w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=800 800w, /cdn/shop/files/Hydration-main.png?v=1729204166&amp;width=1000 1000w" sizes="
-                                    (max-width: 480px) 400px,
-                                    (max-width: 768px) 600px,
-                                    (max-width: 992px) 600px,
-                                    (max-width: 1200px) 800px,
-                                    1400px" width="1400" height="1400" alt="" class=" w-full h-full object-cover">
-                            </div>
-
-                            <div class="mini-cart__upsell-info text-xs w-full relative">
-                                <h4 class="mini-cart__upsell-title text-xs mb-1 text-base font-bold">Essential Daily Energy</h4>
-                                <div class="mini-cart__upsell-variant text-xs font-medium mt-0">
-                                    Wild Berry
-                                </div>
-                                <div class="mini-cart__upsell-selling-plan text-[1rem] mt-1 text-[#222222]">
-                                    One Time Add On
-                                </div>
-                            </div>
-
-                            <div class="mini-cart__upsell-cta flex flex-col items-end">
-                                <div class="mini-cart__upsell-price text-sm mb-2 font-bold">$89.95</div>
-
-                                <button class="mini-cart__upsell-btn">
-                                    Add+
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
 
                 <div class="swiper-pagination"></div>
             </div>
+            {% endif %}
     
             <div class="mini-cart__cta">
-                <button class="btn btn-primary w-full mini-cart__cta-btn" data-off-label="Get 40% off Today">
-                    <span class="mini-cart__cta-btn-text">Save With Subscription</span>
+                <button class="btn btn-primary w-full mini-cart__cta-btn" data-off-label="{{ sst.save_badge }}">
+                    <span class="mini-cart__cta-btn-text">{{ sst.subscription_cta }}</span>
                     <span class="mini-cart__cta-btn-price flex items-center">
                         <span class="inline-flex items-center gap-2">
                             <u>$151.80</u>
@@ -246,24 +166,16 @@
                 </button>
     
                 <div class="mini-cart__subscription-features py-[.6rem] max-w-[34rem] mx-auto">
-                    <ul class="grid grid-cols-2 gap-0 text-[#222222]">
-                        <li>
-                            <b>FREE SHIPPING</b> on first order
-                        </li>
-                        <li>
-                            <b>NO CONTRACT</b> cancel with ease
-                        </li>
-                        <li>
-                            <b>SURPRISE GIFT</b> with 2rd refill
-                        </li>
-                        <li>
-                            <b>OUT OF STOCK PROTECTION</b>
-                        </li>
-                    </ul>
+
+                    {% if sst.subscription_features != blank %}
+                    <div class="mini-cart__subscription-features-list text-[#222222]">
+                        {{ sst.subscription_features }}
+                    </div>
+                    {% endif %}
                 </div>
     
                 <button class="btn w-full btn-outline mini-cart__cta-btn">
-                    <span class="mini-cart__cta-btn-text">Continue One-time Purchase</span>
+                    <span class="mini-cart__cta-btn-text">{{ sst.one_time_cta }}</span>
                     <span class="mini-cart__cta-btn-price flex items-center gap-1">
                         $109.95
 
@@ -277,7 +189,7 @@
     
                 <div class="mini-cart__features text-xs flex flex-col gap-2 items-center mt-[0.8rem] font-bold">
                     <div class="mini-cart__features-item flex items-center gap-2">
-                        <b>4.8</b> {% render 'stars', score: 5 %} 1,000,000+ Happy Customers
+                        <b>4.8</b> {% render 'stars', score: 5 %} {{ sst.additional_text }}
                     </div>
                 </div>
             </div>
@@ -316,29 +228,65 @@
   "name": "Mini Cart",
   "settings": [
     {
-      "type": "text",
-      "label": "Title",
-      "id": "title",
-      "default": "Your Cart"
-    }
-  ],
-  "blocks": [
+        "type": "header",
+        "content": "Labels"
+    },
     {
-      "name": "Block Name",
-      "type": "block_name",
-      "settings": [
-        {
-          "type": "text",
-          "label": "Text 0",
-          "id": "text_0"
-        },
-        {
-          "type": "image_picker",
-          "label": "Image Picker 1",
-          "id": "image_picker_1"
-        }
-      ]
+        "type": "text",
+        "label": "Title",
+        "id": "title",
+        "default": "Your Cart"
+    },
+    {
+        "type": "text",
+        "label": "Save Badge",
+        "id": "save_badge",
+        "default": "Get 40% off Today"
+    },
+    {
+        "type": "text",
+        "label": "Save With Subscription",
+        "id": "subscription_cta",
+        "default": "Save With Subscription"
+    },
+    {
+        "type": "text",
+        "label": "Continue One-time Purchase",
+        "id": "one_time_cta",
+        "default": "Continue One-time Purchase"
+    },
+    {
+        "type": "header",
+        "content": "Subscription Features"
+    },
+    {
+        "type": "richtext",
+        "label": "Subscription Features",
+        "id": "subscription_features"
+    },
+    {
+        "type": "text",
+        "label": "Frequently Bought Together",
+        "id": "frequently_bought_together",
+        "default": "Frequently Bought Together"
+    },
+    {
+        "type": "text",
+        "label": "Additional Text",
+        "id": "additional_text",
+        "default": "1,000,000+ Happy Customers"
+    },
+    {
+        "type": "header",
+        "content": "Upsell products"
+    },
+    {
+        "type": "product_list",
+        "label": "Upsell products",
+        "id": "upsell_products",
+        "info": "Select the products to display in the upsell block"
     }
+    
   ]
 }
 {% endschema %}

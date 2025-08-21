@@ -9,94 +9,10 @@
  */
  {
     "current": {
-      "header_logo": "shopify://shop_images/AllIn_Logo-Secondary-TM.png",
-      "header_bg": "#b9e1ed",
-      "show_promo": true,
-      "show_promo_link": "shopify://products/trial-kit",
-      "promo_text": "<p>Try all our snacks for just $0.99 + FREE Shipping!</p>",
       "header_menu_1": "main-menu",
       "header_menu_2": "",
       "footer_menu_1": "footer-contant",
       "footer_menu_2": "footer-about",
-      "social_title": "",
-      "social_facebook": "#",
-      "social_facebook_icon": "shopify://shop_images/Frame_4.svg",
-      "social_instagram": "#",
-      "social_instagram_icon": "shopify://shop_images/Frame_1.svg",
-      "social_twitter": "#",
-      "social_twitter_icon": "shopify://shop_images/Frame_2.svg",
-      "social_youtube": "#",
-      "social_youtube_icon": "shopify://shop_images/Frame_3.svg",
-      "footer_menu_3": "",
-      "copyright_text": "© 2024 All In Food",
-      "cart_products": [
-        "madagascar-vanilla-honey-almond",
-        "chocolate-chip",
-        "peruvian-dark-chocolate-peanut-butter",
-        "smores"
-      ],
-      "color_schemes": {
-        "scheme-1": {
-          "settings": {
-            "background": "#c1e0eb",
-            "background_gradient": "",
-            "text": "#121212",
-            "color_primary": "#1b4c62",
-            "color_secondary": "#61a2c7",
-            "color_tertiary": "#c1e0eb"
-          }
-        },
-        "scheme-5c0f826f-d435-4d54-9cbc-7f5914495a94": {
-          "settings": {
-            "background": "#e8c7e8",
-            "background_gradient": "",
-            "text": "#121212",
-            "color_primary": "#5f1f5b",
-            "color_secondary": "#a85c9d",
-            "color_tertiary": "#e8c7e8"
-          }
-        },
-        "scheme-954a80b3-dde2-40d9-8313-176e778b545a": {
-          "settings": {
-            "background": "#ffffff",
-            "background_gradient": "",
-            "text": "#121212",
-            "color_primary": "#d45e59",
-            "color_secondary": "#020617",
-            "color_tertiary": "#ffffff"
-          }
-        },
-        "scheme-951c1d93-12b5-4f78-b84c-2e55165ed91d": {
-          "settings": {
-            "background": "#f4bc96",
-            "background_gradient": "",
-            "text": "#121212",
-            "color_primary": "#cc4e32",
-            "color_secondary": "#f4bc96",
-            "color_tertiary": "#ffffff"
-          }
-        },
-        "scheme-de6b5f91-c5c6-4bb4-bbf1-ffc9db298772": {
-          "settings": {
-            "background": "#5d3091",
-            "background_gradient": "",
-            "text": "#121212",
-            "color_primary": "#5d3091",
-            "color_secondary": "#c6b9d9",
-            "color_tertiary": "#ffffff"
-          }
-        },
-        "scheme-b7bdd6cd-5b51-4c91-a556-8dd635a6c446": {
-          "settings": {
-            "background": "#2b657c",
-            "background_gradient": "",
-            "text": "#121212",
-            "color_primary": "#2b657c",
-            "color_secondary": "#a8d9e6",
-            "color_tertiary": "#ffffff"
-          }
-        }
-      },
       "sections": {
         "announcement-bar": {
           "type": "announcement-bar",
@@ -188,6 +104,24 @@
             "guarantee_text": "<p>Try Nectar with no risk! If you’re not 100% satisfied, you can trust in our 90-day money back gaurantee.*</p>",
             "guarantee_image": "shopify://shop_images/guarantee-image.png",
             "links": "mobile-navigation-for-new-theme-2-0"
+          }
+        },
+        "mini-cart": {
+          "type": "mini-cart",
+          "settings": {
+            "title": "Your Cart",
+            "save_badge": "Get 40% off Today",
+            "subscription_cta": "Save With Subscription",
+            "one_time_cta": "Continue One-time Purchase",
+            "subscription_features": "",
+            "frequently_bought_together": "Frequently Bought Together",
+            "additional_text": "1,000,000+ Happy Customers",
+            "upsell_products": [
+              "essential-daily-calm-gift",
+              "essential-daily-energy",
+              "essential-daily-energy-2",
+              "essential-daily-hydration-1"
+            ]
           }
         }
       },
