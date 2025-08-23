@@ -49,13 +49,28 @@ input {
         content: attr(data-compare-price);
         display: block;
         font-weight: 400;
-        font-family: 'Values Sans', sans-serif;
         color: #FF5C5C;
         text-decoration: line-through;
     }
 
     &--dark {
         color: #333333;
+
+        &[data-compare-price]::before {
+            color: #848484;
+        }
+    }
+
+    &--blue {
+        color: var(--color-coolBlack);
+
+        &[data-compare-price]::before {
+            color: #848484;
+        }
+    }
+
+    &-badge {
+
     }
 }
 
@@ -79,4 +94,22 @@ select {
     -ms-appearance: none;
     appearance: none;
     -webkit-appearance: none;
+}
+
+.shipping-badge {
+    background-color: #E4FEE5;
+    border-radius: 1rem;
+    padding: 0.6rem 0rem;
+    border: 1px dashed #037C2B;
+    color: #037C2B;
+    white-space: nowrap;
+    font-family: 'Values Sans', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    
+    &--red {
+        border-color: #B40202;
+        background-color: #FADCDC;
+        color: #B40202;
+    }
 }

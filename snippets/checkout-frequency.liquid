@@ -4,23 +4,23 @@
     </div>
 
     <div class="checkout__frequency text-sm flex flex-col font-family-poppins gap-4">
-        <label class="checkout__frequency-item block" :class="{'checkout__frequency-item--active': purchaseType === 'one-time'}">
-            <input type="radio" name="purchaseType" value="one-time" x-model="purchaseType">
-            <div class="checkout__frequency-header mb-[.6rem] flex items-center justify-between gap-4">
+        <label class="checkout__frequency-item block" :class="{'checkout__frequency-item--active': purchaseType === 'subscription'}">
+            <input type="radio" name="purchaseType" value="subscription" x-model="purchaseType" @change="updateCheckout()">
+            <div class="checkout__frequency-header flex items-start justify-between gap-4">
                 <div class="checkout__frequency-title items-center font-medium flex gap-3 text-[#333333]">
                     {{ section.settings.label_subscription }}
                 </div>
 
                 <div class="checkout__frequency-price" data-compare-price="$151.80">
-                    <div class="price" data-compare-price="$151.80">$89.95</div>
+                    <div class="price" :data-compare-price="currentBundleOriginalPrice > currentSubscriptionPrice ? formatMoney(currentBundleOriginalPrice) : formatMoney(currentSubscriptionPrice)" x-text="formatMoney(currentSubscriptionPrice)"></div>
 
-                    <div class="text-xs font-medium text-[#333333]">
-                        ($0.75 / packet)
+                    <div class="text-xs font-medium text-[#333333]" x-show="purchaseType === 'subscription'">
+                        (<span x-text="formatMoney(subscriptionPricePerStick)"></span> / packet)
                     </div>
                 </div>
             </div>
 
-            <div class="checkout__frequency-content">
+            <div class="checkout__frequency-content mt-[.6rem]" x-show="purchaseType === 'subscription'">
                 <template x-if="currentProduct?.sellingPlans.length > 0">
                     <div class="flex items-center justify-between gap-3 mb-[.6rem]">
                         <div class="text-sm text-[#222222] flex items-center gap-3 flex-shrink-0">
@@ -29,7 +29,7 @@
 
                         <select class="text-sm font-medium text-[#333333] w-[80%]" x-model="selectedSellingPlan">
                             <template x-for="sellingPlan in currentProduct?.sellingPlans">
-                                <option :value="sellingPlan.id" x-data="{formattedName: sellingPlan.name.replace('Delivery', '')}" x-text="formattedName">
+                                <option :value="sellingPlan.id" :selected="sellingPlan.id === selectedSellingPlan" x-data="{formattedName: sellingPlan.name.replace('Delivery', '')}" x-text="formattedName">
                                 </option>
                             </template>
                         </select>
@@ -44,16 +44,58 @@
             </div>
         </label>
 
-        <label class="checkout__frequency-item block" :class="{'checkout__frequency-item--active': purchaseType === 'subscription'}">
-            <input type="radio" name="purchaseType" value="subscription" x-model="purchaseType">
+        <label class="checkout__frequency-item block" :class="{'checkout__frequency-item--active': purchaseType === 'one-time'}">
+            <input type="radio" name="purchaseType" value="one-time" x-model="purchaseType" @change="updateCheckout()">
             <div class="checkout__frequency-header flex items-center justify-between gap-4">
                 <div class="checkout__frequency-title items-center font-medium flex gap-3 text-[#333333]">
                     {{ section.settings.label_one_time }}
                 </div>
 
-                <div class="checkout__frequency-price">
-                    <div class="price price--dark">$109.95</div>
+                <div class="checkout__frequency-price text-right">
+                    <div class="price price--dark" x-text="formatMoney(currentOneTimePrice)" :data-compare-price="currentBundleOriginalPrice > currentOneTimePrice ? formatMoney(currentBundleOriginalPrice) : null"></div>
+                    <div class="text-xs font-medium text-[#333333]" x-show="purchaseType === 'one-time'">
+                        (<span x-text="formatMoney(oneTimePricePerStick)"></span> / packet)
+                    </div>
                 </div>
+            </div>
+
+            <div class="checkout__frequency-content" x-show="purchaseType === 'one-time'">
+                <template x-if="currentQty >= freeShippingMinItems">
+                    <div class="shipping-badge flex items-center gap-3 justify-center text-sm font-medium mt-3">
+                        <div class="shipping-badge__icon w-[2.5rem] h-[2.5rem] bg-[#037C2B] rounded-full flex items-center justify-center text-white">
+                            <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1963 0.135468C12.4968 0.437248 12.9943 1.19771 13.618 2.24439H11.1963V0.135468ZM3.59604 2.33228C3.85067 2.33228 4.03549 2.45519 4.03549 2.74243C4.03549 2.9847 3.83946 3.1812 3.5973 3.18189H0.942383C0.699654 3.18189 0.50293 3.37872 0.50293 3.62134C0.50293 3.86407 0.699654 4.06079 0.942383 4.06079H4.89746C5.14248 4.06079 5.33863 4.2574 5.33863 4.50025C5.33863 4.74297 5.14191 4.9397 4.89918 4.9397H0.942383C0.699654 4.9397 0.50293 5.13642 0.50293 5.37915C0.50293 5.62188 0.699654 5.81861 0.942383 5.81861H1.90918V7.13697C1.90918 7.37969 2.1059 7.57642 2.34863 7.57642H3.232C3.38947 8.3521 4.07486 8.92408 4.88281 8.92408C5.69077 8.92408 6.37615 8.3521 6.53362 7.57642H10.9957C11.1531 8.3521 11.8385 8.92408 12.6465 8.92408C13.4544 8.92408 14.1398 8.3521 14.2973 7.57642H15.0635C15.3062 7.57642 15.5029 7.37969 15.5029 7.13697V4.50025C15.5029 3.21084 14.1429 3.12524 14.1417 3.12329H10.7568C10.5141 3.12329 10.3174 2.92657 10.3174 2.68384V0.0471191H2.34863C2.1059 0.0471191 1.90918 0.243843 1.90918 0.486572V1.45337H1.38184C1.13911 1.45337 0.942383 1.65009 0.942383 1.89282C0.942383 2.13555 1.13911 2.33228 1.38184 2.33228H3.59604ZM13.2162 6.66982C13.5308 6.98442 13.5308 7.49471 13.2162 7.80931C12.7101 8.31536 11.8408 7.95533 11.8408 7.2395C11.8408 6.52379 12.7101 6.16376 13.2162 6.66982ZM5.4525 6.66982C5.7671 6.98442 5.7671 7.49471 5.4525 7.80931C4.94644 8.31536 4.07715 7.95533 4.07715 7.2395C4.07715 6.52379 4.94644 6.16376 5.4525 6.66982Z" fill="currentColor"/>
+                            </svg>                            
+                        </div>
+    
+                        <div class="shipping-badge__text">
+                            You’ve Unlocked Free Expedited Shipping
+                        </div>
+                    </div>
+                </template>
+
+                <template x-if="currentQty < freeShippingMinItems">
+                    <div>
+                        <div class="flex items-center justify-between gap-3 font-family-poppins font-medium text-sm pt-2 mb-2">
+                            <div class="ext-[#333333] flex items-center gap-3 flex-shrink-0">
+                                Shipping
+                            </div>
+        
+                            <div class="text-[#5F605F]">$4.95</div>
+                        </div>
+                        <div class="shipping-badge shipping-badge--red flex items-center gap-3 justify-center text-[1.3rem] font-medium">
+                            <div class="shipping-badge__icon w-[2.5rem] h-[2.5rem] bg-[#B40202] rounded-full flex items-center justify-center text-white">
+                                <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1963 0.135468C12.4968 0.437248 12.9943 1.19771 13.618 2.24439H11.1963V0.135468ZM3.59604 2.33228C3.85067 2.33228 4.03549 2.45519 4.03549 2.74243C4.03549 2.9847 3.83946 3.1812 3.5973 3.18189H0.942383C0.699654 3.18189 0.50293 3.37872 0.50293 3.62134C0.50293 3.86407 0.699654 4.06079 0.942383 4.06079H4.89746C5.14248 4.06079 5.33863 4.2574 5.33863 4.50025C5.33863 4.74297 5.14191 4.9397 4.89918 4.9397H0.942383C0.699654 4.9397 0.50293 5.13642 0.50293 5.37915C0.50293 5.62188 0.699654 5.81861 0.942383 5.81861H1.90918V7.13697C1.90918 7.37969 2.1059 7.57642 2.34863 7.57642H3.232C3.38947 8.3521 4.07486 8.92408 4.88281 8.92408C5.69077 8.92408 6.37615 8.3521 6.53362 7.57642H10.9957C11.1531 8.3521 11.8385 8.92408 12.6465 8.92408C13.4544 8.92408 14.1398 8.3521 14.2973 7.57642H15.0635C15.3062 7.57642 15.5029 7.37969 15.5029 7.13697V4.50025C15.5029 3.21084 14.1429 3.12524 14.1417 3.12329H10.7568C10.5141 3.12329 10.3174 2.92657 10.3174 2.68384V0.0471191H2.34863C2.1059 0.0471191 1.90918 0.243843 1.90918 0.486572V1.45337H1.38184C1.13911 1.45337 0.942383 1.65009 0.942383 1.89282C0.942383 2.13555 1.13911 2.33228 1.38184 2.33228H3.59604ZM13.2162 6.66982C13.5308 6.98442 13.5308 7.49471 13.2162 7.80931C12.7101 8.31536 11.8408 7.95533 11.8408 7.2395C11.8408 6.52379 12.7101 6.16376 13.2162 6.66982ZM5.4525 6.66982C5.7671 6.98442 5.7671 7.49471 5.4525 7.80931C4.94644 8.31536 4.07715 7.95533 4.07715 7.2395C4.07715 6.52379 4.94644 6.16376 5.4525 6.66982Z" fill="currentColor"/>
+                                </svg>                            
+                            </div>
+        
+                            <div class="shipping-badge__text">
+                                Add <span x-text="freeShippingMinItems - currentQty"></span> more unit Or Subscribe For Free Shipping
+                            </div>
+                        </div>
+                    </div>
+                </template>
             </div>
         </label>
     </div>

@@ -3,7 +3,30 @@
 
 <section class="checkout__part mb-[2rem]">
     <div class="checkout__part-header flex items-center justify-between mb-8">
-        <h2 class="checkout__part-title text-baseLg flex items-center gap-2 font-bold"><span class="inline-flex items-center justify-center w-[1.8rem] h-[1.8rem] bg-[#0D3063] rounded-full text-white text-sm font-family-poppins mt-[-.2rem]">{{ index }}</span> {{ bst.title }}</h2>
+        <h2 class="checkout__part-title whitespace-nowrap text-baseLg flex items-center gap-2 font-bold"><span class="inline-flex items-center justify-center w-[1.8rem] h-[1.8rem] bg-[#0D3063] rounded-full text-white text-sm font-family-poppins mt-[-.2rem]">{{ index }}</span> {{ bst.title }}</h2>
+
+        <div class="flex items-center gap-1 font-family-poppins text-sm">
+
+            <template x-if="purchaseType === 'subscription'">
+                <div class="flex items-center gap-1">
+                    <div class="price price--blue" :data-compare-price="currentBundleOriginalPrice > currentSubscriptionPrice ? formatMoney(currentBundleOriginalPrice) : null">
+                        <div x-text="formatMoney(currentSubscriptionPrice)"></div>
+                    </div>
+
+                    <div class="price-badge inline-flex whitespace-nowrap h-[2.2rem] items-center justify-center px-[.6rem] bg-[#EDF6FF] font-medium rounded-full" x-text="formatMoney(subscriptionSaving) + ' Off'" x-show="subscriptionSaving > 0"></div>
+                </div>
+            </template>
+
+            <template x-if="purchaseType === 'one-time'">
+                <div class="flex items-center gap-1">
+                    <div class="price price--blue" :data-compare-price="currentBundleOriginalPrice > currentOneTimePrice ? formatMoney(currentBundleOriginalPrice) : null">
+                        <div x-text="formatMoney(currentOneTimePrice)"></div>
+                    </div>
+
+                    <div class="price-badge inline-flex whitespace-nowrap h-[2.2rem] items-center justify-center px-[.6rem] bg-[#EDF6FF] font-medium rounded-full" x-text="formatMoney(oneTimeSaving) + ' Off'" x-show="oneTimeSaving > 0"></div>
+                </div>
+            </template>
+        </div>
     </div>
 
     <div class="checkout__sizes flex justify-between flex-wrap gap-4">
@@ -23,8 +46,14 @@
 
             {% assign minQTY = pouch.title | split: ' ' | first %}
             
-            <label class="checkout__size block w-[calc(50%-1.1rem)]" x-init="if (minQty == 0) minQty = {{ minQTY }}">
-                <input type="radio" name="pouches" value="{{ minQTY }}" {% if forloop.first %}checked{% endif %} x-model="minQty">
+            <label class="checkout__size block w-[calc(50%-1.1rem)]">
+                <input type="radio" name="pouches" value="{{ minQTY }}" {% if forloop.first %}checked{% endif %} x-model="minQty" x-data="{
+                    init() {
+                        if (!relatedPoucheSellingPlan) {
+                            relatedPoucheSellingPlan = '{{ pouch.related_subscription_plan_name }}';
+                        }
+                    }
+                }" @change="relatedPoucheSellingPlan = '{{ pouch.related_subscription_plan_name }}'">
                 
                 <div class="checkout__size-inner" {{ badge }}>
                     <div class="checkout__size-title font-bold">{{ pouch.title }}</div>

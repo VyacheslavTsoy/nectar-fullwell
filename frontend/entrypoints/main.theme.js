@@ -8,9 +8,7 @@ import Swiper from 'swiper';
 // import 'swiper/swiper-bundle.css';
 import { Navigation, Pagination } from 'swiper/modules';
 
-import '../components/alp-main-store';
-import '../components/alp-cart';
-import '../components/alp-build-box'; // FE TODO Must be included only for the build box section
+import '../components/mini-cart';
 
 window.Alpine = Alpine;
 window.Swiper = Swiper;

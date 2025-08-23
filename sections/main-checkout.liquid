@@ -1,9 +1,10 @@
 {% assign sst = section.settings %}
 {% assign blocks = section.blocks %}
+{% assign discountsMetaobjects = metaobjects.discounts.values %}
 
 {% if sst.products != blank %}
 <div class="checkout" x-data="checkout">
-    <div class="checkout__inner max-w-[39.5rem] mx-auto px-[2rem] py-[2.4rem]">
+    <div class="checkout__inner max-w-[41.5rem] mx-auto px-[2rem] py-[2.4rem]">
         {% for block in blocks %}
             {% case block.type %}
                 {% when 'quantity' %}
@@ -16,19 +17,32 @@
         {% endfor %}
     </div>
 
-    <div class="checkout__cta sticky bottom-0 left-0 right-0">
+    <div class="checkout__cta sticky bottom-0 left-0 right-0 font-family-poppins">
         <div class="checkout__cta-inner max-w-[39.3rem] mx-auto px-[2rem] text-sm">
+            <template x-if="purchaseType === 'one-time'">
+                <div class="checkout__cta-total flex items-center justify-between gap-2 mb-2">
+                    <div class="checkout__cta-saving font-bold font-family-poppins">
+                        You’re Saving <span x-text="oneTimeSavingPercentage + '%'"></span> Off
+                    </div>
+    
+                    <div class="checkout__cta-total-price">
+                        <div class="price" :data-compare-price="currentBundleOriginalPrice > currentOneTimePrice ? formatMoney(currentBundleOriginalPrice) : null" x-text="formatMoney(currentOneTimePrice)"></div>
+                    </div>
+                </div>
+            </template>
+            <template x-if="purchaseType === 'subscription'">
             <div class="checkout__cta-total flex items-center justify-between gap-2 mb-2">
                 <div class="checkout__cta-saving font-bold font-family-poppins">
-                    You’re Saving 50% Off
+                    You’re Saving <span x-text="subscriptionSavingPercentage + '%'"></span> Off
                 </div>
 
                 <div class="checkout__cta-total-price">
-                    <div class="price" data-compare-price="$148.70">$89.95</div>
+                    <div class="price" :data-compare-price="currentBundleOriginalPrice > currentSubscriptionPrice ? formatMoney(currentBundleOriginalPrice) : null" x-text="formatMoney(currentSubscriptionPrice)"></div>
                 </div>
             </div>
+            </template>
 
-            <button class="checkout__cta-btn" :disabled="currentQty < minQty">
+            <button class="checkout__cta-btn" :disabled="currentQty < minQty" @click="addToCart">
                 <span x-show="currentQty < minQty" class="flex items-center justify-center gap-4">
                     <span>
                         Select <span x-text="minQty - currentQty"></span> More Pouches 
@@ -49,16 +63,35 @@
 <script>
     document.addEventListener('alpine:init', () => {
         Alpine.data('checkout', () => ({
+            sticksPerPouch: 30,
+            subscriptionPricePerStick: 0,
+            oneTimePricePerStick: 0,
+            freeShippingMinItems: 2,
             minQty: 0,
             currentQty: 0,
             currentProduct: null,
+            currentSinglePrice: 0,
+            currentOneTimePrice: 0,
+            currentSubscriptionPrice: 0,
+            subscriptionSaving: 0,
+            subscriptionSavingPercentage: 0,
+            oneTimeSaving: 0,
+            oneTimeSavingPercentage: 0,
             amountOfChoosedFlavors: 0,
-            purchaseType: 'one-time',
+            purchaseType: 'subscription',
             selectedSellingPlan: null,
+            currentDiscount: {
+                oneTime: null,
+                subscription: null
+            },
+            relatedDiscounts: null,
+            relatedPoucheSellingPlan: null,
+            currentBundleOriginalPrice: 0,
             products: [
                 {% for product in section.settings.products %}
                     {% assign sellingPlanGroup = product.selling_plan_groups | where: 'app_id', 'SKIO' | first %}
                     {
+                        id: {{ product.id }},
                         handle: '{{ product.handle }}',
                         title: '{{ product.title }}',
                         price: {{ product.price | default: 0 }},
@@ -88,9 +121,59 @@
                     } {% unless forloop.last %},{% endunless %}
                 {% endfor %}
             ],
+            {% if discountsMetaobjects != blank %}
+            discounts: [
+                {% for discount in discountsMetaobjects %}
+                    {
+                        relatedProducts: {% if discount.related_products and discount.related_products.value %}{{ discount.related_products.value | map: 'id' | json }}{% else %}null{% endif %},
+                        oneTimePrices: [
+                            {% if discount.discounts_thresholds_one_time_purchase and discount.discounts_thresholds_one_time_purchase.value %}
+                                {% for oneTimePrice in discount.discounts_thresholds_one_time_purchase.value %}
+                                    {% assign priceArray = oneTimePrice | split: '-' %}
+                                    {
+                                        quantity: {% if priceArray.size > 0 %}{{ priceArray[0] }}{% else %}0{% endif %},
+                                        discountAmount: {% if priceArray.size > 1 %}{{ priceArray[1] }}{% else %}0{% endif %},
+                                    }{% unless forloop.last %},{% endunless %}
+                                {% endfor %}
+                            {% endif %}
+                        ],
+                        subscriptionPrices: [
+                            {% if discount.discounts_thresholds_subscription_purchase and discount.discounts_thresholds_subscription_purchase.value %}
+                                {% for subscriptionPrice in discount.discounts_thresholds_subscription_purchase.value %}
+                                    {% assign priceArray = subscriptionPrice | split: '-' %}
+                                    {
+                                        quantity: {% if priceArray.size > 0 %}{{ priceArray[0] }}{% else %}0{% endif %},
+                                        discountAmount: {% if priceArray.size > 1 %}{{ priceArray[1] }}{% else %}0{% endif %}
+                                    }{% unless forloop.last %},{% endunless %}
+                                {% endfor %}
+                            {% endif %}
+                        ]
+                    }{% unless forloop.last %},{% endunless %}
+                {% endfor %}
+            ],
+            {% endif %}
+
+            formatMoney(price) {
+                const newPrice = (price / 100).toFixed(2);
+                return `$${newPrice}`;
+            },
 
             countAmountOfChoosedFlavors() {
                 this.currentQty = this.currentProduct.variants.reduce((acc, variant) => acc + variant.quantity, 0);
+
+                this.setupCurrentDiscount();
+            },
+
+            updateCheckout() {
+                this.countAmountOfChoosedFlavors();
+                this.updatePrice();
+                this.setupSellingPlan();
+            },
+
+            setupSellingPlan() {
+                if (this.relatedPoucheSellingPlan) {
+                    this.selectedSellingPlan = this.currentProduct.sellingPlans.find(sellingPlan => sellingPlan?.name?.includes(this.relatedPoucheSellingPlan))?.id;
+                }
             },
             
             setUpCurrentProduct() {
@@ -103,9 +186,94 @@
                 }
             },
 
-            init() {
+            setupRelatedDiscounts() {
+                const currentProduct = this.currentProduct;
+                const relatedDiscounts = this.discounts.find(discount => discount.relatedProducts.includes(currentProduct.id));
+
+                this.relatedDiscounts = relatedDiscounts;
+            },
+
+            setupCurrentDiscount() {
+                this.currentDiscount.oneTime = this.relatedDiscounts.oneTimePrices.find(item => item.quantity == this.minQty) || null;
+                this.currentDiscount.subscription = this.relatedDiscounts.subscriptionPrices.find(item => item.quantity == this.minQty) || null;
+            },
+
+            setUpMinQty() {
+                const inputs = document.querySelectorAll('input[type="radio"][name="pouches"]');
+                let maxValueInput = null;
+                let maxValue = -Infinity;
+
+                inputs.forEach(input => {
+                    const value = parseInt(input.value) || 0;
+                    if (value > maxValue) {
+                        maxValue = value;
+                        maxValueInput = input;
+                    }
+                });
+
+                this.minQty = maxValue;
+            },
+
+            updatePrice() {
+                this.currentSinglePrice = this.currentProduct?.variants[0].price || 0;
+                this.currentBundleOriginalPrice = this.currentSinglePrice * this.minQty;
+
+                this.currentOneTimePrice = this.currentDiscount?.oneTime?.discountAmount ? this.currentBundleOriginalPrice - this.currentDiscount?.oneTime?.discountAmount : this.currentBundleOriginalPrice;
+
+                this.oneTimeSaving = this.currentBundleOriginalPrice - this.currentOneTimePrice;
+                this.oneTimeSavingPercentage = Math.round((this.oneTimeSaving / this.currentBundleOriginalPrice) * 100);
+
+                this.currentSubscriptionPrice = this.currentDiscount?.subscription?.discountAmount ? this.currentBundleOriginalPrice - this.currentDiscount?.subscription?.discountAmount : this.currentBundleOriginalPrice;
+
+                this.subscriptionSaving = this.currentBundleOriginalPrice - this.currentSubscriptionPrice;
+                this.subscriptionSavingPercentage = Math.round((this.subscriptionSaving / this.currentBundleOriginalPrice) * 100);
+
+                this.subscriptionPricePerStick = this.currentSubscriptionPrice / (this.sticksPerPouch * this.minQty);
+                this.oneTimePricePerStick = this.currentOneTimePrice / (this.sticksPerPouch * this.minQty);
+            },
+
+            resetCheckout() {
+                this.currentProduct.variants.forEach(variant => {
+                    variant.quantity = 0; 
+                });
+
+                this.updateCheckout();
+            },
+
+            addToCart() {
+                const itemsForCart = [];
+
+                this.currentProduct.variants.forEach(variant => {
+                    if (variant.quantity > 0) {
+                        itemsForCart.push({
+                            id: variant.id,
+                            quantity: variant.quantity,
+                            selling_plan: this.purchaseType === 'subscription' ? this.selectedSellingPlan : null
+                        });
+                    }
+                });
+
+                if (itemsForCart.length > 0) {
+                    Alpine.store('miniCart').addItem(itemsForCart);
+                    this.resetCheckout();
+                }
+            },
+
+            setupDefaultValues() {
+                this.setUpMinQty();
                 this.setUpCurrentProduct();
-                console.log(this.currentProduct);
+                this.setupRelatedDiscounts();
+                this.setupCurrentDiscount();
+                this.updatePrice();
+                this.setupSellingPlan();
+            },
+
+            init() {
+                this.setupDefaultValues();
+
+                {% comment %} console.log(this.currentOneTimePrice, this.currentSubscriptionPrice) {% endcomment %}
+
+                {% comment %} console.log(this.currentSinglePrice * this.minQty) {% endcomment %}
             }
         }))
     })
