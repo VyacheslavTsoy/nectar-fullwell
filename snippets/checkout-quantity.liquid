@@ -1,66 +1,53 @@
 {% assign bst = block.settings %}
-{% assign pouches = bst.related_pouches %}
 
 <section class="checkout__part mb-[2rem]">
     <div class="checkout__part-header flex items-center justify-between mb-8">
         <h2 class="checkout__part-title whitespace-nowrap text-baseLg flex items-center gap-2 font-bold"><span class="inline-flex items-center justify-center w-[1.8rem] h-[1.8rem] bg-[#0D3063] rounded-full text-white text-sm font-family-poppins mt-[-.2rem]">{{ index }}</span> {{ bst.title }}</h2>
 
-        <div class="flex items-center gap-1 font-family-poppins text-sm">
+        <div class="flex items-center gap-1 font-family-poppins">
 
             <template x-if="purchaseType === 'subscription'">
-                <div class="flex items-center gap-1">
-                    <div class="price price--blue" :data-compare-price="currentBundleOriginalPrice > currentSubscriptionPrice ? formatMoney(currentBundleOriginalPrice) : null">
+                <div class="flex items-center gap-3">
+                    <div class="price price--blue">
                         <div x-text="formatMoney(currentSubscriptionPrice)"></div>
                     </div>
 
-                    <div class="price-badge inline-flex whitespace-nowrap h-[2.2rem] items-center justify-center px-[.6rem] bg-[#EDF6FF] font-medium rounded-full" x-text="formatMoney(subscriptionSaving) + ' Off'" x-show="subscriptionSaving > 0"></div>
+                    <div class="price-badge inline-flex whitespace-nowrap h-[2.2rem] items-center justify-center px-[.6rem] bg-[#469AFF] text-white text-xs font-medium rounded-full" x-text="formatMoney((currentPouch?.compare_price_subscription - currentSubscriptionPrice)) + ' Off'"></div>
                 </div>
             </template>
 
             <template x-if="purchaseType === 'one-time'">
-                <div class="flex items-center gap-1">
-                    <div class="price price--blue" :data-compare-price="currentBundleOriginalPrice > currentOneTimePrice ? formatMoney(currentBundleOriginalPrice) : null">
+                <div class="flex items-center gap-3">
+                    <div class="price price--blue">
                         <div x-text="formatMoney(currentOneTimePrice)"></div>
                     </div>
 
-                    <div class="price-badge inline-flex whitespace-nowrap h-[2.2rem] items-center justify-center px-[.6rem] bg-[#EDF6FF] font-medium rounded-full" x-text="formatMoney(oneTimeSaving) + ' Off'" x-show="oneTimeSaving > 0"></div>
+                    <div class="price-badge inline-flex whitespace-nowrap h-[2.2rem] items-center justify-center px-[.6rem] bg-[#469AFF] text-white text-xs font-medium rounded-full" x-text="formatMoney(oneTimeSaving) + ' Off'" x-show="oneTimeSaving > 0"></div>
                 </div>
             </template>
         </div>
     </div>
 
-    <div class="checkout__sizes flex justify-between flex-wrap gap-4">
-        {%- for pouch in pouches -%}
-            {%- capture badge -%}
-                {%- if pouch.badge_text != blank %}
-                    {% assign badge_text = pouch.badge_text | downcase %}
-                    {%- if badge_text contains 'best' -%}
-                        data-blue-label="Best Value"
-                    {%- endif -%}
-
-                    {%- if badge_text contains 'most' -%}
-                        data-yellow-label="Most Popular"
-                    {% endif %}
-                {% endif %}
-            {% endcapture %}
-
-            {% assign minQTY = pouch.title | split: ' ' | first %}
-            
-            <label class="checkout__size block w-[calc(50%-1.1rem)]">
-                <input type="radio" name="pouches" value="{{ minQTY }}" {% if forloop.first %}checked{% endif %} x-model="minQty" x-data="{
-                    init() {
-                        if (!relatedPoucheSellingPlan) {
-                            relatedPoucheSellingPlan = '{{ pouch.related_subscription_plan_name }}';
-                        }
-                    }
-                }" @change="relatedPoucheSellingPlan = '{{ pouch.related_subscription_plan_name }}'">
+    <div class="checkout__sizes flex justify-between items-stretch flex-wrap gap-4">
+        
+        <template x-for="pouch in pouches">
+            <label class="checkout__size block w-[calc(50%-0.5rem)]">
+                <input type="radio" name="pouches" :checked="pouch.minQty === minQty" :value="pouch.minQty" @change="relatedPoucheSellingPlan = pouch.relatedPoucheSellingPlan; updateCurrentPouch(pouch.minQty)">
                 
-                <div class="checkout__size-inner" {{ badge }}>
-                    <div class="checkout__size-title font-bold">{{ pouch.title }}</div>
-                    <div class="checkout__size-price mt-[-.2rem] font-medium text-xs text-[#333333]">{{ pouch.quantity }}</div>
-                    <div class="checkout__size-saving">{{ pouch.saving_percent }}</div>
+                <div class="checkout__size-inner min-h-[100%]" :data-blue-label="pouch.blue_badge ? pouch.blue_badge : null" :data-yellow-label="pouch.yellow_badge ? pouch.yellow_badge : null">
+                    <div class="checkout__size-title font-bold" x-text="pouch.title"></div>
+                    <div class="checkout__size-price mt-[-.4rem] font-medium text-xs text-[#333333]" x-text="pouch.quantity"></div>
+                    <div class="checkout__size-saving">
+                        <template x-if="purchaseType === 'subscription' && pouch.compare_price_subscription > 0">
+                            <div x-text="pouch.saving_percent_subscription"></div>
+                        </template>
+
+                        <template x-if="purchaseType === 'one-time' && pouch.compare_price_one_time > 0">
+                            <div x-text="pouch.saving_percent_one_time"></div>
+                        </template>
+                    </div>
                 </div>
             </label>
-        {% endfor %}
+        </template>
     </div>
 </section>

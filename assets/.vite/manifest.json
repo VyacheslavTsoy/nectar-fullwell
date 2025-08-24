@@ -1,11 +1,11 @@
 {
   "frontend/entrypoints/main.scss": {
-    "file": "main-BJwlpSxz.css",
+    "file": "main-D-A0LLfi.css",
     "src": "frontend/entrypoints/main.scss",
     "isEntry": true
   },
   "frontend/entrypoints/main.theme.js": {
-    "file": "main.theme-DSRO6PxE.js",
+    "file": "main.theme-CfZNABNi.js",
     "name": "main.theme",
     "src": "frontend/entrypoints/main.theme.js",
     "isEntry": true
@@ -34,7 +34,7 @@
     "isEntry": true
   },
   "frontend/styles/sections/mini-cart.scss": {
-    "file": "mini-cart-C_00Mlyg.css",
+    "file": "mini-cart-tTNc9Nu5.css",
     "src": "frontend/styles/sections/mini-cart.scss",
     "isEntry": true
   },

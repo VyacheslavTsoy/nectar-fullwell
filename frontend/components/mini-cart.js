@@ -15,15 +15,18 @@ document.addEventListener('alpine:init', () => {
     Alpine.store('miniCart', {
       isOpen: false,
       cart: null,
+      subscriptionItemsInCart: false,
       freeShippingCost: 4000,
 
       loadCart() {
+        
         fetch(window.Shopify.routes.root + 'cart.js')
           .then(response => response.json())
           .then(data => {
             this.cart = data;
+            this.subscriptionItemsInCart = this.cart?.items?.some(item => item.selling_plan_allocation);
 
-            console.log(this.cart, 12131231)
+            console.log(this.cart, 123123123)
           });
       },
       
@@ -47,7 +50,7 @@ document.addEventListener('alpine:init', () => {
           .catch((error) => {
             console.error('Error:', error);
           });
-    }, 500),
+    }, 300),
 
     formatMoney(price) {
         const newPrice = (price / 100).toFixed(2);
@@ -55,6 +58,7 @@ document.addEventListener('alpine:init', () => {
     },
 
       addItem(items) {
+        console.log(items, 123123123)
         let formData = {
             'items': items
            };
@@ -69,6 +73,7 @@ document.addEventListener('alpine:init', () => {
            .then(response => {
              this.loadCart();
              this.isOpen = true;
+             console.log(response, 22222)
              return response.json();
            })
            .catch((error) => {

@@ -5,12 +5,12 @@
             Select Flavors
         </h2>
 
-        <span class="inline-flex text-sm items-center justify-center uppercase text-[#0D3063] bg-[#E9F4FF] rounded-[2.6rem] font-family-poppins font-medium px-[.8rem] h-[2.2rem]">
+        <span class="inline-flex text-sm items-center min-w-[10.6rem] justify-center uppercase text-[#0D3063] bg-[#E9F4FF] rounded-[2.6rem] font-family-poppins font-medium px-[.8rem] h-[2.2rem]" :class="{'bg-[#F5FFF6] text-[#21A600] font-bold': currentQty >= minQty}">
             <span x-show="currentQty < minQty">
-                <span class="inline-block" x-text="minQty - currentQty"></span> Pouches to go
+                <span class="inline-block" x-text="minQty - currentQty"></span> Pouche<span x-show="minQty - currentQty > 1">s</span> to go
             </span>
             <span class="text-xs" x-show="currentQty >= minQty">
-                All Set! (You can add more)
+                All Set!
             </span>
         </span>
     </div>

@@ -19,17 +19,17 @@
 
         </div>
 
-        <div class="mini-cart__shipping mb-8 rounded-[.5rem] bg-[#E9F4FF] p-[0.8rem]">
+        <div class="mini-cart__shipping mb-8 rounded-[.5rem] bg-[#E9F4FF] p-[0.8rem]" x-data="{ freeShippingCost: {{ sst.free_shipping_amount }} }">
             <div class="mini-cart__shipping-bar bg-white rounded-full">
-                <div :style="{ width: $store.miniCart?.cart?.total_price / $store.miniCart.freeShippingCost * 100 + '%' }" class="mini-cart__shipping-bar-inner bg-[#42A4FF] rounded-full h-[0.8rem] max-w-[100%] transition-all duration-300">
+                <div :style="{ width: cart?.total_price / freeShippingCost * 100 + '%' }" class="mini-cart__shipping-bar-inner bg-[#42A4FF] rounded-full h-[0.8rem] max-w-[100%] transition-all duration-300">
                 </div>
             </div>
             <div class="mini-cart__shipping-text text-center text-sm pt-2 text-[#000]">
-                <span x-show="$store.miniCart?.cart?.total_price < $store.miniCart.freeShippingCost">
-                    You are <span x-text="$store.miniCart.formatMoney($store.miniCart.freeShippingCost - $store.miniCart?.cart?.total_price)"></span> Away from <b><i>Free Shipping</i></b>
+                <span x-show="cart?.total_price < freeShippingCost && !subscriptionItemsInCart">
+                    You are <span x-text="$store.miniCart.formatMoney(freeShippingCost - $store.miniCart?.cart?.total_price)"></span> Away from <b><i>Free Shipping</i></b>
                 </span>
 
-                <span x-show="$store.miniCart?.cart?.total_price >= $store.miniCart.freeShippingCost">
+                <span x-show="$store.miniCart?.cart?.total_price >= freeShippingCost || subscriptionItemsInCart">
                     Free shipping unlocked!
                 </span>
             </div>
@@ -138,9 +138,9 @@
                             </div>
 
                             <div class="mini-cart__upsell-cta flex flex-col items-end">
-                                <div class="mini-cart__upsell-price text-sm mb-2 font-bold">$89.95</div>
+                                <div class="mini-cart__upsell-price font-family-poppins text-sm mb-2 font-bold">{{ relVariant.price | money }}</div>
 
-                                <button class="mini-cart__upsell-btn">
+                                <button class="mini-cart__upsell-btn" @click="addItem([{ 'id': {{relVariant.id}}, 'quantity': 1 }])">
                                     Add+
                                 </button>
                             </div>
@@ -152,14 +152,14 @@
                 <div class="swiper-pagination"></div>
             </div>
             {% endif %}
-    
-            <div class="mini-cart__cta">
+            
+            <div class="mini-cart__cta pt-[3rem]" x-show="!subscriptionItemsInCart && cart?.total_price > 0">
                 <button class="btn btn-primary w-full mini-cart__cta-btn" data-off-label="{{ sst.save_badge }}">
                     <span class="mini-cart__cta-btn-text">{{ sst.subscription_cta }}</span>
                     <span class="mini-cart__cta-btn-price flex items-center">
                         <span class="inline-flex items-center gap-2">
-                            <u>$151.80</u>
-                            <span>$89.95</span>
+                            <u x-text="formatMoney(cart?.original_total_price)"></u>
+                            <span x-text="formatMoney(cart?.total_price)"></span>
                         </span>
 
                         <span class="inline-block ml-2">
@@ -182,7 +182,7 @@
                 <button class="btn w-full btn-outline mini-cart__cta-btn">
                     <span class="mini-cart__cta-btn-text">{{ sst.one_time_cta }}</span>
                     <span class="mini-cart__cta-btn-price flex items-center gap-1">
-                        <span x-text="$store.miniCart.formatMoney($store.miniCart?.cart?.total_price)"></span>
+                        <span x-text="formatMoney(cart?.total_price)"></span>
 
                         <span class="inline-block ml-2">
                             <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -198,6 +198,25 @@
                     </div>
                 </div>
             </div>
+
+            {% form 'cart', cart, class: 'mini-cart__cta-form' %}
+                <div class="mini-cart__cta pt-4" x-show="subscriptionItemsInCart && cart?.total_price > 0">
+                    <div class="mini-cart__cta-subtotal flex items-center justify-between mb-3">
+                        <div>Subtotal (<span x-text="$store.miniCart?.cart?.item_count"></span> item)</div>
+                        <div class="price" :data-compare-price="$store.miniCart?.cart?.original_total_price > $store.miniCart?.cart?.total_price ? formatMoney($store.miniCart?.cart?.original_total_price) : null" x-text="$store.miniCart.formatMoney($store.miniCart?.cart?.total_price)"></div>
+                    </div>
+
+                    <button class="btn btn-primary w-full mini-cart__cta-btn mini-cart__cta-btn--checkout" name="checkout">
+                        <span class="mini-cart__cta-btn-text">Proceed to Checkout</span>
+                    </button>
+        
+                    <div class="mini-cart__features text-xs flex flex-col gap-2 items-center mt-[0.8rem] font-bold">
+                        <div class="mini-cart__features-item flex items-center gap-2">
+                            <b>4.8</b> {% render 'stars', score: 5 %} {{ sst.additional_text }}
+                        </div>
+                    </div>
+                </div>
+            {% endform %}
         </div>
     </div>
 </div>
@@ -282,6 +301,22 @@
         "label": "Upsell products",
         "id": "upsell_products",
         "info": "Select the products to display in the upsell block"
+    },
+    {
+        "type": "header",
+        "content": "Shipping"
+    },
+    {
+        "type": "number",
+        "label": "Free shipping amount",
+        "id": "free_shipping_amount",
+        "default": 4599
+    },
+    {
+        "type": "text",
+        "label": "Shipping success message",
+        "id": "shipping_success_message",
+        "default": "<p>Congrats! You've unlocked FREE SHIPPING!</p>"
     }
     
   ]
