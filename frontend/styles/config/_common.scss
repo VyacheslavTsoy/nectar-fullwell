@@ -113,3 +113,7 @@ select {
         color: #B40202;
     }
 }
+
+button, .btn {
+    touch-action: manipulation;
+}
