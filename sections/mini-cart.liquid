@@ -86,7 +86,7 @@
 
                             <span x-show="!item?.selling_plan_allocation">One Time Purchase</span>
                         </div>
-                        <div class="mini-cart__product-price mt-[-0.4rem] font-family-poppins flex items-center gap-2 text-xs text-[#199A47] font-bold" x-text="$store.miniCart.formatMoney(item.final_line_price)" :data-compare-price="item.original_line_price > item.final_line_price ? $store.miniCart.formatMoney(item.original_line_price) : null"></div>
+                        <div class="mini-cart__product-price mt-[-0.4rem] font-family-poppins flex items-center gap-2 text-xs text-[#199A47] font-bold" x-text="formatMoney(item.final_line_price)" :data-compare-price="item.original_line_price > item.final_line_price ? formatMoney(item.original_line_price) : null"></div>
                     </div>
     
                     <div class="mini-cart__product-cta w-[10rem] flex-shrink-0" x-data="{ quantity: item.quantity }">
@@ -202,8 +202,8 @@
             {% form 'cart', cart, class: 'mini-cart__cta-form' %}
                 <div class="mini-cart__cta pt-4" x-show="subscriptionItemsInCart && cart?.total_price > 0">
                     <div class="mini-cart__cta-subtotal flex items-center justify-between mb-3">
-                        <div>Subtotal (<span x-text="$store.miniCart?.cart?.item_count"></span> item)</div>
-                        <div class="price" :data-compare-price="$store.miniCart?.cart?.original_total_price > $store.miniCart?.cart?.total_price ? formatMoney($store.miniCart?.cart?.original_total_price) : null" x-text="$store.miniCart.formatMoney($store.miniCart?.cart?.total_price)"></div>
+                        <div class="font-medium">Subtotal (<span x-text="cart?.item_count"></span> item)</div>
+                        <div class="price font-family-poppins" :data-compare-price="cart?.original_total_price > cart?.total_price ? formatMoney(cart?.original_total_price) : null" x-text="formatMoney(cart?.total_price)"></div>
                     </div>
 
                     <button class="btn btn-primary w-full mini-cart__cta-btn mini-cart__cta-btn--checkout" name="checkout">
