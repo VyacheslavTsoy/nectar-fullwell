@@ -38,6 +38,18 @@
                 <a class="announcement-bar__badge flex items-center gap-2" style="background-color: {{ block.settings.background_color }};" href="{{ block.settings.link }}">
                     {{ block.settings.text }}
                 </a>
+
+                <style>
+                    .announcement-bar {
+                        cursor: pointer;
+                    }
+                </style>
+                <script>
+                    document.querySelector(".announcement-bar").addEventListener("click", function() {
+                        window.location.href = "{{ block.settings.link }}";
+                    });
+                </script>
+                
               {%- when "timer" -%}
                 <div class="announcement-bar__timer" data-timer="{{ block.settings.end_date }}">
                     <div class="timer-block flex items-center gap-2">
