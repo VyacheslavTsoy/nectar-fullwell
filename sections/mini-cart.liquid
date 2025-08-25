@@ -275,6 +275,27 @@
             ],
 
             filteredUpsellProducts: [],
+
+            checkIfFreeProductsOnlyInCart() {
+                const freeProducts = this.cart?.item_count > 0 && this.cart?.total_price === 0;
+                
+                if (freeProducts) {
+                    this.clearCart();
+                }
+            },
+
+            clearCart() {
+                fetch(window.Shopify.routes.root + 'cart/clear.js', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' }
+                })
+                .then(response => {
+                    this.loadCart();
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+            },
     
             loadCart() {
     
@@ -285,6 +306,7 @@
                         this.subscriptionItemsInCart = this.cart?.items?.some(item => item.selling_plan_allocation);
 
                         this.filterUpsellProducts();
+                        this.checkIfFreeProductsOnlyInCart();
                 });
             },
           
@@ -309,6 +331,7 @@
                     console.error('Error:', error);
                 });
             }, 300),
+            
             formatMoney(price) {
                 const newPrice = (price / 100).toFixed(2);
                 return `$${newPrice}`;

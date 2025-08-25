@@ -285,7 +285,7 @@
                     }
                 });
 
-                if (this.giftsProducts.length > 0) {
+                if (this.giftsProducts) {
                     this.giftsProducts.forEach(product => {
                         const ifItemInCart = Alpine.store('miniCart').cart.items.some(item => item.id === product.variant_id);
                         if (product.giftMinQty <= this.currentQty && !ifItemInCart) {
