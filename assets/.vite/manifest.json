@@ -1,0 +1,93 @@
+{
+  "frontend/entrypoints/main.scss": {
+    "file": "main-DPfx_NTF.css",
+    "src": "frontend/entrypoints/main.scss",
+    "isEntry": true
+  },
+  "frontend/entrypoints/main.theme.js": {
+    "file": "main.theme-CxxW8cza.js",
+    "name": "main.theme",
+    "src": "frontend/entrypoints/main.theme.js",
+    "isEntry": true
+  },
+  "frontend/styles/sections/hero.scss": {
+    "file": "hero-Dk2ZBUqo.css",
+    "src": "frontend/styles/sections/hero.scss",
+    "isEntry": true
+  },
+  "frontend/styles/sections/mini-cart.scss": {
+    "file": "mini-cart-tTNc9Nu5.css",
+    "src": "frontend/styles/sections/mini-cart.scss",
+    "isEntry": true
+  },
+  "frontend/styles/sections/mobile-nav.scss": {
+    "file": "mobile-nav-9HFgmHHa.css",
+    "src": "frontend/styles/sections/mobile-nav.scss",
+    "isEntry": true
+  },
+  "frontend/styles/sections/scrollable-features.scss": {
+    "file": "scrollable-features-w25j7Gae.css",
+    "src": "frontend/styles/sections/scrollable-features.scss",
+    "isEntry": true
+  },
+  "public/fonts/atkinson/AtkinsonHyperlegibleNext-Bold.woff2": {
+    "file": "AtkinsonHyperlegibleNext-Bold-D_7jdogo.woff2",
+    "src": "public/fonts/atkinson/AtkinsonHyperlegibleNext-Bold.woff2"
+  },
+  "public/fonts/atkinson/AtkinsonHyperlegibleNext-BoldItalic.woff2": {
+    "file": "AtkinsonHyperlegibleNext-BoldItalic-CWS1Xf8A.woff2",
+    "src": "public/fonts/atkinson/AtkinsonHyperlegibleNext-BoldItalic.woff2"
+  },
+  "public/fonts/atkinson/AtkinsonHyperlegibleNext-ExtraBold.woff2": {
+    "file": "AtkinsonHyperlegibleNext-ExtraBold-BX6Day46.woff2",
+    "src": "public/fonts/atkinson/AtkinsonHyperlegibleNext-ExtraBold.woff2"
+  },
+  "public/fonts/atkinson/AtkinsonHyperlegibleNext-Medium.woff2": {
+    "file": "AtkinsonHyperlegibleNext-Medium-BEsaGZSQ.woff2",
+    "src": "public/fonts/atkinson/AtkinsonHyperlegibleNext-Medium.woff2"
+  },
+  "public/fonts/atkinson/AtkinsonHyperlegibleNext-MediumItalic.woff2": {
+    "file": "AtkinsonHyperlegibleNext-MediumItalic-CJgiFZLe.woff2",
+    "src": "public/fonts/atkinson/AtkinsonHyperlegibleNext-MediumItalic.woff2"
+  },
+  "public/fonts/atkinson/AtkinsonHyperlegibleNext-Regular.woff2": {
+    "file": "AtkinsonHyperlegibleNext-Regular-BunSwk7v.woff2",
+    "src": "public/fonts/atkinson/AtkinsonHyperlegibleNext-Regular.woff2"
+  },
+  "public/fonts/atkinson/AtkinsonHyperlegibleNext-RegularItalic.woff2": {
+    "file": "AtkinsonHyperlegibleNext-RegularItalic-9aJwnWY2.woff2",
+    "src": "public/fonts/atkinson/AtkinsonHyperlegibleNext-RegularItalic.woff2"
+  },
+  "public/fonts/values-sans/ValueSansPro-Black.woff": {
+    "file": "ValueSansPro-Black-mc8XTytr.woff",
+    "src": "public/fonts/values-sans/ValueSansPro-Black.woff"
+  },
+  "public/fonts/values-sans/ValueSansPro-Black.woff2": {
+    "file": "ValueSansPro-Black-8Y7zA2vF.woff2",
+    "src": "public/fonts/values-sans/ValueSansPro-Black.woff2"
+  },
+  "public/fonts/values-sans/ValueSansPro-Bold.woff": {
+    "file": "ValueSansPro-Bold-BJEj63zH.woff",
+    "src": "public/fonts/values-sans/ValueSansPro-Bold.woff"
+  },
+  "public/fonts/values-sans/ValueSansPro-Bold.woff2": {
+    "file": "ValueSansPro-Bold-B9J_n0iy.woff2",
+    "src": "public/fonts/values-sans/ValueSansPro-Bold.woff2"
+  },
+  "public/fonts/values-sans/ValueSansPro-Medium.woff": {
+    "file": "ValueSansPro-Medium-C1v-Ogae.woff",
+    "src": "public/fonts/values-sans/ValueSansPro-Medium.woff"
+  },
+  "public/fonts/values-sans/ValueSansPro-Medium.woff2": {
+    "file": "ValueSansPro-Medium-B4moudHY.woff2",
+    "src": "public/fonts/values-sans/ValueSansPro-Medium.woff2"
+  },
+  "public/fonts/values-sans/ValueSansPro-Regular.woff": {
+    "file": "ValueSansPro-Regular--f78p1Ga.woff",
+    "src": "public/fonts/values-sans/ValueSansPro-Regular.woff"
+  },
+  "public/fonts/values-sans/ValueSansPro-Regular.woff2": {
+    "file": "ValueSansPro-Regular-1veTUK0b.woff2",
+    "src": "public/fonts/values-sans/ValueSansPro-Regular.woff2"
+  }
+}
