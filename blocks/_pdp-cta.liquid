@@ -1,6 +1,14 @@
 {% assign bst = block.settings %}
 {% assign shipping_date = 'now' | date: '%s' %}
 
+{% capture checkout_url %}
+    {% if product.metafields.custom.use_offer_page_with_gifts_instead_checkout %}
+        /pages/offer?product-handle={{ product.handle }}
+    {% else %}
+        /pages/checkout?product-handle={{ product.handle }}
+    {% endif %}
+{% endcapture %}
+
 <div class="product__cta mt-4 md:mt-0">
     <div class="product__cta-shipping bg-[#f4f4f4] flex items-center justify-between rounded-[3rem] px-2 py-2 md:py-[.5rem] md:px-[1.5rem] text-xs md:text-sm">
         <div class="product__cta-shipping-label">
@@ -37,7 +45,7 @@
         </div>
     </div>
     <div class="product__cta-button w-full mt-4">
-        <a href="{{ bst.cta_button_url }}?product-handle={{ product.handle }}" class="btn w-full btn-lg">{{ bst.cta_button_text }}</a>
+        <a href="{{ checkout_url }}" class="btn w-full btn-lg">{{ bst.cta_button_text }}</a>
     </div>
     <div class="product__cta-guarantee mt-4 flex justify-center">
         <div class="product__cta-guarantee-inner bg-[#EEF6FF] rounded-[.6rem] py-[.5rem] px-[0.8rem] md:px-[1.5rem] text-xs md:text-sm flex items-center gap-3 justify-center line-height-[1.2]">
