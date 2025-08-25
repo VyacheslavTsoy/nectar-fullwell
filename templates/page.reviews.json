@@ -11,10 +11,91 @@
   "sections": {
     "main": {
       "type": "main-404",
-      "settings": {}
+      "disabled": true,
+      "settings": {
+        "heading": "404 Page Not Found",
+        "text": "The page you are looking for does not exist.",
+        "button_label": "Go to Home"
+      }
+    },
+    "blank_section_CJAGTG": {
+      "type": "blank-section",
+      "blocks": {
+        "heading_k3DJdM": {
+          "type": "heading",
+          "name": "Heading",
+          "settings": {
+            "title": "<h2>Real, Verified Relief - See Why Millions Say<br/><strong> \"I Had No Idea I Was Even Dehydrated\"</strong></h2>",
+            "text_color": "#123456",
+            "text_alignment": "center",
+            "heading_size": "3xl",
+            "font_weight": "bold",
+            "font_family": "values-sans",
+            "use_mobile_settings": true,
+            "text_alignment_mobile": "center",
+            "heading_size_mobile": "lg",
+            "font_weight_mobile": "bold"
+          },
+          "blocks": {}
+        },
+        "text_dniCqj": {
+          "type": "text",
+          "name": "Text",
+          "settings": {
+            "title": "<p>Note: All reviews below are from actual paying customers. They have been authenticated and verified.</p>",
+            "text_alignment": "center",
+            "font_family": "poppins",
+            "font_weight": "normal",
+            "text_color": "#0d3063",
+            "font_size": 14,
+            "font_size_mobile": 12,
+            "text_alignment_mobile": "center"
+          },
+          "blocks": {}
+        },
+        "banner_9pyHLB": {
+          "type": "banner",
+          "name": "Banner",
+          "settings": {
+            "vertical_padding_desktop": 10,
+            "image": "shopify://shop_images/image-banner.png",
+            "vertical_padding_mobile": 0,
+            "image_mobile": "shopify://shop_images/image-banner-mobile.png"
+          },
+          "blocks": {}
+        },
+        "reviews_total_z4NjDM": {
+          "type": "reviews-total",
+          "name": "Reviews Total",
+          "settings": {
+            "score_1": "4.9",
+            "text_1": "<p>Based on 14,802 reviews</p>",
+            "score_2": "99%",
+            "text_2": "<p>Of reviewers would recommend this product to a friend</p>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_k3DJdM",
+        "text_dniCqj",
+        "banner_9pyHLB",
+        "reviews_total_z4NjDM"
+      ],
+      "name": "Gallery",
+      "settings": {
+        "desktop_padding_top": 50,
+        "desktop_gap_between_blocks": 10,
+        "bg_color": "#f4f9ff",
+        "desktop_max_width": 840,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 30,
+        "mobile_gap_between_blocks": 10
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "blank_section_CJAGTG"
   ]
 }
