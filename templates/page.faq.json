@@ -37,10 +37,212 @@
             "font_weight_mobile": "normal"
           },
           "blocks": {}
+        },
+        "tabs_wGYCiJ": {
+          "type": "tabs",
+          "name": "Tabs",
+          "settings": {},
+          "blocks": {
+            "tab_item_yMMCJc": {
+              "type": "_tab-item",
+              "settings": {
+                "default": false,
+                "title": "Calm",
+                "desktop_padding": 10,
+                "gap_between_blocks": 20,
+                "mobile_padding": 20,
+                "mobile_gap_between_blocks": 10
+              },
+              "blocks": {
+                "text_LNBzMK": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p><strong>Commonly Asked</strong></p>",
+                    "text_alignment": "left",
+                    "font_family": "values-sans",
+                    "font_weight": "normal",
+                    "text_color": "#181d27",
+                    "font_size": 22,
+                    "font_size_mobile": 16,
+                    "text_alignment_mobile": "left"
+                  },
+                  "blocks": {}
+                },
+                "accordion_D9GKAd": {
+                  "type": "accordion",
+                  "name": "Accordion",
+                  "settings": {},
+                  "blocks": {
+                    "accordion_item_nBnGNh": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Who Needs Nectar?",
+                        "answer": ""
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_khVfyV": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Ingredients & Nutrition",
+                        "answer": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "accordion_item_nBnGNh",
+                    "accordion_item_khVfyV"
+                  ]
+                }
+              },
+              "block_order": [
+                "text_LNBzMK",
+                "accordion_D9GKAd"
+              ]
+            },
+            "tab_item_pUkhpP": {
+              "type": "_tab-item",
+              "settings": {
+                "default": false,
+                "title": "Hydration",
+                "desktop_padding": 10,
+                "gap_between_blocks": 20,
+                "mobile_padding": 20,
+                "mobile_gap_between_blocks": 10
+              },
+              "blocks": {
+                "text_7ArWjx": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p><strong>Product</strong></p>",
+                    "text_alignment": "left",
+                    "font_family": "values-sans",
+                    "font_weight": "normal",
+                    "text_color": "#181d27",
+                    "font_size": 22,
+                    "font_size_mobile": 16,
+                    "text_alignment_mobile": "left"
+                  },
+                  "blocks": {}
+                },
+                "accordion_kLWAQK": {
+                  "type": "accordion",
+                  "name": "Accordion",
+                  "settings": {},
+                  "blocks": {
+                    "accordion_item_fNCDtD": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Who Needs Nectar?",
+                        "answer": ""
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_Mb79WD": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Ingredients & Nutrition",
+                        "answer": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "accordion_item_fNCDtD",
+                    "accordion_item_Mb79WD"
+                  ]
+                }
+              },
+              "block_order": [
+                "text_7ArWjx",
+                "accordion_kLWAQK"
+              ]
+            },
+            "tab_item_NNCJzc": {
+              "type": "_tab-item",
+              "settings": {
+                "default": false,
+                "title": "Energy",
+                "desktop_padding": 10,
+                "gap_between_blocks": 20,
+                "mobile_padding": 20,
+                "mobile_gap_between_blocks": 10
+              },
+              "blocks": {
+                "text_eq7R3R": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p><strong>Subscription</strong></p>",
+                    "text_alignment": "left",
+                    "font_family": "values-sans",
+                    "font_weight": "normal",
+                    "text_color": "#181d27",
+                    "font_size": 22,
+                    "font_size_mobile": 16,
+                    "text_alignment_mobile": "left"
+                  },
+                  "blocks": {}
+                },
+                "accordion_zgcm9d": {
+                  "type": "accordion",
+                  "name": "Accordion",
+                  "settings": {},
+                  "blocks": {
+                    "accordion_item_LDVQ3b": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Who Needs Nectar?",
+                        "answer": ""
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_LxyNHb": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Ingredients & Nutrition",
+                        "answer": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "accordion_item_LDVQ3b",
+                    "accordion_item_LxyNHb"
+                  ]
+                }
+              },
+              "block_order": [
+                "text_eq7R3R",
+                "accordion_zgcm9d"
+              ]
+            }
+          },
+          "block_order": [
+            "tab_item_yMMCJc",
+            "tab_item_pUkhpP",
+            "tab_item_NNCJzc"
+          ]
         }
       },
       "block_order": [
-        "heading_nYJWnh"
+        "heading_nYJWnh",
+        "tabs_wGYCiJ"
       ],
       "name": "Default Section",
       "settings": {
