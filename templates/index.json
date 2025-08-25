@@ -447,7 +447,7 @@
             "stars_quantity": 5,
             "text_color": "#0d3063",
             "badge_alignment": "justify-center",
-            "badge_alignment_mobile": "justify-start"
+            "badge_alignment_mobile": "justify-center"
           },
           "blocks": {}
         },
