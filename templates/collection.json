@@ -7,14 +7,132 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
-  "sections": {
-    "main": {
-      "type": "main-404",
-      "settings": {}
-    }
-  },
-  "order": [
-    "main"
-  ]
-}
+ {
+    "sections": {
+      "main": {
+        "type": "main-404",
+        "disabled": true,
+        "settings": {
+          "heading": "404 Page Not Found",
+          "text": "The page you are looking for does not exist.",
+          "button_label": "Go to Home"
+        }
+      },
+      "blank_section_nmbUaA": {
+        "type": "blank-section",
+        "blocks": {
+          "heading_a6VybU": {
+            "type": "heading",
+            "name": "Heading",
+            "settings": {
+              "title": "<h2>Better Days Start Here</h2>",
+              "text_color": "rgba(0,0,0,0)",
+              "text_alignment": "center",
+              "heading_size": "4xl",
+              "font_weight": "black",
+              "font_family": "values-sans",
+              "use_mobile_settings": true,
+              "text_alignment_mobile": "center",
+              "heading_size_mobile": "2xl",
+              "font_weight_mobile": "black"
+            },
+            "blocks": {}
+          },
+          "text_XHAyjj": {
+            "type": "text",
+            "name": "Text",
+            "settings": {
+              "title": "<p><strong>Summer Sale - Up to 60% Off</strong></p>",
+              "text_alignment": "center",
+              "font_family": "poppins",
+              "font_weight": "bold",
+              "text_color": "#0d3063",
+              "font_size": 24,
+              "font_size_mobile": 16,
+              "text_alignment_mobile": "center"
+            },
+            "blocks": {}
+          },
+          "products_grid_MxjXJp": {
+            "type": "products-grid",
+            "name": "Products Grid",
+            "settings": {
+              "desktop_padding": 20,
+              "desktop_columns_per_row": 3,
+              "mobile_padding": 20,
+              "mobile_columns_per_row": 2
+            },
+            "blocks": {
+              "product_card_Efztem": {
+                "type": "_product-card",
+                "name": "Product Card",
+                "settings": {
+                  "use_as_default": false,
+                  "product": "essential-daily-energy",
+                  "featured_image": "shopify://shop_images/Product_Image_7.png",
+                  "text_rating": "<p>Excellent <strong>4.8</strong> | 6,000+ Verified Reviews</p>",
+                  "title": "{{ closest.product.title }}",
+                  "description": "<p>A clean, <em><strong>Daily Electrolyte + Energy</strong></em> mix with Organic Caffeine, L-theanine, and Vitamin B - smooth, all-day energy without the crash.</p>",
+                  "features": "{{ closest.product.metafields.custom.features_list | metafield_tag }}"
+                },
+                "blocks": {}
+              },
+              "product_card_Anr8BB": {
+                "type": "_product-card",
+                "name": "Product Card",
+                "settings": {
+                  "use_as_default": true,
+                  "product": "essential-daily-hydration-1",
+                  "featured_image": "shopify://shop_images/Product_Image_6.png",
+                  "text_rating": "<p>Excellent <strong>4.9</strong> | 12,000+ Verified Reviews</p>",
+                  "title": "{{ closest.product.title }}",
+                  "description": "<p>A clean, <em><strong>Daily Electrolyte</strong></em> mix optimized to hydrate you at the cellular level, faster and more efficiently than water alone.</p>",
+                  "features": "{{ closest.product.metafields.custom.features_list | metafield_tag }}"
+                },
+                "blocks": {}
+              },
+              "product_card_kVVVTi": {
+                "type": "_product-card",
+                "name": "Product Card",
+                "settings": {
+                  "use_as_default": false,
+                  "product": "essential-daily-calm",
+                  "featured_image": "shopify://shop_images/Product_Image_8.png",
+                  "text_rating": "<p>Excellent <strong>4.9</strong> | 1,000+ Verified Reviews</p>",
+                  "title": "{{ closest.product.title }}",
+                  "description": "<p>A clean, <em><strong>Daily Calming</strong></em> mix with clinically studied ingredients - formulated to balance cortisol, reduce stress, and improve sleep.</p>",
+                  "features": "{{ closest.product.metafields.custom.features_list | metafield_tag }}"
+                },
+                "blocks": {}
+              }
+            },
+            "block_order": [
+              "product_card_Efztem",
+              "product_card_Anr8BB",
+              "product_card_kVVVTi"
+            ]
+          }
+        },
+        "block_order": [
+          "heading_a6VybU",
+          "text_XHAyjj",
+          "products_grid_MxjXJp"
+        ],
+        "name": "Featured Products",
+        "settings": {
+          "desktop_padding_top": 40,
+          "desktop_gap_between_blocks": 0,
+          "bg_color": "#ffffff",
+          "desktop_max_width": 1140,
+          "hide_on_mobile": false,
+          "mobile_padding_top": 30,
+          "mobile_gap_between_blocks": 0
+        }
+      }
+    },
+    "order": [
+      "main",
+      "blank_section_nmbUaA"
+    ]
+  }
+  
