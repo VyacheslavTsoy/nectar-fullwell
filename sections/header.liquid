@@ -55,10 +55,26 @@
     </div>
 </header>
 
+{% if ss.is_sticky %}
+    <style>
+      .shopify-section-group-header-group   {
+        position: sticky;
+        top: 0;
+        z-index: 99;
+      }
+    </style>
+{% endif %}
+
 {% schema %}
 {
   "name": "Header",
   "settings": [
+    {
+      "type": "checkbox",
+      "label": "Is Sticky",
+      "id": "is_sticky",
+      "default": false
+    },
     {
       "type": "image_picker",
       "label": "Logo",

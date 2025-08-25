@@ -16,6 +16,11 @@
     transition: all 0.3s ease;
     text-align: center;
 
+    @screen md {
+        padding-left: 2.4rem;
+        padding-right: 2.4rem;
+    }
+
     &:hover {
         background-color: var(--color-laSalleGreen);
         border-color: var(--color-slimyGreen);
@@ -57,7 +62,8 @@
         padding-right: 3.2rem;
 
         @screen lg {
-            background-position: calc(100% - .8rem) center;
+            padding-right: 4rem;
+            background-position: calc(100% - 1.4rem) center;
         }
     }
 

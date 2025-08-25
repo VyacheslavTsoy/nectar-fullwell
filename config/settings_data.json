@@ -40,7 +40,8 @@
               "type": "badge",
               "settings": {
                 "background_color": "#e30000",
-                "text": "UP TO 60% OFF"
+                "text": "UP TO 60% OFF",
+                "link": "shopify://collections/all"
               }
             },
             "timer_FKrgTq": {

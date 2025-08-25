@@ -1,4 +1,17 @@
 {% assign bst = block.settings %}
+{% assign related_product = bst.related_product %}
+
+{% capture btn_url %}
+    {% if related_product != blank %}
+        {% if related_product.metafields.custom.use_offer_page_with_gifts_instead_checkout %}
+            /pages/offer?product-handle={{ related_product.handle }}
+        {% else %}
+            /pages/checkout?product-handle={{ related_product.handle }}
+        {% endif %}
+    {% else %}
+        {{ bst.button_link }}
+    {% endif %}
+{% endcapture %}
 
 {% if bst.hide_on_mobile %}
     <style>
@@ -9,7 +22,7 @@
         }
     </style>
 {% endif %}
-<a href="{{ bst.button_link }}" class="btn w-full btn--{{ bst.button_type }}" id="{{ block.id }}">
+<a href="{{ btn_url }}" class="btn btn--{{ bst.button_type }} {% if related_product != blank %}btn--cart{% endif %}" id="{{ block.id }}">
     {{ bst.button_text }}
 </a>
 
@@ -28,6 +41,12 @@
         "type": "url",
         "label": "Button Link",
         "id": "button_link"
+    },
+    {
+        "type": "product",
+        "label": "Related Product",
+        "id": "related_product",
+        "info": "Use this field only for checkout button"
     },
     {
         "type": "select",

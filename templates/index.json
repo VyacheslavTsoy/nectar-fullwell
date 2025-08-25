@@ -87,6 +87,7 @@
                     "settings": {
                       "button_text": "See All Nectar",
                       "button_link": "#",
+                      "related_product": "",
                       "button_type": "primary",
                       "hide_on_mobile": false
                     },
@@ -210,6 +211,7 @@
                     "settings": {
                       "button_text": "Start Your Daily Wellness Ritual",
                       "button_link": "#",
+                      "related_product": "",
                       "button_type": "primary",
                       "hide_on_mobile": false
                     },
@@ -379,7 +381,7 @@
                   "text_rating": "<p>Excellent <strong>4.8</strong> | 6,000+ Verified Reviews</p>",
                   "title": "{{ closest.product.title }}",
                   "description": "<p>A clean, <em><strong>Daily Electrolyte + Energy</strong></em> mix with Organic Caffeine, L-theanine, and Vitamin B - smooth, all-day energy without the crash.</p>",
-                  "features": "{{ closest.product.metafields.custom.features_list | metafield_tag }}"
+                  "features": "<ul><li>Supercharge Your Hydration</li><li>Boost natural energy & motivation</li><li>Feel happier & more positive</li></ul><p></p>"
                 },
                 "blocks": {}
               },
@@ -393,7 +395,7 @@
                   "text_rating": "<p>Excellent <strong>4.9</strong> | 12,000+ Verified Reviews</p>",
                   "title": "{{ closest.product.title }}",
                   "description": "<p>A clean, <em><strong>Daily Electrolyte</strong></em> mix optimized to hydrate you at the cellular level, faster and more efficiently than water alone.</p>",
-                  "features": "{{ closest.product.metafields.custom.features_list | metafield_tag }}"
+                  "features": "<ul><li>Supercharge Your Hydration</li><li>Boost natural energy & motivation</li><li>Feel happier & more positive</li></ul>"
                 },
                 "blocks": {}
               },
@@ -407,7 +409,7 @@
                   "text_rating": "<p>Excellent <strong>4.9</strong> | 1,000+ Verified Reviews</p>",
                   "title": "{{ closest.product.title }}",
                   "description": "<p>A clean, <em><strong>Daily Calming</strong></em> mix with clinically studied ingredients - formulated to balance cortisol, reduce stress, and improve sleep.</p>",
-                  "features": "{{ closest.product.metafields.custom.features_list | metafield_tag }}"
+                  "features": "<ul><li>Feature 1</li><li>Feature 2</li><li>Feature 3</li></ul>"
                 },
                 "blocks": {}
               }
@@ -517,7 +519,8 @@
                         "name": "Button",
                         "settings": {
                           "button_text": "See More Details",
-                          "button_link": "",
+                          "button_link": "shopify://products/essential-daily-calm-gift",
+                          "related_product": "",
                           "button_type": "secondary",
                           "hide_on_mobile": true
                         },
@@ -527,8 +530,9 @@
                         "type": "button",
                         "name": "Button",
                         "settings": {
-                          "button_text": "Shop Calm",
+                          "button_text": "Choose Package",
                           "button_link": "",
+                          "related_product": "essential-daily-calm-gift",
                           "button_type": "primary",
                           "hide_on_mobile": false
                         },
@@ -592,7 +596,8 @@
                         "name": "Button",
                         "settings": {
                           "button_text": "See More Details",
-                          "button_link": "",
+                          "button_link": "shopify://products/essential-daily-hydration-2",
+                          "related_product": "",
                           "button_type": "secondary",
                           "hide_on_mobile": true
                         },
@@ -602,8 +607,9 @@
                         "type": "button",
                         "name": "Button",
                         "settings": {
-                          "button_text": "Shop Hydration",
+                          "button_text": "Choose Package",
                           "button_link": "",
+                          "related_product": "essential-daily-hydration-1",
                           "button_type": "primary",
                           "hide_on_mobile": false
                         },
@@ -667,7 +673,8 @@
                         "name": "Button",
                         "settings": {
                           "button_text": "See More Details",
-                          "button_link": "",
+                          "button_link": "shopify://products/essential-daily-energy-2",
+                          "related_product": "",
                           "button_type": "secondary",
                           "hide_on_mobile": true
                         },
@@ -677,8 +684,9 @@
                         "type": "button",
                         "name": "Button",
                         "settings": {
-                          "button_text": "Shop Energy",
+                          "button_text": "Choose Package",
                           "button_link": "",
+                          "related_product": "essential-daily-energy",
                           "button_type": "primary",
                           "hide_on_mobile": false
                         },
@@ -727,7 +735,7 @@
             "type": "heading",
             "name": "Heading",
             "settings": {
-              "title": "<h2>Join 1,000,000+ Others Who Have Changed Their Lives With Nectar</h2>",
+              "title": "<h2>Join 1,000,000+ Others Who Have <br/>Changed Their Lives With Nectar</h2>",
               "text_color": "rgba(0,0,0,0)",
               "text_alignment": "center",
               "heading_size": "4xl",
@@ -1529,7 +1537,7 @@
               "reviewsType": "all",
               "showSummary": false,
               "showMediaGallery": false,
-              "reviewsCount": 10,
+              "reviewsCount": 5,
               "containerClass": ""
             }
           }

@@ -35,9 +35,9 @@
                     {{ block.settings.title }}
                 </div>
               {%- when "badge" -%}
-                <div class="announcement-bar__badge flex items-center gap-2" style="background-color: {{ block.settings.background_color }};">
+                <a class="announcement-bar__badge flex items-center gap-2" style="background-color: {{ block.settings.background_color }};" href="{{ block.settings.link }}">
                     {{ block.settings.text }}
-                </div>
+                </a>
               {%- when "timer" -%}
                 <div class="announcement-bar__timer" data-timer="{{ block.settings.end_date }}">
                     <div class="timer-block flex items-center gap-2">
@@ -198,7 +198,7 @@
       ]
     },
     {
-      "name": "Badge",
+      "name": "Button",
       "type": "badge",
       "settings": [
         {
@@ -212,6 +212,11 @@
           "label": "Text",
           "id": "text",
           "default": "UP TO 60% OFF"
+        },
+        {
+          "type": "url",
+          "label": "Link",
+          "id": "link"
         }
       ]
     },
