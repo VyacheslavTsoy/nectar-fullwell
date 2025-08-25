@@ -92,10 +92,32 @@
         "mobile_padding_top": 30,
         "mobile_gap_between_blocks": 10
       }
+    },
+    "apps_UKMgxE": {
+      "type": "apps",
+      "blocks": {
+        "junip_junip_reviews_7pmcyE": {
+          "type": "shopify://apps/junip/blocks/junip-reviews/dc14f5a8-ed15-41b1-ad08-cfba23f9789b",
+          "settings": {
+            "layout": "list",
+            "reviewsType": "all",
+            "showSummary": false,
+            "showMediaGallery": false,
+            "reviewsCount": 5,
+            "containerClass": ""
+          }
+        }
+      },
+      "block_order": [
+        "junip_junip_reviews_7pmcyE"
+      ],
+      "name": "Reviews",
+      "settings": {}
     }
   },
   "order": [
     "main",
-    "blank_section_CJAGTG"
+    "blank_section_CJAGTG",
+    "apps_UKMgxE"
   ]
 }
