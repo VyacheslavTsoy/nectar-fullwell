@@ -145,13 +145,61 @@
                     "accordion_item_qWUKtT",
                     "accordion_item_8DjBjL"
                   ]
+                },
+                "text_7GnDrL": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p><strong>Subscription</strong></p>",
+                    "text_alignment": "left",
+                    "font_family": "values-sans",
+                    "font_weight": "normal",
+                    "text_color": "#181d27",
+                    "font_size": 22,
+                    "font_size_mobile": 16,
+                    "text_alignment_mobile": "left"
+                  },
+                  "blocks": {}
+                },
+                "accordion_yhBJNM": {
+                  "type": "accordion",
+                  "name": "Accordion",
+                  "settings": {},
+                  "blocks": {
+                    "accordion_item_fkEKr3": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Who Needs Nectar?",
+                        "answer": ""
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_CLEg6C": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Ingredients & Nutrition",
+                        "answer": ""
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "accordion_item_fkEKr3",
+                    "accordion_item_CLEg6C"
+                  ]
                 }
               },
               "block_order": [
                 "text_LNBzMK",
                 "accordion_D9GKAd",
                 "text_zicDrY",
-                "accordion_mUKFAe"
+                "accordion_mUKFAe",
+                "text_7GnDrL",
+                "accordion_yhBJNM"
               ]
             },
             "tab_item_pUkhpP": {
