@@ -3,7 +3,7 @@
 <div class="ingredients pt-4" x-data="ingredients">
     <div class="ingredients__grid grid md:grid-cols-2 gap-4">
         {% for ingredient in bst.related_ingredients %}
-            <div class="ingredients__item flex gap-[3.5rem] justify-between items-center py-[2rem] px-[1.5rem] bg-[#FAFAFA] border-[0.1rem] border-[#CCCCCC] rounded-xl text-[#555555]">
+            <div class="ingredients__item flex gap-[3.5rem] justify-between items-center py-[2rem] px-[1.5rem] bg-[#FAFAFA] border-[0.1rem] border-[#CCCCCC] rounded-xl text-[#000000]">
                 <div class="ingredients__item-content">
                     <h3 class="ingredients__item-name text-[#222222] mb-2 md:mb-3 text-baseLg md:text-xl font-black">{{ ingredient.name }}</h3>
                     <div class="ingredients__item-description text-base">{{ ingredient.description | metafield_tag }}</div>
@@ -57,9 +57,6 @@
                     <div class="ingredients__modal-cta flex flex-col text-center gap-3">
                         <a href="#" class="btn w-full btn-lg max-w-[28rem]">
                             Choose Your Package
-                        </a>
-                        <a href="#" class="link underline font-medium">
-                            See More Details
                         </a>
                     </div>
                 </div>
