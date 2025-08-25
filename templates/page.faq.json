@@ -11,10 +11,51 @@
   "sections": {
     "main": {
       "type": "main-404",
-      "settings": {}
+      "disabled": true,
+      "settings": {
+        "heading": "404 Page Not Found",
+        "text": "The page you are looking for does not exist.",
+        "button_label": "Go to Home"
+      }
+    },
+    "blank_section_ykCxJM": {
+      "type": "blank-section",
+      "blocks": {
+        "heading_nYJWnh": {
+          "type": "heading",
+          "name": "Heading",
+          "settings": {
+            "title": "<p>You’ve Got Questions, <br/>We’ve got Answers</p>",
+            "text_color": "#123456",
+            "text_alignment": "center",
+            "heading_size": "4xl",
+            "font_weight": "bold",
+            "font_family": "values-sans",
+            "use_mobile_settings": false,
+            "text_alignment_mobile": "left",
+            "heading_size_mobile": "xl",
+            "font_weight_mobile": "normal"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_nYJWnh"
+      ],
+      "name": "Default Section",
+      "settings": {
+        "desktop_padding_top": 40,
+        "desktop_gap_between_blocks": 20,
+        "bg_color": "#ffffff",
+        "desktop_max_width": 1140,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 30,
+        "mobile_gap_between_blocks": 10
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "blank_section_ykCxJM"
   ]
 }
