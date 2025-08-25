@@ -116,7 +116,11 @@
                         relatedPoucheSellingPlan: '{{ pouch.related_subscription_plan_name }}',
                         title: '{{ pouch.title }}',
                         quantity: '{{ pouch.quantity }}',
-                        saving_percent_subscription: '{{ pouch.saving_percent }}',
+                        {% if template contains 'offer' %}
+                            saving_percent_subscription: '{{ pouch.saving_percent_optionally_offer_page }}',
+                        {% else %}
+                            saving_percent_subscription: '{{ pouch.saving_percent }}',
+                        {% endif %}
                         saving_percent_one_time: '{{ pouch.saving_percent_one_time }}',
                         compare_price_subscription: {{ pouch.crossed_out_price_subscription | default: 0 }},
                         compare_price_one_time: {{ pouch.crossed_out_price_one_time | default: 0 }},
@@ -503,6 +507,12 @@
   #shopify-section-announcement-bar {
     display: none;
   }
+
+  {% if gifts %}
+    .shopify-section-group-header-group {
+      display: none;
+    }
+  {% endif %}
 {% endstyle %}
 
 
@@ -568,6 +578,16 @@
       "id": "cta_label",
       "label": "CTA Label",
       "default": "Go to checkout"
+    },
+    {
+      "type": "richtext",
+      "id": "gurantee_text",
+      "label": "Gurantee Text"
+    },
+    {
+      "type": "richtext",
+      "id": "subscription_details",
+      "label": "Subscription Details"
     }
   ],
   "blocks": [

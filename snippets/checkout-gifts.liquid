@@ -5,7 +5,18 @@
         </div>
 
         <div class="checkout__gifts-description text-sm mt-2 mb-2 font-bold">
-            {{ block.settings.description }}
+            <span x-show="minQty === 1">
+                Add a 2nd Pouch, Get a Energy Sampler
+            </span>
+            <span x-show="minQty === 2">
+                Add a 3rd Pouch, Get a Nectar Water Bottle
+            </span>
+            <span x-show="minQty === 3">
+                Add a 4th Pouch, Get a Nectar Frother
+            </span>
+            <span x-show="minQty === 4">
+                Congratulations! All Gifts Unlocked!
+            </span>
         </div>
 
         <div class="checkout__gifts-products grid grid-cols-4 gap-3">
