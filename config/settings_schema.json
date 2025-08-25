@@ -39,5 +39,15 @@
         "default": "value_sans"
       }
     ]
+  },
+  {
+    "name": "Products",
+    "settings": [
+      {
+        "type": "product_list",
+        "id": "products_storage",
+        "label": "Choose a primary Products"
+      }
+    ]
   }
 ]

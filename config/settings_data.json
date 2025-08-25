@@ -9,6 +9,17 @@
  */
  {
     "current": {
+      "products_storage": [
+        "essential-daily-hydration-new",
+        "essential-daily-hydration-2",
+        "essential-daily-hydration-4-gift",
+        "essential-daily-hydration-1",
+        "essential-daily-energy-2",
+        "essential-daily-energy",
+        "essential-daily-calm-gift",
+        "essential-daily-calm",
+        "energy-sampler"
+      ],
       "header_menu_1": "main-menu",
       "header_menu_2": "",
       "footer_menu_1": "footer-contant",
@@ -117,11 +128,11 @@
             "frequently_bought_together": "Frequently Bought Together",
             "additional_text": "1,000,000+ Happy Customers",
             "upsell_products": [
-              "essential-daily-calm-gift",
-              "essential-daily-energy",
-              "essential-daily-energy-2",
-              "essential-daily-hydration-1"
-            ]
+              "essential-daily-hydration-1",
+              "essential-daily-calm-gift"
+            ],
+            "free_shipping_amount": 4599,
+            "shipping_success_message": "<p>Congrats! You've unlocked FREE SHIPPING!</p>"
           }
         }
       },

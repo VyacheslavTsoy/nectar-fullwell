@@ -3,18 +3,26 @@
 {% assign discountsMetaobjects = metaobjects.discounts.values %}
 
 {% assign pouches = blocks | where: 'type', 'quantity' | first %}
+{% assign gifts = blocks | where: 'type', 'gifts' | first %}
 
 {% if sst.products != blank %}
 <div class="checkout" x-data="checkout">
     <div class="checkout__inner max-w-[42.5rem] mx-auto px-[2rem] py-[2.4rem]">
         {% for block in blocks %}
+            {%- assign index = forloop.index -%}
+            {%- if gifts -%}
+                {%- assign index = index | minus: 1 -%}
+            {%- endif -%}
+
             {% case block.type %}
+                {% when 'gifts' %}
+                    {% render 'checkout-gifts', block: block, index: index %}
                 {% when 'quantity' %}
-                    {% render 'checkout-quantity', block: block, index: forloop.index %}
+                    {% render 'checkout-quantity', block: block, index: index %}
                 {% when 'flavors' %}
-                    {% render 'checkout-flavors', block: block, index: forloop.index %}
+                    {% render 'checkout-flavors', block: block, index: index %}
                 {% when 'frequency' %}
-                    {% render 'checkout-frequency', block: block, index: forloop.index %}
+                    {% render 'checkout-frequency', block: block, index: index %}
             {% endcase %}
         {% endfor %}
     </div>
@@ -62,6 +70,14 @@
     </div>
 </div>
 
+{% capture cart_flow %}
+  {% if sst.cart_flow == 'go-to-checkout' %}
+    true
+  {% else %}
+    false
+  {% endif %}
+{% endcapture %}
+
 <script>
     document.addEventListener('alpine:init', () => {
         Alpine.data('checkout', () => ({
@@ -69,7 +85,9 @@
             subscriptionPricePerStick: 0,
             oneTimePricePerStick: 0,
             freeShippingMinItems: 2,
+            redirectToCheckout: {{ cart_flow }},
             minQty: 0,
+            maxQty: 0,
             currentPouch: null,
             currentQty: 0,
             currentProduct: null,
@@ -112,70 +130,52 @@
                     } {% unless forloop.last %},{% endunless %}
                 {% endfor %}
             ],
-            products: [
-                {% for product in section.settings.products %}
-                    {% assign sellingPlanGroup = product.selling_plan_groups | where: 'app_id', 'SKIO' | first %}
-                    {
-                        id: {{ product.id }},
-                        handle: '{{ product.handle }}',
-                        title: '{{ product.title }}',
-                        price: {{ product.price | default: 0 }},
-                        comparePrice: {{ product.compare_at_price | default: 0 }},
-                        sellingPlans: {{ sellingPlanGroup.selling_plans | json }},
-                        variants: [
-                            {% for variant in product.variants %}
-                                {
-                                    id: {{ variant.id | default: 0 }},
-                                    image: '{{ variant.metafields.custom.variant_image | default: variant.image | image_url: width: 250 }}',
-                                    title: '{{ variant.title }}',
-                                    description: '{{ variant.metafields.custom.variant_description }}',
-                                    price: {{ variant.price | default: 0 }},
-                                    comparePrice: {{ variant.compare_at_price | default: 0 }},
-                                    quantity: 0,
-                                    selling_plan_allocations: [
-                                        {% for sellingPlanAllocation in variant.selling_plan_allocations %}
-                                            {
-                                                selling_plan_id: {{ sellingPlanAllocation.selling_plan.id }},
-                                                price: {{ sellingPlanAllocation.price | default: 0 }},
-                                            } {% unless forloop.last %},{% endunless %}
-                                        {% endfor %}
-                                    ]
-                                } {% unless forloop.last %},{% endunless %}
-                            {% endfor %}
-                        ]
-                    } {% unless forloop.last %},{% endunless %}
-                {% endfor %}
-            ],
+            products: Alpine.store('productsStorage').products || [],
             {% if discountsMetaobjects != blank %}
             discounts: [
-                {% for discount in discountsMetaobjects %}
+                {%- for discount in discountsMetaobjects -%}
                     {
-                        relatedProducts: {% if discount.related_products and discount.related_products.value %}{{ discount.related_products.value | map: 'id' | json }}{% else %}null{% endif %},
+                        relatedProducts: {%- if discount.related_products and discount.related_products.value -%}{{ discount.related_products.value | map: 'id' | json }}{%- else -%}null{%- endif -%},
                         oneTimePrices: [
-                            {% if discount.discounts_thresholds_one_time_purchase and discount.discounts_thresholds_one_time_purchase.value %}
-                                {% for oneTimePrice in discount.discounts_thresholds_one_time_purchase.value %}
+                            {%- if discount.discounts_thresholds_one_time_purchase and discount.discounts_thresholds_one_time_purchase.value -%}
+                                {%- for oneTimePrice in discount.discounts_thresholds_one_time_purchase.value -%}
                                     {% assign priceArray = oneTimePrice | split: '-' %}
                                     {
-                                        quantity: {% if priceArray.size > 0 %}{{ priceArray[0] }}{% else %}0{% endif %},
-                                        discountAmount: {% if priceArray.size > 1 %}{{ priceArray[1] }}{% else %}0{% endif %},
-                                    }{% unless forloop.last %},{% endunless %}
-                                {% endfor %}
+                                        quantity: {%- if priceArray.size > 0 -%}{{ priceArray[0] }}{%- else -%}0{%- endif -%},
+                                        discountAmount: {%- if priceArray.size > 1 -%}{{ priceArray[1] }}{%- else -%}0{%- endif -%},
+                                    }{%- unless forloop.last -%},{%- endunless -%}
+                                {%- endfor -%}
                             {% endif %}
                         ],
                         subscriptionPrices: [
-                            {% if discount.discounts_thresholds_subscription_purchase and discount.discounts_thresholds_subscription_purchase.value %}
-                                {% for subscriptionPrice in discount.discounts_thresholds_subscription_purchase.value %}
+                            {%- if discount.discounts_thresholds_subscription_purchase and discount.discounts_thresholds_subscription_purchase.value -%}
+                                {%- for subscriptionPrice in discount.discounts_thresholds_subscription_purchase.value -%}
                                     {% assign priceArray = subscriptionPrice | split: '-' %}
                                     {
-                                        quantity: {% if priceArray.size > 0 %}{{ priceArray[0] }}{% else %}0{% endif %},
-                                        discountAmount: {% if priceArray.size > 1 %}{{ priceArray[1] }}{% else %}0{% endif %}
-                                    }{% unless forloop.last %},{% endunless %}
-                                {% endfor %}
-                            {% endif %}
+                                        quantity: {%- if priceArray.size > 0 -%}{{ priceArray[0] }}{%- else -%}0{%- endif -%},
+                                        discountAmount: {%- if priceArray.size > 1 -%}{{ priceArray[1] }}{%- else -%}0{%- endif -%}
+                                    }{%- unless forloop.last -%},{%- endunless -%}
+                                {%- endfor -%}
+                            {%- endif -%}
                         ]
-                    }{% unless forloop.last %},{% endunless %}
-                {% endfor %}
+                    }{%- unless forloop.last -%},{%- endunless -%}
+                {%- endfor -%}
             ],
+            {% endif %}
+
+            {% if gifts.settings.products != blank %}
+                giftsProducts: [
+                    {%- for product in gifts.settings.products -%}
+                        {
+                            giftMinQty: {{ forloop.index }},
+                            id: {{ product.id }},
+                            title: '{{ product.title }}',
+                            price: {{ product.price }},
+                            image: '{{ product.featured_image | image_url: width: 300 }}',
+                            variant_id: {{ product.first_available_variant.id | default: product.variants[0].id }}
+                        }{%- unless forloop.last -%},{%- endunless -%}
+                    {%- endfor -%}
+                ],
             {% endif %}
 
             formatMoney(price) {
@@ -185,6 +185,14 @@
 
             countAmountOfChoosedFlavors() {
                 this.currentQty = this.currentProduct.variants.reduce((acc, variant) => acc + variant.quantity, 0);
+                let minQty = this.minQty;
+
+                if (this.currentQty > this.minQty && this.minQty <= this.maxQty) {
+                    minQty = this.currentQty;
+                } else if (this.currentQty > this.maxQty) {
+                    minQty = this.maxQty;
+                }
+                this.updateCurrentPouch(minQty);
 
                 this.setupCurrentDiscount();
             },
@@ -193,7 +201,7 @@
                 this.minQty = minQty ? minQty : this.pouches.reduce((max, pouch) => Math.max(max, pouch.minQty), 0);
                 this.currentPouch = this.pouches.find(pouch => pouch.minQty === this.minQty);
 
-                this.relatedPoucheSellingPlan = this.currentPouch.relatedPoucheSellingPlan;
+                this.relatedPoucheSellingPlan = this.currentPouch?.relatedPoucheSellingPlan;
             },
 
             updateCheckout() {
@@ -234,6 +242,7 @@
                 const pouches = this.pouches;
 
                 this.minQty = pouches.reduce((max, pouch) => Math.max(max, pouch.minQty), 0);
+                this.maxQty = pouches.reduce((max, pouch) => Math.max(max, pouch.minQty), 0);
                 this.updateCurrentPouch();
             },
 
@@ -276,9 +285,20 @@
                     }
                 });
 
-                if (itemsForCart.length > 0) {
+                if (this.giftsProducts.length > 0) {
+                    this.giftsProducts.forEach(product => {
+                        const ifItemInCart = Alpine.store('miniCart').cart.items.some(item => item.id === product.variant_id);
+                        if (product.giftMinQty <= this.currentQty && !ifItemInCart) {
+                            itemsForCart.push({
+                                id: product.variant_id,
+                                quantity: 1
+                            });
+                        }
+                    });
+                }
 
-                    Alpine.store('miniCart').addItem(itemsForCart);
+                if (itemsForCart.length > 0) {
+                    Alpine.store('miniCart').addItem(itemsForCart, this.redirectToCheckout);
                     this.resetCheckout();
                 }
             },
@@ -295,11 +315,7 @@
             init() {
                 this.setupDefaultValues();
 
-                console.log(this.pouches, 5555);
-
-                {% comment %} console.log(this.currentOneTimePrice, this.currentSubscriptionPrice) {% endcomment %}
-
-                {% comment %} console.log(this.currentSinglePrice * this.minQty) {% endcomment %}
+                console.log(this.redirectToCheckout, 111);
             }
         }))
     })
@@ -483,7 +499,8 @@
     gap: 0;
   }
 
-  .shopify-section-group-footer-group {
+  .shopify-section-group-footer-group,
+  #shopify-section-announcement-bar {
     display: none;
   }
 {% endstyle %}
@@ -493,6 +510,22 @@
 {
   "name": "Checkout",
   "settings": [
+    {
+      "type": "select",
+      "id": "cart_flow",
+      "label": "Cart Flow",
+      "default": "add-to-cart",
+      "options": [
+        {
+          "value": "add-to-cart",
+          "label": "Add to Cart"
+        },
+        {
+          "value": "go-to-checkout",
+          "label": "Go to Checkout"
+        }
+      ]
+    },
     {
       "type": "header",
       "content": "Products"
@@ -570,13 +603,37 @@
     },
     {
       "type": "frequency",
-      "name": "Frequency",
+      "name": "Frequencies",
       "settings": [
         {
           "type": "text",
           "id": "title",
           "label": "Title",
           "default": "Select Frequency"
+        }
+      ]
+    },
+    {
+      "type": "gifts",
+      "name": "Gifts",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Unlock Free Gifts!"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Add a 4th Pouch, Get an Electric Nectar Frother"
+        },
+        {
+          "type": "product_list",
+          "id": "products",
+          "label": "Products",
+          "info": "Sort the gift products according to the number of flavors (1,2,3,4)"
         }
       ]
     }

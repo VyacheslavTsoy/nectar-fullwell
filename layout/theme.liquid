@@ -75,5 +75,52 @@
 
     {% comment %} Mini cart {% endcomment %}
     {% section 'mini-cart' %}
+
+    {% if settings.products_storage != blank %}
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.store('productsStorage', {
+                products: [
+                    {% for product in settings.products_storage %}
+                        {% assign sellingPlanGroup = product.selling_plan_groups | where: 'app_id', 'SKIO' | first %}
+                        {
+                            id: {{ product.id }},
+                            handle: '{{ product.handle }}',
+                            title: '{{ product.title }}',
+                            price: {{ product.price | default: 0 }},
+                            comparePrice: {{ product.compare_at_price | default: 0 }},
+                            sellingPlans: {{ sellingPlanGroup.selling_plans | json }},
+                            variants: [
+                                {% for variant in product.variants %}
+                                    {
+                                        id: {{ variant.id | default: 0 }},
+                                        image: '{{ variant.metafields.custom.variant_image | default: variant.image | image_url: width: 250 }}',
+                                        title: '{{ variant.title }}',
+                                        description: '{{ variant.metafields.custom.variant_description }}',
+                                        price: {{ variant.price | default: 0 }},
+                                        comparePrice: {{ variant.compare_at_price | default: 0 }},
+                                        quantity: 0,
+                                        selling_plan_allocations: [
+                                            {% for sellingPlanAllocation in variant.selling_plan_allocations %}
+                                                {
+                                                    selling_plan_id: {{ sellingPlanAllocation.selling_plan.id }},
+                                                    price: {{ sellingPlanAllocation.price | default: 0 }},
+                                                } {% unless forloop.last %},{% endunless %}
+                                            {% endfor %}
+                                        ]
+                                    } {% unless forloop.last %},{% endunless %}
+                                {% endfor %}
+                            ]
+                        } {% unless forloop.last %},{% endunless %}
+                    {% endfor %}
+                ],
+        
+                init() {
+                    console.log(this.products, 111111)
+                }
+            });
+        });
+    </script>
+    {% endif %}
   </body>
 </html>

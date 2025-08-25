@@ -89,7 +89,7 @@
                         <div class="mini-cart__product-price mt-[-0.4rem] font-family-poppins flex items-center gap-2 text-xs text-[#199A47] font-bold" x-text="formatMoney(item.final_line_price)" :data-compare-price="item.original_line_price > item.final_line_price ? formatMoney(item.original_line_price) : null"></div>
                     </div>
     
-                    <div class="mini-cart__product-cta w-[10rem] flex-shrink-0" x-data="{ quantity: item.quantity }">
+                    <div class="mini-cart__product-cta w-[10rem] flex-shrink-0" x-data="{ quantity: item.quantity }" x-show="item.final_line_price > 0">
                         <div class="qty-picker flex items-center gap-2 mb-2 text-[#111111]">
                             <button class="qty-picker__btn" @click="if (quantity > 0) { quantity--; updateItem({ id: item.key, quantity: quantity }) }">
                                 <svg width="10" height="3" viewBox="0 0 10 3" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -113,40 +113,39 @@
             <h3 class="mini-cart__footer-title text-sm font-bold mb-2 text-[#111111]">{{ sst.frequently_bought_together }}:</h3>
             <div class="mini-cart__upsell swiper">
                 <div class="swiper-wrapper">
-                    {% for upsellProduct in sst.upsell_products %}
-
-                    {% assign relVariant = upsellProduct.first_available_variant %}
-                    
-                    <div class="swiper-slide">
-                        <div class="mini-cart__upsell-product gap-4 flex bg-[#E9F4FF] py-2 px-2">
-                            <div class="mini-cart__upsell-image w-[4.7rem] h-[4.7rem] flex-shrink-0">
-                                <a href="{{ upsellProduct.url }}">
-                                    {% render 'img', image: upsellProduct.featured_image, max_width: 240, class: 'w-full h-full object-cover' %}
-                                </a>
-                            </div>
-
-                            <div class="mini-cart__upsell-info text-xs w-full relative">
-                                <h4 class="mini-cart__upsell-title text-xs mb-1 text-base font-bold">
-                                    <a href="{{ upsellProduct.url }}">{{ upsellProduct.title }}</a>
-                                </h4>
-                                <div class="mini-cart__upsell-variant text-xs font-medium mt-0">
-                                    {{ relVariant.title }}
+                    <template x-for="product in filteredUpsellProducts" :key="product.id">
+                        <template x-for="variant in product.variants" :key="variant.id">
+                            <div class="swiper-slide">
+                                <div class="mini-cart__upsell-product gap-4 flex bg-[#E9F4FF] py-2 px-2">
+                                    <div class="mini-cart__upsell-image w-[4.7rem] h-[4.7rem] flex-shrink-0">
+                                        <a :href="product.url">
+                                            <img :src="variant.image" :alt="product.title" class="w-full h-full object-cover">
+                                        </a>
+                                    </div>
+        
+                                    <div class="mini-cart__upsell-info text-xs w-full relative">
+                                        <h4 class="mini-cart__upsell-title text-xs mb-1 text-base font-bold">
+                                            <a :href="product.url" x-text="product.title"></a>
+                                        </h4>
+                                        <div class="mini-cart__upsell-variant text-xs font-medium mt-0">
+                                            <span x-text="variant.title"></span>
+                                        </div>
+                                        <div class="mini-cart__upsell-selling-plan text-[1rem] mt-1 text-[#222222]">
+                                            One Time Add On
+                                        </div>
+                                    </div>
+        
+                                    <div class="mini-cart__upsell-cta flex flex-col items-end">
+                                        <div class="mini-cart__upsell-price font-family-poppins text-sm mb-2 font-bold" x-text="formatMoney(variant.price)"></div>
+        
+                                        <button class="mini-cart__upsell-btn" @click="addItem([{ 'id': variant.id, 'quantity': 1 }])">
+                                            Add+
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="mini-cart__upsell-selling-plan text-[1rem] mt-1 text-[#222222]">
-                                    One Time Add On
-                                </div>
                             </div>
-
-                            <div class="mini-cart__upsell-cta flex flex-col items-end">
-                                <div class="mini-cart__upsell-price font-family-poppins text-sm mb-2 font-bold">{{ relVariant.price | money }}</div>
-
-                                <button class="mini-cart__upsell-btn" @click="addItem([{ 'id': {{relVariant.id}}, 'quantity': 1 }])">
-                                    Add+
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
+                        </template>
+                    </template>
                 </div>
 
                 <div class="swiper-pagination"></div>
@@ -154,7 +153,7 @@
             {% endif %}
             
             <div class="mini-cart__cta pt-[3rem]" x-show="!subscriptionItemsInCart && cart?.total_price > 0">
-                <button class="btn btn-primary w-full mini-cart__cta-btn" data-off-label="{{ sst.save_badge }}">
+                <button class="btn btn-primary w-full mini-cart__cta-btn" data-off-label="{{ sst.save_badge }}" @click="$store.miniCart.upgrateItemsToSubscription()">
                     <span class="mini-cart__cta-btn-text">{{ sst.subscription_cta }}</span>
                     <span class="mini-cart__cta-btn-price flex items-center">
                         <span class="inline-flex items-center gap-2">
@@ -224,7 +223,9 @@
 <div x-data class="mini-cart-overlay" :class="{ 'mini-cart-overlay--active': $store.miniCart.isOpen }" @click="$store.miniCart.isOpen = false"></div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
+
+    document.addEventListener('alpine:init', () => {
+
         const swiper = new Swiper('.mini-cart__upsell.swiper', {
             slidesPerView: 'auto',
             spaceBetween: 6,
@@ -233,11 +234,167 @@
                 clickable: true,
             }
         });
-    });
 
+        const debounce = (func, wait) => {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        };
+    
+        Alpine.store('miniCart', {
+            isOpen: false,
+            cart: null,
+            subscriptionItemsInCart: false,
+            freeShippingCost: 4000,
+            defaultSellingPlanID: 1657143355,
 
+            upsellProducts: [
+                {% for product in section.settings.upsell_products %}
+                {
+                    id: {{ product.id }},
+                    title: '{{ product.title }}',
+                    price: {{ product.price | default: 0 }},
+                    variants: [
+                        {% for variant in product.variants %}
+                        {
+                            id: {{ variant.id }},
+                            title: '{{ variant.title }}',
+                            image: '{{ variant.image | image_url: width: 250 }}',
+                            price: {{ variant.price | default: 0 }},
+                        } {% unless forloop.last %},{% endunless %}
+                        {% endfor %}
+                    ]
+                } {% unless forloop.last %},{% endunless %}
+                {% endfor %}
+            ],
+
+            filteredUpsellProducts: [],
+    
+            loadCart() {
+    
+                fetch(window.Shopify.routes.root + 'cart.js')
+                    .then(response => response.json())
+                    .then(data => {
+                        this.cart = data;
+                        this.subscriptionItemsInCart = this.cart?.items?.some(item => item.selling_plan_allocation);
+
+                        this.filterUpsellProducts();
+                });
+            },
+          
+            updateItem: debounce((item) => {
+                console.log(item, 9999)
+                let updates = {
+                    [item.id]: item.quantity
+                };
+                
+                fetch(window.Shopify.routes.root + 'cart/update.js', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ updates })
+                })
+                .then(response => {
+                    Alpine.store('miniCart').loadCart();
+                    return response.json();
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+            }, 300),
+            formatMoney(price) {
+                const newPrice = (price / 100).toFixed(2);
+                return `$${newPrice}`;
+            },
+    
+            addItem(items, redirectToCheckout) {
+                let formData = {
+                    'items': items,
+                };
+                
+                fetch(window.Shopify.routes.root + 'cart/add.js', {
+                    method: 'POST',
+                    headers: {
+                    'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                })
+                .then(response => {
+                    this.loadCart();
+                
+                    if (redirectToCheckout) {
+                        window.location.href = window.Shopify.routes.root + 'checkout';
+                    } else {
+                        this.isOpen = true;
+                    }
+
+                    return response.json();
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+            },
+
+            filterUpsellProducts() {
+                const cartItems = this.cart?.items?.map(item => item.product_id);
+                const products = this.upsellProducts;
+
+                this.filteredUpsellProducts = products.filter(product => !cartItems.includes(product.id));
+
+                if (!this.filteredUpsellProducts.length) {
+                    this.filteredUpsellProducts = this.upsellProducts;
+                }
+
+                setTimeout(() => {
+                    swiper.update();
+                }, 100);
+                
+            },
+    
+            async upgrateItemsToSubscription() {
+                const updates = {};
+                const itemsToAdd = this.cart?.items?.map(item => ({
+                    id: item.variant_id,
+                    quantity: item.quantity,
+                    selling_plan: this.defaultSellingPlanID
+                }));
+    
+                this.cart?.items?.forEach(item => {
+                    updates[item.key] = 0;
+                });
+                
+    
+                await fetch(window.Shopify.routes.root + 'cart/update.js', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ updates })
+                });
+    
+                await fetch(window.Shopify.routes.root + 'cart/add.js', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ items: itemsToAdd })
+                });
+    
+                this.loadCart();
+            },
+      
+            init() {
+                this.loadCart();
+            }
+        });
+      });
     
 </script>
+
+
 
 {% schema %}
 {
