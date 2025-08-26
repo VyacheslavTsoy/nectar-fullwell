@@ -71,7 +71,7 @@
           "product_MyzcVD": {
             "type": "product",
             "settings": {
-              "product_image": "shopify://shop_images/featured-image.jpg",
+              "product_image": "shopify://shop_images/hydration-tab-img10x.png",
               "product_url": "shopify://products/essential-daily-hydration-1",
               "product_title": "Essential Daily Hydration",
               "sold_badge": "<p>In Last 24 Hours <strong>1200+ Sold!</strong></p>",
@@ -81,7 +81,7 @@
           "product_tHkepp": {
             "type": "product",
             "settings": {
-              "product_image": "shopify://shop_images/Product_Image_7.png",
+              "product_image": "shopify://shop_images/energy-tab-img10x.png",
               "product_url": "shopify://products/essential-daily-energy-2",
               "product_title": "Essential Daily Energy",
               "sold_badge": "<p>In Last 24 Hours <strong>634+ Sold!</strong></p>",
