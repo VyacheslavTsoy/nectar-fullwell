@@ -7,7 +7,7 @@
 
 {% if sst.products != blank %}
 <div class="checkout" x-data="checkout">
-    <div class="checkout__inner max-w-[42.5rem] mx-auto px-[2rem] py-[2.4rem]">
+    <div class="checkout__inner max-w-[42.5rem] mx-auto px-[2rem] py-[2.4rem] pb-[1.2rem]">
         {% for block in blocks %}
             {%- assign index = forloop.index -%}
             {%- if gifts -%}
@@ -509,11 +509,36 @@
   }
 
   {% if gifts %}
-    .shopify-section-group-header-group {
+    .header .header__nav,
+    .header .header__tools,
+    .header .header__burger {
       display: none;
+    }
+
+    .header__logo {
+        display: flex;
+        cursor: default;
+        justify-content: center;
+    }
+
+    .header__logo a{
+        cursor: default;
+    }
+
+    .header__text  {
+        display: block;
     }
   {% endif %}
 {% endstyle %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const headerLogo = document.querySelector('.header__logo a');
+        headerLogo.addEventListener('click', (e) => {
+            e.preventDefault();
+        });
+    });
+</script>
 
 
 {% schema %}

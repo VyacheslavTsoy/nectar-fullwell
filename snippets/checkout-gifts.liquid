@@ -1,7 +1,7 @@
 <section class="checkout__part mb-[1.6rem]">
     <div class="checkout__gifts text-center bg-[#e2f0ff] py-[0.8rem] px-[1.2rem] rounded-[1.2rem]" style="border: 1px dashed #75bdff;">
         <div class="checkout__gifts-header">
-            <h2 class="checkout__gifts-title text-[1.8rem] p-[.35rem] bg-white text-center rounded-[.6rem] font-bold">  {{ block.settings.title }}</h2>
+            <h2 class="checkout__gifts-title text-[1.8rem] p-[.35rem] bg-white text-center rounded-[.6rem] font-bold"> {{ block.settings.title }}</h2>
         </div>
 
         <div class="checkout__gifts-description text-sm mt-2 mb-2 font-bold">
@@ -28,7 +28,7 @@
                     }"
                 >
                     <div class="checkout__gifts-product-inner rounded-[.8rem] overflow-hidden">
-                        <div class="checkout__gifts-product-price uppercase text-xs text-white bg-coolBlack px-[.4rem] py-[.3rem]">
+                        <div class="checkout__gifts-product-price uppercase text-[1.1rem] md:text-xs text-white bg-coolBlack px-[.4rem] py-[.3rem]">
                             free <span class="line-through" x-text="formatMoney(product.price)"></span>
                         </div>
 
@@ -47,7 +47,7 @@
 
                     </div>
 
-                    <div class="checkout__gifts-product-name text-xs mt-1">
+                    <div class="checkout__gifts-product-name whitespace-nowrap text-center font-medium md:font-normal text-[1.1rem] md:text-xs mt-1">
                         <span x-text="product.title"></span>
                     </div>
                 </div>

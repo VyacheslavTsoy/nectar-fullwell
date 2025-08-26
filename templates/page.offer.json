@@ -15,7 +15,7 @@
           "gifts_H7LD9V": {
             "type": "gifts",
             "settings": {
-              "title": "Unlock Free Gifts!",
+              "title": "Unlock Free Gifts! 🎁",
               "description": "Add a 4th Pouch, Get an Electric Nectar Frother",
               "products": [
                 "free-shipping",
@@ -78,7 +78,7 @@
           "label_subscription_description": "<ul><li><em><strong>Free Expedited Shipping*</strong></em></li><li><em><strong>Free $35.99 Mystery Gift</strong></em> on Order #3</li><li>Easily Pause, Cancel or Adjust Flavors <em><strong>Any Time</strong></em></li></ul>",
           "cta_label": "Go to checkout",
           "gurantee_text": "<p>Less than 1% of customers claim our <br/><strong>90 Day Money Back Guarantee*</strong></p>",
-          "subscription_details": "<p>Refill ships in 3 months. Change or cancel easily. Free shipping & Gifts with 1st purchase.</p>"
+          "subscription_details": "<p>Refill ships in <em>3</em> months. Change or cancel easily. Free shipping & Gifts with 1st purchase.</p>"
         }
       }
     },

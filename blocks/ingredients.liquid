@@ -1,5 +1,7 @@
 {% assign bst = block.settings %}
 
+{% assign ingredient_modal = bst.ingredient_modal_metaobject %}
+
 {% capture checkout_url %}
     {% if product.metafields.custom.use_offer_page_with_gifts_instead_checkout %}
         /pages/offer?product-handle={{ product.handle }}
@@ -22,7 +24,7 @@
             </div>
         {% endfor %}
     </div>
-    {% if bst.btn_text != blank or bst.ingredient_modal_image_desktop or bst.ingredient_modal_image_mobile %}
+    {% if bst.btn_text != blank or ingredient_modal.image_desktop or ingredient_modal.image_mobile %}
     <div class="buttons-group flex flex-col md:flex-row justify-center items-center mt-8">
     
         <button class="btn btn--aqua" @click="openModal = !openModal">
@@ -31,7 +33,7 @@
     </div>
     {% endif %}
 
-    {% if bst.ingredient_modal_image_desktop or bst.ingredient_modal_image_mobile or bst.ingredient_caption != blank %}
+    {% if ingredient_modal != blank %}
     <div class="ingredients__modal flex items-start justify-center" :class="{ 'active': openModal }">
         <div class="ingredients__modal-overlay fixed inset-0 bg-black opacity-50" @click="openModal = false"></div>
         <div class="ingredients__modal-content w-full max-w-[72.6rem] p-[1.6rem] md:p-[3rem] mx-auto bg-white md:bg-[#E2F0FF] border-[3px] border-[#4B8ECB] rounded-[2rem] relative">
@@ -49,18 +51,23 @@
             {% endif %}
 
             <div class="ingredients__modal-image">
-                <div class="ingredients__modal-image-desktop hidden md:block">
-                    {% render 'img', image: bst.ingredient_modal_image_desktop, max_width: 1400 %}
-                </div>
-                <div class="ingredients__modal-image-mobile block md:hidden">
-                    {% render 'img', image: bst.ingredient_modal_image_mobile, max_width: 1400 %}
-                </div>
+                {% for image in ingredient_modal.table_images.value %}
+                    {% if forloop.first %}
+                        <div class="ingredients__modal-image-desktop hidden md:block">
+                            {% render 'img', image: image, max_width: 1400 %}
+                        </div>
+                    {% else %}
+                        <div class="ingredients__modal-image-mobile block md:hidden">
+                            {% render 'img', image: image, max_width: 1400 %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
 
-            {% if bst.ingredient_caption != blank %}
-                <div class="grid md:grid-cols-[var(--desktop-layout)] pt-6 gap-[2.4rem]" style="--desktop-layout: 1fr 28rem;">
-                    <div class="ingredients__modal-caption font-family-poppins text-xs md:text-base">
-                        {{ bst.ingredient_caption }}
+            {% if ingredient_modal.ingredients_description != blank %}
+                <div class="grid md:grid-cols-[var(--desktop-layout)] pt-3 md:pt-6 gap-4 md:gap-[2.4rem]" style="--desktop-layout: 1fr 28rem;">
+                    <div class="ingredients__modal-caption font-family-poppins text-[1.5rem]  md:text-base">
+                        {{ ingredient_modal.ingredients_description | metafield_tag }}
                     </div>
                     <div class="ingredients__modal-cta flex flex-col text-center gap-3">
                         <a href="{{ checkout_url }}" class="btn w-full btn-lg max-w-[28rem]">
@@ -137,19 +144,10 @@
       "label": "Ingredient modal logo"
     },
     {
-      "type": "image_picker",
-      "id": "ingredient_modal_image_desktop",
-      "label": "Ingredient modal image desktop"
-    },
-    {
-      "type": "image_picker",
-      "id": "ingredient_modal_image_mobile",
-      "label": "Ingredient modal image mobile"
-    },
-    {
-      "type": "richtext",
-      "id": "ingredient_caption",
-      "label": "Ingredient caption"
+      "type": "metaobject",
+      "id": "ingredient_modal_metaobject",
+      "label": "Ingredient Metaobject",
+      "metaobject_type": "ingredients_modal"
     }
   ],
   "presets": [
