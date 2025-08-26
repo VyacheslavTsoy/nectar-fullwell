@@ -7,25 +7,21 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
-    "type": "footer",
-    "name": "Footer group",
-    "sections": {
-      "footer": {
-        "type": "footer",
-        "settings": {
-          "footer_menu_1": "footer-shop",
-          "footer_menu_2": "footer-about",
-          "foter_logo": "shopify://shop_images/logo.svg",
-          "text_color": "#ffffff",
-          "text_1": "<p>No statements found on the drinknectar.com site or advertised by Drink Nectar Inc. have been approved by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease. Testimonials found at drinknectar.com are unverified results, and may not reflect the typical purchaser's experience, may not apply to the average person and are not intended to represent or guarantee that anyone will achieve the same or similar results.</p>",
-          "text_2": "<p>Information on the Drink Nectar Inc. site is provided for informational purposes only. It is not meant to substitute for medical advice from your physician or other medical professional. You should not use the information contained herein for diagnosing or treating a health problem or disease, or prescribing any medication. Carefully read all product documentation. If you have or suspect that you have a medical problem, promptly contact your regular health care provider.</p>",
-          "copyright": "<p>© 2025, Drink Nectar Inc.</p>"
-        }
+{
+  "type": "footer",
+  "name": "Footer group",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "settings": {
+        "text_color": "#ffffff",
+        "text_1": "<p>No statements found on the drinknectar.com site or advertised by Drink Nectar Inc. have been approved by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease. Testimonials found at drinknectar.com are unverified results, and may not reflect the typical purchaser's experience, may not apply to the average person and are not intended to represent or guarantee that anyone will achieve the same or similar results.</p>",
+        "text_2": "<p>Information on the Drink Nectar Inc. site is provided for informational purposes only. It is not meant to substitute for medical advice from your physician or other medical professional. You should not use the information contained herein for diagnosing or treating a health problem or disease, or prescribing any medication. Carefully read all product documentation. If you have or suspect that you have a medical problem, promptly contact your regular health care provider.</p>",
+        "copyright": "<p>© 2025, Drink Nectar Inc.</p>"
       }
-    },
-    "order": [
-      "footer"
-    ]
-  }
-  
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}
