@@ -24,7 +24,7 @@
             </div>
         {% endfor %}
     </div>
-    {% if bst.btn_text != blank or ingredient_modal.image_desktop or ingredient_modal.image_mobile %}
+    {% if bst.btn_text != blank and ingredient_modal != blank %}
     <div class="buttons-group flex flex-col md:flex-row justify-center items-center mt-8">
     
         <button class="btn btn--aqua" @click="openModal = !openModal">
