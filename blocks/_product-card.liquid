@@ -12,7 +12,7 @@
     {% endif %}
 {% endcapture %}
 
-<div class="product-card" data-puprose="{{ productPuprose }}" {% if bst.use_as_default %}x-init="activePuprose = '{{ productPuprose }}'"{% endif %}>
+<div class="product-card" data-puprose="{{ productPuprose }}">
     <div class="product-card__image">
         <a href="{{ product.url }}" class="block">
             {% render 'img', image: featured_image, max_width: 400, alt: product.title %}

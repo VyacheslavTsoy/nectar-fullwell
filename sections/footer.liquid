@@ -1,11 +1,126 @@
 {% assign sst = section.settings %}
 <footer class="footer text-base pt-[3rem] md:pt-[5rem] pb-[2rem]" style="background-color: {{ sst.background_color }}; color: {{ sst.text_color }}">
     <div class="container">
+        <div class="footer__main mb-[3rem]">
+            <div class="flex flex-row flex-wrap md:items-end">
+                <div class="w-[50%] md:w-[25%] order-2 md:order-1 font-family-poppins ">
+                    {% if sst.footer_menu_1 != blank %}
+                        <h3 class="md:text-[2.6rem] font-bold mb-6 md:mb-[2rem] text-[#469AFF]">
+                            Shop
+                        </h3>
+                        <ul class="footer__menu text-sm md:text-[2.2rem] font-medium flex flex-col gap-y-[1rem] md:gap-y-[1.5rem]">
+                            {% for link in sst.footer_menu_1.links %}
+                                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+
+                <div class="w-full md:w-[50%] order-1 md:order-2 text-center flex flex-col items-center mb-8 md:mb-4">
+                    {% if sst.foter_logo != blank %}
+                        <div class="w-[15rem] md:w-[24rem] text-center">
+                            {% render 'img', image: sst.foter_logo, max_width: 300, class: 'w-full h-full object-contain' %}
+                        </div>
+                    {% endif %}
+
+                    <ul class="icon_ul mb-6 md:mb-8 mt-6 md:mt-[5rem]" style="display:flex; gap:15px; list-style:none; align-items: center; justify-content:center; padding:0px;"><li style="display:flex; gap:9px; align-items: center;"> <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 7.5C15 11.6421 11.6421 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5ZM11.2784 4.65907C11.0038 4.38448 10.5586 4.38448 10.2841 4.65907C10.2774 4.6657 10.2712 4.67272 10.2654 4.6801L7.01006 8.8282L5.04738 6.86552C4.7728 6.59093 4.3276 6.59093 4.05302 6.86552C3.77843 7.14011 3.77843 7.5853 4.05302 7.85989L6.53406 10.3409C6.80865 10.6155 7.25384 10.6155 7.52843 10.3409C7.53454 10.3348 7.54032 10.3284 7.54572 10.3216L11.2884 5.64326C11.553 5.36795 11.5496 4.93029 11.2784 4.65907Z" fill="#469AFF"></path>
+                        </svg>
+                        <p>No Spam Ever</p></li>
+                                                 
+                        <li style="display:flex; gap:9px; align-items: center;"> <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 7.5C15 11.6421 11.6421 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5ZM11.2784 4.65907C11.0038 4.38448 10.5586 4.38448 10.2841 4.65907C10.2774 4.6657 10.2712 4.67272 10.2654 4.6801L7.01006 8.8282L5.04738 6.86552C4.7728 6.59093 4.3276 6.59093 4.05302 6.86552C3.77843 7.14011 3.77843 7.5853 4.05302 7.85989L6.53406 10.3409C6.80865 10.6155 7.25384 10.6155 7.52843 10.3409C7.53454 10.3348 7.54032 10.3284 7.54572 10.3216L11.2884 5.64326C11.553 5.36795 11.5496 4.93029 11.2784 4.65907Z" fill="#469AFF"></path>
+                        </svg>
+                         <p>Best Deals Only</p></li>
+                                                 
+                        
+                    </ul>
+                    
+                    {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
+                        <input type="hidden" name="contact[tags]" value="newsletter">
+                        <div class="newsletter-form__field-wrapper">
+                          <div class="field relative">
+                            <input
+                              id="NewsletterForm--{{ section.id }}"
+                              type="email"
+                              name="contact[email]"
+                              class="field__input h-[5.6rem] md:h-[6.3rem] w-full max-w-[52rem] pl-[2.6rem] pr-[17rem] rounded-[4rem] bg-white text-sm md:text-[2.2rem] font-medium leading-[3.3rem] text-left text-[#000000] placeholder:text-[#8E8E8E] placeholder:opacity-100 placeholder:font-family-Poppins md:placeholder:text-[2.2rem] placeholder:font-medium placeholder:leading-[3.3rem] placeholder:text-left"
+                              value="{{ form.email }}"
+                              aria-required="true"
+                              autocorrect="off"
+                              autocapitalize="off"
+                              autocomplete="email"
+                              {% if form.errors %}
+                                autofocus
+                                aria-invalid="true"
+                                aria-describedby="ContactFooter-error"
+                              {% elsif form.posted_successfully? %}
+                                aria-describedby="ContactFooter-success"
+                              {% endif %}
+                              placeholder="Enter Your Email"
+                              required
+                            >
+                            <label class="field__label" for="NewsletterForm--{{ section.id }}">
+                             
+                            </label>
+                            <button
+                              type="submit"
+                              class="newsletter-form__button block md:w-[15rem] px-8 absolute right-[.8rem] bg-[#0D3063] text-sm md:text-baseLg font-bold rounded-[4rem] text-white top-[50%] translate-y-[-50%] h-[4.2rem] md:h-[5rem] z-2"
+                              name="commit"
+                              id="Subscribe"
+                              aria-label="{{ 'newsletter.button_label' | t }}"
+                            >
+                              <span class="svg-wrapper">
+                                Sign Up
+                              </span>
+                            </button>
+                          </div>
+                          {%- if form.errors -%}
+                            <small class="newsletter-form__message form__message" id="ContactFooter-error">
+                              <span class="svg-wrapper">
+                                {{- 'icon-error.svg' | inline_asset_content -}}
+                              </span>
+                              {{- form.errors.translated_fields.email | capitalize }}
+                              {{ form.errors.messages.email -}}
+                            </small>
+                          {%- endif -%}
+                        </div>
+                        {%- if form.posted_successfully? -%}
+                          <h3
+                            class="newsletter-form__message newsletter-form__message--success form__message"
+                            id="ContactFooter-success"
+                            tabindex="-1"
+                            autofocus
+                          >
+                            <span class="svg-wrapper">
+                              {{- 'icon-success.svg' | inline_asset_content -}}
+                            </span>
+                            {{- 'newsletter.success' | t }}
+                          </h3>
+                        {%- endif -%}
+                      {%- endform -%}
+                </div>
+
+                <div class="w-[50%] md:w-[25%] order-3 md:order-3 font-family-poppins">
+                    <h3 class="md:text-[2.6rem] font-bold mb-6 md:mb-[2rem] text-[#469AFF]">
+                        About
+                    </h3>
+                    {% if sst.footer_menu_2 != blank %}
+                        <ul class="footer__menu text-sm md:text-[2.2rem] font-medium flex flex-col gap-y-[1rem] gap-y-[1.5rem]">
+                            {% for link in sst.footer_menu_2.links %}
+                                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
         <div class="footer__content flex flex-col gap-y-5 md:gap-y-7">
-            <div class="footer__content-item p-4" style="border-radius: 1.2rem; border: 1px solid #FFFFFF;">
+            <div class="footer__content-item p-4 text-sm" style="border-radius: 1.2rem; border: 1px solid #FFFFFF;">
                 {{ sst.text_1 }}
             </div>
-            <div class="footer__content-item">
+            <div class="footer__content-item text-sm">
                 {{ sst.text_2 }}
             </div>
 
@@ -32,11 +147,27 @@
   "name": "Footer",
   "settings": [
     {
-      "type": "color",
-      "label": "Background color",
-      "id": "background_color",
-      "default": "#0D3063"
+      "type": "link_list",
+      "label": "Footer menu 1",
+      "id": "footer_menu_1"
     },
+    {
+      "type": "link_list",
+      "label": "Footer menu 2",
+      "id": "footer_menu_2"
+    },
+    {
+      "type": "image_picker",
+      "label": "Footer Logo",
+      "id": "foter_logo"
+    },
+    {
+        "type": "color",
+        "label": "Text color",
+        "id": "background_color",
+        "default": "#153164"
+    },
+
     {
       "type": "color",
       "label": "Text color",

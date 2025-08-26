@@ -1,5 +1,13 @@
 {% assign bst = block.settings %}
 
+{% capture checkout_url %}
+    {% if product.metafields.custom.use_offer_page_with_gifts_instead_checkout %}
+        /pages/offer?product-handle={{ product.handle }}
+    {% else %}
+        /pages/checkout?product-handle={{ product.handle }}
+    {% endif %}
+{% endcapture %}
+
 <div class="ingredients pt-4" x-data="ingredients">
     <div class="ingredients__grid grid md:grid-cols-2 gap-4">
         {% for ingredient in bst.related_ingredients %}
@@ -55,7 +63,7 @@
                         {{ bst.ingredient_caption }}
                     </div>
                     <div class="ingredients__modal-cta flex flex-col text-center gap-3">
-                        <a href="#" class="btn w-full btn-lg max-w-[28rem]">
+                        <a href="{{ checkout_url }}" class="btn w-full btn-lg max-w-[28rem]">
                             Choose Your Package
                         </a>
                     </div>

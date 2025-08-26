@@ -17,7 +17,7 @@
     <div class="btn-group w-full md:w-auto flex gap-2 md:justify-center mb-4 lg:hidden">
         <div class="btn-group__inner py-1.5 px-1.5 flex gap-2 w-full md:w-auto">
             <template x-for="puprose in puproses" :key="puprose">
-                <button class="btn-sm w-[33.3%] md:w-auto" x-text="puprose" @click="activePuprose = puprose" :class="{ 'btn-sm--active': puprose === activePuprose }"></button>
+                <button class="btn-sm w-[33.3%] md:w-auto" x-text="puprose" @click="Alpine.store('productsStorage').activePurpose = puprose; filterByPuprose()" :class="{ 'btn-sm--active': Alpine.store('productsStorage').activePurpose == puprose }"></button>
             </template>
         </div>
     </div>
@@ -50,11 +50,11 @@
                 const parentEl = this.$el.closest('.products-grid');
                 const products = parentEl.querySelectorAll('.product-card[data-puprose]');
 
-                if (window.innerWidth > 768 || !this.activePuprose) return;
-            
+                if (window.innerWidth > 768) return;
+
                 products.forEach(product => {
                     product.style.display =
-                    product.dataset.puprose === this.activePuprose ? 'block' : 'none';
+                    product.dataset.puprose == Alpine.store('productsStorage').activePurpose ? 'block' : 'none';
                 });
             },
           

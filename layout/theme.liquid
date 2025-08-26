@@ -80,6 +80,7 @@
     <script>
         document.addEventListener('alpine:init', () => {
             Alpine.store('productsStorage', {
+                activePurpose: 'Hydration',
                 products: [
                     {% for product in settings.products_storage %}
                         {% assign sellingPlanGroup = product.selling_plan_groups | where: 'app_id', 'SKIO' | first %}
@@ -116,7 +117,7 @@
                 ],
         
                 init() {
-                    console.log(this.products, 111111)
+                    console.log(this.activePurpose, 111111)
                 }
             });
         });
