@@ -521,7 +521,7 @@
                       "name": "Button",
                       "settings": {
                         "button_text": "See More Details",
-                        "button_link": "shopify://products/essential-daily-calm-gift",
+                        "button_link": "https://drinknectar.co/products/essential-daily-calm",
                         "related_product": "",
                         "button_type": "secondary",
                         "hide_on_mobile": true
@@ -598,7 +598,7 @@
                       "name": "Button",
                       "settings": {
                         "button_text": "See More Details",
-                        "button_link": "shopify://products/essential-daily-hydration-2",
+                        "button_link": "https://drinknectar.co/products/essential-daily-hydration-1",
                         "related_product": "",
                         "button_type": "secondary",
                         "hide_on_mobile": true
@@ -675,7 +675,7 @@
                       "name": "Button",
                       "settings": {
                         "button_text": "See More Details",
-                        "button_link": "shopify://products/essential-daily-energy-2",
+                        "button_link": "shopify://products/essential-daily-energy",
                         "related_product": "",
                         "button_type": "secondary",
                         "hide_on_mobile": true
