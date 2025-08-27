@@ -482,13 +482,7 @@
                   "type": "table",
                   "name": "Table",
                   "settings": {
-                    "table_items": [
-                      "energy-title-item",
-                      "energy-item-2",
-                      "energy-item-3",
-                      "energy-item-4",
-                      "energy-item-5"
-                    ]
+                    "table_items": "{{ closest.product.metafields.custom.comparison_table_items.value }}"
                   },
                   "blocks": {}
                 },
