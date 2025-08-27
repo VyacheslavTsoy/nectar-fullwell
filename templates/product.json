@@ -573,15 +573,7 @@
           "type": "reviews",
           "name": "Reviews",
           "settings": {
-            "reviews": [
-              "reviews-ngko8ewg",
-              "jason-statham",
-              "diana-moor",
-              "abby-x",
-              "rachel-p",
-              "katie-e",
-              "katie-anderson"
-            ],
+            "reviews": "{{ closest.product.metafields.custom.featured_reviews.value }}",
             "activate_filters": true,
             "desktop_padding": 0,
             "desktop_columns_per_row": 3,
