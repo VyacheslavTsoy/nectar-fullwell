@@ -92,7 +92,7 @@
             "type": "product",
             "settings": {
               "product_image": "shopify://shop_images/calm-tab-image.png",
-              "product_url": "shopify://products/essential-daily-calm-gift",
+              "product_url": "shopify://products/essential-daily-calm",
               "product_title": "Essential Daily Calm",
               "sold_badge": "<p>In Last 24 Hours <strong>248+ Sold!</strong></p>",
               "review_badge": "<p><strong>4.9</strong> | 13,212 Reviews</p>"
