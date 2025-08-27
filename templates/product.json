@@ -541,6 +541,9 @@
       "block_order": [
         "layout_WzXJWh"
       ],
+      "custom_css": [
+        "@media (min-width: 768px) {.table-block td:first-child {width: 13rem; min-width: 13rem; }}"
+      ],
       "name": "Comparison",
       "settings": {
         "desktop_padding_top": 50,
