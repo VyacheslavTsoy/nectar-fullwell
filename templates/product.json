@@ -482,13 +482,7 @@
                   "type": "table",
                   "name": "Table",
                   "settings": {
-                    "table_items": [
-                      "energy-title-item",
-                      "energy-item-2",
-                      "energy-item-3",
-                      "energy-item-4",
-                      "energy-item-5"
-                    ]
+                    "table_items": "{{ closest.product.metafields.custom.comparison_table_items.value }}"
                   },
                   "blocks": {}
                 },
@@ -541,6 +535,9 @@
       "block_order": [
         "layout_WzXJWh"
       ],
+      "custom_css": [
+        "@media (min-width: 768px) {.table-block td:first-child {width: 13rem; min-width: 13rem; }}"
+      ],
       "name": "Comparison",
       "settings": {
         "desktop_padding_top": 50,
@@ -576,15 +573,7 @@
           "type": "reviews",
           "name": "Reviews",
           "settings": {
-            "reviews": [
-              "reviews-ngko8ewg",
-              "jason-statham",
-              "diana-moor",
-              "abby-x",
-              "rachel-p",
-              "katie-e",
-              "katie-anderson"
-            ],
+            "reviews": "{{ closest.product.metafields.custom.featured_reviews.value }}",
             "activate_filters": true,
             "desktop_padding": 0,
             "desktop_columns_per_row": 3,
