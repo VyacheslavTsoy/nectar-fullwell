@@ -29,7 +29,7 @@
 
                         <select class="text-sm font-medium text-[#333333] w-[80%]" x-model="selectedSellingPlan">
                             <template x-for="sellingPlan in currentProduct?.sellingPlans">
-                                <option :value="sellingPlan.id" :selected="sellingPlan.id === selectedSellingPlan" x-data="{formattedName: sellingPlan.name.replace('Delivery', '')}" x-text="formattedName">
+                                <option :value="sellingPlan.id" :selected="sellingPlan.id == selectedSellingPlan" x-data="{formattedName: sellingPlan.name.replace('Delivery', '')}" x-text="formattedName">
                                 </option>
                             </template>
                         </select>
