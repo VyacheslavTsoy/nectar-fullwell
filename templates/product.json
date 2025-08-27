@@ -483,11 +483,11 @@
                   "name": "Table",
                   "settings": {
                     "table_items": [
-                      "0-86",
-                      "item-2",
-                      "item-3",
-                      "item-4",
-                      "item-5"
+                      "calm-title-item",
+                      "calm-item-2",
+                      "calm-item-3",
+                      "calm-item-4",
+                      "calm-item-5"
                     ]
                   },
                   "blocks": {}
