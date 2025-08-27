@@ -1,9 +1,7 @@
 {% assign bst = block.settings %}
 <div class="inline-review flex whitespace-nowrap gap-2 items-center font-family-poppins">
-    <div class="flex items-center gap-0.5">
-        {% render 'stars', score: 5 %}
-    </div>
-    <div class="text-xs md:text-base">
+    {% render 'stars', score: 5 %}
+    <div class="text-[1.4rem] md:text-base">
         {{ bst.title }}
     </div>
 </div>

@@ -20,10 +20,8 @@
     </div>
     <div class="product-card__content pt-5">
         <div class="product-card__rating flex gap-2 items-center pb-2 font-family-poppins">
-            <div class="flex tems-center gap-0.5">
-                {% render 'stars', score: 5 %}
-            </div>
-            <div class="text-[1.2rem]">
+            {% render 'stars', score: 5 %}
+            <div class="text-[1.4rem] md:text-[1.3rem]">
                 {{ bst.text_rating }}
             </div>
         </div>
