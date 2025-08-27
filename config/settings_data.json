@@ -82,7 +82,7 @@
             "type": "product",
             "settings": {
               "product_image": "shopify://shop_images/energy-tab-img10x.png",
-              "product_url": "shopify://products/essential-daily-energy-2",
+              "product_url": "shopify://products/essential-daily-energy",
               "product_title": "Essential Daily Energy",
               "sold_badge": "<p>In Last 24 Hours <strong>634+ Sold!</strong></p>",
               "review_badge": "<p><strong>4.8</strong> | 1,213 Reviews</p>"
