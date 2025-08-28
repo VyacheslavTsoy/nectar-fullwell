@@ -593,7 +593,7 @@
                   "type": "heading",
                   "name": "Heading",
                   "settings": {
-                    "title": "<p>2. Restore Energy Fast When Chemotherapy Drains You Completely</p>",
+                    "title": "<p>3. Stop Treatment-Induced Nausea When Anti-Nausea Medications Fall Short</p>",
                     "text_color": "#123456",
                     "text_alignment": "left",
                     "heading_size": "3xl",
@@ -610,7 +610,7 @@
                   "type": "text",
                   "name": "Text",
                   "settings": {
-                    "title": "<p>3. Stop Treatment-Induced Nausea When Anti-Nausea Medications Fall Short</p><p>Are you sick of being sick? The relentless nausea from chemotherapy doesn't just make you miserable—it creates a dangerous cycle. <strong>Each episode of vomiting strips your body of essential electrolytes, which then makes nausea worse and harder to control!</strong> Medical experts specifically recommend electrolyte replacement to break this cycle, yet most patients rely solely on anti-nausea medications.3</p><p>Nectar’s specialized formula provides the precise electrolyte balance needed to stabilize your digestive system and nervous signals that trigger nausea.3</p>",
+                    "title": "<p>Are you sick of being sick? The relentless nausea from chemotherapy doesn't just make you miserable—it creates a dangerous cycle. <strong>Each episode of vomiting strips your body of essential electrolytes, which then makes nausea worse and harder to control!</strong> Medical experts specifically recommend electrolyte replacement to break this cycle, yet most patients rely solely on anti-nausea medications.3</p><p>Nectar’s specialized formula provides the precise electrolyte balance needed to stabilize your digestive system and nervous signals that trigger nausea.3</p>",
                     "text_alignment": "left",
                     "font_family": "values-sans",
                     "font_weight": "normal",
