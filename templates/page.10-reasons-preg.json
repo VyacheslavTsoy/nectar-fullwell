@@ -538,6 +538,133 @@
         "mobile_padding_top": 30,
         "mobile_gap_between_blocks": 10
       }
+    },
+    "blank_section_YtWzDN": {
+      "type": "blank-section",
+      "blocks": {
+        "layout_bxnXD9": {
+          "type": "layout",
+          "name": "Layout",
+          "settings": {
+            "desktop_padding": 0,
+            "desktop_gap": 36,
+            "desktop_columns_per_row": 2,
+            "align_items": "start",
+            "custom_column_width": false,
+            "column_width": "1fr 1fr",
+            "mobile_padding": 0,
+            "mobile_gap": 14,
+            "mobile_columns_per_row": 1
+          },
+          "blocks": {
+            "layout_item_Vc8C9y": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 0,
+                "gap_mobile": 0
+              },
+              "blocks": {
+                "image_D6bPGB": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/ChatGPT_Image_May_14_2025_02_53_20_PM_1.png",
+                    "image_url": "",
+                    "image_ratio": "1/1",
+                    "image_width": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_D6bPGB"
+              ]
+            },
+            "layout_item_DLbTWf": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 10,
+                "gap_mobile": 10
+              },
+              "blocks": {
+                "heading_6tkjR9": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "title": "<p>2. Restore Energy Fast When Chemotherapy Drains You Completely</p>",
+                    "text_color": "#123456",
+                    "text_alignment": "left",
+                    "heading_size": "3xl",
+                    "font_weight": "bold",
+                    "font_family": "values-sans",
+                    "use_mobile_settings": false,
+                    "text_alignment_mobile": "left",
+                    "heading_size_mobile": "xl",
+                    "font_weight_mobile": "normal"
+                  },
+                  "blocks": {}
+                },
+                "text_iYBhNk": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p>3. Stop Treatment-Induced Nausea When Anti-Nausea Medications Fall Short</p><p>Are you sick of being sick? The relentless nausea from chemotherapy doesn't just make you miserable—it creates a dangerous cycle. <strong>Each episode of vomiting strips your body of essential electrolytes, which then makes nausea worse and harder to control!</strong> Medical experts specifically recommend electrolyte replacement to break this cycle, yet most patients rely solely on anti-nausea medications.3</p><p>Nectar’s specialized formula provides the precise electrolyte balance needed to stabilize your digestive system and nervous signals that trigger nausea.3</p>",
+                    "text_alignment": "left",
+                    "font_family": "values-sans",
+                    "font_weight": "normal",
+                    "text_color": "#0d3063",
+                    "font_size": 16,
+                    "font_size_mobile": 16,
+                    "text_alignment_mobile": "left"
+                  },
+                  "blocks": {}
+                },
+                "reviews_6474jp": {
+                  "type": "reviews",
+                  "name": "Reviews",
+                  "settings": {
+                    "reviews": [
+                      "katie-anderson"
+                    ],
+                    "activate_filters": false,
+                    "desktop_padding": 20,
+                    "desktop_columns_per_row": 1,
+                    "desktop_gap": 20,
+                    "mobile_padding": 20,
+                    "mobile_columns_per_row": 1,
+                    "mobile_gap": 10
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_6tkjR9",
+                "text_iYBhNk",
+                "reviews_6474jp"
+              ]
+            }
+          },
+          "block_order": [
+            "layout_item_Vc8C9y",
+            "layout_item_DLbTWf"
+          ]
+        }
+      },
+      "block_order": [
+        "layout_bxnXD9"
+      ],
+      "name": "Text and image",
+      "settings": {
+        "desktop_padding_top": 40,
+        "desktop_gap_between_blocks": 20,
+        "bg_color": "#ffffff",
+        "desktop_max_width": 1140,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 30,
+        "mobile_gap_between_blocks": 10
+      }
     }
   },
   "order": [
@@ -546,6 +673,7 @@
     "blank_section_kapmQF",
     "blank_section_kn3TeN",
     "blank_section_9xzQQt",
-    "blank_section_ThWyzF"
+    "blank_section_ThWyzF",
+    "blank_section_YtWzDN"
   ]
 }
