@@ -306,7 +306,7 @@
                       "jason-statham"
                     ],
                     "activate_filters": false,
-                    "desktop_padding": 0,
+                    "desktop_padding": 20,
                     "desktop_columns_per_row": 1,
                     "desktop_gap": 20,
                     "mobile_padding": 0,
