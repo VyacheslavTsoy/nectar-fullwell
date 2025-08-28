@@ -549,7 +549,7 @@
             "desktop_padding": 0,
             "desktop_gap": 36,
             "desktop_columns_per_row": 2,
-            "align_items": "start",
+            "align_items": "center",
             "custom_column_width": false,
             "column_width": "1fr 1fr",
             "mobile_padding": 0,
@@ -569,7 +569,7 @@
                   "type": "image",
                   "name": "Image",
                   "settings": {
-                    "image": "shopify://shop_images/ChatGPT_Image_May_14_2025_02_53_20_PM_1.png",
+                    "image": "shopify://shop_images/Image_2_12fc7487-63e3-4e18-aa11-a46af750a4ec.png",
                     "image_url": "",
                     "image_ratio": "1/1",
                     "image_width": 100
@@ -665,6 +665,351 @@
         "mobile_padding_top": 30,
         "mobile_gap_between_blocks": 10
       }
+    },
+    "blank_section_EXLYc3": {
+      "type": "blank-section",
+      "blocks": {
+        "layout_4wkWqx": {
+          "type": "layout",
+          "name": "Layout",
+          "settings": {
+            "desktop_padding": 0,
+            "desktop_gap": 36,
+            "desktop_columns_per_row": 2,
+            "align_items": "center",
+            "custom_column_width": false,
+            "column_width": "1fr 1fr",
+            "mobile_padding": 0,
+            "mobile_gap": 14,
+            "mobile_columns_per_row": 1
+          },
+          "blocks": {
+            "layout_item_zqCimY": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 10,
+                "gap_mobile": 10
+              },
+              "blocks": {
+                "heading_HpGa4e": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "title": "<p>4. Defeat Metallic Taste When The Taste of Water Becomes Unbearable</p>",
+                    "text_color": "#123456",
+                    "text_alignment": "left",
+                    "heading_size": "3xl",
+                    "font_weight": "bold",
+                    "font_family": "values-sans",
+                    "use_mobile_settings": false,
+                    "text_alignment_mobile": "left",
+                    "heading_size_mobile": "xl",
+                    "font_weight_mobile": "normal"
+                  },
+                  "blocks": {}
+                },
+                "text_L9iAmj": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p>That metallic taste making water unbearable? You're not alone! Cancer patients consistently report that specially formulated electrolyte drinks <strong>make hydration possible</strong> again when plain water becomes repulsive during treatment.4</p><p>With six refreshing flavors that cut through taste distortions, you'll finally be able to maintain proper hydration without struggle. Don't let altered taste buds sabotage your recovery when the solution is so simple and immediate!4</p>",
+                    "text_alignment": "left",
+                    "font_family": "values-sans",
+                    "font_weight": "normal",
+                    "text_color": "#0d3063",
+                    "font_size": 16,
+                    "font_size_mobile": 16,
+                    "text_alignment_mobile": "left"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_HpGa4e",
+                "text_L9iAmj"
+              ]
+            },
+            "layout_item_Gfcdxj": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 0,
+                "gap_mobile": 0
+              },
+              "blocks": {
+                "image_ETVkg4": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/Group_1484581338_1.png",
+                    "image_url": "",
+                    "image_ratio": "1/1",
+                    "image_width": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_ETVkg4"
+              ]
+            }
+          },
+          "block_order": [
+            "layout_item_zqCimY",
+            "layout_item_Gfcdxj"
+          ]
+        }
+      },
+      "block_order": [
+        "layout_4wkWqx"
+      ],
+      "name": "Text and image",
+      "settings": {
+        "desktop_padding_top": 40,
+        "desktop_gap_between_blocks": 20,
+        "bg_color": "#ffffff",
+        "desktop_max_width": 1140,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 30,
+        "mobile_gap_between_blocks": 10
+      }
+    },
+    "blank_section_ieLa4C": {
+      "type": "blank-section",
+      "blocks": {
+        "layout_VN6zFC": {
+          "type": "layout",
+          "name": "Layout",
+          "settings": {
+            "desktop_padding": 0,
+            "desktop_gap": 36,
+            "desktop_columns_per_row": 2,
+            "align_items": "center",
+            "custom_column_width": false,
+            "column_width": "1fr 1fr",
+            "mobile_padding": 0,
+            "mobile_gap": 14,
+            "mobile_columns_per_row": 1
+          },
+          "blocks": {
+            "layout_item_NJBrah": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 0,
+                "gap_mobile": 0
+              },
+              "blocks": {
+                "image_LeFTYy": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/Group_1484581339.png",
+                    "image_url": "",
+                    "image_ratio": "1/1",
+                    "image_width": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_LeFTYy"
+              ]
+            },
+            "layout_item_rRjE9B": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 10,
+                "gap_mobile": 10
+              },
+              "blocks": {
+                "heading_B8QzqF": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "title": "<p>5. End Restless Nights When Chemotherapy Destroys Your Sleep Quality</p>",
+                    "text_color": "#123456",
+                    "text_alignment": "left",
+                    "heading_size": "3xl",
+                    "font_weight": "bold",
+                    "font_family": "values-sans",
+                    "use_mobile_settings": false,
+                    "text_alignment_mobile": "left",
+                    "heading_size_mobile": "xl",
+                    "font_weight_mobile": "normal"
+                  },
+                  "blocks": {}
+                },
+                "text_3Nzgpk": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p>Is chemotherapy turning your nights into an exhausting struggle? The tossing and turning isn't just from stress—<strong>it's a direct result of mineral imbalances caused by your treatment!5</strong></p><p>Magnesium deficiency—extremely common during chemotherapy—directly impacts sleep by disrupting your body's natural sleep-regulating mechanisms. Without proper levels, your muscles cramp, your mind races, and restful sleep becomes impossible. Our formula delivers the precise electrolytes needed to restore natural sleep patterns.<strong>5</strong></p>",
+                    "text_alignment": "left",
+                    "font_family": "values-sans",
+                    "font_weight": "normal",
+                    "text_color": "#0d3063",
+                    "font_size": 16,
+                    "font_size_mobile": 16,
+                    "text_alignment_mobile": "left"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_B8QzqF",
+                "text_3Nzgpk"
+              ]
+            }
+          },
+          "block_order": [
+            "layout_item_NJBrah",
+            "layout_item_rRjE9B"
+          ]
+        }
+      },
+      "block_order": [
+        "layout_VN6zFC"
+      ],
+      "name": "Text and image",
+      "settings": {
+        "desktop_padding_top": 40,
+        "desktop_gap_between_blocks": 20,
+        "bg_color": "#ffffff",
+        "desktop_max_width": 1140,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 30,
+        "mobile_gap_between_blocks": 10
+      }
+    },
+    "blank_section_NGDedc": {
+      "type": "blank-section",
+      "blocks": {
+        "layout_nDxYdD": {
+          "type": "layout",
+          "name": "Layout",
+          "settings": {
+            "desktop_padding": 0,
+            "desktop_gap": 36,
+            "desktop_columns_per_row": 2,
+            "align_items": "center",
+            "custom_column_width": false,
+            "column_width": "1fr 1fr",
+            "mobile_padding": 0,
+            "mobile_gap": 14,
+            "mobile_columns_per_row": 1
+          },
+          "blocks": {
+            "layout_item_mBzFTi": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 0,
+                "gap_mobile": 0
+              },
+              "blocks": {
+                "image_mdmqUX": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/Group_1484581296_1.png",
+                    "image_url": "",
+                    "image_ratio": "4/3",
+                    "image_width": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_mdmqUX"
+              ]
+            },
+            "layout_item_YyzJJ3": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 10,
+                "gap_mobile": 10
+              },
+              "blocks": {
+                "heading_kFR9Ud": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "title": "<p><strong>Free gifts with your order</strong></p>",
+                    "text_color": "#123456",
+                    "text_alignment": "center",
+                    "heading_size": "md",
+                    "font_weight": "normal",
+                    "font_family": "values-sans",
+                    "use_mobile_settings": false,
+                    "text_alignment_mobile": "left",
+                    "heading_size_mobile": "xl",
+                    "font_weight_mobile": "normal"
+                  },
+                  "blocks": {}
+                },
+                "heading_k6rHKn": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "title": "<h3>SPECIAL TREATMENT OFFER<br/><strong>UP TO 56% OFF</strong></h3>",
+                    "text_color": "#123456",
+                    "text_alignment": "center",
+                    "heading_size": "2xl",
+                    "font_weight": "bold",
+                    "font_family": "values-sans",
+                    "use_mobile_settings": false,
+                    "text_alignment_mobile": "left",
+                    "heading_size_mobile": "xl",
+                    "font_weight_mobile": "normal"
+                  },
+                  "blocks": {}
+                },
+                "text_WVFctQ": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p>This limited-time deal is in high demand and stock keeps selling out.</p>",
+                    "text_alignment": "center",
+                    "font_family": "values-sans",
+                    "font_weight": "normal",
+                    "text_color": "#0d3063",
+                    "font_size": 16,
+                    "font_size_mobile": 16,
+                    "text_alignment_mobile": "center"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_kFR9Ud",
+                "heading_k6rHKn",
+                "text_WVFctQ"
+              ]
+            }
+          },
+          "block_order": [
+            "layout_item_mBzFTi",
+            "layout_item_YyzJJ3"
+          ]
+        }
+      },
+      "block_order": [
+        "layout_nDxYdD"
+      ],
+      "name": "Text and image",
+      "settings": {
+        "desktop_padding_top": 40,
+        "desktop_gap_between_blocks": 20,
+        "bg_color": "#ffffff",
+        "desktop_max_width": 740,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 30,
+        "mobile_gap_between_blocks": 10
+      }
     }
   },
   "order": [
@@ -674,6 +1019,9 @@
     "blank_section_kn3TeN",
     "blank_section_9xzQQt",
     "blank_section_ThWyzF",
-    "blank_section_YtWzDN"
+    "blank_section_YtWzDN",
+    "blank_section_EXLYc3",
+    "blank_section_ieLa4C",
+    "blank_section_NGDedc"
   ]
 }
