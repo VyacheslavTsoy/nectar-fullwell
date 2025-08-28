@@ -353,7 +353,7 @@
             "desktop_padding": 0,
             "desktop_gap": 36,
             "desktop_columns_per_row": 2,
-            "align_items": "center",
+            "align_items": "start",
             "custom_column_width": false,
             "column_width": "1fr 1fr",
             "mobile_padding": 0,
