@@ -469,6 +469,41 @@
         "mobile_padding_top": 30,
         "mobile_gap_between_blocks": 10
       }
+    },
+    "blank_section_ThWyzF": {
+      "type": "blank-section",
+      "blocks": {
+        "heading_NYrqVF": {
+          "type": "heading",
+          "name": "Heading",
+          "settings": {
+            "title": "<p>The Protection Your Recovery Deserves</p>",
+            "text_color": "#ffffff",
+            "text_alignment": "left",
+            "heading_size": "xl",
+            "font_weight": "bold",
+            "font_family": "poppins",
+            "use_mobile_settings": false,
+            "text_alignment_mobile": "left",
+            "heading_size_mobile": "xl",
+            "font_weight_mobile": "normal"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_NYrqVF"
+      ],
+      "name": "Text Teaser",
+      "settings": {
+        "desktop_padding_top": 40,
+        "desktop_gap_between_blocks": 20,
+        "bg_color": "#0d3063",
+        "desktop_max_width": 1140,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 30,
+        "mobile_gap_between_blocks": 10
+      }
     }
   },
   "order": [
@@ -476,6 +511,7 @@
     "blank_section_jhpeEr",
     "blank_section_kapmQF",
     "blank_section_kn3TeN",
-    "blank_section_9xzQQt"
+    "blank_section_9xzQQt",
+    "blank_section_ThWyzF"
   ]
 }
