@@ -489,10 +489,44 @@
             "font_weight_mobile": "normal"
           },
           "blocks": {}
+        },
+        "buttons_group_Ubcm4X": {
+          "type": "buttons-group",
+          "name": "Buttons Group",
+          "settings": {
+            "hide_on_desktop": false,
+            "gap_between_buttons_desktop": 10,
+            "buttons_alignment": "center",
+            "top_padding_desktop": 0,
+            "bottom_padding_desktop": 0,
+            "hide_on_mobile": false,
+            "gap_between_buttons_mobile": 0,
+            "buttons_alignment_mobile": "center",
+            "top_padding_mobile": 0,
+            "bottom_padding_mobile": 0
+          },
+          "blocks": {
+            "button_XqkWcP": {
+              "type": "button",
+              "name": "Button",
+              "settings": {
+                "button_text": "Try Nectar Now",
+                "button_link": "shopify://products/essential-daily-hydration-4-gift",
+                "related_product": "",
+                "button_type": "aqua",
+                "hide_on_mobile": false
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "button_XqkWcP"
+          ]
         }
       },
       "block_order": [
-        "heading_NYrqVF"
+        "heading_NYrqVF",
+        "buttons_group_Ubcm4X"
       ],
       "name": "Text Teaser",
       "settings": {
