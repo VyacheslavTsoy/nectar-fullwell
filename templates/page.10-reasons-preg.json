@@ -116,6 +116,9 @@
       "block_order": [
         "layout_kGg3Nh"
       ],
+      "custom_css": [
+        ".block-image img {border-radius: 16px; }"
+      ],
       "name": "Default Section",
       "settings": {
         "desktop_padding_top": 40,
