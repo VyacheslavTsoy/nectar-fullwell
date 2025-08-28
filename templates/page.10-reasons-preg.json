@@ -85,6 +85,19 @@
                   },
                   "blocks": {}
                 },
+                "doctor_review_MJX6Bi": {
+                  "type": "doctor-review",
+                  "name": "Doctor Review",
+                  "settings": {
+                    "title": "",
+                    "hide_on_mobile": false,
+                    "hide_on_desktop": false,
+                    "image": "shopify://shop_images/image_23031_dc275791-85bb-493a-a23a-ff46209909c7.png",
+                    "text": "<p>By <strong>Dr. Amber B.</strong></p>",
+                    "name": "Last updated May 12, 2025"
+                  },
+                  "blocks": {}
+                },
                 "text_y7UTtg": {
                   "type": "text",
                   "name": "Text",
@@ -103,6 +116,7 @@
               },
               "block_order": [
                 "heading_ewFL94",
+                "doctor_review_MJX6Bi",
                 "text_y7UTtg"
               ]
             }
@@ -117,9 +131,9 @@
         "layout_kGg3Nh"
       ],
       "custom_css": [
-        ".block-image img {border-radius: 16px; }"
+        ".block-image img {border-radius: 16px;}"
       ],
-      "name": "Default Section",
+      "name": "Text and image",
       "settings": {
         "desktop_padding_top": 40,
         "desktop_gap_between_blocks": 20,
@@ -129,10 +143,83 @@
         "mobile_padding_top": 30,
         "mobile_gap_between_blocks": 10
       }
+    },
+    "blank_section_kapmQF": {
+      "type": "blank-section",
+      "blocks": {
+        "heading_Njfqij": {
+          "type": "heading",
+          "name": "Heading",
+          "settings": {
+            "title": "<h3>Real Chemo, Real Recovery: <br/><strong>The Nectar Difference</strong></h3>",
+            "text_color": "#123456",
+            "text_alignment": "center",
+            "heading_size": "3xl",
+            "font_weight": "bold",
+            "font_family": "values-sans",
+            "use_mobile_settings": true,
+            "text_alignment_mobile": "center",
+            "heading_size_mobile": "lg",
+            "font_weight_mobile": "bold"
+          },
+          "blocks": {}
+        },
+        "review_badge_HHP4Fj": {
+          "type": "review-badge",
+          "name": "Review Badge",
+          "settings": {
+            "title": "1 Million+ Happy Customers",
+            "stars_quantity": 5,
+            "text_color": "#0D3063",
+            "badge_alignment": "justify-center",
+            "badge_alignment_mobile": "justify-start"
+          },
+          "blocks": {}
+        },
+        "banner_zrJWpb": {
+          "type": "banner",
+          "name": "Banner",
+          "settings": {
+            "vertical_padding_desktop": 10,
+            "image": "shopify://shop_images/image-banner.png",
+            "vertical_padding_mobile": 0,
+            "image_mobile": "shopify://shop_images/image-banner-mobile.png"
+          },
+          "blocks": {}
+        },
+        "reviews_total_8EHJAj": {
+          "type": "reviews-total",
+          "name": "Reviews Total",
+          "settings": {
+            "score_1": "4.9",
+            "text_1": "<p>Based on 14,802 reviews</p>",
+            "score_2": "99%",
+            "text_2": "<p>Of reviewers would recommend this product to a friend</p>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_Njfqij",
+        "review_badge_HHP4Fj",
+        "banner_zrJWpb",
+        "reviews_total_8EHJAj"
+      ],
+      "name": "Gallery",
+      "settings": {
+        "desktop_padding_top": 50,
+        "desktop_gap_between_blocks": 10,
+        "bg_color": "#f4f9ff",
+        "desktop_max_width": 840,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 30,
+        "mobile_gap_between_blocks": 10
+      }
     }
   },
   "order": [
     "main",
-    "blank_section_jhpeEr"
+    "blank_section_jhpeEr",
+    "blank_section_kapmQF"
   ]
 }
