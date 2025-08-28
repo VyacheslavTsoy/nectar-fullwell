@@ -215,11 +215,121 @@
         "mobile_padding_top": 30,
         "mobile_gap_between_blocks": 10
       }
+    },
+    "blank_section_kn3TeN": {
+      "type": "blank-section",
+      "blocks": {
+        "layout_m8THGE": {
+          "type": "layout",
+          "name": "Layout",
+          "settings": {
+            "desktop_padding": 0,
+            "desktop_gap": 36,
+            "desktop_columns_per_row": 2,
+            "align_items": "center",
+            "custom_column_width": false,
+            "column_width": "1fr 1fr",
+            "mobile_padding": 0,
+            "mobile_gap": 14,
+            "mobile_columns_per_row": 1
+          },
+          "blocks": {
+            "layout_item_fXktNB": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 0,
+                "gap_mobile": 0
+              },
+              "blocks": {
+                "image_NbPVC6": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/Group_1484581340.png",
+                    "image_url": "",
+                    "image_ratio": "1/1",
+                    "image_width": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_NbPVC6"
+              ]
+            },
+            "layout_item_6Tpjt8": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 10,
+                "gap_mobile": 10
+              },
+              "blocks": {
+                "heading_EpUbzr": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "title": "<p>1. Your \"Chemo Brain\" Isn't Just In Your Head—It's A Critical Mineral Emergency</p>",
+                    "text_color": "#123456",
+                    "text_alignment": "left",
+                    "heading_size": "3xl",
+                    "font_weight": "bold",
+                    "font_family": "values-sans",
+                    "use_mobile_settings": false,
+                    "text_alignment_mobile": "left",
+                    "heading_size_mobile": "xl",
+                    "font_weight_mobile": "normal"
+                  },
+                  "blocks": {}
+                },
+                "text_HfPtbA": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p>Chemo brain isn't inevitable—it's directly linked to the severe electrolyte depletion caused by your treatments. Studies show that magnesium deficiency—experienced by many chemo patients—directly impairs memory, concentration, and cognitive processing. <br/><strong>This isn't just frustration—it's your brain lacking the essential minerals required for optimal neural functioning!1</strong></p><p>Nectar Electrolytes delivers brain-essential magnesium that crosses the blood-brain barrier more effectively than other forms, plus the perfect potassium-sodium balance needed to restore neural electrical signaling.<strong>1</strong></p>",
+                    "text_alignment": "left",
+                    "font_family": "values-sans",
+                    "font_weight": "normal",
+                    "text_color": "#0d3063",
+                    "font_size": 16,
+                    "font_size_mobile": 16,
+                    "text_alignment_mobile": "left"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_EpUbzr",
+                "text_HfPtbA"
+              ]
+            }
+          },
+          "block_order": [
+            "layout_item_fXktNB",
+            "layout_item_6Tpjt8"
+          ]
+        }
+      },
+      "block_order": [
+        "layout_m8THGE"
+      ],
+      "name": "Text and image",
+      "settings": {
+        "desktop_padding_top": 40,
+        "desktop_gap_between_blocks": 20,
+        "bg_color": "#ffffff",
+        "desktop_max_width": 1140,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 30,
+        "mobile_gap_between_blocks": 10
+      }
     }
   },
   "order": [
     "main",
     "blank_section_jhpeEr",
-    "blank_section_kapmQF"
+    "blank_section_kapmQF",
+    "blank_section_kn3TeN"
   ]
 }
