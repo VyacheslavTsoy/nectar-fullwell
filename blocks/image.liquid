@@ -9,15 +9,17 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: var(--border-radius);
     }
 </style>
 
 <div class="block-image" id="{{ block.id }}" style="
     --image-width: {{ bst.image_width }}%;
     --aspect-ratio: {{ bst.image_ratio }};
+    --border-radius: {{ bst.border_radius }}px;
     ">
-    <a class="block-image__link block" href="{{ bst.image_url }}">
-        {% render 'img', image: bst.image, max_width: 480 %}    
+    <a class="block-image__link block h-full w-full" href="{{ bst.image_url }}">
+        {% render 'img', image: bst.image, max_width: 800 %}    
     </a>
 </div>
 
@@ -38,6 +40,15 @@
       "id": "image_url"
     },
     {
+      "type": "range",
+      "label": "Border radius",
+      "id": "border_radius",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0
+    },
+    {
       "type": "select",
       "label": "Image ration",
       "id": "image_ratio",
@@ -49,6 +60,10 @@
         {
           "value": "4/3",
           "label": "4/3"
+        },
+        {
+          "value": "3/4",
+          "label": "3/4"
         },
         {
           "value": "1/1",

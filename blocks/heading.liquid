@@ -6,6 +6,9 @@
         font-family: var(--font-family-{{ bst.font_family }});
         line-height: 1.2;
         text-align: {{ bst.text_alignment }};
+        {% if bst.text_color != 'rgba(0,0,0,0)' %}
+            color: {{ bst.text_color }};
+        {% endif %}
     }
 
     #{{ block.id }} b,

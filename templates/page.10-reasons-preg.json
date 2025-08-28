@@ -7,1021 +7,1627 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
-  "sections": {
-    "main": {
-      "type": "main-404",
-      "disabled": true,
-      "settings": {
-        "heading": "404 Page Not Found",
-        "text": "The page you are looking for does not exist.",
-        "button_label": "Go to Home"
-      }
-    },
-    "blank_section_jhpeEr": {
-      "type": "blank-section",
-      "blocks": {
-        "layout_kGg3Nh": {
-          "type": "layout",
-          "name": "Layout",
-          "settings": {
-            "desktop_padding": 0,
-            "desktop_gap": 36,
-            "desktop_columns_per_row": 2,
-            "align_items": "center",
-            "custom_column_width": false,
-            "column_width": "1fr 1fr",
-            "mobile_padding": 0,
-            "mobile_gap": 14,
-            "mobile_columns_per_row": 1
-          },
-          "blocks": {
-            "layout_item_xFQQUY": {
-              "type": "_layout-item",
-              "name": "Column",
-              "settings": {
-                "gap_desktop": 0,
-                "gap_mobile": 0
-              },
-              "blocks": {
-                "image_bVR8jP": {
-                  "type": "image",
-                  "name": "Image",
-                  "settings": {
-                    "image": "shopify://shop_images/ChatGPT_Image_May_14_2025_03_51_31_PM.png",
-                    "image_url": "",
-                    "image_ratio": "1/1",
-                    "image_width": 100
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "image_bVR8jP"
-              ]
+ {
+    "sections": {
+      "blank_section_jhpeEr": {
+        "type": "blank-section",
+        "blocks": {
+          "layout_kGg3Nh": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 0,
+              "desktop_gap": 36,
+              "desktop_columns_per_row": 2,
+              "align_items": "center",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 14,
+              "mobile_columns_per_row": 1
             },
-            "layout_item_nMtXUp": {
-              "type": "_layout-item",
-              "name": "Column",
-              "settings": {
-                "gap_desktop": 10,
-                "gap_mobile": 10
-              },
-              "blocks": {
-                "heading_ewFL94": {
-                  "type": "heading",
-                  "name": "Heading",
-                  "settings": {
-                    "title": "<h2>7 Reasons Doctors Recommend This Electrolyte Mix For Chemo Patients Battling Side Effects</h2>",
-                    "text_color": "#123456",
-                    "text_alignment": "left",
-                    "heading_size": "3xl",
-                    "font_weight": "bold",
-                    "font_family": "values-sans",
-                    "use_mobile_settings": false,
-                    "text_alignment_mobile": "left",
-                    "heading_size_mobile": "xl",
-                    "font_weight_mobile": "normal"
-                  },
-                  "blocks": {}
+            "blocks": {
+              "layout_item_xFQQUY": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
                 },
-                "doctor_review_MJX6Bi": {
-                  "type": "doctor-review",
-                  "name": "Doctor Review",
-                  "settings": {
-                    "title": "",
-                    "hide_on_mobile": false,
-                    "hide_on_desktop": false,
-                    "image": "shopify://shop_images/image_23031_dc275791-85bb-493a-a23a-ff46209909c7.png",
-                    "text": "<p>By <strong>Dr. Amber B.</strong></p>",
-                    "name": "Last updated May 12, 2025"
-                  },
-                  "blocks": {}
+                "blocks": {
+                  "image_bVR8jP": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/ChatGPT_Image_May_14_2025_03_51_31_PM.png",
+                      "image_url": "",
+                      "image_ratio": "1/1",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
                 },
-                "text_y7UTtg": {
-                  "type": "text",
-                  "name": "Text",
-                  "settings": {
-                    "title": "<p><strong>Summary:</strong> Brain fog and fatigue don't have to be permanent side effects of treatment. This doctor-designed electrolyte mix addresses the hidden dehydration that causes mental cloudiness and low energy, helping you think clearly and feel stronger both during treatment and in your recovery.</p><p>Keep reading to discover why thousands are choosing this pure, gentle solution to reclaim their mental clarity and vitality, plus secure your 56% discount.</p>",
-                    "text_alignment": "left",
-                    "font_family": "values-sans",
-                    "font_weight": "normal",
-                    "text_color": "#0d3063",
-                    "font_size": 16,
-                    "font_size_mobile": 16,
-                    "text_alignment_mobile": "left"
-                  },
-                  "blocks": {}
-                }
+                "block_order": [
+                  "image_bVR8jP"
+                ]
               },
-              "block_order": [
-                "heading_ewFL94",
-                "doctor_review_MJX6Bi",
-                "text_y7UTtg"
-              ]
-            }
-          },
-          "block_order": [
-            "layout_item_xFQQUY",
-            "layout_item_nMtXUp"
-          ]
-        }
-      },
-      "block_order": [
-        "layout_kGg3Nh"
-      ],
-      "custom_css": [
-        ".block-image img {border-radius: 16px;}"
-      ],
-      "name": "Text and image",
-      "settings": {
-        "desktop_padding_top": 40,
-        "desktop_gap_between_blocks": 20,
-        "bg_color": "#ffffff",
-        "desktop_max_width": 1140,
-        "hide_on_mobile": false,
-        "mobile_padding_top": 30,
-        "mobile_gap_between_blocks": 10
-      }
-    },
-    "blank_section_kapmQF": {
-      "type": "blank-section",
-      "blocks": {
-        "heading_Njfqij": {
-          "type": "heading",
-          "name": "Heading",
-          "settings": {
-            "title": "<h3>Real Chemo, Real Recovery: <br/><strong>The Nectar Difference</strong></h3>",
-            "text_color": "#123456",
-            "text_alignment": "center",
-            "heading_size": "3xl",
-            "font_weight": "bold",
-            "font_family": "values-sans",
-            "use_mobile_settings": true,
-            "text_alignment_mobile": "center",
-            "heading_size_mobile": "lg",
-            "font_weight_mobile": "bold"
-          },
-          "blocks": {}
+              "layout_item_nMtXUp": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 10,
+                  "gap_mobile": 10
+                },
+                "blocks": {
+                  "heading_ewFL94": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<h2>7 Reasons Doctors Recommend This Electrolyte Mix For Chemo Patients Battling Side Effects</h2>",
+                      "text_color": "#123456",
+                      "text_alignment": "left",
+                      "heading_size": "3xl",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "left",
+                      "heading_size_mobile": "lg",
+                      "font_weight_mobile": "bold"
+                    },
+                    "blocks": {}
+                  },
+                  "doctor_review_MJX6Bi": {
+                    "type": "doctor-review",
+                    "name": "Doctor Review",
+                    "settings": {
+                      "title": "",
+                      "hide_on_mobile": false,
+                      "hide_on_desktop": false,
+                      "image": "shopify://shop_images/image_23031_dc275791-85bb-493a-a23a-ff46209909c7.png",
+                      "text": "<p>By <strong>Dr. Amber B.</strong></p>",
+                      "name": "Last updated May 12, 2025"
+                    },
+                    "blocks": {}
+                  },
+                  "text_y7UTtg": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p><strong>Summary:</strong> Brain fog and fatigue don't have to be permanent side effects of treatment. This doctor-designed electrolyte mix addresses the hidden dehydration that causes mental cloudiness and low energy, helping you think clearly and feel stronger both during treatment and in your recovery.</p><p>Keep reading to discover why thousands are choosing this pure, gentle solution to reclaim their mental clarity and vitality, plus secure your 56% discount.</p>",
+                      "text_alignment": "left",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "heading_ewFL94",
+                  "doctor_review_MJX6Bi",
+                  "text_y7UTtg"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_xFQQUY",
+              "layout_item_nMtXUp"
+            ]
+          }
         },
-        "review_badge_HHP4Fj": {
-          "type": "review-badge",
-          "name": "Review Badge",
-          "settings": {
-            "title": "1 Million+ Happy Customers",
-            "stars_quantity": 5,
-            "text_color": "#0D3063",
-            "badge_alignment": "justify-center",
-            "badge_alignment_mobile": "justify-start"
+        "block_order": [
+          "layout_kGg3Nh"
+        ],
+        "custom_css": [
+          ".block-image img {border-radius: 16px;}"
+        ],
+        "name": "Text and image",
+        "settings": {
+          "desktop_padding_top": 40,
+          "desktop_gap_between_blocks": 20,
+          "bg_color": "#ffffff",
+          "desktop_max_width": 1140,
+          "hide_on_mobile": false,
+          "mobile_padding_top": 30,
+          "mobile_gap_between_blocks": 10
+        }
+      },
+      "blank_section_kapmQF": {
+        "type": "blank-section",
+        "blocks": {
+          "heading_Njfqij": {
+            "type": "heading",
+            "name": "Heading",
+            "settings": {
+              "title": "<h3>Real Chemo, Real Recovery: <br/><strong>The Nectar Difference</strong></h3>",
+              "text_color": "#123456",
+              "text_alignment": "center",
+              "heading_size": "3xl",
+              "font_weight": "bold",
+              "font_family": "values-sans",
+              "use_mobile_settings": true,
+              "text_alignment_mobile": "center",
+              "heading_size_mobile": "lg",
+              "font_weight_mobile": "bold"
+            },
+            "blocks": {}
           },
-          "blocks": {}
+          "review_badge_HHP4Fj": {
+            "type": "review-badge",
+            "name": "Review Badge",
+            "settings": {
+              "title": "1 Million+ Happy Customers",
+              "stars_quantity": 5,
+              "text_color": "#0d3063",
+              "badge_alignment": "justify-center",
+              "badge_alignment_mobile": "justify-center"
+            },
+            "blocks": {}
+          },
+          "banner_zrJWpb": {
+            "type": "banner",
+            "name": "Banner",
+            "settings": {
+              "vertical_padding_desktop": 10,
+              "image": "shopify://shop_images/image-banner.png",
+              "vertical_padding_mobile": 0,
+              "image_mobile": "shopify://shop_images/image-banner-mobile.png"
+            },
+            "blocks": {}
+          },
+          "reviews_total_8EHJAj": {
+            "type": "reviews-total",
+            "name": "Reviews Total",
+            "settings": {
+              "score_1": "4.9",
+              "text_1": "<p>Based on 14,802 reviews</p>",
+              "score_2": "99%",
+              "text_2": "<p>Of reviewers would recommend this product to a friend</p>"
+            },
+            "blocks": {}
+          }
         },
-        "banner_zrJWpb": {
-          "type": "banner",
-          "name": "Banner",
-          "settings": {
-            "vertical_padding_desktop": 10,
-            "image": "shopify://shop_images/image-banner.png",
-            "vertical_padding_mobile": 0,
-            "image_mobile": "shopify://shop_images/image-banner-mobile.png"
-          },
-          "blocks": {}
+        "block_order": [
+          "heading_Njfqij",
+          "review_badge_HHP4Fj",
+          "banner_zrJWpb",
+          "reviews_total_8EHJAj"
+        ],
+        "name": "Gallery",
+        "settings": {
+          "desktop_padding_top": 50,
+          "desktop_gap_between_blocks": 10,
+          "bg_color": "#f4f9ff",
+          "desktop_max_width": 840,
+          "hide_on_mobile": false,
+          "mobile_padding_top": 30,
+          "mobile_gap_between_blocks": 10
+        }
+      },
+      "blank_section_kn3TeN": {
+        "type": "blank-section",
+        "blocks": {
+          "layout_m8THGE": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 0,
+              "desktop_gap": 36,
+              "desktop_columns_per_row": 2,
+              "align_items": "center",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 14,
+              "mobile_columns_per_row": 1
+            },
+            "blocks": {
+              "layout_item_fXktNB": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
+                },
+                "blocks": {
+                  "image_NbPVC6": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/Group_1484581340.png",
+                      "image_url": "",
+                      "image_ratio": "1/1",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_NbPVC6"
+                ]
+              },
+              "layout_item_6Tpjt8": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 10,
+                  "gap_mobile": 10
+                },
+                "blocks": {
+                  "heading_EpUbzr": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<p>1. Your \"Chemo Brain\" Isn't Just In Your Head—It's A Critical Mineral Emergency</p>",
+                      "text_color": "#123456",
+                      "text_alignment": "left",
+                      "heading_size": "3xl",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "left",
+                      "heading_size_mobile": "lg",
+                      "font_weight_mobile": "bold"
+                    },
+                    "blocks": {}
+                  },
+                  "text_HfPtbA": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p>Chemo brain isn't inevitable—it's directly linked to the severe electrolyte depletion caused by your treatments. Studies show that magnesium deficiency—experienced by many chemo patients—directly impairs memory, concentration, and cognitive processing. <br/><strong>This isn't just frustration—it's your brain lacking the essential minerals required for optimal neural functioning!1</strong></p><p>Nectar Electrolytes delivers brain-essential magnesium that crosses the blood-brain barrier more effectively than other forms, plus the perfect potassium-sodium balance needed to restore neural electrical signaling.<strong>1</strong></p>",
+                      "text_alignment": "left",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  },
+                  "reviews_L6z4QY": {
+                    "type": "reviews",
+                    "name": "Reviews",
+                    "settings": {
+                      "reviews": [
+                        "jason-statham"
+                      ],
+                      "activate_filters": false,
+                      "desktop_padding": 20,
+                      "desktop_columns_per_row": 1,
+                      "desktop_gap": 20,
+                      "mobile_padding": 20,
+                      "mobile_columns_per_row": 1,
+                      "mobile_gap": 10
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "heading_EpUbzr",
+                  "text_HfPtbA",
+                  "reviews_L6z4QY"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_fXktNB",
+              "layout_item_6Tpjt8"
+            ]
+          }
         },
-        "reviews_total_8EHJAj": {
-          "type": "reviews-total",
-          "name": "Reviews Total",
-          "settings": {
-            "score_1": "4.9",
-            "text_1": "<p>Based on 14,802 reviews</p>",
-            "score_2": "99%",
-            "text_2": "<p>Of reviewers would recommend this product to a friend</p>"
-          },
-          "blocks": {}
+        "block_order": [
+          "layout_m8THGE"
+        ],
+        "name": "Text and image",
+        "settings": {
+          "desktop_padding_top": 40,
+          "desktop_gap_between_blocks": 20,
+          "bg_color": "#ffffff",
+          "desktop_max_width": 1140,
+          "hide_on_mobile": false,
+          "mobile_padding_top": 20,
+          "mobile_gap_between_blocks": 10
         }
       },
-      "block_order": [
-        "heading_Njfqij",
-        "review_badge_HHP4Fj",
-        "banner_zrJWpb",
-        "reviews_total_8EHJAj"
-      ],
-      "name": "Gallery",
-      "settings": {
-        "desktop_padding_top": 50,
-        "desktop_gap_between_blocks": 10,
-        "bg_color": "#f4f9ff",
-        "desktop_max_width": 840,
-        "hide_on_mobile": false,
-        "mobile_padding_top": 30,
-        "mobile_gap_between_blocks": 10
-      }
-    },
-    "blank_section_kn3TeN": {
-      "type": "blank-section",
-      "blocks": {
-        "layout_m8THGE": {
-          "type": "layout",
-          "name": "Layout",
-          "settings": {
-            "desktop_padding": 0,
-            "desktop_gap": 36,
-            "desktop_columns_per_row": 2,
-            "align_items": "center",
-            "custom_column_width": false,
-            "column_width": "1fr 1fr",
-            "mobile_padding": 0,
-            "mobile_gap": 14,
-            "mobile_columns_per_row": 1
-          },
-          "blocks": {
-            "layout_item_fXktNB": {
-              "type": "_layout-item",
-              "name": "Column",
-              "settings": {
-                "gap_desktop": 0,
-                "gap_mobile": 0
-              },
-              "blocks": {
-                "image_NbPVC6": {
-                  "type": "image",
-                  "name": "Image",
-                  "settings": {
-                    "image": "shopify://shop_images/Group_1484581340.png",
-                    "image_url": "",
-                    "image_ratio": "1/1",
-                    "image_width": 100
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "image_NbPVC6"
-              ]
+      "blank_section_9xzQQt": {
+        "type": "blank-section",
+        "blocks": {
+          "layout_phGXT7": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 0,
+              "desktop_gap": 36,
+              "desktop_columns_per_row": 2,
+              "align_items": "start",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 14,
+              "mobile_columns_per_row": 1
             },
-            "layout_item_6Tpjt8": {
-              "type": "_layout-item",
-              "name": "Column",
-              "settings": {
-                "gap_desktop": 10,
-                "gap_mobile": 10
-              },
-              "blocks": {
-                "heading_EpUbzr": {
-                  "type": "heading",
-                  "name": "Heading",
-                  "settings": {
-                    "title": "<p>1. Your \"Chemo Brain\" Isn't Just In Your Head—It's A Critical Mineral Emergency</p>",
-                    "text_color": "#123456",
-                    "text_alignment": "left",
-                    "heading_size": "3xl",
-                    "font_weight": "bold",
-                    "font_family": "values-sans",
-                    "use_mobile_settings": false,
-                    "text_alignment_mobile": "left",
-                    "heading_size_mobile": "xl",
-                    "font_weight_mobile": "normal"
-                  },
-                  "blocks": {}
+            "blocks": {
+              "layout_item_NMVxtt": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 10,
+                  "gap_mobile": 10
                 },
-                "text_HfPtbA": {
-                  "type": "text",
-                  "name": "Text",
-                  "settings": {
-                    "title": "<p>Chemo brain isn't inevitable—it's directly linked to the severe electrolyte depletion caused by your treatments. Studies show that magnesium deficiency—experienced by many chemo patients—directly impairs memory, concentration, and cognitive processing. <br/><strong>This isn't just frustration—it's your brain lacking the essential minerals required for optimal neural functioning!1</strong></p><p>Nectar Electrolytes delivers brain-essential magnesium that crosses the blood-brain barrier more effectively than other forms, plus the perfect potassium-sodium balance needed to restore neural electrical signaling.<strong>1</strong></p>",
-                    "text_alignment": "left",
-                    "font_family": "values-sans",
-                    "font_weight": "normal",
-                    "text_color": "#0d3063",
-                    "font_size": 16,
-                    "font_size_mobile": 16,
-                    "text_alignment_mobile": "left"
+                "blocks": {
+                  "heading_LPmqLA": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<p>2. Restore Energy Fast When Chemotherapy Drains You Completely</p>",
+                      "text_color": "#123456",
+                      "text_alignment": "left",
+                      "heading_size": "3xl",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "left",
+                      "heading_size_mobile": "lg",
+                      "font_weight_mobile": "bold"
+                    },
+                    "blocks": {}
                   },
-                  "blocks": {}
+                  "text_rqxYnE": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p>Are you struggling to perform even basic daily activities? The crushing fatigue isn't just \"normal\"—it's a direct result of chemotherapy stripping your body of essential energy-producing compounds! While doctors focus on fighting cancer, they can often miss this critical depletion that leaves you unable to function.<strong>2</strong></p><p><strong>Why suffer needlessly when a simple Nectar could transform your daily experience?</strong> Feel \"like yourself again\" after just days of proper electrolyte support!<strong>2</strong></p>",
+                      "text_alignment": "left",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  },
+                  "reviews_8wnmFr": {
+                    "type": "reviews",
+                    "name": "Reviews",
+                    "settings": {
+                      "reviews": [
+                        "rachel-p"
+                      ],
+                      "activate_filters": false,
+                      "desktop_padding": 20,
+                      "desktop_columns_per_row": 1,
+                      "desktop_gap": 20,
+                      "mobile_padding": 20,
+                      "mobile_columns_per_row": 1,
+                      "mobile_gap": 10
+                    },
+                    "blocks": {}
+                  }
                 },
-                "reviews_L6z4QY": {
-                  "type": "reviews",
-                  "name": "Reviews",
-                  "settings": {
-                    "reviews": [
-                      "jason-statham"
-                    ],
-                    "activate_filters": false,
-                    "desktop_padding": 20,
-                    "desktop_columns_per_row": 1,
-                    "desktop_gap": 20,
-                    "mobile_padding": 20,
-                    "mobile_columns_per_row": 1,
-                    "mobile_gap": 10
-                  },
-                  "blocks": {}
-                }
+                "block_order": [
+                  "heading_LPmqLA",
+                  "text_rqxYnE",
+                  "reviews_8wnmFr"
+                ]
               },
-              "block_order": [
-                "heading_EpUbzr",
-                "text_HfPtbA",
-                "reviews_L6z4QY"
-              ]
-            }
-          },
-          "block_order": [
-            "layout_item_fXktNB",
-            "layout_item_6Tpjt8"
-          ]
-        }
-      },
-      "block_order": [
-        "layout_m8THGE"
-      ],
-      "name": "Text and image",
-      "settings": {
-        "desktop_padding_top": 40,
-        "desktop_gap_between_blocks": 20,
-        "bg_color": "#ffffff",
-        "desktop_max_width": 1140,
-        "hide_on_mobile": false,
-        "mobile_padding_top": 30,
-        "mobile_gap_between_blocks": 10
-      }
-    },
-    "blank_section_9xzQQt": {
-      "type": "blank-section",
-      "blocks": {
-        "layout_phGXT7": {
-          "type": "layout",
-          "name": "Layout",
-          "settings": {
-            "desktop_padding": 0,
-            "desktop_gap": 36,
-            "desktop_columns_per_row": 2,
-            "align_items": "start",
-            "custom_column_width": false,
-            "column_width": "1fr 1fr",
-            "mobile_padding": 0,
-            "mobile_gap": 14,
-            "mobile_columns_per_row": 1
-          },
-          "blocks": {
-            "layout_item_NMVxtt": {
-              "type": "_layout-item",
-              "name": "Column",
-              "settings": {
-                "gap_desktop": 10,
-                "gap_mobile": 10
-              },
-              "blocks": {
-                "heading_LPmqLA": {
-                  "type": "heading",
-                  "name": "Heading",
-                  "settings": {
-                    "title": "<p>2. Restore Energy Fast When Chemotherapy Drains You Completely</p>",
-                    "text_color": "#123456",
-                    "text_alignment": "left",
-                    "heading_size": "3xl",
-                    "font_weight": "bold",
-                    "font_family": "values-sans",
-                    "use_mobile_settings": false,
-                    "text_alignment_mobile": "left",
-                    "heading_size_mobile": "xl",
-                    "font_weight_mobile": "normal"
-                  },
-                  "blocks": {}
+              "layout_item_Wcybfn": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
                 },
-                "text_rqxYnE": {
-                  "type": "text",
-                  "name": "Text",
-                  "settings": {
-                    "title": "<p>Are you struggling to perform even basic daily activities? The crushing fatigue isn't just \"normal\"—it's a direct result of chemotherapy stripping your body of essential energy-producing compounds! While doctors focus on fighting cancer, they can often miss this critical depletion that leaves you unable to function.<strong>2</strong></p><p><strong>Why suffer needlessly when a simple Nectar could transform your daily experience?</strong> Feel \"like yourself again\" after just days of proper electrolyte support!<strong>2</strong></p>",
-                    "text_alignment": "left",
-                    "font_family": "values-sans",
-                    "font_weight": "normal",
-                    "text_color": "#0d3063",
-                    "font_size": 16,
-                    "font_size_mobile": 16,
-                    "text_alignment_mobile": "left"
-                  },
-                  "blocks": {}
+                "blocks": {
+                  "image_Q46i4t": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/ChatGPT_Image_May_14_2025_02_53_20_PM_1.png",
+                      "image_url": "",
+                      "image_ratio": "1/1",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
                 },
-                "reviews_8wnmFr": {
-                  "type": "reviews",
-                  "name": "Reviews",
-                  "settings": {
-                    "reviews": [
-                      "rachel-p"
-                    ],
-                    "activate_filters": false,
-                    "desktop_padding": 20,
-                    "desktop_columns_per_row": 1,
-                    "desktop_gap": 20,
-                    "mobile_padding": 20,
-                    "mobile_columns_per_row": 1,
-                    "mobile_gap": 10
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "heading_LPmqLA",
-                "text_rqxYnE",
-                "reviews_8wnmFr"
-              ]
+                "block_order": [
+                  "image_Q46i4t"
+                ]
+              }
             },
-            "layout_item_Wcybfn": {
-              "type": "_layout-item",
-              "name": "Column",
-              "settings": {
-                "gap_desktop": 0,
-                "gap_mobile": 0
-              },
-              "blocks": {
-                "image_Q46i4t": {
-                  "type": "image",
-                  "name": "Image",
-                  "settings": {
-                    "image": "shopify://shop_images/ChatGPT_Image_May_14_2025_02_53_20_PM_1.png",
-                    "image_url": "",
-                    "image_ratio": "1/1",
-                    "image_width": 100
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "image_Q46i4t"
-              ]
-            }
-          },
-          "block_order": [
-            "layout_item_NMVxtt",
-            "layout_item_Wcybfn"
-          ]
-        }
-      },
-      "block_order": [
-        "layout_phGXT7"
-      ],
-      "name": "Text and image",
-      "settings": {
-        "desktop_padding_top": 40,
-        "desktop_gap_between_blocks": 20,
-        "bg_color": "#ffffff",
-        "desktop_max_width": 1140,
-        "hide_on_mobile": false,
-        "mobile_padding_top": 30,
-        "mobile_gap_between_blocks": 10
-      }
-    },
-    "blank_section_ThWyzF": {
-      "type": "blank-section",
-      "blocks": {
-        "heading_NYrqVF": {
-          "type": "heading",
-          "name": "Heading",
-          "settings": {
-            "title": "<p>The Protection Your Recovery Deserves</p>",
-            "text_color": "#ffffff",
-            "text_alignment": "center",
-            "heading_size": "xl",
-            "font_weight": "bold",
-            "font_family": "poppins",
-            "use_mobile_settings": false,
-            "text_alignment_mobile": "left",
-            "heading_size_mobile": "xl",
-            "font_weight_mobile": "normal"
-          },
-          "blocks": {}
+            "block_order": [
+              "layout_item_NMVxtt",
+              "layout_item_Wcybfn"
+            ]
+          }
         },
-        "buttons_group_Ubcm4X": {
-          "type": "buttons-group",
-          "name": "Buttons Group",
-          "settings": {
-            "hide_on_desktop": false,
-            "gap_between_buttons_desktop": 10,
-            "buttons_alignment": "center",
-            "top_padding_desktop": 0,
-            "bottom_padding_desktop": 0,
-            "hide_on_mobile": false,
-            "gap_between_buttons_mobile": 0,
-            "buttons_alignment_mobile": "center",
-            "top_padding_mobile": 0,
-            "bottom_padding_mobile": 0
-          },
-          "blocks": {
-            "button_XqkWcP": {
-              "type": "button",
-              "name": "Button",
-              "settings": {
-                "button_text": "Try Nectar Now",
-                "button_link": "shopify://products/essential-daily-hydration-4-gift",
-                "related_product": "",
-                "button_type": "aqua",
-                "hide_on_mobile": false
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "button_XqkWcP"
-          ]
+        "block_order": [
+          "layout_phGXT7"
+        ],
+        "name": "Text and image",
+        "settings": {
+          "desktop_padding_top": 40,
+          "desktop_gap_between_blocks": 20,
+          "bg_color": "#ffffff",
+          "desktop_max_width": 1140,
+          "hide_on_mobile": false,
+          "mobile_padding_top": 20,
+          "mobile_gap_between_blocks": 10
         }
       },
-      "block_order": [
-        "heading_NYrqVF",
-        "buttons_group_Ubcm4X"
-      ],
-      "name": "Text Teaser",
-      "settings": {
-        "desktop_padding_top": 40,
-        "desktop_gap_between_blocks": 20,
-        "bg_color": "#0d3063",
-        "desktop_max_width": 1140,
-        "hide_on_mobile": false,
-        "mobile_padding_top": 30,
-        "mobile_gap_between_blocks": 10
+      "blank_section_ThWyzF": {
+        "type": "blank-section",
+        "blocks": {
+          "heading_NYrqVF": {
+            "type": "heading",
+            "name": "Heading",
+            "settings": {
+              "title": "<h2>The Protection Your Recovery Deserves</h2>",
+              "text_color": "#ffffff",
+              "text_alignment": "center",
+              "heading_size": "3xl",
+              "font_weight": "bold",
+              "font_family": "poppins",
+              "use_mobile_settings": true,
+              "text_alignment_mobile": "center",
+              "heading_size_mobile": "lg",
+              "font_weight_mobile": "bold"
+            },
+            "blocks": {}
+          },
+          "buttons_group_Ubcm4X": {
+            "type": "buttons-group",
+            "name": "Buttons Group",
+            "settings": {
+              "hide_on_desktop": false,
+              "gap_between_buttons_desktop": 10,
+              "buttons_alignment": "center",
+              "top_padding_desktop": 0,
+              "bottom_padding_desktop": 0,
+              "hide_on_mobile": false,
+              "gap_between_buttons_mobile": 0,
+              "buttons_alignment_mobile": "center",
+              "top_padding_mobile": 0,
+              "bottom_padding_mobile": 0
+            },
+            "blocks": {
+              "button_XqkWcP": {
+                "type": "button",
+                "name": "Button",
+                "settings": {
+                  "button_text": "Try Nectar Now",
+                  "button_link": "shopify://products/essential-daily-hydration-4-gift",
+                  "related_product": "",
+                  "button_type": "aqua",
+                  "hide_on_mobile": false
+                },
+                "blocks": {}
+              }
+            },
+            "block_order": [
+              "button_XqkWcP"
+            ]
+          }
+        },
+        "block_order": [
+          "heading_NYrqVF",
+          "buttons_group_Ubcm4X"
+        ],
+        "name": "Text Teaser",
+        "settings": {
+          "desktop_padding_top": 40,
+          "desktop_gap_between_blocks": 20,
+          "bg_color": "#0d3063",
+          "desktop_max_width": 1140,
+          "hide_on_mobile": false,
+          "mobile_padding_top": 30,
+          "mobile_gap_between_blocks": 10
+        }
+      },
+      "blank_section_YtWzDN": {
+        "type": "blank-section",
+        "blocks": {
+          "layout_bxnXD9": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 0,
+              "desktop_gap": 36,
+              "desktop_columns_per_row": 2,
+              "align_items": "center",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 14,
+              "mobile_columns_per_row": 1
+            },
+            "blocks": {
+              "layout_item_Vc8C9y": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
+                },
+                "blocks": {
+                  "image_D6bPGB": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/Image_2_12fc7487-63e3-4e18-aa11-a46af750a4ec.png",
+                      "image_url": "",
+                      "image_ratio": "1/1",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_D6bPGB"
+                ]
+              },
+              "layout_item_DLbTWf": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 10,
+                  "gap_mobile": 10
+                },
+                "blocks": {
+                  "heading_6tkjR9": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<p>3. Stop Treatment-Induced Nausea When Anti-Nausea Medications Fall Short</p>",
+                      "text_color": "#123456",
+                      "text_alignment": "left",
+                      "heading_size": "3xl",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "left",
+                      "heading_size_mobile": "lg",
+                      "font_weight_mobile": "bold"
+                    },
+                    "blocks": {}
+                  },
+                  "text_iYBhNk": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p>Are you sick of being sick? The relentless nausea from chemotherapy doesn't just make you miserable—it creates a dangerous cycle. <strong>Each episode of vomiting strips your body of essential electrolytes, which then makes nausea worse and harder to control!</strong> Medical experts specifically recommend electrolyte replacement to break this cycle, yet most patients rely solely on anti-nausea medications.3</p><p>Nectar’s specialized formula provides the precise electrolyte balance needed to stabilize your digestive system and nervous signals that trigger nausea.3</p>",
+                      "text_alignment": "left",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  },
+                  "reviews_6474jp": {
+                    "type": "reviews",
+                    "name": "Reviews",
+                    "settings": {
+                      "reviews": [
+                        "katie-anderson"
+                      ],
+                      "activate_filters": false,
+                      "desktop_padding": 20,
+                      "desktop_columns_per_row": 1,
+                      "desktop_gap": 20,
+                      "mobile_padding": 20,
+                      "mobile_columns_per_row": 1,
+                      "mobile_gap": 10
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "heading_6tkjR9",
+                  "text_iYBhNk",
+                  "reviews_6474jp"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_Vc8C9y",
+              "layout_item_DLbTWf"
+            ]
+          }
+        },
+        "block_order": [
+          "layout_bxnXD9"
+        ],
+        "name": "Text and image",
+        "settings": {
+          "desktop_padding_top": 40,
+          "desktop_gap_between_blocks": 20,
+          "bg_color": "#ffffff",
+          "desktop_max_width": 1140,
+          "hide_on_mobile": false,
+          "mobile_padding_top": 20,
+          "mobile_gap_between_blocks": 10
+        }
+      },
+      "blank_section_EXLYc3": {
+        "type": "blank-section",
+        "blocks": {
+          "layout_4wkWqx": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 0,
+              "desktop_gap": 36,
+              "desktop_columns_per_row": 2,
+              "align_items": "center",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 14,
+              "mobile_columns_per_row": 1
+            },
+            "blocks": {
+              "layout_item_zqCimY": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 10,
+                  "gap_mobile": 10
+                },
+                "blocks": {
+                  "heading_HpGa4e": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<p>4. Defeat Metallic Taste When The Taste of Water Becomes Unbearable</p>",
+                      "text_color": "#123456",
+                      "text_alignment": "left",
+                      "heading_size": "3xl",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "left",
+                      "heading_size_mobile": "lg",
+                      "font_weight_mobile": "bold"
+                    },
+                    "blocks": {}
+                  },
+                  "text_L9iAmj": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p>That metallic taste making water unbearable? You're not alone! Cancer patients consistently report that specially formulated electrolyte drinks <strong>make hydration possible</strong> again when plain water becomes repulsive during treatment.4</p><p>With six refreshing flavors that cut through taste distortions, you'll finally be able to maintain proper hydration without struggle. Don't let altered taste buds sabotage your recovery when the solution is so simple and immediate!4</p>",
+                      "text_alignment": "left",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "heading_HpGa4e",
+                  "text_L9iAmj"
+                ]
+              },
+              "layout_item_Gfcdxj": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
+                },
+                "blocks": {
+                  "image_ETVkg4": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/Group_1484581338_1.png",
+                      "image_url": "",
+                      "image_ratio": "16/ы9",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_ETVkg4"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_zqCimY",
+              "layout_item_Gfcdxj"
+            ]
+          }
+        },
+        "block_order": [
+          "layout_4wkWqx"
+        ],
+        "name": "Text and image",
+        "settings": {
+          "desktop_padding_top": 40,
+          "desktop_gap_between_blocks": 20,
+          "bg_color": "#ffffff",
+          "desktop_max_width": 1140,
+          "hide_on_mobile": false,
+          "mobile_padding_top": 20,
+          "mobile_gap_between_blocks": 10
+        }
+      },
+      "blank_section_ieLa4C": {
+        "type": "blank-section",
+        "blocks": {
+          "layout_VN6zFC": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 0,
+              "desktop_gap": 36,
+              "desktop_columns_per_row": 2,
+              "align_items": "center",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 20,
+              "mobile_columns_per_row": 1
+            },
+            "blocks": {
+              "layout_item_NJBrah": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
+                },
+                "blocks": {
+                  "image_LeFTYy": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/Group_1484581339.png",
+                      "image_url": "",
+                      "image_ratio": "16/ы9",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_LeFTYy"
+                ]
+              },
+              "layout_item_rRjE9B": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 10,
+                  "gap_mobile": 10
+                },
+                "blocks": {
+                  "heading_B8QzqF": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<p>5. End Restless Nights When Chemotherapy Destroys Your Sleep Quality</p>",
+                      "text_color": "#123456",
+                      "text_alignment": "left",
+                      "heading_size": "3xl",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "left",
+                      "heading_size_mobile": "lg",
+                      "font_weight_mobile": "bold"
+                    },
+                    "blocks": {}
+                  },
+                  "text_3Nzgpk": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p>Is chemotherapy turning your nights into an exhausting struggle? The tossing and turning isn't just from stress—<strong>it's a direct result of mineral imbalances caused by your treatment!5</strong></p><p>Magnesium deficiency—extremely common during chemotherapy—directly impacts sleep by disrupting your body's natural sleep-regulating mechanisms. Without proper levels, your muscles cramp, your mind races, and restful sleep becomes impossible. Our formula delivers the precise electrolytes needed to restore natural sleep patterns.<strong>5</strong></p>",
+                      "text_alignment": "left",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "heading_B8QzqF",
+                  "text_3Nzgpk"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_NJBrah",
+              "layout_item_rRjE9B"
+            ]
+          }
+        },
+        "block_order": [
+          "layout_VN6zFC"
+        ],
+        "name": "Text and image",
+        "settings": {
+          "desktop_padding_top": 40,
+          "desktop_gap_between_blocks": 20,
+          "bg_color": "#ffffff",
+          "desktop_max_width": 1140,
+          "hide_on_mobile": false,
+          "mobile_padding_top": 20,
+          "mobile_gap_between_blocks": 10
+        }
+      },
+      "blank_section_NGDedc": {
+        "type": "blank-section",
+        "blocks": {
+          "layout_E7dmQp": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 0,
+              "desktop_gap": 22,
+              "desktop_columns_per_row": 2,
+              "align_items": "center",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 20,
+              "mobile_columns_per_row": 1
+            },
+            "blocks": {
+              "layout_item_9erJwR": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
+                },
+                "blocks": {
+                  "image_VRNwCj": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/Group_1484581296.png",
+                      "image_url": "",
+                      "image_ratio": "16/ы9",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_VRNwCj"
+                ]
+              },
+              "layout_item_CDD8Cw": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 10,
+                  "gap_mobile": 10
+                },
+                "blocks": {
+                  "text_7XHm4G": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p><strong>FREE GIFTS WITH YOUR ORDER</strong></p>",
+                      "text_alignment": "center",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "center"
+                    },
+                    "blocks": {}
+                  },
+                  "heading_nmCzy6": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<h3>PECIAL TREATMENT OFFER<br/><strong>UP TO 56% OFF</strong></h3>",
+                      "text_color": "#123456",
+                      "text_alignment": "center",
+                      "heading_size": "lg",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": false,
+                      "text_alignment_mobile": "left",
+                      "heading_size_mobile": "xl",
+                      "font_weight_mobile": "normal"
+                    },
+                    "blocks": {}
+                  },
+                  "text_3KxgKd": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p>This limited-time deal is in high demand and stock keeps selling out.</p>",
+                      "text_alignment": "center",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  },
+                  "button_zJeyge": {
+                    "type": "button",
+                    "name": "Button",
+                    "settings": {
+                      "button_text": "Yes! Get 56% Off",
+                      "button_link": "https://drinknectar.co/products/essential-daily-hydration-4-gift",
+                      "related_product": "",
+                      "button_type": "primary",
+                      "hide_on_mobile": false
+                    },
+                    "blocks": {}
+                  },
+                  "text_XCVJrM": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p>Sell Out Risk: <strong>HIGH | FREE </strong>Shipping</p>",
+                      "text_alignment": "center",
+                      "font_family": "poppins",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "text_7XHm4G",
+                  "heading_nmCzy6",
+                  "text_3KxgKd",
+                  "button_zJeyge",
+                  "text_XCVJrM"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_9erJwR",
+              "layout_item_CDD8Cw"
+            ]
+          }
+        },
+        "block_order": [
+          "layout_E7dmQp"
+        ],
+        "custom_css": [
+          ".block-layout {border: 1px dashed #0d3063; border-radius: 12px; overflow: hidden; padding: 20px;}"
+        ],
+        "name": "Text and image",
+        "settings": {
+          "desktop_padding_top": 40,
+          "desktop_gap_between_blocks": 20,
+          "bg_color": "#ffffff",
+          "desktop_max_width": 840,
+          "hide_on_mobile": false,
+          "mobile_padding_top": 20,
+          "mobile_gap_between_blocks": 10
+        }
+      },
+      "blank_section_4mNfnD": {
+        "type": "blank-section",
+        "blocks": {
+          "layout_FibRKE": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 0,
+              "desktop_gap": 36,
+              "desktop_columns_per_row": 2,
+              "align_items": "center",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 14,
+              "mobile_columns_per_row": 1
+            },
+            "blocks": {
+              "layout_item_gFttdk": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
+                },
+                "blocks": {
+                  "image_dmBwbg": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/AI_Image_Edit_2_1.png",
+                      "image_url": "",
+                      "image_ratio": "1/1",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_dmBwbg"
+                ]
+              },
+              "layout_item_4MpyY8": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 10,
+                  "gap_mobile": 10
+                },
+                "blocks": {
+                  "heading_dUzQkA": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<p>6. Doctor-Formulated For Cancer Treatment Resilience and Quality of Life</p>",
+                      "text_color": "#123456",
+                      "text_alignment": "left",
+                      "heading_size": "3xl",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "left",
+                      "heading_size_mobile": "lg",
+                      "font_weight_mobile": "bold"
+                    },
+                    "blocks": {}
+                  },
+                  "text_6HWjUM": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p>tandard electrolyte formulas were designed for hangovers and intense athletics, not adults going through strenuous chemo.6</p><p><strong>Other electrolyte brands flood your system with hidden sugars and artificial ingredients that can interfere with treatment.</strong> Nectar's doctor-formulated solution provides precisely balanced electrolytes that support cellular recovery without introducing harmful additives that can compromise your immune system during this vulnerable period.6</p>",
+                      "text_alignment": "left",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  },
+                  "reviews_FPYcRG": {
+                    "type": "reviews",
+                    "name": "Reviews",
+                    "settings": {
+                      "reviews": [
+                        "abby-x"
+                      ],
+                      "activate_filters": false,
+                      "desktop_padding": 0,
+                      "desktop_columns_per_row": 1,
+                      "desktop_gap": 20,
+                      "mobile_padding": 0,
+                      "mobile_columns_per_row": 1,
+                      "mobile_gap": 10
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "heading_dUzQkA",
+                  "text_6HWjUM",
+                  "reviews_FPYcRG"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_gFttdk",
+              "layout_item_4MpyY8"
+            ]
+          }
+        },
+        "block_order": [
+          "layout_FibRKE"
+        ],
+        "name": "Text and image",
+        "settings": {
+          "desktop_padding_top": 40,
+          "desktop_gap_between_blocks": 20,
+          "bg_color": "#ffffff",
+          "desktop_max_width": 1140,
+          "hide_on_mobile": false,
+          "mobile_padding_top": 20,
+          "mobile_gap_between_blocks": 10
+        }
+      },
+      "blank_section_4Lm34n": {
+        "type": "blank-section",
+        "blocks": {
+          "layout_CqMEbX": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 0,
+              "desktop_gap": 36,
+              "desktop_columns_per_row": 2,
+              "align_items": "center",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 14,
+              "mobile_columns_per_row": 1
+            },
+            "blocks": {
+              "layout_item_tQyrHQ": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 10,
+                  "gap_mobile": 10
+                },
+                "blocks": {
+                  "heading_wagjkr": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<p>7. It comes with a 100% Money Back Guarantee</p>",
+                      "text_color": "#123456",
+                      "text_alignment": "left",
+                      "heading_size": "3xl",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "left",
+                      "heading_size_mobile": "lg",
+                      "font_weight_mobile": "bold"
+                    },
+                    "blocks": {}
+                  },
+                  "text_zjVBb8": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p>We're so confident Nectar will transform your chemo experience that we back every purchase with our no-questions-asked guarantee. If you don't feel a noticeable difference in your energy, comfort, and overall well-being within 90 days, we'll refund every penny*.<br/><br/>Your satisfaction and your health are our top priorities—which is why thousands trust Nectar every day of their chemo journey.</p>",
+                      "text_alignment": "left",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "heading_wagjkr",
+                  "text_zjVBb8"
+                ]
+              },
+              "layout_item_4G8Qy4": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
+                },
+                "blocks": {
+                  "image_xf84yU": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/Image_3_3.png",
+                      "image_url": "",
+                      "image_ratio": "1/1",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_xf84yU"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_tQyrHQ",
+              "layout_item_4G8Qy4"
+            ]
+          }
+        },
+        "block_order": [
+          "layout_CqMEbX"
+        ],
+        "name": "Text and image",
+        "settings": {
+          "desktop_padding_top": 40,
+          "desktop_gap_between_blocks": 20,
+          "bg_color": "#ffffff",
+          "desktop_max_width": 1140,
+          "hide_on_mobile": false,
+          "mobile_padding_top": 20,
+          "mobile_gap_between_blocks": 10
+        }
+      },
+      "blank_section_RtVT7g": {
+        "type": "blank-section",
+        "blocks": {
+          "heading_xCzc8k": {
+            "type": "heading",
+            "name": "Heading",
+            "settings": {
+              "title": "<h2>Reclaim Your Life From Chemo's Hidden Thief</h2>",
+              "text_color": "#ffffff",
+              "text_alignment": "center",
+              "heading_size": "3xl",
+              "font_weight": "bold",
+              "font_family": "poppins",
+              "use_mobile_settings": true,
+              "text_alignment_mobile": "center",
+              "heading_size_mobile": "lg",
+              "font_weight_mobile": "bold"
+            },
+            "blocks": {}
+          },
+          "buttons_group_ewjxJm": {
+            "type": "buttons-group",
+            "name": "Buttons Group",
+            "settings": {
+              "hide_on_desktop": false,
+              "gap_between_buttons_desktop": 10,
+              "buttons_alignment": "center",
+              "top_padding_desktop": 0,
+              "bottom_padding_desktop": 0,
+              "hide_on_mobile": false,
+              "gap_between_buttons_mobile": 0,
+              "buttons_alignment_mobile": "center",
+              "top_padding_mobile": 0,
+              "bottom_padding_mobile": 0
+            },
+            "blocks": {
+              "button_4mcfyx": {
+                "type": "button",
+                "name": "Button",
+                "settings": {
+                  "button_text": "Try Nectar Now",
+                  "button_link": "shopify://products/essential-daily-hydration-4-gift",
+                  "related_product": "",
+                  "button_type": "aqua",
+                  "hide_on_mobile": false
+                },
+                "blocks": {}
+              }
+            },
+            "block_order": [
+              "button_4mcfyx"
+            ]
+          }
+        },
+        "block_order": [
+          "heading_xCzc8k",
+          "buttons_group_ewjxJm"
+        ],
+        "name": "Text Teaser",
+        "settings": {
+          "desktop_padding_top": 40,
+          "desktop_gap_between_blocks": 20,
+          "bg_color": "#0d3063",
+          "desktop_max_width": 1140,
+          "hide_on_mobile": false,
+          "mobile_padding_top": 30,
+          "mobile_gap_between_blocks": 10
+        }
+      },
+      "blank_section_LdTJTx": {
+        "type": "blank-section",
+        "blocks": {
+          "layout_adBJh3": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 0,
+              "desktop_gap": 16,
+              "desktop_columns_per_row": 1,
+              "align_items": "center",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 14,
+              "mobile_columns_per_row": 1
+            },
+            "blocks": {
+              "layout_item_gR9gJT": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 16,
+                  "gap_mobile": 12
+                },
+                "blocks": {
+                  "heading_3ghY7a": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<h2>How We Stack Up</h2>",
+                      "text_color": "#123456",
+                      "text_alignment": "center",
+                      "heading_size": "3xl",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "center",
+                      "heading_size_mobile": "lg",
+                      "font_weight_mobile": "bold"
+                    },
+                    "blocks": {}
+                  },
+                  "text_aKmhUM": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p>Most electrolyte drinks are full of sugar or over-loaded with cheap table-salt. Nectar Hydration keeps it simple - real ingredients, real results, nothing extra.</p>",
+                      "text_alignment": "center",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  },
+                  "image_TBnzMb": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/Frame_1484582549_2_043d2c49-c4a6-4580-a2da-3bd4fa40906f.png",
+                      "image_url": "",
+                      "image_ratio": "16/ы9",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "heading_3ghY7a",
+                  "text_aKmhUM",
+                  "image_TBnzMb"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_gR9gJT"
+            ]
+          }
+        },
+        "block_order": [
+          "layout_adBJh3"
+        ],
+        "name": "How We Stack up",
+        "settings": {
+          "desktop_padding_top": 40,
+          "desktop_gap_between_blocks": 20,
+          "bg_color": "#ffffff",
+          "desktop_max_width": 1140,
+          "hide_on_mobile": false,
+          "mobile_padding_top": 20,
+          "mobile_gap_between_blocks": 10
+        }
+      },
+      "blank_section_jbDFF8": {
+        "type": "blank-section",
+        "blocks": {
+          "layout_F8Tmyw": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 0,
+              "desktop_gap": 40,
+              "desktop_columns_per_row": 3,
+              "align_items": "start",
+              "custom_column_width": true,
+              "column_width": "400px 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 14,
+              "mobile_columns_per_row": 1
+            },
+            "blocks": {
+              "layout_item_AbHzWV": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
+                },
+                "blocks": {
+                  "heading_wCJ3hf": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<h3>More Questions? <br/>We’ve Got You</h3>",
+                      "text_color": "#123456",
+                      "text_alignment": "left",
+                      "heading_size": "4xl",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "center",
+                      "heading_size_mobile": "xl",
+                      "font_weight_mobile": "bold"
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "heading_wCJ3hf"
+                ]
+              },
+              "layout_item_YUUNfz": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
+                },
+                "blocks": {
+                  "accordion_3BxztA": {
+                    "type": "accordion",
+                    "name": "Accordion",
+                    "settings": {},
+                    "blocks": {
+                      "accordion_item_UXWNKp": {
+                        "type": "_accordion-item",
+                        "name": "Accordion Item",
+                        "settings": {
+                          "open_by_default": false,
+                          "question": "How can I tell if I need Nectar Essential Daily Hydration?",
+                          "answer": "<p>If you're undergoing chemotherapy or have recently finished treatment and struggling with fatigue, brain fog, nausea, or dehydration—even when you're drinking water—these could be signs your body is lacking essential electrolytes. Chemo can rapidly deplete minerals like magnesium and potassium, which are critical for hydration and energy. If water alone isn’t helping and you’re feeling drained, Nectar may help restore what your body is missing and support a smoother recovery.</p>"
+                        },
+                        "blocks": {}
+                      },
+                      "accordion_item_3ra3Kn": {
+                        "type": "_accordion-item",
+                        "name": "Accordion Item",
+                        "settings": {
+                          "open_by_default": false,
+                          "question": "How long will it take me to feel a difference?",
+                          "answer": "<p>Many users report noticeable improvements—such as reduced fatigue, clearer thinking, and better hydration—within just a few days of starting Nectar Essential Daily Hydration. Since chemotherapy can deplete your body of essential electrolytes like magnesium and potassium, replenishing these minerals can quickly alleviate symptoms like \"chemo brain,\" nausea, and low energy. While individual experiences may vary, consistent daily use often leads to significant benefits within the first week.</p>"
+                        },
+                        "blocks": {}
+                      },
+                      "accordion_item_HimbTB": {
+                        "type": "_accordion-item",
+                        "name": "Accordion Item",
+                        "settings": {
+                          "open_by_default": false,
+                          "question": "When should I drink Essential Daily Hydration?",
+                          "answer": "<p>You can drink Nectar Essential Daily Hydration once daily, ideally in the morning or anytime you’re feeling drained, foggy, or nauseous. It’s especially helpful before or after chemotherapy sessions, during days when hydration feels harder, or when water just doesn’t seem to “stick.” Consistent daily use helps maintain electrolyte balance and supports overall recovery.</p>"
+                        },
+                        "blocks": {}
+                      },
+                      "accordion_item_KybkNj": {
+                        "type": "_accordion-item",
+                        "name": "Accordion Item",
+                        "settings": {
+                          "open_by_default": false,
+                          "question": "Does Essential Daily Hydration contain any sugar, caffeine, stimulants, artificial sweeteners, colorants or fillers?",
+                          "answer": "<p>No - and it never will! Essential Daily Hydration contains only what you need, in bioavailable forms your body can actually use.</p>"
+                        },
+                        "blocks": {}
+                      },
+                      "accordion_item_rpfUpd": {
+                        "type": "_accordion-item",
+                        "name": "Accordion Item",
+                        "settings": {
+                          "open_by_default": false,
+                          "question": "Is Nectar compatible with various dietary preferences?",
+                          "answer": "<p>Absolutely, Nectar is vegan, gluten-free, and keto-friendly, accommodating a range of dietary needs.</p>"
+                        },
+                        "blocks": {}
+                      },
+                      "accordion_item_jbErzd": {
+                        "type": "_accordion-item",
+                        "name": "Accordion Item",
+                        "settings": {
+                          "open_by_default": false,
+                          "question": "What is \"chemo brain,\" and how can Nectar Electrolyte Mix help?",
+                          "answer": "<p>\"Chemo brain\" refers to cognitive impairments like memory loss and difficulty concentrating, often experienced during chemotherapy. Nectar Electrolyte Mix addresses this by replenishing essential minerals, particularly magnesium, which supports neural function and can alleviate these symptoms.</p>"
+                        },
+                        "blocks": {}
+                      },
+                      "accordion_item_G6TVVf": {
+                        "type": "_accordion-item",
+                        "name": "Accordion Item",
+                        "settings": {
+                          "open_by_default": false,
+                          "question": "How does Nectar Electrolyte Mix combat chemotherapy-induced fatigue?",
+                          "answer": "<p>Chemotherapy can deplete the body of vital energy-producing compounds. Nectar's formula restores these by providing a balanced mix of electrolytes, helping patients regain energy and perform daily activities more comfortably.<br/></p>"
+                        },
+                        "blocks": {}
+                      },
+                      "accordion_item_a98nTw": {
+                        "type": "_accordion-item",
+                        "name": "Accordion Item",
+                        "settings": {
+                          "open_by_default": false,
+                          "question": "Can Nectar Electrolyte Mix help with chemotherapy-related nausea?",
+                          "answer": "<p>Yes, chemotherapy-induced nausea often leads to electrolyte loss, worsening the condition. Nectar replenishes these electrolytes, helping to stabilize the digestive system and reduce nausea.</p>"
+                        },
+                        "blocks": {}
+                      }
+                    },
+                    "block_order": [
+                      "accordion_item_UXWNKp",
+                      "accordion_item_3ra3Kn",
+                      "accordion_item_HimbTB",
+                      "accordion_item_KybkNj",
+                      "accordion_item_rpfUpd",
+                      "accordion_item_jbErzd",
+                      "accordion_item_G6TVVf",
+                      "accordion_item_a98nTw"
+                    ]
+                  }
+                },
+                "block_order": [
+                  "accordion_3BxztA"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_AbHzWV",
+              "layout_item_YUUNfz"
+            ]
+          }
+        },
+        "block_order": [
+          "layout_F8Tmyw"
+        ],
+        "name": "More Questions? We’ve Got You",
+        "settings": {
+          "desktop_padding_top": 40,
+          "desktop_gap_between_blocks": 20,
+          "bg_color": "#edf7ff",
+          "desktop_max_width": 1140,
+          "hide_on_mobile": false,
+          "mobile_padding_top": 30,
+          "mobile_gap_between_blocks": 10
+        }
       }
     },
-    "blank_section_YtWzDN": {
-      "type": "blank-section",
-      "blocks": {
-        "layout_bxnXD9": {
-          "type": "layout",
-          "name": "Layout",
-          "settings": {
-            "desktop_padding": 0,
-            "desktop_gap": 36,
-            "desktop_columns_per_row": 2,
-            "align_items": "center",
-            "custom_column_width": false,
-            "column_width": "1fr 1fr",
-            "mobile_padding": 0,
-            "mobile_gap": 14,
-            "mobile_columns_per_row": 1
-          },
-          "blocks": {
-            "layout_item_Vc8C9y": {
-              "type": "_layout-item",
-              "name": "Column",
-              "settings": {
-                "gap_desktop": 0,
-                "gap_mobile": 0
-              },
-              "blocks": {
-                "image_D6bPGB": {
-                  "type": "image",
-                  "name": "Image",
-                  "settings": {
-                    "image": "shopify://shop_images/Image_2_12fc7487-63e3-4e18-aa11-a46af750a4ec.png",
-                    "image_url": "",
-                    "image_ratio": "1/1",
-                    "image_width": 100
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "image_D6bPGB"
-              ]
-            },
-            "layout_item_DLbTWf": {
-              "type": "_layout-item",
-              "name": "Column",
-              "settings": {
-                "gap_desktop": 10,
-                "gap_mobile": 10
-              },
-              "blocks": {
-                "heading_6tkjR9": {
-                  "type": "heading",
-                  "name": "Heading",
-                  "settings": {
-                    "title": "<p>3. Stop Treatment-Induced Nausea When Anti-Nausea Medications Fall Short</p>",
-                    "text_color": "#123456",
-                    "text_alignment": "left",
-                    "heading_size": "3xl",
-                    "font_weight": "bold",
-                    "font_family": "values-sans",
-                    "use_mobile_settings": false,
-                    "text_alignment_mobile": "left",
-                    "heading_size_mobile": "xl",
-                    "font_weight_mobile": "normal"
-                  },
-                  "blocks": {}
-                },
-                "text_iYBhNk": {
-                  "type": "text",
-                  "name": "Text",
-                  "settings": {
-                    "title": "<p>Are you sick of being sick? The relentless nausea from chemotherapy doesn't just make you miserable—it creates a dangerous cycle. <strong>Each episode of vomiting strips your body of essential electrolytes, which then makes nausea worse and harder to control!</strong> Medical experts specifically recommend electrolyte replacement to break this cycle, yet most patients rely solely on anti-nausea medications.3</p><p>Nectar’s specialized formula provides the precise electrolyte balance needed to stabilize your digestive system and nervous signals that trigger nausea.3</p>",
-                    "text_alignment": "left",
-                    "font_family": "values-sans",
-                    "font_weight": "normal",
-                    "text_color": "#0d3063",
-                    "font_size": 16,
-                    "font_size_mobile": 16,
-                    "text_alignment_mobile": "left"
-                  },
-                  "blocks": {}
-                },
-                "reviews_6474jp": {
-                  "type": "reviews",
-                  "name": "Reviews",
-                  "settings": {
-                    "reviews": [
-                      "katie-anderson"
-                    ],
-                    "activate_filters": false,
-                    "desktop_padding": 20,
-                    "desktop_columns_per_row": 1,
-                    "desktop_gap": 20,
-                    "mobile_padding": 20,
-                    "mobile_columns_per_row": 1,
-                    "mobile_gap": 10
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "heading_6tkjR9",
-                "text_iYBhNk",
-                "reviews_6474jp"
-              ]
-            }
-          },
-          "block_order": [
-            "layout_item_Vc8C9y",
-            "layout_item_DLbTWf"
-          ]
-        }
-      },
-      "block_order": [
-        "layout_bxnXD9"
-      ],
-      "name": "Text and image",
-      "settings": {
-        "desktop_padding_top": 40,
-        "desktop_gap_between_blocks": 20,
-        "bg_color": "#ffffff",
-        "desktop_max_width": 1140,
-        "hide_on_mobile": false,
-        "mobile_padding_top": 30,
-        "mobile_gap_between_blocks": 10
-      }
-    },
-    "blank_section_EXLYc3": {
-      "type": "blank-section",
-      "blocks": {
-        "layout_4wkWqx": {
-          "type": "layout",
-          "name": "Layout",
-          "settings": {
-            "desktop_padding": 0,
-            "desktop_gap": 36,
-            "desktop_columns_per_row": 2,
-            "align_items": "center",
-            "custom_column_width": false,
-            "column_width": "1fr 1fr",
-            "mobile_padding": 0,
-            "mobile_gap": 14,
-            "mobile_columns_per_row": 1
-          },
-          "blocks": {
-            "layout_item_zqCimY": {
-              "type": "_layout-item",
-              "name": "Column",
-              "settings": {
-                "gap_desktop": 10,
-                "gap_mobile": 10
-              },
-              "blocks": {
-                "heading_HpGa4e": {
-                  "type": "heading",
-                  "name": "Heading",
-                  "settings": {
-                    "title": "<p>4. Defeat Metallic Taste When The Taste of Water Becomes Unbearable</p>",
-                    "text_color": "#123456",
-                    "text_alignment": "left",
-                    "heading_size": "3xl",
-                    "font_weight": "bold",
-                    "font_family": "values-sans",
-                    "use_mobile_settings": false,
-                    "text_alignment_mobile": "left",
-                    "heading_size_mobile": "xl",
-                    "font_weight_mobile": "normal"
-                  },
-                  "blocks": {}
-                },
-                "text_L9iAmj": {
-                  "type": "text",
-                  "name": "Text",
-                  "settings": {
-                    "title": "<p>That metallic taste making water unbearable? You're not alone! Cancer patients consistently report that specially formulated electrolyte drinks <strong>make hydration possible</strong> again when plain water becomes repulsive during treatment.4</p><p>With six refreshing flavors that cut through taste distortions, you'll finally be able to maintain proper hydration without struggle. Don't let altered taste buds sabotage your recovery when the solution is so simple and immediate!4</p>",
-                    "text_alignment": "left",
-                    "font_family": "values-sans",
-                    "font_weight": "normal",
-                    "text_color": "#0d3063",
-                    "font_size": 16,
-                    "font_size_mobile": 16,
-                    "text_alignment_mobile": "left"
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "heading_HpGa4e",
-                "text_L9iAmj"
-              ]
-            },
-            "layout_item_Gfcdxj": {
-              "type": "_layout-item",
-              "name": "Column",
-              "settings": {
-                "gap_desktop": 0,
-                "gap_mobile": 0
-              },
-              "blocks": {
-                "image_ETVkg4": {
-                  "type": "image",
-                  "name": "Image",
-                  "settings": {
-                    "image": "shopify://shop_images/Group_1484581338_1.png",
-                    "image_url": "",
-                    "image_ratio": "1/1",
-                    "image_width": 100
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "image_ETVkg4"
-              ]
-            }
-          },
-          "block_order": [
-            "layout_item_zqCimY",
-            "layout_item_Gfcdxj"
-          ]
-        }
-      },
-      "block_order": [
-        "layout_4wkWqx"
-      ],
-      "name": "Text and image",
-      "settings": {
-        "desktop_padding_top": 40,
-        "desktop_gap_between_blocks": 20,
-        "bg_color": "#ffffff",
-        "desktop_max_width": 1140,
-        "hide_on_mobile": false,
-        "mobile_padding_top": 30,
-        "mobile_gap_between_blocks": 10
-      }
-    },
-    "blank_section_ieLa4C": {
-      "type": "blank-section",
-      "blocks": {
-        "layout_VN6zFC": {
-          "type": "layout",
-          "name": "Layout",
-          "settings": {
-            "desktop_padding": 0,
-            "desktop_gap": 36,
-            "desktop_columns_per_row": 2,
-            "align_items": "center",
-            "custom_column_width": false,
-            "column_width": "1fr 1fr",
-            "mobile_padding": 0,
-            "mobile_gap": 14,
-            "mobile_columns_per_row": 1
-          },
-          "blocks": {
-            "layout_item_NJBrah": {
-              "type": "_layout-item",
-              "name": "Column",
-              "settings": {
-                "gap_desktop": 0,
-                "gap_mobile": 0
-              },
-              "blocks": {
-                "image_LeFTYy": {
-                  "type": "image",
-                  "name": "Image",
-                  "settings": {
-                    "image": "shopify://shop_images/Group_1484581339.png",
-                    "image_url": "",
-                    "image_ratio": "1/1",
-                    "image_width": 100
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "image_LeFTYy"
-              ]
-            },
-            "layout_item_rRjE9B": {
-              "type": "_layout-item",
-              "name": "Column",
-              "settings": {
-                "gap_desktop": 10,
-                "gap_mobile": 10
-              },
-              "blocks": {
-                "heading_B8QzqF": {
-                  "type": "heading",
-                  "name": "Heading",
-                  "settings": {
-                    "title": "<p>5. End Restless Nights When Chemotherapy Destroys Your Sleep Quality</p>",
-                    "text_color": "#123456",
-                    "text_alignment": "left",
-                    "heading_size": "3xl",
-                    "font_weight": "bold",
-                    "font_family": "values-sans",
-                    "use_mobile_settings": false,
-                    "text_alignment_mobile": "left",
-                    "heading_size_mobile": "xl",
-                    "font_weight_mobile": "normal"
-                  },
-                  "blocks": {}
-                },
-                "text_3Nzgpk": {
-                  "type": "text",
-                  "name": "Text",
-                  "settings": {
-                    "title": "<p>Is chemotherapy turning your nights into an exhausting struggle? The tossing and turning isn't just from stress—<strong>it's a direct result of mineral imbalances caused by your treatment!5</strong></p><p>Magnesium deficiency—extremely common during chemotherapy—directly impacts sleep by disrupting your body's natural sleep-regulating mechanisms. Without proper levels, your muscles cramp, your mind races, and restful sleep becomes impossible. Our formula delivers the precise electrolytes needed to restore natural sleep patterns.<strong>5</strong></p>",
-                    "text_alignment": "left",
-                    "font_family": "values-sans",
-                    "font_weight": "normal",
-                    "text_color": "#0d3063",
-                    "font_size": 16,
-                    "font_size_mobile": 16,
-                    "text_alignment_mobile": "left"
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "heading_B8QzqF",
-                "text_3Nzgpk"
-              ]
-            }
-          },
-          "block_order": [
-            "layout_item_NJBrah",
-            "layout_item_rRjE9B"
-          ]
-        }
-      },
-      "block_order": [
-        "layout_VN6zFC"
-      ],
-      "name": "Text and image",
-      "settings": {
-        "desktop_padding_top": 40,
-        "desktop_gap_between_blocks": 20,
-        "bg_color": "#ffffff",
-        "desktop_max_width": 1140,
-        "hide_on_mobile": false,
-        "mobile_padding_top": 30,
-        "mobile_gap_between_blocks": 10
-      }
-    },
-    "blank_section_NGDedc": {
-      "type": "blank-section",
-      "blocks": {
-        "layout_nDxYdD": {
-          "type": "layout",
-          "name": "Layout",
-          "settings": {
-            "desktop_padding": 0,
-            "desktop_gap": 36,
-            "desktop_columns_per_row": 2,
-            "align_items": "center",
-            "custom_column_width": false,
-            "column_width": "1fr 1fr",
-            "mobile_padding": 0,
-            "mobile_gap": 14,
-            "mobile_columns_per_row": 1
-          },
-          "blocks": {
-            "layout_item_mBzFTi": {
-              "type": "_layout-item",
-              "name": "Column",
-              "settings": {
-                "gap_desktop": 0,
-                "gap_mobile": 0
-              },
-              "blocks": {
-                "image_mdmqUX": {
-                  "type": "image",
-                  "name": "Image",
-                  "settings": {
-                    "image": "shopify://shop_images/Group_1484581296_1.png",
-                    "image_url": "",
-                    "image_ratio": "4/3",
-                    "image_width": 100
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "image_mdmqUX"
-              ]
-            },
-            "layout_item_YyzJJ3": {
-              "type": "_layout-item",
-              "name": "Column",
-              "settings": {
-                "gap_desktop": 10,
-                "gap_mobile": 10
-              },
-              "blocks": {
-                "heading_kFR9Ud": {
-                  "type": "heading",
-                  "name": "Heading",
-                  "settings": {
-                    "title": "<p><strong>Free gifts with your order</strong></p>",
-                    "text_color": "#123456",
-                    "text_alignment": "center",
-                    "heading_size": "md",
-                    "font_weight": "normal",
-                    "font_family": "values-sans",
-                    "use_mobile_settings": false,
-                    "text_alignment_mobile": "left",
-                    "heading_size_mobile": "xl",
-                    "font_weight_mobile": "normal"
-                  },
-                  "blocks": {}
-                },
-                "heading_k6rHKn": {
-                  "type": "heading",
-                  "name": "Heading",
-                  "settings": {
-                    "title": "<h3>SPECIAL TREATMENT OFFER<br/><strong>UP TO 56% OFF</strong></h3>",
-                    "text_color": "#123456",
-                    "text_alignment": "center",
-                    "heading_size": "2xl",
-                    "font_weight": "bold",
-                    "font_family": "values-sans",
-                    "use_mobile_settings": false,
-                    "text_alignment_mobile": "left",
-                    "heading_size_mobile": "xl",
-                    "font_weight_mobile": "normal"
-                  },
-                  "blocks": {}
-                },
-                "text_WVFctQ": {
-                  "type": "text",
-                  "name": "Text",
-                  "settings": {
-                    "title": "<p>This limited-time deal is in high demand and stock keeps selling out.</p>",
-                    "text_alignment": "center",
-                    "font_family": "values-sans",
-                    "font_weight": "normal",
-                    "text_color": "#0d3063",
-                    "font_size": 16,
-                    "font_size_mobile": 16,
-                    "text_alignment_mobile": "center"
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "heading_kFR9Ud",
-                "heading_k6rHKn",
-                "text_WVFctQ"
-              ]
-            }
-          },
-          "block_order": [
-            "layout_item_mBzFTi",
-            "layout_item_YyzJJ3"
-          ]
-        }
-      },
-      "block_order": [
-        "layout_nDxYdD"
-      ],
-      "name": "Text and image",
-      "settings": {
-        "desktop_padding_top": 40,
-        "desktop_gap_between_blocks": 20,
-        "bg_color": "#ffffff",
-        "desktop_max_width": 740,
-        "hide_on_mobile": false,
-        "mobile_padding_top": 30,
-        "mobile_gap_between_blocks": 10
-      }
-    }
-  },
-  "order": [
-    "main",
-    "blank_section_jhpeEr",
-    "blank_section_kapmQF",
-    "blank_section_kn3TeN",
-    "blank_section_9xzQQt",
-    "blank_section_ThWyzF",
-    "blank_section_YtWzDN",
-    "blank_section_EXLYc3",
-    "blank_section_ieLa4C",
-    "blank_section_NGDedc"
-  ]
-}
+    "order": [
+      "blank_section_jhpeEr",
+      "blank_section_kapmQF",
+      "blank_section_kn3TeN",
+      "blank_section_9xzQQt",
+      "blank_section_ThWyzF",
+      "blank_section_YtWzDN",
+      "blank_section_EXLYc3",
+      "blank_section_ieLa4C",
+      "blank_section_NGDedc",
+      "blank_section_4mNfnD",
+      "blank_section_4Lm34n",
+      "blank_section_RtVT7g",
+      "blank_section_LdTJTx",
+      "blank_section_jbDFF8"
+    ]
+  }
+  

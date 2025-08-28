@@ -1,0 +1,1426 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
+    "sections": {
+      "blank_section_jhpeEr": {
+        "type": "blank-section",
+        "blocks": {
+          "heading_WGD7E3": {
+            "type": "heading",
+            "name": "Heading",
+            "settings": {
+              "title": "<h2>7 Reasons Doctors Recommend This Electrolyte Mix For Chemo Patients Battling Side Effects</h2>",
+              "text_color": "#123456",
+              "text_alignment": "left",
+              "heading_size": "3xl",
+              "font_weight": "bold",
+              "font_family": "values-sans",
+              "use_mobile_settings": true,
+              "text_alignment_mobile": "left",
+              "heading_size_mobile": "lg",
+              "font_weight_mobile": "bold"
+            },
+            "blocks": {}
+          },
+          "layout_9zkY8h": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 0,
+              "desktop_gap": 16,
+              "desktop_columns_per_row": 3,
+              "align_items": "center",
+              "custom_column_width": true,
+              "column_width": "60px 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 14,
+              "mobile_columns_per_row": 1
+            },
+            "blocks": {
+              "layout_item_z8Ti94": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
+                },
+                "blocks": {
+                  "image_xPHwxW": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/Mask_group_4.png",
+                      "image_url": "",
+                      "border_radius": 0,
+                      "image_ratio": "1/1",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_xPHwxW"
+                ]
+              },
+              "layout_item_jc3eEa": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
+                },
+                "blocks": {
+                  "text_k6b9nL": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p>By <strong>Katie B.</strong><br/>Last Updated Apr. 16, 202</p>",
+                      "text_alignment": "left",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 14,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "text_k6b9nL"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_z8Ti94",
+              "layout_item_jc3eEa"
+            ]
+          },
+          "text_GRij4p": {
+            "type": "text",
+            "name": "Text",
+            "settings": {
+              "title": "<p><strong>Summary:</strong> Brain fog and fatigue don't have to be permanent side effects of treatment. This doctor-designed electrolyte mix addresses the hidden dehydration that causes mental cloudiness and low energy, helping you think clearly and feel stronger both during treatment and in your recovery.</p><p>Keep reading to discover why thousands are choosing this pure, gentle solution to reclaim their mental clarity and vitality, plus secure your 56% discount.</p>",
+              "text_alignment": "left",
+              "font_family": "values-sans",
+              "font_weight": "normal",
+              "text_color": "#0d3063",
+              "font_size": 16,
+              "font_size_mobile": 16,
+              "text_alignment_mobile": "left"
+            },
+            "blocks": {}
+          },
+          "image_JmC9g3": {
+            "type": "image",
+            "name": "Image",
+            "settings": {
+              "image": "shopify://shop_images/Frame_1484582549_2_043d2c49-c4a6-4580-a2da-3bd4fa40906f.png",
+              "image_url": "",
+              "border_radius": 0,
+              "image_ratio": "16/ы9",
+              "image_width": 100
+            },
+            "blocks": {}
+          },
+          "layout_BafYTz": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 20,
+              "desktop_gap": 36,
+              "desktop_columns_per_row": 2,
+              "align_items": "center",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 14,
+              "mobile_columns_per_row": 1
+            },
+            "blocks": {
+              "layout_item_Vc8C9y": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
+                },
+                "blocks": {
+                  "image_D6bPGB": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/NECTAR_092524-3529_1.png",
+                      "image_url": "",
+                      "border_radius": 12,
+                      "image_ratio": "1/1",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_D6bPGB"
+                ]
+              },
+              "layout_item_DLbTWf": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 10,
+                  "gap_mobile": 10
+                },
+                "blocks": {
+                  "heading_6tkjR9": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<p>1. It's Sugar-Free, Zero-Calorie and Low-Sodium</p>",
+                      "text_color": "#123456",
+                      "text_alignment": "left",
+                      "heading_size": "3xl",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "left",
+                      "heading_size_mobile": "lg",
+                      "font_weight_mobile": "bold"
+                    },
+                    "blocks": {}
+                  },
+                  "text_iYBhNk": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p>Here's a shocking fact - Americans consume more sugar and salt than any other nutrients. Yet, most electrolyte products are loaded with<strong>harmful</strong>amounts of sugar and sodium.<strong>Nectar is Sugar-Free & Low-Sodium making it the only electrolyte mix designed for safe daily use</strong></p>",
+                      "text_alignment": "left",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "heading_6tkjR9",
+                  "text_iYBhNk"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_Vc8C9y",
+              "layout_item_DLbTWf"
+            ]
+          },
+          "layout_fWeRHg": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 20,
+              "desktop_gap": 36,
+              "desktop_columns_per_row": 2,
+              "align_items": "center",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 14,
+              "mobile_columns_per_row": 1
+            },
+            "blocks": {
+              "layout_item_r3WNeH": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
+                },
+                "blocks": {
+                  "image_iVNwEJ": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/Christina_F..png",
+                      "image_url": "",
+                      "border_radius": 12,
+                      "image_ratio": "1/1",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_iVNwEJ"
+                ]
+              },
+              "layout_item_744Mi4": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 10,
+                  "gap_mobile": 10
+                },
+                "blocks": {
+                  "heading_9aLmFm": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<h2>2. It Will Boost Your Energy, Focus, and Mood</h2>",
+                      "text_color": "#123456",
+                      "text_alignment": "left",
+                      "heading_size": "3xl",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "left",
+                      "heading_size_mobile": "lg",
+                      "font_weight_mobile": "bold"
+                    },
+                    "blocks": {}
+                  },
+                  "text_4GfK3d": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p>You've for sure heard how important drinking water is. But, you probably don't know how damaging dehydration can be to your quality of life. The afternoon slump, brain fog, irritable mood, and bad skin are just a few of the symptoms of chronic dehydration. Adding just one packet of Nectar makes your<strong>water 3x more hydrating than plain water.</strong></p>",
+                      "text_alignment": "left",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "heading_9aLmFm",
+                  "text_4GfK3d"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_r3WNeH",
+              "layout_item_744Mi4"
+            ]
+          },
+          "layout_bnHCRQ": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 20,
+              "desktop_gap": 36,
+              "desktop_columns_per_row": 2,
+              "align_items": "center",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 14,
+              "mobile_columns_per_row": 1
+            },
+            "blocks": {
+              "layout_item_DLVM8J": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
+                },
+                "blocks": {
+                  "image_Mgi6Xx": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/image_23140.png",
+                      "image_url": "",
+                      "border_radius": 12,
+                      "image_ratio": "1/1",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_Mgi6Xx"
+                ]
+              },
+              "layout_item_D94gMH": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 10,
+                  "gap_mobile": 10
+                },
+                "blocks": {
+                  "heading_4TLbME": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<p>3. It Tastes Amazing and Has 6 Organic Fruit Flavors</p>",
+                      "text_color": "#123456",
+                      "text_alignment": "left",
+                      "heading_size": "3xl",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "left",
+                      "heading_size_mobile": "lg",
+                      "font_weight_mobile": "bold"
+                    },
+                    "blocks": {}
+                  },
+                  "text_t4JhmC": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p>In order to make a habit stick, you must look forward to doing it. If your electrolyte mix tastes artificial and sugary, it's difficult to make it a habit. With six light and refreshing fruit flavors,<strong>Nectar will have you looking forward to every sip.</strong>It's refreshingly simple.</p>",
+                      "text_alignment": "left",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "heading_4TLbME",
+                  "text_t4JhmC"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_DLVM8J",
+              "layout_item_D94gMH"
+            ]
+          },
+          "layout_g8JC4R": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 20,
+              "desktop_gap": 36,
+              "desktop_columns_per_row": 2,
+              "align_items": "center",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 14,
+              "mobile_columns_per_row": 1
+            },
+            "blocks": {
+              "layout_item_8mfnNi": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
+                },
+                "blocks": {
+                  "image_WNapUC": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/Rectangle_2116.png",
+                      "image_url": "",
+                      "border_radius": 12,
+                      "image_ratio": "1/1",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_WNapUC"
+                ]
+              },
+              "layout_item_UnytPm": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 10,
+                  "gap_mobile": 10
+                },
+                "blocks": {
+                  "heading_4f9hbV": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<p>4. Over 26 Million Servings Sold with 12,000+ 5-Star Reviews</p>",
+                      "text_color": "#123456",
+                      "text_alignment": "left",
+                      "heading_size": "3xl",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "left",
+                      "heading_size_mobile": "lg",
+                      "font_weight_mobile": "bold"
+                    },
+                    "blocks": {}
+                  },
+                  "text_kj9RtN": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p>Since launching over 5 years ago, Nectar has become the go-to electrolyte mix for millions of everyday consumers. Moms, kids, workers, and seniors have all made Nectar a part of their daily routine. If that isn't enough to convince you, take it from the<strong>80% of customers that keep coming back for more.</strong></p>",
+                      "text_alignment": "left",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "heading_4f9hbV",
+                  "text_kj9RtN"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_8mfnNi",
+              "layout_item_UnytPm"
+            ]
+          },
+          "layout_L69dPH": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 20,
+              "desktop_gap": 36,
+              "desktop_columns_per_row": 2,
+              "align_items": "center",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 14,
+              "mobile_columns_per_row": 1
+            },
+            "blocks": {
+              "layout_item_QFQ7Gh": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
+                },
+                "blocks": {
+                  "image_HVUn7n": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/NECTAR_092524-3479_2.png",
+                      "image_url": "",
+                      "border_radius": 12,
+                      "image_ratio": "1/1",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_HVUn7n"
+                ]
+              },
+              "layout_item_7MwA7m": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 10,
+                  "gap_mobile": 10
+                },
+                "blocks": {
+                  "heading_gPxXtd": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<p>5. It's the Ultimate Money Saver</p>",
+                      "text_color": "#123456",
+                      "text_alignment": "left",
+                      "heading_size": "3xl",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "left",
+                      "heading_size_mobile": "lg",
+                      "font_weight_mobile": "bold"
+                    },
+                    "blocks": {}
+                  },
+                  "text_jPxj9w": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p>Paying $1.50 per serving for electrolyte mixes loaded with unhealthy, low-quality ingredients should be illegal. With no fancy marketing budget, Nectar is able to charge a much more affordable price. <strong>BONUS: You can get Nectar for $0.86 per serving for a limited time.</strong></p>",
+                      "text_alignment": "left",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "heading_gPxXtd",
+                  "text_jPxj9w"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_QFQ7Gh",
+              "layout_item_7MwA7m"
+            ]
+          }
+        },
+        "block_order": [
+          "heading_WGD7E3",
+          "layout_9zkY8h",
+          "text_GRij4p",
+          "image_JmC9g3",
+          "layout_BafYTz",
+          "layout_fWeRHg",
+          "layout_bnHCRQ",
+          "layout_g8JC4R",
+          "layout_L69dPH"
+        ],
+        "custom_css": [
+          "#AaEljUGJqMHdiZkR6e__image_xPHwxW img {border-radius: 50%;}",
+          "#ARitMSzArcnhaQW1Pd__layout_9zkY8h .block-layout__content {grid-template-columns: 60px 1fr;}"
+        ],
+        "name": "Text and image",
+        "settings": {
+          "desktop_padding_top": 40,
+          "desktop_gap_between_blocks": 20,
+          "bg_color": "#ffffff",
+          "desktop_max_width": 800,
+          "hide_on_mobile": false,
+          "mobile_padding_top": 30,
+          "mobile_gap_between_blocks": 10
+        }
+      },
+      "blank_section_NGDedc": {
+        "type": "blank-section",
+        "blocks": {
+          "layout_E7dmQp": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 0,
+              "desktop_gap": 22,
+              "desktop_columns_per_row": 2,
+              "align_items": "center",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 20,
+              "mobile_columns_per_row": 1
+            },
+            "blocks": {
+              "layout_item_9erJwR": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
+                },
+                "blocks": {
+                  "image_VRNwCj": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/Group_1484581296.png",
+                      "image_url": "",
+                      "border_radius": 0,
+                      "image_ratio": "16/ы9",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_VRNwCj"
+                ]
+              },
+              "layout_item_CDD8Cw": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 10,
+                  "gap_mobile": 10
+                },
+                "blocks": {
+                  "text_7XHm4G": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p><strong>FREE GIFTS WITH YOUR ORDER</strong></p>",
+                      "text_alignment": "center",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "center"
+                    },
+                    "blocks": {}
+                  },
+                  "heading_nmCzy6": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<h3>PECIAL TREATMENT OFFER<br/><strong>UP TO 56% OFF</strong></h3>",
+                      "text_color": "#123456",
+                      "text_alignment": "center",
+                      "heading_size": "lg",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": false,
+                      "text_alignment_mobile": "left",
+                      "heading_size_mobile": "xl",
+                      "font_weight_mobile": "normal"
+                    },
+                    "blocks": {}
+                  },
+                  "text_3KxgKd": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p>This limited-time deal is in high demand and stock keeps selling out.</p>",
+                      "text_alignment": "center",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  },
+                  "button_zJeyge": {
+                    "type": "button",
+                    "name": "Button",
+                    "settings": {
+                      "button_text": "Yes! Get 56% Off",
+                      "button_link": "https://drinknectar.co/products/essential-daily-hydration-4-gift",
+                      "related_product": "",
+                      "button_type": "primary",
+                      "hide_on_mobile": false
+                    },
+                    "blocks": {}
+                  },
+                  "text_XCVJrM": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p>Sell Out Risk: <strong>HIGH | FREE </strong>Shipping</p>",
+                      "text_alignment": "center",
+                      "font_family": "poppins",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "text_7XHm4G",
+                  "heading_nmCzy6",
+                  "text_3KxgKd",
+                  "button_zJeyge",
+                  "text_XCVJrM"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_9erJwR",
+              "layout_item_CDD8Cw"
+            ]
+          }
+        },
+        "block_order": [
+          "layout_E7dmQp"
+        ],
+        "custom_css": [
+          ".block-layout {border: 1px dashed #0d3063; border-radius: 12px; overflow: hidden; padding: 20px;}"
+        ],
+        "name": "Text and image",
+        "settings": {
+          "desktop_padding_top": 40,
+          "desktop_gap_between_blocks": 20,
+          "bg_color": "#ffffff",
+          "desktop_max_width": 840,
+          "hide_on_mobile": false,
+          "mobile_padding_top": 20,
+          "mobile_gap_between_blocks": 10
+        }
+      },
+      "blank_section_4mNfnD": {
+        "type": "blank-section",
+        "blocks": {
+          "layout_3zKQME": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 20,
+              "desktop_gap": 36,
+              "desktop_columns_per_row": 2,
+              "align_items": "center",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 14,
+              "mobile_columns_per_row": 1
+            },
+            "blocks": {
+              "layout_item_HNQ8mg": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
+                },
+                "blocks": {
+                  "image_LqMeUQ": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/Hand_Pouring_Nectar_4.png",
+                      "image_url": "",
+                      "border_radius": 12,
+                      "image_ratio": "1/1",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_LqMeUQ"
+                ]
+              },
+              "layout_item_GTYN3P": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 10,
+                  "gap_mobile": 10
+                },
+                "blocks": {
+                  "heading_wxGJBx": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<p>6. Studies Show Over 75% of Americans Are Chronically Dehydrated</p>",
+                      "text_color": "#123456",
+                      "text_alignment": "left",
+                      "heading_size": "3xl",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "left",
+                      "heading_size_mobile": "lg",
+                      "font_weight_mobile": "bold"
+                    },
+                    "blocks": {}
+                  },
+                  "text_PYdLmK": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p>Being properly hydrated daily will have a drastic impact on your quality of life. The afternoon slump, brain fog, and mood swings are all symptoms of dehydration. Adding just one packet of Nectar to your daily routine will boost your hydration levels, allowing you to make the most of your days!</p>",
+                      "text_alignment": "left",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "heading_wxGJBx",
+                  "text_PYdLmK"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_HNQ8mg",
+              "layout_item_GTYN3P"
+            ]
+          },
+          "layout_367niy": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 20,
+              "desktop_gap": 36,
+              "desktop_columns_per_row": 2,
+              "align_items": "center",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 14,
+              "mobile_columns_per_row": 1
+            },
+            "blocks": {
+              "layout_item_Vr6JhG": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
+                },
+                "blocks": {
+                  "image_Rq8UHD": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/NECTAR_FOR_REVIEW_STUDIO_52_2.png",
+                      "image_url": "",
+                      "border_radius": 12,
+                      "image_ratio": "1/1",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_Rq8UHD"
+                ]
+              },
+              "layout_item_RUhjYa": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 10,
+                  "gap_mobile": 10
+                },
+                "blocks": {
+                  "heading_3JyGMV": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<p>7. It Is Doctor Formulated and Approved</p>",
+                      "text_color": "#123456",
+                      "text_alignment": "left",
+                      "heading_size": "3xl",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "left",
+                      "heading_size_mobile": "lg",
+                      "font_weight_mobile": "bold"
+                    },
+                    "blocks": {}
+                  },
+                  "text_QhjNaT": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p>Not all electrolyte powders are created equal.<strong>Nectar was developed by doctors and nutritionists to deliver the right balance of electrolytes safely, without the sugar and artificial junk in typical sports drinks.</strong>This means daily use is safe, clean, and supports your performance without compromise.</p>",
+                      "text_alignment": "left",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "heading_3JyGMV",
+                  "text_QhjNaT"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_Vr6JhG",
+              "layout_item_RUhjYa"
+            ]
+          },
+          "layout_zL8aJ7": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 20,
+              "desktop_gap": 36,
+              "desktop_columns_per_row": 2,
+              "align_items": "center",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 14,
+              "mobile_columns_per_row": 1
+            },
+            "blocks": {
+              "layout_item_idxm3j": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
+                },
+                "blocks": {
+                  "image_ETazDE": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/Nectar-Hydration81146_1_2.png",
+                      "image_url": "",
+                      "border_radius": 12,
+                      "image_ratio": "1/1",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_ETazDE"
+                ]
+              },
+              "layout_item_fCqGfL": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 10,
+                  "gap_mobile": 10
+                },
+                "blocks": {
+                  "heading_tJBLUd": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<h2>8. It Is Flavored with Organic Fruit - NOT Mystery \"Natural Flavors\"</h2>",
+                      "text_color": "#123456",
+                      "text_alignment": "left",
+                      "heading_size": "3xl",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "left",
+                      "heading_size_mobile": "lg",
+                      "font_weight_mobile": "bold"
+                    },
+                    "blocks": {}
+                  },
+                  "text_GbGr9T": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p>Did you know the ingredient \"natural flavors\" can mean anything? Yes, anything including preservatives and chemicals.<strong>Nectar is flavored with pure organic fruit - the healthiest option available.</strong>And, unlike its artificial-tasting competitors, Nectar has a delicious light, refreshing taste.</p>",
+                      "text_alignment": "left",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "heading_tJBLUd",
+                  "text_GbGr9T"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_idxm3j",
+              "layout_item_fCqGfL"
+            ]
+          },
+          "layout_pH8LdL": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 20,
+              "desktop_gap": 36,
+              "desktop_columns_per_row": 2,
+              "align_items": "center",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 14,
+              "mobile_columns_per_row": 1
+            },
+            "blocks": {
+              "layout_item_xy8c7j": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
+                },
+                "blocks": {
+                  "image_dWX4ta": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/NECTAR_092524-3516_2.png",
+                      "image_url": "",
+                      "border_radius": 12,
+                      "image_ratio": "1/1",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_dWX4ta"
+                ]
+              },
+              "layout_item_iRByK4": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 10,
+                  "gap_mobile": 10
+                },
+                "blocks": {
+                  "heading_3m6XWV": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<h2>9. You Can Stay Summer-Fit Year Round</h2>",
+                      "text_color": "#123456",
+                      "text_alignment": "left",
+                      "heading_size": "3xl",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "left",
+                      "heading_size_mobile": "lg",
+                      "font_weight_mobile": "bold"
+                    },
+                    "blocks": {}
+                  },
+                  "text_ePk6ea": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p><strong>Nectar has no sugar, artificial junk, and is zero calorie.</strong>Since it's so convenient, it can easily be incorporated into a variety of diets, supporting your health & fitness goals without compromising on flavor. After your first sip, you won't want to go back to your old unhealthy electrolytes.</p>",
+                      "text_alignment": "left",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "heading_3m6XWV",
+                  "text_ePk6ea"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_xy8c7j",
+              "layout_item_iRByK4"
+            ]
+          },
+          "layout_hGCD4h": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 20,
+              "desktop_gap": 36,
+              "desktop_columns_per_row": 2,
+              "align_items": "center",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 14,
+              "mobile_columns_per_row": 1
+            },
+            "blocks": {
+              "layout_item_RcYHc3": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
+                },
+                "blocks": {
+                  "image_XUdUbT": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/image_23141.png",
+                      "image_url": "",
+                      "border_radius": 12,
+                      "image_ratio": "1/1",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_XUdUbT"
+                ]
+              },
+              "layout_item_Pq4GTQ": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 10,
+                  "gap_mobile": 10
+                },
+                "blocks": {
+                  "heading_jCBT4y": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<h2>10. If You Made It This Far, Nectar’s For You</h2>",
+                      "text_color": "#123456",
+                      "text_alignment": "left",
+                      "heading_size": "3xl",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "left",
+                      "heading_size_mobile": "lg",
+                      "font_weight_mobile": "bold"
+                    },
+                    "blocks": {}
+                  },
+                  "text_qVFG9V": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p>It's hard to create habits, but we are so confident that you can do it with Nectar, we’re giving 56% off and 3 free gifts on your first order. After your first sip, you won't think twice about skipping your water ever again.</p>",
+                      "text_alignment": "left",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "heading_jCBT4y",
+                  "text_qVFG9V"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_RcYHc3",
+              "layout_item_Pq4GTQ"
+            ]
+          }
+        },
+        "block_order": [
+          "layout_3zKQME",
+          "layout_367niy",
+          "layout_zL8aJ7",
+          "layout_pH8LdL",
+          "layout_hGCD4h"
+        ],
+        "name": "Text and image",
+        "settings": {
+          "desktop_padding_top": 40,
+          "desktop_gap_between_blocks": 20,
+          "bg_color": "#ffffff",
+          "desktop_max_width": 800,
+          "hide_on_mobile": false,
+          "mobile_padding_top": 20,
+          "mobile_gap_between_blocks": 10
+        }
+      },
+      "blank_section_NHHjDK": {
+        "type": "blank-section",
+        "blocks": {
+          "layout_QqjxpH": {
+            "type": "layout",
+            "name": "Layout",
+            "settings": {
+              "desktop_padding": 0,
+              "desktop_gap": 22,
+              "desktop_columns_per_row": 2,
+              "align_items": "center",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 20,
+              "mobile_columns_per_row": 1
+            },
+            "blocks": {
+              "layout_item_YLAtk6": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 0
+                },
+                "blocks": {
+                  "image_YMeYiE": {
+                    "type": "image",
+                    "name": "Image",
+                    "settings": {
+                      "image": "shopify://shop_images/Group_1484581296.png",
+                      "image_url": "",
+                      "border_radius": 0,
+                      "image_ratio": "16/ы9",
+                      "image_width": 100
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "image_YMeYiE"
+                ]
+              },
+              "layout_item_jeFAAP": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 10,
+                  "gap_mobile": 10
+                },
+                "blocks": {
+                  "text_48C78G": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p><strong>FREE GIFTS WITH YOUR ORDER</strong></p>",
+                      "text_alignment": "center",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "center"
+                    },
+                    "blocks": {}
+                  },
+                  "heading_PztzkM": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<h3>PECIAL TREATMENT OFFER<br/><strong>UP TO 56% OFF</strong></h3>",
+                      "text_color": "#123456",
+                      "text_alignment": "center",
+                      "heading_size": "lg",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": false,
+                      "text_alignment_mobile": "left",
+                      "heading_size_mobile": "xl",
+                      "font_weight_mobile": "normal"
+                    },
+                    "blocks": {}
+                  },
+                  "text_3f89zB": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p>This limited-time deal is in high demand and stock keeps selling out.</p>",
+                      "text_alignment": "center",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  },
+                  "button_BCKHqq": {
+                    "type": "button",
+                    "name": "Button",
+                    "settings": {
+                      "button_text": "Yes! Get 56% Off",
+                      "button_link": "https://drinknectar.co/products/essential-daily-hydration-4-gift",
+                      "related_product": "",
+                      "button_type": "primary",
+                      "hide_on_mobile": false
+                    },
+                    "blocks": {}
+                  },
+                  "text_MV8Akf": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "<p>Sell Out Risk: <strong>HIGH | FREE </strong>Shipping</p>",
+                      "text_alignment": "center",
+                      "font_family": "poppins",
+                      "font_weight": "normal",
+                      "text_color": "#0d3063",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "left"
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "text_48C78G",
+                  "heading_PztzkM",
+                  "text_3f89zB",
+                  "button_BCKHqq",
+                  "text_MV8Akf"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_YLAtk6",
+              "layout_item_jeFAAP"
+            ]
+          }
+        },
+        "block_order": [
+          "layout_QqjxpH"
+        ],
+        "custom_css": [
+          ".block-layout {border: 1px dashed #0d3063; border-radius: 12px; padding: 20px;}"
+        ],
+        "name": "Text and image",
+        "settings": {
+          "desktop_padding_top": 40,
+          "desktop_gap_between_blocks": 20,
+          "bg_color": "#ffffff",
+          "desktop_max_width": 840,
+          "hide_on_mobile": false,
+          "mobile_padding_top": 20,
+          "mobile_gap_between_blocks": 10
+        }
+      }
+    },
+    "order": [
+      "blank_section_jhpeEr",
+      "blank_section_NGDedc",
+      "blank_section_4mNfnD",
+      "blank_section_NHHjDK"
+    ]
+  }
+  
