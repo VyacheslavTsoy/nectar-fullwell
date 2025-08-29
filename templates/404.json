@@ -65,7 +65,7 @@
             "top_padding_desktop": 12,
             "bottom_padding_desktop": 0,
             "hide_on_mobile": false,
-            "gap_between_buttons_mobile": 22,
+            "gap_between_buttons_mobile": 12,
             "buttons_alignment_mobile": "center",
             "top_padding_mobile": 10,
             "bottom_padding_mobile": 0
@@ -121,7 +121,8 @@
         "buttons_group_PpaGrC"
       ],
       "custom_css": [
-        ".buttons-group .btn {width: 100%; max-width: 250px;}"
+        ".buttons-group .btn {width: 100%; max-width: 250px;}",
+        ".blank-section {min-height: 450px;}"
       ],
       "name": "404",
       "settings": {
