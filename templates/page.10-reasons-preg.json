@@ -39,7 +39,7 @@
                   "type": "image",
                   "name": "Image",
                   "settings": {
-                    "image": "shopify://shop_images/ChatGPT_Image_May_14_2025_03_51_31_PM.png",
+                    "image": "{{ closest.page.metafields.custom.reasons_top_section.value.main_image.value }}",
                     "image_url": "",
                     "border_radius": 0,
                     "image_ratio": "1/1",
