@@ -120,6 +120,9 @@
         "heading_A8Fixt",
         "buttons_group_PpaGrC"
       ],
+      "custom_css": [
+        ".buttons-group .btn{width: 100%; max-width: 250px;}"
+      ],
       "name": "404",
       "settings": {
         "desktop_padding_top": 60,
