@@ -65,7 +65,7 @@
             "top_padding_desktop": 12,
             "bottom_padding_desktop": 0,
             "hide_on_mobile": false,
-            "gap_between_buttons_mobile": 0,
+            "gap_between_buttons_mobile": 22,
             "buttons_alignment_mobile": "center",
             "top_padding_mobile": 10,
             "bottom_padding_mobile": 0
