@@ -143,7 +143,7 @@
           "type": "heading",
           "name": "Heading",
           "settings": {
-            "title": "<h3>Real Chemo, Real Recovery: <br/><strong>The Nectar Difference</strong></h3>",
+            "title": "<p>{{ closest.page.metafields.custom.reasons_testimonial_s_header.value.title.value }}</p>",
             "text_color": "#123456",
             "text_alignment": "center",
             "heading_size": "3xl",
