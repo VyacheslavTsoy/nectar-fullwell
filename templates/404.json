@@ -50,8 +50,8 @@
             "font_family": "values-sans",
             "use_mobile_settings": true,
             "text_alignment_mobile": "center",
-            "heading_size_mobile": "lg",
-            "font_weight_mobile": "bold"
+            "heading_size_mobile": "md",
+            "font_weight_mobile": "normal"
           },
           "blocks": {}
         },
@@ -121,7 +121,7 @@
         "buttons_group_PpaGrC"
       ],
       "custom_css": [
-        ".buttons-group .btn{width: 100%; max-width: 250px;}"
+        ".buttons-group .btn {width: 100%; max-width: 250px;}"
       ],
       "name": "404",
       "settings": {
