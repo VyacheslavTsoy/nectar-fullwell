@@ -1208,8 +1208,8 @@
                           "type": "image",
                           "name": "Image",
                           "settings": {
-                            "image": "shopify://shop_images/card_6.png",
-                            "image_url": "",
+                            "image": "shopify://shop_images/CALM_BERRY_FINAL-Photoroom.png",
+                            "image_url": "https://drinknectar.co/products/essential-daily-calm",
                             "border_radius": 0,
                             "image_ratio": "1/1",
                             "image_width": 100
