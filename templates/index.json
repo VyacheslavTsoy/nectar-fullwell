@@ -1159,7 +1159,7 @@
                           "name": "Image",
                           "settings": {
                             "image": "shopify://shop_images/CALM_CHERRY_POMEGRANATE_FINAL-Photoroom.png",
-                            "image_url": "",
+                            "image_url": "https://drinknectar.co/products/essential-daily-calm",
                             "border_radius": 0,
                             "image_ratio": "1/1",
                             "image_width": 100
