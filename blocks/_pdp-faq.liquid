@@ -1,7 +1,7 @@
 {% assign productFaq = product.metafields.custom.product_section_faq.value %}
 
 
-<div class="product__faq mt-8" style="border-top: 0.1rem solid #E9EAEB;" x-data="{ open: false }" :class="{ 'product__faq--open': open }">
+<div class="product__faq mt-8" style="border-top: 0.1rem solid #E9EAEB;" x-data="{ open: false, activeItem: null }" :class="{ 'product__faq--open': open }">
     {% for i in (1..10) %}
         {% assign q_key = 'question_' | append: i %}
         {% assign a_key = 'answer_' | append: i %}

@@ -19,7 +19,7 @@
     {% endif %}
   </style>
 {% endif %}
-
+{% if bst.image != blank %}
 <div class="doctor-review flex items-center mt-2 gap-4 p-4 bg-[#ffffff] rounded-[1.2rem] border border-[#CCCCCC] rounded-[.8rem]" id="{{ block.id }}">
     <div class="doctor-review__image flex-shrink-0 overflow-hidden rounded-[.6rem]">
         {% render 'img', image: bst.image, max_width: 160 %}
@@ -42,6 +42,7 @@
         {% endif %}
     </div>
 </div>
+{% endif %}
 
 {% stylesheet %}
 .doctor-review__image {

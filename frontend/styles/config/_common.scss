@@ -112,6 +112,10 @@ select {
         background-color: #FADCDC;
         color: #B40202;
     }
+
+    &__text {
+        margin-top: 0.2rem;
+    }
 }
 
 button, .btn {

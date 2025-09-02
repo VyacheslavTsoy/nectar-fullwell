@@ -60,7 +60,7 @@
             </div>
 
             <div class="checkout__frequency-content" x-show="purchaseType === 'one-time'">
-                <template x-if="currentQty >= freeShippingMinItems">
+                <template x-if="minQty >= 2">
                     <div class="shipping-badge flex items-center gap-3 justify-center text-sm font-medium mt-3">
                         <div class="shipping-badge__icon w-[2.5rem] h-[2.5rem] bg-[#037C2B] rounded-full flex items-center justify-center text-white">
                             <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,7 +74,7 @@
                     </div>
                 </template>
 
-                <template x-if="currentQty < freeShippingMinItems">
+                <template x-if="minQty < 2">
                     <div>
                         <div class="flex items-center justify-between gap-3 font-family-poppins font-medium text-sm pt-2 mb-2 pl-[2.2rem]">
                             <div class="text-[#333333] flex items-center gap-3 flex-shrink-0">

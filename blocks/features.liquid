@@ -1,4 +1,5 @@
 {% assign bst = block.settings %}
+{% assign metaObjects = bst.when_to_use_metaobjects | default: bst.related_metaobjects %}
 
 <section class="features" id="{{ block.id }}">
     {% if bst.use_grid_layout %}
@@ -7,8 +8,8 @@
         <div class="features__items flex justify-center items-center gap-[var(--gap-desktop)] flex-wrap" style="--gap-desktop: {{ bst.gap_desktop | times: 0.1 }}rem; --item-width: {{ bst.width_desktop }}px;">
     {% endif %}
 
-        {% if bst.related_metaobjects != blank %}
-            {% for metaobject in bst.related_metaobjects %}
+        {% if metaObjects != blank %}
+            {% for metaobject in metaObjects %}
                 {% render 'feature-item', icon: metaobject.icon, title: metaobject.title %}
             {% endfor %}
 
@@ -36,9 +37,16 @@
     {
         "type": "metaobject_list",
         "id": "related_metaobjects",
-        "label": "Related metaobjects",
-        "info": "Will be used instead of blocks",
+        "label": "Benefits Metaobject List",
+        "info": "Will be used Benefits Metaobject List instead of blocks",
         "metaobject_type": "benefit"
+    },
+    {
+        "type": "metaobject_list",
+        "id": "when_to_use_metaobjects",
+        "label": "'When to use' Metaobject List",
+        "info": "Will be used 'When to use' Metaobject List instead of blocks",
+        "metaobject_type": "when_to_use"
     },
     {
         "type": "header",
