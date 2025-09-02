@@ -931,7 +931,7 @@
               "name": "Image with caption",
               "settings": {
                 "image": "shopify://shop_images/img-2.png",
-                "caption": "<p>Stir or shake - Due to the clean ingredients in Nectar, some settling may occur</p>"
+                "caption": "<p>Stir or shake - due to the clean ingredients in Nectar, some settling may occur</p>"
               },
               "blocks": {}
             },
@@ -940,7 +940,7 @@
               "name": "Image with caption",
               "settings": {
                 "image": "shopify://shop_images/img-3.png",
-                "caption": "<p>Enjoy Daily - Drink at least 1 packet a day to stay optimally hydrated</p>"
+                "caption": "<p>Enjoy Daily - drink at least 1 packet per day to stay optimally hydrated</p>"
               },
               "blocks": {}
             }
