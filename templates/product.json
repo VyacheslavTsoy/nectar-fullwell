@@ -174,7 +174,7 @@
                     "hide_on_mobile": true,
                     "hide_on_desktop": false,
                     "image": "shopify://shop_images/image_23222.png",
-                    "text": "<p>I’ve reviewed many electrolyte mixes, yet Nectar consistently ranks at the top of my list!</p>",
+                    "text": "<p>Nectar Calm delivers what most stress supplements promise, noticeable relief in minutes.</p>",
                     "name": "Dr. Amber B"
                   },
                   "blocks": {}
@@ -279,8 +279,8 @@
                     "title": "Meet Our Expert Advisor",
                     "hide_on_mobile": false,
                     "hide_on_desktop": true,
-                    "image": "shopify://shop_images/model-with-leather-jacket-over-shoulders.jpg",
-                    "text": "<p>I’ve reviewed many electrolyte mixes, yet Nectar consistently ranks at the top of my list!</p>",
+                    "image": "shopify://shop_images/image_23222.png",
+                    "text": "<p>Nectar Calm delivers what most stress supplements promise, noticeable relief in minutes.</p>",
                     "name": "Dr. John Doe"
                   },
                   "blocks": {}
