@@ -1540,8 +1540,8 @@
                           "type": "image",
                           "name": "Image",
                           "settings": {
-                            "image": "shopify://shop_images/card_2.png",
-                            "image_url": "",
+                            "image": "shopify://shop_images/ENERGY_SINGLES_LEMON_FINAL-Photoroom.png",
+                            "image_url": "https://drinknectar.co/products/essential-daily-energy",
                             "border_radius": 0,
                             "image_ratio": "1/1",
                             "image_width": 100
@@ -1565,8 +1565,8 @@
                           "type": "image",
                           "name": "Image",
                           "settings": {
-                            "image": "shopify://shop_images/card_6.png",
-                            "image_url": "",
+                            "image": "shopify://shop_images/ENERGY_SINGLES_BERRY_FINAL-Photoroom.png",
+                            "image_url": "https://drinknectar.co/products/essential-daily-energy",
                             "border_radius": 0,
                             "image_ratio": "1/1",
                             "image_width": 100
@@ -1590,8 +1590,8 @@
                           "type": "image",
                           "name": "Image",
                           "settings": {
-                            "image": "shopify://shop_images/card_3.png",
-                            "image_url": "",
+                            "image": "shopify://shop_images/ENERGY_SINGLES_STRAWBERRY_LEMONADE_FINAL-Photoroom.png",
+                            "image_url": "https://drinknectar.co/products/essential-daily-energy",
                             "border_radius": 0,
                             "image_ratio": "1/1",
                             "image_width": 100
@@ -1615,8 +1615,8 @@
                           "type": "image",
                           "name": "Image",
                           "settings": {
-                            "image": "shopify://shop_images/card_5.png",
-                            "image_url": "",
+                            "image": "shopify://shop_images/ENERGY_SINGLES_WATERMELON_FINAL-Photoroom.png",
+                            "image_url": "https://drinknectar.co/products/essential-daily-energy",
                             "border_radius": 0,
                             "image_ratio": "1/1",
                             "image_width": 100
@@ -1640,8 +1640,8 @@
                           "type": "image",
                           "name": "Image",
                           "settings": {
-                            "image": "shopify://shop_images/card_1.png",
-                            "image_url": "",
+                            "image": "shopify://shop_images/ENERGY_SINGLES_CHERRY_POMEGRANATE_FINAL-Photoroom.png",
+                            "image_url": "https://drinknectar.co/products/essential-daily-energy",
                             "border_radius": 0,
                             "image_ratio": "1/1",
                             "image_width": 100
@@ -1665,8 +1665,8 @@
                           "type": "image",
                           "name": "Image",
                           "settings": {
-                            "image": "shopify://shop_images/card_4.png",
-                            "image_url": "",
+                            "image": "shopify://shop_images/ENERGY_SINGLES_ORANGE_FINAL-Photoroom.png",
+                            "image_url": "https://drinknectar.co/products/essential-daily-energy",
                             "border_radius": 0,
                             "image_ratio": "1/1",
                             "image_width": 100
