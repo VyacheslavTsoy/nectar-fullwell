@@ -173,9 +173,9 @@
                     "title": "Meet Our Expert Advisor",
                     "hide_on_mobile": true,
                     "hide_on_desktop": false,
-                    "image": "shopify://shop_images/model-with-leather-jacket-over-shoulders.jpg",
+                    "image": "shopify://shop_images/image_23222.png",
                     "text": "<p>I’ve reviewed many electrolyte mixes, yet Nectar consistently ranks at the top of my list!</p>",
-                    "name": "Dr. John Doe"
+                    "name": "Dr. Amber B"
                   },
                   "blocks": {}
                 }
@@ -729,6 +729,7 @@
                   "settings": {
                     "image": "shopify://shop_images/card_3.png",
                     "image_url": "",
+                    "border_radius": 0,
                     "image_ratio": "1/1",
                     "image_width": 100
                   },
@@ -753,6 +754,7 @@
                   "settings": {
                     "image": "shopify://shop_images/card_6.png",
                     "image_url": "",
+                    "border_radius": 0,
                     "image_ratio": "1/1",
                     "image_width": 100
                   },
@@ -777,6 +779,7 @@
                   "settings": {
                     "image": "shopify://shop_images/card_1.png",
                     "image_url": "",
+                    "border_radius": 0,
                     "image_ratio": "1/1",
                     "image_width": 100
                   },
@@ -801,6 +804,7 @@
                   "settings": {
                     "image": "shopify://shop_images/card_2.png",
                     "image_url": "",
+                    "border_radius": 0,
                     "image_ratio": "1/1",
                     "image_width": 100
                   },
@@ -825,6 +829,7 @@
                   "settings": {
                     "image": "shopify://shop_images/card_5.png",
                     "image_url": "",
+                    "border_radius": 0,
                     "image_ratio": "1/1",
                     "image_width": 100
                   },
@@ -849,6 +854,7 @@
                   "settings": {
                     "image": "shopify://shop_images/card_4.png",
                     "image_url": "",
+                    "border_radius": 0,
                     "image_ratio": "1/1",
                     "image_width": 100
                   },
@@ -916,7 +922,7 @@
               "name": "Image with caption",
               "settings": {
                 "image": "shopify://shop_images/img-1.png",
-                "caption": "<p>Pour packet into 8 - 16 oz of water (adjust based on flavor strength preference) </p>"
+                "caption": "<p>Pour packet into 8 - 16 oz of water (adjust based on flavor-strength preference) </p>"
               },
               "blocks": {}
             },
@@ -925,7 +931,7 @@
               "name": "Image with caption",
               "settings": {
                 "image": "shopify://shop_images/img-2.png",
-                "caption": "<p>Pour packet into 8 - 16 oz of water (adjust based on flavor strength preference) </p>"
+                "caption": "<p>Stir or shake - Due to the clean ingredients in Nectar, some settling may occur</p>"
               },
               "blocks": {}
             },
@@ -934,7 +940,7 @@
               "name": "Image with caption",
               "settings": {
                 "image": "shopify://shop_images/img-3.png",
-                "caption": "<p>Pour packet into 8 - 16 oz of water (adjust based on flavor strength preference) </p>"
+                "caption": "<p>Enjoy Daily - Drink at least 1 packet a day to stay optimally hydrated</p>"
               },
               "blocks": {}
             }
