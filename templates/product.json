@@ -1092,7 +1092,7 @@
                       "name": "Accordion Item",
                       "settings": {
                         "open_by_default": false,
-                        "question": "Shipping Details",
+                        "question": "Test",
                         "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
                       },
                       "blocks": {}
