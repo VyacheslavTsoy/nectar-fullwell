@@ -1,0 +1,13 @@
+<div class="swiper-slide">
+    <figure class="image-with-caption__item">
+        {% if image != blank %} 
+        {% render 'img', image: image, max_width: 400, class: 'w-full h-full object-cover' %}
+        {% endif %}
+
+        {% if caption != blank %}
+            <figcaption class="image-with-caption__caption">
+                {{ caption }}
+            </figcaption>
+        {% endif %}
+    </figure>
+</div>

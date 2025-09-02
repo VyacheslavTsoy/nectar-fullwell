@@ -1,7 +1,18 @@
+{% assign bst = block.settings %}
+{% assign productMetafieldTestimonials = product.metafields.custom.testimonial_videos_images.value %}
+
 <div class="carousel overflow-hidden w-full" id="{{ block.id }}">
     <div class="carousel__content swiper">
         <div class="swiper-wrapper">
-            {% content_for 'blocks' %}
+            {% if bst.use_product_testimonials_metafiled and productMetafieldTestimonials != blank %}
+                {% for testimonial in productMetafieldTestimonials %}
+                    {% assign videoSources = testimonial.sources %}
+                    
+                    {% render 'carousel-item', image: testimonial.image, video_sources: videoSources %}
+                {% endfor %}
+            {% else %}
+                {% content_for 'blocks' %}
+            {% endif %}
         </div>
 
         <div class="swiper-pagination"></div>
@@ -11,12 +22,12 @@
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const swiper = new Swiper('#{{ block.id }} .swiper', {
-            slidesPerView: {{ block.settings.items_per_view_mobile }},
-            spaceBetween: {{ block.settings.gap_mobile }},
+            slidesPerView: {{ bst.items_per_view_mobile }},
+            spaceBetween: {{ bst.gap_mobile }},
             breakpoints: {
                 768: {
-                    slidesPerView: {{ block.settings.items_per_view }},
-                    spaceBetween: {{ block.settings.gap }},
+                    slidesPerView: {{ bst.items_per_view }},
+                    spaceBetween: {{ bst.gap }},
                 }
             },
             pagination: {
@@ -31,6 +42,13 @@
 {
   "name": "Carousel",
   "settings": [
+    {
+        "type": "checkbox",
+        "id": "use_product_testimonials_metafiled",
+        "label": "Use product testimonials metafield",
+        "info": "If enabled, the carousel will be filled with product testimonials from the product's metafield",
+        "default": false
+    },
     {
       "type": "header",
       "content": "Desktop"

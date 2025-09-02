@@ -1,16 +1,6 @@
 {% assign bst = block.settings %}
 
-<div class="swiper-slide">
-    <figure class="image-with-caption__item">
-        {% render 'img', image: bst.image, max_width: 400, class: 'w-full h-full object-cover' %}
-
-        {% if bst.caption != blank %}
-            <figcaption class="image-with-caption__caption">
-                {{ bst.caption }}
-            </figcaption>
-        {% endif %}
-    </figure>
-</div>
+{% render 'image-with-caption', image: bst.image, caption: bst.caption %}
 
 {% schema %}
 {

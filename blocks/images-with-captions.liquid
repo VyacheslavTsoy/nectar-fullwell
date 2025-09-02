@@ -3,7 +3,13 @@
 
 <div class="images-with-captions swiper mx-[-2rem] px-[2rem] overflow-hidden" id="{{ id }}">
     <div class="swiper-wrapper">
-        {% content_for 'blocks' %}
+        {% if bst.related_metaobjects != blank %}
+            {% for metaobject in bst.related_metaobjects %}
+                {% render 'image-with-caption', image: metaobject.image, caption: metaobject.title %}
+            {% endfor %}
+        {% else %}
+            {% content_for 'blocks' %}
+        {% endif %}
     </div>
 
     <div class="swiper-pagination images-with-captions__pagination md:hidden"></div>
@@ -75,7 +81,14 @@
 {% schema %}
 {
   "name": "Images with captions",
-  "settings": [],
+  "settings": [
+    {
+      "type": "metaobject_list",
+      "label": "Related metaobjects",
+      "id": "related_metaobjects",
+      "metaobject_type": "how_to_use"
+    }
+  ],
   "blocks": [
     {
       "type": "_image-with-caption",
