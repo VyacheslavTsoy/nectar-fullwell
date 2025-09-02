@@ -973,7 +973,9 @@
                   "name": "Reviews",
                   "settings": {
                     "reviews": [
-                      "bridget-t"
+                      "bridget-t",
+                      "emma-h",
+                      "josh-b"
                     ],
                     "activate_filters": false,
                     "desktop_padding": 0,
