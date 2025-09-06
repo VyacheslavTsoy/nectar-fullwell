@@ -1828,8 +1828,8 @@
                       "name": "Accordion Item",
                       "settings": {
                         "open_by_default": false,
-                        "question": "Directions For Use",
-                        "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+                        "question": "Shipping Details",
+                        "answer": "<p>All orders are shipped with express service and include a tracking number.</p><p>We ensure that your package will reach you safely and on time. If there are any problems during transit, we will work to solve the problems and provide the best solutions.</p>"
                       },
                       "blocks": {}
                     },
