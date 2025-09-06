@@ -409,7 +409,7 @@
                 "text_rating": "<p>Excellent <strong>4.8</strong> | 6,000+ Verified Reviews</p>",
                 "title": "{{ closest.product.title }}",
                 "description": "<p>A clean, <em><strong>Daily Electrolyte + Energy</strong></em> mix with Organic Caffeine, L-theanine, and Vitamin B - smooth, all-day energy without the crash.</p>",
-                "features": "<ul><li>Supercharge Your Hydration</li><li>Boost natural energy & motivation</li><li>Feel happier & more positive</li></ul><p></p>"
+                "features": "<ul><li>Jitter and crash-free daily boost</li><li>Improve your focus & mental clarity</li><li>Healthy coffee & energy drink alternative</li></ul><p></p>"
               },
               "blocks": {}
             }
@@ -791,6 +791,7 @@
                   "type": "carousel",
                   "name": "Carousel",
                   "settings": {
+                    "use_product_testimonials_metafiled": false,
                     "items_per_view": 4,
                     "gap": 14,
                     "items_per_view_mobile": 1,
@@ -891,6 +892,7 @@
                   "type": "carousel",
                   "name": "Carousel",
                   "settings": {
+                    "use_product_testimonials_metafiled": false,
                     "items_per_view": 4,
                     "gap": 14,
                     "items_per_view_mobile": 1,
@@ -991,6 +993,7 @@
                   "type": "carousel",
                   "name": "Carousel",
                   "settings": {
+                    "use_product_testimonials_metafiled": false,
                     "items_per_view": 4,
                     "gap": 14,
                     "items_per_view_mobile": 1,
@@ -1996,6 +1999,8 @@
           "type": "features",
           "name": "Features",
           "settings": {
+            "related_metaobjects": [],
+            "when_to_use_metaobjects": [],
             "gap_desktop": 20,
             "width_desktop": 190,
             "light_blue_color_scheme": false,
