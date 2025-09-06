@@ -1818,7 +1818,7 @@
                       "name": "Accordion Item",
                       "settings": {
                         "open_by_default": false,
-                        "question": "Does Nectar contain any sugar, artificial sweeteners, colorants, dyes or fillers?",
+                        "question": "Does Nectar Contain Any Sugar, Artificial Sweeteners, Colorants, Dyes Or Fillers?",
                         "answer": "<p>No - and it never will! Nectar products contain only what you need, in bioavailable forms your body can actually use.</p>"
                       },
                       "blocks": {}
@@ -1838,7 +1838,7 @@
                       "name": "Accordion Item",
                       "settings": {
                         "open_by_default": false,
-                        "question": "What Does It Taste Like?",
+                        "question": "How Do Subscriptions Work?",
                         "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
                       },
                       "blocks": {}
