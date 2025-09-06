@@ -1752,7 +1752,7 @@
                   "type": "heading",
                   "name": "Heading",
                   "settings": {
-                    "title": "<h2>Still Not Sure? Here Are The Top 8 Questions We Get About <strong>Nectar</strong></h2>",
+                    "title": "<h2>Still Not Sure? Here Are The Top 6 Questions We Get About <strong>Nectar</strong></h2>",
                     "text_color": "#123456",
                     "text_alignment": "left",
                     "heading_size": "4xl",
@@ -1788,7 +1788,7 @@
                       "name": "Accordion Item",
                       "settings": {
                         "open_by_default": true,
-                        "question": "Shipping Details",
+                        "question": "What is Nectar Essential Daily Hydration?",
                         "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
                       },
                       "blocks": {}
@@ -1798,7 +1798,7 @@
                       "name": "Accordion Item",
                       "settings": {
                         "open_by_default": false,
-                        "question": "Shipping Details",
+                        "question": "What is Nectar Essential Daily Calm?",
                         "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
                       },
                       "blocks": {}
@@ -1808,7 +1808,7 @@
                       "name": "Accordion Item",
                       "settings": {
                         "open_by_default": false,
-                        "question": "Who Needs Nectar?",
+                        "question": "What is Nectar Essential Daily Energy?",
                         "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
                       },
                       "blocks": {}
@@ -1818,8 +1818,8 @@
                       "name": "Accordion Item",
                       "settings": {
                         "open_by_default": false,
-                        "question": "Ingredients & Nutrition",
-                        "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+                        "question": "Does Nectar contain any sugar, artificial sweeteners, colorants, dyes or fillers?",
+                        "answer": "<p>No - and it never will! Nectar products contain only what you need, in bioavailable forms your body can actually use.</p>"
                       },
                       "blocks": {}
                     },
