@@ -1788,8 +1788,8 @@
                       "name": "Accordion Item",
                       "settings": {
                         "open_by_default": true,
-                        "question": "What is Nectar Essential Daily Hydration?",
-                        "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+                        "question": "Who Needs Nectar Essential Daily Hydration?",
+                        "answer": "<p>Studies show that <strong>3 out of 4 people suffer from chronic dehydration. </strong>Many of the symptoms of dehydration we overlook as byproducts of our busy lifestyles - fatigue, brain fog, feeling down. If you're experiencing any of these symptoms, it's highly likely you're dehydrated - even if you think you are drinking enough fluids. Adding Nectar to your daily routine helps you make the most of the water you drink, keeping you hydrated and feeling your best.</p>"
                       },
                       "blocks": {}
                     },
@@ -1798,8 +1798,8 @@
                       "name": "Accordion Item",
                       "settings": {
                         "open_by_default": false,
-                        "question": "What is Nectar Essential Daily Calm?",
-                        "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+                        "question": "Who Needs Nectar Essential Daily Calm?",
+                        "answer": "<p>If you experience high stress, struggle with sleep, or feel mentally fatigued, Essential Daily Calm is a great addition to your daily routine. It’s formulated to support relaxation, reduce cortisol levels, and improve overall well-being. If you’re looking for a natural way to manage stress and improve your mood and sleep quality, Essential Daily Calm could be beneficial for you.</p>"
                       },
                       "blocks": {}
                     },
@@ -1808,8 +1808,8 @@
                       "name": "Accordion Item",
                       "settings": {
                         "open_by_default": false,
-                        "question": "What is Nectar Essential Daily Energy?",
-                        "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+                        "question": "Who Needs Nectar Essential Daily Energy?",
+                        "answer": "<p>If you often feel your energy crash mid-day, struggle to focus, or rely on coffee after coffee to stay productive, Nectar Essential Daily Energy was made for you. With organic caffeine, L-theanine, and vitamin B12, it delivers smooth, sustained energy to help you power through work, workouts, and everything in between - without the jitters or afternoon crash.</p>"
                       },
                       "blocks": {}
                     },
