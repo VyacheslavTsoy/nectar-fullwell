@@ -381,7 +381,7 @@
                 "text_rating": "<p>Excellent <strong>4.9</strong> | 1,000+ Verified Reviews</p>",
                 "title": "{{ closest.product.title }}",
                 "description": "<p>A clean, <em><strong>Daily Calming</strong></em> mix with clinically studied ingredients - formulated to balance cortisol, reduce stress, and improve sleep.</p>",
-                "features": "<ul><li>Feature 1</li><li>Feature 2</li><li>Feature 3</li></ul>"
+                "features": "<ul><li>Lower stress & support cortisol balance</li><li>Get deeper, more restorative sleep</li><li>Relax your body and mind naturally</li></ul>"
               },
               "blocks": {}
             },
@@ -395,7 +395,7 @@
                 "text_rating": "<p>Excellent <strong>4.9</strong> | 12,000+ Verified Reviews</p>",
                 "title": "{{ closest.product.title }}",
                 "description": "<p>A clean, <em><strong>Daily Electrolyte</strong></em> mix optimized to hydrate you at the cellular level, faster and more efficiently than water alone.</p>",
-                "features": "<ul><li>Supercharge Your Hydration</li><li>Boost natural energy & motivation</li><li>Feel happier & more positive</li></ul>"
+                "features": "<ul><li>Low sodium, sugar free & 0 calorie</li><li>Boost natural energy & motivation</li><li>Feel happier & more positive</li></ul>"
               },
               "blocks": {}
             },
