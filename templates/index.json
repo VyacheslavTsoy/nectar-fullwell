@@ -210,7 +210,7 @@
                   "name": "Button",
                   "settings": {
                     "button_text": "Make Nectar A Habit Today",
-                    "button_link": "#",
+                    "button_link": "shopify://collections/all",
                     "related_product": "",
                     "button_type": "primary",
                     "hide_on_mobile": false
