@@ -18,7 +18,19 @@
         {% if buttons.size > 0 %}
             <div class="sticky-cta__button" x-data="$store.productsStorage">
                 {% for button in buttons %}
-                <a href="{{ button.settings.button_url }}" class="flex items-center gap-4 h-[5.4rem] md:h-[6.5rem] text-[1.6rem] md:text-[2.2rem] justify-center bg-[#21A600] text-white font-family-poppins px-4 py-2 rounded-[.6rem] md:rounded-[1rem] font-bold" x-show="activePurpose === '{{ button.settings.button_flow }}'" {% if forloop.index > 1 %}x-cloak{% endif %}>
+                {% capture btn_url %}
+                    {% if product.handle != blank %}
+                        {% if product.metafields.custom.use_offer_page_with_gifts_instead_checkout %}
+                            /pages/offer?product-handle={{ product.handle }}
+                        {% else %}
+                            /pages/checkout?product-handle={{ product.handle }}
+                        {% endif %}
+                    {% else %}
+                        {{ button.settings.button_url }}
+                    {% endif %}
+                {% endcapture %}
+
+                <a href="{{ btn_url }}" class="flex items-center gap-4 h-[5.4rem] md:h-[6.5rem] text-[1.6rem] md:text-[2.2rem] justify-center bg-[#21A600] text-white font-family-poppins px-4 py-2 rounded-[.6rem] md:rounded-[1rem] font-bold" x-show="activePurpose === '{{ button.settings.button_flow }}'" {% if forloop.index > 1 %}x-cloak{% endif %}>
                     <span>
                         {{ button.settings.button_text }}
                     </span>
