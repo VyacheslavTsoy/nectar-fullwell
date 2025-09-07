@@ -47,7 +47,7 @@
             </a>
         </div>
 
-        <div class="product-card__faqs mt-3 md:mt-6 pb-3">
+        <div class="product-card__faqs mt-3 md:mt-6 pb-3" x-data="{ open: false, activeItem: null }">
             {% assign answer_1 = faqs.answer_1 | metafield_tag %}
             {% assign answer_2 = faqs.answer_2 | metafield_tag %}
             {% assign answer_3 = faqs.answer_3 | metafield_tag %}

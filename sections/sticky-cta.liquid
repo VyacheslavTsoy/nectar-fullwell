@@ -1,0 +1,140 @@
+{% assign sst = section.settings %}
+{% assign labels = section.blocks | where: 'type', 'label' %}
+{% assign buttons = section.blocks | where: 'type', 'button' %}
+{% assign sectionId = section.id | handleize %}
+
+<div class="sticky-cta py-2.5 px-8 bg-[#F5FFF6] border-t-2 border-[#0D3063] fixed bottom-0 z-[80] w-full" id="{{ sectionId }}">
+    <div class="sticky-cta__inner w-full max-w-[61.2rem] mx-auto">
+        {% if labels.size > 0 %}
+            <div class="sticky-cta__labels flex items-center gap-2 justify-between mb-1 font-bold text-xs md:text-sm flex">
+            {% for label in labels %}
+                <div class="sticky-cta__label flex items-center gap-2 text-[#000]">
+                    <div class="sticky-cta__label-icon">{{ label.settings.icon }}</div>
+                    <div class="sticky-cta__label-text">{{ label.settings.label }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% if buttons.size > 0 %}
+            <div class="sticky-cta__button" x-data="$store.productsStorage">
+                {% for button in buttons %}
+                <a href="{{ button.settings.button_url }}" class="flex items-center gap-4 h-[5.4rem] md:h-[6.5rem] text-[1.6rem] md:text-[2.2rem] justify-center bg-[#21A600] text-white font-family-poppins px-4 py-2 rounded-[.6rem] md:rounded-[1rem] font-bold" x-show="activePurpose === '{{ button.settings.button_flow }}'" {% if forloop.index > 1 %}x-cloak{% endif %}>
+                    <span>
+                        {{ button.settings.button_text }}
+                    </span>
+                    <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.0607 12.1149C21.6464 11.5291 21.6464 10.5793 21.0607 9.99354L11.5147 0.447598C10.9289 -0.138189 9.97919 -0.138189 9.3934 0.447598C8.80761 1.03338 8.80761 1.98313 9.3934 2.56892L17.8787 11.0542L9.3934 19.5395C8.80761 20.1253 8.80761 21.075 9.3934 21.6608C9.97919 22.2466 10.9289 22.2466 11.5147 21.6608L21.0607 12.1149ZM0 11.0542V12.5542H20V11.0542V9.5542H0V11.0542Z" fill="white"/>
+                    </svg>
+                </a>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+{% style %}
+    .sticky-cta {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .sticky-cta--visible {
+        opacity: 1;
+        visibility: visible;
+    }
+{% endstyle %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const stickyCta = document.getElementById('{{ sectionId }}');
+    if (!stickyCta) return;
+
+    function checkScroll() {
+        if (window.scrollY > (window.innerHeight / 2)) {
+            stickyCta.classList.add('sticky-cta--visible');
+        } else {
+            stickyCta.classList.remove('sticky-cta--visible');
+        }
+    }
+    
+    checkScroll();
+
+    window.addEventListener('scroll', checkScroll);
+});
+</script>
+
+
+
+
+{% schema %}
+{
+  "name": "Sticky CTA",
+  "blocks": [
+    {
+      "type": "label",
+      "name": "Label",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "textarea",
+          "label": "Icon",
+          "id": "icon"
+        },
+        {
+          "type": "text",
+          "label": "Label",
+          "id": "label"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "checkbox",
+          "label": "Not in product flow",
+          "id": "use_custom_url"
+        },
+        {
+          "type": "select",
+          "label": "Button Flow",
+          "id": "button_flow",
+          "visible_if": "{{ block.settings.use_custom_url != true }}",
+          "options": [
+            {
+              "value": "Hydration",
+              "label": "Hydration"
+            },
+            {
+              "value": "Calm",
+              "label": "Calm"
+            },
+            {
+              "value": "Energy",
+              "label": "Energy"
+            }
+          ],
+          "default": "Hydration"
+        },
+        {
+          "type": "text",
+          "label": "Button Text",
+          "id": "button_text"
+        },
+        {
+          "type": "url",
+          "label": "Button URL",
+          "id": "button_url"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sticky CTA"
+    }
+  ]
+}
+{% endschema %}
