@@ -524,7 +524,7 @@
                         "button_link": "https://drinknectar.co/products/essential-daily-calm",
                         "related_product": "",
                         "button_type": "secondary",
-                        "hide_on_mobile": true
+                        "hide_on_mobile": false
                       },
                       "blocks": {}
                     },
@@ -536,7 +536,7 @@
                         "button_link": "",
                         "related_product": "essential-daily-calm-gift",
                         "button_type": "primary",
-                        "hide_on_mobile": false
+                        "hide_on_mobile": true
                       },
                       "blocks": {}
                     }
@@ -601,7 +601,7 @@
                         "button_link": "https://drinknectar.co/products/essential-daily-hydration-1",
                         "related_product": "",
                         "button_type": "secondary",
-                        "hide_on_mobile": true
+                        "hide_on_mobile": false
                       },
                       "blocks": {}
                     },
@@ -613,7 +613,7 @@
                         "button_link": "",
                         "related_product": "essential-daily-hydration-1",
                         "button_type": "primary",
-                        "hide_on_mobile": false
+                        "hide_on_mobile": true
                       },
                       "blocks": {}
                     }
@@ -678,7 +678,7 @@
                         "button_link": "shopify://products/essential-daily-energy",
                         "related_product": "",
                         "button_type": "secondary",
-                        "hide_on_mobile": true
+                        "hide_on_mobile": false
                       },
                       "blocks": {}
                     },
@@ -690,7 +690,7 @@
                         "button_link": "",
                         "related_product": "essential-daily-energy",
                         "button_type": "primary",
-                        "hide_on_mobile": false
+                        "hide_on_mobile": true
                       },
                       "blocks": {}
                     }
