@@ -1,7 +1,7 @@
 {% if question and answer %}
 <div @click="activeItem = activeItem == '{{ question | handleize }}' ? null : '{{ question | handleize }}'" class="accordion-item {% if open_by_default %}accordion-item--active{% endif %} {% if large_title %}py-5 {% else %}py-2.5 {% endif %}" :class="{ 'accordion-item--active': activeItem == '{{ question | handleize }}' }">
 
-    <div class="accordion-item__summary flex items-center justify-between font-medium text-coolBlack {% if large_title %}text-baseLg {% else %}text-base {% endif %}">
+    <div class="accordion-item__summary flex items-center justify-between font-medium text-coolBlack text-base md:text-baseLg">
         {{ question }}
 
         <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">

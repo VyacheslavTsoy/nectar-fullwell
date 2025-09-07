@@ -38,11 +38,11 @@
             <div class="mobile-nav__products grid grid-cols-1 gap-4 mb-[2.4rem]">
                 {% for item in products_list %}
                 {% assign bst = item.settings %}
-                <figure class="mobile-nav__product flex items-center gap-4">
+                <a href="{{ bst.product_url }}" class="mobile-nav__product flex items-center gap-4">
                     <div class="mobile-nav__product-image w-[7rem] h-[7rem]">
                         {% render 'img', image: bst.product_image, max_width: 140, lazy: true, class: 'w-full h-full object-cover rounded-lg' %}
                     </div>
-                    <figcaption class="mobile-nav__product-content">
+                    <div class="mobile-nav__product-content">
                         {% if bst.sold_badge != blank %}
                             <div class="mobile-nav__product-badge">
                                 {{ bst.sold_badge }}
@@ -50,9 +50,7 @@
                         {% endif %}
                         {% if bst.product_url != blank %}
                         <h4 class="mobile-nav__product-name">
-                            <a href="{{ bst.product_url }}">
-                                {{ bst.product_title }}
-                            </a>
+                            {{ bst.product_title }}
                         </h4>
                         {% endif %}
                         {% if bst.review_badge != blank %}
@@ -66,8 +64,8 @@
                             </div>
                         </div>
                         {% endif %}
-                    </figcaption>
-                </figure>
+                    </div>
+                </a>
                 {% endfor %}
             </div>
             {% endif %}

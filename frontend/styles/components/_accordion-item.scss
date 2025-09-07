@@ -16,6 +16,7 @@
 
         svg {
             transition: transform 0.15s ease;
+            flex-shrink: 0;
         }
 
         &:active svg {

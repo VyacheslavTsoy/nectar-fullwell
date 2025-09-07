@@ -1,7 +1,9 @@
+{% assign product_images = product.images | where: 'attached_to_variant?', false %}
+
 <div class="product__gallery-inner flex flex-col-reverse lg:flex-row gap-4">
     <div class="swiper thumbnail-gallery swiper-vertical overflow-hidden flex-shrink-0">
         <div class="swiper-wrapper">
-            {% for image in product.images %}
+            {% for image in product_images %}
             <div class="swiper-slide">
                 <div class="thumbnail-gallery__item overflow-hidden rounded-[0.8rem]">
                     {% render 'img', image: image, max_width: 240 %}
@@ -13,7 +15,7 @@
 
     <div class="swiper main-gallery w-full overflow-hidden relative">
         <div class="swiper-wrapper">
-            {% for image in product.images %}
+            {% for image in product_images %}
             <div class="swiper-slide">
                 {% render 'img', image: image, max_width: 1400 %}
             </div>
