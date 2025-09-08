@@ -46,7 +46,7 @@
                 "type": "text",
                 "name": "Text",
                 "settings": {
-                  "title": "<p><strong>{{ closest.product.metafields.custom.sign_text_4.value }}</strong></p>",
+                  "title": "<p><strong>{{ closest.product.metafields.custom.product_subtitle.value }}</strong></p>",
                   "text_alignment": "left",
                   "font_family": "values-sans",
                   "font_weight": "black",
@@ -730,9 +730,9 @@
                     "type": "image",
                     "name": "Image",
                     "settings": {
-                      "image": "shopify://shop_images/ENERGY_SINGLES_STRAWBERRY_LEMONADE_FINAL-Photoroom.png",
+                      "image": "{{ closest.product.metafields.custom.product_flavors_gallery.value.image_1.value }}",
                       "image_url": "",
-                      "border_radius": 0,
+                      "border_radius": 16,
                       "image_ratio": "1/1",
                       "image_width": 100
                     },
@@ -755,7 +755,7 @@
                     "type": "image",
                     "name": "Image",
                     "settings": {
-                      "image": "shopify://shop_images/card_6.png",
+                      "image": "{{ closest.product.metafields.custom.product_flavors_gallery.value.image_2.value }}",
                       "image_url": "",
                       "border_radius": 0,
                       "image_ratio": "1/1",
@@ -780,7 +780,7 @@
                     "type": "image",
                     "name": "Image",
                     "settings": {
-                      "image": "shopify://shop_images/card_1.png",
+                      "image": "{{ closest.product.metafields.custom.product_flavors_gallery.value.image_3.value }}",
                       "image_url": "",
                       "border_radius": 0,
                       "image_ratio": "1/1",
@@ -805,7 +805,7 @@
                     "type": "image",
                     "name": "Image",
                     "settings": {
-                      "image": "shopify://shop_images/card_2.png",
+                      "image": "{{ closest.product.metafields.custom.product_flavors_gallery.value.image_4.value }}",
                       "image_url": "",
                       "border_radius": 0,
                       "image_ratio": "1/1",
@@ -830,7 +830,7 @@
                     "type": "image",
                     "name": "Image",
                     "settings": {
-                      "image": "shopify://shop_images/card_5.png",
+                      "image": "{{ closest.product.metafields.custom.product_flavors_gallery.value.image_5.value }}",
                       "image_url": "",
                       "border_radius": 0,
                       "image_ratio": "1/1",
@@ -855,7 +855,7 @@
                     "type": "image",
                     "name": "Image",
                     "settings": {
-                      "image": "shopify://shop_images/card_4.png",
+                      "image": "{{ closest.product.metafields.custom.product_flavors_gallery.value.image_6.value }}",
                       "image_url": "",
                       "border_radius": 0,
                       "image_ratio": "1/1",
@@ -1370,6 +1370,41 @@
           "mobile_padding_top": 30,
           "mobile_gap_between_blocks": 10
         }
+      },
+      "sticky_cta_prK4EW": {
+        "type": "sticky-cta",
+        "blocks": {
+          "label_FUiRDW": {
+            "type": "label",
+            "settings": {
+              "icon": "<svg width=\"14\" height=\"19\" viewbox=\"0 0 14 19\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.5931 12.1337C13.4451 15.6672 10.5348 18.4868 6.96489 18.4868C3.3003 18.4868 0.329595 15.4162 0.329595 11.8515C0.329595 11.375 0.321053 10.4228 1.03548 8.81622C1.46303 7.85473 1.73119 7.25071 1.88254 6.69857C1.96569 6.39511 2.12741 5.91299 2.58842 6.69857C2.86025 7.16177 2.87077 7.82798 2.87077 7.82798C2.87077 7.82798 3.88216 7.05186 4.56489 5.56916C5.56576 3.39554 4.76719 2.09622 4.4943 1.19269C4.39985 0.880124 4.34056 0.318383 4.98842 0.557395C5.64856 0.800995 7.39378 2.02267 8.30606 3.31034C9.60806 5.1481 10.0708 6.91034 10.0708 6.91034C10.0708 6.91034 10.4877 6.39292 10.6355 5.85151C10.8024 5.24015 10.8049 4.63464 11.3413 5.28688C11.8514 5.90714 12.6091 7.07276 13.0355 8.18092C13.8098 10.1933 13.5931 12.1337 13.5931 12.1337Z\" fill=\"url(#paint0_linear_147_2701)\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.9647 18.4866C4.43065 18.4866 2.37646 16.4324 2.37646 13.8984C2.37646 12.3694 2.99263 11.4411 4.27501 10.1822C5.09609 9.37614 5.86458 8.38614 6.19119 7.71202C6.2555 7.57932 6.40183 6.88776 6.96604 7.69748C7.26202 8.12214 7.72599 8.87736 8.02352 9.52191C8.53642 10.6332 8.65882 11.7101 8.65882 11.7101C8.65882 11.7101 9.16148 11.414 9.50588 10.6513C9.61691 10.4055 9.84138 9.47504 10.4689 10.4054C10.9294 11.0881 11.5619 12.3156 11.5529 13.8984C11.5529 16.4324 9.49868 18.4866 6.9647 18.4866Z\" fill=\"#FC9502\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.03525 13.4749C7.68819 13.4749 7.68819 14.684 8.5176 16.2984C9.06988 17.3734 8.24379 18.4866 7.03525 18.4866C5.8267 18.4866 5.19995 17.5069 5.19995 16.2984C5.19995 15.0899 6.3823 13.4749 7.03525 13.4749Z\" fill=\"#FCE202\"></path>\n<defs>\n<lineargradient id=\"paint0_linear_147_2701\" x1=\"6.97484\" y1=\"18.5001\" x2=\"6.97484\" y2=\"0.513348\" gradientunits=\"userSpaceOnUse\">\n<stop stop-color=\"#FF4C0D\"></stop>\n<stop offset=\"1\" stop-color=\"#FC9502\"></stop>\n</lineargradient>\n</defs>\n</svg>",
+              "label": "Hurry! 126 people are on checkout"
+            }
+          },
+          "label_DWQEPz": {
+            "type": "label",
+            "settings": {
+              "icon": "<svg width=\"18\" height=\"19\" viewbox=\"0 0 18 19\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_147_2707)\">\n<path d=\"M8.55828 0.609892L1.611 4.29795C1.4183 4.40024 1.29785 4.60056 1.29785 4.8188V14.0766C1.29785 14.4505 1.50798 14.7927 1.84142 14.9618L8.65405 18.4172C8.87143 18.5275 9.12835 18.5275 9.34566 18.4172L16.1584 14.9618C16.4918 14.7927 16.7019 14.4505 16.7019 14.0766V4.8188C16.7019 4.60056 16.5815 4.40024 16.3887 4.29795L9.4415 0.609892C9.16539 0.463369 8.83445 0.463369 8.55828 0.609892Z\" fill=\"#FFCE94\"></path>\n<path d=\"M9 18.4999C9.11856 18.4999 9.23718 18.4724 9.34581 18.4172L16.1585 14.9618C16.4919 14.7927 16.7021 14.4505 16.7021 14.0766V4.81872C16.7021 4.72234 16.6775 4.6301 16.6346 4.54761L9 8.61389V18.4999Z\" fill=\"#FCB043\"></path>\n<path d=\"M8.99992 8.61395L1.36536 4.54761C1.32247 4.6301 1.29785 4.72234 1.29785 4.81872V14.0766C1.29785 14.4505 1.50798 14.7927 1.84142 14.9618L8.65405 18.4172C8.76274 18.4723 8.8813 18.4999 8.99986 18.4999L8.99992 8.61395Z\" fill=\"#E2791B\"></path>\n<path d=\"M11.7219 1.82031L3.99536 5.93509V7.25172C3.99536 7.37808 4.06506 7.49414 4.17655 7.55361L5.51932 8.26929C5.62588 8.32607 5.75449 8.24888 5.75449 8.12812V6.89928L13.4931 2.76056L11.7219 1.82031Z\" fill=\"#DEF2FC\"></path>\n<path d=\"M10.113 15.8728L12.1743 14.887C12.4382 14.7608 12.6035 14.4915 12.5966 14.199L12.5964 14.1899C12.5907 13.9486 12.3345 13.7964 12.1198 13.9067L10.1131 14.9373V15.8728H10.113Z\" fill=\"#403A46\"></path>\n<path d=\"M10.113 17.3102L11.245 16.7843C11.513 16.6598 11.6818 16.3883 11.6748 16.0928C11.669 15.8507 11.4115 15.6985 11.1966 15.8103L10.113 16.3745V17.3102Z\" fill=\"#403A46\"></path>\n<path d=\"M3.99536 5.94849V7.2519C3.99536 7.37826 4.06506 7.49432 4.17655 7.55378L5.51933 8.26946C5.62588 8.32624 5.75449 8.24905 5.75449 8.1283V6.89946L5.76759 6.89245C5.31279 6.65021 4.57408 6.2567 3.99536 5.94849Z\" fill=\"#B6C8CE\"></path>\n</g>\n<defs>\n<clippath id=\"clip0_147_2707\">\n<rect width=\"18\" height=\"18\" fill=\"white\" transform=\"translate(0 0.5)\"></rect>\n</clippath>\n</defs>\n</svg>",
+              "label": "Ships Today"
+            }
+          },
+          "button_4RHmCV": {
+            "type": "button",
+            "settings": {
+              "use_custom_url": true,
+              "button_flow": "Calm",
+              "button_text": "Choose Your Package",
+              "button_url": "shopify://pages/checkout"
+            }
+          }
+        },
+        "block_order": [
+          "label_FUiRDW",
+          "label_DWQEPz",
+          "button_4RHmCV"
+        ],
+        "name": "Sticky CTA",
+        "settings": {}
       }
     },
     "order": [
@@ -1383,7 +1418,8 @@
       "blank_section_EwVzUa",
       "blank_section_RMCiDb",
       "apps_magpri",
-      "blank_section_G9Cdxg"
+      "blank_section_G9Cdxg",
+      "sticky_cta_prK4EW"
     ]
   }
   

@@ -164,4 +164,11 @@
             opacity: 1;
         }
     }
+
+    &__shipping-bar-inner{
+        &--active {
+            background-color: #199A47;
+        }
+    }
+
 }

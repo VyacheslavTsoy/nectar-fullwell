@@ -3,7 +3,7 @@
 {% assign buttons = section.blocks | where: 'type', 'button' %}
 {% assign sectionId = section.id | handleize %}
 
-<div class="sticky-cta py-2.5 px-8 bg-[#F5FFF6] border-t-2 border-[#0D3063] fixed bottom-0 z-[80] w-full" id="{{ sectionId }}">
+<div class="sticky-cta pt-3 pb-5 px-8 bg-[#F5FFF6] border-t-2 border-[#0D3063] fixed bottom-0 z-[80] w-full" id="{{ sectionId }}">
     <div class="sticky-cta__inner w-full max-w-[61.2rem] mx-auto">
         {% if labels.size > 0 %}
             <div class="sticky-cta__labels flex items-center gap-2 justify-between mb-1 font-bold text-xs md:text-sm flex">
@@ -30,7 +30,7 @@
                     {% endif %}
                 {% endcapture %}
 
-                <a href="{{ btn_url }}" class="flex items-center gap-4 h-[5.4rem] md:h-[6.5rem] text-[1.6rem] md:text-[2.2rem] justify-center bg-[#21A600] text-white font-family-poppins px-4 py-2 rounded-[.6rem] md:rounded-[1rem] font-bold" x-show="activePurpose === '{{ button.settings.button_flow }}'" {% if forloop.index > 1 %}x-cloak{% endif %}>
+                <a href="{{ btn_url }}" class="flex items-center gap-4 h-[5.4rem] md:h-[6.5rem] text-[1.6rem] md:text-[2.2rem] justify-center bg-[#21A600] text-white font-family-poppins px-4 py-2 rounded-[.6rem] md:rounded-[1rem] font-bold" {% unless button.settings.use_custom_url %}x-show="activePurpose === '{{ button.settings.button_flow }}'" {% endunless %} {% if forloop.index > 1 %}x-cloak{% endif %}>
                     <span>
                         {{ button.settings.button_text }}
                     </span>

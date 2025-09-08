@@ -21,7 +21,7 @@
 
         <div class="mini-cart__shipping mb-8 rounded-[.5rem] bg-[#E9F4FF] p-[0.8rem]" x-data="{ freeShippingCost: {{ sst.free_shipping_amount }} }">
             <div class="mini-cart__shipping-bar bg-white rounded-full">
-                <div :style="{ width: subscriptionItemsInCart ? '100%' : cart?.total_price / freeShippingCost * 100 + '%' }" class="mini-cart__shipping-bar-inner bg-[#42A4FF] rounded-full h-[0.8rem] max-w-[100%] transition-all duration-300">
+                <div :style="{ width: subscriptionItemsInCart ? '100%' : cart?.total_price / freeShippingCost * 100 + '%' }" class="mini-cart__shipping-bar-inner bg-[#FF5C5C] rounded-full h-[0.8rem] max-w-[100%] transition-all duration-300" :class="{ 'mini-cart__shipping-bar-inner--active': $store.miniCart?.cart?.total_price >= freeShippingCost || subscriptionItemsInCart}">
                 </div>
             </div>
             <div class="mini-cart__shipping-text text-center text-sm pt-2 text-[#000]">

@@ -1,5 +1,6 @@
 {% assign bst = block.settings %}
 
+{% if bst.image != blank %}
 <style>
     #{{ block.id }} {
         width: var(--image-width);
@@ -23,6 +24,7 @@
     </a>
 </div>
 
+{% endif %}
 
 {% schema %}
 {
