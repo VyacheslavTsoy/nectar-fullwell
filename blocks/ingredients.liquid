@@ -10,7 +10,7 @@
     {% endif %}
 {% endcapture %}
 
-<div class="ingredients pt-4" x-data="ingredients">
+<div class="ingredients pt-4" x-data="Alpine.store('ingredients')">
     <div class="ingredients__grid grid md:grid-cols-2 gap-4">
         {% for ingredient in bst.related_ingredients %}
             <div class="ingredients__item flex gap-4 md:gap-[1.4rem] justify-between items-center py-[2rem] px-[1.5rem] bg-[#FAFAFA] border-[0.1rem] border-[#CCCCCC] rounded-xl text-[#000000]">
@@ -27,14 +27,14 @@
     {% if bst.btn_text != blank and ingredient_modal != blank %}
     <div class="buttons-group flex flex-col md:flex-row justify-center items-center mt-8">
     
-        <button class="btn btn--aqua" @click="openModal = !openModal">
+        <button class="btn btn--aqua" @click="Alpine.store('ingredients').openModal = !Alpine.store('ingredients').openModal">
             {{ bst.btn_text }}
         </button>
     </div>
     {% endif %}
 
     {% if ingredient_modal != blank %}
-    <div class="ingredients__modal flex items-start justify-center" :class="{ 'active': openModal }">
+    <div class="ingredients__modal flex items-start justify-center" :class="{ 'active': Alpine.store('ingredients').openModal }">
         <div class="ingredients__modal-overlay fixed inset-0 bg-black opacity-50" @click="openModal = false"></div>
         <div class="ingredients__modal-content w-full max-w-[72.6rem] p-[1.6rem] md:p-[3rem] mx-auto bg-white md:bg-[#E2F0FF] border-[3px] border-[#4B8ECB] rounded-[2rem] relative">
 
@@ -104,13 +104,13 @@
 
 <script>
     document.addEventListener('alpine:init', () => {
-        Alpine.data('ingredients', () => ({
+        Alpine.store('ingredients', {
             openModal: false,
           
             init() {
                 this.openModal = false;
-            }
-          }));
+            },
+        });
     });
 </script>
 

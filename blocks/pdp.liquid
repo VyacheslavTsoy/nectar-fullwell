@@ -5,74 +5,22 @@
         <div class="product__gallery flex-shrink-0 md:w-[50%] lg:w-[54rem]">
             {% render 'product-gallery' %}
 
-            {% if featuredReviews != blank %}
-                <div class="hidden md:block">
-                    {% if featuredReviews != blank %}
-                        <div class="carousel overflow-hidden w-full mt-[1.6rem]" id="featured-reviews-desktop">
-                            <div class="carousel__content swiper">
-                                <div class="swiper-wrapper">
-                                    {% for review in featuredReviews %}
-                                        <div class="swiper-slide">
-                                            {% render 'featured-review', name: review.name, image: review.author_image, text: review.text %}
-                                        </div>
-                                    {% endfor %}
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </div>
-                        </div>
-                    
-                        <script>
-                            document.addEventListener('DOMContentLoaded', () => {
-                                const swiper = new Swiper('#featured-reviews-desktop .swiper', {
-                                    slidesPerView: 1,
-                                    spaceBetween: 12,
-                                    autoHeight: true,
-                                    pagination: {
-                                        el: '.swiper-pagination',
-                                        clickable: true,
-                                    }
-                                });
-                            });
-                        </script>
-                    {% endif %}
-                </div>
-            {% endif %}
+            <div class="buttons-group hidden md:flex flex-col md:flex-row justify-center items-center mt-8">
+    
+                <button class="btn btn--aqua" x-data @click="Alpine.store('ingredients').openModal = !Alpine.store('ingredients').openModal">
+                    See Ingredients &amp; Nutrition Facts
+                </button>
+            </div>
         </div>
         <div class="product__info md:w-[50%]">
             {% content_for 'blocks' %}
 
-            {% if featuredReviews != blank %}
-                <div class="block md:hidden">
-                    {% if featuredReviews != blank %}
-                        <div class="carousel overflow-hidden w-full mt-[1.6rem]" id="featured-reviews-mobile">
-                            <div class="carousel__content swiper">
-                                <div class="swiper-wrapper">
-                                    {% for review in featuredReviews %}
-                                        <div class="swiper-slide">
-                                            {% render 'featured-review', name: review.name, image: review.author_image, text: review.text %}
-                                        </div>
-                                    {% endfor %}
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </div>
-                        </div>
-                    
-                        <script>
-                            document.addEventListener('DOMContentLoaded', () => {
-                                const swiper = new Swiper('#featured-reviews-mobile .swiper', {
-                                    slidesPerView: 1,
-                                    spaceBetween: 12,
-                                    autoHeight: true,
-                                    pagination: {
-                                        el: '.swiper-pagination',
-                                        clickable: true,
-                                    }
-                                });
-                            });
-                        </script>
-                    {% endif %}
-                </div>
-            {% endif %}
+            <div class="buttons-group flex flex-col md:hidden md:flex-row justify-center items-center mt-8">
+    
+                <button class="btn btn--aqua" x-data @click="Alpine.store('ingredients').openModal = !Alpine.store('ingredients').openModal">
+                    See Ingredients &amp; Nutrition Facts
+                </button>
+            </div>
         </div>
     </div>
 </div>
