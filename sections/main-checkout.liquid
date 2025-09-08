@@ -96,6 +96,8 @@
             currentSubscriptionPrice: 0,
             subscriptionSaving: 0,
             subscriptionSavingPercentage: 0,
+            subscriptionPricePerUnit: 0,
+            oneTimePricePerUnit: 0,
             oneTimeSaving: 0,
             oneTimeSavingPercentage: 0,
             amountOfChoosedFlavors: 0,
@@ -251,21 +253,42 @@
             },
 
             updatePrice() {
+                const bundlePrice = (this.currentProduct?.variants[0].price || 0) * this.minQty;
+
+                const getDiscountedPrice = (discount) =>
+                    discount?.discountAmount ? bundlePrice - discount.discountAmount : bundlePrice;
+
                 this.currentSinglePrice = this.currentProduct?.variants[0].price || 0;
-                this.currentBundleOriginalPrice = this.currentSinglePrice * this.minQty;
+                this.currentBundleOriginalPrice = bundlePrice;
 
-                this.currentOneTimePrice = this.currentDiscount?.oneTime?.discountAmount ? this.currentBundleOriginalPrice - this.currentDiscount?.oneTime?.discountAmount : this.currentBundleOriginalPrice;
+                this.currentOneTimePrice = getDiscountedPrice(this.currentDiscount?.oneTime);
+                this.currentSubscriptionPrice = getDiscountedPrice(this.currentDiscount?.subscription);
 
-                this.oneTimeSaving = this.currentBundleOriginalPrice - this.currentOneTimePrice;
-                this.oneTimeSavingPercentage = Math.round((this.oneTimeSaving / this.currentBundleOriginalPrice) * 100);
+                if (this.currentQty > this.maxQty) {
+                    const subscriptionPrice = this.currentSubscriptionPrice;
+                    const subscriptionPricePerUnit = subscriptionPrice / this.minQty;
 
-                this.currentSubscriptionPrice = this.currentDiscount?.subscription?.discountAmount ? this.currentBundleOriginalPrice - this.currentDiscount?.subscription?.discountAmount : this.currentBundleOriginalPrice;
+                    this.subscriptionPricePerUnit = subscriptionPricePerUnit;
+                }
 
-                this.subscriptionSaving = this.currentBundleOriginalPrice - this.currentSubscriptionPrice;
-                this.subscriptionSavingPercentage = Math.round((this.subscriptionSaving / this.currentBundleOriginalPrice) * 100);
+                const calcSaving = (original, discounted) => ({
+                    amount: original - discounted,
+                    percent: original ? Math.round(((original - discounted) / original) * 100) : 0
+                });
 
-                this.subscriptionPricePerStick = this.currentSubscriptionPrice / (this.sticksPerPouch * this.minQty);
-                this.oneTimePricePerStick = this.currentOneTimePrice / (this.sticksPerPouch * this.minQty);
+                const oneTime = calcSaving(bundlePrice, this.currentOneTimePrice);
+                const subscription = calcSaving(bundlePrice, this.currentSubscriptionPrice);
+
+                this.oneTimeSaving = oneTime.amount;
+                this.oneTimeSavingPercentage = oneTime.percent;
+                this.subscriptionSaving = subscription.amount;
+                this.subscriptionSavingPercentage = subscription.percent;
+
+                const totalSticks = this.sticksPerPouch * this.minQty || 1;
+                this.subscriptionPricePerStick = this.currentSubscriptionPrice / totalSticks;
+                this.oneTimePricePerStick = this.currentOneTimePrice / totalSticks;
+
+                {% comment %} console.log(this.currentQty, this.currentOneTimePrice, this.currentSubscriptionPrice, 9999); {% endcomment %}
             },
 
             resetCheckout() {

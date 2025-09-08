@@ -319,7 +319,11 @@
                         this.filterUpsellProducts();
                         this.checkIfFreeProductsOnlyInCart();
 
-                        console.log(this.cart, 9999)
+                        const ifGiftsInCart = this.cart?.items?.some(item => item.discounts?.some(discount => discount?.title === 'GIFT'));
+
+                        if (ifGiftsInCart) {
+                            this.clearCart();
+                        }
                 });
             },
           
