@@ -310,25 +310,16 @@
     
             loadCart() {
     
-                fetch(window.Shopify.routes.root + 'cart.js')
-                    .then(response => response.json())
-                    .then(data => {
-                        this.cart = data;
-                        this.subscriptionItemsInCart = this.cart?.items?.some(item => item.selling_plan_allocation);
-
-                        this.filterUpsellProducts();
-                        this.checkIfFreeProductsOnlyInCart();
-
-                        const ifGiftsInCart = this.cart?.items?.some(item => item.discounts?.some(discount => discount?.title === 'GIFT'));
-
-                        if (ifGiftsInCart) {
-                            this.clearCart();
-                        }
+                return fetch(window.Shopify.routes.root + 'cart.js')
+                .then(response => response.json())
+                .then(data => {
+                    this.cart = data;
+                    this.subscriptionItemsInCart = this.cart?.items?.some(item => item.selling_plan_allocation);
                 });
             },
           
             updateItem: debounce((item) => {
-                console.log(item, 9999)
+                
                 let updates = {
                     [item.id]: item.quantity
                 };
@@ -432,9 +423,14 @@
                 this.loadCart();
             },
       
-            init() {
-                this.loadCart();
-                
+            init: async function() {
+                await this.loadCart();
+
+                console.log(this.cart, 9999);
+
+                if (this.cart?.items?.some(item => item.discounts?.some(discount => discount.title == 'GIFT'))) {
+                    this.clearCart();
+                }
             }
         });
       });
