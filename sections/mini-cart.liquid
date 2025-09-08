@@ -153,7 +153,17 @@
             {% endif %}
             
             <div class="mini-cart__cta pt-[3rem]" x-show="!subscriptionItemsInCart && cart?.total_price > 0">
-                <button class="btn btn-primary w-full mini-cart__cta-btn" data-off-label="{{ sst.save_badge }}" @click="$store.miniCart.upgrateItemsToSubscription()">
+                <button class="btn btn-primary w-full mini-cart__cta-btn" 
+                    x-data="{
+                        labels: `{{ sst.save_badge }}`.split('|').map(s => s.trim()),
+                        get currentLabel() {
+                          let count = cart?.item_count || 0
+                          return this.labels[Math.min(count - 1, this.labels.length - 1)] || this.labels[0]
+                        }
+                      }"
+                    :data-off-label="currentLabel" 
+                    @click="$store.miniCart.upgrateItemsToSubscription()"
+                >
                     <span class="mini-cart__cta-btn-text">{{ sst.subscription_cta }}</span>
                     <span class="mini-cart__cta-btn-price flex items-center">
                         <span class="inline-flex items-center gap-2">
@@ -307,6 +317,8 @@
 
                         this.filterUpsellProducts();
                         this.checkIfFreeProductsOnlyInCart();
+
+                        console.log(this.cart, 9999)
                 });
             },
           
@@ -400,17 +412,24 @@
                     body: JSON.stringify({ updates })
                 });
     
-                await fetch(window.Shopify.routes.root + 'cart/add.js', {
+                const addResponse = await fetch(window.Shopify.routes.root + 'cart/add.js', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ items: itemsToAdd })
                 });
+                
+                if (addResponse.ok) {
+                    window.location.href = '/checkout';
+                } else {
+                    console.error('Error adding product to cart', await addResponse.json());
+                }
     
                 this.loadCart();
             },
       
             init() {
                 this.loadCart();
+                
             }
         });
       });

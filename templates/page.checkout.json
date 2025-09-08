@@ -43,6 +43,7 @@
           "frequency_p7Ei8A"
         ],
         "settings": {
+          "cart_flow": "add-to-cart",
           "products": [
             "energy-sampler",
             "essential-daily-calm",
@@ -57,10 +58,12 @@
             "tropical-variety-pack"
           ],
           "label_one_time": "One-time Purchase",
-          "label_subscription": "Subscribe and Save 50%",
+          "label_subscription": "Subscribe and",
           "label_delivery": "Delivery Every",
-          "label_subscription_description": "<ul><li><em><strong>Free Expedited Shipping*</strong></em></li><li><em><strong>Free $35.99 Mystery Gift</strong></em> on Order #3</li><li>Easily Pause, Cancel or Adjust Flavors <em><strong>Any Time</strong></em></li></ul>",
-          "cta_label": "Add To Cart"
+          "label_subscription_description": "<ul><li><em><strong>Free Expedited Shipping*</strong></em></li><li><em><strong>Free $35.99  Mystery Gift</strong></em> on Order #3</li><li><em><strong>Free $19.95  Mystery Gift</strong></em> on Order #3</li><li>Easily Pause, Cancel or Adjust Flavors <em><strong>Any Time</strong></em></li></ul>",
+          "cta_label": "Add To Cart",
+          "gurantee_text": "",
+          "subscription_details": ""
         }
       }
     },

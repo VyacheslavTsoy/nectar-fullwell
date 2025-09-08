@@ -1,5 +1,17 @@
 {% assign ss = section.settings %}
 
+{% capture logo %}
+    {% unless template contains 'offer' %}
+        <a href="/" class="block max-w-[9rem] md:max-w-[15rem]">
+            {{ ss.logo | image_url: width: 240 | image_tag }}
+        </a>
+    {% else %}
+        <div class="block max-w-[9rem] md:max-w-[15rem]">
+            {{ ss.logo | image_url: width: 240 | image_tag }}
+        </div>
+    {% endunless %}
+{% endcapture %}
+
 <header class="header bg-lightAzure text-white">
     <div class="container">
         <div class="header__inner flex justify-between items-center">
@@ -11,9 +23,7 @@
 
             {% if ss.logo != blank %}
                 <div class="header__logo lg:w-[25%]">
-                    <a href="/" class="block max-w-[9rem] md:max-w-[15rem]">
-                        {{ ss.logo | image_url: width: 240 | image_tag }}
-                    </a>
+                    {{ logo }}
                 </div>
             {% endif %}
 
