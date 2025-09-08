@@ -122,7 +122,7 @@
         "type": "mini-cart",
         "settings": {
           "title": "Your Cart",
-          "save_badge": "Get 10% Off & Free Shipping By Subscribing | Get 21% Off By Subscribing | 3 Unit in cart = Get 33% Off By Subscribing | Get 42% Off By Subscribing",
+          "save_badge": "Get 10% Off & Free Shipping By Subscribing | Get 21% Off By Subscribing | 3 Get 33% Off By Subscribing | Get 42% Off By Subscribing",
           "subscription_cta": "Save With Subscription",
           "one_time_cta": "Continue One-time Purchase",
           "subscription_features": "",
