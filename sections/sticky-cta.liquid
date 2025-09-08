@@ -16,7 +16,7 @@
             </div>
         {% endif %}
         {% if buttons.size > 0 %}
-            <div class="sticky-cta__button" x-data="$store.productsStorage">
+            <div class="sticky-cta__button">
                 {% for button in buttons %}
                 {% capture btn_url %}
                     {% if product.handle != blank %}
@@ -30,7 +30,8 @@
                     {% endif %}
                 {% endcapture %}
 
-                <a href="{{ btn_url }}" class="flex items-center gap-4 h-[5.4rem] md:h-[6.5rem] text-[1.6rem] md:text-[2.2rem] justify-center bg-[#21A600] text-white font-family-poppins px-4 py-2 rounded-[.6rem] md:rounded-[1rem] font-bold" {% unless button.settings.use_custom_url %}x-show="activePurpose === '{{ button.settings.button_flow }}'" {% endunless %} {% if forloop.index > 1 %}x-cloak{% endif %}>
+                <a href="{{ btn_url }}" 
+                    class="flex items-center gap-4 h-[5.4rem] md:h-[6.5rem] text-[1.6rem] md:text-[2.2rem] justify-center bg-[#21A600] text-white font-family-poppins px-4 py-2 rounded-[.6rem] md:rounded-[1rem] font-bold">
                     <span>
                         {{ button.settings.button_text }}
                     </span>

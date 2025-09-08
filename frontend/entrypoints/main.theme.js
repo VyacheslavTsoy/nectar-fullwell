@@ -8,8 +8,6 @@ import Swiper from 'swiper';
 // import 'swiper/swiper-bundle.css';
 import { Navigation, Pagination } from 'swiper/modules';
 
-import '../components/mini-cart';
-
 window.Alpine = Alpine;
 window.Swiper = Swiper;
 Swiper.use([Navigation, Pagination]);

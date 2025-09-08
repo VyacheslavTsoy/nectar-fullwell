@@ -3,7 +3,8 @@
 {% assign sst = section.settings %}
 {% assign shipping_date = 'now' | date: '%s' %}
 
-<div class="mini-cart fixed z-50 top-0 px-[1.7rem] py-[1.2rem] right-0 max-w-[100%] w-[39.3rem] md:w-[58rem] h-full bg-white" x-data="$store.miniCart" :class="{ 'mini-cart--open': $store.miniCart.isOpen }">
+
+<div class="mini-cart fixed z-50 top-0 px-[1.7rem] py-[1.2rem] right-0 max-w-[100%] w-[39.3rem] md:w-[58rem] h-full bg-white" x-data="Alpine.store('miniCart')" :class="{ 'mini-cart--open': Alpine.store('miniCart').isOpen }">
     <div class="mini-cart__inner flex flex-col h-full">
         
         <div class="mini-cart__header mb-4 flex items-center justify-between">
