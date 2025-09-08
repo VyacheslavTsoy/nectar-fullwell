@@ -21,7 +21,7 @@
             </template>
         </div>
     </div>
-    <div class="products-grid__content md:py-[var(--padding)] grid grid-cols-1 gap-8 lg:grid-cols-[repeat(var(--columns-per-row-desktop),1fr)]">
+    <div class="products-grid__content md:py-[var(--padding)] flex flex-col md:grid grid-cols-1 gap-8 lg:grid-cols-[repeat(var(--columns-per-row-desktop),1fr)]">
         {% content_for 'blocks' %}
     </div>
 </div>
