@@ -922,21 +922,21 @@
             "related_metaobjects": "{{ closest.product.metafields.custom.how_to_use.value }}"
           },
           "blocks": {
+            "image_with_caption_mW9nBp": {
+              "type": "_image-with-caption",
+              "name": "Image with caption",
+              "settings": {
+                "image": "shopify://shop_images/Image_Container.png",
+                "caption": "<p>Pour packet into 8 - 16 oz of water (adjust based on flavor-strength preference) </p>"
+              },
+              "blocks": {}
+            },
             "image_with_caption_PawtMW": {
               "type": "_image-with-caption",
               "name": "Image with caption",
               "settings": {
                 "image": "shopify://shop_images/img-2.png",
                 "caption": "<p>Stir or shake - due to the clean ingredients in Nectar, some settling may occur</p>"
-              },
-              "blocks": {}
-            },
-            "image_with_caption_mW9nBp": {
-              "type": "_image-with-caption",
-              "name": "Image with caption",
-              "settings": {
-                "image": "shopify://shop_images/img-1.png",
-                "caption": "<p>Pour packet into 8 - 16 oz of water (adjust based on flavor-strength preference) </p>"
               },
               "blocks": {}
             },
@@ -951,8 +951,8 @@
             }
           },
           "block_order": [
-            "image_with_caption_PawtMW",
             "image_with_caption_mW9nBp",
+            "image_with_caption_PawtMW",
             "image_with_caption_exNXVU"
           ]
         },
