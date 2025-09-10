@@ -9,7 +9,8 @@
             <template x-if="purchaseType === 'subscription'">
                 <div class="flex items-center gap-3">
                     <div class="price price--blue">
-                        <div x-text="formatMoney(currentSubscriptionPrice)"></div>
+                        <div x-text="formatMoney(currentSubscriptionPrice)" x-show="currentQty <= maxQty"></div>
+                        <div x-text="formatMoney(subscriptionPricePerUnit * currentQty)" x-show="currentQty > maxQty"></div>
                     </div>
 
                     <div class="price-badge inline-flex whitespace-nowrap h-[2.2rem] items-center justify-center px-[.6rem] bg-[#469AFF] text-white text-xs font-medium rounded-full" x-text="formatMoney((currentPouch?.compare_price_subscription - currentSubscriptionPrice)) + ' Off'"></div>

@@ -265,10 +265,9 @@
                 this.currentSubscriptionPrice = getDiscountedPrice(this.currentDiscount?.subscription);
 
                 if (this.currentQty > this.maxQty) {
-                    const subscriptionPrice = this.currentSubscriptionPrice;
-                    const subscriptionPricePerUnit = subscriptionPrice / this.minQty;
+                    this.subscriptionPricePerUnit = this.currentSubscriptionPrice / this.minQty;
 
-                    this.subscriptionPricePerUnit = subscriptionPricePerUnit;
+                    console.log(this.subscriptionPricePerUnit, 123);
                 }
 
                 const calcSaving = (original, discounted) => ({

@@ -78,19 +78,6 @@
     {% comment %} Mini cart {% endcomment %}
     {% section 'mini-cart' %}
 
-    {{ cart.items | json }}
-
-
-    <script>
-        document.addEventListener('alpine:init', () => {
-            if (Alpine.store('miniCart')?.cart?.items?.some(item => item.discounts?.some(discount => discount.title === 'GIFT'))) {
-                {% comment %} $store.miniCart.clearCart(); {% endcomment %}
-                 console.log('GIFT', 9999);
-            }
-        });
-    </script>
-    
-
     {% if settings.products_storage != blank %}
     <script>
         document.addEventListener('alpine:init', () => {
