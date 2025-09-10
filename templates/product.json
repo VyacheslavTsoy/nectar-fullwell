@@ -757,7 +757,7 @@
                   "settings": {
                     "image": "{{ closest.product.metafields.custom.product_flavors_gallery.value.image_2.value }}",
                     "image_url": "",
-                    "border_radius": 0,
+                    "border_radius": 16,
                     "image_ratio": "1/1",
                     "image_width": 100
                   },
@@ -782,7 +782,7 @@
                   "settings": {
                     "image": "{{ closest.product.metafields.custom.product_flavors_gallery.value.image_3.value }}",
                     "image_url": "",
-                    "border_radius": 0,
+                    "border_radius": 16,
                     "image_ratio": "1/1",
                     "image_width": 100
                   },
@@ -807,7 +807,7 @@
                   "settings": {
                     "image": "{{ closest.product.metafields.custom.product_flavors_gallery.value.image_4.value }}",
                     "image_url": "",
-                    "border_radius": 0,
+                    "border_radius": 16,
                     "image_ratio": "1/1",
                     "image_width": 100
                   },
@@ -832,7 +832,7 @@
                   "settings": {
                     "image": "{{ closest.product.metafields.custom.product_flavors_gallery.value.image_5.value }}",
                     "image_url": "",
-                    "border_radius": 0,
+                    "border_radius": 16,
                     "image_ratio": "1/1",
                     "image_width": 100
                   },
