@@ -14,7 +14,8 @@
                     <th></th>
                     <template x-for="item in tableItems" :key="item.title">
                         <th>
-                            <img :src="item.image" class="w-auto max-w-[7rem] max-h-[7rem] mx-auto" />
+                            {% comment %} <img :src="item.image" class="w-auto max-w-[7rem] max-h-[7rem] mx-auto" /> {% endcomment %}
+                             <div x-html="item.image"></div>
                         </th>
                     </template>
                 </tr>
@@ -59,7 +60,7 @@
             tableItems: [
                 {% for item in items %}
                     {
-                        image: "{{ item.image | img_url: 'master' }}",
+                        image: `{% render 'img', image: item.image, max_width: 140, class: 'w-auto max-w-[7rem] max-h-[7rem] mx-auto' %}`,
                         title: "{{ item.title }}",
                         ingredients: [
                         {%- for ingredient in item.ingredients.value -%}
