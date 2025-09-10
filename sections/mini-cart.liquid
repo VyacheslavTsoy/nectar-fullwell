@@ -188,8 +188,9 @@
                     </div>
                     {% endif %}
                 </div>
-    
-                <button class="btn w-full btn-outline mini-cart__cta-btn">
+                
+                {% form 'cart', cart, class: 'mini-cart__cta-form' %}
+                <button class="btn w-full btn-outline mini-cart__cta-btn" name="checkout">
                     <span class="mini-cart__cta-btn-text">{{ sst.one_time_cta }}</span>
                     <span class="mini-cart__cta-btn-price flex items-center gap-1">
                         <span x-text="formatMoney(cart?.total_price)"></span>
@@ -201,7 +202,8 @@
                         </span>
                     </span>      
                 </button>
-    
+                {% endform %}
+
                 <div class="mini-cart__features text-xs flex flex-col gap-2 items-center mt-[0.8rem] font-bold">
                     <div class="mini-cart__features-item flex items-center gap-2">
                         <b>4.8</b> {% render 'stars', score: 5 %} {{ sst.additional_text }}
@@ -426,7 +428,7 @@
             init: async function() {
                 await this.loadCart();
 
-                console.log(this.cart, 9999);
+                this.filterUpsellProducts();
 
                 if (this.cart?.items?.some(item => item.discounts?.some(discount => discount.title == 'GIFT'))) {
                     this.clearCart();
