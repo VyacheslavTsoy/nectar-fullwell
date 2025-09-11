@@ -838,8 +838,8 @@
                       "type": "_carousel-item",
                       "name": "Carousel Item",
                       "settings": {
-                        "image": "shopify://shop_images/hero-bg.png",
-                        "video_url": ""
+                        "image": "shopify://shop_images/Calm_Website_video_5_screenshot.png",
+                        "video_url": "https://cdn.shopify.com/videos/c/o/v/4dda3a7b383847c9b1f0f921a756d156.mp4"
                       },
                       "blocks": {}
                     }
@@ -1005,7 +1005,7 @@
                       "name": "Carousel Item",
                       "settings": {
                         "image": "shopify://shop_images/hero-bg.png",
-                        "video_url": ""
+                        "video_url": "https://cdn.shopify.com/videos/c/o/v/1bea68c905264958811c065653cf22ec.mp4"
                       },
                       "blocks": {}
                     },
