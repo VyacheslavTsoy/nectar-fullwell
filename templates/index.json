@@ -798,6 +798,15 @@
                     "gap_mobile": 0
                   },
                   "blocks": {
+                    "carousel_item_M6m9qT": {
+                      "type": "_carousel-item",
+                      "name": "Carousel Item",
+                      "settings": {
+                        "image": "shopify://shop_images/Calm_Taste_Screenshot.png",
+                        "video_url": "https://cdn.shopify.com/videos/c/o/v/35388bbc45704a2e8eb310453d618420.mov"
+                      },
+                      "blocks": {}
+                    },
                     "carousel_item_eiCa4k": {
                       "type": "_carousel-item",
                       "name": "Carousel Item",
@@ -813,15 +822,6 @@
                       "settings": {
                         "image": "shopify://shop_images/Calm_Benefits_Screenshot.png",
                         "video_url": "https://cdn.shopify.com/videos/c/o/v/b443bd8df84440eaa003932d70f634d4.mov"
-                      },
-                      "blocks": {}
-                    },
-                    "carousel_item_M6m9qT": {
-                      "type": "_carousel-item",
-                      "name": "Carousel Item",
-                      "settings": {
-                        "image": "shopify://shop_images/Calm_Taste_Screenshot.png",
-                        "video_url": "https://cdn.shopify.com/videos/c/o/v/35388bbc45704a2e8eb310453d618420.mov"
                       },
                       "blocks": {}
                     },
@@ -845,9 +845,9 @@
                     }
                   },
                   "block_order": [
+                    "carousel_item_M6m9qT",
                     "carousel_item_eiCa4k",
                     "carousel_item_bGeUbG",
-                    "carousel_item_M6m9qT",
                     "carousel_item_L9iXHb",
                     "carousel_item_y6aQjb"
                   ]
