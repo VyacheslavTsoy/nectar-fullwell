@@ -57,11 +57,10 @@
   </head>
   <body>
     
-    {% unless template contains 'gift' or template contains 'reasons' %}
+    {% unless template contains 'gift'  %}
         {% comment %} Announcement bar {% endcomment %}
-        {% section 'announcement-bar' %}
-
-        {% unless template contains 'page' %}
+        {% unless template contains 'reasons' %}
+            {% section 'announcement-bar' %}
           {% comment %} Header {% endcomment %}
           {% sections 'header-group' %}
         {% endunless %}    
