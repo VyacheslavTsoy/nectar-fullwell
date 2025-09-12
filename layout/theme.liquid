@@ -71,8 +71,10 @@
         {{ content_for_layout }}
     </main>
     
+    {% unless template contains 'page' %}
     {% comment %} Footer {% endcomment %}
     {% sections 'footer-group' %}
+    {% endunless %}
 
     {% comment %} Mobile nav {% endcomment %}
     {% section 'mobile-nav' %}
