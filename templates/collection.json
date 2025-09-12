@@ -73,7 +73,7 @@
                 "text_rating": "<p>Excellent <strong>4.9</strong> | 1,000+ Verified Reviews</p>",
                 "title": "{{ closest.product.title }}",
                 "description": "<p>A clean, <em><strong>Daily Calming</strong></em> mix with clinically studied ingredients - formulated to balance cortisol, reduce stress, and improve sleep.</p>",
-                "features": "<ul><li>Feature 1</li><li>Feature 2</li><li>Feature 3</li></ul>"
+                "features": "<ul><li>Lower stress & support cortisol balance</li><li>Get deeper, more restorative sleep</li><li>Relax your body and mind naturally</li></ul>"
               },
               "blocks": {}
             },
@@ -101,7 +101,7 @@
                 "text_rating": "<p>Excellent <strong>4.8</strong> | 6,000+ Verified Reviews</p>",
                 "title": "{{ closest.product.title }}",
                 "description": "<p>A clean, <em><strong>Daily Electrolyte + Energy</strong></em> mix with Organic Caffeine, L-theanine, and Vitamin B - smooth, all-day energy without the crash.</p>",
-                "features": "<ul><li>Supercharge Your Hydration</li><li>Boost natural energy & motivation</li><li>Feel happier & more positive</li></ul><p></p>"
+                "features": "<ul><li>Jitter and crash-free daily boost</li><li>Improve your focus & mental clarity</li><li>Clean coffee & energy drink alternative</li></ul><p></p>"
               },
               "blocks": {}
             }
