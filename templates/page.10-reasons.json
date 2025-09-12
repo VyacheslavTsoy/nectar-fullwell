@@ -1414,12 +1414,32 @@
         "mobile_padding_top": 20,
         "mobile_gap_between_blocks": 10
       }
+    },
+    "sticky_cta_mb9jfL": {
+      "type": "sticky-cta",
+      "blocks": {
+        "button_KYcX7B": {
+          "type": "button",
+          "settings": {
+            "use_custom_url": true,
+            "button_flow": "Hydration",
+            "button_text": "Save Up To 60% Now",
+            "button_url": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "button_KYcX7B"
+      ],
+      "name": "Sticky CTA",
+      "settings": {}
     }
   },
   "order": [
     "blank_section_jhpeEr",
     "blank_section_NGDedc",
     "blank_section_4mNfnD",
-    "blank_section_NHHjDK"
+    "blank_section_NHHjDK",
+    "sticky_cta_mb9jfL"
   ]
 }
