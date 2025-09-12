@@ -204,7 +204,7 @@
             },
 
             updateCurrentPouch(minQty) {
-                this.minQty = minQty ? minQty : this.pouches.reduce((max, pouch) => Math.max(max, pouch.minQty), 0);
+                this.minQty = minQty ? minQty : this.pouches[1]?.minQty;
                 this.currentPouch = this.pouches.find(pouch => pouch.minQty === this.minQty);
 
                 this.relatedPoucheSellingPlan = this.currentPouch?.relatedPoucheSellingPlan;
