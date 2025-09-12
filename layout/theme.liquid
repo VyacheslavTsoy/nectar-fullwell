@@ -60,8 +60,10 @@
         {% comment %} Announcement bar {% endcomment %}
         {% section 'announcement-bar' %}
 
-        {% comment %} Header {% endcomment %}
-        {% sections 'header-group' %}
+        {% unless template contains 'page' %}
+          {% comment %} Header {% endcomment %}
+          {% sections 'header-group' %}
+        {% endunless %}    
     {% endunless %}
 
     {% comment %} Main content {% endcomment %}
