@@ -60,8 +60,10 @@
         {% comment %} Announcement bar {% endcomment %}
         {% section 'announcement-bar' %}
 
-        {% comment %} Header {% endcomment %}
-        {% sections 'header-group' %}
+        {% unless template contains 'page' %}
+          {% comment %} Header {% endcomment %}
+          {% sections 'header-group' %}
+        {% endunless %}    
     {% endunless %}
 
     {% comment %} Main content {% endcomment %}
@@ -69,8 +71,10 @@
         {{ content_for_layout }}
     </main>
     
+    {% unless template contains 'page' %}
     {% comment %} Footer {% endcomment %}
     {% sections 'footer-group' %}
+    {% endunless %}
 
     {% comment %} Mobile nav {% endcomment %}
     {% section 'mobile-nav' %}

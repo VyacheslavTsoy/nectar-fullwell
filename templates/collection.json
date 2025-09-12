@@ -42,7 +42,7 @@
           "type": "text",
           "name": "Text",
           "settings": {
-            "title": "<p><strong>Summer Sale - Up to 60% Off</strong></p>",
+            "title": "<p><strong>Summer Sale - Up to 42% Off</strong></p>",
             "text_alignment": "center",
             "font_family": "poppins",
             "font_weight": "bold",

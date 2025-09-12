@@ -951,7 +951,7 @@
                   "type": "heading",
                   "name": "Heading",
                   "settings": {
-                    "title": "<h3>PECIAL TREATMENT OFFER<br/><strong>UP TO 56% OFF</strong></h3>",
+                    "title": "<h3>SPECIAL TREATMENT OFFER<br/><strong>UP TO 60% OFF</strong></h3>",
                     "text_color": "#123456",
                     "text_alignment": "center",
                     "heading_size": "lg",
@@ -983,7 +983,7 @@
                   "type": "button",
                   "name": "Button",
                   "settings": {
-                    "button_text": "Yes! Get 56% Off",
+                    "button_text": "Yes! Get 60% Off",
                     "button_link": "https://drinknectar.co/products/essential-daily-hydration-4-gift",
                     "related_product": "",
                     "button_type": "primary",
@@ -1621,6 +1621,25 @@
         "mobile_padding_top": 30,
         "mobile_gap_between_blocks": 10
       }
+    },
+    "sticky_cta_GUFikW": {
+      "type": "sticky-cta",
+      "blocks": {
+        "button_eXJ7JH": {
+          "type": "button",
+          "settings": {
+            "use_custom_url": true,
+            "button_flow": "Hydration",
+            "button_text": "Save Up To 60% Now",
+            "button_url": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "button_eXJ7JH"
+      ],
+      "name": "Sticky CTA",
+      "settings": {}
     }
   },
   "order": [
@@ -1637,6 +1656,7 @@
     "blank_section_4Lm34n",
     "blank_section_RtVT7g",
     "blank_section_LdTJTx",
-    "blank_section_jbDFF8"
+    "blank_section_jbDFF8",
+    "sticky_cta_GUFikW"
   ]
 }
