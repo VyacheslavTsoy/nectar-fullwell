@@ -90,14 +90,14 @@
                         <div class="mini-cart__product-price font-family-poppins flex items-center gap-2 text-xs text-[#199A47] font-bold" x-text="formatMoney(item.final_line_price)" :data-compare-price="item.original_line_price > item.final_line_price ? formatMoney(item.original_line_price) : null"></div>
                     </div>
     
-                    <div class="mini-cart__product-cta w-[9rem] flex-shrink-0 flex justify-end" x-data="{ quantity: item.quantity }" x-show="item.final_line_price > 0">
+                    <div class="mini-cart__product-cta w-[9rem] flex-shrink-0 flex justify-end" x-data="{ quantity: item.quantity }" x-effect="quantity = item.quantity" x-show="item.final_line_price > 0">
                         <div class="qty-picker flex items-center gap-2 mb-2 text-[#111111]">
                             <button class="qty-picker__btn" @click="if (quantity > 0) { quantity--; updateItem({ id: item.key, quantity: quantity }) }">
                                 <svg width="10" height="3" viewBox="0 0 10 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0.534084 2.14009H8.87706C9.1046 2.14009 9.25629 1.9884 9.25629 1.76086V1.00241C9.25629 0.774875 9.1046 0.623184 8.87706 0.623184H0.534084C0.306549 0.623184 0.154859 0.774875 0.154859 1.00241V1.76086C0.154859 1.9884 0.306549 2.14009 0.534084 2.14009Z" fill="#3D3D3D"/>
                                 </svg>                                
                             </button>
-                            <input type="number" class="qty-picker__input text-center w-[2.4rem]" :value="quantity" @change="quantity = $event.target.value; updateItem({ id: item.key, quantity: quantity })">
+                            <input type="text" class="qty-picker__input text-center w-[2.4rem]" :value="quantity" @change="quantity = $event.target.value; updateItem({ id: item.key, quantity: quantity })">
                             <button class="qty-picker__btn" @click="quantity++; updateItem({ id: item.key, quantity: quantity })">
                                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0.594739 5.00245V5.7609C0.594739 5.98844 0.746429 6.14013 0.973965 6.14013H4.387V9.55317C4.387 9.7807 4.53869 9.93239 4.76623 9.93239H5.52468C5.75221 9.93239 5.90391 9.7807 5.90391 9.55317V6.14013H9.31694C9.54448 6.14013 9.69617 5.98844 9.69617 5.7609V5.00245C9.69617 4.77492 9.54448 4.62322 9.31694 4.62322H5.90391V1.21019C5.90391 0.982654 5.75221 0.830963 5.52468 0.830963H4.76623C4.53869 0.830963 4.387 0.982654 4.387 1.21019V4.62322H0.973965C0.746429 4.62322 0.594739 4.77492 0.594739 5.00245Z" fill="#3D3D3D"/>
@@ -311,11 +311,11 @@
             },
     
             loadCart() {
-    
                 return fetch(window.Shopify.routes.root + 'cart.js')
                 .then(response => response.json())
                 .then(data => {
                     this.cart = data;
+
                     this.subscriptionItemsInCart = this.cart?.items?.some(item => item.selling_plan_allocation);
                 });
             },

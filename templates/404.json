@@ -7,137 +7,126 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
-  "sections": {
-    "main": {
-      "type": "main-404",
-      "disabled": true,
-      "settings": {
-        "heading": "404 Page Not Found",
-        "text": "The page you are looking for does not exist.",
-        "button_label": "Go to Home"
+ {
+    "sections": {
+      "main": {
+        "type": "main-404",
+        "blocks": {
+          "heading_CBLari": {
+            "type": "heading",
+            "name": "Heading",
+            "settings": {
+              "title": "<h2>OOPS! Page not found</h2>",
+              "text_color": "#123456",
+              "text_alignment": "center",
+              "heading_size": "4xl",
+              "font_weight": "bold",
+              "font_family": "values-sans",
+              "use_mobile_settings": true,
+              "text_alignment_mobile": "center",
+              "heading_size_mobile": "lg",
+              "font_weight_mobile": "bold"
+            },
+            "blocks": {}
+          },
+          "heading_g9BV7n": {
+            "type": "heading",
+            "name": "Heading",
+            "settings": {
+              "title": "<h3>Don't feel bad, we have prepared our best products for you :)</h3>",
+              "text_color": "#123456",
+              "text_alignment": "center",
+              "heading_size": "lg",
+              "font_weight": "bold",
+              "font_family": "values-sans",
+              "use_mobile_settings": true,
+              "text_alignment_mobile": "center",
+              "heading_size_mobile": "md",
+              "font_weight_mobile": "normal"
+            },
+            "blocks": {}
+          },
+          "buttons_group_jQRjD6": {
+            "type": "buttons-group",
+            "name": "Buttons Group",
+            "settings": {
+              "hide_on_desktop": false,
+              "gap_between_buttons_desktop": 10,
+              "buttons_alignment": "center",
+              "top_padding_desktop": 12,
+              "bottom_padding_desktop": 0,
+              "hide_on_mobile": false,
+              "gap_between_buttons_mobile": 12,
+              "buttons_alignment_mobile": "center",
+              "top_padding_mobile": 10,
+              "bottom_padding_mobile": 0
+            },
+            "blocks": {
+              "button_yNfH3Y": {
+                "type": "button",
+                "name": "Button",
+                "settings": {
+                  "button_text": "Energy",
+                  "button_link": "shopify://products/essential-daily-energy",
+                  "related_product": "",
+                  "button_type": "primary",
+                  "hide_on_mobile": false
+                },
+                "blocks": {}
+              },
+              "button_rmUJ9y": {
+                "type": "button",
+                "name": "Button",
+                "settings": {
+                  "button_text": "Hydration",
+                  "button_link": "shopify://products/essential-daily-hydration-1",
+                  "related_product": "",
+                  "button_type": "secondary",
+                  "hide_on_mobile": false
+                },
+                "blocks": {}
+              },
+              "button_fDXGWR": {
+                "type": "button",
+                "name": "Button",
+                "settings": {
+                  "button_text": "Calm",
+                  "button_link": "shopify://products/essential-daily-calm",
+                  "related_product": "",
+                  "button_type": "aqua",
+                  "hide_on_mobile": false
+                },
+                "blocks": {}
+              }
+            },
+            "block_order": [
+              "button_yNfH3Y",
+              "button_rmUJ9y",
+              "button_fDXGWR"
+            ]
+          }
+        },
+        "block_order": [
+          "heading_CBLari",
+          "heading_g9BV7n",
+          "buttons_group_jQRjD6"
+        ],
+        "custom_css": [
+          "@media screen and (max-width: 768px) {.btn {width: 100%; }}"
+        ],
+        "settings": {
+          "desktop_padding_top": 90,
+          "desktop_gap_between_blocks": 20,
+          "bg_color": "#ffffff",
+          "desktop_max_width": 880,
+          "hide_on_mobile": false,
+          "mobile_padding_top": 35,
+          "mobile_gap_between_blocks": 10
+        }
       }
     },
-    "blank_section_gVUpRd": {
-      "type": "blank-section",
-      "blocks": {
-        "heading_qkLbFt": {
-          "type": "heading",
-          "name": "Heading",
-          "settings": {
-            "title": "<h2>OOPS! Page not found</h2>",
-            "text_color": "#123456",
-            "text_alignment": "center",
-            "heading_size": "4xl",
-            "font_weight": "bold",
-            "font_family": "values-sans",
-            "use_mobile_settings": true,
-            "text_alignment_mobile": "center",
-            "heading_size_mobile": "lg",
-            "font_weight_mobile": "bold"
-          },
-          "blocks": {}
-        },
-        "heading_A8Fixt": {
-          "type": "heading",
-          "name": "Heading",
-          "settings": {
-            "title": "<h3>Don't feel bad, we have prepared our best products for you :)</h3>",
-            "text_color": "#123456",
-            "text_alignment": "center",
-            "heading_size": "lg",
-            "font_weight": "bold",
-            "font_family": "values-sans",
-            "use_mobile_settings": true,
-            "text_alignment_mobile": "center",
-            "heading_size_mobile": "md",
-            "font_weight_mobile": "normal"
-          },
-          "blocks": {}
-        },
-        "buttons_group_PpaGrC": {
-          "type": "buttons-group",
-          "name": "Buttons Group",
-          "settings": {
-            "hide_on_desktop": false,
-            "gap_between_buttons_desktop": 10,
-            "buttons_alignment": "center",
-            "top_padding_desktop": 12,
-            "bottom_padding_desktop": 0,
-            "hide_on_mobile": false,
-            "gap_between_buttons_mobile": 12,
-            "buttons_alignment_mobile": "center",
-            "top_padding_mobile": 10,
-            "bottom_padding_mobile": 0
-          },
-          "blocks": {
-            "button_yNfH3Y": {
-              "type": "button",
-              "name": "Button",
-              "settings": {
-                "button_text": "Energy",
-                "button_link": "shopify://products/essential-daily-energy",
-                "related_product": "",
-                "button_type": "primary",
-                "hide_on_mobile": false
-              },
-              "blocks": {}
-            },
-            "button_rmUJ9y": {
-              "type": "button",
-              "name": "Button",
-              "settings": {
-                "button_text": "Hydration",
-                "button_link": "shopify://products/essential-daily-hydration-1",
-                "related_product": "",
-                "button_type": "secondary",
-                "hide_on_mobile": false
-              },
-              "blocks": {}
-            },
-            "button_fDXGWR": {
-              "type": "button",
-              "name": "Button",
-              "settings": {
-                "button_text": "Calm",
-                "button_link": "shopify://products/essential-daily-calm",
-                "related_product": "",
-                "button_type": "aqua",
-                "hide_on_mobile": false
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "button_yNfH3Y",
-            "button_rmUJ9y",
-            "button_fDXGWR"
-          ]
-        }
-      },
-      "block_order": [
-        "heading_qkLbFt",
-        "heading_A8Fixt",
-        "buttons_group_PpaGrC"
-      ],
-      "custom_css": [
-        ".buttons-group .btn {width: 100%; max-width: 250px;}",
-        ".blank-section {min-height: 450px;}"
-      ],
-      "name": "404",
-      "settings": {
-        "desktop_padding_top": 60,
-        "desktop_gap_between_blocks": 20,
-        "bg_color": "#ffffff",
-        "desktop_max_width": 840,
-        "hide_on_mobile": false,
-        "mobile_padding_top": 40,
-        "mobile_gap_between_blocks": 10
-      }
-    }
-  },
-  "order": [
-    "main",
-    "blank_section_gVUpRd"
-  ]
-}
+    "order": [
+      "main"
+    ]
+  }
+  
