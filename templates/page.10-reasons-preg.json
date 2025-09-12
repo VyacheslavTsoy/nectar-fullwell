@@ -951,7 +951,7 @@
                   "type": "heading",
                   "name": "Heading",
                   "settings": {
-                    "title": "<h3>PECIAL TREATMENT OFFER<br/><strong>UP TO 56% OFF</strong></h3>",
+                    "title": "<h3>SPECIAL TREATMENT OFFER<br/><strong>UP TO 60% OFF</strong></h3>",
                     "text_color": "#123456",
                     "text_alignment": "center",
                     "heading_size": "lg",
@@ -983,7 +983,7 @@
                   "type": "button",
                   "name": "Button",
                   "settings": {
-                    "button_text": "Yes! Get 56% Off",
+                    "button_text": "Yes! Get 60% Off",
                     "button_link": "https://drinknectar.co/products/essential-daily-hydration-4-gift",
                     "related_product": "",
                     "button_type": "primary",
