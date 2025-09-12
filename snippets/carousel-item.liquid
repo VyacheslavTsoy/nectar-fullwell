@@ -9,9 +9,13 @@
             {% endif %}
 
             {% if video_sources %}
-                {% for source in video_sources %}
-                    <video src="{{ source.url }}" controls loop controlslist="nodownload nofullscreen"></video>
-                {% endfor %}
+                <video controls loop controlslist="nodownload nofullscreen"
+                    poster="{{ video_preview_image | image_url: width: 800 }}"
+                >
+                    {% for source in video_sources %}
+                        <source src="{{ source.url }}" type="{{ source.mime_type }}">
+                    {% endfor %}
+                </video>
             {% endif %}
         </div>
     </div>

@@ -8,7 +8,7 @@
                 {% for testimonial in productMetafieldTestimonials %}
                     {% assign videoSources = testimonial.sources %}
                     
-                    {% render 'carousel-item', image: testimonial.image, video_sources: videoSources %}
+                    {% render 'carousel-item', image: testimonial.image, video_sources: videoSources, video_preview_image: testimonial.preview_image %}
                 {% endfor %}
             {% else %}
                 {% content_for 'blocks' %}
