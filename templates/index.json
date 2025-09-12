@@ -141,7 +141,7 @@
               "type": "heading",
               "name": "Heading",
               "settings": {
-                "title": "<h2>Finally, Clean Hydration <br/>That Actually Tastes Good</h2>",
+                "title": "<h2>Finally, Clean Hydration <br/>That <em>Actually Tastes Good</em></h2>",
                 "text_color": "#0d3063",
                 "text_alignment": "center",
                 "heading_size": "xl",
