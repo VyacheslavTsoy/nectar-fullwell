@@ -5,12 +5,12 @@
                 {{ image | image_url: width: 400, height: 600 | image_tag }}
             {% endif %}
             {% if video_url != blank %}
-                <video src="{{ video_url }}" controls loop controlslist="nodownload nofullscreen"></video>
+                <video src="{{ video_url }}" controls loop controlslist="nodownload nofullscreen"  poster="{{ image | image_url: width: 800, height: 1200 }}"></video>
             {% endif %}
 
             {% if video_sources %}
                 {% for source in video_sources %}
-                    <video src="{{ source.url }}" controls loop controlslist="nodownload nofullscreen"></video>
+                    <video src="{{ source.url }}" controls loop controlslist="nodownload nofullscreen" poster="{{ image | image_url: width: 800, height: 1200 }}"></video>
                 {% endfor %}
             {% endif %}
         </div>
