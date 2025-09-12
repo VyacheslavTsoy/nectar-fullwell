@@ -56,7 +56,7 @@
   </head>
   <body>
     
-    {% unless template contains 'gift' %}
+    {% unless template contains 'gift' or template contains 'reasons' %}
         {% comment %} Announcement bar {% endcomment %}
         {% section 'announcement-bar' %}
 
