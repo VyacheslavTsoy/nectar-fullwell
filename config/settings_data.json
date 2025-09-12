@@ -38,6 +38,7 @@
           },
           "badge_hnKpYh": {
             "type": "badge",
+            "disabled": true,
             "settings": {
               "background_color": "#e30000",
               "text": "UP TO 60% OFF",
