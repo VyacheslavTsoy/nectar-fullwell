@@ -150,6 +150,11 @@
         "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
         "disabled": false,
         "settings": {}
+      },
+      "9323109295802554384": {
+        "type": "shopify://apps/upstackified-universal-pixel/blocks/adtScript/2ef9f833-e251-4eed-af16-8dca98b27a2f",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
