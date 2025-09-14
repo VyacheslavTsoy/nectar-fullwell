@@ -1434,7 +1434,7 @@
           "settings": {
             "use_custom_url": true,
             "button_flow": "Calm",
-            "button_text": "Order Now & Save",
+            "button_text": "Get Up To 60% Off + 4 Free Gifts!",
             "button_url": "shopify://pages/checkout"
           }
         }
