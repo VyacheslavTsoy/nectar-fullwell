@@ -734,7 +734,7 @@
         "popup_title": "Made With Clean High-Quality Ingredients You Can Trust",
         "popup_comment": "<em>Stop settling for low-quality electrolyte powders loaded with sugar and salt. Nectar is the clean, daily hydration mix that makes drinking water a habit you'll actually stick to.</em>",
         "popup_features_subtitle": "<strong>Free From The Top 9 Allergens:</strong> We are dairy-free, soy-free, egg-free, gluten-free, peanut-free, tree nut-free, fish-free, sesame-free, and shellfish-free.",
-        "popup_btn_label": "Select Quantity And Flavors",
+        "popup_btn_label": "Get 60% Off + 4 Free Gifts Now!",
         "popup_btn_link": "/pages/offer?product-handle=essential-daily-hydration-4-gift",
         "desk_indent_top": 50,
         "desk_indent_bottom": 50,
@@ -817,7 +817,7 @@
                       "type": "button",
                       "name": "Button",
                       "settings": {
-                        "button_text": "Get Your 60% Off +  Gifts Now!",
+                        "button_text": "Get Your 60% Off +  4 Free Gifts Now!",
                         "button_link": "",
                         "related_product": "{{ closest.product }}",
                         "button_type": "primary",
