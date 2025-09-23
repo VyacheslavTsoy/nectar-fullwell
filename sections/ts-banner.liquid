@@ -129,9 +129,8 @@
             {%- endfor -%}
           </div>
 
-          <div class="ts-banner__show">
-            <span class="ts-banner__show--more">See More FAQs</span>
-            <span class="ts-banner__show--less">Show Less FAQs</span>
+          <div class="ts-ingredients__button" data-popup-open="">
+            See Our Full Nutrition Facts
           </div>
         {%- endif -%}
       </div>
@@ -177,7 +176,7 @@
 
     const faq = section.querySelector(".ts-banner__faq");
     const questions = section.querySelectorAll(".ts-banner__question");
-    const showMore = section.querySelector(".ts-banner__show");
+    const showMore = section.querySelector("[data-popup-open]");
 
     lightboxTriggers.forEach(lightboxTrigger => {
       lightboxTrigger.addEventListener("click", () => {
@@ -205,7 +204,7 @@
     })
 
     showMore.addEventListener("click", () => {
-      faq.classList.toggle("show");
+      {% comment %} faq.classList.toggle("show"); {% endcomment %}
     })
 
     navs.forEach(nav => {

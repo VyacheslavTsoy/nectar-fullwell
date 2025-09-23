@@ -165,8 +165,8 @@
           "title": "Sugar Free. Low Sodium. Clean Daily Hydration.",
           "description": "<p><strong>Introducing Nectar</strong> - The only Hydration Mix developed for <strong>safe daily use.</strong> Medical Grade Electrolytes & Organic Fruit Flavor for:</p><ul><li><strong>Energy</strong> - No More Afternoon Slump</li><li><strong>Focus</strong> - Goodbye Brain Fog</li><li><strong>Mood</strong> - Eliminate The Ups and Downs</li></ul>",
           "btn_label": "Select Quantity & Flavors",
-          "btn_link": "shopify://pages/checkout",
-          "sticky_link": "shopify://pages/checkout",
+          "btn_link": "/pages/offer?product-handle=essential-daily-hydration-4-gift",
+          "sticky_link": "/pages/offer?product-handle=essential-daily-hydration-4-gift",
           "sticky_label": "Select Quantity & Flavors",
           "guarantee_image": "shopify://shop_images/guarantee_image.png",
           "guarantee_label": "Try Nectar with no risk! If you’re not 100% satisfied, you can trust in our 90-day money back gaurantee.*"
@@ -267,355 +267,345 @@
           "mob_indent_bottom": 30
         }
       },
-      "ts_features": {
-        "type": "ts-features",
+      "blank_section_R96MqF": {
+        "type": "blank-section",
         "blocks": {
-          "feature_1": {
-            "type": "feature",
+          "layout_MxzgzM": {
+            "type": "layout",
+            "name": "Layout",
             "settings": {
-              "icon": "shopify://shop_images/icon_running.svg",
-              "label": "Boosted Energy"
-            }
-          },
-          "feature_2": {
-            "type": "feature",
-            "settings": {
-              "icon": "shopify://shop_images/icon_mood.svg",
-              "label": "Elevated Mood"
-            }
-          },
-          "feature_3": {
-            "type": "feature",
-            "settings": {
-              "icon": "shopify://shop_images/icon_target.svg",
-              "label": "Increased Focus"
-            }
-          },
-          "feature_4": {
-            "type": "feature",
-            "settings": {
-              "icon": "shopify://shop_images/icon_sleep.svg",
-              "label": "Deeper Sleep"
-            }
-          },
-          "feature_5": {
-            "type": "feature",
-            "settings": {
-              "icon": "shopify://shop_images/icon_balance.svg",
-              "label": "Hormonal Balance"
-            }
-          },
-          "feature_6": {
-            "type": "feature",
-            "settings": {
-              "icon": "shopify://shop_images/icon_strength.svg",
-              "label": "Improved Recovery"
-            }
+              "desktop_padding": 0,
+              "desktop_gap": 54,
+              "desktop_columns_per_row": 2,
+              "align_items": "start",
+              "custom_column_width": false,
+              "column_width": "1fr 1fr",
+              "mobile_padding": 0,
+              "mobile_gap": 20,
+              "mobile_columns_per_row": 1
+            },
+            "blocks": {
+              "layout_item_ijCW8V": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 6,
+                  "gap_mobile": 6
+                },
+                "blocks": {
+                  "heading_ACfJwq": {
+                    "type": "heading",
+                    "name": "Heading",
+                    "settings": {
+                      "title": "<p>{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].title.value }}</p>",
+                      "text_color": "#123456",
+                      "text_alignment": "left",
+                      "heading_size": "lg",
+                      "font_weight": "bold",
+                      "font_family": "values-sans",
+                      "use_mobile_settings": true,
+                      "text_alignment_mobile": "center",
+                      "heading_size_mobile": "lg",
+                      "font_weight_mobile": "bold"
+                    },
+                    "blocks": {}
+                  },
+                  "text_f4wrBc": {
+                    "type": "text",
+                    "name": "Text",
+                    "settings": {
+                      "title": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].description | metafield_tag }}",
+                      "text_alignment": "left",
+                      "font_family": "values-sans",
+                      "font_weight": "normal",
+                      "text_color": "#000000",
+                      "font_size": 16,
+                      "font_size_mobile": 16,
+                      "text_alignment_mobile": "center"
+                    },
+                    "blocks": {}
+                  },
+                  "doctor_review_kH9ctQ": {
+                    "type": "doctor-review",
+                    "name": "Doctor Review",
+                    "settings": {
+                      "title": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].title.value }}",
+                      "hide_on_mobile": true,
+                      "hide_on_desktop": false,
+                      "image": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].doctor_image.value }}",
+                      "text": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].review_text | metafield_tag }}",
+                      "name": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].author_name.value }}"
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "heading_ACfJwq",
+                  "text_f4wrBc",
+                  "doctor_review_kH9ctQ"
+                ]
+              },
+              "layout_item_7e7BNR": {
+                "type": "_layout-item",
+                "name": "Column",
+                "settings": {
+                  "gap_desktop": 0,
+                  "gap_mobile": 18
+                },
+                "blocks": {
+                  "features_dcEUax": {
+                    "type": "features",
+                    "name": "Benefits",
+                    "settings": {
+                      "related_metaobjects": "{{ closest.product.metafields.custom.product_benefits.value }}",
+                      "when_to_use_metaobjects": [],
+                      "gap_desktop": 10,
+                      "width_desktop": 200,
+                      "light_blue_color_scheme": false,
+                      "use_grid_layout": true,
+                      "columns_desktop": 3,
+                      "layout_gap_desktop": 10,
+                      "columns_mobile": 3,
+                      "layout_gap_mobile": 6
+                    },
+                    "blocks": {
+                      "features_item_MAgpW9": {
+                        "type": "_features-item",
+                        "name": "Features Item",
+                        "settings": {
+                          "icon": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M32.8784 31.4913C32.9739 33.006 31.8142 34.4828 30.2411 34.4835L24.7731 34.4855C25.0839 34.1283 25.3116 33.7066 25.4399 33.2508C25.5681 32.7951 25.5938 32.3165 25.5151 31.8496C25.4363 31.3828 25.255 30.9391 24.9843 30.5507C24.7136 30.1623 24.3601 29.8386 23.9494 29.6031L29.8863 28.8541C31.4252 28.6598 32.7808 29.9431 32.8784 31.4913ZM22.6265 30.2906L11.2412 28.854C9.70217 28.6598 8.3467 29.9431 8.24904 31.4913C8.15357 33.006 9.31326 34.4828 10.8864 34.4835L22.3622 34.4877C22.8976 34.4871 23.4128 34.2826 23.8029 33.9158C24.1931 33.549 24.4289 33.0475 24.4626 32.5131C24.4962 31.9787 24.3252 31.4515 23.9841 31.0387C23.6431 30.6258 23.1576 30.3584 22.6265 30.2906ZM20.564 13.1819C21.3224 13.1818 22.0638 12.9569 22.6944 12.5355C23.325 12.1141 23.8164 11.5152 24.1066 10.8144C24.3969 10.1137 24.4728 9.34269 24.3248 8.59884C24.1768 7.85498 23.8116 7.1717 23.2753 6.63541C22.739 6.09912 22.0557 5.73389 21.3119 5.58591C20.568 5.43793 19.797 5.51385 19.0963 5.80406C18.3956 6.09427 17.7966 6.58574 17.3752 7.21633C16.9538 7.84692 16.7289 8.58831 16.7288 9.34674C16.7288 9.85039 16.828 10.3491 17.0207 10.8144C17.2134 11.2797 17.4959 11.7025 17.8521 12.0587C18.2082 12.4148 18.631 12.6973 19.0963 12.89C19.5616 13.0827 20.0603 13.1819 20.564 13.1819ZM37.5959 15.3921H3.53201C3.07636 15.3921 2.63937 15.5731 2.31717 15.8953C1.99497 16.2175 1.81396 16.6545 1.81396 17.1102C1.81396 17.5658 1.99497 18.0028 2.31717 18.325C2.63937 18.6472 3.07636 18.8282 3.53201 18.8282H14.7576V28.1953L20.564 28.9279L26.3702 28.1953V18.8281H37.5959C38.0516 18.8281 38.4886 18.6471 38.8108 18.3249C39.133 18.0027 39.314 17.5657 39.314 17.11C39.314 16.6544 39.133 16.2174 38.8108 15.8952C38.4886 15.573 38.0516 15.392 37.5959 15.392V15.3921Z\" fill=\"#0D3063\"></path>\n</svg>",
+                          "title": "Stress Relief"
+                        },
+                        "blocks": {}
+                      },
+                      "features_item_Gfhq8H": {
+                        "type": "_features-item",
+                        "name": "Features Item",
+                        "settings": {
+                          "icon": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_637_519)\">\n<path d=\"M3.0627 8.74981C2.80145 8.74981 2.53895 8.66856 2.31395 8.49981C1.76145 8.08606 1.64895 7.30231 2.06395 6.74981L5.81395 1.74981C6.2277 1.19856 7.01145 1.08606 7.56395 1.49981C8.11645 1.91356 8.22895 2.69731 7.81395 3.24981L4.06395 8.24981C3.81895 8.57731 3.44395 8.74981 3.0627 8.74981Z\" fill=\"#0D3063\"></path>\n<path d=\"M6.81396 3.75H3.06396C2.37271 3.75 1.81396 3.19 1.81396 2.5C1.81396 1.81 2.37271 1.25 3.06396 1.25H6.81396C7.50521 1.25 8.06396 1.81 8.06396 2.5C8.06396 3.19 7.50521 3.75 6.81396 3.75Z\" fill=\"#0D3063\"></path>\n<path d=\"M6.81396 8.75H3.06396C2.37271 8.75 1.81396 8.19 1.81396 7.5C1.81396 6.81 2.37271 6.25 3.06396 6.25H6.81396C7.50521 6.25 8.06396 6.81 8.06396 7.5C8.06396 8.19 7.50521 8.75 6.81396 8.75Z\" fill=\"#0D3063\"></path>\n<path d=\"M34.3127 8.75006C34.0515 8.75006 33.789 8.66881 33.564 8.50006C33.0115 8.08631 32.899 7.30256 33.314 6.75006L37.064 1.75006C37.4777 1.19881 38.2627 1.08631 38.8127 1.50006C39.3652 1.91381 39.4777 2.69756 39.0627 3.25006L35.3127 8.25006C35.069 8.57756 34.694 8.75006 34.3127 8.75006Z\" fill=\"#0D3063\"></path>\n<path d=\"M38.064 3.75H34.314C33.6227 3.75 33.064 3.19 33.064 2.5C33.064 1.81 33.6227 1.25 34.314 1.25H38.064C38.7552 1.25 39.314 1.81 39.314 2.5C39.314 3.19 38.7552 3.75 38.064 3.75Z\" fill=\"#0D3063\"></path>\n<path d=\"M38.064 8.75H34.314C33.6227 8.75 33.064 8.19 33.064 7.5C33.064 6.81 33.6227 6.25 34.314 6.25H38.064C38.7552 6.25 39.314 6.81 39.314 7.5C39.314 8.19 38.7552 8.75 38.064 8.75Z\" fill=\"#0D3063\"></path>\n<path d=\"M20.564 6.25C11.604 6.25 4.31396 13.54 4.31396 22.5C4.31396 31.46 11.604 38.75 20.564 38.75C29.524 38.75 36.814 31.46 36.814 22.5C36.814 13.54 29.524 6.25 20.564 6.25ZM10.564 20C10.564 19.31 11.1227 18.75 11.814 18.75C12.5052 18.75 13.064 19.31 13.064 20C13.064 20.6888 13.624 21.25 14.314 21.25C15.004 21.25 15.564 20.6888 15.564 20C15.564 19.31 16.1227 18.75 16.814 18.75C17.5052 18.75 18.064 19.31 18.064 20C18.064 22.0675 16.3815 23.75 14.314 23.75C12.2465 23.75 10.564 22.0675 10.564 20ZM20.564 33.75C18.4965 33.75 16.814 32.0675 16.814 30C16.814 29.31 17.3727 28.75 18.064 28.75C18.7552 28.75 19.314 29.31 19.314 30C19.314 30.6887 19.874 31.25 20.564 31.25C21.254 31.25 21.814 30.6887 21.814 30C21.814 29.31 22.3727 28.75 23.064 28.75C23.7552 28.75 24.314 29.31 24.314 30C24.314 32.0675 22.6315 33.75 20.564 33.75ZM26.814 23.75C24.7465 23.75 23.064 22.0675 23.064 20C23.064 19.31 23.6227 18.75 24.314 18.75C25.0052 18.75 25.564 19.31 25.564 20C25.564 20.6888 26.124 21.25 26.814 21.25C27.504 21.25 28.064 20.6888 28.064 20C28.064 19.31 28.6227 18.75 29.314 18.75C30.0052 18.75 30.564 19.31 30.564 20C30.564 22.0675 28.8815 23.75 26.814 23.75Z\" fill=\"#0D3063\"></path>\n</g>\n<defs>\n<clippath id=\"clip0_637_519\">\n<rect width=\"40\" height=\"40\" fill=\"white\" transform=\"translate(0.563965)\"></rect>\n</clippath>\n</defs>\n</svg>",
+                          "title": "Deep Sleep"
+                        },
+                        "blocks": {}
+                      },
+                      "features_item_i6iGmU": {
+                        "type": "_features-item",
+                        "name": "Features Item",
+                        "settings": {
+                          "icon": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M16.52 19.6312L20.9325 24.0437C21.689 23.8832 22.3988 23.5518 23.0075 23.0749L17.4888 17.5562C17.0118 18.1649 16.6805 18.8747 16.52 19.6312Z\" fill=\"#0D3063\"></path>\n<path d=\"M20.564 1.25C16.8556 1.25 13.2305 2.34967 10.147 4.40994C7.06361 6.47022 4.66037 9.39857 3.24123 12.8247C1.82209 16.2508 1.45078 20.0208 2.17425 23.6579C2.89772 27.2951 4.68349 30.636 7.30572 33.2583C9.92795 35.8805 13.2689 37.6663 16.906 38.3897C20.5432 39.1132 24.3132 38.7419 27.7393 37.3227C31.1654 35.9036 34.0938 33.5004 36.154 30.4169C38.2143 27.3335 39.314 23.7084 39.314 20C39.3079 15.029 37.3305 10.2634 33.8155 6.74844C30.3005 3.23344 25.5349 1.25606 20.564 1.25ZM32.1452 15.075C31.014 15.5375 28.8452 16.3125 27.1577 16.25C26.039 16.1687 24.9202 15.8438 23.8015 15.7812C22.96 15.6948 22.1121 15.6927 21.2702 15.775L24.789 19.2938C24.8713 18.4644 24.8692 17.6289 24.7827 16.8C25.7539 17.014 26.7446 17.1271 27.739 17.1375C28.3577 25.8687 21.839 28.4937 14.0702 26.6875C13.2773 26.6516 12.485 26.7727 11.739 27.0437L13.514 28.8187C13.6702 28.3625 13.7453 27.9 13.839 27.5625C14.7515 27.7 15.7515 27.9187 16.7077 27.9937C16.4792 29.2267 16.1188 30.4315 15.6327 31.5875C15.5613 31.7653 15.4555 31.9273 15.3214 32.0642C15.1872 32.2011 15.0274 32.3102 14.851 32.3852C14.6746 32.4602 14.4852 32.4996 14.2935 32.5013C14.1019 32.5029 13.9118 32.4667 13.7342 32.3948C13.5565 32.3228 13.3948 32.2165 13.2584 32.0819C13.1219 31.9474 13.0133 31.7872 12.9389 31.6106C12.8644 31.434 12.8255 31.2444 12.8245 31.0528C12.8234 30.8611 12.8602 30.6711 12.9327 30.4937C13.0202 30.2687 13.1077 30.025 13.2015 29.775L10.789 27.3625C9.82647 27.8062 8.78897 28.0187 8.20147 26.9C8.11895 26.72 8.07373 26.5253 8.06856 26.3274C8.06338 26.1295 8.09836 25.9326 8.17137 25.7486C8.24438 25.5646 8.35392 25.3974 8.49337 25.2569C8.63281 25.1164 8.79928 25.0056 8.98272 24.9312C10.1361 24.4442 11.339 24.0837 12.5702 23.8562C13.889 23.5562 15.1327 23.95 16.4452 24.1187C17.5742 24.2915 18.7198 24.3292 19.8577 24.2313L16.3327 20.7063C16.2567 21.5379 16.2588 22.3749 16.339 23.2063C15.3681 22.9895 14.3774 22.8743 13.3827 22.8625C12.8515 14.1375 19.039 11.5875 26.8765 13.2812C27.639 13.4312 28.2515 13.2687 29.3827 12.9562L27.6077 11.1812C27.4702 11.6437 27.364 12.075 27.2952 12.4375C26.4265 12.3 25.3327 12.0812 24.4139 12.0062C24.7452 10.4375 25.114 8.9 25.814 7.93125C26.0539 7.69835 26.3662 7.55446 26.6991 7.52346C27.032 7.49247 27.3655 7.57623 27.6442 7.76085C27.923 7.94547 28.1302 8.21985 28.2316 8.53846C28.3329 8.85707 28.3223 9.20076 28.2015 9.5125C28.1077 9.7375 28.014 9.975 27.9202 10.2313L30.3327 12.6437C31.314 12.1875 32.339 11.9875 32.9202 13.1C33.0046 13.2797 33.0514 13.4748 33.0579 13.6733C33.0643 13.8717 33.0302 14.0694 32.9577 14.2543C32.8852 14.4391 32.7757 14.6072 32.636 14.7483C32.4963 14.8894 32.3293 15.0006 32.1452 15.075Z\" fill=\"#0D3063\"></path>\n<path d=\"M18.1138 16.925L23.6388 22.45C24.1097 21.8376 24.4404 21.1293 24.6075 20.375L20.195 15.9563C19.4384 16.1222 18.7278 16.4529 18.1138 16.925Z\" fill=\"#0D3063\"></path>\n</svg>",
+                          "title": "Cortisol Control"
+                        },
+                        "blocks": {}
+                      },
+                      "features_item_gLn3tf": {
+                        "type": "_features-item",
+                        "name": "Features Item",
+                        "settings": {
+                          "icon": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_636_509)\">\n<path d=\"M20.5639 13.5168C16.9806 13.5168 14.0806 16.4168 14.0806 20.0002C14.0806 23.5835 16.9806 26.4835 20.5639 26.4835C24.1472 26.4835 27.0472 23.5835 27.0472 20.0002C27.0472 16.4168 24.1472 13.5168 20.5639 13.5168Z\" fill=\"#0D3063\"></path>\n<path d=\"M38.0638 17.9167H35.4138C34.4971 11.3001 29.2471 6.06675 22.6471 5.15008V2.50008C22.6471 1.35008 21.7138 0.416748 20.5638 0.416748C19.4138 0.416748 18.4805 1.35008 18.4805 2.50008V5.15008C11.8638 6.06675 6.63047 11.3167 5.7138 17.9167H3.0638C1.9138 17.9167 0.980469 18.8501 0.980469 20.0001C0.980469 21.1501 1.9138 22.0834 3.0638 22.0834H5.7138C6.63047 28.7001 11.8638 33.9334 18.4805 34.8501V37.5001C18.4805 38.6501 19.4138 39.5834 20.5638 39.5834C21.7138 39.5834 22.6471 38.6501 22.6471 37.5001V34.8501C29.2638 33.9334 34.4971 28.7001 35.4138 22.0834H38.0638C39.2138 22.0834 40.1471 21.1501 40.1471 20.0001C40.1471 18.8501 39.2138 17.9167 38.0638 17.9167ZM20.5638 30.8501C14.5805 30.8501 9.7138 25.9834 9.7138 20.0001C9.7138 14.0167 14.5805 9.15008 20.5638 9.15008C26.5471 9.15008 31.4138 14.0167 31.4138 20.0001C31.4138 25.9834 26.5471 30.8501 20.5638 30.8501Z\" fill=\"#0D3063\"></path>\n</g>\n<defs>\n<clippath id=\"clip0_636_509\">\n<rect width=\"40\" height=\"40\" fill=\"white\" transform=\"translate(0.563965)\"></rect>\n</clippath>\n</defs>\n</svg>",
+                          "title": "Clear Mind"
+                        },
+                        "blocks": {}
+                      },
+                      "features_item_Rbrgkk": {
+                        "type": "_features-item",
+                        "name": "Features Item",
+                        "settings": {
+                          "icon": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_636_504)\">\n<path d=\"M31.1108 38.75C31.1108 36.8084 29.5369 35.2344 27.5952 35.2344H13.5327C11.5911 35.2344 10.0171 36.8084 10.0171 38.75V40H31.1108V38.75Z\" fill=\"#0D3063\"></path>\n<path d=\"M38.2202 9.45312V7.10938H23.8637C23.5097 6.11656 22.7287 5.33555 21.7358 4.98148V0H19.3921V4.98148C18.3993 5.33555 17.6183 6.11656 17.2642 7.10938H2.90771V9.45312H5.83771L0.563965 22.3438C0.563965 25.5745 3.19264 28.2031 6.42334 28.2031H8.76709C11.9978 28.2031 14.6265 25.5745 14.6265 22.3438L9.32889 9.45312H17.2643C17.6183 10.4459 18.3994 11.227 19.3922 11.581V28.3316C17.1019 28.8002 15.2902 30.5995 14.8233 32.8906H26.3048C25.8379 30.5995 24.0262 28.8002 21.7359 28.3316V11.581C22.7287 11.227 23.5097 10.4459 23.8638 9.45312H31.7753L26.5015 22.3438C26.5015 25.5745 29.1301 28.2031 32.3608 28.2031H34.7046C37.9353 28.2031 40.564 25.5745 40.564 22.3438L35.2664 9.45312H38.2202ZM11.6965 21.1719H3.49396L7.59521 11.3277L11.6965 21.1719ZM37.634 21.1719H29.4315L33.5327 11.3277L37.634 21.1719Z\" fill=\"#0D3063\"></path>\n</g>\n<defs>\n<clippath id=\"clip0_636_504\">\n<rect width=\"40\" height=\"40\" fill=\"white\" transform=\"translate(0.563965)\"></rect>\n</clippath>\n</defs>\n</svg>",
+                          "title": "Hormonal Balance"
+                        },
+                        "blocks": {}
+                      },
+                      "features_item_cVF6dX": {
+                        "type": "_features-item",
+                        "name": "Features Item",
+                        "settings": {
+                          "icon": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M20.5575 36.1937C29.5011 36.1937 36.7513 28.9435 36.7513 19.9999C36.7513 11.0563 29.5011 3.80615 20.5575 3.80615C11.614 3.80615 4.36377 11.0563 4.36377 19.9999C4.36377 28.9435 11.614 36.1937 20.5575 36.1937Z\" fill=\"#0D3063\"></path>\n<path d=\"M16.2574 25.6688C18.4324 28.1501 22.3887 28.2251 24.6824 25.9438C25.2512 25.3938 26.1137 26.2251 25.5824 26.8126C23.0012 29.7751 17.8074 29.3626 15.7074 26.1001C15.4637 25.7438 15.9762 25.3438 16.2637 25.6688H16.2574Z\" fill=\"white\"></path>\n<path d=\"M13.6451 10.6813C11.6826 11 9.99512 12.2313 8.98262 13.8938C8.57637 14.55 7.55137 13.9875 7.88887 13.2938C8.39512 12.2188 9.28262 11.35 10.2951 10.7813C11.3076 10.2063 12.4764 9.90004 13.6201 9.97504C13.8139 9.98754 13.9639 10.1563 13.9514 10.35C13.9389 10.5188 13.8139 10.65 13.6514 10.675L13.6451 10.6813Z\" fill=\"white\"></path>\n<path d=\"M31.3828 13.9C31.5078 15.8125 31.3016 18.2562 29.5266 19.525C27.6641 20.7687 24.7203 20.25 23.6766 18.1937C22.9891 16.8812 22.9266 15.5125 22.9141 14.2187C22.9141 13.875 23.1891 13.5937 23.5328 13.5875C23.8828 13.5875 24.1641 13.8687 24.1641 14.2187C24.1766 15.4125 24.3141 16.6375 24.8203 17.5625C25.8203 19.4375 28.9891 19.3125 29.8703 17.3437C30.3891 16.35 30.5828 15.1187 30.6766 13.9C30.7078 13.4687 31.3578 13.475 31.3828 13.9Z\" fill=\"white\"></path>\n<path d=\"M10.5763 13.8999C10.7138 16.0187 11.3138 18.9187 13.8701 18.8687C16.5013 19.0562 17.1138 16.4187 17.0888 14.2187C17.0888 13.8687 17.3701 13.5874 17.7201 13.5874C18.0638 13.5874 18.3388 13.8749 18.3388 14.2187C18.3701 16.1312 18.0263 18.7874 15.9701 19.7624C13.9451 20.7562 11.1888 19.9999 10.3763 17.8187C9.8326 16.5187 9.78885 15.1812 9.8701 13.9062C9.8826 13.7124 10.0513 13.5624 10.2451 13.5749C10.4263 13.5874 10.5638 13.7312 10.5763 13.9062V13.8999Z\" fill=\"white\"></path>\n<path d=\"M27.4951 9.97502C29.8013 9.83752 32.2076 11.175 33.2263 13.2938C33.5576 13.9938 32.5326 14.55 32.1326 13.8938C31.6263 13.0875 30.9763 12.3625 30.1826 11.7938C29.3888 11.2313 28.4576 10.8438 27.4638 10.675C27.0576 10.6188 27.0951 9.98752 27.5013 9.97502H27.4951Z\" fill=\"white\"></path>\n</svg>",
+                          "title": "Calmer Mood"
+                        },
+                        "blocks": {}
+                      }
+                    },
+                    "block_order": [
+                      "features_item_MAgpW9",
+                      "features_item_Gfhq8H",
+                      "features_item_i6iGmU",
+                      "features_item_gLn3tf",
+                      "features_item_Rbrgkk",
+                      "features_item_cVF6dX"
+                    ]
+                  },
+                  "doctor_review_xrWM48": {
+                    "type": "doctor-review",
+                    "name": "Doctor Review",
+                    "settings": {
+                      "title": "{{ closest.product.metafields.custom.related_doctor_review.value.review_title.value }}",
+                      "hide_on_mobile": false,
+                      "hide_on_desktop": true,
+                      "image": "{{ closest.product.metafields.custom.related_doctor_review.value.doctor_image.value }}",
+                      "text": "{{ closest.product.metafields.custom.related_doctor_review.value.review_text | metafield_tag }}",
+                      "name": "{{ closest.product.metafields.custom.related_doctor_review.value.author_name.value }}"
+                    },
+                    "blocks": {}
+                  }
+                },
+                "block_order": [
+                  "features_dcEUax",
+                  "doctor_review_xrWM48"
+                ]
+              }
+            },
+            "block_order": [
+              "layout_item_ijCW8V",
+              "layout_item_7e7BNR"
+            ]
           }
         },
         "block_order": [
-          "feature_1",
-          "feature_2",
-          "feature_3",
-          "feature_4",
-          "feature_5",
-          "feature_6"
+          "layout_MxzgzM"
         ],
+        "name": "Benefits",
         "settings": {
-          "image": "shopify://shop_images/tv_placeholder.png",
-          "title": "Experience What Proper Hydration Actually Feels Like",
-          "description": "Most people walk around chronically dehydrated without realizing it. If you're dealing with afternoon fatigue, brain fog, or mood dips - here's what will change when you're actually hydrated:",
-          "review_image": "shopify://shop_images/review_image.png",
-          "review_title": "Meet Our Expert Advisor",
-          "review_comment": "“I’ve reviewed many electrolyte mixes, yet Nectar consistently ranks at the top of my list!”",
-          "review_author": "Dr. Amber B",
-          "desk_indent_top": 50,
-          "desk_indent_bottom": 50,
-          "mob_indent_top": 0,
-          "mob_indent_bottom": 20
+          "desktop_padding_top": 25,
+          "desktop_gap_between_blocks": 20,
+          "bg_color": "#ffffff",
+          "desktop_max_width": 1140,
+          "hide_on_mobile": false,
+          "mobile_padding_top": 30,
+          "mobile_gap_between_blocks": 10
         }
       },
-      "ts_reviews": {
-        "type": "ts-reviews",
+      "blank_section_myEaQK": {
+        "type": "blank-section",
         "blocks": {
-          "review_1": {
-            "type": "review",
+          "heading_ieE6zn": {
+            "type": "heading",
+            "name": "Heading",
             "settings": {
-              "category": "taste",
-              "image": "shopify://shop_images/review_1.png",
-              "title": "Elizabeth Thompson",
-              "date": "7 days ago",
-              "comment": "Three pregnancies and Nectar is the ONLY difference with this one. No swelling, no headaches, no fatigue! My friends asked what I'm doing differently because I feel amazing and they’ve noticed!",
-              "likes": "992",
-              "comments": "212 Comments"
-            }
+              "title": "<h2>Join 1,000,000+ Others Who Have <br/>Changed Their Lives With Nectar</h2>",
+              "text_color": "rgba(0,0,0,0)",
+              "text_alignment": "center",
+              "heading_size": "4xl",
+              "font_weight": "bold",
+              "font_family": "values-sans",
+              "use_mobile_settings": true,
+              "text_alignment_mobile": "center",
+              "heading_size_mobile": "lg",
+              "font_weight_mobile": "bold"
+            },
+            "blocks": {}
           },
-          "review_2": {
-            "type": "review",
+          "reviews_6bU7dY": {
+            "type": "reviews",
+            "name": "Reviews",
             "settings": {
-              "category": "taste",
-              "image": "shopify://shop_images/review_2.png",
-              "title": "Sarah Kavanaugh",
-              "date": "25 days ago",
-              "comment": "I struggled with severe morning sickness for months before discovering Nectar. Within days, I could finally keep food down and my energy returned. Now at 36 weeks, this pregnancy has completely turned around!",
-              "likes": "257",
-              "comments": "14 Comments"
-            }
+              "reviews": [
+                "reviews-y4gg5rcc",
+                "leah-j",
+                "anna-i",
+                "claire-h",
+                "brooklyn-e",
+                "savannah-f",
+                "skylar-g",
+                "paisley-c",
+                "stella-b",
+                "reviews-lq9wrtno",
+                "nora-z",
+                "eleanor-y",
+                "penelope-w",
+                "scarlett-x",
+                "layla-v",
+                "victoria-u",
+                "sofia-t"
+              ],
+              "activate_filters": true,
+              "desktop_padding": 0,
+              "desktop_columns_per_row": 3,
+              "desktop_gap": 20,
+              "mobile_padding": 0,
+              "mobile_columns_per_row": 1,
+              "mobile_gap": 10
+            },
+            "blocks": {}
           },
-          "review_3": {
-            "type": "review",
+          "carousel_JRGETJ": {
+            "type": "carousel",
+            "name": "Carousel",
             "settings": {
-              "category": "taste",
-              "image": "shopify://shop_images/review_3.png",
-              "title": "Bridgette Hudson",
-              "date": "17 days ago",
-              "comment": "After struggling with dehydration headaches, a mom friend gave me a Nectar packet. The relief was IMMEDIATE. Not only did my headaches stop, but my pregnancy brain fog lifted too!",
-              "likes": "750",
-              "comments": "23 Comments"
-            }
-          },
-          "review_4": {
-            "type": "review",
-            "settings": {
-              "category": "value",
-              "image": "shopify://shop_images/review_1.png",
-              "title": "Elizabeth Thompson",
-              "date": "7 days ago",
-              "comment": "Three pregnancies and Nectar is the ONLY difference with this one. No swelling, no headaches, no fatigue! My friends asked what I'm doing differently because I feel amazing and they’ve noticed!",
-              "likes": "992",
-              "comments": "212 Comments"
-            }
-          },
-          "review_6": {
-            "type": "review",
-            "settings": {
-              "category": "value",
-              "image": "shopify://shop_images/review_3.png",
-              "title": "Bridgette Hudson",
-              "date": "17 days ago",
-              "comment": "After struggling with dehydration headaches, a mom friend gave me a Nectar packet. The relief was IMMEDIATE. Not only did my headaches stop, but my pregnancy brain fog lifted too!",
-              "likes": "750",
-              "comments": "23 Comments"
-            }
-          },
-          "review_5": {
-            "type": "review",
-            "settings": {
-              "category": "value",
-              "image": "shopify://shop_images/review_2.png",
-              "title": "Sarah Kavanaugh",
-              "date": "25 days ago",
-              "comment": "I struggled with severe morning sickness for months before discovering Nectar. Within days, I could finally keep food down and my energy returned. Now at 36 weeks, this pregnancy has completely turned around!",
-              "likes": "257",
-              "comments": "14 Comments"
-            }
-          },
-          "review_9": {
-            "type": "review",
-            "settings": {
-              "category": "others",
-              "image": "shopify://shop_images/review_3.png",
-              "title": "Bridgette Hudson",
-              "date": "17 days ago",
-              "comment": "After struggling with dehydration headaches, a mom friend gave me a Nectar packet. The relief was IMMEDIATE. Not only did my headaches stop, but my pregnancy brain fog lifted too!",
-              "likes": "750",
-              "comments": "23 Comments"
-            }
-          },
-          "review_7": {
-            "type": "review",
-            "settings": {
-              "category": "others",
-              "image": "shopify://shop_images/review_1.png",
-              "title": "Elizabeth Thompson",
-              "date": "7 days ago",
-              "comment": "Three pregnancies and Nectar is the ONLY difference with this one. No swelling, no headaches, no fatigue! My friends asked what I'm doing differently because I feel amazing and they’ve noticed!",
-              "likes": "992",
-              "comments": "212 Comments"
-            }
-          },
-          "review_8": {
-            "type": "review",
-            "settings": {
-              "category": "others",
-              "image": "shopify://shop_images/review_2.png",
-              "title": "Sarah Kavanaugh",
-              "date": "25 days ago",
-              "comment": "I struggled with severe morning sickness for months before discovering Nectar. Within days, I could finally keep food down and my energy returned. Now at 36 weeks, this pregnancy has completely turned around!",
-              "likes": "257",
-              "comments": "14 Comments"
-            }
-          },
-          "review_10": {
-            "type": "review",
-            "settings": {
-              "category": "benefits",
-              "image": "shopify://shop_images/review_1.png",
-              "title": "Elizabeth Thompson",
-              "date": "7 days ago",
-              "comment": "Three pregnancies and Nectar is the ONLY difference with this one. No swelling, no headaches, no fatigue! My friends asked what I'm doing differently because I feel amazing and they’ve noticed!",
-              "likes": "992",
-              "comments": "212 Comments"
-            }
-          },
-          "review_12": {
-            "type": "review",
-            "settings": {
-              "category": "benefits",
-              "image": "shopify://shop_images/review_3.png",
-              "title": "Bridgette Hudson",
-              "date": "17 days ago",
-              "comment": "After struggling with dehydration headaches, a mom friend gave me a Nectar packet. The relief was IMMEDIATE. Not only did my headaches stop, but my pregnancy brain fog lifted too!",
-              "likes": "750",
-              "comments": "23 Comments"
-            }
-          },
-          "review_11": {
-            "type": "review",
-            "settings": {
-              "category": "benefits",
-              "image": "shopify://shop_images/review_2.png",
-              "title": "Sarah Kavanaugh",
-              "date": "25 days ago",
-              "comment": "I struggled with severe morning sickness for months before discovering Nectar. Within days, I could finally keep food down and my energy returned. Now at 36 weeks, this pregnancy has completely turned around!",
-              "likes": "257",
-              "comments": "14 Comments"
-            }
-          },
-          "review_14": {
-            "type": "review",
-            "settings": {
-              "category": "ingredients",
-              "image": "shopify://shop_images/review_2.png",
-              "title": "Sarah Kavanaugh",
-              "date": "25 days ago",
-              "comment": "I struggled with severe morning sickness for months before discovering Nectar. Within days, I could finally keep food down and my energy returned. Now at 36 weeks, this pregnancy has completely turned around!",
-              "likes": "257",
-              "comments": "14 Comments"
-            }
-          },
-          "review_13": {
-            "type": "review",
-            "settings": {
-              "category": "ingredients",
-              "image": "shopify://shop_images/review_1.png",
-              "title": "Elizabeth Thompson",
-              "date": "7 days ago",
-              "comment": "Three pregnancies and Nectar is the ONLY difference with this one. No swelling, no headaches, no fatigue! My friends asked what I'm doing differently because I feel amazing and they’ve noticed!",
-              "likes": "992",
-              "comments": "212 Comments"
-            }
-          },
-          "review_15": {
-            "type": "review",
-            "settings": {
-              "category": "ingredients",
-              "image": "shopify://shop_images/review_3.png",
-              "title": "Bridgette Hudson",
-              "date": "17 days ago",
-              "comment": "After struggling with dehydration headaches, a mom friend gave me a Nectar packet. The relief was IMMEDIATE. Not only did my headaches stop, but my pregnancy brain fog lifted too!",
-              "likes": "750",
-              "comments": "23 Comments"
-            }
-          },
-          "review_17": {
-            "type": "review",
-            "settings": {
-              "category": "convenience",
-              "image": "shopify://shop_images/review_2.png",
-              "title": "Sarah Kavanaugh",
-              "date": "25 days ago",
-              "comment": "I struggled with severe morning sickness for months before discovering Nectar. Within days, I could finally keep food down and my energy returned. Now at 36 weeks, this pregnancy has completely turned around!",
-              "likes": "257",
-              "comments": "14 Comments"
-            }
-          },
-          "review_16": {
-            "type": "review",
-            "settings": {
-              "category": "convenience",
-              "image": "shopify://shop_images/review_1.png",
-              "title": "Elizabeth Thompson",
-              "date": "7 days ago",
-              "comment": "Three pregnancies and Nectar is the ONLY difference with this one. No swelling, no headaches, no fatigue! My friends asked what I'm doing differently because I feel amazing and they’ve noticed!",
-              "likes": "992",
-              "comments": "212 Comments"
-            }
-          },
-          "review_18": {
-            "type": "review",
-            "settings": {
-              "category": "conveniencev",
-              "image": "shopify://shop_images/review_3.png",
-              "title": "Bridgette Hudson",
-              "date": "17 days ago",
-              "comment": "After struggling with dehydration headaches, a mom friend gave me a Nectar packet. The relief was IMMEDIATE. Not only did my headaches stop, but my pregnancy brain fog lifted too!",
-              "likes": "750",
-              "comments": "23 Comments"
-            }
-          },
-          "video_1": {
-            "type": "video",
-            "settings": {
-              "video": "shopify://files/videos/test_video.mp4"
-            }
-          },
-          "video_2": {
-            "type": "video",
-            "settings": {
-              "video": "shopify://files/videos/test_video.mp4"
-            }
-          },
-          "video_3": {
-            "type": "video",
-            "settings": {
-              "video": "shopify://files/videos/test_video.mp4"
-            }
-          },
-          "video_4": {
-            "type": "video",
-            "settings": {
-              "video": "shopify://files/videos/test_video.mp4"
-            }
-          },
-          "video_5": {
-            "type": "video",
-            "settings": {
-              "video": "shopify://files/videos/test_video.mp4"
-            }
+              "use_product_testimonials_metafiled": true,
+              "items_per_view": 4,
+              "gap": 14,
+              "items_per_view_mobile": 1,
+              "gap_mobile": 0
+            },
+            "blocks": {
+              "carousel_item_8jTtFf": {
+                "type": "_carousel-item",
+                "name": "Carousel Item",
+                "settings": {
+                  "image": "shopify://shop_images/Frame_1484581378_3.png",
+                  "video_url": "https://cdn.shopify.com/videos/c/o/v/f471d161dca04cc8ba9d8743e226d2c1.mp4"
+                },
+                "blocks": {}
+              },
+              "carousel_item_E33MiA": {
+                "type": "_carousel-item",
+                "name": "Carousel Item",
+                "settings": {
+                  "image": "shopify://shop_images/Calm_PDP_Picture_Sticks.png",
+                  "video_url": ""
+                },
+                "blocks": {}
+              },
+              "carousel_item_L7BWcX": {
+                "type": "_carousel-item",
+                "name": "Carousel Item",
+                "settings": {
+                  "image": "shopify://shop_images/7473299259786715751gif_6__12x16_-ezgif.com-video-to-gif-converter.gif",
+                  "video_url": ""
+                },
+                "blocks": {}
+              },
+              "carousel_item_Ka9rfW": {
+                "type": "_carousel-item",
+                "name": "Carousel Item",
+                "settings": {
+                  "image": "shopify://shop_images/Calm_PDP_Picture_Sticks_1.png",
+                  "video_url": ""
+                },
+                "blocks": {}
+              },
+              "carousel_item_tfLhYM": {
+                "type": "_carousel-item",
+                "name": "Carousel Item",
+                "settings": {
+                  "image": "shopify://shop_images/hero-bg.png",
+                  "video_url": ""
+                },
+                "blocks": {}
+              }
+            },
+            "block_order": [
+              "carousel_item_8jTtFf",
+              "carousel_item_E33MiA",
+              "carousel_item_L7BWcX",
+              "carousel_item_Ka9rfW",
+              "carousel_item_tfLhYM"
+            ]
           }
         },
         "block_order": [
-          "review_1",
-          "review_2",
-          "review_3",
-          "review_4",
-          "review_6",
-          "review_5",
-          "review_9",
-          "review_7",
-          "review_8",
-          "review_10",
-          "review_12",
-          "review_11",
-          "review_14",
-          "review_13",
-          "review_15",
-          "review_17",
-          "review_16",
-          "review_18",
-          "video_1",
-          "video_2",
-          "video_3",
-          "video_4",
-          "video_5"
+          "heading_ieE6zn",
+          "reviews_6bU7dY",
+          "carousel_JRGETJ"
         ],
+        "name": "Testimonials",
         "settings": {
-          "title": "Join 1,000,000+ Others Who Have Changed Their Lives With Nectar",
-          "desk_indent_top": 50,
-          "desk_indent_bottom": 42,
-          "mob_indent_top": 20,
-          "mob_indent_bottom": 30
+          "desktop_padding_top": 40,
+          "desktop_gap_between_blocks": 10,
+          "bg_color": "#f5faff",
+          "desktop_max_width": 1140,
+          "hide_on_mobile": false,
+          "mobile_padding_top": 30,
+          "mobile_gap_between_blocks": 10
         }
       },
       "ts_ingredients": {
@@ -763,7 +753,7 @@
           "popup_comment": "<em>Stop settling for low-quality electrolyte powders loaded with sugar and salt. Nectar is the clean, daily hydration mix that makes drinking water a habit you'll actually stick to.</em>",
           "popup_features_subtitle": "<strong>Free From The Top 9 Allergens:</strong> We are dairy-free, soy-free, egg-free, gluten-free, peanut-free, tree nut-free, fish-free, sesame-free, and shellfish-free.",
           "popup_btn_label": "Select Quantity And Flavors",
-          "popup_btn_link": "shopify://pages/checkout",
+          "popup_btn_link": "/pages/offer?product-handle=essential-daily-hydration-4-gift",
           "desk_indent_top": 50,
           "desk_indent_bottom": 50,
           "mob_indent_top": 30,
@@ -1085,6 +1075,69 @@
           "mobile_gap_between_blocks": 10
         }
       },
+      "ts_cards": {
+        "type": "ts-cards",
+        "blocks": {
+          "card_1": {
+            "type": "card",
+            "settings": {
+              "image": "shopify://shop_images/card_1.png",
+              "link": ""
+            }
+          },
+          "card_2": {
+            "type": "card",
+            "settings": {
+              "image": "shopify://shop_images/card_2.png",
+              "link": ""
+            }
+          },
+          "card_3": {
+            "type": "card",
+            "settings": {
+              "image": "shopify://shop_images/card_3.png",
+              "link": ""
+            }
+          },
+          "card_4": {
+            "type": "card",
+            "settings": {
+              "image": "shopify://shop_images/card_4.png",
+              "link": ""
+            }
+          },
+          "card_5": {
+            "type": "card",
+            "settings": {
+              "image": "shopify://shop_images/card_5.png",
+              "link": ""
+            }
+          },
+          "card_6": {
+            "type": "card",
+            "settings": {
+              "image": "shopify://shop_images/card_6.png",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "card_1",
+          "card_2",
+          "card_3",
+          "card_4",
+          "card_5",
+          "card_6"
+        ],
+        "settings": {
+          "title": "Six Light, Refreshing Flavors",
+          "subtitle": "Real organic fruit flavors you can enjoy Sipping all day long",
+          "desk_indent_top": 50,
+          "desk_indent_bottom": 50,
+          "mob_indent_top": 30,
+          "mob_indent_bottom": 30
+        }
+      },
       "ts_faq": {
         "type": "ts-faq",
         "blocks": {
@@ -1161,199 +1214,6 @@
           "desk_indent_bottom": 50,
           "mob_indent_top": 30,
           "mob_indent_bottom": 20
-        }
-      },
-      "ts_compare": {
-        "type": "ts-compare",
-        "blocks": {
-          "row_1": {
-            "type": "row",
-            "settings": {
-              "title": "Cost Per Serving",
-              "first_brand_value": "$0.89",
-              "first_is_icon": false,
-              "first_icon": "check",
-              "second_brand_value": "$2.00+",
-              "second_is_icon": false,
-              "second_icon": "check",
-              "third_brand_value": "$3.15+",
-              "third_is_icon": false,
-              "third_icon": "check"
-            }
-          },
-          "row_2": {
-            "type": "row",
-            "settings": {
-              "title": "Taste",
-              "first_brand_value": "Light & Refreshing",
-              "first_is_icon": false,
-              "first_icon": "check",
-              "second_brand_value": "Salty & Syrupy",
-              "second_is_icon": false,
-              "second_icon": "check",
-              "third_brand_value": "Overly sweet",
-              "third_is_icon": false,
-              "third_icon": "check"
-            }
-          },
-          "row_3": {
-            "type": "row",
-            "settings": {
-              "title": "Sugar",
-              "first_brand_value": "0g",
-              "first_is_icon": false,
-              "first_icon": "check",
-              "second_brand_value": "10g+",
-              "second_is_icon": false,
-              "second_icon": "check",
-              "third_brand_value": "2lg+",
-              "third_is_icon": false,
-              "third_icon": "check"
-            }
-          },
-          "row_4": {
-            "type": "row",
-            "settings": {
-              "title": "Sodium",
-              "first_brand_value": "100mg",
-              "first_is_icon": false,
-              "first_icon": "check",
-              "second_brand_value": "500mg+",
-              "second_is_icon": false,
-              "second_icon": "check",
-              "third_brand_value": "300mg+",
-              "third_is_icon": false,
-              "third_icon": "check"
-            }
-          },
-          "row_5": {
-            "type": "row",
-            "settings": {
-              "title": "Potassium",
-              "first_brand_value": "250mg",
-              "first_is_icon": false,
-              "first_icon": "check",
-              "second_brand_value": "0mg-50mg",
-              "second_is_icon": false,
-              "second_icon": "check",
-              "third_brand_value": "75mg",
-              "third_is_icon": false,
-              "third_icon": "check"
-            }
-          },
-          "row_6": {
-            "type": "row",
-            "settings": {
-              "title": "Magnesium",
-              "first_brand_value": "50mg",
-              "first_is_icon": false,
-              "first_icon": "check",
-              "second_brand_value": "",
-              "second_is_icon": true,
-              "second_icon": "cross",
-              "third_brand_value": "",
-              "third_is_icon": true,
-              "third_icon": "cross"
-            }
-          },
-          "row_7": {
-            "type": "row",
-            "settings": {
-              "title": "Organic Fruit",
-              "first_brand_value": "",
-              "first_is_icon": true,
-              "first_icon": "check",
-              "second_brand_value": "",
-              "second_is_icon": true,
-              "second_icon": "cross",
-              "third_brand_value": "",
-              "third_is_icon": true,
-              "third_icon": "cross"
-            }
-          }
-        },
-        "block_order": [
-          "row_1",
-          "row_2",
-          "row_3",
-          "row_4",
-          "row_5",
-          "row_6",
-          "row_7"
-        ],
-        "disabled": true,
-        "settings": {
-          "title": "Us Vs. Them",
-          "subtitle": "Not overhyped or overpriced. Just what you need made available for everyone.",
-          "image": "shopify://shop_images/compare_image.png",
-          "brand_logo": "shopify://shop_images/compare_logo.png",
-          "enable_second": true,
-          "second_brand_title": "Other Mixes",
-          "enable_third": true,
-          "third_brand_title": "Sports Drinks"
-        }
-      },
-      "ts_cards": {
-        "type": "ts-cards",
-        "blocks": {
-          "card_1": {
-            "type": "card",
-            "settings": {
-              "image": "shopify://shop_images/card_1.png",
-              "link": ""
-            }
-          },
-          "card_2": {
-            "type": "card",
-            "settings": {
-              "image": "shopify://shop_images/card_2.png",
-              "link": ""
-            }
-          },
-          "card_3": {
-            "type": "card",
-            "settings": {
-              "image": "shopify://shop_images/card_3.png",
-              "link": ""
-            }
-          },
-          "card_4": {
-            "type": "card",
-            "settings": {
-              "image": "shopify://shop_images/card_4.png",
-              "link": ""
-            }
-          },
-          "card_5": {
-            "type": "card",
-            "settings": {
-              "image": "shopify://shop_images/card_5.png",
-              "link": ""
-            }
-          },
-          "card_6": {
-            "type": "card",
-            "settings": {
-              "image": "shopify://shop_images/card_6.png",
-              "link": ""
-            }
-          }
-        },
-        "block_order": [
-          "card_1",
-          "card_2",
-          "card_3",
-          "card_4",
-          "card_5",
-          "card_6"
-        ],
-        "settings": {
-          "title": "Six Light, Refreshing Flavors",
-          "subtitle": "Real organic fruit flavors you can enjoy Sipping all day long",
-          "desk_indent_top": 50,
-          "desk_indent_bottom": 50,
-          "mob_indent_top": 30,
-          "mob_indent_bottom": 30
         }
       },
       "ts_review_image": {
@@ -1446,12 +1306,11 @@
       "ts_logo",
       "ts_banner",
       "ts_logos",
-      "ts_features",
-      "ts_reviews",
+      "blank_section_R96MqF",
+      "blank_section_myEaQK",
       "ts_ingredients",
       "blank_section_eCra94",
       "blank_section_FE7qpD",
-      "ts_compare",
       "ts_cards",
       "ts_faq",
       "ts_review_image",

@@ -198,9 +198,13 @@
 
 .ts-banner__guarantee {
   display: none;
-  padding: 20px 20px 10px;
+  padding: 10px;
+  background-color: #FFFCED;
+  border: 1px solid #FDB022;
   align-items: center;
   gap: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .ts-banner__guarantee img {
@@ -455,7 +459,7 @@
 
   .ts-banner__media {
     width: 100%;
-    padding: 0;
+    padding: 0 0 20px;
   }
 
   .ts-banner__content {
@@ -494,7 +498,7 @@
   .ts-banner__media {
     display: flex;
     flex-direction: row-reverse;
-    padding: 0 20px;
+    padding: 0 20px 15px;
     justify-content: start;
   }
 
@@ -661,5 +665,20 @@
   .ts-banner__lightbox-close {
     top: 2rem;
     right: 2rem;
+  }
+
+  .ts-banner__content {
+    background-color: #fff;
+  }
+
+  .ts-banner__description {
+    padding: 0 20px 20px;
+    margin-top: 15px;
+
+    ul li {
+        &::before {
+            content: url("data:image/svg+xml,%3Csvg width='15' height='16' viewBox='0 0 15 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 8C15 12.1421 11.6421 15.5 7.5 15.5C3.35786 15.5 0 12.1421 0 8C0 3.85786 3.35786 0.5 7.5 0.5C11.6421 0.5 15 3.85786 15 8ZM11.2784 5.15907C11.0038 4.88448 10.5586 4.88448 10.2841 5.15907C10.2774 5.1657 10.2712 5.17272 10.2654 5.1801L7.01006 9.3282L5.04738 7.36552C4.7728 7.09093 4.3276 7.09093 4.05302 7.36552C3.77843 7.64011 3.77843 8.0853 4.05302 8.35989L6.53406 10.8409C6.80865 11.1155 7.25384 11.1155 7.52843 10.8409C7.53454 10.8348 7.54032 10.8284 7.54572 10.8216L11.2884 6.14326C11.553 5.86795 11.5496 5.43029 11.2784 5.15907Z' fill='%23469AFF'/%3E%3C/svg%3E%0A");
+        }
+    }
   }
 }

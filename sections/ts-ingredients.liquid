@@ -158,13 +158,16 @@
 <script>
   (function () {
     const section = document.querySelector(".section-{{ section.id }}");
-    const popup = section.querySelector("[data-popup]");
-    const popupButtonOpen = section.querySelector("[data-popup-open]");
-    const popupButtonCloseEls = section.querySelectorAll("[data-popup-close]");
+    console.log(section, 123);
+    const popup = document.querySelector("[data-popup]");
+    const popupButtonOpen = document.querySelectorAll("[data-popup-open]");
+    const popupButtonCloseEls = document.querySelectorAll("[data-popup-close]");
 
     if (popup && popupButtonOpen) {
-      popupButtonOpen.addEventListener("click", () => {
-        popup.classList.add("open");
+      popupButtonOpen.forEach(popupButtonOpen => {
+        popupButtonOpen.addEventListener("click", () => {
+          popup.classList.add("open");
+        })
       })
       popupButtonCloseEls.forEach(popupButtonClose => {
         popupButtonClose.addEventListener("click", () => {

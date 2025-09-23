@@ -193,12 +193,15 @@
                 this.currentQty = this.currentProduct.variants.reduce((acc, variant) => acc + variant.quantity, 0);
                 let minQty = this.minQty;
 
-                if (this.currentQty > this.minQty && this.minQty <= this.maxQty) {
-                    minQty = this.currentQty;
-                } else if (this.currentQty > this.maxQty) {
-                    minQty = this.maxQty;
-                }
-                this.updateCurrentPouch(minQty);
+                if (this.currentQty > this.minQty) {
+                    if (this.currentQty > this.maxQty) {
+                        minQty = this.maxQty;
+                    } else{
+                        minQty = this.currentQty;
+                    }
+                    
+                    this.updateCurrentPouch(minQty);
+                } 
 
                 this.setupCurrentDiscount();
             },
@@ -340,8 +343,6 @@
 
             init() {
                 this.setupDefaultValues();
-
-                console.log(this.redirectToCheckout, 111);
             }
         }))
     })
