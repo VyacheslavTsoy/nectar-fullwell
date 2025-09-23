@@ -817,7 +817,7 @@
                       "type": "button",
                       "name": "Button",
                       "settings": {
-                        "button_text": "Choose Your Package",
+                        "button_text": "Get Your 60% Off +  Gifts Now!",
                         "button_link": "",
                         "related_product": "{{ closest.product }}",
                         "button_type": "primary",
