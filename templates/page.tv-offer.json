@@ -519,12 +519,21 @@
             "gap_mobile": 0
           },
           "blocks": {
+            "carousel_item_Ka9rfW": {
+              "type": "_carousel-item",
+              "name": "Carousel Item",
+              "settings": {
+                "image": "shopify://shop_images/Calm_PDP_Picture_Sticks_1.png",
+                "video_url": "https://cdn.shopify.com/videos/c/o/v/120069b72c204d18a7b7022a2fcd5370.mp4"
+              },
+              "blocks": {}
+            },
             "carousel_item_8jTtFf": {
               "type": "_carousel-item",
               "name": "Carousel Item",
               "settings": {
                 "image": "shopify://shop_images/Frame_1484581378_3.png",
-                "video_url": "https://cdn.shopify.com/videos/c/o/v/f471d161dca04cc8ba9d8743e226d2c1.mp4"
+                "video_url": "https://cdn.shopify.com/videos/c/o/v/4edcc5d37bcd4892a08b2abb507b1986.mp4"
               },
               "blocks": {}
             },
@@ -533,7 +542,7 @@
               "name": "Carousel Item",
               "settings": {
                 "image": "shopify://shop_images/Calm_PDP_Picture_Sticks.png",
-                "video_url": ""
+                "video_url": "https://cdn.shopify.com/videos/c/o/v/dd59eb19632b48518adfb1e1a5e0648e.mp4"
               },
               "blocks": {}
             },
@@ -542,16 +551,7 @@
               "name": "Carousel Item",
               "settings": {
                 "image": "shopify://shop_images/7473299259786715751gif_6__12x16_-ezgif.com-video-to-gif-converter.gif",
-                "video_url": ""
-              },
-              "blocks": {}
-            },
-            "carousel_item_Ka9rfW": {
-              "type": "_carousel-item",
-              "name": "Carousel Item",
-              "settings": {
-                "image": "shopify://shop_images/Calm_PDP_Picture_Sticks_1.png",
-                "video_url": ""
+                "video_url": "https://cdn.shopify.com/videos/c/o/v/9a97c4ddc2d0434c93cdea3e5ff24896.mp4"
               },
               "blocks": {}
             },
@@ -560,16 +560,16 @@
               "name": "Carousel Item",
               "settings": {
                 "image": "shopify://shop_images/hero-bg.png",
-                "video_url": ""
+                "video_url": "https://cdn.shopify.com/videos/c/o/v/5ed4c55a2d8548c29771d977930b4f8f.mp4"
               },
               "blocks": {}
             }
           },
           "block_order": [
+            "carousel_item_Ka9rfW",
             "carousel_item_8jTtFf",
             "carousel_item_E33MiA",
             "carousel_item_L7BWcX",
-            "carousel_item_Ka9rfW",
             "carousel_item_tfLhYM"
           ]
         }
