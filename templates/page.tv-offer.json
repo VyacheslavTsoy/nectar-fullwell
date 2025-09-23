@@ -7,1316 +7,1315 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
-    "sections": {
-      "timer": {
-        "type": "ts-timer",
-        "settings": {
-          "icon": "shopify://shop_images/icon_timer.svg",
-          "title": "Special TV Offer",
-          "badge": "UP TO 60% OFF",
-          "enable_timer": true,
-          "enable_daily": true,
-          "end_date": "23-07-2025 12:00"
-        }
-      },
-      "ts_logo": {
-        "type": "ts-logo",
-        "settings": {}
-      },
-      "ts_banner": {
-        "type": "ts-banner",
-        "blocks": {
-          "image_1": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/banner_image.png"
-            }
-          },
-          "image_2": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/banner_image.png"
-            }
-          },
-          "image_3": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/banner_image.png"
-            }
-          },
-          "image_4": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/banner_image.png"
-            }
-          },
-          "image_5": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/banner_image.png"
-            }
-          },
-          "image_6": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/banner_image.png"
-            }
-          },
-          "row_1": {
-            "type": "row",
-            "settings": {
-              "question": "Shipping Details",
-              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
-            }
-          },
-          "row_2": {
-            "type": "row",
-            "settings": {
-              "question": "Who Needs Nectar?",
-              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
-            }
-          },
-          "row_3": {
-            "type": "row",
-            "settings": {
-              "question": "Ingredients & Nutrition",
-              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
-            }
-          },
-          "row_4": {
-            "type": "row",
-            "settings": {
-              "question": "Directions For Use",
-              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
-            }
-          },
-          "row_5": {
-            "type": "row",
-            "settings": {
-              "question": "What Does It Taste Like?",
-              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
-            }
-          },
-          "row_6": {
-            "type": "row",
-            "settings": {
-              "question": "What Does It Taste Like?",
-              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
-            }
-          },
-          "row_7": {
-            "type": "row",
-            "settings": {
-              "question": "What Does It Taste Like?",
-              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
-            }
-          },
-          "row_8": {
-            "type": "row",
-            "settings": {
-              "question": "What Does It Taste Like?",
-              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
-            }
-          },
-          "row_9": {
-            "type": "row",
-            "settings": {
-              "question": "What Does It Taste Like?",
-              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
-            }
-          },
-          "button_feature_1": {
-            "type": "button_feature",
-            "settings": {
-              "icon": "shopify://shop_images/icon_banner_delivery.svg",
-              "label": "Express US Shipping"
-            }
-          },
-          "button_feature_2": {
-            "type": "button_feature",
-            "settings": {
-              "icon": "shopify://shop_images/icon_banner_money.svg",
-              "label": "90 Day Money Back Guarantee"
-            }
-          }
-        },
-        "block_order": [
-          "image_1",
-          "image_2",
-          "image_3",
-          "image_4",
-          "image_5",
-          "image_6",
-          "row_1",
-          "row_2",
-          "row_3",
-          "row_4",
-          "row_5",
-          "row_6",
-          "row_7",
-          "row_8",
-          "row_9",
-          "button_feature_1",
-          "button_feature_2"
-        ],
-        "settings": {
-          "review": "1 Million+ Happy Customers",
-          "title": "Sugar Free. Low Sodium. Clean Daily Hydration.",
-          "description": "<p><strong>Introducing Nectar</strong> - The only Hydration Mix developed for <strong>safe daily use.</strong> Medical Grade Electrolytes & Organic Fruit Flavor for:</p><ul><li><strong>Energy</strong> - No More Afternoon Slump</li><li><strong>Focus</strong> - Goodbye Brain Fog</li><li><strong>Mood</strong> - Eliminate The Ups and Downs</li></ul>",
-          "btn_label": "Select Quantity & Flavors",
-          "btn_link": "/pages/offer?product-handle=essential-daily-hydration-4-gift",
-          "sticky_link": "/pages/offer?product-handle=essential-daily-hydration-4-gift",
-          "sticky_label": "Select Quantity & Flavors",
-          "guarantee_image": "shopify://shop_images/guarantee_image.png",
-          "guarantee_label": "Try Nectar with no risk! If you’re not 100% satisfied, you can trust in our 90-day money back gaurantee.*"
-        }
-      },
-      "ts_logos": {
-        "type": "ts-logos",
-        "blocks": {
-          "logo_1": {
-            "type": "logo",
-            "name": "Logo",
-            "settings": {
-              "desk_logo": "shopify://shop_images/logo_vice.png",
-              "mob_logo": "shopify://shop_images/logo_color_vice.png"
-            }
-          },
-          "logo_2": {
-            "type": "logo",
-            "name": "Logo",
-            "settings": {
-              "desk_logo": "shopify://shop_images/logo_fox.png",
-              "mob_logo": "shopify://shop_images/logo_color_fox.png"
-            }
-          },
-          "logo_3": {
-            "type": "logo",
-            "name": "Logo",
-            "settings": {
-              "desk_logo": "shopify://shop_images/logo_amc.png",
-              "mob_logo": "shopify://shop_images/logo_color_amc.png"
-            }
-          },
-          "logo_4": {
-            "type": "logo",
-            "name": "Logo",
-            "settings": {
-              "desk_logo": "shopify://shop_images/logo_espn.png",
-              "mob_logo": "shopify://shop_images/logo_color_espn.png"
-            }
-          },
-          "logo_5": {
-            "type": "logo",
-            "name": "Logo",
-            "settings": {
-              "desk_logo": "shopify://shop_images/logo_tbs.png",
-              "mob_logo": "shopify://shop_images/logo_color_tbs.png"
-            }
-          },
-          "logo_6": {
-            "type": "logo",
-            "name": "Logo",
-            "settings": {
-              "desk_logo": "shopify://shop_images/logo_bet.png",
-              "mob_logo": "shopify://shop_images/logo_color_bet.png"
-            }
-          },
-          "logo_7": {
-            "type": "logo",
-            "name": "Logo",
-            "settings": {
-              "desk_logo": "shopify://shop_images/logo_comedy.png",
-              "mob_logo": "shopify://shop_images/logo_color_comedy.png"
-            }
-          },
-          "logo_8": {
-            "type": "logo",
-            "name": "Logo",
-            "settings": {
-              "desk_logo": "shopify://shop_images/logo_history.png",
-              "mob_logo": "shopify://shop_images/logo_color_history.png"
-            }
-          },
-          "logo_9": {
-            "type": "logo",
-            "name": "Logo",
-            "settings": {
-              "desk_logo": "shopify://shop_images/logo_msnbc.png",
-              "mob_logo": "shopify://shop_images/logo_color_msnbc.png"
-            }
-          }
-        },
-        "block_order": [
-          "logo_1",
-          "logo_2",
-          "logo_3",
-          "logo_4",
-          "logo_5",
-          "logo_6",
-          "logo_7",
-          "logo_8",
-          "logo_9"
-        ],
-        "settings": {
-          "title": "As Seen On",
-          "desk_indent_top": 26,
-          "desk_indent_bottom": 26,
-          "mob_indent_top": 20,
-          "mob_indent_bottom": 30
-        }
-      },
-      "blank_section_R96MqF": {
-        "type": "blank-section",
-        "blocks": {
-          "layout_MxzgzM": {
-            "type": "layout",
-            "name": "Layout",
-            "settings": {
-              "desktop_padding": 0,
-              "desktop_gap": 54,
-              "desktop_columns_per_row": 2,
-              "align_items": "start",
-              "custom_column_width": false,
-              "column_width": "1fr 1fr",
-              "mobile_padding": 0,
-              "mobile_gap": 20,
-              "mobile_columns_per_row": 1
-            },
-            "blocks": {
-              "layout_item_ijCW8V": {
-                "type": "_layout-item",
-                "name": "Column",
-                "settings": {
-                  "gap_desktop": 6,
-                  "gap_mobile": 6
-                },
-                "blocks": {
-                  "heading_ACfJwq": {
-                    "type": "heading",
-                    "name": "Heading",
-                    "settings": {
-                      "title": "<p>{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].title.value }}</p>",
-                      "text_color": "#123456",
-                      "text_alignment": "left",
-                      "heading_size": "lg",
-                      "font_weight": "bold",
-                      "font_family": "values-sans",
-                      "use_mobile_settings": true,
-                      "text_alignment_mobile": "center",
-                      "heading_size_mobile": "lg",
-                      "font_weight_mobile": "bold"
-                    },
-                    "blocks": {}
-                  },
-                  "text_f4wrBc": {
-                    "type": "text",
-                    "name": "Text",
-                    "settings": {
-                      "title": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].description | metafield_tag }}",
-                      "text_alignment": "left",
-                      "font_family": "values-sans",
-                      "font_weight": "normal",
-                      "text_color": "#000000",
-                      "font_size": 16,
-                      "font_size_mobile": 16,
-                      "text_alignment_mobile": "center"
-                    },
-                    "blocks": {}
-                  },
-                  "doctor_review_kH9ctQ": {
-                    "type": "doctor-review",
-                    "name": "Doctor Review",
-                    "settings": {
-                      "title": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].title.value }}",
-                      "hide_on_mobile": true,
-                      "hide_on_desktop": false,
-                      "image": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].doctor_image.value }}",
-                      "text": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].review_text | metafield_tag }}",
-                      "name": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].author_name.value }}"
-                    },
-                    "blocks": {}
-                  }
-                },
-                "block_order": [
-                  "heading_ACfJwq",
-                  "text_f4wrBc",
-                  "doctor_review_kH9ctQ"
-                ]
-              },
-              "layout_item_7e7BNR": {
-                "type": "_layout-item",
-                "name": "Column",
-                "settings": {
-                  "gap_desktop": 0,
-                  "gap_mobile": 18
-                },
-                "blocks": {
-                  "features_dcEUax": {
-                    "type": "features",
-                    "name": "Benefits",
-                    "settings": {
-                      "related_metaobjects": "{{ closest.product.metafields.custom.product_benefits.value }}",
-                      "when_to_use_metaobjects": [],
-                      "gap_desktop": 10,
-                      "width_desktop": 200,
-                      "light_blue_color_scheme": false,
-                      "use_grid_layout": true,
-                      "columns_desktop": 3,
-                      "layout_gap_desktop": 10,
-                      "columns_mobile": 3,
-                      "layout_gap_mobile": 6
-                    },
-                    "blocks": {
-                      "features_item_MAgpW9": {
-                        "type": "_features-item",
-                        "name": "Features Item",
-                        "settings": {
-                          "icon": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M32.8784 31.4913C32.9739 33.006 31.8142 34.4828 30.2411 34.4835L24.7731 34.4855C25.0839 34.1283 25.3116 33.7066 25.4399 33.2508C25.5681 32.7951 25.5938 32.3165 25.5151 31.8496C25.4363 31.3828 25.255 30.9391 24.9843 30.5507C24.7136 30.1623 24.3601 29.8386 23.9494 29.6031L29.8863 28.8541C31.4252 28.6598 32.7808 29.9431 32.8784 31.4913ZM22.6265 30.2906L11.2412 28.854C9.70217 28.6598 8.3467 29.9431 8.24904 31.4913C8.15357 33.006 9.31326 34.4828 10.8864 34.4835L22.3622 34.4877C22.8976 34.4871 23.4128 34.2826 23.8029 33.9158C24.1931 33.549 24.4289 33.0475 24.4626 32.5131C24.4962 31.9787 24.3252 31.4515 23.9841 31.0387C23.6431 30.6258 23.1576 30.3584 22.6265 30.2906ZM20.564 13.1819C21.3224 13.1818 22.0638 12.9569 22.6944 12.5355C23.325 12.1141 23.8164 11.5152 24.1066 10.8144C24.3969 10.1137 24.4728 9.34269 24.3248 8.59884C24.1768 7.85498 23.8116 7.1717 23.2753 6.63541C22.739 6.09912 22.0557 5.73389 21.3119 5.58591C20.568 5.43793 19.797 5.51385 19.0963 5.80406C18.3956 6.09427 17.7966 6.58574 17.3752 7.21633C16.9538 7.84692 16.7289 8.58831 16.7288 9.34674C16.7288 9.85039 16.828 10.3491 17.0207 10.8144C17.2134 11.2797 17.4959 11.7025 17.8521 12.0587C18.2082 12.4148 18.631 12.6973 19.0963 12.89C19.5616 13.0827 20.0603 13.1819 20.564 13.1819ZM37.5959 15.3921H3.53201C3.07636 15.3921 2.63937 15.5731 2.31717 15.8953C1.99497 16.2175 1.81396 16.6545 1.81396 17.1102C1.81396 17.5658 1.99497 18.0028 2.31717 18.325C2.63937 18.6472 3.07636 18.8282 3.53201 18.8282H14.7576V28.1953L20.564 28.9279L26.3702 28.1953V18.8281H37.5959C38.0516 18.8281 38.4886 18.6471 38.8108 18.3249C39.133 18.0027 39.314 17.5657 39.314 17.11C39.314 16.6544 39.133 16.2174 38.8108 15.8952C38.4886 15.573 38.0516 15.392 37.5959 15.392V15.3921Z\" fill=\"#0D3063\"></path>\n</svg>",
-                          "title": "Stress Relief"
-                        },
-                        "blocks": {}
-                      },
-                      "features_item_Gfhq8H": {
-                        "type": "_features-item",
-                        "name": "Features Item",
-                        "settings": {
-                          "icon": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_637_519)\">\n<path d=\"M3.0627 8.74981C2.80145 8.74981 2.53895 8.66856 2.31395 8.49981C1.76145 8.08606 1.64895 7.30231 2.06395 6.74981L5.81395 1.74981C6.2277 1.19856 7.01145 1.08606 7.56395 1.49981C8.11645 1.91356 8.22895 2.69731 7.81395 3.24981L4.06395 8.24981C3.81895 8.57731 3.44395 8.74981 3.0627 8.74981Z\" fill=\"#0D3063\"></path>\n<path d=\"M6.81396 3.75H3.06396C2.37271 3.75 1.81396 3.19 1.81396 2.5C1.81396 1.81 2.37271 1.25 3.06396 1.25H6.81396C7.50521 1.25 8.06396 1.81 8.06396 2.5C8.06396 3.19 7.50521 3.75 6.81396 3.75Z\" fill=\"#0D3063\"></path>\n<path d=\"M6.81396 8.75H3.06396C2.37271 8.75 1.81396 8.19 1.81396 7.5C1.81396 6.81 2.37271 6.25 3.06396 6.25H6.81396C7.50521 6.25 8.06396 6.81 8.06396 7.5C8.06396 8.19 7.50521 8.75 6.81396 8.75Z\" fill=\"#0D3063\"></path>\n<path d=\"M34.3127 8.75006C34.0515 8.75006 33.789 8.66881 33.564 8.50006C33.0115 8.08631 32.899 7.30256 33.314 6.75006L37.064 1.75006C37.4777 1.19881 38.2627 1.08631 38.8127 1.50006C39.3652 1.91381 39.4777 2.69756 39.0627 3.25006L35.3127 8.25006C35.069 8.57756 34.694 8.75006 34.3127 8.75006Z\" fill=\"#0D3063\"></path>\n<path d=\"M38.064 3.75H34.314C33.6227 3.75 33.064 3.19 33.064 2.5C33.064 1.81 33.6227 1.25 34.314 1.25H38.064C38.7552 1.25 39.314 1.81 39.314 2.5C39.314 3.19 38.7552 3.75 38.064 3.75Z\" fill=\"#0D3063\"></path>\n<path d=\"M38.064 8.75H34.314C33.6227 8.75 33.064 8.19 33.064 7.5C33.064 6.81 33.6227 6.25 34.314 6.25H38.064C38.7552 6.25 39.314 6.81 39.314 7.5C39.314 8.19 38.7552 8.75 38.064 8.75Z\" fill=\"#0D3063\"></path>\n<path d=\"M20.564 6.25C11.604 6.25 4.31396 13.54 4.31396 22.5C4.31396 31.46 11.604 38.75 20.564 38.75C29.524 38.75 36.814 31.46 36.814 22.5C36.814 13.54 29.524 6.25 20.564 6.25ZM10.564 20C10.564 19.31 11.1227 18.75 11.814 18.75C12.5052 18.75 13.064 19.31 13.064 20C13.064 20.6888 13.624 21.25 14.314 21.25C15.004 21.25 15.564 20.6888 15.564 20C15.564 19.31 16.1227 18.75 16.814 18.75C17.5052 18.75 18.064 19.31 18.064 20C18.064 22.0675 16.3815 23.75 14.314 23.75C12.2465 23.75 10.564 22.0675 10.564 20ZM20.564 33.75C18.4965 33.75 16.814 32.0675 16.814 30C16.814 29.31 17.3727 28.75 18.064 28.75C18.7552 28.75 19.314 29.31 19.314 30C19.314 30.6887 19.874 31.25 20.564 31.25C21.254 31.25 21.814 30.6887 21.814 30C21.814 29.31 22.3727 28.75 23.064 28.75C23.7552 28.75 24.314 29.31 24.314 30C24.314 32.0675 22.6315 33.75 20.564 33.75ZM26.814 23.75C24.7465 23.75 23.064 22.0675 23.064 20C23.064 19.31 23.6227 18.75 24.314 18.75C25.0052 18.75 25.564 19.31 25.564 20C25.564 20.6888 26.124 21.25 26.814 21.25C27.504 21.25 28.064 20.6888 28.064 20C28.064 19.31 28.6227 18.75 29.314 18.75C30.0052 18.75 30.564 19.31 30.564 20C30.564 22.0675 28.8815 23.75 26.814 23.75Z\" fill=\"#0D3063\"></path>\n</g>\n<defs>\n<clippath id=\"clip0_637_519\">\n<rect width=\"40\" height=\"40\" fill=\"white\" transform=\"translate(0.563965)\"></rect>\n</clippath>\n</defs>\n</svg>",
-                          "title": "Deep Sleep"
-                        },
-                        "blocks": {}
-                      },
-                      "features_item_i6iGmU": {
-                        "type": "_features-item",
-                        "name": "Features Item",
-                        "settings": {
-                          "icon": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M16.52 19.6312L20.9325 24.0437C21.689 23.8832 22.3988 23.5518 23.0075 23.0749L17.4888 17.5562C17.0118 18.1649 16.6805 18.8747 16.52 19.6312Z\" fill=\"#0D3063\"></path>\n<path d=\"M20.564 1.25C16.8556 1.25 13.2305 2.34967 10.147 4.40994C7.06361 6.47022 4.66037 9.39857 3.24123 12.8247C1.82209 16.2508 1.45078 20.0208 2.17425 23.6579C2.89772 27.2951 4.68349 30.636 7.30572 33.2583C9.92795 35.8805 13.2689 37.6663 16.906 38.3897C20.5432 39.1132 24.3132 38.7419 27.7393 37.3227C31.1654 35.9036 34.0938 33.5004 36.154 30.4169C38.2143 27.3335 39.314 23.7084 39.314 20C39.3079 15.029 37.3305 10.2634 33.8155 6.74844C30.3005 3.23344 25.5349 1.25606 20.564 1.25ZM32.1452 15.075C31.014 15.5375 28.8452 16.3125 27.1577 16.25C26.039 16.1687 24.9202 15.8438 23.8015 15.7812C22.96 15.6948 22.1121 15.6927 21.2702 15.775L24.789 19.2938C24.8713 18.4644 24.8692 17.6289 24.7827 16.8C25.7539 17.014 26.7446 17.1271 27.739 17.1375C28.3577 25.8687 21.839 28.4937 14.0702 26.6875C13.2773 26.6516 12.485 26.7727 11.739 27.0437L13.514 28.8187C13.6702 28.3625 13.7453 27.9 13.839 27.5625C14.7515 27.7 15.7515 27.9187 16.7077 27.9937C16.4792 29.2267 16.1188 30.4315 15.6327 31.5875C15.5613 31.7653 15.4555 31.9273 15.3214 32.0642C15.1872 32.2011 15.0274 32.3102 14.851 32.3852C14.6746 32.4602 14.4852 32.4996 14.2935 32.5013C14.1019 32.5029 13.9118 32.4667 13.7342 32.3948C13.5565 32.3228 13.3948 32.2165 13.2584 32.0819C13.1219 31.9474 13.0133 31.7872 12.9389 31.6106C12.8644 31.434 12.8255 31.2444 12.8245 31.0528C12.8234 30.8611 12.8602 30.6711 12.9327 30.4937C13.0202 30.2687 13.1077 30.025 13.2015 29.775L10.789 27.3625C9.82647 27.8062 8.78897 28.0187 8.20147 26.9C8.11895 26.72 8.07373 26.5253 8.06856 26.3274C8.06338 26.1295 8.09836 25.9326 8.17137 25.7486C8.24438 25.5646 8.35392 25.3974 8.49337 25.2569C8.63281 25.1164 8.79928 25.0056 8.98272 24.9312C10.1361 24.4442 11.339 24.0837 12.5702 23.8562C13.889 23.5562 15.1327 23.95 16.4452 24.1187C17.5742 24.2915 18.7198 24.3292 19.8577 24.2313L16.3327 20.7063C16.2567 21.5379 16.2588 22.3749 16.339 23.2063C15.3681 22.9895 14.3774 22.8743 13.3827 22.8625C12.8515 14.1375 19.039 11.5875 26.8765 13.2812C27.639 13.4312 28.2515 13.2687 29.3827 12.9562L27.6077 11.1812C27.4702 11.6437 27.364 12.075 27.2952 12.4375C26.4265 12.3 25.3327 12.0812 24.4139 12.0062C24.7452 10.4375 25.114 8.9 25.814 7.93125C26.0539 7.69835 26.3662 7.55446 26.6991 7.52346C27.032 7.49247 27.3655 7.57623 27.6442 7.76085C27.923 7.94547 28.1302 8.21985 28.2316 8.53846C28.3329 8.85707 28.3223 9.20076 28.2015 9.5125C28.1077 9.7375 28.014 9.975 27.9202 10.2313L30.3327 12.6437C31.314 12.1875 32.339 11.9875 32.9202 13.1C33.0046 13.2797 33.0514 13.4748 33.0579 13.6733C33.0643 13.8717 33.0302 14.0694 32.9577 14.2543C32.8852 14.4391 32.7757 14.6072 32.636 14.7483C32.4963 14.8894 32.3293 15.0006 32.1452 15.075Z\" fill=\"#0D3063\"></path>\n<path d=\"M18.1138 16.925L23.6388 22.45C24.1097 21.8376 24.4404 21.1293 24.6075 20.375L20.195 15.9563C19.4384 16.1222 18.7278 16.4529 18.1138 16.925Z\" fill=\"#0D3063\"></path>\n</svg>",
-                          "title": "Cortisol Control"
-                        },
-                        "blocks": {}
-                      },
-                      "features_item_gLn3tf": {
-                        "type": "_features-item",
-                        "name": "Features Item",
-                        "settings": {
-                          "icon": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_636_509)\">\n<path d=\"M20.5639 13.5168C16.9806 13.5168 14.0806 16.4168 14.0806 20.0002C14.0806 23.5835 16.9806 26.4835 20.5639 26.4835C24.1472 26.4835 27.0472 23.5835 27.0472 20.0002C27.0472 16.4168 24.1472 13.5168 20.5639 13.5168Z\" fill=\"#0D3063\"></path>\n<path d=\"M38.0638 17.9167H35.4138C34.4971 11.3001 29.2471 6.06675 22.6471 5.15008V2.50008C22.6471 1.35008 21.7138 0.416748 20.5638 0.416748C19.4138 0.416748 18.4805 1.35008 18.4805 2.50008V5.15008C11.8638 6.06675 6.63047 11.3167 5.7138 17.9167H3.0638C1.9138 17.9167 0.980469 18.8501 0.980469 20.0001C0.980469 21.1501 1.9138 22.0834 3.0638 22.0834H5.7138C6.63047 28.7001 11.8638 33.9334 18.4805 34.8501V37.5001C18.4805 38.6501 19.4138 39.5834 20.5638 39.5834C21.7138 39.5834 22.6471 38.6501 22.6471 37.5001V34.8501C29.2638 33.9334 34.4971 28.7001 35.4138 22.0834H38.0638C39.2138 22.0834 40.1471 21.1501 40.1471 20.0001C40.1471 18.8501 39.2138 17.9167 38.0638 17.9167ZM20.5638 30.8501C14.5805 30.8501 9.7138 25.9834 9.7138 20.0001C9.7138 14.0167 14.5805 9.15008 20.5638 9.15008C26.5471 9.15008 31.4138 14.0167 31.4138 20.0001C31.4138 25.9834 26.5471 30.8501 20.5638 30.8501Z\" fill=\"#0D3063\"></path>\n</g>\n<defs>\n<clippath id=\"clip0_636_509\">\n<rect width=\"40\" height=\"40\" fill=\"white\" transform=\"translate(0.563965)\"></rect>\n</clippath>\n</defs>\n</svg>",
-                          "title": "Clear Mind"
-                        },
-                        "blocks": {}
-                      },
-                      "features_item_Rbrgkk": {
-                        "type": "_features-item",
-                        "name": "Features Item",
-                        "settings": {
-                          "icon": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_636_504)\">\n<path d=\"M31.1108 38.75C31.1108 36.8084 29.5369 35.2344 27.5952 35.2344H13.5327C11.5911 35.2344 10.0171 36.8084 10.0171 38.75V40H31.1108V38.75Z\" fill=\"#0D3063\"></path>\n<path d=\"M38.2202 9.45312V7.10938H23.8637C23.5097 6.11656 22.7287 5.33555 21.7358 4.98148V0H19.3921V4.98148C18.3993 5.33555 17.6183 6.11656 17.2642 7.10938H2.90771V9.45312H5.83771L0.563965 22.3438C0.563965 25.5745 3.19264 28.2031 6.42334 28.2031H8.76709C11.9978 28.2031 14.6265 25.5745 14.6265 22.3438L9.32889 9.45312H17.2643C17.6183 10.4459 18.3994 11.227 19.3922 11.581V28.3316C17.1019 28.8002 15.2902 30.5995 14.8233 32.8906H26.3048C25.8379 30.5995 24.0262 28.8002 21.7359 28.3316V11.581C22.7287 11.227 23.5097 10.4459 23.8638 9.45312H31.7753L26.5015 22.3438C26.5015 25.5745 29.1301 28.2031 32.3608 28.2031H34.7046C37.9353 28.2031 40.564 25.5745 40.564 22.3438L35.2664 9.45312H38.2202ZM11.6965 21.1719H3.49396L7.59521 11.3277L11.6965 21.1719ZM37.634 21.1719H29.4315L33.5327 11.3277L37.634 21.1719Z\" fill=\"#0D3063\"></path>\n</g>\n<defs>\n<clippath id=\"clip0_636_504\">\n<rect width=\"40\" height=\"40\" fill=\"white\" transform=\"translate(0.563965)\"></rect>\n</clippath>\n</defs>\n</svg>",
-                          "title": "Hormonal Balance"
-                        },
-                        "blocks": {}
-                      },
-                      "features_item_cVF6dX": {
-                        "type": "_features-item",
-                        "name": "Features Item",
-                        "settings": {
-                          "icon": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M20.5575 36.1937C29.5011 36.1937 36.7513 28.9435 36.7513 19.9999C36.7513 11.0563 29.5011 3.80615 20.5575 3.80615C11.614 3.80615 4.36377 11.0563 4.36377 19.9999C4.36377 28.9435 11.614 36.1937 20.5575 36.1937Z\" fill=\"#0D3063\"></path>\n<path d=\"M16.2574 25.6688C18.4324 28.1501 22.3887 28.2251 24.6824 25.9438C25.2512 25.3938 26.1137 26.2251 25.5824 26.8126C23.0012 29.7751 17.8074 29.3626 15.7074 26.1001C15.4637 25.7438 15.9762 25.3438 16.2637 25.6688H16.2574Z\" fill=\"white\"></path>\n<path d=\"M13.6451 10.6813C11.6826 11 9.99512 12.2313 8.98262 13.8938C8.57637 14.55 7.55137 13.9875 7.88887 13.2938C8.39512 12.2188 9.28262 11.35 10.2951 10.7813C11.3076 10.2063 12.4764 9.90004 13.6201 9.97504C13.8139 9.98754 13.9639 10.1563 13.9514 10.35C13.9389 10.5188 13.8139 10.65 13.6514 10.675L13.6451 10.6813Z\" fill=\"white\"></path>\n<path d=\"M31.3828 13.9C31.5078 15.8125 31.3016 18.2562 29.5266 19.525C27.6641 20.7687 24.7203 20.25 23.6766 18.1937C22.9891 16.8812 22.9266 15.5125 22.9141 14.2187C22.9141 13.875 23.1891 13.5937 23.5328 13.5875C23.8828 13.5875 24.1641 13.8687 24.1641 14.2187C24.1766 15.4125 24.3141 16.6375 24.8203 17.5625C25.8203 19.4375 28.9891 19.3125 29.8703 17.3437C30.3891 16.35 30.5828 15.1187 30.6766 13.9C30.7078 13.4687 31.3578 13.475 31.3828 13.9Z\" fill=\"white\"></path>\n<path d=\"M10.5763 13.8999C10.7138 16.0187 11.3138 18.9187 13.8701 18.8687C16.5013 19.0562 17.1138 16.4187 17.0888 14.2187C17.0888 13.8687 17.3701 13.5874 17.7201 13.5874C18.0638 13.5874 18.3388 13.8749 18.3388 14.2187C18.3701 16.1312 18.0263 18.7874 15.9701 19.7624C13.9451 20.7562 11.1888 19.9999 10.3763 17.8187C9.8326 16.5187 9.78885 15.1812 9.8701 13.9062C9.8826 13.7124 10.0513 13.5624 10.2451 13.5749C10.4263 13.5874 10.5638 13.7312 10.5763 13.9062V13.8999Z\" fill=\"white\"></path>\n<path d=\"M27.4951 9.97502C29.8013 9.83752 32.2076 11.175 33.2263 13.2938C33.5576 13.9938 32.5326 14.55 32.1326 13.8938C31.6263 13.0875 30.9763 12.3625 30.1826 11.7938C29.3888 11.2313 28.4576 10.8438 27.4638 10.675C27.0576 10.6188 27.0951 9.98752 27.5013 9.97502H27.4951Z\" fill=\"white\"></path>\n</svg>",
-                          "title": "Calmer Mood"
-                        },
-                        "blocks": {}
-                      }
-                    },
-                    "block_order": [
-                      "features_item_MAgpW9",
-                      "features_item_Gfhq8H",
-                      "features_item_i6iGmU",
-                      "features_item_gLn3tf",
-                      "features_item_Rbrgkk",
-                      "features_item_cVF6dX"
-                    ]
-                  },
-                  "doctor_review_xrWM48": {
-                    "type": "doctor-review",
-                    "name": "Doctor Review",
-                    "settings": {
-                      "title": "{{ closest.product.metafields.custom.related_doctor_review.value.review_title.value }}",
-                      "hide_on_mobile": false,
-                      "hide_on_desktop": true,
-                      "image": "{{ closest.product.metafields.custom.related_doctor_review.value.doctor_image.value }}",
-                      "text": "{{ closest.product.metafields.custom.related_doctor_review.value.review_text | metafield_tag }}",
-                      "name": "{{ closest.product.metafields.custom.related_doctor_review.value.author_name.value }}"
-                    },
-                    "blocks": {}
-                  }
-                },
-                "block_order": [
-                  "features_dcEUax",
-                  "doctor_review_xrWM48"
-                ]
-              }
-            },
-            "block_order": [
-              "layout_item_ijCW8V",
-              "layout_item_7e7BNR"
-            ]
-          }
-        },
-        "block_order": [
-          "layout_MxzgzM"
-        ],
-        "name": "Benefits",
-        "settings": {
-          "desktop_padding_top": 25,
-          "desktop_gap_between_blocks": 20,
-          "bg_color": "#ffffff",
-          "desktop_max_width": 1140,
-          "hide_on_mobile": false,
-          "mobile_padding_top": 30,
-          "mobile_gap_between_blocks": 10
-        }
-      },
-      "blank_section_myEaQK": {
-        "type": "blank-section",
-        "blocks": {
-          "heading_ieE6zn": {
-            "type": "heading",
-            "name": "Heading",
-            "settings": {
-              "title": "<h2>Join 1,000,000+ Others Who Have <br/>Changed Their Lives With Nectar</h2>",
-              "text_color": "rgba(0,0,0,0)",
-              "text_alignment": "center",
-              "heading_size": "4xl",
-              "font_weight": "bold",
-              "font_family": "values-sans",
-              "use_mobile_settings": true,
-              "text_alignment_mobile": "center",
-              "heading_size_mobile": "lg",
-              "font_weight_mobile": "bold"
-            },
-            "blocks": {}
-          },
-          "reviews_6bU7dY": {
-            "type": "reviews",
-            "name": "Reviews",
-            "settings": {
-              "reviews": [
-                "reviews-y4gg5rcc",
-                "leah-j",
-                "anna-i",
-                "claire-h",
-                "brooklyn-e",
-                "savannah-f",
-                "skylar-g",
-                "paisley-c",
-                "stella-b",
-                "reviews-lq9wrtno",
-                "nora-z",
-                "eleanor-y",
-                "penelope-w",
-                "scarlett-x",
-                "layla-v",
-                "victoria-u",
-                "sofia-t"
-              ],
-              "activate_filters": true,
-              "desktop_padding": 0,
-              "desktop_columns_per_row": 3,
-              "desktop_gap": 20,
-              "mobile_padding": 0,
-              "mobile_columns_per_row": 1,
-              "mobile_gap": 10
-            },
-            "blocks": {}
-          },
-          "carousel_JRGETJ": {
-            "type": "carousel",
-            "name": "Carousel",
-            "settings": {
-              "use_product_testimonials_metafiled": true,
-              "items_per_view": 4,
-              "gap": 14,
-              "items_per_view_mobile": 1,
-              "gap_mobile": 0
-            },
-            "blocks": {
-              "carousel_item_8jTtFf": {
-                "type": "_carousel-item",
-                "name": "Carousel Item",
-                "settings": {
-                  "image": "shopify://shop_images/Frame_1484581378_3.png",
-                  "video_url": "https://cdn.shopify.com/videos/c/o/v/f471d161dca04cc8ba9d8743e226d2c1.mp4"
-                },
-                "blocks": {}
-              },
-              "carousel_item_E33MiA": {
-                "type": "_carousel-item",
-                "name": "Carousel Item",
-                "settings": {
-                  "image": "shopify://shop_images/Calm_PDP_Picture_Sticks.png",
-                  "video_url": ""
-                },
-                "blocks": {}
-              },
-              "carousel_item_L7BWcX": {
-                "type": "_carousel-item",
-                "name": "Carousel Item",
-                "settings": {
-                  "image": "shopify://shop_images/7473299259786715751gif_6__12x16_-ezgif.com-video-to-gif-converter.gif",
-                  "video_url": ""
-                },
-                "blocks": {}
-              },
-              "carousel_item_Ka9rfW": {
-                "type": "_carousel-item",
-                "name": "Carousel Item",
-                "settings": {
-                  "image": "shopify://shop_images/Calm_PDP_Picture_Sticks_1.png",
-                  "video_url": ""
-                },
-                "blocks": {}
-              },
-              "carousel_item_tfLhYM": {
-                "type": "_carousel-item",
-                "name": "Carousel Item",
-                "settings": {
-                  "image": "shopify://shop_images/hero-bg.png",
-                  "video_url": ""
-                },
-                "blocks": {}
-              }
-            },
-            "block_order": [
-              "carousel_item_8jTtFf",
-              "carousel_item_E33MiA",
-              "carousel_item_L7BWcX",
-              "carousel_item_Ka9rfW",
-              "carousel_item_tfLhYM"
-            ]
-          }
-        },
-        "block_order": [
-          "heading_ieE6zn",
-          "reviews_6bU7dY",
-          "carousel_JRGETJ"
-        ],
-        "name": "Testimonials",
-        "settings": {
-          "desktop_padding_top": 40,
-          "desktop_gap_between_blocks": 10,
-          "bg_color": "#f5faff",
-          "desktop_max_width": 1140,
-          "hide_on_mobile": false,
-          "mobile_padding_top": 30,
-          "mobile_gap_between_blocks": 10
-        }
-      },
-      "ts_ingredients": {
-        "type": "ts-ingredients",
-        "blocks": {
-          "ingredient_1": {
-            "type": "ingredient",
-            "settings": {
-              "title": "Himalayan Pink Salt",
-              "subtitle": "Drives water absorption and keeps your body's hydration systems in sync.",
-              "image": "shopify://shop_images/ingredient_pink_salt.png"
-            }
-          },
-          "ingredient_2": {
-            "type": "ingredient",
-            "settings": {
-              "title": "Magnesium Citrate",
-              "subtitle": "Drives water absorption and keeps your body's hydration systems in sync.",
-              "image": "shopify://shop_images/ingredient_magnesium.png"
-            }
-          },
-          "ingredient_3": {
-            "type": "ingredient",
-            "settings": {
-              "title": "Potassium Citrate",
-              "subtitle": "Balances cellular fluids and prevents fatigue from electrolyte loss.",
-              "image": "shopify://shop_images/ingredient_potassium.png"
-            }
-          },
-          "ingredient_4": {
-            "type": "ingredient",
-            "settings": {
-              "title": "Calcium Citrate",
-              "subtitle": "Powers muscle contractions and nerve signals for sustained daily energy.",
-              "image": "shopify://shop_images/ingredient_calcium.png"
-            }
-          },
-          "ingredient_5": {
-            "type": "ingredient",
-            "settings": {
-              "title": "Organic Fruit Flavor",
-              "subtitle": "Flavored with Organic Fruit for a light, refreshing taste you’ll look forward to drinking all day long.",
-              "image": "shopify://shop_images/ingredient_fruit.png"
-            }
-          },
-          "ingredient_6": {
-            "type": "ingredient",
-            "settings": {
-              "title": "Chloride",
-              "subtitle": "Aids in nerve signal transmission and supports healthy kidney function.",
-              "image": "shopify://shop_images/ingredient_chloride.png"
-            }
-          },
-          "feature_1": {
-            "type": "feature",
-            "settings": {
-              "icon": "shopify://shop_images/icon_no_sugar.png",
-              "label": "Sugar Free"
-            }
-          },
-          "feature_2": {
-            "type": "feature",
-            "settings": {
-              "icon": "shopify://shop_images/icon_no_calorie.png",
-              "label": "Zero Calorie"
-            }
-          },
-          "feature_3": {
-            "type": "feature",
-            "settings": {
-              "icon": "shopify://shop_images/icon_no_sodium.png",
-              "label": "Low Sodium"
-            }
-          },
-          "feature_4": {
-            "type": "feature",
-            "settings": {
-              "icon": "shopify://shop_images/icon_no_gmo.png",
-              "label": "Non-GMO"
-            }
-          },
-          "feature_5": {
-            "type": "feature",
-            "settings": {
-              "icon": "shopify://shop_images/icon_plant.png",
-              "label": "Vegan & Plant-Based"
-            }
-          },
-          "feature_6": {
-            "type": "feature",
-            "settings": {
-              "icon": "shopify://shop_images/icon_avocado.png",
-              "label": "Keto & Paleo Friendly"
-            }
-          },
-          "mob_feature_1": {
-            "type": "mob_feature",
-            "settings": {
-              "icon": "shopify://shop_images/icon_low_sodium.png",
-              "label": "Low Sodium"
-            }
-          },
-          "mob_feature_2": {
-            "type": "mob_feature",
-            "settings": {
-              "icon": "shopify://shop_images/icon_sugar_free.png",
-              "label": "Sugar Free"
-            }
-          },
-          "mob_feature_3": {
-            "type": "mob_feature",
-            "settings": {
-              "icon": "shopify://shop_images/icon_zero_calorie.png",
-              "label": "Zero Calorie"
-            }
-          }
-        },
-        "block_order": [
-          "ingredient_1",
-          "ingredient_2",
-          "ingredient_3",
-          "ingredient_4",
-          "ingredient_5",
-          "ingredient_6",
-          "feature_1",
-          "feature_2",
-          "feature_3",
-          "feature_4",
-          "feature_5",
-          "feature_6",
-          "mob_feature_1",
-          "mob_feature_2",
-          "mob_feature_3"
-        ],
-        "settings": {
-          "title": "The Science Behind Nectar's Daily Hydration Formula",
-          "subtitle": "Clean, research-backed ingredients delivered at the perfect ratio for all-day hydration and energy.",
-          "btn_label": "See Our Full Nutrition Facts",
-          "btn_link": "/",
-          "show_popup": true,
-          "desk_popup_image": "shopify://shop_images/desk_popup_image.png",
-          "mob_popup_image": "shopify://shop_images/mob_popup_image.png",
-          "popup_image_subtitle": "<em><strong>Ingredients:</strong></em> Organic Fruit Flavor, Pink Himalayan Sea Salt, Potassium Citrate, Magnesium Citrate, Calcium Citrate, Non-GMO Citric & Malic Acid, Organic Stevia Leaf Extract",
-          "popup_title": "Made With Clean High-Quality Ingredients You Can Trust",
-          "popup_comment": "<em>Stop settling for low-quality electrolyte powders loaded with sugar and salt. Nectar is the clean, daily hydration mix that makes drinking water a habit you'll actually stick to.</em>",
-          "popup_features_subtitle": "<strong>Free From The Top 9 Allergens:</strong> We are dairy-free, soy-free, egg-free, gluten-free, peanut-free, tree nut-free, fish-free, sesame-free, and shellfish-free.",
-          "popup_btn_label": "Select Quantity And Flavors",
-          "popup_btn_link": "/pages/offer?product-handle=essential-daily-hydration-4-gift",
-          "desk_indent_top": 50,
-          "desk_indent_bottom": 50,
-          "mob_indent_top": 30,
-          "mob_indent_bottom": 20
-        }
-      },
-      "blank_section_eCra94": {
-        "type": "blank-section",
-        "blocks": {
-          "layout_PMT34G": {
-            "type": "layout",
-            "name": "Layout",
-            "settings": {
-              "desktop_padding": 0,
-              "desktop_gap": 38,
-              "desktop_columns_per_row": 2,
-              "align_items": "center",
-              "custom_column_width": true,
-              "column_width": "390px 1fr",
-              "mobile_padding": 0,
-              "mobile_gap": 14,
-              "mobile_columns_per_row": 1
-            },
-            "blocks": {
-              "layout_item_mgWfYk": {
-                "type": "_layout-item",
-                "name": "Column",
-                "settings": {
-                  "gap_desktop": 10,
-                  "gap_mobile": 10
-                },
-                "blocks": {
-                  "review_badge_J3k4MB": {
-                    "type": "review-badge",
-                    "name": "Review Badge",
-                    "settings": {
-                      "title": "Over 50 Million Servings Sold",
-                      "stars_quantity": 5,
-                      "text_color": "#0d3063",
-                      "badge_alignment": "justify-start",
-                      "badge_alignment_mobile": "justify-center"
-                    },
-                    "blocks": {}
-                  },
-                  "heading_gLpjWg": {
-                    "type": "heading",
-                    "name": "Heading",
-                    "settings": {
-                      "title": "<h2>Clean Ingredients. Half The Price. <br/>Better Results.</h2>",
-                      "text_color": "#123456",
-                      "text_alignment": "left",
-                      "heading_size": "4xl",
-                      "font_weight": "bold",
-                      "font_family": "values-sans",
-                      "use_mobile_settings": true,
-                      "text_alignment_mobile": "center",
-                      "heading_size_mobile": "lg",
-                      "font_weight_mobile": "bold"
-                    },
-                    "blocks": {}
-                  },
-                  "buttons_group_hqfMEW": {
-                    "type": "buttons-group",
-                    "name": "Buttons Group",
-                    "settings": {
-                      "hide_on_desktop": false,
-                      "gap_between_buttons_desktop": 10,
-                      "buttons_alignment": "flex-start",
-                      "top_padding_desktop": 10,
-                      "bottom_padding_desktop": 0,
-                      "hide_on_mobile": true,
-                      "gap_between_buttons_mobile": 0,
-                      "buttons_alignment_mobile": "center",
-                      "top_padding_mobile": 0,
-                      "bottom_padding_mobile": 0
-                    },
-                    "blocks": {
-                      "button_QwehPD": {
-                        "type": "button",
-                        "name": "Button",
-                        "settings": {
-                          "button_text": "Choose Your Package",
-                          "button_link": "",
-                          "related_product": "{{ closest.product }}",
-                          "button_type": "primary",
-                          "hide_on_mobile": false
-                        },
-                        "blocks": {}
-                      }
-                    },
-                    "block_order": [
-                      "button_QwehPD"
-                    ]
-                  }
-                },
-                "block_order": [
-                  "review_badge_J3k4MB",
-                  "heading_gLpjWg",
-                  "buttons_group_hqfMEW"
-                ]
-              },
-              "layout_item_kfx8yN": {
-                "type": "_layout-item",
-                "name": "Column",
-                "settings": {
-                  "gap_desktop": 0,
-                  "gap_mobile": 10
-                },
-                "blocks": {
-                  "table_bq4brD": {
-                    "type": "table",
-                    "name": "Table",
-                    "settings": {
-                      "table_items": [
-                        "0-86",
-                        "item-2",
-                        "item-3",
-                        "item-4",
-                        "item-5"
-                      ]
-                    },
-                    "blocks": {}
-                  },
-                  "buttons_group_pA7bMG": {
-                    "type": "buttons-group",
-                    "name": "Buttons Group",
-                    "settings": {
-                      "hide_on_desktop": true,
-                      "gap_between_buttons_desktop": 10,
-                      "buttons_alignment": "flex-start",
-                      "top_padding_desktop": 10,
-                      "bottom_padding_desktop": 0,
-                      "hide_on_mobile": false,
-                      "gap_between_buttons_mobile": 0,
-                      "buttons_alignment_mobile": "center",
-                      "top_padding_mobile": 0,
-                      "bottom_padding_mobile": 0
-                    },
-                    "blocks": {
-                      "button_ybtwRE": {
-                        "type": "button",
-                        "name": "Button",
-                        "settings": {
-                          "button_text": "Choose Your Package",
-                          "button_link": "",
-                          "related_product": "",
-                          "button_type": "primary",
-                          "hide_on_mobile": false
-                        },
-                        "blocks": {}
-                      }
-                    },
-                    "block_order": [
-                      "button_ybtwRE"
-                    ]
-                  }
-                },
-                "block_order": [
-                  "table_bq4brD",
-                  "buttons_group_pA7bMG"
-                ]
-              }
-            },
-            "block_order": [
-              "layout_item_mgWfYk",
-              "layout_item_kfx8yN"
-            ]
-          }
-        },
-        "block_order": [
-          "layout_PMT34G"
-        ],
-        "name": "Comparison",
-        "settings": {
-          "desktop_padding_top": 50,
-          "desktop_gap_between_blocks": 20,
-          "bg_color": "#e9f4ff",
-          "desktop_max_width": 1140,
-          "hide_on_mobile": false,
-          "mobile_padding_top": 30,
-          "mobile_gap_between_blocks": 10
-        }
-      },
-      "blank_section_FE7qpD": {
-        "type": "blank-section",
-        "blocks": {
-          "heading_9qQywC": {
-            "type": "heading",
-            "name": "Heading",
-            "settings": {
-              "title": "<h2>Simple. Refreshing. Part <br/>of Your Daily Ritual.</h2>",
-              "text_color": "#123456",
-              "text_alignment": "center",
-              "heading_size": "3xl",
-              "font_weight": "bold",
-              "font_family": "values-sans",
-              "use_mobile_settings": true,
-              "text_alignment_mobile": "center",
-              "heading_size_mobile": "lg",
-              "font_weight_mobile": "bold"
-            },
-            "blocks": {}
-          },
-          "images_with_captions_YrAPY9": {
-            "type": "images-with-captions",
-            "name": "Images with captions",
-            "settings": {
-              "related_metaobjects": "{{ closest.product.metafields.custom.how_to_use.value }}"
-            },
-            "blocks": {
-              "image_with_caption_ePdLtU": {
-                "type": "_image-with-caption",
-                "name": "Image with caption",
-                "settings": {
-                  "image": "shopify://shop_images/img-2.png",
-                  "caption": "<p>Stir or shake - due to the clean ingredients in Nectar, some settling may occur</p>"
-                },
-                "blocks": {}
-              },
-              "image_with_caption_y9wwB8": {
-                "type": "_image-with-caption",
-                "name": "Image with caption",
-                "settings": {
-                  "image": "shopify://shop_images/img-1.png",
-                  "caption": "<p>Pour packet into 8 - 16 oz of water (adjust based on flavor-strength preference) </p>"
-                },
-                "blocks": {}
-              },
-              "image_with_caption_UHGhUn": {
-                "type": "_image-with-caption",
-                "name": "Image with caption",
-                "settings": {
-                  "image": "shopify://shop_images/img-3.png",
-                  "caption": "<p>Enjoy Daily - drink at least 1 packet per day to stay optimally hydrated</p>"
-                },
-                "blocks": {}
-              }
-            },
-            "block_order": [
-              "image_with_caption_ePdLtU",
-              "image_with_caption_y9wwB8",
-              "image_with_caption_UHGhUn"
-            ]
-          },
-          "features_GjFPAN": {
-            "type": "features",
-            "name": "Features",
-            "settings": {
-              "related_metaobjects": [],
-              "when_to_use_metaobjects": "{{ closest.product.metafields.custom.when_to_use.value }}",
-              "gap_desktop": 10,
-              "width_desktop": 190,
-              "light_blue_color_scheme": true,
-              "use_grid_layout": true,
-              "columns_desktop": 4,
-              "layout_gap_desktop": 10,
-              "columns_mobile": 2,
-              "layout_gap_mobile": 10
-            },
-            "blocks": {
-              "features_item_T48yrL": {
-                "type": "_features-item",
-                "name": "Features Item",
-                "settings": {
-                  "icon": "<svg width=\"56\" height=\"51\" viewbox=\"0 0 56 51\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M31.6419 23.8712L39.2726 34.3367L39.8384 43.7769C39.8878 44.6011 39.6468 45.1131 39.3172 45.8701C38.9875 46.6273 38.9258 47.3579 38.1526 47.648L37.9956 47.7069C36.6335 48.2179 34.4888 47.8624 34.4098 46.4097L33.855 36.2235L25.7629 30.3323L15.8695 37.9314L9.67636 45.2809C8.739 46.3932 7.51896 48.0855 6.15699 47.5745C5.16569 47.2026 5.57787 47.2016 5.20078 46.3356C4.87109 45.5785 5.76367 43.4551 6.24053 42.781L19.618 23.8712L25.71 20.417L31.6419 23.8712Z\" fill=\"#4187B5\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M45.2221 11.2516L32.974 14.4822L31.6379 23.871H19.614L18.278 14.4822L14.5384 15.0951L9.13723 17.9104L8.96532 19.2561L8.57854 19.0276L6.31836 17.0947C6.73879 16.578 7.19287 16.1001 7.43117 15.8385L12.2516 10.5479L22.4943 9.04368C24.7389 8.71399 26.4983 9.24846 28.7577 9.04368L35.2473 8.4554L45.2221 8.29199V11.2516Z\" fill=\"#60B7FE\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9.14056 17.9106L8.85093 20.1783C7.5725 21.0792 5.61923 23.0813 5.44744 19.9707L5.38368 18.8158C5.34754 18.1606 6.45524 16.9052 7.11894 16.1816L9.14056 17.9106Z\" fill=\"#F0B16E\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M52.3556 9.64526L49.5078 10.0069L48.7534 11.4663C48.4166 12.1181 47.3839 12.1995 46.7254 11.8752L45.3765 11.211L44.8994 11.3368V8.29742L52.7946 8.16806C53.5734 8.15523 53.1147 9.47242 52.3556 9.64526Z\" fill=\"#F0B16E\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20.9517 9.27055L22.4958 9.04378C24.7404 8.71409 26.4997 9.24856 28.7591 9.04378L30.3033 8.90381L30.3001 9.97341L25.6274 16.381L20.9517 9.96974V9.27055Z\" fill=\"#4187B5\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19.6139 23.8713C19.09 20.8149 18.5857 17.7404 18.2778 14.4824L19.967 9.41501L22.494 9.04395C22.6642 9.12408 22.8352 9.1974 23.0068 9.26444C20.2954 15.5604 19.9413 19.8959 20.0678 23.8714H19.6139V23.8713Z\" fill=\"#FFBF31\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M32.9747 14.4823C32.6652 17.7647 32.1777 20.8469 31.6387 23.8712H31.1444C30.9946 23.1073 31.2423 19.6934 30.6652 16.3384C30.0722 12.8913 28.8283 10.7341 27.7402 9.09165C28.0701 9.08942 28.4081 9.07554 28.7584 9.04373L31.0302 8.83777L32.9747 14.4823Z\" fill=\"#FFBF31\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M44.4067 42.5573H2.60375C1.45637 42.5573 0.517578 43.496 0.517578 44.6434V48.0244C0.517578 49.1718 1.45624 50.1106 2.60375 50.1106H44.4067L55.5184 46.3339L44.4067 42.5573Z\" fill=\"#FA6E85\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.70145 42.5573H2.60375C1.45637 42.5573 0.517578 43.496 0.517578 44.6434V48.0244C0.517578 49.1718 1.45637 50.1106 2.60375 50.1106H6.70145V42.5573Z\" fill=\"#FFBF31\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M44.4077 50.1106L55.5194 46.3339L44.4077 42.5573V50.1106Z\" fill=\"#FFBF31\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M49.3682 48.4244L55.5185 46.334L49.3682 44.2437V48.4244Z\" fill=\"#FA6E85\"></path>\n<path d=\"M30.0059 7.9694C30.7378 5.55421 29.3732 3.00301 26.958 2.27113C24.5428 1.53925 21.9916 2.90385 21.2598 5.31904C20.5279 7.73424 21.8925 10.2854 24.3077 11.0173C26.7229 11.7492 29.2741 10.3846 30.0059 7.9694Z\" fill=\"#F0B16E\"></path>\n</svg>",
-                  "title": "Kickstart Your Day"
-                },
-                "blocks": {}
-              },
-              "features_item_9j3y6X": {
-                "type": "_features-item",
-                "name": "Features Item",
-                "settings": {
-                  "icon": "<svg width=\"51\" height=\"50\" viewbox=\"0 0 51 50\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M40.6438 28.4673C35.6068 28.7313 33.8868 26.6223 31.8148 26.3203C31.044 26.1999 30.2631 26.1573 29.4838 26.1933C29.2262 26.2068 28.9695 26.2341 28.7148 26.2753C26.9384 26.4018 25.1533 26.2277 23.4348 25.7603C23.4348 25.7603 22.5798 21.8013 23.4348 19.5383C24.2898 17.2753 16.4808 18.3153 17.2128 19.5383C18.6828 21.9933 17.2128 25.7603 17.2128 25.7603C17.2128 25.7603 14.2128 26.6603 11.4798 27.1313L11.7908 27.5623H9.75879C9.75879 27.5623 11.8958 35.1763 11.8958 49.0003H28.1808C28.1984 43.721 28.7747 38.4583 29.8998 33.3003C30.7328 33.5319 31.5968 33.6331 32.4608 33.6003C38.6778 33.3823 42.3958 34.3003 42.3958 34.3003L40.6438 28.4673Z\" fill=\"#F7BA85\"></path>\n<path d=\"M21.6083 10.1C21.6083 10.1 27.2553 3.26301 24.6683 0.614013C23.7223 -0.355987 22.3113 2.49101 18.2453 1.20501L14.9053 5.02001L21.6083 10.1Z\" fill=\"#653D28\"></path>\n<path d=\"M18.2432 1.20695C18.2432 1.20695 13.4862 1.04495 10.1592 5.83895C8.66724 7.98995 7.76724 11.0179 9.15124 15.2309C9.15124 15.2309 10.0132 19.0309 14.9032 18.7149L18.2432 1.20695Z\" fill=\"#653D28\"></path>\n<path d=\"M26.3553 9.96978C27.0783 12.0008 28.1743 14.1698 27.9993 16.5088C27.7613 19.7018 27.0593 21.9638 23.5993 22.9428C20.1393 23.9218 17.6883 23.0998 15.3873 20.8738C14.0073 19.5378 12.5473 17.1378 11.9603 15.0638C10.3923 9.53178 12.0973 5.50578 17.6303 3.93878C20.4533 3.13978 24.5853 4.99178 26.3553 9.96978Z\" fill=\"#F9C694\"></path>\n<path d=\"M13.8079 19.1487C14.6098 18.4609 14.6096 17.1452 13.8075 16.21C13.0054 15.2748 11.705 15.0743 10.9031 15.7621C10.1012 16.4499 10.1014 17.7656 10.9036 18.7008C11.7057 19.636 13.006 19.8365 13.8079 19.1487Z\" fill=\"#F9C694\"></path>\n<path d=\"M17.6396 1.236C17.6396 1.236 19.7556 1.07 19.8676 0C19.8676 0 20.7376 0.134 20.6536 1.585L18.6286 3.17L17.6396 1.236Z\" fill=\"#653D28\"></path>\n<path d=\"M13.6453 3.49207C13.6453 3.49207 18.6293 3.17007 21.2613 2.49207C21.2613 2.49207 23.3413 7.55007 12.3613 7.56407L13.6453 3.49207Z\" fill=\"#653D28\"></path>\n<path d=\"M21.8295 18.0001C21.5625 17.1861 21.8885 16.3481 22.5595 16.1281C23.2305 15.9081 23.9895 16.3891 24.2595 17.2031C24.5295 18.0171 24.2755 18.5031 23.6055 18.7211C22.9355 18.9391 22.0965 18.8181 21.8295 18.0001Z\" fill=\"#DC7142\"></path>\n<path d=\"M39.0761 31.5C38.3201 30.42 32.2761 23.915 28.8701 21.2L31.2001 18.343C31.2001 18.343 48.6641 28.643 44.9241 33.343C44.9241 33.343 43.0311 35.743 40.0361 32.675C39.6847 32.3101 39.3636 31.9171 39.0761 31.5Z\" fill=\"#F9C694\"></path>\n<path d=\"M26.7136 19.8708C26.7136 19.8708 25.3336 18.0708 23.7466 19.2608C23.6633 19.3233 23.5975 19.4061 23.5555 19.5014C23.5135 19.5967 23.4967 19.7012 23.5067 19.8048C23.5168 19.9085 23.5533 20.0078 23.6128 20.0933C23.6724 20.1787 23.7529 20.2474 23.8466 20.2928C24.1111 20.4077 24.3924 20.4789 24.6796 20.5038C24.6796 20.5038 26.8416 20.9918 27.6916 21.9628C27.6916 21.9628 29.7166 23.8968 31.1596 21.9438L29.3406 18.0518L26.7136 19.8708Z\" fill=\"#F1B48C\"></path>\n<path d=\"M23.3867 17.1169L30.7307 23.2049L34.3557 19.7889L28.6147 12.1899L23.3867 17.1169Z\" fill=\"#D8EEF5\"></path>\n<path d=\"M24.0996 17.2361L30.7256 22.8171L33.9106 19.8171L30.6286 15.4721C29.0698 15.4118 27.5181 15.7112 26.0936 16.3471L24.0996 17.2361Z\" fill=\"#98D6F6\"></path>\n<path d=\"M30.9887 14.0608C30.7357 14.3438 29.9497 15.1218 29.7217 16.3208C29.6947 16.4642 29.7145 16.6125 29.7783 16.7438C29.842 16.8751 29.9463 16.9824 30.0757 17.0498C30.2757 17.1578 30.5757 17.1398 30.9277 16.5258C30.9277 16.5258 31.2567 16.1358 31.8367 15.4058C31.9847 15.2258 32.0699 15.0025 32.0795 14.7697C32.089 14.5369 32.0224 14.3073 31.8897 14.1158C31.7547 13.9298 31.5707 13.8018 31.3247 13.8528C31.1936 13.885 31.076 13.9578 30.9887 14.0608Z\" fill=\"#F9C694\"></path>\n<path d=\"M31.7836 15.2052C31.5306 15.4882 30.7456 16.2662 30.5176 17.4652C30.4906 17.6085 30.5104 17.7567 30.5739 17.8879C30.6375 18.0192 30.7415 18.1265 30.8706 18.1942C31.0706 18.3022 31.3706 18.2842 31.7226 17.6702C31.7226 17.6702 32.0516 17.2802 32.6326 16.5502C32.7802 16.3701 32.8653 16.1468 32.8748 15.9141C32.8844 15.6814 32.818 15.4519 32.6856 15.2602C32.5506 15.0742 32.3656 14.9462 32.1196 14.9972C31.9885 15.0294 31.8709 15.1022 31.7836 15.2052Z\" fill=\"#F9C694\"></path>\n<path d=\"M32.5769 16.4778C32.3229 16.7598 31.6629 17.2438 31.4349 18.4438C31.3609 18.8318 31.4949 18.9938 31.6689 19.0888C31.8689 19.1968 32.1689 19.1498 32.6399 18.6478C32.6399 18.6478 32.8399 18.5528 33.4249 17.8228C33.5728 17.6426 33.6579 17.4191 33.6675 17.1862C33.677 16.9533 33.6105 16.7236 33.4779 16.5318C33.3429 16.3468 33.1589 16.2188 32.9129 16.2698C32.7817 16.302 32.6641 16.3748 32.5769 16.4778Z\" fill=\"#F9C694\"></path>\n<path d=\"M23.0579 12.2929C23.0322 12.2932 23.0065 12.2895 22.9819 12.2819C22.9477 12.272 22.9157 12.2555 22.8879 12.2332C22.8601 12.211 22.8369 12.1835 22.8197 12.1523C22.8026 12.121 22.7917 12.0868 22.7878 12.0513C22.7839 12.0159 22.787 11.9801 22.7969 11.9459C22.8069 11.9119 23.0499 11.0989 23.8169 10.7209C24.3449 10.4619 24.9759 10.4729 25.6919 10.7549C25.759 10.7814 25.8128 10.8335 25.8415 10.8997C25.8702 10.9659 25.8714 11.0408 25.8449 11.1079C25.8184 11.175 25.7663 11.2288 25.7001 11.2575C25.6339 11.2862 25.559 11.2874 25.4919 11.2609C24.9259 11.0379 24.4449 11.0199 24.0609 11.2069C23.5089 11.4749 23.3199 12.0919 23.3179 12.0989C23.3007 12.1546 23.2663 12.2034 23.2196 12.2383C23.1728 12.2732 23.1162 12.2923 23.0579 12.2929Z\" fill=\"#40220F\"></path>\n<path d=\"M16.7587 13.912C16.711 13.9119 16.6642 13.8993 16.6229 13.8754C16.5817 13.8515 16.5474 13.8171 16.5236 13.7758C16.4998 13.7344 16.4873 13.6876 16.4873 13.6399C16.4873 13.5922 16.4999 13.5453 16.5237 13.504C16.9107 12.838 17.3977 12.438 17.9727 12.314C18.8097 12.134 19.5047 12.621 19.5337 12.641C19.5894 12.684 19.6262 12.7468 19.6365 12.8163C19.6469 12.8858 19.6299 12.9566 19.5892 13.0139C19.5484 13.0712 19.4871 13.1105 19.4181 13.1235C19.349 13.1366 19.2776 13.1224 19.2187 13.084C19.2127 13.084 18.6807 12.715 18.0827 12.846C17.6657 12.938 17.2997 13.246 16.9937 13.777C16.9698 13.8181 16.9355 13.8522 16.8943 13.8759C16.853 13.8996 16.8063 13.912 16.7587 13.912Z\" fill=\"#40220F\"></path>\n<path d=\"M24.2202 7.91582C23.6465 7.90784 23.0843 8.07685 22.6102 8.39982C22.2294 8.64184 21.9171 8.97755 21.7032 9.37482C21.5752 9.63582 21.9652 9.86582 22.0942 9.60382C22.4632 8.85182 23.3782 8.34882 24.2242 8.36682C24.5152 8.37282 24.5152 7.91982 24.2242 7.91382L24.2202 7.91582Z\" fill=\"#40220F\"></path>\n<path d=\"M15.9482 10.7089C16.3497 10.4199 16.8315 10.2636 17.3262 10.2619C17.6981 10.2506 18.067 10.3324 18.3992 10.4999C18.6542 10.6419 18.8832 10.2509 18.6282 10.1089C18.2276 9.89964 17.78 9.79637 17.3282 9.80888C16.7518 9.80811 16.1894 9.98593 15.7182 10.3179C15.6676 10.3494 15.631 10.3991 15.616 10.4567C15.6009 10.5144 15.6085 10.5756 15.6372 10.6279C15.6678 10.6794 15.7176 10.7168 15.7756 10.732C15.8336 10.7472 15.8953 10.7389 15.9472 10.7089H15.9482Z\" fill=\"#40220F\"></path>\n<path d=\"M16.5898 26.0832C17.4898 26.8922 20.2898 29.4222 20.5898 29.8392C20.5898 29.8392 23.8468 25.6842 24.5108 25.8392C24.5108 25.8392 26.9978 26.1232 28.8678 26.0192C28.8678 26.0192 31.9878 25.8482 34.1208 27.1332C34.3163 27.2487 34.5218 27.3464 34.7348 27.4252L35.6108 27.7562C35.6108 27.7562 34.7818 32.7812 34.7818 33.6062C34.7818 33.6062 32.3318 33.7762 30.3388 33.6422C30.2163 33.6334 30.0951 33.6715 29.9997 33.7487C29.9042 33.826 29.8417 33.9366 29.8248 34.0582C29.4858 36.4132 27.9548 47.2372 28.1768 49.0042H11.8958L9.75879 27.2002L15.9498 25.9122C16.0624 25.8884 16.179 25.8914 16.2902 25.9212C16.4014 25.9509 16.5041 26.0064 16.5898 26.0832Z\" fill=\"#8D9295\"></path>\n<path d=\"M11.403 26.7931C11.403 26.7931 6.68001 25.6761 6.35501 33.0791C6.26301 35.1711 4.58301 40.8401 4.58301 49.0001H9.92201C9.92201 49.0001 10.884 40.2541 13.354 32.9351C14.316 30.0871 14.903 27.2791 11.403 26.7931Z\" fill=\"#F7BA85\"></path>\n<path d=\"M6.22204 31.0669C6.22204 31.0669 6.87804 25.5899 12.389 26.9359C12.389 26.9359 17.172 28.1609 13.483 36.2359L12.263 39.3069C12.263 39.3069 6.59204 37.9149 5.54004 38.1249C5.54004 38.1229 6.03404 33.2829 6.22204 31.0669Z\" fill=\"#8D9295\"></path>\n<path d=\"M11.8935 49.0002H13.1225C13.1225 49.0002 11.6755 44.8062 11.1895 41.8732C11.1895 41.8732 11.5885 46.7282 11.8935 49.0002Z\" fill=\"#7D8184\"></path>\n<path d=\"M5.54004 38.1231C5.54004 38.1231 9.46604 38.6031 12.263 39.3051C12.263 39.3051 13.014 37.3371 13.483 36.2341C13.483 36.2341 9.56704 38.7221 5.60304 37.5081L5.54004 38.1231Z\" fill=\"#7D8184\"></path>\n<path d=\"M18.2426 3.73474C18.2426 3.73474 14.4726 5.44374 12.6916 3.73474C12.6916 3.73474 11.6186 4.52574 10.9746 5.50674C10.9746 5.50674 15.6036 6.56374 18.2426 3.73474Z\" fill=\"#86421C\"></path>\n</svg>",
-                  "title": "Pre & Post Workout"
-                },
-                "blocks": {}
-              },
-              "features_item_7PqXqr": {
-                "type": "_features-item",
-                "name": "Features Item",
-                "settings": {
-                  "icon": "<svg width=\"51\" height=\"50\" viewbox=\"0 0 51 50\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M27.4736 22.4273V25.0008C27.4736 26.4223 28.6257 27.5743 30.0472 27.5743C31.4829 27.5743 32.6208 26.4062 32.6208 25.0008V22.4273L30.1374 21.1405L27.4736 22.4273Z\" fill=\"#FFCBBC\"></path>\n<path d=\"M13.4893 12.5921L16.1088 16.442L20.0863 19.1891C20.5071 19.0422 20.9464 18.8746 21.3975 18.6847L22.1782 12.6811L21.3975 6.1731C19.2451 7.4349 16.782 9.45993 13.4893 12.5921Z\" fill=\"#E4F3FF\"></path>\n<path d=\"M29.1939 4.32654H28.0307C25.7397 4.32654 23.7557 4.79321 21.3994 6.1746V18.6863C22.5217 18.2136 23.7187 17.5982 24.8986 16.7867L26.1121 14.8494L27.4721 14.6215L27.473 14.6207V22.4271H32.6201V7.75269C32.6202 5.86114 31.0864 4.32654 29.1939 4.32654Z\" fill=\"#C3DAFD\"></path>\n<path d=\"M27.4691 11.7026V14.6202C26.6473 15.4651 25.7757 16.1797 24.8955 16.7854V11.7026H27.4691Z\" fill=\"#ADC1E0\"></path>\n<path d=\"M37.7673 13.4189C40.61 13.4189 42.9144 11.1145 42.9144 8.27183C42.9144 5.42918 40.61 3.12476 37.7673 3.12476C34.9246 3.12476 32.6201 5.42918 32.6201 8.27183C32.6201 11.1145 34.9246 13.4189 37.7673 13.4189Z\" fill=\"#FFCBBC\"></path>\n<path d=\"M14.6942 26.2865L9.04448 21.7118L11.1241 34.5193L7.49424 42.696C6.43015 44.5579 7.77468 46.8748 9.91932 46.8748C10.9216 46.8748 11.8471 46.3377 12.3444 45.4675L18.3956 32.6346C13.9717 25.0473 14.7981 26.4645 14.6942 26.2865Z\" fill=\"#4895FF\"></path>\n<path d=\"M17.7475 20.4944L15.3352 17.0859L11.6363 14.3833C11.6362 14.3833 11.6361 14.3833 11.6361 14.3833C11.1148 14.8952 10.5747 15.4303 10.013 15.9921C6.70168 19.3034 9.30528 22.3454 10.3296 23.3696L18.3934 32.6343V43.8721C18.3934 45.5303 19.7377 46.8746 21.3959 46.8746L22.4125 36.5804L21.3959 25.778L17.9534 20.8467C17.9534 20.8467 17.7728 20.6134 17.7475 20.4944Z\" fill=\"#5ECEF4\"></path>\n<path d=\"M21.3994 46.8751C23.0577 46.8751 24.4019 45.5309 24.4019 43.8727V32.019C24.4019 30.7451 24.0072 29.5029 23.273 28.4622L21.3994 25.7786V46.8751Z\" fill=\"#4895FF\"></path>\n<path d=\"M11.6387 14.383L17.7481 20.4924C17.6853 20.1895 17.8557 19.8574 18.1947 19.7677C18.729 19.627 19.3305 19.4513 19.9765 19.2291C20.0126 19.2166 20.0495 19.2034 20.0858 19.1907L13.4888 12.5938C12.8915 13.1613 12.2339 13.7989 11.6387 14.383Z\" fill=\"#457899\"></path>\n</svg>",
-                  "title": "Afternoon Slump"
-                },
-                "blocks": {}
-              },
-              "features_item_kPbazm": {
-                "type": "_features-item",
-                "name": "Features Item",
-                "settings": {
-                  "icon": "<svg width=\"51\" height=\"50\" viewbox=\"0 0 51 50\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_121_1688)\">\n<path d=\"M25.0175 49.9999C38.8246 49.9999 50.0175 38.807 50.0175 25C50.0175 11.1929 38.8246 0 25.0175 0C11.2104 0 0.0175781 11.1929 0.0175781 25C0.0175781 38.807 11.2104 49.9999 25.0175 49.9999Z\" fill=\"#27536B\"></path>\n<path d=\"M38.2381 28.596C33.5151 33.3189 25.8575 33.3189 21.1346 28.596C16.4116 23.873 16.4116 16.2154 21.1346 11.4925C22.1194 10.5077 23.2319 9.72907 24.4185 9.15503C20.5319 9.25864 16.6763 10.7932 13.71 13.7593C7.56281 19.9065 7.56281 29.8732 13.71 36.0205C19.8572 42.1677 29.8239 42.1677 35.9711 36.0205C38.9374 33.0542 40.4718 29.1986 40.5754 25.3119C40.0015 26.4987 39.2229 27.6112 38.2381 28.596Z\" fill=\"#FCD57E\"></path>\n<path d=\"M34.7638 14.9971L35.3213 20.0411L35.879 14.9971L40.923 14.4396L35.879 13.8818L35.3213 8.83789L34.7638 13.8818L29.7197 14.4396L34.7638 14.9971Z\" fill=\"white\"></path>\n<path d=\"M10.989 40.101L11.3885 43.7141L11.7879 40.101L15.401 39.7016L11.7879 39.3022L11.3885 35.6891L10.989 39.3022L7.37598 39.7016L10.989 40.101Z\" fill=\"white\"></path>\n<path d=\"M24.2683 24.0299L23.5527 24.7455L24.2683 25.461L24.9838 24.7455L24.2683 24.0299Z\" fill=\"white\"></path>\n<path d=\"M41.4314 18.6753L40.7158 19.3909L41.4314 20.1064L42.1469 19.3909L41.4314 18.6753Z\" fill=\"white\"></path>\n<path d=\"M44.4685 27.5663L43.7529 28.2819L44.4685 28.9974L45.184 28.2819L44.4685 27.5663Z\" fill=\"white\"></path>\n<path d=\"M7.94991 11.9522L7.23438 12.6677L7.94991 13.3833L8.66545 12.6677L7.94991 11.9522Z\" fill=\"white\"></path>\n<path d=\"M34.3415 40.9464L33.626 41.662L34.3415 42.3775L35.0571 41.662L34.3415 40.9464Z\" fill=\"white\"></path>\n<path d=\"M12.0026 9.34977L11.2871 10.0653L12.0026 10.7808L12.7182 10.0653L12.0026 9.34977Z\" fill=\"white\"></path>\n</g>\n<defs>\n<clippath id=\"clip0_121_1688\">\n<rect width=\"50\" height=\"50\" fill=\"white\" transform=\"translate(0.0175781)\"></rect>\n</clippath>\n</defs>\n</svg>",
-                  "title": "After A Night Out"
-                },
-                "blocks": {}
-              }
-            },
-            "block_order": [
-              "features_item_T48yrL",
-              "features_item_9j3y6X",
-              "features_item_7PqXqr",
-              "features_item_kPbazm"
-            ]
-          }
-        },
-        "block_order": [
-          "heading_9qQywC",
-          "images_with_captions_YrAPY9",
-          "features_GjFPAN"
-        ],
-        "name": "Images",
-        "settings": {
-          "desktop_padding_top": 50,
-          "desktop_gap_between_blocks": 10,
-          "bg_color": "#ffffff",
-          "desktop_max_width": 1140,
-          "hide_on_mobile": false,
-          "mobile_padding_top": 30,
-          "mobile_gap_between_blocks": 10
-        }
-      },
-      "ts_cards": {
-        "type": "ts-cards",
-        "blocks": {
-          "card_1": {
-            "type": "card",
-            "settings": {
-              "image": "shopify://shop_images/card_1.png",
-              "link": ""
-            }
-          },
-          "card_2": {
-            "type": "card",
-            "settings": {
-              "image": "shopify://shop_images/card_2.png",
-              "link": ""
-            }
-          },
-          "card_3": {
-            "type": "card",
-            "settings": {
-              "image": "shopify://shop_images/card_3.png",
-              "link": ""
-            }
-          },
-          "card_4": {
-            "type": "card",
-            "settings": {
-              "image": "shopify://shop_images/card_4.png",
-              "link": ""
-            }
-          },
-          "card_5": {
-            "type": "card",
-            "settings": {
-              "image": "shopify://shop_images/card_5.png",
-              "link": ""
-            }
-          },
-          "card_6": {
-            "type": "card",
-            "settings": {
-              "image": "shopify://shop_images/card_6.png",
-              "link": ""
-            }
-          }
-        },
-        "block_order": [
-          "card_1",
-          "card_2",
-          "card_3",
-          "card_4",
-          "card_5",
-          "card_6"
-        ],
-        "settings": {
-          "title": "Six Light, Refreshing Flavors",
-          "subtitle": "Real organic fruit flavors you can enjoy Sipping all day long",
-          "desk_indent_top": 50,
-          "desk_indent_bottom": 50,
-          "mob_indent_top": 30,
-          "mob_indent_bottom": 30
-        }
-      },
-      "ts_faq": {
-        "type": "ts-faq",
-        "blocks": {
-          "row_1": {
-            "type": "row",
-            "settings": {
-              "question": "Shipping Details",
-              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
-            }
-          },
-          "row_2": {
-            "type": "row",
-            "settings": {
-              "question": "Who Needs Nectar?",
-              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
-            }
-          },
-          "row_3": {
-            "type": "row",
-            "settings": {
-              "question": "Ingredients & Nutrition",
-              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
-            }
-          },
-          "row_4": {
-            "type": "row",
-            "settings": {
-              "question": "Directions For Use",
-              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
-            }
-          },
-          "row_5": {
-            "type": "row",
-            "settings": {
-              "question": "What Does It Taste Like?",
-              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
-            }
-          },
-          "row_6": {
-            "type": "row",
-            "settings": {
-              "question": "What Does It Taste Like?",
-              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
-            }
-          },
-          "row_7": {
-            "type": "row",
-            "settings": {
-              "question": "What Does It Taste Like?",
-              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
-            }
-          },
-          "row_8": {
-            "type": "row",
-            "settings": {
-              "question": "What Does It Taste Like?",
-              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
-            }
-          }
-        },
-        "block_order": [
-          "row_1",
-          "row_2",
-          "row_3",
-          "row_4",
-          "row_5",
-          "row_6",
-          "row_7",
-          "row_8"
-        ],
-        "settings": {
-          "title": "Still Not Sure? Here Are The Top 8 Questions We Get About <strong>Nectar</strong>",
-          "desk_indent_top": 50,
-          "desk_indent_bottom": 50,
-          "mob_indent_top": 30,
-          "mob_indent_bottom": 20
-        }
-      },
-      "ts_review_image": {
-        "type": "ts-review-image",
-        "settings": {
-          "title": "Real, Verified Relief - See Why Millions Call",
-          "subtitle": "Nectar “A Game Changer for Neck Pain”",
-          "description": "Note: All reviews below are from actual paying customers. They have been authenticated and verified.",
-          "image": "shopify://shop_images/review_image_bb0f6981-b346-4f6c-9f96-964cc499c330.png",
-          "review_label": "Based on 14,802 reviews",
-          "review_count": "4.9",
-          "reviewers_label": "Of Reviewers Would Recommend This Product To A Friend",
-          "reviewers_count": "99%"
-        }
-      },
-      "17537951597b6ea412": {
-        "type": "apps",
-        "blocks": {
-          "junip_junip_reviews_wiREQi": {
-            "type": "shopify://apps/junip/blocks/junip-reviews/dc14f5a8-ed15-41b1-ad08-cfba23f9789b",
-            "settings": {
-              "layout": "list",
-              "reviewsType": "all",
-              "showSummary": true,
-              "showMediaGallery": false,
-              "reviewsCount": 5,
-              "containerClass": ""
-            }
-          }
-        },
-        "block_order": [
-          "junip_junip_reviews_wiREQi"
-        ],
-        "custom_css": [
-          ".junip-reviews-tab-switcher-container,.junip-product-review-summary-wrapper,.junip-filters,.junip-product-review-summary-wrapper + .junip-separator,.junip-powered-by-footer {display: none;}",
-          ".junip-reviews-container {padding-top: 0;}",
-          ".junip-product-review-container {padding: 2em 1em !important;}"
-        ],
-        "settings": {}
-      },
-      "ts_risks": {
-        "type": "ts-risks",
-        "blocks": {
-          "feature_1": {
-            "type": "feature",
-            "settings": {
-              "icon": "shopify://shop_images/icon_delivery.svg",
-              "label": "Free Shipping"
-            }
-          },
-          "feature_2": {
-            "type": "feature",
-            "settings": {
-              "icon": "shopify://shop_images/icon_guarantee.svg",
-              "label": "90 Day Guarantee"
-            }
-          },
-          "feature_3": {
-            "type": "feature",
-            "settings": {
-              "icon": "shopify://shop_images/icon_return.svg",
-              "label": "Easy Returns"
-            }
-          }
-        },
-        "block_order": [
-          "feature_1",
-          "feature_2",
-          "feature_3"
-        ],
-        "settings": {
-          "title": "Try Us Risk Free",
-          "desk_indent_top": 36,
-          "desk_indent_bottom": 36,
-          "mob_indent_top": 12,
-          "mob_indent_bottom": 16
-        }
-      },
-      "ts_footer": {
-        "type": "ts-footer",
-        "settings": {
-          "first_notice": "No statements found on the drinknectar.com site or advertised by Drink Nectar Inc. have been approved by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease. Testimonials found at drinknectar.com are unverified results, and may not reflect the typical purchaser's experience, may not apply to the average person and are not intended to represent or guarantee that anyone will achieve the same or similar results.",
-          "second_notice": "Information on the Drink Nectar Inc. site is provided for informational purposes only. It is not meant to substitute for medical advice from your physician or other medical professional. You should not use the information contained herein for diagnosing or treating a health problem or disease, or prescribing any medication. Carefully read all product documentation. If you have or suspect that you have a medical problem, promptly contact your regular health care provider.",
-          "menu": "offer-footer"
-        }
+{
+  "sections": {
+    "timer": {
+      "type": "ts-timer",
+      "settings": {
+        "icon": "shopify://shop_images/icon_timer.svg",
+        "title": "Special TV Offer",
+        "badge": "UP TO 60% OFF",
+        "enable_timer": true,
+        "enable_daily": true,
+        "end_date": "23-07-2025 12:00"
       }
     },
-    "order": [
-      "timer",
-      "ts_logo",
-      "ts_banner",
-      "ts_logos",
-      "blank_section_R96MqF",
-      "blank_section_myEaQK",
-      "ts_ingredients",
-      "blank_section_eCra94",
-      "blank_section_FE7qpD",
-      "ts_cards",
-      "ts_faq",
-      "ts_review_image",
-      "17537951597b6ea412",
-      "ts_risks",
-      "ts_footer"
-    ]
-  }
-  
+    "ts_logo": {
+      "type": "ts-logo",
+      "settings": {}
+    },
+    "ts_banner": {
+      "type": "ts-banner",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/banner_image.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/banner_image.png"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/banner_image.png"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/banner_image.png"
+          }
+        },
+        "image_5": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/banner_image.png"
+          }
+        },
+        "image_6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/banner_image.png"
+          }
+        },
+        "row_1": {
+          "type": "row",
+          "settings": {
+            "question": "Shipping Details",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+          }
+        },
+        "row_2": {
+          "type": "row",
+          "settings": {
+            "question": "Who Needs Nectar?",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+          }
+        },
+        "row_3": {
+          "type": "row",
+          "settings": {
+            "question": "Ingredients & Nutrition",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+          }
+        },
+        "row_4": {
+          "type": "row",
+          "settings": {
+            "question": "Directions For Use",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+          }
+        },
+        "row_5": {
+          "type": "row",
+          "settings": {
+            "question": "What Does It Taste Like?",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+          }
+        },
+        "row_6": {
+          "type": "row",
+          "settings": {
+            "question": "What Does It Taste Like?",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+          }
+        },
+        "row_7": {
+          "type": "row",
+          "settings": {
+            "question": "What Does It Taste Like?",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+          }
+        },
+        "row_8": {
+          "type": "row",
+          "settings": {
+            "question": "What Does It Taste Like?",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+          }
+        },
+        "row_9": {
+          "type": "row",
+          "settings": {
+            "question": "What Does It Taste Like?",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+          }
+        },
+        "button_feature_1": {
+          "type": "button_feature",
+          "settings": {
+            "icon": "shopify://shop_images/icon_banner_delivery.svg",
+            "label": "Express US Shipping"
+          }
+        },
+        "button_feature_2": {
+          "type": "button_feature",
+          "settings": {
+            "icon": "shopify://shop_images/icon_banner_money.svg",
+            "label": "90 Day Money Back Guarantee"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4",
+        "image_5",
+        "image_6",
+        "row_1",
+        "row_2",
+        "row_3",
+        "row_4",
+        "row_5",
+        "row_6",
+        "row_7",
+        "row_8",
+        "row_9",
+        "button_feature_1",
+        "button_feature_2"
+      ],
+      "settings": {
+        "review": "1 Million+ Happy Customers",
+        "title": "Doctor-Formulated Hydration You Can Trust",
+        "description": "<p><strong>Introducing Nectar</strong> - The only Hydration Mix developed for <strong>safe daily use.</strong> Medical Grade Electrolytes & Organic Fruit Flavor for:</p><ul><li><strong>Steady Energy</strong> - Power Through The Day</li><li><strong>Clearer Focus</strong> - Stay Sharp & Alert</li><li><strong>Boosted Mood</strong> - Feel Like Your Best Self</li></ul>",
+        "btn_label": "Get Up To 60% Off + 4 Free Gifts!",
+        "btn_link": "/pages/offer?product-handle=essential-daily-hydration-4-gift",
+        "sticky_link": "/pages/offer?product-handle=essential-daily-hydration-4-gift",
+        "sticky_label": "Get Up To 60% Off + 4 Free Gifts!",
+        "guarantee_image": "shopify://shop_images/guarantee_image.png",
+        "guarantee_label": "Try Nectar with no risk! If you’re not 100% satisfied, you can trust in our 90-day money back gaurantee.*"
+      }
+    },
+    "ts_logos": {
+      "type": "ts-logos",
+      "blocks": {
+        "logo_1": {
+          "type": "logo",
+          "name": "Logo",
+          "settings": {
+            "desk_logo": "shopify://shop_images/logo_vice.png",
+            "mob_logo": "shopify://shop_images/logo_color_vice.png"
+          }
+        },
+        "logo_2": {
+          "type": "logo",
+          "name": "Logo",
+          "settings": {
+            "desk_logo": "shopify://shop_images/logo_fox.png",
+            "mob_logo": "shopify://shop_images/logo_color_fox.png"
+          }
+        },
+        "logo_3": {
+          "type": "logo",
+          "name": "Logo",
+          "settings": {
+            "desk_logo": "shopify://shop_images/logo_amc.png",
+            "mob_logo": "shopify://shop_images/logo_color_amc.png"
+          }
+        },
+        "logo_4": {
+          "type": "logo",
+          "name": "Logo",
+          "settings": {
+            "desk_logo": "shopify://shop_images/logo_espn.png",
+            "mob_logo": "shopify://shop_images/logo_color_espn.png"
+          }
+        },
+        "logo_5": {
+          "type": "logo",
+          "name": "Logo",
+          "settings": {
+            "desk_logo": "shopify://shop_images/logo_tbs.png",
+            "mob_logo": "shopify://shop_images/logo_color_tbs.png"
+          }
+        },
+        "logo_6": {
+          "type": "logo",
+          "name": "Logo",
+          "settings": {
+            "desk_logo": "shopify://shop_images/logo_bet.png",
+            "mob_logo": "shopify://shop_images/logo_color_bet.png"
+          }
+        },
+        "logo_7": {
+          "type": "logo",
+          "name": "Logo",
+          "settings": {
+            "desk_logo": "shopify://shop_images/logo_comedy.png",
+            "mob_logo": "shopify://shop_images/logo_color_comedy.png"
+          }
+        },
+        "logo_8": {
+          "type": "logo",
+          "name": "Logo",
+          "settings": {
+            "desk_logo": "shopify://shop_images/logo_history.png",
+            "mob_logo": "shopify://shop_images/logo_color_history.png"
+          }
+        },
+        "logo_9": {
+          "type": "logo",
+          "name": "Logo",
+          "settings": {
+            "desk_logo": "shopify://shop_images/logo_msnbc.png",
+            "mob_logo": "shopify://shop_images/logo_color_msnbc.png"
+          }
+        }
+      },
+      "block_order": [
+        "logo_1",
+        "logo_2",
+        "logo_3",
+        "logo_4",
+        "logo_5",
+        "logo_6",
+        "logo_7",
+        "logo_8",
+        "logo_9"
+      ],
+      "settings": {
+        "title": "As Seen On",
+        "desk_indent_top": 26,
+        "desk_indent_bottom": 26,
+        "mob_indent_top": 20,
+        "mob_indent_bottom": 30
+      }
+    },
+    "blank_section_R96MqF": {
+      "type": "blank-section",
+      "blocks": {
+        "layout_MxzgzM": {
+          "type": "layout",
+          "name": "Layout",
+          "settings": {
+            "desktop_padding": 0,
+            "desktop_gap": 54,
+            "desktop_columns_per_row": 2,
+            "align_items": "start",
+            "custom_column_width": false,
+            "column_width": "1fr 1fr",
+            "mobile_padding": 0,
+            "mobile_gap": 20,
+            "mobile_columns_per_row": 1
+          },
+          "blocks": {
+            "layout_item_ijCW8V": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 6,
+                "gap_mobile": 6
+              },
+              "blocks": {
+                "heading_ACfJwq": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "title": "<p>{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].title.value }}</p>",
+                    "text_color": "#123456",
+                    "text_alignment": "left",
+                    "heading_size": "lg",
+                    "font_weight": "bold",
+                    "font_family": "values-sans",
+                    "use_mobile_settings": true,
+                    "text_alignment_mobile": "center",
+                    "heading_size_mobile": "lg",
+                    "font_weight_mobile": "bold"
+                  },
+                  "blocks": {}
+                },
+                "text_f4wrBc": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].description | metafield_tag }}",
+                    "text_alignment": "left",
+                    "font_family": "values-sans",
+                    "font_weight": "normal",
+                    "text_color": "#000000",
+                    "font_size": 16,
+                    "font_size_mobile": 16,
+                    "text_alignment_mobile": "center"
+                  },
+                  "blocks": {}
+                },
+                "doctor_review_kH9ctQ": {
+                  "type": "doctor-review",
+                  "name": "Doctor Review",
+                  "settings": {
+                    "title": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].title.value }}",
+                    "hide_on_mobile": true,
+                    "hide_on_desktop": false,
+                    "image": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].doctor_image.value }}",
+                    "text": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].review_text | metafield_tag }}",
+                    "name": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].author_name.value }}"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_ACfJwq",
+                "text_f4wrBc",
+                "doctor_review_kH9ctQ"
+              ]
+            },
+            "layout_item_7e7BNR": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 0,
+                "gap_mobile": 18
+              },
+              "blocks": {
+                "features_dcEUax": {
+                  "type": "features",
+                  "name": "Benefits",
+                  "settings": {
+                    "related_metaobjects": "{{ closest.product.metafields.custom.product_benefits.value }}",
+                    "when_to_use_metaobjects": [],
+                    "gap_desktop": 10,
+                    "width_desktop": 200,
+                    "light_blue_color_scheme": false,
+                    "use_grid_layout": true,
+                    "columns_desktop": 3,
+                    "layout_gap_desktop": 10,
+                    "columns_mobile": 3,
+                    "layout_gap_mobile": 6
+                  },
+                  "blocks": {
+                    "features_item_MAgpW9": {
+                      "type": "_features-item",
+                      "name": "Features Item",
+                      "settings": {
+                        "icon": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M32.8784 31.4913C32.9739 33.006 31.8142 34.4828 30.2411 34.4835L24.7731 34.4855C25.0839 34.1283 25.3116 33.7066 25.4399 33.2508C25.5681 32.7951 25.5938 32.3165 25.5151 31.8496C25.4363 31.3828 25.255 30.9391 24.9843 30.5507C24.7136 30.1623 24.3601 29.8386 23.9494 29.6031L29.8863 28.8541C31.4252 28.6598 32.7808 29.9431 32.8784 31.4913ZM22.6265 30.2906L11.2412 28.854C9.70217 28.6598 8.3467 29.9431 8.24904 31.4913C8.15357 33.006 9.31326 34.4828 10.8864 34.4835L22.3622 34.4877C22.8976 34.4871 23.4128 34.2826 23.8029 33.9158C24.1931 33.549 24.4289 33.0475 24.4626 32.5131C24.4962 31.9787 24.3252 31.4515 23.9841 31.0387C23.6431 30.6258 23.1576 30.3584 22.6265 30.2906ZM20.564 13.1819C21.3224 13.1818 22.0638 12.9569 22.6944 12.5355C23.325 12.1141 23.8164 11.5152 24.1066 10.8144C24.3969 10.1137 24.4728 9.34269 24.3248 8.59884C24.1768 7.85498 23.8116 7.1717 23.2753 6.63541C22.739 6.09912 22.0557 5.73389 21.3119 5.58591C20.568 5.43793 19.797 5.51385 19.0963 5.80406C18.3956 6.09427 17.7966 6.58574 17.3752 7.21633C16.9538 7.84692 16.7289 8.58831 16.7288 9.34674C16.7288 9.85039 16.828 10.3491 17.0207 10.8144C17.2134 11.2797 17.4959 11.7025 17.8521 12.0587C18.2082 12.4148 18.631 12.6973 19.0963 12.89C19.5616 13.0827 20.0603 13.1819 20.564 13.1819ZM37.5959 15.3921H3.53201C3.07636 15.3921 2.63937 15.5731 2.31717 15.8953C1.99497 16.2175 1.81396 16.6545 1.81396 17.1102C1.81396 17.5658 1.99497 18.0028 2.31717 18.325C2.63937 18.6472 3.07636 18.8282 3.53201 18.8282H14.7576V28.1953L20.564 28.9279L26.3702 28.1953V18.8281H37.5959C38.0516 18.8281 38.4886 18.6471 38.8108 18.3249C39.133 18.0027 39.314 17.5657 39.314 17.11C39.314 16.6544 39.133 16.2174 38.8108 15.8952C38.4886 15.573 38.0516 15.392 37.5959 15.392V15.3921Z\" fill=\"#0D3063\"></path>\n</svg>",
+                        "title": "Stress Relief"
+                      },
+                      "blocks": {}
+                    },
+                    "features_item_Gfhq8H": {
+                      "type": "_features-item",
+                      "name": "Features Item",
+                      "settings": {
+                        "icon": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_637_519)\">\n<path d=\"M3.0627 8.74981C2.80145 8.74981 2.53895 8.66856 2.31395 8.49981C1.76145 8.08606 1.64895 7.30231 2.06395 6.74981L5.81395 1.74981C6.2277 1.19856 7.01145 1.08606 7.56395 1.49981C8.11645 1.91356 8.22895 2.69731 7.81395 3.24981L4.06395 8.24981C3.81895 8.57731 3.44395 8.74981 3.0627 8.74981Z\" fill=\"#0D3063\"></path>\n<path d=\"M6.81396 3.75H3.06396C2.37271 3.75 1.81396 3.19 1.81396 2.5C1.81396 1.81 2.37271 1.25 3.06396 1.25H6.81396C7.50521 1.25 8.06396 1.81 8.06396 2.5C8.06396 3.19 7.50521 3.75 6.81396 3.75Z\" fill=\"#0D3063\"></path>\n<path d=\"M6.81396 8.75H3.06396C2.37271 8.75 1.81396 8.19 1.81396 7.5C1.81396 6.81 2.37271 6.25 3.06396 6.25H6.81396C7.50521 6.25 8.06396 6.81 8.06396 7.5C8.06396 8.19 7.50521 8.75 6.81396 8.75Z\" fill=\"#0D3063\"></path>\n<path d=\"M34.3127 8.75006C34.0515 8.75006 33.789 8.66881 33.564 8.50006C33.0115 8.08631 32.899 7.30256 33.314 6.75006L37.064 1.75006C37.4777 1.19881 38.2627 1.08631 38.8127 1.50006C39.3652 1.91381 39.4777 2.69756 39.0627 3.25006L35.3127 8.25006C35.069 8.57756 34.694 8.75006 34.3127 8.75006Z\" fill=\"#0D3063\"></path>\n<path d=\"M38.064 3.75H34.314C33.6227 3.75 33.064 3.19 33.064 2.5C33.064 1.81 33.6227 1.25 34.314 1.25H38.064C38.7552 1.25 39.314 1.81 39.314 2.5C39.314 3.19 38.7552 3.75 38.064 3.75Z\" fill=\"#0D3063\"></path>\n<path d=\"M38.064 8.75H34.314C33.6227 8.75 33.064 8.19 33.064 7.5C33.064 6.81 33.6227 6.25 34.314 6.25H38.064C38.7552 6.25 39.314 6.81 39.314 7.5C39.314 8.19 38.7552 8.75 38.064 8.75Z\" fill=\"#0D3063\"></path>\n<path d=\"M20.564 6.25C11.604 6.25 4.31396 13.54 4.31396 22.5C4.31396 31.46 11.604 38.75 20.564 38.75C29.524 38.75 36.814 31.46 36.814 22.5C36.814 13.54 29.524 6.25 20.564 6.25ZM10.564 20C10.564 19.31 11.1227 18.75 11.814 18.75C12.5052 18.75 13.064 19.31 13.064 20C13.064 20.6888 13.624 21.25 14.314 21.25C15.004 21.25 15.564 20.6888 15.564 20C15.564 19.31 16.1227 18.75 16.814 18.75C17.5052 18.75 18.064 19.31 18.064 20C18.064 22.0675 16.3815 23.75 14.314 23.75C12.2465 23.75 10.564 22.0675 10.564 20ZM20.564 33.75C18.4965 33.75 16.814 32.0675 16.814 30C16.814 29.31 17.3727 28.75 18.064 28.75C18.7552 28.75 19.314 29.31 19.314 30C19.314 30.6887 19.874 31.25 20.564 31.25C21.254 31.25 21.814 30.6887 21.814 30C21.814 29.31 22.3727 28.75 23.064 28.75C23.7552 28.75 24.314 29.31 24.314 30C24.314 32.0675 22.6315 33.75 20.564 33.75ZM26.814 23.75C24.7465 23.75 23.064 22.0675 23.064 20C23.064 19.31 23.6227 18.75 24.314 18.75C25.0052 18.75 25.564 19.31 25.564 20C25.564 20.6888 26.124 21.25 26.814 21.25C27.504 21.25 28.064 20.6888 28.064 20C28.064 19.31 28.6227 18.75 29.314 18.75C30.0052 18.75 30.564 19.31 30.564 20C30.564 22.0675 28.8815 23.75 26.814 23.75Z\" fill=\"#0D3063\"></path>\n</g>\n<defs>\n<clippath id=\"clip0_637_519\">\n<rect width=\"40\" height=\"40\" fill=\"white\" transform=\"translate(0.563965)\"></rect>\n</clippath>\n</defs>\n</svg>",
+                        "title": "Deep Sleep"
+                      },
+                      "blocks": {}
+                    },
+                    "features_item_i6iGmU": {
+                      "type": "_features-item",
+                      "name": "Features Item",
+                      "settings": {
+                        "icon": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M16.52 19.6312L20.9325 24.0437C21.689 23.8832 22.3988 23.5518 23.0075 23.0749L17.4888 17.5562C17.0118 18.1649 16.6805 18.8747 16.52 19.6312Z\" fill=\"#0D3063\"></path>\n<path d=\"M20.564 1.25C16.8556 1.25 13.2305 2.34967 10.147 4.40994C7.06361 6.47022 4.66037 9.39857 3.24123 12.8247C1.82209 16.2508 1.45078 20.0208 2.17425 23.6579C2.89772 27.2951 4.68349 30.636 7.30572 33.2583C9.92795 35.8805 13.2689 37.6663 16.906 38.3897C20.5432 39.1132 24.3132 38.7419 27.7393 37.3227C31.1654 35.9036 34.0938 33.5004 36.154 30.4169C38.2143 27.3335 39.314 23.7084 39.314 20C39.3079 15.029 37.3305 10.2634 33.8155 6.74844C30.3005 3.23344 25.5349 1.25606 20.564 1.25ZM32.1452 15.075C31.014 15.5375 28.8452 16.3125 27.1577 16.25C26.039 16.1687 24.9202 15.8438 23.8015 15.7812C22.96 15.6948 22.1121 15.6927 21.2702 15.775L24.789 19.2938C24.8713 18.4644 24.8692 17.6289 24.7827 16.8C25.7539 17.014 26.7446 17.1271 27.739 17.1375C28.3577 25.8687 21.839 28.4937 14.0702 26.6875C13.2773 26.6516 12.485 26.7727 11.739 27.0437L13.514 28.8187C13.6702 28.3625 13.7453 27.9 13.839 27.5625C14.7515 27.7 15.7515 27.9187 16.7077 27.9937C16.4792 29.2267 16.1188 30.4315 15.6327 31.5875C15.5613 31.7653 15.4555 31.9273 15.3214 32.0642C15.1872 32.2011 15.0274 32.3102 14.851 32.3852C14.6746 32.4602 14.4852 32.4996 14.2935 32.5013C14.1019 32.5029 13.9118 32.4667 13.7342 32.3948C13.5565 32.3228 13.3948 32.2165 13.2584 32.0819C13.1219 31.9474 13.0133 31.7872 12.9389 31.6106C12.8644 31.434 12.8255 31.2444 12.8245 31.0528C12.8234 30.8611 12.8602 30.6711 12.9327 30.4937C13.0202 30.2687 13.1077 30.025 13.2015 29.775L10.789 27.3625C9.82647 27.8062 8.78897 28.0187 8.20147 26.9C8.11895 26.72 8.07373 26.5253 8.06856 26.3274C8.06338 26.1295 8.09836 25.9326 8.17137 25.7486C8.24438 25.5646 8.35392 25.3974 8.49337 25.2569C8.63281 25.1164 8.79928 25.0056 8.98272 24.9312C10.1361 24.4442 11.339 24.0837 12.5702 23.8562C13.889 23.5562 15.1327 23.95 16.4452 24.1187C17.5742 24.2915 18.7198 24.3292 19.8577 24.2313L16.3327 20.7063C16.2567 21.5379 16.2588 22.3749 16.339 23.2063C15.3681 22.9895 14.3774 22.8743 13.3827 22.8625C12.8515 14.1375 19.039 11.5875 26.8765 13.2812C27.639 13.4312 28.2515 13.2687 29.3827 12.9562L27.6077 11.1812C27.4702 11.6437 27.364 12.075 27.2952 12.4375C26.4265 12.3 25.3327 12.0812 24.4139 12.0062C24.7452 10.4375 25.114 8.9 25.814 7.93125C26.0539 7.69835 26.3662 7.55446 26.6991 7.52346C27.032 7.49247 27.3655 7.57623 27.6442 7.76085C27.923 7.94547 28.1302 8.21985 28.2316 8.53846C28.3329 8.85707 28.3223 9.20076 28.2015 9.5125C28.1077 9.7375 28.014 9.975 27.9202 10.2313L30.3327 12.6437C31.314 12.1875 32.339 11.9875 32.9202 13.1C33.0046 13.2797 33.0514 13.4748 33.0579 13.6733C33.0643 13.8717 33.0302 14.0694 32.9577 14.2543C32.8852 14.4391 32.7757 14.6072 32.636 14.7483C32.4963 14.8894 32.3293 15.0006 32.1452 15.075Z\" fill=\"#0D3063\"></path>\n<path d=\"M18.1138 16.925L23.6388 22.45C24.1097 21.8376 24.4404 21.1293 24.6075 20.375L20.195 15.9563C19.4384 16.1222 18.7278 16.4529 18.1138 16.925Z\" fill=\"#0D3063\"></path>\n</svg>",
+                        "title": "Cortisol Control"
+                      },
+                      "blocks": {}
+                    },
+                    "features_item_gLn3tf": {
+                      "type": "_features-item",
+                      "name": "Features Item",
+                      "settings": {
+                        "icon": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_636_509)\">\n<path d=\"M20.5639 13.5168C16.9806 13.5168 14.0806 16.4168 14.0806 20.0002C14.0806 23.5835 16.9806 26.4835 20.5639 26.4835C24.1472 26.4835 27.0472 23.5835 27.0472 20.0002C27.0472 16.4168 24.1472 13.5168 20.5639 13.5168Z\" fill=\"#0D3063\"></path>\n<path d=\"M38.0638 17.9167H35.4138C34.4971 11.3001 29.2471 6.06675 22.6471 5.15008V2.50008C22.6471 1.35008 21.7138 0.416748 20.5638 0.416748C19.4138 0.416748 18.4805 1.35008 18.4805 2.50008V5.15008C11.8638 6.06675 6.63047 11.3167 5.7138 17.9167H3.0638C1.9138 17.9167 0.980469 18.8501 0.980469 20.0001C0.980469 21.1501 1.9138 22.0834 3.0638 22.0834H5.7138C6.63047 28.7001 11.8638 33.9334 18.4805 34.8501V37.5001C18.4805 38.6501 19.4138 39.5834 20.5638 39.5834C21.7138 39.5834 22.6471 38.6501 22.6471 37.5001V34.8501C29.2638 33.9334 34.4971 28.7001 35.4138 22.0834H38.0638C39.2138 22.0834 40.1471 21.1501 40.1471 20.0001C40.1471 18.8501 39.2138 17.9167 38.0638 17.9167ZM20.5638 30.8501C14.5805 30.8501 9.7138 25.9834 9.7138 20.0001C9.7138 14.0167 14.5805 9.15008 20.5638 9.15008C26.5471 9.15008 31.4138 14.0167 31.4138 20.0001C31.4138 25.9834 26.5471 30.8501 20.5638 30.8501Z\" fill=\"#0D3063\"></path>\n</g>\n<defs>\n<clippath id=\"clip0_636_509\">\n<rect width=\"40\" height=\"40\" fill=\"white\" transform=\"translate(0.563965)\"></rect>\n</clippath>\n</defs>\n</svg>",
+                        "title": "Clear Mind"
+                      },
+                      "blocks": {}
+                    },
+                    "features_item_Rbrgkk": {
+                      "type": "_features-item",
+                      "name": "Features Item",
+                      "settings": {
+                        "icon": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_636_504)\">\n<path d=\"M31.1108 38.75C31.1108 36.8084 29.5369 35.2344 27.5952 35.2344H13.5327C11.5911 35.2344 10.0171 36.8084 10.0171 38.75V40H31.1108V38.75Z\" fill=\"#0D3063\"></path>\n<path d=\"M38.2202 9.45312V7.10938H23.8637C23.5097 6.11656 22.7287 5.33555 21.7358 4.98148V0H19.3921V4.98148C18.3993 5.33555 17.6183 6.11656 17.2642 7.10938H2.90771V9.45312H5.83771L0.563965 22.3438C0.563965 25.5745 3.19264 28.2031 6.42334 28.2031H8.76709C11.9978 28.2031 14.6265 25.5745 14.6265 22.3438L9.32889 9.45312H17.2643C17.6183 10.4459 18.3994 11.227 19.3922 11.581V28.3316C17.1019 28.8002 15.2902 30.5995 14.8233 32.8906H26.3048C25.8379 30.5995 24.0262 28.8002 21.7359 28.3316V11.581C22.7287 11.227 23.5097 10.4459 23.8638 9.45312H31.7753L26.5015 22.3438C26.5015 25.5745 29.1301 28.2031 32.3608 28.2031H34.7046C37.9353 28.2031 40.564 25.5745 40.564 22.3438L35.2664 9.45312H38.2202ZM11.6965 21.1719H3.49396L7.59521 11.3277L11.6965 21.1719ZM37.634 21.1719H29.4315L33.5327 11.3277L37.634 21.1719Z\" fill=\"#0D3063\"></path>\n</g>\n<defs>\n<clippath id=\"clip0_636_504\">\n<rect width=\"40\" height=\"40\" fill=\"white\" transform=\"translate(0.563965)\"></rect>\n</clippath>\n</defs>\n</svg>",
+                        "title": "Hormonal Balance"
+                      },
+                      "blocks": {}
+                    },
+                    "features_item_cVF6dX": {
+                      "type": "_features-item",
+                      "name": "Features Item",
+                      "settings": {
+                        "icon": "<svg width=\"41\" height=\"40\" viewbox=\"0 0 41 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M20.5575 36.1937C29.5011 36.1937 36.7513 28.9435 36.7513 19.9999C36.7513 11.0563 29.5011 3.80615 20.5575 3.80615C11.614 3.80615 4.36377 11.0563 4.36377 19.9999C4.36377 28.9435 11.614 36.1937 20.5575 36.1937Z\" fill=\"#0D3063\"></path>\n<path d=\"M16.2574 25.6688C18.4324 28.1501 22.3887 28.2251 24.6824 25.9438C25.2512 25.3938 26.1137 26.2251 25.5824 26.8126C23.0012 29.7751 17.8074 29.3626 15.7074 26.1001C15.4637 25.7438 15.9762 25.3438 16.2637 25.6688H16.2574Z\" fill=\"white\"></path>\n<path d=\"M13.6451 10.6813C11.6826 11 9.99512 12.2313 8.98262 13.8938C8.57637 14.55 7.55137 13.9875 7.88887 13.2938C8.39512 12.2188 9.28262 11.35 10.2951 10.7813C11.3076 10.2063 12.4764 9.90004 13.6201 9.97504C13.8139 9.98754 13.9639 10.1563 13.9514 10.35C13.9389 10.5188 13.8139 10.65 13.6514 10.675L13.6451 10.6813Z\" fill=\"white\"></path>\n<path d=\"M31.3828 13.9C31.5078 15.8125 31.3016 18.2562 29.5266 19.525C27.6641 20.7687 24.7203 20.25 23.6766 18.1937C22.9891 16.8812 22.9266 15.5125 22.9141 14.2187C22.9141 13.875 23.1891 13.5937 23.5328 13.5875C23.8828 13.5875 24.1641 13.8687 24.1641 14.2187C24.1766 15.4125 24.3141 16.6375 24.8203 17.5625C25.8203 19.4375 28.9891 19.3125 29.8703 17.3437C30.3891 16.35 30.5828 15.1187 30.6766 13.9C30.7078 13.4687 31.3578 13.475 31.3828 13.9Z\" fill=\"white\"></path>\n<path d=\"M10.5763 13.8999C10.7138 16.0187 11.3138 18.9187 13.8701 18.8687C16.5013 19.0562 17.1138 16.4187 17.0888 14.2187C17.0888 13.8687 17.3701 13.5874 17.7201 13.5874C18.0638 13.5874 18.3388 13.8749 18.3388 14.2187C18.3701 16.1312 18.0263 18.7874 15.9701 19.7624C13.9451 20.7562 11.1888 19.9999 10.3763 17.8187C9.8326 16.5187 9.78885 15.1812 9.8701 13.9062C9.8826 13.7124 10.0513 13.5624 10.2451 13.5749C10.4263 13.5874 10.5638 13.7312 10.5763 13.9062V13.8999Z\" fill=\"white\"></path>\n<path d=\"M27.4951 9.97502C29.8013 9.83752 32.2076 11.175 33.2263 13.2938C33.5576 13.9938 32.5326 14.55 32.1326 13.8938C31.6263 13.0875 30.9763 12.3625 30.1826 11.7938C29.3888 11.2313 28.4576 10.8438 27.4638 10.675C27.0576 10.6188 27.0951 9.98752 27.5013 9.97502H27.4951Z\" fill=\"white\"></path>\n</svg>",
+                        "title": "Calmer Mood"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "features_item_MAgpW9",
+                    "features_item_Gfhq8H",
+                    "features_item_i6iGmU",
+                    "features_item_gLn3tf",
+                    "features_item_Rbrgkk",
+                    "features_item_cVF6dX"
+                  ]
+                },
+                "doctor_review_xrWM48": {
+                  "type": "doctor-review",
+                  "name": "Doctor Review",
+                  "settings": {
+                    "title": "{{ closest.product.metafields.custom.related_doctor_review.value.review_title.value }}",
+                    "hide_on_mobile": false,
+                    "hide_on_desktop": true,
+                    "image": "{{ closest.product.metafields.custom.related_doctor_review.value.doctor_image.value }}",
+                    "text": "{{ closest.product.metafields.custom.related_doctor_review.value.review_text | metafield_tag }}",
+                    "name": "{{ closest.product.metafields.custom.related_doctor_review.value.author_name.value }}"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "features_dcEUax",
+                "doctor_review_xrWM48"
+              ]
+            }
+          },
+          "block_order": [
+            "layout_item_ijCW8V",
+            "layout_item_7e7BNR"
+          ]
+        }
+      },
+      "block_order": [
+        "layout_MxzgzM"
+      ],
+      "name": "Benefits",
+      "settings": {
+        "desktop_padding_top": 25,
+        "desktop_gap_between_blocks": 20,
+        "bg_color": "#ffffff",
+        "desktop_max_width": 1140,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 30,
+        "mobile_gap_between_blocks": 10
+      }
+    },
+    "blank_section_myEaQK": {
+      "type": "blank-section",
+      "blocks": {
+        "heading_ieE6zn": {
+          "type": "heading",
+          "name": "Heading",
+          "settings": {
+            "title": "<h2>Join 1,000,000+ Others Who Have <br/>Changed Their Lives With Nectar</h2>",
+            "text_color": "rgba(0,0,0,0)",
+            "text_alignment": "center",
+            "heading_size": "4xl",
+            "font_weight": "bold",
+            "font_family": "values-sans",
+            "use_mobile_settings": true,
+            "text_alignment_mobile": "center",
+            "heading_size_mobile": "lg",
+            "font_weight_mobile": "bold"
+          },
+          "blocks": {}
+        },
+        "reviews_6bU7dY": {
+          "type": "reviews",
+          "name": "Reviews",
+          "settings": {
+            "reviews": [
+              "reviews-y4gg5rcc",
+              "leah-j",
+              "anna-i",
+              "claire-h",
+              "brooklyn-e",
+              "savannah-f",
+              "skylar-g",
+              "paisley-c",
+              "stella-b",
+              "reviews-lq9wrtno",
+              "nora-z",
+              "eleanor-y",
+              "penelope-w",
+              "scarlett-x",
+              "layla-v",
+              "victoria-u",
+              "sofia-t"
+            ],
+            "activate_filters": true,
+            "desktop_padding": 0,
+            "desktop_columns_per_row": 3,
+            "desktop_gap": 20,
+            "mobile_padding": 0,
+            "mobile_columns_per_row": 1,
+            "mobile_gap": 10
+          },
+          "blocks": {}
+        },
+        "carousel_JRGETJ": {
+          "type": "carousel",
+          "name": "Carousel",
+          "settings": {
+            "use_product_testimonials_metafiled": true,
+            "items_per_view": 4,
+            "gap": 14,
+            "items_per_view_mobile": 1,
+            "gap_mobile": 0
+          },
+          "blocks": {
+            "carousel_item_8jTtFf": {
+              "type": "_carousel-item",
+              "name": "Carousel Item",
+              "settings": {
+                "image": "shopify://shop_images/Frame_1484581378_3.png",
+                "video_url": "https://cdn.shopify.com/videos/c/o/v/f471d161dca04cc8ba9d8743e226d2c1.mp4"
+              },
+              "blocks": {}
+            },
+            "carousel_item_E33MiA": {
+              "type": "_carousel-item",
+              "name": "Carousel Item",
+              "settings": {
+                "image": "shopify://shop_images/Calm_PDP_Picture_Sticks.png",
+                "video_url": ""
+              },
+              "blocks": {}
+            },
+            "carousel_item_L7BWcX": {
+              "type": "_carousel-item",
+              "name": "Carousel Item",
+              "settings": {
+                "image": "shopify://shop_images/7473299259786715751gif_6__12x16_-ezgif.com-video-to-gif-converter.gif",
+                "video_url": ""
+              },
+              "blocks": {}
+            },
+            "carousel_item_Ka9rfW": {
+              "type": "_carousel-item",
+              "name": "Carousel Item",
+              "settings": {
+                "image": "shopify://shop_images/Calm_PDP_Picture_Sticks_1.png",
+                "video_url": ""
+              },
+              "blocks": {}
+            },
+            "carousel_item_tfLhYM": {
+              "type": "_carousel-item",
+              "name": "Carousel Item",
+              "settings": {
+                "image": "shopify://shop_images/hero-bg.png",
+                "video_url": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "carousel_item_8jTtFf",
+            "carousel_item_E33MiA",
+            "carousel_item_L7BWcX",
+            "carousel_item_Ka9rfW",
+            "carousel_item_tfLhYM"
+          ]
+        }
+      },
+      "block_order": [
+        "heading_ieE6zn",
+        "reviews_6bU7dY",
+        "carousel_JRGETJ"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "desktop_padding_top": 40,
+        "desktop_gap_between_blocks": 10,
+        "bg_color": "#f5faff",
+        "desktop_max_width": 1140,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 30,
+        "mobile_gap_between_blocks": 10
+      }
+    },
+    "ts_ingredients": {
+      "type": "ts-ingredients",
+      "blocks": {
+        "ingredient_1": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Himalayan Pink Salt",
+            "subtitle": "Drives water absorption and keeps your body's hydration systems in sync.",
+            "image": "shopify://shop_images/ingredient_pink_salt.png"
+          }
+        },
+        "ingredient_2": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Magnesium Citrate",
+            "subtitle": "Drives water absorption and keeps your body's hydration systems in sync.",
+            "image": "shopify://shop_images/ingredient_magnesium.png"
+          }
+        },
+        "ingredient_3": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Potassium Citrate",
+            "subtitle": "Balances cellular fluids and prevents fatigue from electrolyte loss.",
+            "image": "shopify://shop_images/ingredient_potassium.png"
+          }
+        },
+        "ingredient_4": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Calcium Citrate",
+            "subtitle": "Powers muscle contractions and nerve signals for sustained daily energy.",
+            "image": "shopify://shop_images/ingredient_calcium.png"
+          }
+        },
+        "ingredient_5": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Organic Fruit Flavor",
+            "subtitle": "Flavored with Organic Fruit for a light, refreshing taste you’ll look forward to drinking all day long.",
+            "image": "shopify://shop_images/ingredient_fruit.png"
+          }
+        },
+        "ingredient_6": {
+          "type": "ingredient",
+          "settings": {
+            "title": "Chloride",
+            "subtitle": "Aids in nerve signal transmission and supports healthy kidney function.",
+            "image": "shopify://shop_images/ingredient_chloride.png"
+          }
+        },
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/icon_no_sugar.png",
+            "label": "Sugar Free"
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/icon_no_calorie.png",
+            "label": "Zero Calorie"
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/icon_no_sodium.png",
+            "label": "Low Sodium"
+          }
+        },
+        "feature_4": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/icon_no_gmo.png",
+            "label": "Non-GMO"
+          }
+        },
+        "feature_5": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/icon_plant.png",
+            "label": "Vegan & Plant-Based"
+          }
+        },
+        "feature_6": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/icon_avocado.png",
+            "label": "Keto & Paleo Friendly"
+          }
+        },
+        "mob_feature_1": {
+          "type": "mob_feature",
+          "settings": {
+            "icon": "shopify://shop_images/icon_low_sodium.png",
+            "label": "Low Sodium"
+          }
+        },
+        "mob_feature_2": {
+          "type": "mob_feature",
+          "settings": {
+            "icon": "shopify://shop_images/icon_sugar_free.png",
+            "label": "Sugar Free"
+          }
+        },
+        "mob_feature_3": {
+          "type": "mob_feature",
+          "settings": {
+            "icon": "shopify://shop_images/icon_zero_calorie.png",
+            "label": "Zero Calorie"
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_1",
+        "ingredient_2",
+        "ingredient_3",
+        "ingredient_4",
+        "ingredient_5",
+        "ingredient_6",
+        "feature_1",
+        "feature_2",
+        "feature_3",
+        "feature_4",
+        "feature_5",
+        "feature_6",
+        "mob_feature_1",
+        "mob_feature_2",
+        "mob_feature_3"
+      ],
+      "settings": {
+        "title": "The Science Behind Nectar's Daily Hydration Formula",
+        "subtitle": "Clean, research-backed ingredients delivered at the perfect ratio for all-day hydration and energy.",
+        "btn_label": "See Our Full Nutrition Facts",
+        "btn_link": "/",
+        "show_popup": true,
+        "desk_popup_image": "shopify://shop_images/desk_popup_image.png",
+        "mob_popup_image": "shopify://shop_images/mob_popup_image.png",
+        "popup_image_subtitle": "<em><strong>Ingredients:</strong></em> Organic Fruit Flavor, Pink Himalayan Sea Salt, Potassium Citrate, Magnesium Citrate, Calcium Citrate, Non-GMO Citric & Malic Acid, Organic Stevia Leaf Extract",
+        "popup_title": "Made With Clean High-Quality Ingredients You Can Trust",
+        "popup_comment": "<em>Stop settling for low-quality electrolyte powders loaded with sugar and salt. Nectar is the clean, daily hydration mix that makes drinking water a habit you'll actually stick to.</em>",
+        "popup_features_subtitle": "<strong>Free From The Top 9 Allergens:</strong> We are dairy-free, soy-free, egg-free, gluten-free, peanut-free, tree nut-free, fish-free, sesame-free, and shellfish-free.",
+        "popup_btn_label": "Select Quantity And Flavors",
+        "popup_btn_link": "/pages/offer?product-handle=essential-daily-hydration-4-gift",
+        "desk_indent_top": 50,
+        "desk_indent_bottom": 50,
+        "mob_indent_top": 30,
+        "mob_indent_bottom": 20
+      }
+    },
+    "blank_section_eCra94": {
+      "type": "blank-section",
+      "blocks": {
+        "layout_PMT34G": {
+          "type": "layout",
+          "name": "Layout",
+          "settings": {
+            "desktop_padding": 0,
+            "desktop_gap": 38,
+            "desktop_columns_per_row": 2,
+            "align_items": "center",
+            "custom_column_width": true,
+            "column_width": "390px 1fr",
+            "mobile_padding": 0,
+            "mobile_gap": 14,
+            "mobile_columns_per_row": 1
+          },
+          "blocks": {
+            "layout_item_mgWfYk": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 10,
+                "gap_mobile": 10
+              },
+              "blocks": {
+                "review_badge_J3k4MB": {
+                  "type": "review-badge",
+                  "name": "Review Badge",
+                  "settings": {
+                    "title": "Over 50 Million Servings Sold",
+                    "stars_quantity": 5,
+                    "text_color": "#0d3063",
+                    "badge_alignment": "justify-start",
+                    "badge_alignment_mobile": "justify-center"
+                  },
+                  "blocks": {}
+                },
+                "heading_gLpjWg": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "title": "<h2>Clean Ingredients. Half The Price. <br/>Better Results.</h2>",
+                    "text_color": "#123456",
+                    "text_alignment": "left",
+                    "heading_size": "4xl",
+                    "font_weight": "bold",
+                    "font_family": "values-sans",
+                    "use_mobile_settings": true,
+                    "text_alignment_mobile": "center",
+                    "heading_size_mobile": "lg",
+                    "font_weight_mobile": "bold"
+                  },
+                  "blocks": {}
+                },
+                "buttons_group_hqfMEW": {
+                  "type": "buttons-group",
+                  "name": "Buttons Group",
+                  "settings": {
+                    "hide_on_desktop": false,
+                    "gap_between_buttons_desktop": 10,
+                    "buttons_alignment": "flex-start",
+                    "top_padding_desktop": 10,
+                    "bottom_padding_desktop": 0,
+                    "hide_on_mobile": true,
+                    "gap_between_buttons_mobile": 0,
+                    "buttons_alignment_mobile": "center",
+                    "top_padding_mobile": 0,
+                    "bottom_padding_mobile": 0
+                  },
+                  "blocks": {
+                    "button_QwehPD": {
+                      "type": "button",
+                      "name": "Button",
+                      "settings": {
+                        "button_text": "Choose Your Package",
+                        "button_link": "",
+                        "related_product": "{{ closest.product }}",
+                        "button_type": "primary",
+                        "hide_on_mobile": false
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "button_QwehPD"
+                  ]
+                }
+              },
+              "block_order": [
+                "review_badge_J3k4MB",
+                "heading_gLpjWg",
+                "buttons_group_hqfMEW"
+              ]
+            },
+            "layout_item_kfx8yN": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 0,
+                "gap_mobile": 10
+              },
+              "blocks": {
+                "table_bq4brD": {
+                  "type": "table",
+                  "name": "Table",
+                  "settings": {
+                    "table_items": [
+                      "0-86",
+                      "item-2",
+                      "item-3",
+                      "item-4",
+                      "item-5"
+                    ]
+                  },
+                  "blocks": {}
+                },
+                "buttons_group_pA7bMG": {
+                  "type": "buttons-group",
+                  "name": "Buttons Group",
+                  "settings": {
+                    "hide_on_desktop": true,
+                    "gap_between_buttons_desktop": 10,
+                    "buttons_alignment": "flex-start",
+                    "top_padding_desktop": 10,
+                    "bottom_padding_desktop": 0,
+                    "hide_on_mobile": false,
+                    "gap_between_buttons_mobile": 0,
+                    "buttons_alignment_mobile": "center",
+                    "top_padding_mobile": 0,
+                    "bottom_padding_mobile": 0
+                  },
+                  "blocks": {
+                    "button_ybtwRE": {
+                      "type": "button",
+                      "name": "Button",
+                      "settings": {
+                        "button_text": "Choose Your Package",
+                        "button_link": "",
+                        "related_product": "",
+                        "button_type": "primary",
+                        "hide_on_mobile": false
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "button_ybtwRE"
+                  ]
+                }
+              },
+              "block_order": [
+                "table_bq4brD",
+                "buttons_group_pA7bMG"
+              ]
+            }
+          },
+          "block_order": [
+            "layout_item_mgWfYk",
+            "layout_item_kfx8yN"
+          ]
+        }
+      },
+      "block_order": [
+        "layout_PMT34G"
+      ],
+      "name": "Comparison",
+      "settings": {
+        "desktop_padding_top": 50,
+        "desktop_gap_between_blocks": 20,
+        "bg_color": "#e9f4ff",
+        "desktop_max_width": 1140,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 30,
+        "mobile_gap_between_blocks": 10
+      }
+    },
+    "blank_section_FE7qpD": {
+      "type": "blank-section",
+      "blocks": {
+        "heading_9qQywC": {
+          "type": "heading",
+          "name": "Heading",
+          "settings": {
+            "title": "<h2>Simple. Refreshing. Part <br/>of Your Daily Ritual.</h2>",
+            "text_color": "#123456",
+            "text_alignment": "center",
+            "heading_size": "3xl",
+            "font_weight": "bold",
+            "font_family": "values-sans",
+            "use_mobile_settings": true,
+            "text_alignment_mobile": "center",
+            "heading_size_mobile": "lg",
+            "font_weight_mobile": "bold"
+          },
+          "blocks": {}
+        },
+        "images_with_captions_YrAPY9": {
+          "type": "images-with-captions",
+          "name": "Images with captions",
+          "settings": {
+            "related_metaobjects": "{{ closest.product.metafields.custom.how_to_use.value }}"
+          },
+          "blocks": {
+            "image_with_caption_ePdLtU": {
+              "type": "_image-with-caption",
+              "name": "Image with caption",
+              "settings": {
+                "image": "shopify://shop_images/img-2.png",
+                "caption": "<p>Stir or shake - due to the clean ingredients in Nectar, some settling may occur</p>"
+              },
+              "blocks": {}
+            },
+            "image_with_caption_y9wwB8": {
+              "type": "_image-with-caption",
+              "name": "Image with caption",
+              "settings": {
+                "image": "shopify://shop_images/img-1.png",
+                "caption": "<p>Pour packet into 8 - 16 oz of water (adjust based on flavor-strength preference) </p>"
+              },
+              "blocks": {}
+            },
+            "image_with_caption_UHGhUn": {
+              "type": "_image-with-caption",
+              "name": "Image with caption",
+              "settings": {
+                "image": "shopify://shop_images/img-3.png",
+                "caption": "<p>Enjoy Daily - drink at least 1 packet per day to stay optimally hydrated</p>"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_with_caption_ePdLtU",
+            "image_with_caption_y9wwB8",
+            "image_with_caption_UHGhUn"
+          ]
+        },
+        "features_GjFPAN": {
+          "type": "features",
+          "name": "Features",
+          "settings": {
+            "related_metaobjects": [],
+            "when_to_use_metaobjects": "{{ closest.product.metafields.custom.when_to_use.value }}",
+            "gap_desktop": 10,
+            "width_desktop": 190,
+            "light_blue_color_scheme": true,
+            "use_grid_layout": true,
+            "columns_desktop": 4,
+            "layout_gap_desktop": 10,
+            "columns_mobile": 2,
+            "layout_gap_mobile": 10
+          },
+          "blocks": {
+            "features_item_T48yrL": {
+              "type": "_features-item",
+              "name": "Features Item",
+              "settings": {
+                "icon": "<svg width=\"56\" height=\"51\" viewbox=\"0 0 56 51\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M31.6419 23.8712L39.2726 34.3367L39.8384 43.7769C39.8878 44.6011 39.6468 45.1131 39.3172 45.8701C38.9875 46.6273 38.9258 47.3579 38.1526 47.648L37.9956 47.7069C36.6335 48.2179 34.4888 47.8624 34.4098 46.4097L33.855 36.2235L25.7629 30.3323L15.8695 37.9314L9.67636 45.2809C8.739 46.3932 7.51896 48.0855 6.15699 47.5745C5.16569 47.2026 5.57787 47.2016 5.20078 46.3356C4.87109 45.5785 5.76367 43.4551 6.24053 42.781L19.618 23.8712L25.71 20.417L31.6419 23.8712Z\" fill=\"#4187B5\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M45.2221 11.2516L32.974 14.4822L31.6379 23.871H19.614L18.278 14.4822L14.5384 15.0951L9.13723 17.9104L8.96532 19.2561L8.57854 19.0276L6.31836 17.0947C6.73879 16.578 7.19287 16.1001 7.43117 15.8385L12.2516 10.5479L22.4943 9.04368C24.7389 8.71399 26.4983 9.24846 28.7577 9.04368L35.2473 8.4554L45.2221 8.29199V11.2516Z\" fill=\"#60B7FE\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9.14056 17.9106L8.85093 20.1783C7.5725 21.0792 5.61923 23.0813 5.44744 19.9707L5.38368 18.8158C5.34754 18.1606 6.45524 16.9052 7.11894 16.1816L9.14056 17.9106Z\" fill=\"#F0B16E\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M52.3556 9.64526L49.5078 10.0069L48.7534 11.4663C48.4166 12.1181 47.3839 12.1995 46.7254 11.8752L45.3765 11.211L44.8994 11.3368V8.29742L52.7946 8.16806C53.5734 8.15523 53.1147 9.47242 52.3556 9.64526Z\" fill=\"#F0B16E\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20.9517 9.27055L22.4958 9.04378C24.7404 8.71409 26.4997 9.24856 28.7591 9.04378L30.3033 8.90381L30.3001 9.97341L25.6274 16.381L20.9517 9.96974V9.27055Z\" fill=\"#4187B5\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19.6139 23.8713C19.09 20.8149 18.5857 17.7404 18.2778 14.4824L19.967 9.41501L22.494 9.04395C22.6642 9.12408 22.8352 9.1974 23.0068 9.26444C20.2954 15.5604 19.9413 19.8959 20.0678 23.8714H19.6139V23.8713Z\" fill=\"#FFBF31\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M32.9747 14.4823C32.6652 17.7647 32.1777 20.8469 31.6387 23.8712H31.1444C30.9946 23.1073 31.2423 19.6934 30.6652 16.3384C30.0722 12.8913 28.8283 10.7341 27.7402 9.09165C28.0701 9.08942 28.4081 9.07554 28.7584 9.04373L31.0302 8.83777L32.9747 14.4823Z\" fill=\"#FFBF31\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M44.4067 42.5573H2.60375C1.45637 42.5573 0.517578 43.496 0.517578 44.6434V48.0244C0.517578 49.1718 1.45624 50.1106 2.60375 50.1106H44.4067L55.5184 46.3339L44.4067 42.5573Z\" fill=\"#FA6E85\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.70145 42.5573H2.60375C1.45637 42.5573 0.517578 43.496 0.517578 44.6434V48.0244C0.517578 49.1718 1.45637 50.1106 2.60375 50.1106H6.70145V42.5573Z\" fill=\"#FFBF31\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M44.4077 50.1106L55.5194 46.3339L44.4077 42.5573V50.1106Z\" fill=\"#FFBF31\"></path>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M49.3682 48.4244L55.5185 46.334L49.3682 44.2437V48.4244Z\" fill=\"#FA6E85\"></path>\n<path d=\"M30.0059 7.9694C30.7378 5.55421 29.3732 3.00301 26.958 2.27113C24.5428 1.53925 21.9916 2.90385 21.2598 5.31904C20.5279 7.73424 21.8925 10.2854 24.3077 11.0173C26.7229 11.7492 29.2741 10.3846 30.0059 7.9694Z\" fill=\"#F0B16E\"></path>\n</svg>",
+                "title": "Kickstart Your Day"
+              },
+              "blocks": {}
+            },
+            "features_item_9j3y6X": {
+              "type": "_features-item",
+              "name": "Features Item",
+              "settings": {
+                "icon": "<svg width=\"51\" height=\"50\" viewbox=\"0 0 51 50\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M40.6438 28.4673C35.6068 28.7313 33.8868 26.6223 31.8148 26.3203C31.044 26.1999 30.2631 26.1573 29.4838 26.1933C29.2262 26.2068 28.9695 26.2341 28.7148 26.2753C26.9384 26.4018 25.1533 26.2277 23.4348 25.7603C23.4348 25.7603 22.5798 21.8013 23.4348 19.5383C24.2898 17.2753 16.4808 18.3153 17.2128 19.5383C18.6828 21.9933 17.2128 25.7603 17.2128 25.7603C17.2128 25.7603 14.2128 26.6603 11.4798 27.1313L11.7908 27.5623H9.75879C9.75879 27.5623 11.8958 35.1763 11.8958 49.0003H28.1808C28.1984 43.721 28.7747 38.4583 29.8998 33.3003C30.7328 33.5319 31.5968 33.6331 32.4608 33.6003C38.6778 33.3823 42.3958 34.3003 42.3958 34.3003L40.6438 28.4673Z\" fill=\"#F7BA85\"></path>\n<path d=\"M21.6083 10.1C21.6083 10.1 27.2553 3.26301 24.6683 0.614013C23.7223 -0.355987 22.3113 2.49101 18.2453 1.20501L14.9053 5.02001L21.6083 10.1Z\" fill=\"#653D28\"></path>\n<path d=\"M18.2432 1.20695C18.2432 1.20695 13.4862 1.04495 10.1592 5.83895C8.66724 7.98995 7.76724 11.0179 9.15124 15.2309C9.15124 15.2309 10.0132 19.0309 14.9032 18.7149L18.2432 1.20695Z\" fill=\"#653D28\"></path>\n<path d=\"M26.3553 9.96978C27.0783 12.0008 28.1743 14.1698 27.9993 16.5088C27.7613 19.7018 27.0593 21.9638 23.5993 22.9428C20.1393 23.9218 17.6883 23.0998 15.3873 20.8738C14.0073 19.5378 12.5473 17.1378 11.9603 15.0638C10.3923 9.53178 12.0973 5.50578 17.6303 3.93878C20.4533 3.13978 24.5853 4.99178 26.3553 9.96978Z\" fill=\"#F9C694\"></path>\n<path d=\"M13.8079 19.1487C14.6098 18.4609 14.6096 17.1452 13.8075 16.21C13.0054 15.2748 11.705 15.0743 10.9031 15.7621C10.1012 16.4499 10.1014 17.7656 10.9036 18.7008C11.7057 19.636 13.006 19.8365 13.8079 19.1487Z\" fill=\"#F9C694\"></path>\n<path d=\"M17.6396 1.236C17.6396 1.236 19.7556 1.07 19.8676 0C19.8676 0 20.7376 0.134 20.6536 1.585L18.6286 3.17L17.6396 1.236Z\" fill=\"#653D28\"></path>\n<path d=\"M13.6453 3.49207C13.6453 3.49207 18.6293 3.17007 21.2613 2.49207C21.2613 2.49207 23.3413 7.55007 12.3613 7.56407L13.6453 3.49207Z\" fill=\"#653D28\"></path>\n<path d=\"M21.8295 18.0001C21.5625 17.1861 21.8885 16.3481 22.5595 16.1281C23.2305 15.9081 23.9895 16.3891 24.2595 17.2031C24.5295 18.0171 24.2755 18.5031 23.6055 18.7211C22.9355 18.9391 22.0965 18.8181 21.8295 18.0001Z\" fill=\"#DC7142\"></path>\n<path d=\"M39.0761 31.5C38.3201 30.42 32.2761 23.915 28.8701 21.2L31.2001 18.343C31.2001 18.343 48.6641 28.643 44.9241 33.343C44.9241 33.343 43.0311 35.743 40.0361 32.675C39.6847 32.3101 39.3636 31.9171 39.0761 31.5Z\" fill=\"#F9C694\"></path>\n<path d=\"M26.7136 19.8708C26.7136 19.8708 25.3336 18.0708 23.7466 19.2608C23.6633 19.3233 23.5975 19.4061 23.5555 19.5014C23.5135 19.5967 23.4967 19.7012 23.5067 19.8048C23.5168 19.9085 23.5533 20.0078 23.6128 20.0933C23.6724 20.1787 23.7529 20.2474 23.8466 20.2928C24.1111 20.4077 24.3924 20.4789 24.6796 20.5038C24.6796 20.5038 26.8416 20.9918 27.6916 21.9628C27.6916 21.9628 29.7166 23.8968 31.1596 21.9438L29.3406 18.0518L26.7136 19.8708Z\" fill=\"#F1B48C\"></path>\n<path d=\"M23.3867 17.1169L30.7307 23.2049L34.3557 19.7889L28.6147 12.1899L23.3867 17.1169Z\" fill=\"#D8EEF5\"></path>\n<path d=\"M24.0996 17.2361L30.7256 22.8171L33.9106 19.8171L30.6286 15.4721C29.0698 15.4118 27.5181 15.7112 26.0936 16.3471L24.0996 17.2361Z\" fill=\"#98D6F6\"></path>\n<path d=\"M30.9887 14.0608C30.7357 14.3438 29.9497 15.1218 29.7217 16.3208C29.6947 16.4642 29.7145 16.6125 29.7783 16.7438C29.842 16.8751 29.9463 16.9824 30.0757 17.0498C30.2757 17.1578 30.5757 17.1398 30.9277 16.5258C30.9277 16.5258 31.2567 16.1358 31.8367 15.4058C31.9847 15.2258 32.0699 15.0025 32.0795 14.7697C32.089 14.5369 32.0224 14.3073 31.8897 14.1158C31.7547 13.9298 31.5707 13.8018 31.3247 13.8528C31.1936 13.885 31.076 13.9578 30.9887 14.0608Z\" fill=\"#F9C694\"></path>\n<path d=\"M31.7836 15.2052C31.5306 15.4882 30.7456 16.2662 30.5176 17.4652C30.4906 17.6085 30.5104 17.7567 30.5739 17.8879C30.6375 18.0192 30.7415 18.1265 30.8706 18.1942C31.0706 18.3022 31.3706 18.2842 31.7226 17.6702C31.7226 17.6702 32.0516 17.2802 32.6326 16.5502C32.7802 16.3701 32.8653 16.1468 32.8748 15.9141C32.8844 15.6814 32.818 15.4519 32.6856 15.2602C32.5506 15.0742 32.3656 14.9462 32.1196 14.9972C31.9885 15.0294 31.8709 15.1022 31.7836 15.2052Z\" fill=\"#F9C694\"></path>\n<path d=\"M32.5769 16.4778C32.3229 16.7598 31.6629 17.2438 31.4349 18.4438C31.3609 18.8318 31.4949 18.9938 31.6689 19.0888C31.8689 19.1968 32.1689 19.1498 32.6399 18.6478C32.6399 18.6478 32.8399 18.5528 33.4249 17.8228C33.5728 17.6426 33.6579 17.4191 33.6675 17.1862C33.677 16.9533 33.6105 16.7236 33.4779 16.5318C33.3429 16.3468 33.1589 16.2188 32.9129 16.2698C32.7817 16.302 32.6641 16.3748 32.5769 16.4778Z\" fill=\"#F9C694\"></path>\n<path d=\"M23.0579 12.2929C23.0322 12.2932 23.0065 12.2895 22.9819 12.2819C22.9477 12.272 22.9157 12.2555 22.8879 12.2332C22.8601 12.211 22.8369 12.1835 22.8197 12.1523C22.8026 12.121 22.7917 12.0868 22.7878 12.0513C22.7839 12.0159 22.787 11.9801 22.7969 11.9459C22.8069 11.9119 23.0499 11.0989 23.8169 10.7209C24.3449 10.4619 24.9759 10.4729 25.6919 10.7549C25.759 10.7814 25.8128 10.8335 25.8415 10.8997C25.8702 10.9659 25.8714 11.0408 25.8449 11.1079C25.8184 11.175 25.7663 11.2288 25.7001 11.2575C25.6339 11.2862 25.559 11.2874 25.4919 11.2609C24.9259 11.0379 24.4449 11.0199 24.0609 11.2069C23.5089 11.4749 23.3199 12.0919 23.3179 12.0989C23.3007 12.1546 23.2663 12.2034 23.2196 12.2383C23.1728 12.2732 23.1162 12.2923 23.0579 12.2929Z\" fill=\"#40220F\"></path>\n<path d=\"M16.7587 13.912C16.711 13.9119 16.6642 13.8993 16.6229 13.8754C16.5817 13.8515 16.5474 13.8171 16.5236 13.7758C16.4998 13.7344 16.4873 13.6876 16.4873 13.6399C16.4873 13.5922 16.4999 13.5453 16.5237 13.504C16.9107 12.838 17.3977 12.438 17.9727 12.314C18.8097 12.134 19.5047 12.621 19.5337 12.641C19.5894 12.684 19.6262 12.7468 19.6365 12.8163C19.6469 12.8858 19.6299 12.9566 19.5892 13.0139C19.5484 13.0712 19.4871 13.1105 19.4181 13.1235C19.349 13.1366 19.2776 13.1224 19.2187 13.084C19.2127 13.084 18.6807 12.715 18.0827 12.846C17.6657 12.938 17.2997 13.246 16.9937 13.777C16.9698 13.8181 16.9355 13.8522 16.8943 13.8759C16.853 13.8996 16.8063 13.912 16.7587 13.912Z\" fill=\"#40220F\"></path>\n<path d=\"M24.2202 7.91582C23.6465 7.90784 23.0843 8.07685 22.6102 8.39982C22.2294 8.64184 21.9171 8.97755 21.7032 9.37482C21.5752 9.63582 21.9652 9.86582 22.0942 9.60382C22.4632 8.85182 23.3782 8.34882 24.2242 8.36682C24.5152 8.37282 24.5152 7.91982 24.2242 7.91382L24.2202 7.91582Z\" fill=\"#40220F\"></path>\n<path d=\"M15.9482 10.7089C16.3497 10.4199 16.8315 10.2636 17.3262 10.2619C17.6981 10.2506 18.067 10.3324 18.3992 10.4999C18.6542 10.6419 18.8832 10.2509 18.6282 10.1089C18.2276 9.89964 17.78 9.79637 17.3282 9.80888C16.7518 9.80811 16.1894 9.98593 15.7182 10.3179C15.6676 10.3494 15.631 10.3991 15.616 10.4567C15.6009 10.5144 15.6085 10.5756 15.6372 10.6279C15.6678 10.6794 15.7176 10.7168 15.7756 10.732C15.8336 10.7472 15.8953 10.7389 15.9472 10.7089H15.9482Z\" fill=\"#40220F\"></path>\n<path d=\"M16.5898 26.0832C17.4898 26.8922 20.2898 29.4222 20.5898 29.8392C20.5898 29.8392 23.8468 25.6842 24.5108 25.8392C24.5108 25.8392 26.9978 26.1232 28.8678 26.0192C28.8678 26.0192 31.9878 25.8482 34.1208 27.1332C34.3163 27.2487 34.5218 27.3464 34.7348 27.4252L35.6108 27.7562C35.6108 27.7562 34.7818 32.7812 34.7818 33.6062C34.7818 33.6062 32.3318 33.7762 30.3388 33.6422C30.2163 33.6334 30.0951 33.6715 29.9997 33.7487C29.9042 33.826 29.8417 33.9366 29.8248 34.0582C29.4858 36.4132 27.9548 47.2372 28.1768 49.0042H11.8958L9.75879 27.2002L15.9498 25.9122C16.0624 25.8884 16.179 25.8914 16.2902 25.9212C16.4014 25.9509 16.5041 26.0064 16.5898 26.0832Z\" fill=\"#8D9295\"></path>\n<path d=\"M11.403 26.7931C11.403 26.7931 6.68001 25.6761 6.35501 33.0791C6.26301 35.1711 4.58301 40.8401 4.58301 49.0001H9.92201C9.92201 49.0001 10.884 40.2541 13.354 32.9351C14.316 30.0871 14.903 27.2791 11.403 26.7931Z\" fill=\"#F7BA85\"></path>\n<path d=\"M6.22204 31.0669C6.22204 31.0669 6.87804 25.5899 12.389 26.9359C12.389 26.9359 17.172 28.1609 13.483 36.2359L12.263 39.3069C12.263 39.3069 6.59204 37.9149 5.54004 38.1249C5.54004 38.1229 6.03404 33.2829 6.22204 31.0669Z\" fill=\"#8D9295\"></path>\n<path d=\"M11.8935 49.0002H13.1225C13.1225 49.0002 11.6755 44.8062 11.1895 41.8732C11.1895 41.8732 11.5885 46.7282 11.8935 49.0002Z\" fill=\"#7D8184\"></path>\n<path d=\"M5.54004 38.1231C5.54004 38.1231 9.46604 38.6031 12.263 39.3051C12.263 39.3051 13.014 37.3371 13.483 36.2341C13.483 36.2341 9.56704 38.7221 5.60304 37.5081L5.54004 38.1231Z\" fill=\"#7D8184\"></path>\n<path d=\"M18.2426 3.73474C18.2426 3.73474 14.4726 5.44374 12.6916 3.73474C12.6916 3.73474 11.6186 4.52574 10.9746 5.50674C10.9746 5.50674 15.6036 6.56374 18.2426 3.73474Z\" fill=\"#86421C\"></path>\n</svg>",
+                "title": "Pre & Post Workout"
+              },
+              "blocks": {}
+            },
+            "features_item_7PqXqr": {
+              "type": "_features-item",
+              "name": "Features Item",
+              "settings": {
+                "icon": "<svg width=\"51\" height=\"50\" viewbox=\"0 0 51 50\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M27.4736 22.4273V25.0008C27.4736 26.4223 28.6257 27.5743 30.0472 27.5743C31.4829 27.5743 32.6208 26.4062 32.6208 25.0008V22.4273L30.1374 21.1405L27.4736 22.4273Z\" fill=\"#FFCBBC\"></path>\n<path d=\"M13.4893 12.5921L16.1088 16.442L20.0863 19.1891C20.5071 19.0422 20.9464 18.8746 21.3975 18.6847L22.1782 12.6811L21.3975 6.1731C19.2451 7.4349 16.782 9.45993 13.4893 12.5921Z\" fill=\"#E4F3FF\"></path>\n<path d=\"M29.1939 4.32654H28.0307C25.7397 4.32654 23.7557 4.79321 21.3994 6.1746V18.6863C22.5217 18.2136 23.7187 17.5982 24.8986 16.7867L26.1121 14.8494L27.4721 14.6215L27.473 14.6207V22.4271H32.6201V7.75269C32.6202 5.86114 31.0864 4.32654 29.1939 4.32654Z\" fill=\"#C3DAFD\"></path>\n<path d=\"M27.4691 11.7026V14.6202C26.6473 15.4651 25.7757 16.1797 24.8955 16.7854V11.7026H27.4691Z\" fill=\"#ADC1E0\"></path>\n<path d=\"M37.7673 13.4189C40.61 13.4189 42.9144 11.1145 42.9144 8.27183C42.9144 5.42918 40.61 3.12476 37.7673 3.12476C34.9246 3.12476 32.6201 5.42918 32.6201 8.27183C32.6201 11.1145 34.9246 13.4189 37.7673 13.4189Z\" fill=\"#FFCBBC\"></path>\n<path d=\"M14.6942 26.2865L9.04448 21.7118L11.1241 34.5193L7.49424 42.696C6.43015 44.5579 7.77468 46.8748 9.91932 46.8748C10.9216 46.8748 11.8471 46.3377 12.3444 45.4675L18.3956 32.6346C13.9717 25.0473 14.7981 26.4645 14.6942 26.2865Z\" fill=\"#4895FF\"></path>\n<path d=\"M17.7475 20.4944L15.3352 17.0859L11.6363 14.3833C11.6362 14.3833 11.6361 14.3833 11.6361 14.3833C11.1148 14.8952 10.5747 15.4303 10.013 15.9921C6.70168 19.3034 9.30528 22.3454 10.3296 23.3696L18.3934 32.6343V43.8721C18.3934 45.5303 19.7377 46.8746 21.3959 46.8746L22.4125 36.5804L21.3959 25.778L17.9534 20.8467C17.9534 20.8467 17.7728 20.6134 17.7475 20.4944Z\" fill=\"#5ECEF4\"></path>\n<path d=\"M21.3994 46.8751C23.0577 46.8751 24.4019 45.5309 24.4019 43.8727V32.019C24.4019 30.7451 24.0072 29.5029 23.273 28.4622L21.3994 25.7786V46.8751Z\" fill=\"#4895FF\"></path>\n<path d=\"M11.6387 14.383L17.7481 20.4924C17.6853 20.1895 17.8557 19.8574 18.1947 19.7677C18.729 19.627 19.3305 19.4513 19.9765 19.2291C20.0126 19.2166 20.0495 19.2034 20.0858 19.1907L13.4888 12.5938C12.8915 13.1613 12.2339 13.7989 11.6387 14.383Z\" fill=\"#457899\"></path>\n</svg>",
+                "title": "Afternoon Slump"
+              },
+              "blocks": {}
+            },
+            "features_item_kPbazm": {
+              "type": "_features-item",
+              "name": "Features Item",
+              "settings": {
+                "icon": "<svg width=\"51\" height=\"50\" viewbox=\"0 0 51 50\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_121_1688)\">\n<path d=\"M25.0175 49.9999C38.8246 49.9999 50.0175 38.807 50.0175 25C50.0175 11.1929 38.8246 0 25.0175 0C11.2104 0 0.0175781 11.1929 0.0175781 25C0.0175781 38.807 11.2104 49.9999 25.0175 49.9999Z\" fill=\"#27536B\"></path>\n<path d=\"M38.2381 28.596C33.5151 33.3189 25.8575 33.3189 21.1346 28.596C16.4116 23.873 16.4116 16.2154 21.1346 11.4925C22.1194 10.5077 23.2319 9.72907 24.4185 9.15503C20.5319 9.25864 16.6763 10.7932 13.71 13.7593C7.56281 19.9065 7.56281 29.8732 13.71 36.0205C19.8572 42.1677 29.8239 42.1677 35.9711 36.0205C38.9374 33.0542 40.4718 29.1986 40.5754 25.3119C40.0015 26.4987 39.2229 27.6112 38.2381 28.596Z\" fill=\"#FCD57E\"></path>\n<path d=\"M34.7638 14.9971L35.3213 20.0411L35.879 14.9971L40.923 14.4396L35.879 13.8818L35.3213 8.83789L34.7638 13.8818L29.7197 14.4396L34.7638 14.9971Z\" fill=\"white\"></path>\n<path d=\"M10.989 40.101L11.3885 43.7141L11.7879 40.101L15.401 39.7016L11.7879 39.3022L11.3885 35.6891L10.989 39.3022L7.37598 39.7016L10.989 40.101Z\" fill=\"white\"></path>\n<path d=\"M24.2683 24.0299L23.5527 24.7455L24.2683 25.461L24.9838 24.7455L24.2683 24.0299Z\" fill=\"white\"></path>\n<path d=\"M41.4314 18.6753L40.7158 19.3909L41.4314 20.1064L42.1469 19.3909L41.4314 18.6753Z\" fill=\"white\"></path>\n<path d=\"M44.4685 27.5663L43.7529 28.2819L44.4685 28.9974L45.184 28.2819L44.4685 27.5663Z\" fill=\"white\"></path>\n<path d=\"M7.94991 11.9522L7.23438 12.6677L7.94991 13.3833L8.66545 12.6677L7.94991 11.9522Z\" fill=\"white\"></path>\n<path d=\"M34.3415 40.9464L33.626 41.662L34.3415 42.3775L35.0571 41.662L34.3415 40.9464Z\" fill=\"white\"></path>\n<path d=\"M12.0026 9.34977L11.2871 10.0653L12.0026 10.7808L12.7182 10.0653L12.0026 9.34977Z\" fill=\"white\"></path>\n</g>\n<defs>\n<clippath id=\"clip0_121_1688\">\n<rect width=\"50\" height=\"50\" fill=\"white\" transform=\"translate(0.0175781)\"></rect>\n</clippath>\n</defs>\n</svg>",
+                "title": "After A Night Out"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "features_item_T48yrL",
+            "features_item_9j3y6X",
+            "features_item_7PqXqr",
+            "features_item_kPbazm"
+          ]
+        }
+      },
+      "block_order": [
+        "heading_9qQywC",
+        "images_with_captions_YrAPY9",
+        "features_GjFPAN"
+      ],
+      "name": "Images",
+      "settings": {
+        "desktop_padding_top": 50,
+        "desktop_gap_between_blocks": 10,
+        "bg_color": "#ffffff",
+        "desktop_max_width": 1140,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 30,
+        "mobile_gap_between_blocks": 10
+      }
+    },
+    "ts_cards": {
+      "type": "ts-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/card_1.png",
+            "link": ""
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/card_2.png",
+            "link": ""
+          }
+        },
+        "card_3": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/card_3.png",
+            "link": ""
+          }
+        },
+        "card_4": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/card_4.png",
+            "link": ""
+          }
+        },
+        "card_5": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/card_5.png",
+            "link": ""
+          }
+        },
+        "card_6": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/card_6.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3",
+        "card_4",
+        "card_5",
+        "card_6"
+      ],
+      "settings": {
+        "title": "Six Light, Refreshing Flavors",
+        "subtitle": "Real organic fruit flavors you can enjoy Sipping all day long",
+        "desk_indent_top": 50,
+        "desk_indent_bottom": 50,
+        "mob_indent_top": 30,
+        "mob_indent_bottom": 30
+      }
+    },
+    "ts_faq": {
+      "type": "ts-faq",
+      "blocks": {
+        "row_1": {
+          "type": "row",
+          "settings": {
+            "question": "Shipping Details",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+          }
+        },
+        "row_2": {
+          "type": "row",
+          "settings": {
+            "question": "Who Needs Nectar?",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+          }
+        },
+        "row_3": {
+          "type": "row",
+          "settings": {
+            "question": "Ingredients & Nutrition",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+          }
+        },
+        "row_4": {
+          "type": "row",
+          "settings": {
+            "question": "Directions For Use",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+          }
+        },
+        "row_5": {
+          "type": "row",
+          "settings": {
+            "question": "What Does It Taste Like?",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+          }
+        },
+        "row_6": {
+          "type": "row",
+          "settings": {
+            "question": "What Does It Taste Like?",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+          }
+        },
+        "row_7": {
+          "type": "row",
+          "settings": {
+            "question": "What Does It Taste Like?",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+          }
+        },
+        "row_8": {
+          "type": "row",
+          "settings": {
+            "question": "What Does It Taste Like?",
+            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "row_1",
+        "row_2",
+        "row_3",
+        "row_4",
+        "row_5",
+        "row_6",
+        "row_7",
+        "row_8"
+      ],
+      "settings": {
+        "title": "Still Not Sure? Here Are The Top 8 Questions We Get About <strong>Nectar</strong>",
+        "desk_indent_top": 50,
+        "desk_indent_bottom": 50,
+        "mob_indent_top": 30,
+        "mob_indent_bottom": 20
+      }
+    },
+    "ts_review_image": {
+      "type": "ts-review-image",
+      "settings": {
+        "title": "Real, Verified Relief - See Why Millions Call",
+        "subtitle": "Nectar “A Game Changer for Neck Pain”",
+        "description": "Note: All reviews below are from actual paying customers. They have been authenticated and verified.",
+        "image": "shopify://shop_images/review_image_bb0f6981-b346-4f6c-9f96-964cc499c330.png",
+        "review_label": "Based on 14,802 reviews",
+        "review_count": "4.9",
+        "reviewers_label": "Of Reviewers Would Recommend This Product To A Friend",
+        "reviewers_count": "99%"
+      }
+    },
+    "17537951597b6ea412": {
+      "type": "apps",
+      "blocks": {
+        "junip_junip_reviews_wiREQi": {
+          "type": "shopify://apps/junip/blocks/junip-reviews/dc14f5a8-ed15-41b1-ad08-cfba23f9789b",
+          "settings": {
+            "layout": "list",
+            "reviewsType": "all",
+            "showSummary": true,
+            "showMediaGallery": false,
+            "reviewsCount": 5,
+            "containerClass": ""
+          }
+        }
+      },
+      "block_order": [
+        "junip_junip_reviews_wiREQi"
+      ],
+      "custom_css": [
+        ".junip-reviews-tab-switcher-container,.junip-product-review-summary-wrapper,.junip-filters,.junip-product-review-summary-wrapper + .junip-separator,.junip-powered-by-footer {display: none;}",
+        ".junip-reviews-container {padding-top: 0;}",
+        ".junip-product-review-container {padding: 2em 1em !important;}"
+      ],
+      "settings": {}
+    },
+    "ts_risks": {
+      "type": "ts-risks",
+      "blocks": {
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/icon_delivery.svg",
+            "label": "Free Shipping"
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/icon_guarantee.svg",
+            "label": "90 Day Guarantee"
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify://shop_images/icon_return.svg",
+            "label": "Easy Returns"
+          }
+        }
+      },
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ],
+      "settings": {
+        "title": "Try Us Risk Free",
+        "desk_indent_top": 36,
+        "desk_indent_bottom": 36,
+        "mob_indent_top": 12,
+        "mob_indent_bottom": 16
+      }
+    },
+    "ts_footer": {
+      "type": "ts-footer",
+      "settings": {
+        "first_notice": "No statements found on the drinknectar.com site or advertised by Drink Nectar Inc. have been approved by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease. Testimonials found at drinknectar.com are unverified results, and may not reflect the typical purchaser's experience, may not apply to the average person and are not intended to represent or guarantee that anyone will achieve the same or similar results.",
+        "second_notice": "Information on the Drink Nectar Inc. site is provided for informational purposes only. It is not meant to substitute for medical advice from your physician or other medical professional. You should not use the information contained herein for diagnosing or treating a health problem or disease, or prescribing any medication. Carefully read all product documentation. If you have or suspect that you have a medical problem, promptly contact your regular health care provider.",
+        "menu": "offer-footer"
+      }
+    }
+  },
+  "order": [
+    "timer",
+    "ts_logo",
+    "ts_banner",
+    "ts_logos",
+    "blank_section_R96MqF",
+    "blank_section_myEaQK",
+    "ts_ingredients",
+    "blank_section_eCra94",
+    "blank_section_FE7qpD",
+    "ts_cards",
+    "ts_faq",
+    "ts_review_image",
+    "17537951597b6ea412",
+    "ts_risks",
+    "ts_footer"
+  ]
+}
