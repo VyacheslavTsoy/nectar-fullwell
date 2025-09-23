@@ -1,0 +1,367 @@
+{% render 'entry' with '@/styles/sections/ts-ingredients.scss' %}
+
+<style>
+  .section-{{ section.id }} {
+    padding-top: {{ section.settings.desk_indent_top }}px;
+    padding-bottom: {{ section.settings.desk_indent_bottom }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .section-{{ section.id }} {
+      padding-top: {{ section.settings.mob_indent_top }}px;
+      padding-bottom: {{ section.settings.mob_indent_bottom }}px;
+    }
+  }
+</style>
+
+<div class="ts-ingredients section-{{ section.id }}">
+  <div class="ts-ingredients__wrapper">
+    {%- if section.settings.title != blank -%}
+      <h2 class="ts-ingredients__title">
+        {{ section.settings.title }}
+      </h2>
+    {%- endif -%}
+    {%- if section.settings.subtitle != blank -%}
+      <p class="ts-ingredients__subtitle">
+        {{ section.settings.subtitle }}
+      </p>
+    {%- endif -%}
+
+    <div class="ts-ingredients__blocks">
+      {%- for block in section.blocks -%}
+        {%- if block.type == "ingredient" -%}
+          <div class="ts-ingredients__block">
+            <div class="ts-ingredients__headings">
+              {%- if block.settings.title != blank -%}
+                <p class="ts-ingredients__block-title">{{ block.settings.title }}</p>
+              {%- endif -%}
+              {%- if block.settings.subtitle != blank -%}
+                <p class="ts-ingredients__block-subtitle">
+                  {{ block.settings.subtitle }}
+                </p>
+              {%- endif -%}
+            </div>
+            {%- if block.settings.image != blank -%}
+              <div class="ts-ingredients__block-media">
+                {{ block.settings.image | image_url: width: 300 | image_tag }}
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.btn_label != blank -%}
+      {%- if section.settings.show_popup -%}  
+        <div class="ts-ingredients__button" data-popup-open>
+          {{ section.settings.btn_label }}
+        </div>
+      {% else %}
+        <a href="{{ section.settings.btn_link }}" class="ts-ingredients__button">
+          {{ section.settings.btn_label }}
+        </a>
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+
+  {% if section.settings.show_popup %}
+    <div class="ts-ingredients__popup" data-popup>
+      <div class="ts-ingredients__popup-inner">
+        <div class="ts-ingredients__popup-logo">
+          {% render 'ts-nectar-logo' %}
+        </div>
+
+        <div class="ts-ingredients__popup-content">
+          <div class="ts-ingredients__popup-nutrition">
+            <div class="ts-ingredients__popup-features-mob">
+              {%- for block in section.blocks -%}
+                {%- if block.type == "mob_feature" -%}
+                  <div class="ts-ingredients__popup-feature-mob">
+                    {%- if block.settings.icon != blank -%}
+                      {{ block.settings.icon | image_url: width: 120 | image_tag }}
+                    {%- endif -%}
+                    {{ block.settings.label }}
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+
+            {%- if section.settings.popup_comment != blank -%}
+              <div class="ts-ingredients__popup-comment">
+                {% render 'ts-icon-quote' %}
+                <p>{{ section.settings.popup_comment }}</p>
+              </div>
+            {%- endif -%}
+
+            {% assign desk_image = section.settings.desk_popup_image %}
+            {% assign mob_image = section.settings.mob_popup_image | default: desk_image %}
+
+            <div class="ts-ingredients__popup-media">
+              {%- if desk_image != blank -%}
+                {{ desk_image | image_url: width: 800 | image_tag: class: "ts-ingredients__popup-media--desktop" }}
+                {{ mob_image | image_url: width: 800 | image_tag: class: "ts-ingredients__popup-media--mobile" }}
+              {%- endif -%}
+            </div>
+
+            {%- if section.settings.popup_image_subtitle != blank -%}
+              <p class="ts-ingredients__popup-nutrition-subtitle">
+                {{ section.settings.popup_image_subtitle }}
+              </p>
+            {%- endif -%}
+
+            {%- if section.settings.popup_btn_label -%}
+              <a href="{{ section.settings.popup_btn_link }}" class="ts-ingredients__popup-button">
+                {{ section.settings.popup_btn_label }}
+              </a>
+            {%- endif -%}
+
+            <p class="ts-ingredients__popup-more" data-popup-close>
+              See More Details
+            </p>
+          </div>
+
+          <div class="ts-ingredients__popup-features-wrapper">
+            <div class="ts-ingredients__popup-features">
+              {%- if section.settings.popup_title -%}
+                <p class="ts-ingredients__popup-features-title">{{ section.settings.popup_title }}</p>
+              {%- endif -%}
+
+              <div class="ts-ingredients__popup-features-list">
+                {%- for block in section.blocks -%}
+                  {%- if block.type == "feature" -%}
+                    <div class="ts-ingredients__popup-feature">
+                      {%- if block.settings.icon != blank -%}
+                        {{ block.settings.icon | image_url: width: 200 | image_tag }}
+                      {%- endif -%}
+                      {{ block.settings.label }}
+                    </div>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+            </div>
+            {%- if section.settings.popup_features_subtitle != blank -%}
+              <p class="ts-ingredients__popup-features-subtitle">
+                {{ section.settings.popup_features_subtitle }}
+              </p>
+            {%- endif -%}
+          </div>
+        </div>
+
+        <div class="ts-ingredients__popup-close" data-popup-close>
+          {% render 'ts-icon-close' %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</div>
+
+<script>
+  (function () {
+    const section = document.querySelector(".section-{{ section.id }}");
+    const popup = section.querySelector("[data-popup]");
+    const popupButtonOpen = section.querySelector("[data-popup-open]");
+    const popupButtonCloseEls = section.querySelectorAll("[data-popup-close]");
+
+    if (popup && popupButtonOpen) {
+      popupButtonOpen.addEventListener("click", () => {
+        popup.classList.add("open");
+      })
+      popupButtonCloseEls.forEach(popupButtonClose => {
+        popupButtonClose.addEventListener("click", () => {
+          popup.classList.remove("open");
+        })
+      })
+    }
+  })();
+</script>
+
+{% schema %}
+  {
+    "name": "TS Ingredients",
+    "settings": [
+      { 
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Ingredients"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
+      },
+      { 
+        "type": "text",
+        "id": "btn_label",
+        "label": "Button label",
+        "default": "See Our Full Nutrition Facts"
+      },
+      { 
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button link"
+      },
+      { 
+        "type": "checkbox",
+        "id": "show_popup",
+        "label": "Show popup",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "Popup settings"
+      },
+      {
+        "type": "image_picker",
+        "id": "desk_popup_image",
+        "label": "Image (desktop)"
+      },
+      {
+        "type": "image_picker",
+        "id": "mob_popup_image",
+        "label": "Image (mobile)"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "popup_image_subtitle",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "popup_title",
+        "label": "Title"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "popup_comment",
+        "label": "Popup mobile comment"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "popup_features_subtitle",
+        "label": "Popup features subtitle"
+      },
+      {
+        "type": "text",
+        "id": "popup_btn_label",
+        "label": "Popup button label",
+        "default": "Select Quantity And Flavors"
+      },
+      {
+        "type": "url",
+        "id": "popup_btn_link",
+        "label": "Popup button link"
+      },
+      {
+        "type": "header",
+        "content": "Indent settings"
+      },
+      {
+        "type": "range",
+        "id": "desk_indent_top",
+        "label": "Indent top (desktop)",
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "desk_indent_bottom",
+        "label": "Indent bottom (desktop)",
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "mob_indent_top",
+        "label": "Indent top (mobile)",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "mob_indent_bottom",
+        "label": "Indent bottom (mobile)",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 40
+      }
+    ],
+    "blocks": [
+      {
+        "type": "ingredient",
+        "name": "Ingredient",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Ingredient"
+          },
+          {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Subtitle",
+            "default": "Subtitle"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      },
+      {
+        "type": "feature",
+        "name": "Feature",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          },
+          {
+            "type": "text",
+            "id": "label",
+            "label": "Label",
+            "default": "Label"
+          }
+        ]
+      },
+      {
+        "type": "mob_feature",
+        "name": "Mobile Feature",
+        "limit": 3,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          },
+          {
+            "type": "text",
+            "id": "label",
+            "label": "Label",
+            "default": "Label"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "TS Ingredients"
+      }
+    ]
+  }
+{% endschema %}

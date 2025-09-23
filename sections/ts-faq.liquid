@@ -1,0 +1,147 @@
+{% render 'entry' with '@/styles/sections/ts-faq.scss' %}
+
+<style>
+  .section-{{ section.id }} {
+    padding-top: {{ section.settings.desk_indent_top }}px;
+    padding-bottom: {{ section.settings.desk_indent_bottom }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .section-{{ section.id }} {
+      padding-top: {{ section.settings.mob_indent_top }}px;
+      padding-bottom: {{ section.settings.mob_indent_bottom }}px;
+    }
+  }
+</style>
+
+<div class="ts-faq section-{{ section.id }}">
+  <div class="ts-faq__wrapper">
+    {%- if section.settings.title != blank -%}
+      <h2 class="ts-faq__title">{{ section.settings.title }}</h2>
+    {%- endif -%}
+
+    <div class="ts-faq__blocks">
+      {%- for block in section.blocks -%}
+        {%- if block.settings.question != blank -%}
+          <div class="ts-faq__block">
+            <div class="ts-faq__question">
+              <span>{{ block.settings.question }}</span>
+              <span class="ts-faq__question-icon"></span>
+            </div>
+            <div class="ts-faq__answer">
+              <div class="ts-faq__answer-inner">
+                {{ block.settings.answer }}
+              </div>
+            </div>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+
+  {% comment %} <span class="ts-faq__icon ts-faq__icon--lemon">
+    <img src="https://cdn.shopify.com/s/files/1/0309/2257/1835/files/lemon.png?v=1758623413" width="237" height="237">
+  </span>
+  <span class="ts-faq__icon ts-faq__icon--cherry">
+    <img src="https://cdn.shopify.com/s/files/1/0309/2257/1835/files/cherry.png?v=1758623413" width="237" height="237">
+  </span> {% endcomment %}
+</div>
+
+<script>
+  (function () {
+    const section = document.querySelector(".section-{{ section.id }}");
+    const questions = section.querySelectorAll(".ts-faq__question");
+
+    questions.forEach(question => {
+      question.addEventListener("click", () => {
+        const answer = question.nextElementSibling;
+  
+        question.classList.toggle("open");
+        answer.style.maxHeight = question.classList.contains("open") ? answer.scrollHeight + "px" : null;
+      })
+    })
+  })()
+</script>
+
+{% schema %}
+  {
+    "name": "TS FAQ",
+    "settings": [
+      { 
+        "type": "inline_richtext",
+        "id": "title",
+        "label": "Title",
+        "default": "Ingredients"
+      },
+      {
+        "type": "header",
+        "content": "Indent settings"
+      },
+      {
+        "type": "range",
+        "id": "desk_indent_top",
+        "label": "Indent top (desktop)",
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "desk_indent_bottom",
+        "label": "Indent bottom (desktop)",
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "mob_indent_top",
+        "label": "Indent top (mobile)",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "mob_indent_bottom",
+        "label": "Indent bottom (mobile)",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 40
+      }
+    ],
+    "blocks": [
+      {
+        "type": "row",
+        "name": "Row",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Question",
+            "default": "Question"
+          },
+          {
+            "type": "richtext",
+            "id": "answer",
+            "label": "Answer",
+            "default": "<p>Answer<\/p>"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "TS FAQ"
+      }
+    ]
+  }
+{% endschema %}

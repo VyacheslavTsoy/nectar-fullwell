@@ -1,0 +1,117 @@
+{% render 'entry' with '@/styles/sections/ts-review-image.scss' %}
+
+<div class="ts-review-image">
+  <div class="ts-review-image__wrapper">
+    {%- if section.settings.title != blank -%}
+      <h2 class="ts-review-image__title">{{ section.settings.title }}</h2>
+    {%- endif -%}
+    {%- if section.settings.subtitle != blank -%}
+      <p class="ts-review-image__subtitle">{{ section.settings.subtitle }}</p>
+    {%- endif -%}
+    {%- if section.settings.description != blank -%}
+      <p class="ts-review-image__description">{{ section.settings.description }}</p>
+    {%- endif -%}
+    <div class="ts-review-image__media">
+      {%- if section.settings.image != blank -%}
+        {{ section.settings.image | image_url: width: 1000 | image_tag }}
+      {%- endif -%}
+    </div>
+
+    <div class="ts-review-image__features">
+      {%- if section.settings.review_label != blank -%}
+        <div class="ts-review-image__review">
+          <div class="ts-review-image__review-count">
+            {{- section.settings.review_count -}}
+          </div>
+          <div class="ts-review-image__review-label">
+            {% render 'ts-icon-stars' %}
+            {{ section.settings.review_label }}
+          </div>
+        </div>
+      {%- endif -%}
+      {%- if section.settings.reviewers_label != blank -%}
+        <div class="ts-review-image__reviewers">
+          <div class="ts-review-image__reviewers-count">
+            {{- section.settings.reviewers_count -}}
+          </div>
+          <div class="ts-review-image__reviewers-label">
+            {{ section.settings.reviewers_label }}
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+
+    <div class="ts-review-image__blocks">
+      {%- for block in section.blocks -%}
+        {%- render block -%}
+      {%- endfor -%}
+    </div>
+  </div>
+
+  <span class="ts-review-image__icon ts-review-image__icon--pomegrant">
+    <img src="https://cdn.shopify.com/s/files/1/0309/2257/1835/files/pineapple.png?v=1758623167" width="196" height="204">
+  </span>
+  <span class="ts-review-image__icon ts-review-image__icon--pineapple">
+    <img src="https://cdn.shopify.com/s/files/1/0309/2257/1835/files/pomegrant.png?v=1758623167" width="140" height="230">
+  </span>
+</div>
+
+{% schema %}
+  {
+    "name": "TS Review image",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
+      },
+      {
+        "type": "text",
+        "id": "description",
+        "label": "Description",
+        "default": "Description"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "review_label",
+        "label": "Review label",
+        "default": "Based on 14,903 reviews"
+      },
+      {
+        "type": "text",
+        "id": "review_count",
+        "label": "Review count",
+        "default": "4.9"
+      },
+      {
+        "type": "text",
+        "id": "reviewers_label",
+        "label": "Reviewers label",
+        "default": "of reviewers would recommend this product to a friend"
+      },
+      {
+        "type": "text",
+        "id": "reviewers_count",
+        "label": "Reviewers count",
+        "default": "99%"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "@app"
+      }
+    ]
+  }
+{% endschema %}

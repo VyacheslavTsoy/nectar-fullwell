@@ -1,0 +1,124 @@
+{% render 'entry' with '@/styles/sections/ts-logos.scss' %}
+
+<style>
+  .section-{{ section.id }} {
+    padding-top: {{ section.settings.desk_indent_top }}px;
+    padding-bottom: {{ section.settings.desk_indent_bottom }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .section-{{ section.id }} {
+      padding-top: {{ section.settings.mob_indent_top }}px;
+      padding-bottom: {{ section.settings.mob_indent_bottom }}px;
+    }
+  }
+</style>
+
+<div class="ts-logos section-{{ section.id }}">
+  <div class="ts-logos__wrapper">
+    {%- if section.settings.title != blank -%}
+      <h2 class="ts-logos__title">
+        <span>{{ section.settings.title }}</span>
+      </h2>
+    {%- endif -%}
+
+    <div class="ts-logos__marquee">
+      {% for i in (1..4) %}
+        <div class="ts-logos__marquee-item">
+          {% for block in section.blocks %}
+            <div class="ts-logos__block" {{ block.shopify_attributes }}>
+              {%- assign desk_image = block.settings.desk_logo -%}
+              {%- assign mob_image = block.settings.mob_logo | default: desk_image -%}
+              {%- assign mob_image_width = mob_image.width | divided_by: 2 -%}
+              {% if desk_image %}
+                {{ desk_image | image_url: width: 400 | image_tag: class: "ts-logos__block-media--desktop" }}
+                {{ mob_image | image_url: width: mob_image_width | image_tag: class: "ts-logos__block-media--mobile" }}
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "TS Logos",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "header",
+        "content": "Indent settings"
+      },
+      {
+        "type": "range",
+        "id": "desk_indent_top",
+        "label": "Indent top (desktop)",
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "desk_indent_bottom",
+        "label": "Indent bottom (desktop)",
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "mob_indent_top",
+        "label": "Indent top (mobile)",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "mob_indent_bottom",
+        "label": "Indent bottom (mobile)",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 40
+      }
+    ],
+    "blocks": [
+      {
+        "type": "logo",
+        "name": "Logo",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "desk_logo",
+            "label": "Logo (desktop)"
+          },
+          {
+            "type": "image_picker",
+            "id": "mob_logo",
+            "label": "Logo (mobile)"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "TS Logos"
+      }
+    ]
+  }
+{% endschema %}

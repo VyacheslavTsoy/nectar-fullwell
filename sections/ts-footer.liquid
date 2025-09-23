@@ -1,0 +1,52 @@
+{% render 'entry' with '@/styles/sections/ts-footer.scss' %}
+
+<div class="ts-footer section-{{ section.id }}">
+  <div class="ts-footer__wrapper">
+    {%- if section.settings.first_notice != blank -%}
+      <p class="ts-footer__notice ts-footer__notice--first">{{ section.settings.first_notice }}</p>
+    {%- endif -%}
+    {%- if section.settings.second_notice != blank -%}
+      <p class="ts-footer__notice ts-footer__notice--second">{{ section.settings.second_notice }}</p>
+    {%- endif -%}
+
+    <p class="ts-footer__copyright">&copy; {{ 'now' | date: "%Y" }} Drinc Nectar Inc.</p>
+    {%- if section.settings.menu != blank -%}
+      <ul class="ts-footer__menu">
+        {%- for link in section.settings.menu.links -%}
+          <li>
+            <a href="{{ link.url }}" class="ts-footer__link">{{ link.title }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "TS Footer",
+    "settings": [
+      {
+        "type": "text",
+        "id": "first_notice",
+        "label": "First notice"
+      },
+      {
+        "type": "text",
+        "id": "second_notice",
+        "label": "Second notice"
+      },
+      {
+        "type": "link_list",
+        "id": "menu",
+        "label": "Menu",
+        "default": "footer"
+      }
+    ],
+    "presets": [
+      {
+        "name": "TS Footer"
+      }
+    ]
+  }
+{% endschema %}

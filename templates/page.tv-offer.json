@@ -1,0 +1,1145 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+ {
+    "sections": {
+      "timer": {
+        "type": "ts-timer",
+        "settings": {
+          "icon": "shopify://shop_images/icon_timer.svg",
+          "title": "Special TV Offer",
+          "badge": "UP TO 60% OFF",
+          "enable_timer": true,
+          "enable_daily": true,
+          "end_date": "23-07-2025 12:00"
+        }
+      },
+      "ts_logo": {
+        "type": "ts-logo",
+        "settings": {}
+      },
+      "ts_banner": {
+        "type": "ts-banner",
+        "blocks": {
+          "image_1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/banner_image.png"
+            }
+          },
+          "image_2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/banner_image.png"
+            }
+          },
+          "image_3": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/banner_image.png"
+            }
+          },
+          "image_4": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/banner_image.png"
+            }
+          },
+          "image_5": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/banner_image.png"
+            }
+          },
+          "image_6": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/banner_image.png"
+            }
+          },
+          "row_1": {
+            "type": "row",
+            "settings": {
+              "question": "Shipping Details",
+              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            }
+          },
+          "row_2": {
+            "type": "row",
+            "settings": {
+              "question": "Who Needs Nectar?",
+              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            }
+          },
+          "row_3": {
+            "type": "row",
+            "settings": {
+              "question": "Ingredients & Nutrition",
+              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            }
+          },
+          "row_4": {
+            "type": "row",
+            "settings": {
+              "question": "Directions For Use",
+              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            }
+          },
+          "row_5": {
+            "type": "row",
+            "settings": {
+              "question": "What Does It Taste Like?",
+              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            }
+          },
+          "row_6": {
+            "type": "row",
+            "settings": {
+              "question": "What Does It Taste Like?",
+              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            }
+          },
+          "row_7": {
+            "type": "row",
+            "settings": {
+              "question": "What Does It Taste Like?",
+              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            }
+          },
+          "row_8": {
+            "type": "row",
+            "settings": {
+              "question": "What Does It Taste Like?",
+              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            }
+          },
+          "row_9": {
+            "type": "row",
+            "settings": {
+              "question": "What Does It Taste Like?",
+              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            }
+          },
+          "button_feature_1": {
+            "type": "button_feature",
+            "settings": {
+              "icon": "shopify://shop_images/icon_banner_delivery.svg",
+              "label": "Express US Shipping"
+            }
+          },
+          "button_feature_2": {
+            "type": "button_feature",
+            "settings": {
+              "icon": "shopify://shop_images/icon_banner_money.svg",
+              "label": "90 Day Money Back Guarantee"
+            }
+          }
+        },
+        "block_order": [
+          "image_1",
+          "image_2",
+          "image_3",
+          "image_4",
+          "image_5",
+          "image_6",
+          "row_1",
+          "row_2",
+          "row_3",
+          "row_4",
+          "row_5",
+          "row_6",
+          "row_7",
+          "row_8",
+          "row_9",
+          "button_feature_1",
+          "button_feature_2"
+        ],
+        "settings": {
+          "review": "1 Million+ Happy Customers",
+          "title": "Sugar Free. Low Sodium. Clean Daily Hydration.",
+          "description": "<p><strong>Introducing Nectar</strong> - The only Hydration Mix developed for <strong>safe daily use.</strong> Medical Grade Electrolytes & Organic Fruit Flavor for:</p><ul><li><strong>Energy</strong> - No More Afternoon Slump</li><li><strong>Focus</strong> - Goodbye Brain Fog</li><li><strong>Mood</strong> - Eliminate The Ups and Downs</li></ul>",
+          "btn_label": "Select Quantity & Flavors",
+          "btn_link": "shopify://pages/checkout",
+          "sticky_link": "shopify://pages/checkout",
+          "sticky_label": "Select Quantity & Flavors",
+          "guarantee_image": "shopify://shop_images/guarantee_image.png",
+          "guarantee_label": "Try Nectar with no risk! If you’re not 100% satisfied, you can trust in our 90-day money back gaurantee.*"
+        }
+      },
+      "ts_logos": {
+        "type": "ts-logos",
+        "blocks": {
+          "logo_1": {
+            "type": "logo",
+            "name": "Logo",
+            "settings": {
+              "desk_logo": "shopify://shop_images/logo_vice.png",
+              "mob_logo": "shopify://shop_images/logo_color_vice.png"
+            }
+          },
+          "logo_2": {
+            "type": "logo",
+            "name": "Logo",
+            "settings": {
+              "desk_logo": "shopify://shop_images/logo_fox.png",
+              "mob_logo": "shopify://shop_images/logo_color_fox.png"
+            }
+          },
+          "logo_3": {
+            "type": "logo",
+            "name": "Logo",
+            "settings": {
+              "desk_logo": "shopify://shop_images/logo_amc.png",
+              "mob_logo": "shopify://shop_images/logo_color_amc.png"
+            }
+          },
+          "logo_4": {
+            "type": "logo",
+            "name": "Logo",
+            "settings": {
+              "desk_logo": "shopify://shop_images/logo_espn.png",
+              "mob_logo": "shopify://shop_images/logo_color_espn.png"
+            }
+          },
+          "logo_5": {
+            "type": "logo",
+            "name": "Logo",
+            "settings": {
+              "desk_logo": "shopify://shop_images/logo_tbs.png",
+              "mob_logo": "shopify://shop_images/logo_color_tbs.png"
+            }
+          },
+          "logo_6": {
+            "type": "logo",
+            "name": "Logo",
+            "settings": {
+              "desk_logo": "shopify://shop_images/logo_bet.png",
+              "mob_logo": "shopify://shop_images/logo_color_bet.png"
+            }
+          },
+          "logo_7": {
+            "type": "logo",
+            "name": "Logo",
+            "settings": {
+              "desk_logo": "shopify://shop_images/logo_comedy.png",
+              "mob_logo": "shopify://shop_images/logo_color_comedy.png"
+            }
+          },
+          "logo_8": {
+            "type": "logo",
+            "name": "Logo",
+            "settings": {
+              "desk_logo": "shopify://shop_images/logo_history.png",
+              "mob_logo": "shopify://shop_images/logo_color_history.png"
+            }
+          },
+          "logo_9": {
+            "type": "logo",
+            "name": "Logo",
+            "settings": {
+              "desk_logo": "shopify://shop_images/logo_msnbc.png",
+              "mob_logo": "shopify://shop_images/logo_color_msnbc.png"
+            }
+          }
+        },
+        "block_order": [
+          "logo_1",
+          "logo_2",
+          "logo_3",
+          "logo_4",
+          "logo_5",
+          "logo_6",
+          "logo_7",
+          "logo_8",
+          "logo_9"
+        ],
+        "settings": {
+          "title": "As Seen On",
+          "desk_indent_top": 26,
+          "desk_indent_bottom": 26,
+          "mob_indent_top": 20,
+          "mob_indent_bottom": 30
+        }
+      },
+      "ts_features": {
+        "type": "ts-features",
+        "blocks": {
+          "feature_1": {
+            "type": "feature",
+            "settings": {
+              "icon": "shopify://shop_images/icon_running.svg",
+              "label": "Boosted Energy"
+            }
+          },
+          "feature_2": {
+            "type": "feature",
+            "settings": {
+              "icon": "shopify://shop_images/icon_mood.svg",
+              "label": "Elevated Mood"
+            }
+          },
+          "feature_3": {
+            "type": "feature",
+            "settings": {
+              "icon": "shopify://shop_images/icon_target.svg",
+              "label": "Increased Focus"
+            }
+          },
+          "feature_4": {
+            "type": "feature",
+            "settings": {
+              "icon": "shopify://shop_images/icon_sleep.svg",
+              "label": "Deeper Sleep"
+            }
+          },
+          "feature_5": {
+            "type": "feature",
+            "settings": {
+              "icon": "shopify://shop_images/icon_balance.svg",
+              "label": "Hormonal Balance"
+            }
+          },
+          "feature_6": {
+            "type": "feature",
+            "settings": {
+              "icon": "shopify://shop_images/icon_strength.svg",
+              "label": "Improved Recovery"
+            }
+          }
+        },
+        "block_order": [
+          "feature_1",
+          "feature_2",
+          "feature_3",
+          "feature_4",
+          "feature_5",
+          "feature_6"
+        ],
+        "settings": {
+          "image": "shopify://shop_images/tv_placeholder.png",
+          "title": "Experience What Proper Hydration Actually Feels Like",
+          "description": "Most people walk around chronically dehydrated without realizing it. If you're dealing with afternoon fatigue, brain fog, or mood dips - here's what will change when you're actually hydrated:",
+          "review_image": "shopify://shop_images/review_image.png",
+          "review_title": "Meet Our Expert Advisor",
+          "review_comment": "“I’ve reviewed many electrolyte mixes, yet Nectar consistently ranks at the top of my list!”",
+          "review_author": "Dr. Amber B",
+          "desk_indent_top": 50,
+          "desk_indent_bottom": 50,
+          "mob_indent_top": 0,
+          "mob_indent_bottom": 20
+        }
+      },
+      "ts_reviews": {
+        "type": "ts-reviews",
+        "blocks": {
+          "review_1": {
+            "type": "review",
+            "settings": {
+              "category": "taste",
+              "image": "shopify://shop_images/review_1.png",
+              "title": "Elizabeth Thompson",
+              "date": "7 days ago",
+              "comment": "Three pregnancies and Nectar is the ONLY difference with this one. No swelling, no headaches, no fatigue! My friends asked what I'm doing differently because I feel amazing and they’ve noticed!",
+              "likes": "992",
+              "comments": "212 Comments"
+            }
+          },
+          "review_2": {
+            "type": "review",
+            "settings": {
+              "category": "taste",
+              "image": "shopify://shop_images/review_2.png",
+              "title": "Sarah Kavanaugh",
+              "date": "25 days ago",
+              "comment": "I struggled with severe morning sickness for months before discovering Nectar. Within days, I could finally keep food down and my energy returned. Now at 36 weeks, this pregnancy has completely turned around!",
+              "likes": "257",
+              "comments": "14 Comments"
+            }
+          },
+          "review_3": {
+            "type": "review",
+            "settings": {
+              "category": "taste",
+              "image": "shopify://shop_images/review_3.png",
+              "title": "Bridgette Hudson",
+              "date": "17 days ago",
+              "comment": "After struggling with dehydration headaches, a mom friend gave me a Nectar packet. The relief was IMMEDIATE. Not only did my headaches stop, but my pregnancy brain fog lifted too!",
+              "likes": "750",
+              "comments": "23 Comments"
+            }
+          },
+          "review_4": {
+            "type": "review",
+            "settings": {
+              "category": "value",
+              "image": "shopify://shop_images/review_1.png",
+              "title": "Elizabeth Thompson",
+              "date": "7 days ago",
+              "comment": "Three pregnancies and Nectar is the ONLY difference with this one. No swelling, no headaches, no fatigue! My friends asked what I'm doing differently because I feel amazing and they’ve noticed!",
+              "likes": "992",
+              "comments": "212 Comments"
+            }
+          },
+          "review_6": {
+            "type": "review",
+            "settings": {
+              "category": "value",
+              "image": "shopify://shop_images/review_3.png",
+              "title": "Bridgette Hudson",
+              "date": "17 days ago",
+              "comment": "After struggling with dehydration headaches, a mom friend gave me a Nectar packet. The relief was IMMEDIATE. Not only did my headaches stop, but my pregnancy brain fog lifted too!",
+              "likes": "750",
+              "comments": "23 Comments"
+            }
+          },
+          "review_5": {
+            "type": "review",
+            "settings": {
+              "category": "value",
+              "image": "shopify://shop_images/review_2.png",
+              "title": "Sarah Kavanaugh",
+              "date": "25 days ago",
+              "comment": "I struggled with severe morning sickness for months before discovering Nectar. Within days, I could finally keep food down and my energy returned. Now at 36 weeks, this pregnancy has completely turned around!",
+              "likes": "257",
+              "comments": "14 Comments"
+            }
+          },
+          "review_9": {
+            "type": "review",
+            "settings": {
+              "category": "others",
+              "image": "shopify://shop_images/review_3.png",
+              "title": "Bridgette Hudson",
+              "date": "17 days ago",
+              "comment": "After struggling with dehydration headaches, a mom friend gave me a Nectar packet. The relief was IMMEDIATE. Not only did my headaches stop, but my pregnancy brain fog lifted too!",
+              "likes": "750",
+              "comments": "23 Comments"
+            }
+          },
+          "review_7": {
+            "type": "review",
+            "settings": {
+              "category": "others",
+              "image": "shopify://shop_images/review_1.png",
+              "title": "Elizabeth Thompson",
+              "date": "7 days ago",
+              "comment": "Three pregnancies and Nectar is the ONLY difference with this one. No swelling, no headaches, no fatigue! My friends asked what I'm doing differently because I feel amazing and they’ve noticed!",
+              "likes": "992",
+              "comments": "212 Comments"
+            }
+          },
+          "review_8": {
+            "type": "review",
+            "settings": {
+              "category": "others",
+              "image": "shopify://shop_images/review_2.png",
+              "title": "Sarah Kavanaugh",
+              "date": "25 days ago",
+              "comment": "I struggled with severe morning sickness for months before discovering Nectar. Within days, I could finally keep food down and my energy returned. Now at 36 weeks, this pregnancy has completely turned around!",
+              "likes": "257",
+              "comments": "14 Comments"
+            }
+          },
+          "review_10": {
+            "type": "review",
+            "settings": {
+              "category": "benefits",
+              "image": "shopify://shop_images/review_1.png",
+              "title": "Elizabeth Thompson",
+              "date": "7 days ago",
+              "comment": "Three pregnancies and Nectar is the ONLY difference with this one. No swelling, no headaches, no fatigue! My friends asked what I'm doing differently because I feel amazing and they’ve noticed!",
+              "likes": "992",
+              "comments": "212 Comments"
+            }
+          },
+          "review_12": {
+            "type": "review",
+            "settings": {
+              "category": "benefits",
+              "image": "shopify://shop_images/review_3.png",
+              "title": "Bridgette Hudson",
+              "date": "17 days ago",
+              "comment": "After struggling with dehydration headaches, a mom friend gave me a Nectar packet. The relief was IMMEDIATE. Not only did my headaches stop, but my pregnancy brain fog lifted too!",
+              "likes": "750",
+              "comments": "23 Comments"
+            }
+          },
+          "review_11": {
+            "type": "review",
+            "settings": {
+              "category": "benefits",
+              "image": "shopify://shop_images/review_2.png",
+              "title": "Sarah Kavanaugh",
+              "date": "25 days ago",
+              "comment": "I struggled with severe morning sickness for months before discovering Nectar. Within days, I could finally keep food down and my energy returned. Now at 36 weeks, this pregnancy has completely turned around!",
+              "likes": "257",
+              "comments": "14 Comments"
+            }
+          },
+          "review_14": {
+            "type": "review",
+            "settings": {
+              "category": "ingredients",
+              "image": "shopify://shop_images/review_2.png",
+              "title": "Sarah Kavanaugh",
+              "date": "25 days ago",
+              "comment": "I struggled with severe morning sickness for months before discovering Nectar. Within days, I could finally keep food down and my energy returned. Now at 36 weeks, this pregnancy has completely turned around!",
+              "likes": "257",
+              "comments": "14 Comments"
+            }
+          },
+          "review_13": {
+            "type": "review",
+            "settings": {
+              "category": "ingredients",
+              "image": "shopify://shop_images/review_1.png",
+              "title": "Elizabeth Thompson",
+              "date": "7 days ago",
+              "comment": "Three pregnancies and Nectar is the ONLY difference with this one. No swelling, no headaches, no fatigue! My friends asked what I'm doing differently because I feel amazing and they’ve noticed!",
+              "likes": "992",
+              "comments": "212 Comments"
+            }
+          },
+          "review_15": {
+            "type": "review",
+            "settings": {
+              "category": "ingredients",
+              "image": "shopify://shop_images/review_3.png",
+              "title": "Bridgette Hudson",
+              "date": "17 days ago",
+              "comment": "After struggling with dehydration headaches, a mom friend gave me a Nectar packet. The relief was IMMEDIATE. Not only did my headaches stop, but my pregnancy brain fog lifted too!",
+              "likes": "750",
+              "comments": "23 Comments"
+            }
+          },
+          "review_17": {
+            "type": "review",
+            "settings": {
+              "category": "convenience",
+              "image": "shopify://shop_images/review_2.png",
+              "title": "Sarah Kavanaugh",
+              "date": "25 days ago",
+              "comment": "I struggled with severe morning sickness for months before discovering Nectar. Within days, I could finally keep food down and my energy returned. Now at 36 weeks, this pregnancy has completely turned around!",
+              "likes": "257",
+              "comments": "14 Comments"
+            }
+          },
+          "review_16": {
+            "type": "review",
+            "settings": {
+              "category": "convenience",
+              "image": "shopify://shop_images/review_1.png",
+              "title": "Elizabeth Thompson",
+              "date": "7 days ago",
+              "comment": "Three pregnancies and Nectar is the ONLY difference with this one. No swelling, no headaches, no fatigue! My friends asked what I'm doing differently because I feel amazing and they’ve noticed!",
+              "likes": "992",
+              "comments": "212 Comments"
+            }
+          },
+          "review_18": {
+            "type": "review",
+            "settings": {
+              "category": "conveniencev",
+              "image": "shopify://shop_images/review_3.png",
+              "title": "Bridgette Hudson",
+              "date": "17 days ago",
+              "comment": "After struggling with dehydration headaches, a mom friend gave me a Nectar packet. The relief was IMMEDIATE. Not only did my headaches stop, but my pregnancy brain fog lifted too!",
+              "likes": "750",
+              "comments": "23 Comments"
+            }
+          },
+          "video_1": {
+            "type": "video",
+            "settings": {
+              "video": "shopify://files/videos/test_video.mp4"
+            }
+          },
+          "video_2": {
+            "type": "video",
+            "settings": {
+              "video": "shopify://files/videos/test_video.mp4"
+            }
+          },
+          "video_3": {
+            "type": "video",
+            "settings": {
+              "video": "shopify://files/videos/test_video.mp4"
+            }
+          },
+          "video_4": {
+            "type": "video",
+            "settings": {
+              "video": "shopify://files/videos/test_video.mp4"
+            }
+          },
+          "video_5": {
+            "type": "video",
+            "settings": {
+              "video": "shopify://files/videos/test_video.mp4"
+            }
+          }
+        },
+        "block_order": [
+          "review_1",
+          "review_2",
+          "review_3",
+          "review_4",
+          "review_6",
+          "review_5",
+          "review_9",
+          "review_7",
+          "review_8",
+          "review_10",
+          "review_12",
+          "review_11",
+          "review_14",
+          "review_13",
+          "review_15",
+          "review_17",
+          "review_16",
+          "review_18",
+          "video_1",
+          "video_2",
+          "video_3",
+          "video_4",
+          "video_5"
+        ],
+        "settings": {
+          "title": "Join 1,000,000+ Others Who Have Changed Their Lives With Nectar",
+          "desk_indent_top": 50,
+          "desk_indent_bottom": 10,
+          "mob_indent_top": 20,
+          "mob_indent_bottom": 30
+        }
+      },
+      "ts_compare": {
+        "type": "ts-compare",
+        "blocks": {
+          "row_1": {
+            "type": "row",
+            "settings": {
+              "title": "Cost Per Serving",
+              "first_brand_value": "$0.89",
+              "first_is_icon": false,
+              "first_icon": "check",
+              "second_brand_value": "$2.00+",
+              "second_is_icon": false,
+              "second_icon": "check",
+              "third_brand_value": "$3.15+",
+              "third_is_icon": false,
+              "third_icon": "check"
+            }
+          },
+          "row_2": {
+            "type": "row",
+            "settings": {
+              "title": "Taste",
+              "first_brand_value": "Light & Refreshing",
+              "first_is_icon": false,
+              "first_icon": "check",
+              "second_brand_value": "Salty & Syrupy",
+              "second_is_icon": false,
+              "second_icon": "check",
+              "third_brand_value": "Overly sweet",
+              "third_is_icon": false,
+              "third_icon": "check"
+            }
+          },
+          "row_3": {
+            "type": "row",
+            "settings": {
+              "title": "Sugar",
+              "first_brand_value": "0g",
+              "first_is_icon": false,
+              "first_icon": "check",
+              "second_brand_value": "10g+",
+              "second_is_icon": false,
+              "second_icon": "check",
+              "third_brand_value": "2lg+",
+              "third_is_icon": false,
+              "third_icon": "check"
+            }
+          },
+          "row_4": {
+            "type": "row",
+            "settings": {
+              "title": "Sodium",
+              "first_brand_value": "100mg",
+              "first_is_icon": false,
+              "first_icon": "check",
+              "second_brand_value": "500mg+",
+              "second_is_icon": false,
+              "second_icon": "check",
+              "third_brand_value": "300mg+",
+              "third_is_icon": false,
+              "third_icon": "check"
+            }
+          },
+          "row_5": {
+            "type": "row",
+            "settings": {
+              "title": "Potassium",
+              "first_brand_value": "250mg",
+              "first_is_icon": false,
+              "first_icon": "check",
+              "second_brand_value": "0mg-50mg",
+              "second_is_icon": false,
+              "second_icon": "check",
+              "third_brand_value": "75mg",
+              "third_is_icon": false,
+              "third_icon": "check"
+            }
+          },
+          "row_6": {
+            "type": "row",
+            "settings": {
+              "title": "Magnesium",
+              "first_brand_value": "50mg",
+              "first_is_icon": false,
+              "first_icon": "check",
+              "second_brand_value": "",
+              "second_is_icon": true,
+              "second_icon": "cross",
+              "third_brand_value": "",
+              "third_is_icon": true,
+              "third_icon": "cross"
+            }
+          },
+          "row_7": {
+            "type": "row",
+            "settings": {
+              "title": "Organic Fruit",
+              "first_brand_value": "",
+              "first_is_icon": true,
+              "first_icon": "check",
+              "second_brand_value": "",
+              "second_is_icon": true,
+              "second_icon": "cross",
+              "third_brand_value": "",
+              "third_is_icon": true,
+              "third_icon": "cross"
+            }
+          }
+        },
+        "block_order": [
+          "row_1",
+          "row_2",
+          "row_3",
+          "row_4",
+          "row_5",
+          "row_6",
+          "row_7"
+        ],
+        "settings": {
+          "title": "Us Vs. Them",
+          "subtitle": "Not overhyped or overpriced. Just what you need made available for everyone.",
+          "image": "shopify://shop_images/compare_image.png",
+          "brand_logo": "shopify://shop_images/compare_logo.png",
+          "enable_second": true,
+          "second_brand_title": "Other Mixes",
+          "enable_third": true,
+          "third_brand_title": "Sports Drinks"
+        }
+      },
+      "ts_ingredients": {
+        "type": "ts-ingredients",
+        "blocks": {
+          "ingredient_1": {
+            "type": "ingredient",
+            "settings": {
+              "title": "Himalayan Pink Salt",
+              "subtitle": "Drives water absorption and keeps your body's hydration systems in sync.",
+              "image": "shopify://shop_images/ingredient_pink_salt.png"
+            }
+          },
+          "ingredient_2": {
+            "type": "ingredient",
+            "settings": {
+              "title": "Magnesium Citrate",
+              "subtitle": "Drives water absorption and keeps your body's hydration systems in sync.",
+              "image": "shopify://shop_images/ingredient_magnesium.png"
+            }
+          },
+          "ingredient_3": {
+            "type": "ingredient",
+            "settings": {
+              "title": "Potassium Citrate",
+              "subtitle": "Balances cellular fluids and prevents fatigue from electrolyte loss.",
+              "image": "shopify://shop_images/ingredient_potassium.png"
+            }
+          },
+          "ingredient_4": {
+            "type": "ingredient",
+            "settings": {
+              "title": "Calcium Citrate",
+              "subtitle": "Powers muscle contractions and nerve signals for sustained daily energy.",
+              "image": "shopify://shop_images/ingredient_calcium.png"
+            }
+          },
+          "ingredient_5": {
+            "type": "ingredient",
+            "settings": {
+              "title": "Organic Fruit Flavor",
+              "subtitle": "Flavored with Organic Fruit for a light, refreshing taste you’ll look forward to drinking all day long.",
+              "image": "shopify://shop_images/ingredient_fruit.png"
+            }
+          },
+          "ingredient_6": {
+            "type": "ingredient",
+            "settings": {
+              "title": "Chloride",
+              "subtitle": "Aids in nerve signal transmission and supports healthy kidney function.",
+              "image": "shopify://shop_images/ingredient_chloride.png"
+            }
+          },
+          "feature_1": {
+            "type": "feature",
+            "settings": {
+              "icon": "shopify://shop_images/icon_no_sugar.png",
+              "label": "Sugar Free"
+            }
+          },
+          "feature_2": {
+            "type": "feature",
+            "settings": {
+              "icon": "shopify://shop_images/icon_no_calorie.png",
+              "label": "Zero Calorie"
+            }
+          },
+          "feature_3": {
+            "type": "feature",
+            "settings": {
+              "icon": "shopify://shop_images/icon_no_sodium.png",
+              "label": "Low Sodium"
+            }
+          },
+          "feature_4": {
+            "type": "feature",
+            "settings": {
+              "icon": "shopify://shop_images/icon_no_gmo.png",
+              "label": "Non-GMO"
+            }
+          },
+          "feature_5": {
+            "type": "feature",
+            "settings": {
+              "icon": "shopify://shop_images/icon_plant.png",
+              "label": "Vegan & Plant-Based"
+            }
+          },
+          "feature_6": {
+            "type": "feature",
+            "settings": {
+              "icon": "shopify://shop_images/icon_avocado.png",
+              "label": "Keto & Paleo Friendly"
+            }
+          },
+          "mob_feature_1": {
+            "type": "mob_feature",
+            "settings": {
+              "icon": "shopify://shop_images/icon_low_sodium.png",
+              "label": "Low Sodium"
+            }
+          },
+          "mob_feature_2": {
+            "type": "mob_feature",
+            "settings": {
+              "icon": "shopify://shop_images/icon_sugar_free.png",
+              "label": "Sugar Free"
+            }
+          },
+          "mob_feature_3": {
+            "type": "mob_feature",
+            "settings": {
+              "icon": "shopify://shop_images/icon_zero_calorie.png",
+              "label": "Zero Calorie"
+            }
+          }
+        },
+        "block_order": [
+          "ingredient_1",
+          "ingredient_2",
+          "ingredient_3",
+          "ingredient_4",
+          "ingredient_5",
+          "ingredient_6",
+          "feature_1",
+          "feature_2",
+          "feature_3",
+          "feature_4",
+          "feature_5",
+          "feature_6",
+          "mob_feature_1",
+          "mob_feature_2",
+          "mob_feature_3"
+        ],
+        "settings": {
+          "title": "The Science Behind Nectar's Daily Hydration Formula",
+          "subtitle": "Clean, research-backed ingredients delivered at the perfect ratio for all-day hydration and energy.",
+          "btn_label": "See Our Full Nutrition Facts",
+          "btn_link": "/",
+          "show_popup": true,
+          "desk_popup_image": "shopify://shop_images/desk_popup_image.png",
+          "mob_popup_image": "shopify://shop_images/mob_popup_image.png",
+          "popup_image_subtitle": "<em><strong>Ingredients:</strong></em> Organic Fruit Flavor, Pink Himalayan Sea Salt, Potassium Citrate, Magnesium Citrate, Calcium Citrate, Non-GMO Citric & Malic Acid, Organic Stevia Leaf Extract",
+          "popup_title": "Made With Clean High-Quality Ingredients You Can Trust",
+          "popup_comment": "<em>Stop settling for low-quality electrolyte powders loaded with sugar and salt. Nectar is the clean, daily hydration mix that makes drinking water a habit you'll actually stick to.</em>",
+          "popup_features_subtitle": "<strong>Free From The Top 9 Allergens:</strong> We are dairy-free, soy-free, egg-free, gluten-free, peanut-free, tree nut-free, fish-free, sesame-free, and shellfish-free.",
+          "popup_btn_label": "Select Quantity And Flavors",
+          "popup_btn_link": "shopify://pages/checkout",
+          "desk_indent_top": 50,
+          "desk_indent_bottom": 50,
+          "mob_indent_top": 30,
+          "mob_indent_bottom": 20
+        }
+      },
+      "ts_cards": {
+        "type": "ts-cards",
+        "blocks": {
+          "card_1": {
+            "type": "card",
+            "settings": {
+              "image": "shopify://shop_images/card_1.png",
+              "link": ""
+            }
+          },
+          "card_2": {
+            "type": "card",
+            "settings": {
+              "image": "shopify://shop_images/card_2.png",
+              "link": ""
+            }
+          },
+          "card_3": {
+            "type": "card",
+            "settings": {
+              "image": "shopify://shop_images/card_3.png",
+              "link": ""
+            }
+          },
+          "card_4": {
+            "type": "card",
+            "settings": {
+              "image": "shopify://shop_images/card_4.png",
+              "link": ""
+            }
+          },
+          "card_5": {
+            "type": "card",
+            "settings": {
+              "image": "shopify://shop_images/card_5.png",
+              "link": ""
+            }
+          },
+          "card_6": {
+            "type": "card",
+            "settings": {
+              "image": "shopify://shop_images/card_6.png",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "card_1",
+          "card_2",
+          "card_3",
+          "card_4",
+          "card_5",
+          "card_6"
+        ],
+        "settings": {
+          "title": "Six Light, Refreshing Flavors",
+          "subtitle": "Real organic fruit flavors you can enjoy Sipping all day long",
+          "desk_indent_top": 50,
+          "desk_indent_bottom": 50,
+          "mob_indent_top": 30,
+          "mob_indent_bottom": 30
+        }
+      },
+      "ts_review_image": {
+        "type": "ts-review-image",
+        "settings": {
+          "title": "Real, Verified Relief - See Why Millions Call",
+          "subtitle": "Nectar “A Game Changer for Neck Pain”",
+          "description": "Note: All reviews below are from actual paying customers. They have been authenticated and verified.",
+          "image": "shopify://shop_images/review_image_bb0f6981-b346-4f6c-9f96-964cc499c330.png",
+          "review_label": "Based on 14,802 reviews",
+          "review_count": "4.9",
+          "reviewers_label": "Of Reviewers Would Recommend This Product To A Friend",
+          "reviewers_count": "99%"
+        }
+      },
+      "17537951597b6ea412": {
+        "type": "apps",
+        "blocks": {
+          "junip_junip_reviews_wiREQi": {
+            "type": "shopify://apps/junip/blocks/junip-reviews/dc14f5a8-ed15-41b1-ad08-cfba23f9789b",
+            "settings": {
+              "layout": "list",
+              "reviewsType": "all",
+              "showSummary": true,
+              "showMediaGallery": false,
+              "reviewsCount": 5,
+              "containerClass": ""
+            }
+          }
+        },
+        "block_order": [
+          "junip_junip_reviews_wiREQi"
+        ],
+        "custom_css": [
+          ".junip-reviews-tab-switcher-container,.junip-product-review-summary-wrapper,.junip-filters,.junip-product-review-summary-wrapper + .junip-separator,.junip-powered-by-footer {display: none;}",
+          ".junip-reviews-container {padding-top: 0;}",
+          ".junip-product-review-container {padding: 2em 1em !important;}"
+        ],
+        "settings": {}
+      },
+      "ts_faq": {
+        "type": "ts-faq",
+        "blocks": {
+          "row_1": {
+            "type": "row",
+            "settings": {
+              "question": "Shipping Details",
+              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            }
+          },
+          "row_2": {
+            "type": "row",
+            "settings": {
+              "question": "Who Needs Nectar?",
+              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            }
+          },
+          "row_3": {
+            "type": "row",
+            "settings": {
+              "question": "Ingredients & Nutrition",
+              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            }
+          },
+          "row_4": {
+            "type": "row",
+            "settings": {
+              "question": "Directions For Use",
+              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            }
+          },
+          "row_5": {
+            "type": "row",
+            "settings": {
+              "question": "What Does It Taste Like?",
+              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            }
+          },
+          "row_6": {
+            "type": "row",
+            "settings": {
+              "question": "What Does It Taste Like?",
+              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            }
+          },
+          "row_7": {
+            "type": "row",
+            "settings": {
+              "question": "What Does It Taste Like?",
+              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            }
+          },
+          "row_8": {
+            "type": "row",
+            "settings": {
+              "question": "What Does It Taste Like?",
+              "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "row_1",
+          "row_2",
+          "row_3",
+          "row_4",
+          "row_5",
+          "row_6",
+          "row_7",
+          "row_8"
+        ],
+        "settings": {
+          "title": "Still Not Sure? Here Are The Top 8 Questions We Get About <strong>Nectar</strong>",
+          "desk_indent_top": 50,
+          "desk_indent_bottom": 50,
+          "mob_indent_top": 30,
+          "mob_indent_bottom": 20
+        }
+      },
+      "ts_risks": {
+        "type": "ts-risks",
+        "blocks": {
+          "feature_1": {
+            "type": "feature",
+            "settings": {
+              "icon": "shopify://shop_images/icon_delivery.svg",
+              "label": "Free Shipping"
+            }
+          },
+          "feature_2": {
+            "type": "feature",
+            "settings": {
+              "icon": "shopify://shop_images/icon_guarantee.svg",
+              "label": "90 Day Guarantee"
+            }
+          },
+          "feature_3": {
+            "type": "feature",
+            "settings": {
+              "icon": "shopify://shop_images/icon_return.svg",
+              "label": "Easy Returns"
+            }
+          }
+        },
+        "block_order": [
+          "feature_1",
+          "feature_2",
+          "feature_3"
+        ],
+        "settings": {
+          "title": "Try Us Risk Free",
+          "desk_indent_top": 36,
+          "desk_indent_bottom": 36,
+          "mob_indent_top": 12,
+          "mob_indent_bottom": 16
+        }
+      },
+      "ts_footer": {
+        "type": "ts-footer",
+        "settings": {
+          "first_notice": "No statements found on the drinknectar.com site or advertised by Drink Nectar Inc. have been approved by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease. Testimonials found at drinknectar.com are unverified results, and may not reflect the typical purchaser's experience, may not apply to the average person and are not intended to represent or guarantee that anyone will achieve the same or similar results.",
+          "second_notice": "Information on the Drink Nectar Inc. site is provided for informational purposes only. It is not meant to substitute for medical advice from your physician or other medical professional. You should not use the information contained herein for diagnosing or treating a health problem or disease, or prescribing any medication. Carefully read all product documentation. If you have or suspect that you have a medical problem, promptly contact your regular health care provider.",
+          "menu": "offer-footer"
+        }
+      }
+    },
+    "order": [
+      "timer",
+      "ts_logo",
+      "ts_banner",
+      "ts_logos",
+      "ts_features",
+      "ts_reviews",
+      "ts_compare",
+      "ts_ingredients",
+      "ts_cards",
+      "ts_review_image",
+      "17537951597b6ea412",
+      "ts_faq",
+      "ts_risks",
+      "ts_footer"
+    ]
+  }
+  

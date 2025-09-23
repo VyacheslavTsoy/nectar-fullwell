@@ -1,0 +1,205 @@
+{% render 'entry' with '@/styles/sections/ts-features.scss' %}
+
+<style>
+  .section-{{ section.id }} {
+    padding-top: {{ section.settings.desk_indent_top }}px;
+    padding-bottom: {{ section.settings.desk_indent_bottom }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .section-{{ section.id }} {
+      padding-top: {{ section.settings.mob_indent_top }}px;
+      padding-bottom: {{ section.settings.mob_indent_bottom }}px;
+    }
+  }
+</style>
+
+<div class="ts-features section-{{ section.id }}">
+  <div class="ts-features__wrapper">
+    <div class="ts-features__media">
+      {% if section.settings.video != blank %}
+        {{-
+          section.settings.video
+          | video_tag: 
+          image_size: '1000x', 
+          autoplay: false, 
+          loop: true, 
+          controls: true, 
+          muted: true
+        -}}
+      {% elsif section.settings.image != blank %}
+        {{ section.settings.image | image_url: width: 1000 | image_tag }}
+      {% else %}
+        {{ 'hero-apparel-1' | placeholder_svg_tag }}    
+      {% endif %}
+    </div>
+
+    <div class="ts-features__content">
+      {%- if section.settings.title != blank -%}
+        <h2 class="ts-features__title">
+          {{ section.settings.title }}
+        </h2>
+      {%- endif -%}
+      {%- if section.settings.description != blank -%}
+        <h2 class="ts-features__description">
+          {{ section.settings.description }}
+        </h2>
+      {%- endif -%}
+
+      <div class="ts-features__blocks">
+        {%- for block in section.blocks -%}
+          <div class="ts-features__block">
+            {%- if block.settings.icon != blank -%}
+              {{ block.settings.icon | image_url: width: 160 | image_tag }}
+            {%- endif -%}
+            {{ block.settings.label }}
+          </div>
+        {%- endfor -%}
+      </div>
+
+      {%- if section.settings.review_image != blank -%}
+        <div class="ts-features__review">
+          <div class="ts-features__review-media">
+            {{ section.settings.review_image | image_url: width: 300 | image_tag }}
+          </div>
+          <div class="ts-features__review-content">
+            {%- if section.settings.review_title != blank -%}
+              <p class="ts-features__review-title">{{ section.settings.review_title }}</p>
+            {%- endif -%}
+            {%- if section.settings.review_comment != blank -%}
+              <p class="ts-features__review-comment">{{ section.settings.review_comment }}</p>
+            {%- endif -%}
+            {%- if section.settings.review_author != blank -%}
+              <p class="ts-features__review-author">{{ section.settings.review_author }}</p>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "TS Features",
+    "settings": [
+      { 
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+      },
+      { 
+        "type": "video",
+        "id": "video",
+        "label": "Video",
+      },
+      { 
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Features"
+      },
+      { 
+        "type": "text",
+        "id": "description",
+        "label": "Description",
+        "default": "Description"
+      },
+      {
+        "type": "header",
+        "content": "Review settings"
+      },
+      {
+        "type": "image_picker",
+        "id": "review_image",
+        "label": "Review image"
+      },
+      {
+        "type": "text",
+        "id": "review_title",
+        "label": "Review title",
+        "default": "Review"
+      },
+      {
+        "type": "text",
+        "id": "review_comment",
+        "label": "Review comment",
+        "default": "Comment"
+      },
+      {
+        "type": "text",
+        "id": "review_author",
+        "label": "Review author",
+        "default": "Author"
+      },
+      {
+        "type": "header",
+        "content": "Indent settings"
+      },
+      {
+        "type": "range",
+        "id": "desk_indent_top",
+        "label": "Indent top (desktop)",
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "desk_indent_bottom",
+        "label": "Indent bottom (desktop)",
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "mob_indent_top",
+        "label": "Indent top (mobile)",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "mob_indent_bottom",
+        "label": "Indent bottom (mobile)",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 40
+      }
+    ],
+    "blocks": [
+      {
+        "type": "feature",
+        "name": "Feature",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          },
+          {
+            "type": "text",
+            "id": "label",
+            "label": "Label",
+            "default": "Label"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "TS Features"
+      }
+    ]
+  }
+{% endschema %}

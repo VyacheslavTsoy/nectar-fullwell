@@ -1,0 +1,149 @@
+.ts-logos {
+  background-color: #0D3063;
+  position: relative;
+  overflow: hidden;
+}
+
+.ts-logos__marquee {
+  display: flex;
+  align-items: center;  
+  animation: marquee linear infinite;
+  animation-play-state: running;
+  animation-duration: 30s;
+  width: fit-content;
+}
+
+.ts-logos__marquee-item {
+  position: relative;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.ts-logos__block {
+  display: flex;
+}
+
+.ts-logos__block img {
+    max-width: initial;
+}
+
+.ts-logos__block-media--desktop {
+  height: 40px;
+  width: fit-content;
+}
+
+.ts-logos__block-media--mobile {
+  display: none;
+  max-width: 100%;
+  height: fit-content;
+}
+
+.ts-logos__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 400px;
+  height: 54px;
+  background-image: linear-gradient(90deg, rgba(13, 48, 99, 0) 0%, #0D3063 19.58%, #0D3063 79.81%, rgba(13, 48, 99, 0) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 130%;
+  letter-spacing: 0;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  z-index: 1;
+}
+
+@media screen and (max-width: 749px) {
+  .ts-logos {
+    background-color: #FAFAFA;
+  }
+
+  .ts-logos__wrapper {
+    padding: 0 20px;
+  }
+
+  .ts-logos__marquee {
+    display: block;
+    animation: none;
+  }
+
+  .ts-logos__marquee-item {
+    display: none;
+    padding: 0;
+  }
+
+  .ts-logos__marquee-item:first-of-type {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px 20px;
+  }
+
+  .ts-logos__block {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ts-logos__block-media--desktop {
+    display: none;
+  }
+
+  .ts-logos__block-media--mobile {
+    display: block;
+  }
+
+  .ts-logos__title {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    width: 100%;
+    max-width: unset;
+    height: fit-content;
+    background-image: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 115%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: #0D3063;
+    margin: 0 0 20px;
+  } 
+
+  .ts-logos__title::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #0D3063;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  .ts-logos__title span {
+    position: relative;
+    z-index: 2;
+    background-color: #FAFAFA;
+    padding: 0 24px;
+  }
+}
+
+
+@keyframes marquee {
+  from {
+    transform:translateZ(0)
+  } 
+  to {
+    transform:translate3d(-25%,0,0)
+  }
+}

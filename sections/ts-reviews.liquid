@@ -1,0 +1,291 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+{% render 'entry' with '@/styles/sections/ts-reviews.scss' %}
+
+<style>
+  .section-{{ section.id }} {
+    padding-top: {{ section.settings.desk_indent_top }}px;
+    padding-bottom: {{ section.settings.desk_indent_bottom }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .section-{{ section.id }} {
+      padding-top: {{ section.settings.mob_indent_top }}px;
+      padding-bottom: {{ section.settings.mob_indent_bottom }}px;
+    }
+  }
+</style>
+
+<div class="ts-reviews section-{{ section.id }}">
+  <div class="ts-reviews__wrapper">
+    {%- if section.settings.title != blank -%}
+      <h2 class="ts-reviews__title">{{ section.settings.title }}</h2>
+    {%- endif -%}
+
+    <div class="ts-reviews__categories">
+      <div class="ts-reviews__category active" data-category="taste">Taste</div>
+      <div class="ts-reviews__category" data-category="value">Value</div>
+      <div class="ts-reviews__category" data-category="others">vs. Others</div>
+      <div class="ts-reviews__category" data-category="benefits">Benefits</div>
+      <div class="ts-reviews__category" data-category="ingredients">Ingredients</div>
+      <div class="ts-reviews__category" data-category="convenience">Convenience</div>
+    </div>
+
+    <div class="ts-reviews__blocks" data-reviews="taste">
+      {% for block in section.blocks %}
+        {%- if block.type == "review" -%}
+          <div class="ts-reviews__block" data-category="{{ block.settings.category }}">
+            <div class="ts-reviews__block-header">
+              {% if block.settings.image != blank %}
+                <div class="ts-reviews__block-image">
+                  {{ block.settings.image | image_url: width: 200 | image_tag }}
+                </div>
+              {% endif %}
+              <div class="ts-reviews__block-headings">
+                {%- if block.settings.title != blank -%}
+                  <p class="ts-reviews__block-title">{{ block.settings.title }}</p>
+                {%- endif -%}
+                {%- if block.settings.date != blank -%}
+                  <p class="ts-reviews__block-date">{{ block.settings.date }}</p>
+                {%- endif -%}
+              </div>
+            </div>
+
+            {%- if block.settings.comment != blank -%}
+              <p class="ts-reviews__block-comment">{{ block.settings.comment }}</p>
+            {%- endif -%}
+
+            <div class="ts-reviews__block-footer">
+              <div class="ts-reviews__block-likes">
+                <img src="https://cdn.shopify.com/s/files/1/0309/2257/1835/files/icon_likes.png?v=1758622883" width="48" height="16" alt="Likes icons" />
+                {{ block.settings.likes }}
+              </div>
+              {% if block.settings.comments != blank %}
+                <div class="ts-reviews__block-comments">
+                  {{ block.settings.comments }}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {%- endif -%}
+      {% endfor %}
+    </div>
+
+    <div class="ts-reviews__videos-wrapper">
+      <div class="ts-reviews__videos swiper">
+        <div class="swiper-wrapper">
+          {%- for block in section.blocks -%}
+            {%- if block.type == "video" and block.settings.video != blank -%}
+              <div class="ts-reviews__video swiper-slide">
+                {{-
+                  block.settings.video
+                  | video_tag: 
+                  image_size: '1000x', 
+                  autoplay: false, 
+                  loop: true, 
+                  controls: true, 
+                  muted: true
+                -}}
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+      <div class="ts-reviews__videos-controls">
+        <div class="ts-reviews__videos-control" data-prev>
+          {% render 'ts-icon-prev-button' %}
+        </div>
+        <div class="ts-reviews__videos-dots"></div>
+        <div class="ts-reviews__videos-control" data-next>
+          {% render 'ts-icon-next-button' %}
+        </div>
+      </div>
+    </div>
+
+    <p class="ts-reviews__videos-label">Testimonials featured in videos or other promotional materials may include individuals who have received compensation, free product, or other incentives.</p>
+  </div>
+</div>
+
+{%- render 'swiper' -%}
+<script> 
+  (function() {
+    const section = document.querySelector(".section-{{ section.id }}");
+    const videosCarousell = section.querySelector(".ts-reviews__videos");
+    const categories = section.querySelector(".ts-reviews__categories");
+    const blocks = section.querySelector(".ts-reviews__blocks");
+
+    if (window.innerWidth < 990) {    
+      const swiper = new Swiper(videosCarousell,           {
+        loop: true,
+        slidesPerView: 1,
+        pagination: {
+          el: section.querySelector(".ts-reviews__videos-dots"),
+          type: "bullets"
+        },
+        navigation: {
+          nextEl: section.querySelector('[data-next]'),
+          prevEl: section.querySelector('[data-prev]')
+        }
+      });
+    }
+
+    categories.addEventListener("click", (e) => {
+      if (e.target.hasAttribute("data-category")) {
+        categories.querySelector(".active").classList.remove("active");
+        e.target.classList.add("active");
+        blocks.setAttribute("data-reviews", e.target.getAttribute("data-category"));
+      }
+    })
+  })();
+</script>
+
+{% schema %}
+  {
+    "name": "TS Reviews",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "header",
+        "content": "Indent settings"
+      },
+      {
+        "type": "range",
+        "id": "desk_indent_top",
+        "label": "Indent top (desktop)",
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "desk_indent_bottom",
+        "label": "Indent bottom (desktop)",
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "mob_indent_top",
+        "label": "Indent top (mobile)",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "mob_indent_bottom",
+        "label": "Indent bottom (mobile)",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 40
+      }
+    ],
+    "blocks": [
+      {
+        "type": "review",
+        "name": "Review",
+        "settings": [
+          {
+            "type": "select",
+            "id": "category",
+            "label": "Category",
+            "options": [
+              {
+                "label": "Taste",
+                "value": "taste"
+              },
+              {
+                "label": "Value",
+                "value": "value"
+              },
+              {
+                "label": "vs. Others",
+                "value": "others"
+              },
+              {
+                "label": "Benefits",
+                "value": "benefits"
+              },
+              {
+                "label": "Ingredients",
+                "value": "ingredients"
+              },
+              {
+                "label": "Convenience",
+                "value": "convenience"
+              }
+            ],
+            "default": "taste"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Title"
+          },
+          {
+            "type": "text",
+            "id": "date",
+            "label": "Date",
+            "default": "Date"
+          },
+          {
+            "type": "text",
+            "id": "comment",
+            "label": "Comment",
+            "default": "Comment"
+          },
+          {
+            "type": "text",
+            "id": "likes",
+            "label": "Likes",
+            "default": "993"
+          },
+          {
+            "type": "text",
+            "id": "comments",
+            "label": "Comments",
+            "default": "31 Comments"
+          }
+        ]
+      },
+      {
+        "type": "video",
+        "name": "Video",
+        "limit": 5,
+        "settings": [
+          {
+            "type": "video",
+            "id": "video",
+            "label": "Video"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "TS Reviews"
+      }
+    ]
+  }
+{% endschema %}

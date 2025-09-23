@@ -1,0 +1,116 @@
+{% render 'entry' with '@/styles/sections/ts-risks.scss' %}
+
+<style>
+  .section-{{ section.id }} {
+    padding-top: {{ section.settings.desk_indent_top }}px;
+    padding-bottom: {{ section.settings.desk_indent_bottom }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .section-{{ section.id }} {
+      padding-top: {{ section.settings.mob_indent_top }}px;
+      padding-bottom: {{ section.settings.mob_indent_bottom }}px;
+    }
+  }
+</style>
+
+<div class="ts-risks section-{{ section.id }}"> 
+  <div class="ts-risks__wrapper">
+    {%- if section.settings.title != blank -%}
+      <h2 class="ts-risks__title">{{ section.settings.title }}</h2>
+    {%- endif -%}
+
+    <div class="ts-risks__features">
+      {%- for block in section.blocks -%}
+        <div class="ts-risks__feature">
+          {%- if block.settings.icon != blank -%}
+            {{ block.settings.icon | image_url: width: 100 | image_tag }}
+          {%- endif -%}
+          {{ block.settings.label }}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "TS Risks",
+    "settings": [
+      { 
+        "type": "inline_richtext",
+        "id": "title",
+        "label": "Title",
+        "default": "Ingredients"
+      },
+      {
+        "type": "header",
+        "content": "Indent settings"
+      },
+      {
+        "type": "range",
+        "id": "desk_indent_top",
+        "label": "Indent top (desktop)",
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "desk_indent_bottom",
+        "label": "Indent bottom (desktop)",
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "mob_indent_top",
+        "label": "Indent top (mobile)",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "mob_indent_bottom",
+        "label": "Indent bottom (mobile)",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 40
+      }
+    ],
+    "blocks": [
+      {
+        "type": "feature",
+        "name": "Feature",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          },
+          {
+            "type": "text",
+            "id": "label",
+            "label": "Label",
+            "default": "Label"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "TS Risks"
+      }
+    ]
+  }
+{% endschema %}

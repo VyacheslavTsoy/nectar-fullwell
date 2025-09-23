@@ -1,0 +1,1099 @@
+{% render 'entry' with '@/styles/sections/ts-bundle.scss' %}
+
+<ts-bundle class="ts-bundle">
+  {% liquid
+    assign selected_quantity_savings = blank
+    assign selected_quantity_shipping = blank
+  %}
+  {%- if section.settings.logo != blank -%}    
+    <div class="ts-bundle__header">
+      <div class="ts-bundle__logo">
+        {{ section.settings.logo | image_url: width: 500 | image_tag }}
+      </div>
+    </div>
+  {%- endif -%}
+
+  <div class="ts-bundle__content">
+    {%- for block in section.blocks -%}
+      <div class="ts-bundle__block">
+        {%- case block.type -%}
+          {%- when "gifts" -%}
+            <div class="ts-bundle-gifts">
+              {%- if block.settings.title != blank -%}
+                <div class="ts-bundle-gifts__title">
+                  <span>{{ block.settings.title }}</span>
+                  {% render 'ts-icon-gift' %}
+                </div>
+              {%- endif -%}
+              {%- if block.settings.description != blank -%}
+                <p class="ts-bundle-gifts__description">{{ block.settings.description }}</p>
+              {%- endif -%}
+              <div class="ts-bundle-gifts__options">
+                {%- if block.settings.gift_1_title != blank -%}
+                  <div 
+                    class="ts-bundle-gifts__option" 
+                    data-gift-option="{{ block.settings.gift_1_product.selected_or_first_available_variant.id }}" 
+                    data-gift-requirements="{{ block.settings.gift_1_reqirements }}"
+                    disabled
+                  >
+                    <div class="ts-bundle-gifts__option-media-wrapper">
+                      <div class="ts-bundle-gifts__option-media">
+                        {% if block.settings.gift_1_image != blank %}
+                          {{ block.settings.gift_1_image | image_url: width: 300 | image_tag }}
+                        {%- else -%}
+                          {{ 'image' | placeholder_svg_tag }}    
+                        {% endif %}
+                      </div>
+                      <p class="ts-bundle-gifts__option-price">
+                        <span class="ts-bundle-gifts__option-price--main">
+                          {{- block.settings.gift_1_price -}}
+                        </span>
+                        <span class="ts-bundle-gifts__option-price--compare">
+                          {{- block.settings.gift_1_compare -}}
+                        </span>
+                      </p>
+                      {%- if block.settings.gift_1_blocked != blank -%}
+                        <div class="ts-bundle-gifts__option-blocked">
+                          {% render 'ts-icon-lock' %}
+                          <span>{{ block.settings.gift_1_blocked }}</span>
+                        </div>
+                      {%- endif -%}
+                    </div>
+                    <p class="ts-bundle-gifts__option-title">{{ block.settings.gift_1_title }}</p>
+                  </div>
+                {%- endif -%}
+                {%- if block.settings.gift_2_title != blank -%}
+                  <div 
+                    class="ts-bundle-gifts__option" 
+                    data-gift-option="{{ block.settings.gift_2_product.selected_or_first_available_variant.id }}" 
+                    data-gift-requirements="{{ block.settings.gift_2_reqirements }}"
+                    disabled
+                  >
+                    <div class="ts-bundle-gifts__option-media-wrapper">
+                      <div class="ts-bundle-gifts__option-media">
+                        {% if block.settings.gift_2_image != blank %}
+                          {{ block.settings.gift_2_image | image_url: width: 300 | image_tag }}
+                        {%- else -%}
+                          {{ 'image' | placeholder_svg_tag }}    
+                        {% endif %}
+                      </div>
+                      <p class="ts-bundle-gifts__option-price">
+                        <span class="ts-bundle-gifts__option-price--main">
+                          {{- block.settings.gift_2_price -}}
+                        </span>
+                        <span class="ts-bundle-gifts__option-price--compare">
+                          {{- block.settings.gift_2_compare -}}
+                        </span>
+                      </p>
+                      {%- if block.settings.gift_2_blocked != blank -%}
+                        <div class="ts-bundle-gifts__option-blocked">
+                          {% render 'ts-icon-lock' %}
+                          <span>{{ block.settings.gift_2_blocked }}</span>
+                        </div>
+                      {%- endif -%}
+                    </div>
+                    <p class="ts-bundle-gifts__option-title">{{ block.settings.gift_2_title }}</p>
+                  </div>
+                {%- endif -%}
+                {%- if block.settings.gift_3_title != blank -%}
+                  <div 
+                    class="ts-bundle-gifts__option" 
+                    data-gift-option="{{ block.settings.gift_3_product.selected_or_first_available_variant.id }}" 
+                    data-gift-requirements="{{ block.settings.gift_3_reqirements }}"
+                    disabled
+                  >
+                    <div class="ts-bundle-gifts__option-media-wrapper">
+                      <div class="ts-bundle-gifts__option-media">
+                        {% if block.settings.gift_3_image != blank %}
+                          {{ block.settings.gift_3_image | image_url: width: 300 | image_tag }}
+                        {%- else -%}
+                          {{ 'image' | placeholder_svg_tag }}    
+                        {% endif %}
+                      </div>
+                      <p class="ts-bundle-gifts__option-price">
+                        <span class="ts-bundle-gifts__option-price--main">
+                          {{- block.settings.gift_3_price -}}
+                        </span>
+                        <span class="ts-bundle-gifts__option-price--compare">
+                          {{- block.settings.gift_3_compare -}}
+                        </span>
+                      </p>
+                      {%- if block.settings.gift_3_blocked != blank -%}
+                        <div class="ts-bundle-gifts__option-blocked">
+                          {% render 'ts-icon-lock' %}
+                          <span>{{ block.settings.gift_3_blocked }}</span>
+                        </div>
+                      {%- endif -%}
+                    </div>
+                    <p class="ts-bundle-gifts__option-title">{{ block.settings.gift_3_title }}</p>
+                  </div>
+                {%- endif -%}
+                {%- if block.settings.gift_4_title != blank -%}
+                  <div 
+                    class="ts-bundle-gifts__option" 
+                    data-gift-option="{{ block.settings.gift_4_product.selected_or_first_available_variant.id }}" 
+                    data-gift-requirements="{{ block.settings.gift_4_reqirements }}"
+                    disabled
+                  >
+                    <div class="ts-bundle-gifts__option-media-wrapper">
+                      <div class="ts-bundle-gifts__option-media">
+                        {% if block.settings.gift_4_image != blank %}
+                          {{ block.settings.gift_4_image | image_url: width: 300 | image_tag }}
+                        {%- else -%}
+                          {{ 'image' | placeholder_svg_tag }}    
+                        {% endif %}
+                      </div>
+                      <p class="ts-bundle-gifts__option-price">
+                        <span class="ts-bundle-gifts__option-price--main">
+                          {{- block.settings.gift_4_price -}}
+                        </span>
+                        <span class="ts-bundle-gifts__option-price--compare">
+                          {{- block.settings.gift_4_compare -}}
+                        </span>
+                      </p>
+                      {%- if block.settings.gift_4_blocked != blank -%}
+                        <div class="ts-bundle-gifts__option-blocked">
+                          {% render 'ts-icon-lock' %}
+                          <span>{{ block.settings.gift_4_blocked }}</span>
+                        </div>
+                      {%- endif -%}
+                    </div>
+                    <p class="ts-bundle-gifts__option-title">{{ block.settings.gift_4_title }}</p>
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- when "quantity" -%}
+            <div class="ts-bundle-quantity">
+              {%- if block.settings.title != blank -%}
+                <p class="ts-bundle-quantity__title">
+                  <span>{{ block.settings.title }}</span>
+                </p>
+              {%- endif -%}
+              <form id="TSBundleQuantityOptions" class="ts-bundle-quantity__options" autocomplete="off">
+                {%- if block.settings.quantity_1 != 0 -%}
+                  {% liquid
+                    if block.settings.selected_1
+                      assign selected_quantity_savings = block.settings.savings_1
+                      assign selected_quantity_shipping = block.settings.shipping_option_1
+                    endif
+                  %}
+                  <label class="ts-bundle-quantity__option">
+                    <input
+                      type="radio"
+                      value="{{ block.settings.quantity_1 }}"
+                      name="bundle-quantity"
+                      id="BundleQuantity-{{ block.settings.quantity_1 }}"
+                      class="visually-hidden"
+                      data-savings="{{ block.settings.savings_1 }}"
+                      data-price="{{ block.settings.price_1 }}"
+                      data-compare="{{ block.settings.compare_1 }}"
+                      data-discount="{{ block.settings.discount_1 }}"
+                      data-selling-title="{{ block.settings.selling_option_1 }}"
+                      data-shipping-title="{{ block.settings.shipping_option_1 }}"
+                      {% if block.settings.selected_1 %}
+                        checked
+                      {% endif %}
+                    />
+                    {%- if block.settings.title_1 != blank -%}
+                      <p class="ts-bundle-quantity__option-title">{{ block.settings.title_1 }}</p>
+                    {%- endif -%}
+                    {%- if block.settings.subtitle_1 != blank -%}
+                      <p class="ts-bundle-quantity__subtitle">{{ block.settings.subtitle_1 }}</p>
+                    {%- endif -%}
+                    {%- if block.settings.label_1 != blank -%}
+                      <p class="ts-bundle-quantity__label">{{ block.settings.label_1 }}</p>
+                    {%- endif -%}
+                    {%- if block.settings.badge_1 != blank -%}
+                      <p 
+                        class="ts-bundle-quantity__badge"
+                        style="color: {{ block.settings.badge_color_1 }};background: {{ block.settings.badge_background_1 }}"
+                      >
+                        {{- block.settings.badge_1 }}
+                      </p>
+                    {%- endif -%}
+                  </label>
+                {%- endif -%}
+                {%- if block.settings.quantity_2 != 0 -%}
+                  {% liquid
+                    if block.settings.selected_2
+                      assign selected_quantity_savings = block.settings.savings_2
+                      assign selected_quantity_shipping = block.settings.shipping_option_2
+                    endif
+                  %}
+                  <label class="ts-bundle-quantity__option">
+                    <input
+                      type="radio"
+                      value="{{ block.settings.quantity_2 }}"
+                      name="bundle-quantity"
+                      id="BundleQuantity-{{ block.settings.quantity_2 }}"
+                      class="visually-hidden"
+                      data-savings="{{ block.settings.savings_2 }}"
+                      data-price="{{ block.settings.price_2 }}"
+                      data-compare="{{ block.settings.compare_2 }}"
+                      data-discount="{{ block.settings.discount_2 }}"
+                      data-selling-title="{{ block.settings.selling_option_2 }}"
+                      data-shipping-title="{{ block.settings.shipping_option_2 }}"
+                      {% if block.settings.selected_2 %}
+                        checked
+                      {% endif %}
+                    />
+                    {%- if block.settings.title_2 != blank -%}
+                      <p class="ts-bundle-quantity__option-title">{{ block.settings.title_2 }}</p>
+                    {%- endif -%}
+                    {%- if block.settings.subtitle_2 != blank -%}
+                      <p class="ts-bundle-quantity__subtitle">{{ block.settings.subtitle_2 }}</p>
+                    {%- endif -%}
+                    {%- if block.settings.label_2 != blank -%}
+                      <p class="ts-bundle-quantity__label">{{ block.settings.label_2 }}</p>
+                    {%- endif -%}
+                    {%- if block.settings.badge_2 != blank -%}
+                      <p 
+                        class="ts-bundle-quantity__badge"
+                        style="color: {{ block.settings.badge_color_2 }};background: {{ block.settings.badge_background_2 }}"
+                      >
+                        {{- block.settings.badge_2 }}
+                      </p>
+                    {%- endif -%}
+                  </label>
+                {%- endif -%}
+                {%- if block.settings.quantity_3 != 0 -%}
+                  {% liquid
+                    if block.settings.selected_3
+                      assign selected_quantity_savings = block.settings.savings_3
+                      assign selected_quantity_shipping = block.settings.shipping_option_3
+                    endif
+                  %}
+                  <label class="ts-bundle-quantity__option">
+                    <input
+                      type="radio"
+                      value="{{ block.settings.quantity_3 }}"
+                      name="bundle-quantity"
+                      id="BundleQuantity-{{ block.settings.quantity_3 }}"
+                      class="visually-hidden"
+                      data-savings="{{ block.settings.savings_3 }}"
+                      data-price="{{ block.settings.price_3 }}"
+                      data-compare="{{ block.settings.compare_3 }}"
+                      data-discount="{{ block.settings.discount_3 }}"
+                      data-selling-title="{{ block.settings.selling_option_3 }}"
+                      data-shipping-title="{{ block.settings.shipping_option_3 }}"
+                      {% if block.settings.selected_3 %}
+                        checked
+                      {% endif %}
+                    />
+                    {%- if block.settings.title_3 != blank -%}
+                      <p class="ts-bundle-quantity__option-title">{{ block.settings.title_3 }}</p>
+                    {%- endif -%}
+                    {%- if block.settings.subtitle_3 != blank -%}
+                      <p class="ts-bundle-quantity__subtitle">{{ block.settings.subtitle_3 }}</p>
+                    {%- endif -%}
+                    {%- if block.settings.label_3 != blank -%}
+                      <p class="ts-bundle-quantity__label">{{ block.settings.label_3 }}</p>
+                    {%- endif -%}
+                    {%- if block.settings.badge_3 != blank -%}
+                      <p 
+                        class="ts-bundle-quantity__badge"
+                        style="color: {{ block.settings.badge_color_3 }};background: {{ block.settings.badge_background_3 }}"
+                      >
+                        {{- block.settings.badge_3 }}
+                      </p>
+                    {%- endif -%}
+                  </label>
+                {%- endif -%}
+                {%- if block.settings.quantity_4 != 0 -%}
+                  {% liquid
+                    if block.settings.selected_4
+                      assign selected_quantity_savings = block.settings.savings_4
+                      assign selected_quantity_shipping = block.settings.shipping_option_4
+                    endif
+                  %}
+                  <label class="ts-bundle-quantity__option">
+                    <input
+                      type="radio"
+                      value="{{ block.settings.quantity_4 }}"
+                      name="bundle-quantity"
+                      id="BundleQuantity-{{ block.settings.quantity_4 }}"
+                      class="visually-hidden"
+                      data-savings="{{ block.settings.savings_4 }}"
+                      data-price="{{ block.settings.price_4 }}"
+                      data-compare="{{ block.settings.compare_4 }}"
+                      data-discount="{{ block.settings.discount_4 }}"
+                      data-selling-title="{{ block.settings.selling_option_4 }}"
+                      data-shipping-title="{{ block.settings.shipping_option_4 }}"
+                      {% if block.settings.selected_4 %}
+                        checked
+                      {% endif %}
+                    />
+                    {%- if block.settings.title_4 != blank -%}
+                      <p class="ts-bundle-quantity__option-title">{{ block.settings.title_4 }}</p>
+                    {%- endif -%}
+                    {%- if block.settings.subtitle_4 != blank -%}
+                      <p class="ts-bundle-quantity__subtitle">{{ block.settings.subtitle_4 }}</p>
+                    {%- endif -%}
+                    {%- if block.settings.label_4 != blank -%}
+                      <p class="ts-bundle-quantity__label">{{ block.settings.label_4 }}</p>
+                    {%- endif -%}
+                    {%- if block.settings.badge_4 != blank -%}
+                      <p 
+                        class="ts-bundle-quantity__badge"
+                        style="color: {{ block.settings.badge_color_4 }};background: {{ block.settings.badge_background_4 }}"
+                      >
+                        {{- block.settings.badge_4 }}
+                      </p>
+                    {%- endif -%}
+                  </label>
+                {%- endif -%}
+              </form>
+            </div>
+          {%- when "variants" -%}
+            <div class="ts-bundle-variants">
+              {%- if block.settings.title != blank -%}
+                <p class="ts-bundle-variants__title">
+                  <span>{{ block.settings.title }}</span>
+                </p>
+              {%- endif -%}
+
+              <form class="ts-bundle-variants__options" autocomplete="off">
+                {%- if block.settings.product != blank -%}
+                  {%- for variant in block.settings.product.variants -%}
+                    {%- if variant.available -%}
+                      <div class="ts-bundle-variants__option">
+                        {% liquid
+                          assign option_image = variant.metafields.custom.variant_image | default: variant.featured_image | default: block.settings.product.featured_image
+                          assign option_title = variant.title
+                          assign option_subtitle = variant.metafields.custom.how_many_flavors
+                          assign selling_plan = ""
+
+                          if variant.selling_plan_allocations.size > 0
+                            assign group_ids = variant.selling_plan_allocations | map: 'selling_plan_group_id' | uniq
+                            
+                            for group_id in group_ids
+                              assign allocations = variant | map: 'selling_plan_allocations' | where: 'selling_plan_group_id', group_id
+                              
+                              assign selling_plan = allocations.first.selling_plan.id
+                            endfor
+                          endif
+                        %}
+  
+                        <div class="ts-bundle-variants__option-media">
+                          {% if option_image != blank %}
+                            {{ option_image | image_url: width: 300 | image_tag }}
+                          {% else %}
+                            {{ 'image' | placeholder_svg_tag }}
+                          {% endif %}
+                        </div>
+  
+                        <div class="ts-bundle-variants__option-headings">
+                          {%- if option_title != blank -%}
+                            <p class="ts-bundle-variants__option-title">{{ option_title }}</p>
+                          {%- endif -%}
+                          {%- if option_subtitle != blank -%}
+                            <p class="ts-bundle-variants__option-subtitle">{{ option_subtitle }}</p>
+                          {%- endif -%}
+                        </div>
+  
+                        <div class="ts-bundle-variants__option-controls disabled" data-option-controls>
+                          <div class="ts-bundle-variants__option-quantity">
+                            <button type="button" name="decrease" data-action="decrease">-</button>
+                            <input type="number" value="0" name="option-quantity" data-product="{{ variant.id }}" data-selling="{{ selling_plan }}" />
+                            <button type="button" name="increase" data-action="increase">+</button>
+                          </div>
+                          <p class="ts-bundle-variants__option-control" data-action="add">Add+</p>
+                          <script data-plans type="application/json">
+                            {
+                              "plans": [
+                                {% for allocation in allocations %}
+                                  {
+                                    "id": {{ allocation.selling_plan.id }},
+                                    "name": {{ allocation.selling_plan.name | json }}
+                                  }{%- unless forloop.last -%},{%- endunless -%}
+                                {% endfor %}
+                              ]
+                            }
+                          </script>
+                        </div>
+                      </div>
+                    {%- endif -%}
+                  {%- endfor -%}
+                {%- endif -%}
+              </form>
+
+              {%- if block.settings.guarantee_message != blank -%}
+                <div class="ts-bundle-variants__guarantee">
+                  {% render 'ts-icon-check' %}
+                  <p>{{ block.settings.guarantee_message }}</p>
+                </div>
+              {%- endif -%}
+
+              <div class="ts-bundle-variants__shipping">
+                {% render 'ts-icon-refill' %}
+                <p data-shipping>{{ selected_quantity_shipping }}</p>
+              </div>
+            </div>
+        {%- endcase -%}
+      </div>
+    {%- endfor -%}
+  </div>
+
+  <div class="ts-bundle__footer" data-footer>
+    <div class="ts-bundle__footer-content">
+      <div class="ts-bundle__footer-headings">
+        <p class="ts-bundle__savings" data-savings>{{ selected_quantity_savings }}</p>
+        <p class="ts-bundle__price">
+          <span class="ts-bundle__price--compare" data-compare></span>
+          <span class="ts-bundle__price--main" data-price></span>
+        </p>
+      </div>
+  
+      <button type="button" class="ts-bundle__proceed" disabled data-action="proceed">
+        <p class="ts-bundle__proceed-disabled">
+          <span data-label>Select 3 More Pouches</span>
+          {% render 'ts-icon-lock' %}
+        </p>
+        <p class="ts-bundle__proceed-success">
+          <span>Proceed To Checkout</span>
+          {% render 'ts-icon-arrow-right' %}
+        </p>
+      </button>
+    </div>
+  </div>
+</ts-bundle>
+
+<script src="{{ 'ts-bundle.js' | asset_url }}"></script>
+
+{% schema %}
+  {
+    "name": "TS Bundle",
+    "enabled_on": {
+      "templates": ["page"]
+    },
+    "limit": 1,
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "gifts",
+        "name": "Gifts",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Unlock Free Gifts!"
+          },
+          {
+            "type": "text",
+            "id": "description",
+            "label": "Description",
+            "default": "Add a 4th Pouch, Get an Electric Nectar Frother"
+          },
+          {
+            "type": "header",
+            "content": "1 Gift - settings"
+          },
+          {
+            "type": "product",
+            "id": "gift_1_product",
+            "label": "Gift product",
+            "info": "Product that will added as a gift (Not necessary)"
+          },
+          {
+            "type": "number",
+            "id": "gift_1_reqirements",
+            "label": "Gift requirements",
+            "info": "Gift quantity requirements to gain gift",
+            "default": 1        
+          },
+          {
+            "type": "image_picker",
+            "id": "gift_1_image",
+            "label": "Gift image"
+          },
+          {
+            "type": "text",
+            "id": "gift_1_title",
+            "label": "Gift title",
+            "default": "Free gift"
+          },
+          {
+            "type": "text",
+            "id": "gift_1_price",
+            "label": "Gift price",
+            "default": "Free"
+          },
+          {
+            "type": "text",
+            "id": "gift_1_compare",
+            "label": "Gift compare",
+            "default": "$99.99"
+          },
+          {
+            "type": "text",
+            "id": "gift_1_blocked",
+            "label": "Gift blocked label",
+            "default": "Unlocks At 1 Pouches"
+          },
+          {
+            "type": "header",
+            "content": "2 Gift - settings"
+          },
+          {
+            "type": "product",
+            "id": "gift_2_product",
+            "label": "Gift product",
+            "info": "Product that will added as a gift (Not necessary)"
+          },
+          {
+            "type": "number",
+            "id": "gift_2_reqirements",
+            "label": "Gift requirements",
+            "info": "Gift quantity requirements to gain gift",
+            "default": 2   
+          },
+          {
+            "type": "image_picker",
+            "id": "gift_2_image",
+            "label": "Gift image"
+          },
+          {
+            "type": "text",
+            "id": "gift_2_title",
+            "label": "Gift title",
+            "default": "Free gift"
+          },
+          {
+            "type": "text",
+            "id": "gift_2_price",
+            "label": "Gift price",
+            "default": "Free"
+          },
+          {
+            "type": "text",
+            "id": "gift_2_compare",
+            "label": "Gift compare",
+            "default": "$99.99"
+          },
+          {
+            "type": "text",
+            "id": "gift_2_blocked",
+            "label": "Gift blocked label",
+            "default": "Unlocks At 2 Pouches"
+          },
+          {
+            "type": "header",
+            "content": "3 Gift - settings"
+          },
+          {
+            "type": "product",
+            "id": "gift_3_product",
+            "label": "Gift product",
+            "info": "Product that will added as a gift (Not necessary)"
+          },
+          {
+            "type": "number",
+            "id": "gift_3_reqirements",
+            "label": "Gift requirements",
+            "info": "Gift quantity requirements to gain gift",
+            "default": 3
+          },
+          {
+            "type": "image_picker",
+            "id": "gift_3_image",
+            "label": "Gift image"
+          },
+          {
+            "type": "text",
+            "id": "gift_3_title",
+            "label": "Gift title",
+            "default": "Free gift"
+          },
+          {
+            "type": "text",
+            "id": "gift_3_price",
+            "label": "Gift price",
+            "default": "Free"
+          },
+          {
+            "type": "text",
+            "id": "gift_3_compare",
+            "label": "Gift compare",
+            "default": "$99.99"
+          },
+          {
+            "type": "text",
+            "id": "gift_3_blocked",
+            "label": "Gift blocked label",
+            "default": "Unlocks At 3 Pouches"
+          },
+          {
+            "type": "header",
+            "content": "4 Gift - settings"
+          },
+          {
+            "type": "product",
+            "id": "gift_4_product",
+            "label": "Gift product",
+            "info": "Product that will added as a gift (Not necessary)"
+          },
+          {
+            "type": "number",
+            "id": "gift_4_reqirements",
+            "label": "Gift requirements",
+            "info": "Gift quantity requirements to gain gift",
+            "default": 4  
+          },
+          {
+            "type": "image_picker",
+            "id": "gift_4_image",
+            "label": "Gift image"
+          },
+          {
+            "type": "text",
+            "id": "gift_4_title",
+            "label": "Gift title",
+            "default": "Free gift"
+          },
+          {
+            "type": "text",
+            "id": "gift_4_price",
+            "label": "Gift price",
+            "default": "Free"
+          },
+          {
+            "type": "text",
+            "id": "gift_4_compare",
+            "label": "Gift compare",
+            "default": "$99.99"
+          },
+          {
+            "type": "text",
+            "id": "gift_4_blocked",
+            "label": "Gift blocked label",
+            "default": "Unlocks At 4 Pouches"
+          }
+        ]
+      },
+      {
+        "type": "quantity",
+        "name": "Quantity",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "title",
+            "label": "Title",
+            "default": "Step 1. <b>Select Quantity<\/b>",
+            "info": "For highlight text make in bold"
+          },
+          {
+            "type": "header",
+            "content": "Option 1 - settings"
+          },
+          {
+            "type": "paragraph",
+            "content": "For turn off option set quantity to 0"
+          },
+          {
+            "type": "number",
+            "id": "quantity_1",
+            "label": "Quantity value",
+            "default": 4,
+            "info": "For avoid bugs use unique value for quantity"
+          },
+          {
+            "type": "checkbox",
+            "id": "selected_1",
+            "label": "Is selected",
+            "default": true
+          },
+          {
+            "type": "text",
+            "id": "title_1",
+            "label": "Title",
+            "default": "4 Pouches"
+          },
+          {
+            "type": "text",
+            "id": "subtitle_1",
+            "label": "Subtitle",
+            "default": "120 Packets"
+          },
+          {
+            "type": "text",
+            "id": "label_1",
+            "label": "Label",
+            "default": "Save 60%"
+          },
+          {
+            "type": "text",
+            "id": "savings_1",
+            "label": "Savings label",
+            "default": "You’re Saving 60% Off"
+          },
+          {
+            "type": "number",
+            "id": "price_1",
+            "label": "Price",
+            "default": 8995
+          },
+          {
+            "type": "number",
+            "id": "compare_1",
+            "label": "Compare price",
+            "default": 14870
+          },
+          {
+            "type": "number",
+            "id": "discount_1",
+            "label": "Discount amount"
+          },
+          {
+            "type": "text",
+            "id": "selling_option_1",
+            "label": "Selling option title"
+          },
+          {
+            "type": "text",
+            "id": "shipping_option_1",
+            "label": "Shipping message"
+          },
+          {
+            "type": "text",
+            "id": "badge_1",
+            "label": "Badge",
+            "default": "Best Value"
+          },
+          {
+            "type": "color",
+            "id": "badge_color_1",
+            "label": "Badge color",
+            "default": "#fff"
+          },
+          {
+            "type": "color_background",
+            "id": "badge_background_1",
+            "label": "Badge background",
+            "default": "#000"
+          },
+          {
+            "type": "header",
+            "content": "Option 2 - settings"
+          },
+          {
+            "type": "paragraph",
+            "content": "For turn off option set quantity to 0"
+          },
+          {
+            "type": "number",
+            "id": "quantity_2",
+            "label": "Quantity value",
+            "default": 3,
+            "info": "For avoid bugs use unique value for quantity"
+          },
+          {
+            "type": "checkbox",
+            "id": "selected_2",
+            "label": "Is selected",
+            "default": false
+          },
+          {
+            "type": "text",
+            "id": "title_2",
+            "label": "Title",
+            "default": "3 Pouches"
+          },
+          {
+            "type": "text",
+            "id": "subtitle_2",
+            "label": "Subtitle",
+            "default": "90 Packets"
+          },
+          {
+            "type": "text",
+            "id": "label_2",
+            "label": "Label",
+            "default": "Save 50%"
+          },
+          {
+            "type": "text",
+            "id": "savings_2",
+            "label": "Savings label",
+            "default": "You’re Saving 60% Off"
+          },
+          {
+            "type": "number",
+            "id": "price_2",
+            "label": "Price",
+            "default": 8995
+          },
+          {
+            "type": "number",
+            "id": "compare_2",
+            "label": "Compare price",
+            "default": 14870
+          },
+          {
+            "type": "number",
+            "id": "discount_2",
+            "label": "Discount amount"
+          },
+          {
+            "type": "text",
+            "id": "selling_option_2",
+            "label": "Selling option title"
+          },
+          {
+            "type": "text",
+            "id": "shipping_option_2",
+            "label": "Shipping message"
+          },
+          {
+            "type": "text",
+            "id": "badge_2",
+            "label": "Badge",
+            "default": "Most popular"
+          },
+          {
+            "type": "color",
+            "id": "badge_color_2",
+            "label": "Badge color",
+            "default": "#fff"
+          },
+          {
+            "type": "color_background",
+            "id": "badge_background_2",
+            "label": "Badge background",
+            "default": "#000"
+          },
+          {
+            "type": "header",
+            "content": "Option 3 - settings"
+          },
+          {
+            "type": "paragraph",
+            "content": "For turn off option set quantity to 0"
+          },
+          {
+            "type": "number",
+            "id": "quantity_3",
+            "label": "Quantity value",
+            "default": 2,
+            "info": "For avoid bugs use unique value for quantity"
+          },
+          {
+            "type": "checkbox",
+            "id": "selected_3",
+            "label": "Is selected",
+            "default": false
+          },
+          {
+            "type": "text",
+            "id": "title_3",
+            "label": "Title",
+            "default": "2 Pouches"
+          },
+          {
+            "type": "text",
+            "id": "subtitle_3",
+            "label": "Subtitle",
+            "default": "60 Packets"
+          },
+          {
+            "type": "text",
+            "id": "label_3",
+            "label": "Label",
+            "default": "Save 40%"
+          },
+          {
+            "type": "text",
+            "id": "savings_3",
+            "label": "Savings label",
+            "default": "You’re Saving 60% Off"
+          },
+          {
+            "type": "number",
+            "id": "price_3",
+            "label": "Price",
+            "default": 8995
+          },
+          {
+            "type": "number",
+            "id": "compare_3",
+            "label": "Compare price",
+            "default": 14870
+          },
+          {
+            "type": "number",
+            "id": "discount_3",
+            "label": "Discount amount"
+          },
+          {
+            "type": "text",
+            "id": "selling_option_3",
+            "label": "Selling option title"
+          },
+          {
+            "type": "text",
+            "id": "shipping_option_3",
+            "label": "Shipping message"
+          },
+          {
+            "type": "text",
+            "id": "badge_3",
+            "label": "Badge",
+            "default": "Best Value"
+          },
+          {
+            "type": "color",
+            "id": "badge_color_3",
+            "label": "Badge color",
+            "default": "#fff"
+          },
+          {
+            "type": "color_background",
+            "id": "badge_background_3",
+            "label": "Badge background",
+            "default": "#000"
+          },
+          {
+            "type": "header",
+            "content": "Option 4 - settings"
+          },
+          {
+            "type": "paragraph",
+            "content": "For turn off option set quantity to 0"
+          },
+          {
+            "type": "number",
+            "id": "quantity_4",
+            "label": "Quantity value",
+            "default": 1,
+            "info": "For avoid bugs use unique value for quantity"
+          },
+          {
+            "type": "checkbox",
+            "id": "selected_4",
+            "label": "Is selected",
+            "default": false
+          },
+          {
+            "type": "text",
+            "id": "title_4",
+            "label": "Title",
+            "default": "1 Pouches"
+          },
+          {
+            "type": "text",
+            "id": "subtitle_4",
+            "label": "Subtitle",
+            "default": "30 Packets"
+          },
+          {
+            "type": "text",
+            "id": "label_4",
+            "label": "Label",
+            "default": "Save 10%"
+          },
+          {
+            "type": "text",
+            "id": "savings_4",
+            "label": "Savings label",
+            "default": "You’re Saving 60% Off"
+          },
+          {
+            "type": "number",
+            "id": "price_4",
+            "label": "Price",
+            "default": 8995
+          },
+          {
+            "type": "number",
+            "id": "compare_4",
+            "label": "Compare price",
+            "default": 14870
+          },
+          {
+            "type": "number",
+            "id": "discount_4",
+            "label": "Discount amount"
+          },
+          {
+            "type": "text",
+            "id": "selling_option_4",
+            "label": "Selling option title"
+          },
+          {
+            "type": "text",
+            "id": "shipping_option_4",
+            "label": "Shipping message"
+          },
+          {
+            "type": "text",
+            "id": "badge_4",
+            "label": "Badge",
+            "default": "Best Value"
+          },
+          {
+            "type": "color",
+            "id": "badge_color_4",
+            "label": "Badge color",
+            "default": "#fff"
+          },
+          {
+            "type": "color_background",
+            "id": "badge_background_4",
+            "label": "Badge background",
+            "default": "#000"
+          }
+        ]
+      },
+      {
+        "type": "variants",
+        "name": "Variants",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "title",
+            "label": "Title",
+            "default": "Step 2. <b>Select Flavors<\/b>",
+            "info": "For highlight text make in bold"
+          },
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product with options"
+          },
+          {
+            "type": "inline_richtext",
+            "id": "guarantee_message",
+            "label": "Guarantee message",
+            "default": "Less than 1% of customers claim our <b>90 Day Money Back Guarantee*<\/b>"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "TS Bundle",
+        "blocks": [
+          {
+            "type": "gifts"
+          },
+          {
+            "type": "quantity"
+          },
+          {
+            "type": "variants"
+          }
+        ]
+      }  
+    ]
+  }
+{% endschema %}

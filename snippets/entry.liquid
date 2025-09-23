@@ -4,15 +4,45 @@
 {% endcomment %}
 {% assign path = entry | replace: '~/', '../../' | replace: '@/', '../' %}
 {% if path == "/frontend/entrypoints/main.scss" or path == "main.scss" %}
-  {{ 'main-DLOG8tPY.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+  {{ 'main-BDNGGRiC.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/frontend/entrypoints/main.theme.js" or path == "main.theme.js" %}
   <script src="{{ 'main.theme-CxxW8cza.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
+{% elsif path == "/frontend/scripts/sections/ts-bundle.js" or path == "../scripts/sections/ts-bundle.js" %}
+  <script src="{{ 'ts-bundle-CHEdxzo0.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
 {% elsif path == "/frontend/styles/sections/hero.scss" or path == "../styles/sections/hero.scss" %}
-  {{ 'hero-Dg0BaVqS.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+  {{ 'hero-BVvhlr6P.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/frontend/styles/sections/mini-cart.scss" or path == "../styles/sections/mini-cart.scss" %}
   {{ 'mini-cart-BMP_sWMl.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/frontend/styles/sections/mobile-nav.scss" or path == "../styles/sections/mobile-nav.scss" %}
-  {{ 'mobile-nav-DFBS4Mgv.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+  {{ 'mobile-nav-DA7X9dIM.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/frontend/styles/sections/scrollable-features.scss" or path == "../styles/sections/scrollable-features.scss" %}
   {{ 'scrollable-features-w25j7Gae.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/frontend/styles/sections/ts-banner.scss" or path == "../styles/sections/ts-banner.scss" %}
+  {{ 'ts-banner-mtI34IjW.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/frontend/styles/sections/ts-bundle.scss" or path == "../styles/sections/ts-bundle.scss" %}
+  {{ 'ts-bundle-BSyVjPc4.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/frontend/styles/sections/ts-cards.scss" or path == "../styles/sections/ts-cards.scss" %}
+  {{ 'ts-cards-OwZLsTUK.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/frontend/styles/sections/ts-compare.scss" or path == "../styles/sections/ts-compare.scss" %}
+  {{ 'ts-compare-CbhhPFZB.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/frontend/styles/sections/ts-faq.scss" or path == "../styles/sections/ts-faq.scss" %}
+  {{ 'ts-faq-CBORzdHx.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/frontend/styles/sections/ts-features.scss" or path == "../styles/sections/ts-features.scss" %}
+  {{ 'ts-features-BPBHNclu.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/frontend/styles/sections/ts-footer.scss" or path == "../styles/sections/ts-footer.scss" %}
+  {{ 'ts-footer-C_89_Zlf.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/frontend/styles/sections/ts-ingredients.scss" or path == "../styles/sections/ts-ingredients.scss" %}
+  {{ 'ts-ingredients-4WLQ9ktX.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/frontend/styles/sections/ts-logo.scss" or path == "../styles/sections/ts-logo.scss" %}
+  {{ 'ts-logo-Bd3W6EUk.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/frontend/styles/sections/ts-logos.scss" or path == "../styles/sections/ts-logos.scss" %}
+  {{ 'ts-logos-DkRiYDgf.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/frontend/styles/sections/ts-review-image.scss" or path == "../styles/sections/ts-review-image.scss" %}
+  {{ 'ts-review-image-Cmugb-E2.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/frontend/styles/sections/ts-reviews.scss" or path == "../styles/sections/ts-reviews.scss" %}
+  {{ 'ts-reviews-DSp6zsQP.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/frontend/styles/sections/ts-risks.scss" or path == "../styles/sections/ts-risks.scss" %}
+  {{ 'ts-risks-BLsYju0r.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% elsif path == "/frontend/styles/sections/ts-timer.scss" or path == "../styles/sections/ts-timer.scss" %}
+  {{ 'ts-timer-DErbupGR.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% endif %}

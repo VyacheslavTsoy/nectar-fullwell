@@ -1,0 +1,350 @@
+{% render 'entry' with '@/styles/sections/ts-banner.scss' %}
+
+<style>
+    #announcement-bar,
+    .shopify-section-group-header-group,
+    .shopify-section-group-footer-group {
+        display: none !important;
+    }
+</style>
+
+
+<div class="ts-banner section-{{ section.id }}">
+  <div class="ts-banner__wrapper">
+    <div class="ts-banner__content-mobile">
+      {%- if section.settings.title != blank -%}
+        <h2 class="ts-banner__title">{{ section.settings.title }}</h2>
+      {%- endif -%}
+      {%- if section.settings.review != blank -%}
+        <p class="ts-banner__review">
+          {% render 'ts-icon-stars' %}
+          {{ section.settings.review }}
+        </p>
+      {%- endif -%}
+    </div>
+
+    <div class="ts-banner__media">
+      <div class="ts-banner__media-main">
+        {%- for block in section.blocks -%}
+          {%- if block.type == "image" and block.settings.image != blank -%}
+            <div class="ts-banner__media-item" data-lightbox data-slide="{{ forloop.index }}">
+              {{ block.settings.image | image_url: width: 800 | image_tag }}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+      <div class="ts-banner__media-nav">
+        {%- for block in section.blocks -%}
+          {%- if block.type == "image" and block.settings.image != blank -%}
+            <div class="ts-banner__media-item{% if forloop.first %} active{% endif %}" data-nav data-slide="{{ forloop.index }}">
+              {{ block.settings.image | image_url: width: 200 | image_tag }}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+
+    <div class="ts-banner__lightbox">
+      <div class="ts-banner__lightbox-inner">
+        {%- for block in section.blocks -%}
+          {%- if block.type == "image" and block.settings.image != blank -%}
+            <img src="{{ block.settings.image | image_url: width: 1200 }}" width="1200" height="1200" data-slide="{{ forloop.index }}">
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+
+      <div class="ts-banner__lightbox-close">
+        {{ 'icon-close.svg' | inline_asset_content }}
+      </div>
+    </div>
+
+    <div class="ts-banner__content">
+      {%- if section.settings.review != blank -%}
+        <p class="ts-banner__review">
+          {% render 'ts-icon-stars' %}
+          {{ section.settings.review }}
+        </p>
+      {%- endif -%}
+      {%- if section.settings.title != blank -%}
+        <h2 class="ts-banner__title">{{ section.settings.title }}</h2>
+      {%- endif -%}
+      {%- if section.settings.description != blank -%}
+        <div class="ts-banner__description">
+          {{ section.settings.description }}
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.btn_label != blank -%}
+        <div class="ts-banner__button-wrapper">
+          <a 
+            href="{{ section.settings.btn_link }}" 
+            class="ts-banner__button"
+          >
+            {{- section.settings.btn_label -}}
+            {% render 'ts-icon-arrow-right' %}
+          </a>
+
+          <div class="ts-banner__button-features">
+            {%- for block in section.blocks -%}
+              {%- if block.type == "button_feature" -%}
+                <div class="ts-banner__button-feature">
+                  {%- if block.settings.icon != blank -%}
+                    {{ block.settings.icon | image_url: width: 300 | image_tag }}
+                  {%- endif -%}
+                  {{ block.settings.label }}
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.guarantee_image != blank -%}
+        <div class="ts-banner__guarantee">
+          {{ section.settings.guarantee_image | image_url: width: 400 | image_tag }}
+          {%- if section.settings.guarantee_label != blank -%}
+            <p>{{ section.settings.guarantee_label }}</p>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      <div class="ts-banner__faq-wrapper">
+        {%- if section.blocks.size > 0 -%}
+          <div class="ts-banner__faq">
+            {%- for block in section.blocks -%}
+              {%- if block.type == "row" -%}
+                <div class="ts-banner__row">
+                  <div class="ts-banner__question">
+                    <span>{{ block.settings.question }}</span>
+                    <span class="ts-banner__question-icon"></span>
+                  </div>
+
+                  <div class="ts-banner__answer-wrapper">
+                    <div class="ts-banner__answer">
+                      {{ block.settings.answer }}
+                    </div>
+                  </div>
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+
+          <div class="ts-banner__show">
+            <span class="ts-banner__show--more">See More FAQs</span>
+            <span class="ts-banner__show--less">Show Less FAQs</span>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+
+  {%- if section.settings.sticky_label != blank -%}
+    <div class="ts-banner__sticky">
+      <div class="ts-banner__sticky-wrapper">
+        <div class="ts-banner__labels">
+          <p class="ts-banner__label">
+            {% render 'ts-icon-flame' %}
+            Hurry! 126 people are on checkout
+          </p>
+          <p class="ts-banner__label">
+            {% render 'ts-icon-box' %}
+            Ships Today
+          </p>
+        </div>
+    
+        <a href="{{ section.settings.sticky_link }}" class="ts-banner__sticky-button">
+          {{ section.settings.sticky_label }}
+          {% render 'ts-icon-arrow-right' %}
+        </a>
+      </div>
+    </div>
+  {%- endif -%}
+</div>
+
+<script>
+  (function () {
+    const section = document.querySelector(".section-{{ section.id }}");
+
+    const mainGallery = section.querySelector(".ts-banner__media-main");
+    const navGallery = section.querySelector(".ts-banner__media-nav");
+    const blocks = mainGallery.querySelectorAll("[data-slide]");
+    let currentSlide = 1;
+
+    const lightbox = section.querySelector(".ts-banner__lightbox");
+    const lightboxTriggers = section.querySelectorAll("[data-lightbox]");
+
+    const navs = navGallery.querySelectorAll("[data-nav]");
+
+    const faq = section.querySelector(".ts-banner__faq");
+    const questions = section.querySelectorAll(".ts-banner__question");
+    const showMore = section.querySelector(".ts-banner__show");
+
+    lightboxTriggers.forEach(lightboxTrigger => {
+      lightboxTrigger.addEventListener("click", () => {
+        const activeMedia = lightbox.querySelector(`[data-slide="${lightboxTrigger.dataset.slide}"]`);
+        lightbox.querySelector(".active")?.classList.remove("active");
+        activeMedia.classList.add("active");
+        activeMedia.scrollIntoView();
+        document.documentElement.style.overflow = "hidden";
+        lightbox.classList.add("open");
+      })
+    })
+
+    lightbox.addEventListener("click", () => {
+      lightbox.classList.remove("open");
+      document.documentElement.style.overflow = null
+    });
+
+    questions.forEach(question => {
+      question.addEventListener("click", () => {
+        const answer = question.nextElementSibling;
+  
+        question.classList.toggle("open");
+        answer.style.maxHeight = question.classList.contains("open") ? answer.scrollHeight + "px" : null;
+      })
+    })
+
+    showMore.addEventListener("click", () => {
+      faq.classList.toggle("show");
+    })
+
+    navs.forEach(nav => {
+      nav.addEventListener("click", () => {
+        currentSlide = parseInt(nav.dataset.slide);
+
+        mainGallery.scrollTo({
+          left: mainGallery.querySelector(`[data-slide="${currentSlide}"]`).offsetLeft,
+          behavior: 'smooth'
+        });
+      })
+    })
+
+    function updateState() {
+      const scrollLeft = mainGallery.scrollLeft;
+      const blockWidth = blocks[0].offsetWidth;
+      const gap = 12;
+      
+      currentSlide = Math.round(scrollLeft / (blockWidth + gap)) + 1;
+      navGallery.querySelector(".active")?.classList.remove("active");
+      navGallery.querySelector(`[data-slide="${currentSlide}"]`).classList.add("active");
+    }
+
+    mainGallery.addEventListener('scroll', updateState);
+    window.addEventListener('resize', updateState);
+    
+    updateState();
+  })()
+</script>
+
+{% schema %}
+  {
+    "name": "TS Banner",
+    "settings": [
+      {
+        "type": "text",
+        "id": "review",
+        "label": "Review"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "description",
+        "label": "Description",
+        "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+      },
+      {
+        "type": "text",
+        "id": "btn_label",
+        "label": "Button label",
+        "default": "Button"
+      },
+      {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button link"
+      },
+      {
+        "type": "url",
+        "id": "sticky_link",
+        "label": "Sticky button link"
+      },
+      {
+        "type": "text",
+        "id": "sticky_label",
+        "label": "Sticky button label"
+      },
+      {
+        "type": "header",
+        "content": "Guarantee settings"
+      },
+      {
+        "type": "image_picker",
+        "id": "guarantee_image",
+        "label": "Guarantee image"
+      },
+      {
+        "type": "text",
+        "id": "guarantee_label",
+        "label": "Guarantee label"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "row",
+        "name": "Row",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Question",
+            "default": "Question"
+          },
+          {
+            "type": "richtext",
+            "id": "answer",
+            "label": "Answer",
+            "default": "<p>Answer<\/p>"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      },
+      {
+        "type": "button_feature",
+        "name": "Button feature",
+        "limit": 3,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          },
+          {
+            "type": "text",
+            "id": "label",
+            "label": "Label",
+            "default": "Label"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "TS Banner"
+      }
+    ]
+  }
+{% endschema %}

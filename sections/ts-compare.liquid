@@ -1,0 +1,249 @@
+{% render 'entry' with '@/styles/sections/ts-compare.scss' %}
+
+<div class="ts-compare section-{{ section.id }}">
+  <div class="ts-compare__wrapper">
+    {%- if section.settings.image != blank -%}
+      <div class="ts-compare__media">
+        {{ section.settings.image | image_url: width: 500 | image_tag }}
+      </div>
+    {%- endif -%}
+
+    <div class="ts-compare__content">
+      <div class="ts-compare__headings">
+        {%- if section.settings.title != blank -%}
+          <h2 class="ts-compare__title">{{ section.settings.title }}</h2>
+        {%- endif -%}
+        {%- if section.settings.subtitle != blank -%}
+          <p class="ts-compare__subtitle">{{ section.settings.subtitle }}</p>
+        {%- endif -%}
+      </div>
+
+      <div class="ts-compare__rows-wrapper">
+        <div class="ts-compare__row ts-compare__row-main">
+          <div class="ts-compare__cell ts-compare__cell--empty"></div>
+
+          <div class="ts-compare__cell ts-compare__cell--brand">
+            {%- if section.settings.brand_logo != blank -%}
+              {{ section.settings.brand_logo | image_url: width: 300 | image_tag }}
+            {%- endif -%}
+          </div>
+
+          {%- if section.settings.enable_second -%}
+            <div class="ts-compare__cell">
+              {{ section.settings.second_brand_title }}
+            </div>
+          {%- endif -%}
+
+          {%- if section.settings.enable_third -%}
+            <div class="ts-compare__cell">
+              {{ section.settings.third_brand_title }}
+            </div>
+          {%- endif -%}
+        </div>
+
+        {%- for block in section.blocks -%}
+          <div class="ts-compare__row">
+            <div class="ts-compare__cell">{{ block.settings.title }}</div>
+            <div class="ts-compare__cell">
+              {%- if block.settings.first_is_icon -%}
+                {%- case block.settings.first_icon -%}
+                  {%- when "check" -%}
+                    {% render 'ts-icon-compare-check' %}
+                  {%- when "cross" -%}
+                    {% render 'ts-icon-compare-cross' %}
+                {%- endcase -%}
+              {%- else -%}
+                {{ block.settings.first_brand_value }}    
+              {%- endif -%}
+            </div>
+            {%- if section.settings.enable_second -%}
+              <div class="ts-compare__cell">
+                {%- if block.settings.second_is_icon -%}
+                  {%- case block.settings.second_icon -%}
+                    {%- when "check" -%}
+                      {% render 'ts-icon-compare-check' %}
+                    {%- when "cross" -%}
+                      {% render 'ts-icon-compare-cross' %}
+                  {%- endcase -%}
+                {%- else -%}
+                  {{ block.settings.second_brand_value }}    
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+            {%- if section.settings.enable_third -%}
+              <div class="ts-compare__cell">
+                {%- if block.settings.third_is_icon -%}
+                  {%- case block.settings.third_icon -%}
+                    {%- when "check" -%}
+                      {% render 'ts-icon-compare-check' %}
+                    {%- when "cross" -%}
+                      {% render 'ts-icon-compare-cross' %}
+                  {%- endcase -%}
+                {%- else -%}
+                  {{ block.settings.third_brand_value }}    
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "TS Compare",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Comare"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle",
+        "default": "Subtitle"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "brand_logo",
+        "label": "Brand logo"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_second",
+        "label": "Enable second column",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "second_brand_title",
+        "label": "Second brand title",
+        "default": "Other Mixes"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_third",
+        "label": "Enable third column",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "third_brand_title",
+        "label": "Third brand title",
+        "default": "Sports Drinks"
+      },
+    ],
+    "blocks": [
+      {
+        "type": "row",
+        "name": "Row",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Title" 
+          },
+          {
+            "type": "text",
+            "id": "first_brand_value",
+            "label": "First brand value",
+            "default": "First" 
+          },
+          {
+            "type": "checkbox",
+            "id": "first_is_icon",
+            "label": "First brand is icon",
+            "default": true 
+          },
+          {
+            "type": "select",
+            "id": "first_icon",
+            "label": "First brand is icon",
+            "options": [
+              {
+                "label": "Check",
+                "value": "check"
+              },
+              {
+                "label": "Cross",
+                "value": "cross"
+              }
+            ],
+            "default": "check"
+          },
+          {
+            "type": "text",
+            "id": "second_brand_value",
+            "label": "Second brand value",
+            "default": "Second" 
+          },
+          {
+            "type": "checkbox",
+            "id": "second_is_icon",
+            "label": "Second brand is icon",
+            "default": true 
+          },
+          {
+            "type": "select",
+            "id": "second_icon",
+            "label": "Second brand is icon",
+            "options": [
+              {
+                "label": "Check",
+                "value": "check"
+              },
+              {
+                "label": "Cross",
+                "value": "cross"
+              }
+            ],
+            "default": "check"
+          },
+          {
+            "type": "text",
+            "id": "third_brand_value",
+            "label": "Third brand value",
+            "default": "Third" 
+          },
+          {
+            "type": "checkbox",
+            "id": "third_is_icon",
+            "label": "Third brand is icon",
+            "default": true 
+          },
+          {
+            "type": "select",
+            "id": "third_icon",
+            "label": "Third brand is icon",
+            "options": [
+              {
+                "label": "Check",
+                "value": "check"
+              },
+              {
+                "label": "Cross",
+                "value": "cross"
+              }
+            ],
+            "default": "check"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "TS Compare"
+      }
+    ]
+  }
+{% endschema %}
