@@ -430,12 +430,12 @@
                   "type": "doctor-review",
                   "name": "Doctor Review",
                   "settings": {
-                    "title": "{{ closest.product.metafields.custom.related_doctor_review.value.review_title.value }}",
+                    "title": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].review_title.value }}",
                     "hide_on_mobile": false,
                     "hide_on_desktop": true,
-                    "image": "{{ closest.product.metafields.custom.related_doctor_review.value.doctor_image.value }}",
-                    "text": "{{ closest.product.metafields.custom.related_doctor_review.value.review_text | metafield_tag }}",
-                    "name": "{{ closest.product.metafields.custom.related_doctor_review.value.author_name.value }}"
+                    "image": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].doctor_image.value }}",
+                    "text": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].review_text | metafield_tag }}",
+                    "name": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].author_name.value }}"
                   },
                   "blocks": {}
                 }
@@ -537,7 +537,7 @@
               "type": "_carousel-item",
               "name": "Carousel Item",
               "settings": {
-                "image": "shopify://shop_images/Calm_PDP_Picture_Sticks_1.png",
+                "image": "shopify://shop_images/2025-09-11_11.22.47.jpg",
                 "video_url": "https://cdn.shopify.com/videos/c/o/v/120069b72c204d18a7b7022a2fcd5370.mp4"
               },
               "blocks": {}
@@ -546,7 +546,7 @@
               "type": "_carousel-item",
               "name": "Carousel Item",
               "settings": {
-                "image": "shopify://shop_images/Frame_1484581378_3.png",
+                "image": "shopify://shop_images/adrinne.jpg",
                 "video_url": "https://cdn.shopify.com/videos/c/o/v/4edcc5d37bcd4892a08b2abb507b1986.mp4"
               },
               "blocks": {}
@@ -555,7 +555,7 @@
               "type": "_carousel-item",
               "name": "Carousel Item",
               "settings": {
-                "image": "shopify://shop_images/Calm_PDP_Picture_Sticks.png",
+                "image": "shopify://shop_images/Anna_de_lar_mar.jpg",
                 "video_url": "https://cdn.shopify.com/videos/c/o/v/dd59eb19632b48518adfb1e1a5e0648e.mp4"
               },
               "blocks": {}
@@ -564,7 +564,7 @@
               "type": "_carousel-item",
               "name": "Carousel Item",
               "settings": {
-                "image": "shopify://shop_images/7473299259786715751gif_6__12x16_-ezgif.com-video-to-gif-converter.gif",
+                "image": "shopify://shop_images/nectar_dad.jpg",
                 "video_url": "https://cdn.shopify.com/videos/c/o/v/9a97c4ddc2d0434c93cdea3e5ff24896.mp4"
               },
               "blocks": {}
@@ -573,7 +573,7 @@
               "type": "_carousel-item",
               "name": "Carousel Item",
               "settings": {
-                "image": "shopify://shop_images/hero-bg.png",
+                "image": "shopify://shop_images/Screenshot_2025-09-11_at_11.26.50_AM.png",
                 "video_url": "https://cdn.shopify.com/videos/c/o/v/5ed4c55a2d8548c29771d977930b4f8f.mp4"
               },
               "blocks": {}
