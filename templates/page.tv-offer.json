@@ -430,7 +430,7 @@
                   "type": "doctor-review",
                   "name": "Doctor Review",
                   "settings": {
-                    "title": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].title.value }}",
+                    "title": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].review_title.value }}",
                     "hide_on_mobile": false,
                     "hide_on_desktop": true,
                     "image": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].doctor_image.value }}",
