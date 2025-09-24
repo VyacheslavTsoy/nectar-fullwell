@@ -430,12 +430,12 @@
                   "type": "doctor-review",
                   "name": "Doctor Review",
                   "settings": {
-                    "title": "{{ closest.product.metafields.custom.related_doctor_review.value.review_title.value }}",
+                    "title": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].title.value }}",
                     "hide_on_mobile": false,
                     "hide_on_desktop": true,
-                    "image": "{{ closest.product.metafields.custom.related_doctor_review.value.doctor_image.value }}",
-                    "text": "{{ closest.product.metafields.custom.related_doctor_review.value.review_text | metafield_tag }}",
-                    "name": "{{ closest.product.metafields.custom.related_doctor_review.value.author_name.value }}"
+                    "image": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].doctor_image.value }}",
+                    "text": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].review_text | metafield_tag }}",
+                    "name": "{{ metaobjects.doctor_review[\"experience-what-proper-hydration-actually-feels-like\"].author_name.value }}"
                   },
                   "blocks": {}
                 }
