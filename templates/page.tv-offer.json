@@ -160,6 +160,9 @@
         "button_feature_1",
         "button_feature_2"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {.ts-banner__description {padding-bottom: 25px; }}"
+      ],
       "settings": {
         "review": "1 Million+ Happy Customers",
         "title": "Doctor-Formulated Hydration You Can Trust",
