@@ -4,7 +4,7 @@
     {%- if request.host == "drinknectar.com" -%}
       <script>
         {% if template.name == "index" %}
-          window.location.href = "https://drinknectar.com/pages/offer/";
+          window.location.href = "https://drinknectar.com/pages/tv-offer";
         {% else %}
           const currentLink = window.location.href;
           window.location.href = currentLink.replace("drinknectar.com", "drinknectar.co")
