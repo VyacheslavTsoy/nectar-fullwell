@@ -33,7 +33,7 @@
         {%- endfor -%}
       </div>
       {%- if section.settings.guarantee_image != blank -%}
-        <div class="ts-banner__guarantee">
+        <div class="ts-banner__guarantee ts-banner__guarantee--desktop">
           {{ section.settings.guarantee_image | image_url: width: 400 | image_tag }}
           {%- if section.settings.guarantee_label != blank -%}
             <p>{{ section.settings.guarantee_label }}</p>
@@ -78,6 +78,17 @@
       {%- if section.settings.description != blank -%}
         <div class="ts-banner__description">
           {{ section.settings.description }}
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.guarantee_image != blank -%}
+        <div class="ts-banner__guarantee ts-banner__guarantee--mobile">
+          {{ section.settings.guarantee_image | image_url: width: 400 | image_tag }}
+          <div class="ts-banner__guarantee-label">
+            {%- if section.settings.guarantee_label != blank -%}
+              {{ section.settings.guarantee_label }}
+              {%- endif -%}
+          </div>
         </div>
       {%- endif -%}
 
@@ -284,9 +295,10 @@
         "label": "Guarantee image"
       },
       {
-        "type": "text",
+        "type": "richtext",
         "id": "guarantee_label",
-        "label": "Guarantee label"
+        "label": "Guarantee label",
+        "default": "<p>Guarantee label<\/p>"
       }
     ],
     "blocks": [

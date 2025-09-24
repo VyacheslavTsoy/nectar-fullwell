@@ -73,25 +73,6 @@
 
         <div class="ts-ingredients__popup-content">
           <div class="ts-ingredients__popup-nutrition">
-            <div class="ts-ingredients__popup-features-mob">
-              {%- for block in section.blocks -%}
-                {%- if block.type == "mob_feature" -%}
-                  <div class="ts-ingredients__popup-feature-mob">
-                    {%- if block.settings.icon != blank -%}
-                      {{ block.settings.icon | image_url: width: 120 | image_tag }}
-                    {%- endif -%}
-                    {{ block.settings.label }}
-                  </div>
-                {%- endif -%}
-              {%- endfor -%}
-            </div>
-
-            {%- if section.settings.popup_comment != blank -%}
-              <div class="ts-ingredients__popup-comment">
-                {% render 'ts-icon-quote' %}
-                <p>{{ section.settings.popup_comment }}</p>
-              </div>
-            {%- endif -%}
 
             {% assign desk_image = section.settings.desk_popup_image %}
             {% assign mob_image = section.settings.mob_popup_image | default: desk_image %}

@@ -15,11 +15,11 @@
     {% endif %}
     {% if section.settings.enable_timer %}
       <div class="ts-timer__block" data-timer>
-        <div class="ts-timer__cell" {% if section.settings.enable_daily %}style="display:none;"{% endif %}>
+        <div class="ts-timer__cell" style="display:none;">
           <span data-cell="days">00</span>
           <span>Dys</span>
         </div>
-        <span class="ts-timer__divider" {% if section.settings.enable_daily %}style="display:none;"{% endif %}></span>
+        <span class="ts-timer__divider" style="display:none;"></span>
         <div class="ts-timer__cell">
           <span data-cell="hours">00</span>
           <span>Hrs</span>
@@ -44,50 +44,37 @@
     (function () {
       const section = document.querySelector(".section-{{ section.id }}");
       const timerElement = section.querySelector("[data-timer]");
-      const attributes = ["days","hours","minutes","seconds"]
-      function parseDateInput(dateStr) {
-        const [datePart, timePart] = dateStr.trim().split(" ");
-        const [day, month, year] = datePart.split("-").map(Number);
-    
-        let hours = 0, minutes = 0;
-        if (timePart) {
-          [hours, minutes] = timePart.split(":").map(Number);
-        }
-        return new Date(Date.UTC(year, month - 1, day, hours - 1, minutes));
-      }
-  
-      function startCountdown(endDateStr) {
-        const endTime = endDateStr ? parseDateInput(endDateStr) : new Date().setHours(23, 59, 59);
-    
+      const attributes = ["days","hours","minutes","seconds"];
+
+      function start15MinCountdown() {
+        // Таймер всегда отсчитывает ровно 15 минут с момента загрузки
+        const endTime = Date.now() + 15 * 60 * 1000;
+
         function updateTimer() {
-          const now = new Date();
-          const timeDiff = endTime - now;
-    
+          const now = Date.now();
+          let timeDiff = endTime - now;
+
           if (timeDiff <= 0) {
+            timeDiff = 0;
             clearInterval(timerInterval);
-            return;
           }
-    
+
           const params = {
-            days: Math.floor(timeDiff / (1000 * 60 * 60 * 24)),
+            days: 0,
             hours: Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
             minutes: Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60)),
             seconds: Math.floor((timeDiff % (1000 * 60)) / 1000)
-          }
+          };
           attributes.forEach(attribute => {
-            timerElement.querySelector(`[data-cell="${attribute}"]`).textContent = String(params[attribute]).padStart(2, '0')
-          })
+            timerElement.querySelector(`[data-cell="${attribute}"]`).textContent = String(params[attribute]).padStart(2, '0');
+          });
         }
-    
+
         const timerInterval = setInterval(updateTimer, 900);
         updateTimer();
       }
-    
-      {% if section.settings.enable_daily %}
-        startCountdown();
-      {% else %}  
-        startCountdown("{{ section.settings.end_date }}");
-      {% endif %}
+
+      start15MinCountdown();
     })()
   </script>
 {% endif %}
