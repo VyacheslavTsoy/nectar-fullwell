@@ -1,0 +1,141 @@
+{
+  "frontend/entrypoints/main.scss": {
+    "file": "main-BDNGGRiC.css",
+    "src": "frontend/entrypoints/main.scss",
+    "isEntry": true
+  },
+  "frontend/entrypoints/main.theme.js": {
+    "file": "main.theme-CxxW8cza.js",
+    "name": "main.theme",
+    "src": "frontend/entrypoints/main.theme.js",
+    "isEntry": true
+  },
+  "frontend/scripts/sections/ts-bundle.js": {
+    "file": "ts-bundle-CHEdxzo0.js",
+    "name": "ts-bundle",
+    "src": "frontend/scripts/sections/ts-bundle.js",
+    "isEntry": true
+  },
+  "frontend/styles/sections/hero.scss": {
+    "file": "hero-BVvhlr6P.css",
+    "src": "frontend/styles/sections/hero.scss",
+    "isEntry": true
+  },
+  "frontend/styles/sections/mini-cart.scss": {
+    "file": "mini-cart-BMP_sWMl.css",
+    "src": "frontend/styles/sections/mini-cart.scss",
+    "isEntry": true
+  },
+  "frontend/styles/sections/mobile-nav.scss": {
+    "file": "mobile-nav-DA7X9dIM.css",
+    "src": "frontend/styles/sections/mobile-nav.scss",
+    "isEntry": true
+  },
+  "frontend/styles/sections/scrollable-features.scss": {
+    "file": "scrollable-features-w25j7Gae.css",
+    "src": "frontend/styles/sections/scrollable-features.scss",
+    "isEntry": true
+  },
+  "frontend/styles/sections/ts-banner.scss": {
+    "file": "ts-banner-BepUfcj-.css",
+    "src": "frontend/styles/sections/ts-banner.scss",
+    "isEntry": true
+  },
+  "frontend/styles/sections/ts-bundle.scss": {
+    "file": "ts-bundle-BSyVjPc4.css",
+    "src": "frontend/styles/sections/ts-bundle.scss",
+    "isEntry": true
+  },
+  "frontend/styles/sections/ts-cards.scss": {
+    "file": "ts-cards-OwZLsTUK.css",
+    "src": "frontend/styles/sections/ts-cards.scss",
+    "isEntry": true
+  },
+  "frontend/styles/sections/ts-compare.scss": {
+    "file": "ts-compare-CbhhPFZB.css",
+    "src": "frontend/styles/sections/ts-compare.scss",
+    "isEntry": true
+  },
+  "frontend/styles/sections/ts-faq.scss": {
+    "file": "ts-faq-CBORzdHx.css",
+    "src": "frontend/styles/sections/ts-faq.scss",
+    "isEntry": true
+  },
+  "frontend/styles/sections/ts-features.scss": {
+    "file": "ts-features-BPBHNclu.css",
+    "src": "frontend/styles/sections/ts-features.scss",
+    "isEntry": true
+  },
+  "frontend/styles/sections/ts-footer.scss": {
+    "file": "ts-footer-C_89_Zlf.css",
+    "src": "frontend/styles/sections/ts-footer.scss",
+    "isEntry": true
+  },
+  "frontend/styles/sections/ts-ingredients.scss": {
+    "file": "ts-ingredients-Chcvtgig.css",
+    "src": "frontend/styles/sections/ts-ingredients.scss",
+    "isEntry": true
+  },
+  "frontend/styles/sections/ts-logo.scss": {
+    "file": "ts-logo-Bd3W6EUk.css",
+    "src": "frontend/styles/sections/ts-logo.scss",
+    "isEntry": true
+  },
+  "frontend/styles/sections/ts-logos.scss": {
+    "file": "ts-logos-DkRiYDgf.css",
+    "src": "frontend/styles/sections/ts-logos.scss",
+    "isEntry": true
+  },
+  "frontend/styles/sections/ts-review-image.scss": {
+    "file": "ts-review-image-pp5phXaC.css",
+    "src": "frontend/styles/sections/ts-review-image.scss",
+    "isEntry": true
+  },
+  "frontend/styles/sections/ts-reviews.scss": {
+    "file": "ts-reviews-DSp6zsQP.css",
+    "src": "frontend/styles/sections/ts-reviews.scss",
+    "isEntry": true
+  },
+  "frontend/styles/sections/ts-risks.scss": {
+    "file": "ts-risks-BLsYju0r.css",
+    "src": "frontend/styles/sections/ts-risks.scss",
+    "isEntry": true
+  },
+  "frontend/styles/sections/ts-timer.scss": {
+    "file": "ts-timer-DErbupGR.css",
+    "src": "frontend/styles/sections/ts-timer.scss",
+    "isEntry": true
+  },
+  "public/fonts/values-sans/ValueSansPro-Black.woff": {
+    "file": "ValueSansPro-Black-mc8XTytr.woff",
+    "src": "public/fonts/values-sans/ValueSansPro-Black.woff"
+  },
+  "public/fonts/values-sans/ValueSansPro-Black.woff2": {
+    "file": "ValueSansPro-Black-8Y7zA2vF.woff2",
+    "src": "public/fonts/values-sans/ValueSansPro-Black.woff2"
+  },
+  "public/fonts/values-sans/ValueSansPro-Bold.woff": {
+    "file": "ValueSansPro-Bold-BJEj63zH.woff",
+    "src": "public/fonts/values-sans/ValueSansPro-Bold.woff"
+  },
+  "public/fonts/values-sans/ValueSansPro-Bold.woff2": {
+    "file": "ValueSansPro-Bold-B9J_n0iy.woff2",
+    "src": "public/fonts/values-sans/ValueSansPro-Bold.woff2"
+  },
+  "public/fonts/values-sans/ValueSansPro-Medium.woff": {
+    "file": "ValueSansPro-Medium-C1v-Ogae.woff",
+    "src": "public/fonts/values-sans/ValueSansPro-Medium.woff"
+  },
+  "public/fonts/values-sans/ValueSansPro-Medium.woff2": {
+    "file": "ValueSansPro-Medium-B4moudHY.woff2",
+    "src": "public/fonts/values-sans/ValueSansPro-Medium.woff2"
+  },
+  "public/fonts/values-sans/ValueSansPro-Regular.woff": {
+    "file": "ValueSansPro-Regular--f78p1Ga.woff",
+    "src": "public/fonts/values-sans/ValueSansPro-Regular.woff"
+  },
+  "public/fonts/values-sans/ValueSansPro-Regular.woff2": {
+    "file": "ValueSansPro-Regular-1veTUK0b.woff2",
+    "src": "public/fonts/values-sans/ValueSansPro-Regular.woff2"
+  }
+}
