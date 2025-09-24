@@ -197,14 +197,14 @@
 }
 
 .ts-banner__guarantee {
-  display: none;
-  padding: 10px;
-  background-color: #FFFCED;
-  border: 1px solid #FDB022;
-  align-items: center;
-  gap: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
+    display: flex;
+    padding: 10px;
+    background-color: #FFFCED;
+    border: 1px solid #FDB022;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .ts-banner__guarantee img {
@@ -567,10 +567,6 @@
     display: none;
   }
 
-  .ts-banner__guarantee {
-    display: flex;
-    background-color: #fff;
-  }
 
   .ts-banner__faq-wrapper {
     padding: 0 20px 20px;

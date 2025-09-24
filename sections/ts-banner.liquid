@@ -8,7 +8,6 @@
     }
 </style>
 
-
 <div class="ts-banner section-{{ section.id }}">
   <div class="ts-banner__wrapper">
     <div class="ts-banner__content-mobile">
@@ -33,7 +32,15 @@
           {%- endif -%}
         {%- endfor -%}
       </div>
-      <div class="ts-banner__media-nav">
+      {%- if section.settings.guarantee_image != blank -%}
+        <div class="ts-banner__guarantee">
+          {{ section.settings.guarantee_image | image_url: width: 400 | image_tag }}
+          {%- if section.settings.guarantee_label != blank -%}
+            <p>{{ section.settings.guarantee_label }}</p>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+      {% comment %} <div class="ts-banner__media-nav">
         {%- for block in section.blocks -%}
           {%- if block.type == "image" and block.settings.image != blank -%}
             <div class="ts-banner__media-item{% if forloop.first %} active{% endif %}" data-nav data-slide="{{ forloop.index }}">
@@ -41,7 +48,7 @@
             </div>
           {%- endif -%}
         {%- endfor -%}
-      </div>
+      </div> {% endcomment %}
     </div>
 
     <div class="ts-banner__lightbox">
@@ -96,15 +103,6 @@
               {%- endif -%}
             {%- endfor -%}
           </div>
-        </div>
-      {%- endif -%}
-
-      {%- if section.settings.guarantee_image != blank -%}
-        <div class="ts-banner__guarantee">
-          {{ section.settings.guarantee_image | image_url: width: 400 | image_tag }}
-          {%- if section.settings.guarantee_label != blank -%}
-            <p>{{ section.settings.guarantee_label }}</p>
-          {%- endif -%}
         </div>
       {%- endif -%}
 

@@ -3,46 +3,27 @@
   Do not attempt to modify this file directly, as any changes will be overwritten by the next build.
 {% endcomment %}
 {% assign path = entry | replace: '~/', '../../' | replace: '@/', '../' %}
-{% if path == "/frontend/entrypoints/main.scss" or path == "main.scss" %}
-  {{ 'main-BDNGGRiC.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
-{% elsif path == "/frontend/entrypoints/main.theme.js" or path == "main.theme.js" %}
-  <script src="{{ 'main.theme-CxxW8cza.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
-{% elsif path == "/frontend/scripts/sections/ts-bundle.js" or path == "../scripts/sections/ts-bundle.js" %}
-  <script src="{{ 'ts-bundle-CHEdxzo0.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
-{% elsif path == "/frontend/styles/sections/hero.scss" or path == "../styles/sections/hero.scss" %}
-  {{ 'hero-BVvhlr6P.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
-{% elsif path == "/frontend/styles/sections/mini-cart.scss" or path == "../styles/sections/mini-cart.scss" %}
-  {{ 'mini-cart-BMP_sWMl.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
-{% elsif path == "/frontend/styles/sections/mobile-nav.scss" or path == "../styles/sections/mobile-nav.scss" %}
-  {{ 'mobile-nav-DA7X9dIM.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
-{% elsif path == "/frontend/styles/sections/scrollable-features.scss" or path == "../styles/sections/scrollable-features.scss" %}
-  {{ 'scrollable-features-w25j7Gae.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
-{% elsif path == "/frontend/styles/sections/ts-banner.scss" or path == "../styles/sections/ts-banner.scss" %}
-  {{ 'ts-banner-BlFc7ITz.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
-{% elsif path == "/frontend/styles/sections/ts-bundle.scss" or path == "../styles/sections/ts-bundle.scss" %}
-  {{ 'ts-bundle-BSyVjPc4.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
-{% elsif path == "/frontend/styles/sections/ts-cards.scss" or path == "../styles/sections/ts-cards.scss" %}
-  {{ 'ts-cards-OwZLsTUK.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
-{% elsif path == "/frontend/styles/sections/ts-compare.scss" or path == "../styles/sections/ts-compare.scss" %}
-  {{ 'ts-compare-CbhhPFZB.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
-{% elsif path == "/frontend/styles/sections/ts-faq.scss" or path == "../styles/sections/ts-faq.scss" %}
-  {{ 'ts-faq-CBORzdHx.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
-{% elsif path == "/frontend/styles/sections/ts-features.scss" or path == "../styles/sections/ts-features.scss" %}
-  {{ 'ts-features-BPBHNclu.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
-{% elsif path == "/frontend/styles/sections/ts-footer.scss" or path == "../styles/sections/ts-footer.scss" %}
-  {{ 'ts-footer-C_89_Zlf.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
-{% elsif path == "/frontend/styles/sections/ts-ingredients.scss" or path == "../styles/sections/ts-ingredients.scss" %}
-  {{ 'ts-ingredients-BpDuxtfc.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
-{% elsif path == "/frontend/styles/sections/ts-logo.scss" or path == "../styles/sections/ts-logo.scss" %}
-  {{ 'ts-logo-Bd3W6EUk.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
-{% elsif path == "/frontend/styles/sections/ts-logos.scss" or path == "../styles/sections/ts-logos.scss" %}
-  {{ 'ts-logos-DkRiYDgf.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
-{% elsif path == "/frontend/styles/sections/ts-review-image.scss" or path == "../styles/sections/ts-review-image.scss" %}
-  {{ 'ts-review-image-pp5phXaC.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
-{% elsif path == "/frontend/styles/sections/ts-reviews.scss" or path == "../styles/sections/ts-reviews.scss" %}
-  {{ 'ts-reviews-DSp6zsQP.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
-{% elsif path == "/frontend/styles/sections/ts-risks.scss" or path == "../styles/sections/ts-risks.scss" %}
-  {{ 'ts-risks-BLsYju0r.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
-{% elsif path == "/frontend/styles/sections/ts-timer.scss" or path == "../styles/sections/ts-timer.scss" %}
-  {{ 'ts-timer-DErbupGR.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+{% liquid
+  assign path_prefix = path | slice: 0
+  if path_prefix == '/'
+    assign file_url_prefix = 'http://localhost:5173'
+  else
+    assign file_url_prefix = 'http://localhost:5173/frontend/entrypoints/'
+  endif
+  assign file_url = path | prepend: file_url_prefix
+  assign file_name = path | split: '/' | last
+  if file_name contains '.'
+    assign file_extension = file_name | split: '.' | last
+  endif
+  assign css_extensions = 'css|less|sass|scss|styl|stylus|pcss|postcss' | split: '|'
+  assign is_css = false
+  if css_extensions contains file_extension
+    assign is_css = true
+  endif
+%}
+<script src="http://localhost:5173/@vite/client" type="module"></script>
+{% if is_css == true %}
+  <link rel="stylesheet" href="{{ file_url }}" crossorigin="anonymous">
+{% else %}
+  <script src="{{ file_url }}" type="module"></script>
 {% endif %}
