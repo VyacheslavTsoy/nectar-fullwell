@@ -181,7 +181,7 @@
     const lightbox = section.querySelector(".ts-banner__lightbox");
     const lightboxTriggers = section.querySelectorAll("[data-lightbox]");
 
-    const navs = navGallery.querySelectorAll("[data-nav]");
+    const navs = navGallery ? navGallery.querySelectorAll("[data-nav]") : [];
 
     const faq = section.querySelector(".ts-banner__faq");
     const questions = section.querySelectorAll(".ts-banner__question");
@@ -233,8 +233,11 @@
       const gap = 12;
       
       currentSlide = Math.round(scrollLeft / (blockWidth + gap)) + 1;
-      navGallery.querySelector(".active")?.classList.remove("active");
-      navGallery.querySelector(`[data-slide="${currentSlide}"]`).classList.add("active");
+      // Check if navGallery exists and the element to activate exists before accessing
+      const activeNav = navGallery?.querySelector(".active");
+      if (activeNav) activeNav.classList.remove("active");
+      const newActiveNav = navGallery?.querySelector(`[data-slide="${currentSlide}"]`);
+      if (newActiveNav) newActiveNav.classList.add("active");
     }
 
     mainGallery.addEventListener('scroll', updateState);
