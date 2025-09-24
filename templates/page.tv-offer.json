@@ -837,8 +837,8 @@
                       "name": "Button",
                       "settings": {
                         "button_text": "Get Your 60% Off +  4 Free Gifts Now!",
-                        "button_link": "",
-                        "related_product": "{{ closest.product }}",
+                        "button_link": "/pages/offer?product-handle=essential-daily-hydration-4-gift",
+                        "related_product": "",
                         "button_type": "primary",
                         "hide_on_mobile": false
                       },
