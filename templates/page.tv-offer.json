@@ -497,7 +497,26 @@
           "type": "reviews",
           "name": "Reviews",
           "settings": {
-            "reviews": [],
+            "reviews": [
+              "reviews-y4gg5rcc",
+              "sofia-t",
+              "victoria-u",
+              "layla-v",
+              "penelope-w",
+              "scarlett-x",
+              "eleanor-y",
+              "nora-z",
+              "reviews-lq9wrtno",
+              "stella-b",
+              "paisley-c",
+              "aurora-d",
+              "brooklyn-e",
+              "savannah-f",
+              "skylar-g",
+              "claire-h",
+              "anna-i",
+              "leah-j"
+            ],
             "activate_filters": true,
             "desktop_padding": 0,
             "desktop_columns_per_row": 3,
@@ -818,8 +837,8 @@
                       "name": "Button",
                       "settings": {
                         "button_text": "Get Your 60% Off +  4 Free Gifts Now!",
-                        "button_link": "",
-                        "related_product": "{{ closest.product }}",
+                        "button_link": "/pages/offer?product-handle=essential-daily-hydration-4-gift",
+                        "related_product": "",
                         "button_type": "primary",
                         "hide_on_mobile": false
                       },
