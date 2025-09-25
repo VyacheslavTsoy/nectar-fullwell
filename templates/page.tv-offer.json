@@ -278,7 +278,7 @@
           "name": "Layout",
           "settings": {
             "desktop_padding": 0,
-            "desktop_gap": 54,
+            "desktop_gap": 24,
             "desktop_columns_per_row": 2,
             "align_items": "center",
             "custom_column_width": false,
@@ -300,7 +300,7 @@
                   "type": "custom-liquid",
                   "name": "Custom Liquid",
                   "settings": {
-                    "custom_liquid": "<div class=\"tv-spot\">\n    TV Spot\n</div>"
+                    "custom_liquid": "<div class=\"tv-spot\" style=\"background: transparent; height: auto; border-radius: 12px;\">\n<script src=\"https://fast.wistia.com/player.js\" async></script><script src=\"https://fast.wistia.com/embed/3cxtronmy3.js\" async type=\"module\"></script><style>wistia-player[media-id='3cxtronmy3']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/3cxtronmy3/swatch'); display: block; filter: blur(5px); padding-top:90%; }</style> <wistia-player media-id=\"3cxtronmy3\" aspect=\"1.7777777777777777\"></wistia-player>\n</div>"
                   },
                   "blocks": {}
                 }
