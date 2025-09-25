@@ -26,7 +26,7 @@
       <div class="ts-banner__media-main">
         {%- for block in section.blocks -%}
           {%- if block.type == "image" and block.settings.image != blank -%}
-            <div class="ts-banner__media-item" data-lightbox data-slide="{{ forloop.index }}">
+            <div class="ts-banner__media-item"data-slide="{{ forloop.index }}">
               {{ block.settings.image | image_url: width: 800 | image_tag }}
             </div>
           {%- endif -%}
@@ -203,18 +203,28 @@
       document.documentElement.style.overflow = null
     });
 
+    {% comment %} Only one FAQ item can be open at a time {% endcomment %}
     questions.forEach(question => {
       question.addEventListener("click", () => {
-        const answer = question.nextElementSibling;
-  
-        question.classList.toggle("open");
-        answer.style.maxHeight = question.classList.contains("open") ? answer.scrollHeight + "px" : null;
-      })
-    })
+        // Close all questions
+        questions.forEach(q => {
+          q.classList.remove("open");
+          const ans = q.nextElementSibling;
+          if (ans) ans.style.maxHeight = null;
+        });
+
+        // Open the clicked question if it wasn't already open
+        if (!question.classList.contains("open")) {
+          question.classList.add("open");
+          const answer = question.nextElementSibling;
+          if (answer) answer.style.maxHeight = answer.scrollHeight + "px";
+        }
+      });
+    });
 
     showMore.addEventListener("click", () => {
-      {% comment %} faq.classList.toggle("show"); {% endcomment %}
-    })
+      faq.classList.toggle("show");
+    });
 
     navs.forEach(nav => {
       nav.addEventListener("click", () => {

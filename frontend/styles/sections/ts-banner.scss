@@ -311,10 +311,10 @@
 .ts-banner__answer * {
   font-family: "Poppins";
   font-weight: 400;
-  font-size: 14px;
-  line-height: 150%;
+  font-size: 16px;
+  line-height: 1.3;
   letter-spacing: 0;
-  color: #535862;
+  color: #000;
   margin: 0;
 }
 
@@ -382,7 +382,7 @@
 .ts-banner__sticky-button {
   display: flex;
   width: 100%;
-  height: 64px;
+  height: 74px;
   background-color: #21A600;
   border-radius: 10px;
   align-items: center;
@@ -496,6 +496,9 @@
 
   .tv-spot {
     height: 230px;
+    width: auto;
+    margin-left: -20px;
+    margin-right: -20px;
   }
 
   .ts-banner__wrapper {
