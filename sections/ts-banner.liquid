@@ -203,18 +203,19 @@
       document.documentElement.style.overflow = null
     });
 
-    {% comment %} Only one FAQ item can be open at a time {% endcomment %}
-    questions.forEach(question => {
+     questions.forEach(question => {
       question.addEventListener("click", () => {
-        // Close all questions
+        const isOpen = question.classList.contains("open");
+
+        // Закрыть все вопросы
         questions.forEach(q => {
           q.classList.remove("open");
           const ans = q.nextElementSibling;
           if (ans) ans.style.maxHeight = null;
         });
 
-        // Open the clicked question if it wasn't already open
-        if (!question.classList.contains("open")) {
+        // Если клик был по уже открытому — не открываем снова (т.е. просто закроется)
+        if (!isOpen) {
           question.classList.add("open");
           const answer = question.nextElementSibling;
           if (answer) answer.style.maxHeight = answer.scrollHeight + "px";
