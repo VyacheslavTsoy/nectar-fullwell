@@ -1144,56 +1144,56 @@
           "type": "row",
           "settings": {
             "question": "Shipping Details",
-            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            "answer": "<p>All Nectar Orders are shipped for<strong> FREE via USPS Express Shipping From Utah and include a tracking number.<br/><br/></strong>We ensure that your package will reach you safely and on time. If there are any problems during transit, we will work to solve the problems and provide the best solutions.</p>"
           }
         },
         "row_2": {
           "type": "row",
           "settings": {
             "question": "Who Needs Nectar?",
-            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            "answer": "<p>Studies show that <strong>3 out of 4 people suffer from chronic dehydration. </strong>Many of the symptoms of dehydration we overlook as byproducts of our busy lifestyles - fatigue, brain fog, feeling down. If you're experiencing any of these symptoms, it's highly likely you're dehydrated - even if you think you are drinking enough fluids.<br/><br/>Adding Nectar to your daily routine helps you make the most of the water you drink, keeping you hydrated and feeling your best.</p>"
           }
         },
         "row_3": {
           "type": "row",
           "settings": {
-            "question": "Ingredients & Nutrition",
-            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            "question": "Directions For Use",
+            "answer": "<p>To enjoy Nectar, simply:<br/><br/>1. Pour one packet into 8 to 16 oz of water (adjust amount of water based on your flavor strength preference)<br/>2. Stir or shake (given Nectar's natural ingredients, there may be a very small amount of settled ingredients - just give it a quick stir to disperse)<br/>3. Enjoy daily!<br/><br/>The product can be enjoyed any time throughout the day and it is safe to consume up to 5 packets daily. Many of our customers report their best results are when they add a packet of Nectar to their water two to three times per day.</p>"
           }
         },
         "row_4": {
           "type": "row",
           "settings": {
-            "question": "Directions For Use",
-            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            "question": "How Long Does It Take To Feel A Difference?",
+            "answer": "<p>You’ll usually notice a boost right away - feeling a little more refreshed and alert with your first glass. </p><p>But true hydration takes consistency. As you make Nectar part of your daily routine, your body fully rebalances its hydration levels, and that’s when the bigger benefits - steadier energy, sharper focus, and better mood - really set in.<br/><br/>Commit yourself to drinking Nectar daily for 60 days and watch hydration turn into a healthy daily habit.</p>"
           }
         },
         "row_5": {
           "type": "row",
           "settings": {
             "question": "What Does It Taste Like?",
-            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            "answer": "<p>Nectar is made with real fruit flavors that are light, clean, and refreshing - never syrupy or overly sweet like most electrolyte drinks. Think crisp watermelon, bright citrus, and juicy berry notes that make plain water something you’ll actually look forward to drinking.</p><p>And the best part? You’re in control. Each stick is designed so you can adjust the strength to your taste - add more water for a subtle, refreshing sip, or a little less if you prefer a bolder flavor.</p>"
           }
         },
         "row_6": {
           "type": "row",
           "settings": {
-            "question": "What Does It Taste Like?",
-            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            "question": "Can I Drink Nectar Daily?",
+            "answer": "<p>Yes! Nectar was specifically formulated for safe, daily hydration. Unlike many electrolyte mixes that load up on sugar, excessive sodium, and artificial ingredients, Nectar is sugar-free, low in sodium, and made with clean, medical-grade electrolytes. That means you can enjoy it every day to stay hydrated — without worrying about hidden calories, crashes, or unhealthy additives.</p>"
           }
         },
         "row_7": {
           "type": "row",
           "settings": {
-            "question": "What Does It Taste Like?",
-            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            "question": "What Are Electrolytes And Why Do I Need Them?",
+            "answer": "<p>Electrolytes are essential minerals - like potassium, magnesium, calcium, and sodium - that help your body absorb and use water properly. They regulate hydration, support energy production, keep your muscles and nerves working smoothly, and even influence mood and focus. Without enough electrolytes, plain water often just passes through you, leaving you tired, foggy, or dehydrated. Nectar’s precise blend restores that balance so your body actually gets the hydration it needs.</p>"
           }
         },
         "row_8": {
           "type": "row",
           "settings": {
-            "question": "What Does It Taste Like?",
-            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            "question": "Does Essential Daily Hydration Contain Any Sugar, Caffeine, Stimulants, Artificial Sweeteners, Colorants or Fillers?",
+            "answer": "<p>Does Essential Daily Hydration contain any sugar, caffeine, stimulants, artificial sweeteners, colorants or fillers?</p>"
           }
         }
       },
