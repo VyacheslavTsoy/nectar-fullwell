@@ -67,7 +67,7 @@
           "type": "row",
           "settings": {
             "question": "Shipping Details",
-            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Pretium at risus pellentesque ornare commodo. Enim sit sit consectetur posuere risus sed erat nulla. Id adipiscing netus convallis nisl euismod.</p>"
+            "answer": "<p>All Nectar Orders are shipped for<strong> FREE via USPS Express Shipping From Utah and include a tracking number.<br/><br/></strong>We ensure that your package will reach you safely and on time. If there are any problems during transit, we will work to solve the problems and provide the best solutions.</p>"
           }
         },
         "row_2": {
