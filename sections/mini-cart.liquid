@@ -169,7 +169,7 @@
                     <span class="mini-cart__cta-btn-price flex items-center">
                         <span class="inline-flex items-center gap-2">
                             <u x-text="formatMoney(cart?.original_total_price)"></u>
-                            <span x-text="formatMoney(cart?.total_price)"></span>
+                            <span x-show="subscriptionDiscountPrice > 0" x-text="formatMoney(subscriptionDiscountPrice)"></span>
                         </span>
 
                         <span class="inline-block ml-2">
@@ -266,6 +266,17 @@
             subscriptionItemsInCart: false,
             freeShippingCost: 4000,
             defaultSellingPlanID: 1657143355,
+            {% if section.blocks != blank %}
+            subscriptionDiscountPrice: 0,
+            discountThresholds: [
+                {% for block in section.blocks %}
+                {
+                    title: {{ block.settings.title }},
+                    value: {{ block.settings.value }}
+                } {% unless forloop.last %},{% endunless %}
+                {% endfor %}
+            ],
+            {% endif %}
 
             upsellProducts: [
                 {% for product in section.settings.upsell_products %}
@@ -315,6 +326,7 @@
                 .then(response => response.json())
                 .then(data => {
                     this.cart = data;
+                    this.subscriptionDiscountPrice = this.getSubscriptionDiscountedTotal();
 
                     this.subscriptionItemsInCart = this.cart?.items?.some(item => item.selling_plan_allocation);
                 });
@@ -345,6 +357,23 @@
             formatMoney(price) {
                 const newPrice = (price / 100).toFixed(2);
                 return `$${newPrice}`;
+            },
+
+            getSubscriptionDiscountedTotal() {
+                if (!this.cart || !this.discountThresholds) {
+                    return this.cart?.original_total_price || 0;
+                }
+                const itemCount = this.cart.item_count || 0;
+                if (itemCount === 0) return this.cart.original_total_price;
+
+                // Найти нужный порог
+                let discount = 0;
+                if (itemCount <= this.discountThresholds.length) {
+                    discount = this.discountThresholds[itemCount - 1]?.value || 0;
+                } else {
+                    discount = this.discountThresholds[this.discountThresholds.length - 1]?.value || 0;
+                }
+                return this.cart.original_total_price - discount;
             },
     
             addItem(items, redirectToCheckout) {
@@ -429,6 +458,8 @@
                 await this.loadCart();
 
                 this.filterUpsellProducts();
+
+                console.log(this.discountThresholds, 111111)
 
                 if (this.cart?.items?.some(item => item.discounts?.some(discount => discount.title == 'GIFT'))) {
                     this.clearCart();
@@ -520,7 +551,24 @@
         "id": "shipping_success_message",
         "default": "<p>Congrats! You've unlocked FREE SHIPPING!</p>"
     }
-    
+  ],
+  "blocks": [
+    {
+      "type": "discount_threshold",
+      "name": "Discount Threshold",
+      "settings": [
+        {
+          "type": "number",
+          "label": "Amount ",
+          "id": "title"
+        },
+        {
+          "type": "number",
+          "label": "Value (in cents)",
+          "id": "value"
+        }
+      ]
+    }
   ]
 }
 {% endschema %}
