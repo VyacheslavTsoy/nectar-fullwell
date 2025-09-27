@@ -7,68 +7,67 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
-    "sections": {
-      "main": {
-        "type": "main-checkout",
-        "blocks": {
-          "quantity_GEHxUA": {
-            "type": "quantity",
-            "settings": {
-              "title": "Select Quantity",
-              "related_pouches": [
-                "4-pouches",
-                "3-pouches",
-                "2-pouches",
-                "1-pouch"
-              ]
-            }
-          },
-          "flavors_9jkGB6": {
-            "type": "flavors",
-            "settings": {
-              "title": "Select Flavors"
-            }
-          },
-          "frequency_p7Ei8A": {
-            "type": "frequency",
-            "settings": {
-              "title": "Select Frequency"
-            }
+{
+  "sections": {
+    "main": {
+      "type": "main-checkout",
+      "blocks": {
+        "quantity_GEHxUA": {
+          "type": "quantity",
+          "settings": {
+            "title": "Select Quantity",
+            "related_pouches": [
+              "1-pouch-pdp",
+              "2-pouches-pdp",
+              "3-pouches-pdp",
+              "4-pouches-pdp"
+            ]
           }
         },
-        "block_order": [
-          "quantity_GEHxUA",
-          "flavors_9jkGB6",
-          "frequency_p7Ei8A"
-        ],
-        "settings": {
-          "cart_flow": "add-to-cart",
-          "products": [
-            "energy-sampler",
-            "essential-daily-calm",
-            "essential-daily-calm-gift",
-            "essential-daily-energy",
-            "essential-daily-hydration-4-gift",
-            "essential-daily-hydration-1",
-            "essential-daily-energy-2",
-            "essential-daily-hydration-2",
-            "essential-daily-hydration-new",
-            "nectar-frother",
-            "tropical-variety-pack"
-          ],
-          "label_one_time": "One-time Purchase",
-          "label_subscription": "Subscribe and",
-          "label_delivery": "Delivery Every",
-          "label_subscription_description": "<ul><li><em><strong>Free Expedited Shipping*</strong></em></li><li><em><strong>Free $35.99  Mystery Gift</strong></em> on Order #3</li><li><em><strong>Free $19.95  Mystery Gift</strong></em> on Order #3</li><li>Easily Pause, Cancel or Adjust Flavors <em><strong>Any Time</strong></em></li></ul>",
-          "cta_label": "Add To Cart",
-          "gurantee_text": "",
-          "subscription_details": ""
+        "flavors_9jkGB6": {
+          "type": "flavors",
+          "settings": {
+            "title": "Select Flavors"
+          }
+        },
+        "frequency_p7Ei8A": {
+          "type": "frequency",
+          "settings": {
+            "title": "Select Frequency"
+          }
         }
+      },
+      "block_order": [
+        "quantity_GEHxUA",
+        "flavors_9jkGB6",
+        "frequency_p7Ei8A"
+      ],
+      "settings": {
+        "cart_flow": "add-to-cart",
+        "products": [
+          "energy-sampler",
+          "essential-daily-calm",
+          "essential-daily-calm-gift",
+          "essential-daily-energy",
+          "essential-daily-hydration-4-gift",
+          "essential-daily-hydration-1",
+          "essential-daily-energy-2",
+          "essential-daily-hydration-2",
+          "essential-daily-hydration-new",
+          "nectar-frother",
+          "tropical-variety-pack"
+        ],
+        "label_one_time": "One-time Purchase",
+        "label_subscription": "Subscribe and",
+        "label_delivery": "Delivery Every",
+        "label_subscription_description": "<ul><li><em><strong>Free Expedited Shipping*</strong></em></li><li><em><strong>Free $35.99  Mystery Gift</strong></em> on Order #3</li><li><em><strong>Free $19.95  Mystery Gift</strong></em> on Order #3</li><li>Easily Pause, Cancel or Adjust Flavors <em><strong>Any Time</strong></em></li></ul>",
+        "cta_label": "Add To Cart",
+        "gurantee_text": "",
+        "subscription_details": ""
       }
-    },
-    "order": [
-      "main"
-    ]
-  }
-  
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
