@@ -17,10 +17,10 @@
           "settings": {
             "title": "Select Quantity",
             "related_pouches": [
-              "1-pouch-pdp",
-              "2-pouches-pdp",
+              "4-pouches-pdp",
               "3-pouches-pdp",
-              "4-pouches-pdp"
+              "2-pouches-pdp",
+              "1-pouch-pdp"
             ]
           }
         },
