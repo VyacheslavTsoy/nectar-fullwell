@@ -6,8 +6,26 @@
 {% assign gifts = blocks | where: 'type', 'gifts' | first %}
 
 {% if sst.products != blank %}
-<div class="checkout" x-data="checkout">
-    <div class="checkout__inner max-w-[42.5rem] mx-auto px-[2rem] py-[2.4rem] pb-[1.2rem]">
+<div class="checkout {% if sst.use_separated_quantity_flow %}bg-[#F8F8F8]{% endif %}" x-data="checkout" >
+    <div class="checkout__inner bg-white max-w-[42.5rem] mx-auto px-[2rem] {% unless sst.use_separated_quantity_flow %}py-[2.4rem]{% endunless %}">
+
+        {% if sst.use_separated_quantity_flow %}
+            <div class="checkout__header flex items-center gap-[3.6rem] bg-white py-[1.4rem]">
+                <a :href="`/products/${currentProduct.handle}`" class="block w-[2.9rem] h-[2.9rem] bg-[#E2F0FF] rounded-full flex items-center justify-center pt-[.2rem] pl-[.2rem]">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0.352516" y1="5.30321" x2="6.00937" y2="10.9601" stroke="#0D3063"/>
+                        <line x1="1.05965" y1="5.30319" x2="6.0094" y2="0.353445" stroke="#0D3063"/>
+                    </svg>                        
+                </a>
+
+                <div class="font-black text-[2.2rem]">
+                    Select At Least <span x-text="minQty"></span> Bags
+                </div>
+            </div>
+
+            <div class="bg-[#F8F8F8] h-[1.6rem] mx-[-2rem]"> </div>
+        {% endif %}
+
         {% for block in blocks %}
             {%- assign index = forloop.index -%}
             {%- if gifts -%}
@@ -16,13 +34,13 @@
 
             {% case block.type %}
                 {% when 'gifts' %}
-                    {% render 'checkout-gifts', block: block, index: index %}
+                    {% render 'checkout-gifts', block: block, index: index, separated_flow: sst.use_separated_quantity_flow %}
                 {% when 'quantity' %}
-                    {% render 'checkout-quantity', block: block, index: index %}
+                    {% render 'checkout-quantity', block: block, index: index, separated_flow: sst.use_separated_quantity_flow %}
                 {% when 'flavors' %}
-                    {% render 'checkout-flavors', block: block, index: index %}
+                    {% render 'checkout-flavors', block: block, index: index, separated_flow: sst.use_separated_quantity_flow %}
                 {% when 'frequency' %}
-                    {% render 'checkout-frequency', block: block, index: index %}
+                    {% render 'checkout-frequency', block: block, index: index, separated_flow: sst.use_separated_quantity_flow %}
             {% endcase %}
         {% endfor %}
     </div>
@@ -190,26 +208,32 @@
             },
 
             countAmountOfChoosedFlavors() {
+                const windowUrl = new URLSearchParams(window.location.search);
+                const minQtyFromUrl = windowUrl.get('minQty') ? +windowUrl.get('minQty') : null;
+
                 this.currentQty = this.currentProduct.variants.reduce((acc, variant) => acc + variant.quantity, 0);
                 let minQty = this.minQty;
 
+                if (this.currentQty > this.maxQty) {
+                    minQty = this.maxQty;
+                } else{
+                    minQty = this.currentQty;
+                }
+                
+                this.updateCurrentPouch(minQty);
+
                 if (this.currentQty > this.minQty) {
-                    if (this.currentQty > this.maxQty) {
-                        minQty = this.maxQty;
-                    } else{
-                        minQty = this.currentQty;
-                    }
                     
-                    this.updateCurrentPouch(minQty);
                 } 
 
                 this.setupCurrentDiscount();
             },
 
             updateCurrentPouch(minQty) {
-                this.minQty = minQty ? minQty : this.pouches[1]?.minQty;
-                this.currentPouch = this.pouches.find(pouch => pouch.minQty === this.minQty);
 
+                this.minQty = minQty ? minQty : this.pouches[0]?.minQty;
+                this.currentPouch = this.pouches.find(pouch => pouch.minQty === this.minQty);
+                
                 this.relatedPoucheSellingPlan = this.currentPouch?.relatedPoucheSellingPlan;
             },
 
@@ -349,6 +373,12 @@
 </script>
 {% endif %}
 {% style %}
+  {% if sst.use_separated_quantity_flow %}
+    .shopify-section-group-header-group {
+        display: none;
+    }
+  {% endif %}
+
   .checkout__flavor {
     border-radius: 0.6rem;
     border: 1px solid #ccc;
@@ -560,6 +590,12 @@
   "name": "Checkout",
   "settings": [
     {
+        "type": "checkbox",
+        "label": "Use Separated Quantity and Flavors flow",
+        "id": "use_separated_quantity_flow",
+        "default": false,
+    },
+    {
       "type": "select",
       "id": "cart_flow",
       "label": "Cart Flow",
@@ -657,6 +693,24 @@
             "id": "title",
             "label": "Title",
             "default": "Select Flavors"
+          },
+          {
+            "type": "richtext",
+            "visible_if": "{{ section.settings.use_separated_quantity_flow == true }}",
+            "id": "additional_description",
+            "label": "Additional Description"
+          },
+          {
+            "type": "text",
+            "visible_if": "{{ section.settings.use_separated_quantity_flow == true }}",
+            "id": "additional_selling_label",
+            "label": "Additional Selling Label"
+          },
+          {
+            "type": "text",
+            "visible_if": "{{ section.settings.use_separated_quantity_flow == true }}",
+            "id": "guarantee_badge_text",
+            "label": "Guarantee Badge Text"
           }
         ]
     },

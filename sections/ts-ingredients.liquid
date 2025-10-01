@@ -91,13 +91,13 @@
             {%- endif -%}
 
             {%- if section.settings.popup_btn_label -%}
-              <a href="{{ section.settings.popup_btn_link }}" class="ts-ingredients__popup-button">
+              {% comment %} <a href="{{ section.settings.popup_btn_link }}" class="ts-ingredients__popup-button">
                 {{ section.settings.popup_btn_label }}
-              </a>
+              </a> {% endcomment %}
             {%- endif -%}
 
             <p class="ts-ingredients__popup-more" data-popup-close>
-              See More Details
+                Close Nutrition Facts
             </p>
           </div>
 
@@ -120,7 +120,6 @@
                 {%- endfor -%}
               </div>
             </div>
-            <a href="/pages/offer?product-handle=essential-daily-hydration-4-gift" class="btn w-full btn-lg max-w-[28rem]" style="margin-top: 16px;">Get Up To 60% Off + Gifts Now!</a>
             {%- if section.settings.popup_features_subtitle != blank -%}
               <p class="ts-ingredients__popup-features-subtitle" style="display: none;">
                 {{ section.settings.popup_features_subtitle }}
@@ -140,7 +139,7 @@
 <script>
   (function () {
     const section = document.querySelector(".section-{{ section.id }}");
-    console.log(section, 123);
+
     const popup = document.querySelector("[data-popup]");
     const popupButtonOpen = document.querySelectorAll("[data-popup-open]");
     const popupButtonCloseEls = document.querySelectorAll("[data-popup-close]");

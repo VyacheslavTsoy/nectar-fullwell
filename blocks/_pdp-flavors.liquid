@@ -1,0 +1,55 @@
+
+    <div class="product__flavors flex flex-col gap-[.8rem]" x-show="currentProduct.variants.length > 0">
+        
+        <template x-for="variant in currentProduct.variants" :key="variant.id">
+            <div class="checkout__flavor flex items-center">
+                <div class="checkout__flavor-image mr-6 w-[5.2rem] h-[5.2rem] overflow-hidden flex-shrink-0">
+                    <img :src="variant.image" :alt="variant.title" class="w-full h-full object-cover">
+                </div>
+
+                <div class="checkout__flavor-content w-[100%]">
+                    <div class="checkout__flavor-title font-bold">
+                        <span x-text="variant.title"></span>
+                    </div>
+
+                    <div class="text-sm text-[#333]" x-show="variant?.description" x-text="variant?.description"></div>
+                </div>
+
+                <div class="checkout__flavor-qty w-[9.3rem] flex-shrink-0 mr-4">
+
+                    <div class="checkout__flavor-qty w-[9.3rem] flex-shrink-0 mr-4" x-show="variant.quantity == 0">
+                        <button class="btn btn--add w-full" @click="variant.quantity++;">Add+</button>
+                    </div>
+
+                    <div class="qty-picker flex items-center gap-2 mb-2 text-[#111111]" x-show="variant.quantity > 0">
+                        <button class="qty-picker__btn" @click="variant.quantity > 0 && variant.quantity--;">
+                            <svg width="14" height="3" viewBox="0 0 10 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.534084 2.14009H8.87706C9.1046 2.14009 9.25629 1.9884 9.25629 1.76086V1.00241C9.25629 0.774875 9.1046 0.623184 8.87706 0.623184H0.534084C0.306549 0.623184 0.154859 0.774875 0.154859 1.00241V1.76086C0.154859 1.9884 0.306549 2.14009 0.534084 2.14009Z" fill="currentColor"/>
+                            </svg>                                
+                        </button>
+                        <input type="number" class="qty-picker__input text-center w-[2.4rem]" :value="variant.quantity" @change="variant.quantity = $event.target.value;">
+                        <button class="qty-picker__btn" @click="variant.quantity++;">
+                            <svg width="12" height="12" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.594739 5.00245V5.7609C0.594739 5.98844 0.746429 6.14013 0.973965 6.14013H4.387V9.55317C4.387 9.7807 4.53869 9.93239 4.76623 9.93239H5.52468C5.75221 9.93239 5.90391 9.7807 5.90391 9.55317V6.14013H9.31694C9.54448 6.14013 9.69617 5.98844 9.69617 5.7609V5.00245C9.69617 4.77492 9.54448 4.62322 9.31694 4.62322H5.90391V1.21019C5.90391 0.982654 5.75221 0.830963 5.52468 0.830963H4.76623C4.53869 0.830963 4.387 0.982654 4.387 1.21019V4.62322H0.973965C0.746429 4.62322 0.594739 4.77492 0.594739 5.00245Z" fill="currentColor"/>
+                            </svg>                                
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+    
+
+    {% schema %}
+    {
+      "name": "Flavors",
+      "settings": [
+        
+      ],
+      "presets": [
+        {
+          "name": "Flavors"
+        }
+      ]
+    }
+    {% endschema %}

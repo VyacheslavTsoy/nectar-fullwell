@@ -1,6 +1,6 @@
 {% assign bst = block.settings %}
 
-<section class="checkout__part mb-[2rem]">
+<section class="checkout__part mb-[2rem] {% if separated_flow == true %}hidden{% endif %}">
     <div class="checkout__part-header flex items-center justify-between mb-8">
         <h2 class="checkout__part-title whitespace-nowrap text-baseLg flex items-center gap-2 font-bold"><span class="inline-flex items-center justify-center w-[1.8rem] h-[1.8rem] bg-[#0D3063] rounded-full text-white text-sm font-family-poppins mt-[-.2rem]">{{ index }}</span> {{ bst.title }}</h2>
 

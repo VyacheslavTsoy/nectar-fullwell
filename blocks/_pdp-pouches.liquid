@@ -1,0 +1,42 @@
+{% assign bst = block.settings %}
+
+<div x-init="
+    {% if pouches.settings.related_pouches != blank %}
+        pouches: [
+            {%- for pouch in pouches.settings.related_pouches -%}
+                {
+                    minQty: {{ pouch.title | split: ' ' | first }},
+                    relatedPoucheSellingPlan: '{{ pouch.related_subscription_plan_name }}',
+                    title: '{{ pouch.title }}',
+                    quantity: '{{ pouch.quantity }}',
+                } {% unless forloop.last %},{% endunless %}
+            {% endfor %}
+        ],
+    {% endif %}
+">    
+<div class="checkout__sizes flex justify-between items-stretch gap-4 mt-[1.6rem] mb-[1rem]">
+    <template x-for="pouch in pouches">
+        <label class="checkout__size block w-[33.3%]">
+            <input type="radio" name="pouches" :checked="pouch.minQty === minQty" :value="pouch.minQty" @change="relatedPoucheSellingPlan = pouch.relatedPoucheSellingPlan;">
+            
+            <div class="checkout__size-inner min-h-[100%]" :data-blue-label="pouch.blue_badge ? pouch.blue_badge : null" :data-yellow-label="pouch.yellow_badge ? pouch.yellow_badge : null">
+                <div class="checkout__size-title font-bold" x-text="pouch.title"></div>
+                <div class="checkout__size-price mt-[-.4rem] font-medium text-xs text-[#333333]" x-text="pouch.quantity"></div>
+                <div class="inline-flex items-center justify-center px-[.6rem] py-[.2rem] rounded-full font-medium h-[1.8rem] text-[#333333] text-xs font-family-poppins font-bold bg-[#E5FFDF] text-[#0D3063] min-w-[11.8rem]">
+                    <div x-text="formatMoney(pouch.price_per_item) + ' / Packet'"></div>
+                </div>
+            </div>
+        </label>
+    </template>
+</div>
+
+{% schema %}
+{
+  "name": "Pouches",
+  "presets": [
+    {
+      "name": "Pouches"
+    }
+  ]
+}
+{% endschema %}

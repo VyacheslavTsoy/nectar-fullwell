@@ -375,6 +375,34 @@
                 }
                 return this.cart.original_total_price - discount;
             },
+
+            async clearAndAdd(items, redirectToCheckout = false) {
+                if (!items.length) return;
+
+                if (this.cart?.items?.length) {
+                    await fetch(window.Shopify.routes.root + 'cart/clear.js', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' }
+                    });
+                }
+              
+                const addResponse = await fetch(window.Shopify.routes.root + 'cart/add.js', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ items })
+                });
+              
+                if (addResponse.ok) {
+                  await this.loadCart();
+                  if (redirectToCheckout) {
+                    window.location.href = '/checkout';
+                  } else {
+                    this.isOpen = true;
+                  }
+                } else {
+                  console.error('Error adding items', await addResponse.json());
+                }
+            },
     
             addItem(items, redirectToCheckout) {
                 let formData = {

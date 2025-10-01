@@ -1,0 +1,37 @@
+<div class="doctor-review flex items-center mt-4 gap-4 p-4 bg-[#ffffff] rounded-[1.2rem] border-[.5rem] border-[#EDF9FF] rounded-[.8rem]">
+    <div class="doctor-review__image flex-shrink-0 overflow-hidden rounded-[.6rem]">
+        {% render 'img', image: review.doctor_image, max_width: 160 %}
+    </div>
+    <div class="doctor-review__content">
+        {% if review.review_title != empty %}
+            <div class="doctor-review__title font-bold text-bold mb-1 flex items-center gap-4">
+                {{ review.review_title }}
+                <div class="doctor-review__rating mt-[-.4rem]">
+                    {% render 'stars', score: 5 %}
+                </div>
+            </div>  
+        {% endif %}
+        {% if review.review_text != empty %}
+            <div class="doctor-review__text mb-1" style="color: #111111; font-weight: 500;">
+                {{ review.review_text | metafield_tag }}
+            </div>
+        {% endif %}
+        {% if review.author_name != empty %}
+            <div class="doctor-review__name text-sm" style="color: #333333;">
+                {{ review.author_name }}
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+{% stylesheet %}
+.doctor-review__image {
+    width: 7.6rem;
+    height: 8.6rem;
+}
+.doctor-review__image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+{% endstylesheet %}

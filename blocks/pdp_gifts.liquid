@@ -1,0 +1,448 @@
+{% assign featuredReviews = product.metafields.custom.featured_reviews.value %}
+{% assign discountsMetaobjects = metaobjects.discounts.values %}
+{% assign bst = block.settings %}
+
+<div class="product" x-data="product">
+    <div class="flex gap-4 md:gap-[3rem] flex-col md:flex-row">
+        <div class="product__gallery flex-shrink-0 md:w-[50%] lg:w-[54rem]">
+            {% render 'product-gallery' %}
+
+            <div class="buttons-group hidden md:flex flex-col md:flex-row justify-center items-center mt-8">
+    
+                <button class="btn btn--aqua" x-data @click="Alpine.store('ingredients').openModal = !Alpine.store('ingredients').openModal">
+                    See Ingredients &amp; Nutrition Facts
+                </button>
+            </div>
+        </div>
+        <div class="product__info md:w-[50%]">
+            {% content_for 'blocks' %}
+
+            <div class="buttons-group flex flex-col md:hidden md:flex-row justify-center items-center mt-8">
+    
+                <button class="btn btn--aqua" x-data @click="Alpine.store('ingredients').openModal = !Alpine.store('ingredients').openModal">
+                    See Ingredients &amp; Nutrition Facts
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% style %}
+    .checkout__flavor {
+        border-radius: 0.6rem;
+        border: 1px solid #ccc;
+    }
+    .checkout__flavor-image   {
+        border-radius: 0.6rem 0 0 0.6rem;
+    }
+
+    .checkout .qty-picker__btn  {
+        width: 2.8rem;
+        height: 2.8rem;
+        border-radius: 50%;
+        background-color: #0D3063;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .qty-picker__input {
+        font-size: 2.6rem;
+        font-weight: 500;
+        color: #111111;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .checkout__size input ,
+    .checkout__frequency input {
+        display: none;
+    }
+
+    .checkout__size {
+        cursor: pointer;
+    }
+
+    .checkout__size:hover .checkout__size-inner,
+    .checkout__size input:checked + .checkout__size-inner {
+        border-color: #0D3063;
+        box-shadow: inset 0 0 0 1px #0D3063;
+        background-color: #E2F0FF99;
+    }
+
+    .checkout__size-inner {
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: .4rem;
+        padding: .9rem 1.2rem .6rem;
+        border-radius: 0.6rem;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .checkout__size-saving {
+        background-color: #21A600;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 1.8rem;
+        padding: 0 1.2rem;
+        border-radius: 1.2rem;
+        font-family: 'Poppins', sans-serif;
+        min-width: 10.6rem;
+        text-align: center;
+    }
+
+    [data-blue-label],
+    [data-yellow-label] {
+        position: relative;
+    }
+
+    [data-blue-label]::before ,
+    [data-yellow-label]::before {
+        content: attr(data-blue-label);
+        position: absolute;
+        top: -0.8rem;
+        left: 50%;
+        text-align: center;
+        background: linear-gradient(90deg, #0D3063 0%, #1A61C9 100%);
+        display: block;
+        transform: translateX(-50%);
+        font-size: 1rem;
+        font-weight: 700;
+        font-family: 'Poppins', sans-serif;
+        color: #fff;
+        border-radius: 0.3rem;
+        padding: 0 1.6rem;
+        line-height: 1.6rem;
+        white-space: nowrap;
+        display: block;
+    }
+
+    [data-yellow-label]::before   {
+        background: #FFE427 !important;
+        color: #0D3063;
+        content: attr(data-yellow-label);
+    }
+
+    .checkout__frequency-item {
+        border-radius: 0.8rem;
+        border: 1px solid #D5D7DA;
+        padding: 1rem 1.4rem;
+        background-color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .checkout__frequency-item:hover,
+    .checkout__frequency-item--active {
+        border-color: #0D3063;
+        background-color: #E2F0FF;
+    }
+
+    .checkout__frequency-title::before {
+        content: '';
+        display: block;
+        width: 1.6rem;
+        height: 1.6rem;
+        background-color: #fff;
+        border: 1px solid #D5D7DA;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+    }
+
+    .checkout__frequency-item--active .checkout__frequency-title::before {
+        box-shadow: inset 0 0 0 3px #0D3063;
+        border-color: #0D3063;
+    }
+
+    .checkout__frequency-features li {
+        background-image: url("data:image/svg+xml,%3Csvg width='21' height='20' viewBox='0 0 21 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_72_5199)'%3E%3Crect x='0.5' width='20' height='20' rx='10' fill='%2375BDFF'/%3E%3Cg clip-path='url(%23clip1_72_5199)'%3E%3Cpath d='M1.15785 5.23144C-1.68864 7.66793 -4.04783 11.1516 -5.80025 14.9236C-5.8471 15.0266 -5.99235 15.0243 -6.03921 14.9236C-7.09581 12.5761 -8.19927 10.8518 -9.44564 9.94981C-9.55575 9.87019 -9.48547 9.69677 -9.35192 9.71318C-7.99778 9.8842 -6.51715 10.7627 -5.91973 11.6647C-4.28211 8.81121 -1.99554 6.691 1.00792 5.01821C1.14614 4.94091 1.27733 5.12834 1.15785 5.23144Z' fill='white'/%3E%3Cpath d='M16.1578 5.23144C13.3114 7.66793 10.9522 11.1516 9.19975 14.9236C9.1529 15.0266 9.00765 15.0243 8.96079 14.9236C7.90419 12.5761 6.80073 10.8518 5.55436 9.94981C5.44425 9.87019 5.51453 9.69677 5.64808 9.71318C7.00222 9.8842 8.48285 10.7627 9.08027 11.6647C10.7179 8.81121 13.0045 6.691 16.0079 5.01821C16.1461 4.94091 16.2773 5.12834 16.1578 5.23144Z' fill='white'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_72_5199'%3E%3Crect x='0.5' width='20' height='20' rx='10' fill='white'/%3E%3C/clipPath%3E%3CclipPath id='clip1_72_5199'%3E%3Crect width='20' height='20' fill='white' transform='translate(0.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+        background-size: 2rem;
+        background-repeat: no-repeat;
+        background-position: left 0;
+        padding-left: 2.6rem;
+        padding-top: .3rem;
+        min-height: 2.4rem;
+        white-space: nowrap;
+    }
+
+    .checkout__cta {
+        border-top: 2px solid #0D3063;
+        background-color: #E4FEE5;
+        padding: 0.6rem 1rem 1.1rem;
+    }
+
+    .checkout__cta-btn {
+        line-height: 5.4rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #fff;
+        background-color: #0D3063;
+        border-radius: 0.6rem;
+        padding: 0 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .checkout__cta-btn:disabled {
+        background-color: #6E6E6E;
+        color: #fff;
+        cursor: not-allowed;
+    }
+
+    .mini-cart__subscription-features ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+    }
+    .checkout__gifts-product-inner {
+        border: 1px dashed var(--color-coolBlack);
+        background-color: #E4FEE5;
+    }
+
+    [data-lock-text] {
+        position: relative;
+    }
+
+    .checkout__gifts-product-locked {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.75);
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 1.2rem;
+        line-height: 1;
+        gap: 0.6rem;
+        font-weight: 600;
+        font-family: var(--font-family-poppins);
+        padding: 0.5rem 0.4rem;
+    }
+{% endstyle %}
+
+{% assign amountInPouch = 30 %}
+
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('product', () => ({
+            minQty: 3,
+            currentProduct: {
+                id: {{ product.id }},
+                handle: '{{ product.handle }}',
+                variants: {{ product.variants | json }},
+                price: {{ product.price }},
+            },
+            price: {
+                compareAtPrice: 0,
+                actualPrice: 0,
+            },
+            currentPouch: null,
+            relatedDiscounts: null,
+            {% if discountsMetaobjects != blank %}
+                discounts: [
+                    {%- for discount in discountsMetaobjects -%}
+                        {
+                            relatedProducts: {%- if discount.related_products and discount.related_products.value -%}{{ discount.related_products.value | map: 'id' | json }}{%- else -%}null{%- endif -%},
+                            oneTimePrices: [
+                                {%- if discount.discounts_thresholds_one_time_purchase and discount.discounts_thresholds_one_time_purchase.value -%}
+                                    {%- for oneTimePrice in discount.discounts_thresholds_one_time_purchase.value -%}
+                                        {% assign priceArray = oneTimePrice | split: '-' %}
+                                        {
+                                            quantity: {%- if priceArray.size > 0 -%}{{ priceArray[0] }}{%- else -%}0{%- endif -%},
+                                            discountAmount: {%- if priceArray.size > 1 -%}{{ priceArray[1] }}{%- else -%}0{%- endif -%},
+                                        }{%- unless forloop.last -%},{%- endunless -%}
+                                    {%- endfor -%}
+                                {% endif %}
+                            ],
+                            subscriptionPrices: [
+                                {%- if discount.discounts_thresholds_subscription_purchase and discount.discounts_thresholds_subscription_purchase.value -%}
+                                    {%- for subscriptionPrice in discount.discounts_thresholds_subscription_purchase.value -%}
+                                        {% assign priceArray = subscriptionPrice | split: '-' %}
+                                        {
+                                            quantity: {%- if priceArray.size > 0 -%}{{ priceArray[0] }}{%- else -%}0{%- endif -%},
+                                            discountAmount: {%- if priceArray.size > 1 -%}{{ priceArray[1] }}{%- else -%}0{%- endif -%}
+                                        }{%- unless forloop.last -%},{%- endunless -%}
+                                    {%- endfor -%}
+                                {%- endif -%}
+                            ]
+                        }{%- unless forloop.last -%},{%- endunless -%}
+                    {%- endfor -%}
+                ],
+            {% endif %}
+            {% if bst.products != blank %}
+            giftsProducts: [
+                {%- for product in bst.products -%}
+                    {
+                        giftMinQty: {{ forloop.index }},
+                        id: {{ product.id }},
+                        title: '{{ product.title }}',
+                        price: {{ product.price }},
+                        image: '{{ product.featured_image | image_url: width: 300 }}',
+                        variant_id: {{ product.first_available_variant.id | default: product.variants[0].id }}
+                    }{%- unless forloop.last -%},{%- endunless -%}
+                {%- endfor -%}
+            ],
+            {% endif %}
+            {% if bst.related_pouches != blank %}
+            pouches: [
+                {%- for pouch in bst.related_pouches -%}
+                    {% assign badge_text = pouch.badge_text | downcase %}
+                    {
+                        minQty: {{ pouch.title | split: ' ' | first }},
+                        relatedPoucheSellingPlan: '{{ pouch.related_subscription_plan_name }}',
+                        title: '{{ pouch.title }}',
+                        quantity: '{{ pouch.quantity }}',
+                        saving_percent_subscription: '{{ pouch.saving_percent_optionally_offer_page }}',
+                        saving_percent_one_time: '{{ pouch.saving_percent_one_time }}',
+                        compare_price_subscription: {{ pouch.crossed_out_price_subscription | default: 0 }},
+                        price_per_item: '',
+                        {%- if badge_text contains 'best' -%}
+                            blue_badge: '{{ pouch.badge_text }}',
+                        {%- endif -%}
+    
+                        {%- if badge_text contains 'most' -%}
+                            yellow_badge: '{{ pouch.badge_text }}',
+                        {% endif %}
+                    } {% unless forloop.last %},{% endunless %}
+                {% endfor %}
+            ],
+            {% endif %}
+            updatePrices() {
+                const relatedSicountAmount = this.relatedDiscounts.find(item => item.quantity == this.minQty)?.discountAmount;
+
+                this.price.compareAtPrice = this.currentPouch?.compare_price_subscription;
+                this.price.actualPrice = (this.currentProduct.price * this.minQty) - relatedSicountAmount;
+
+                this.pouches.forEach(pouch => {
+                    pouch.price_per_item = this.currentProduct.price / (pouch.minQty * {{amountInPouch}});
+                });
+            },
+            updateCurrentPouch(minQty) {
+                this.minQty = minQty ? minQty : this.pouches[1]?.minQty;
+                this.currentPouch = this.pouches.find(pouch => pouch.minQty === this.minQty);
+
+                this.updatePrices();
+            },
+            formatMoney(price) {
+                const newPrice = (price / 100).toFixed(2);
+                return `$${newPrice}`;
+            }, 
+            setupRelatedDiscounts() {
+                const currentProduct = this.currentProduct;
+                const relatedDiscounts = this.discounts.find(discount => discount.relatedProducts.includes(currentProduct.id));
+
+                this.relatedDiscounts = relatedDiscounts?.subscriptionPrices;
+            },
+            init() {
+                this.setupRelatedDiscounts();
+                this.updateCurrentPouch(this.minQty);
+                this.updatePrices();
+                console.log(this.currentProduct, 2222)
+            }
+        }))
+    })
+</script>
+
+{% stylesheet %}
+    #ps__widget_container {
+        display: none !important;
+    }
+
+    .product .swiper-pagination  {
+        padding-top: 1.6rem !important;
+    }
+
+    .product__feature-review-image img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .product__cta-button .btn   {
+        font-size: 2rem;
+    }
+
+    @media (min-width: 768px) {
+        .product__cta-button .btn {
+            font-size: 2.6rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .product__info h1 {
+            font-size: 7.4vw;
+        }
+
+        .product .inline-review svg{
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+    }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Product + Gifts",
+  "blocks": [
+    {
+        "type": "heading",
+    },
+    {
+        "type": "inline-review",
+    },
+    {
+        "type": "text",
+    },
+    {
+        "type": "features-list",
+    },
+    {
+        "type": "_pdp-cta",
+    },
+    {
+        "type": "_pdp-faq",
+    },
+    {
+        "type": "_pdp-gifts",
+    },
+    {
+        "type": "_pdp-pouches",
+    }
+  ],
+  "settings": [
+    {
+        "type": "metaobject_list",
+        "id": "related_pouches",
+        "label": "Related Pouches",
+        "metaobject_type": "pouche"
+    },
+    {
+        "type": "product_list",
+        "id": "products",
+        "label": "Products",
+        "info": "Sort the gift products according to the number of flavors (1,2,3,4)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product + Gifts"
+    }
+  ]
+}
+{% endschema %}
+

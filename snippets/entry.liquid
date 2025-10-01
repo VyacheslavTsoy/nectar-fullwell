@@ -4,7 +4,7 @@
 {% endcomment %}
 {% assign path = entry | replace: '~/', '../../' | replace: '@/', '../' %}
 {% if path == "/frontend/entrypoints/main.scss" or path == "main.scss" %}
-  {{ 'main-BDNGGRiC.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+  {{ 'main-NDtEeV4l.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/frontend/entrypoints/main.theme.js" or path == "main.theme.js" %}
   <script src="{{ 'main.theme-CxxW8cza.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
 {% elsif path == "/frontend/scripts/sections/ts-bundle.js" or path == "../scripts/sections/ts-bundle.js" %}
@@ -44,5 +44,5 @@
 {% elsif path == "/frontend/styles/sections/ts-risks.scss" or path == "../styles/sections/ts-risks.scss" %}
   {{ 'ts-risks-BLsYju0r.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/frontend/styles/sections/ts-timer.scss" or path == "../styles/sections/ts-timer.scss" %}
-  {{ 'ts-timer-DErbupGR.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+  {{ 'ts-timer-BWWrNfYq.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% endif %}
