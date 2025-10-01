@@ -7,83 +7,87 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
-    "sections": {
-      "main": {
-        "type": "main-checkout",
-        "blocks": {
-          "gifts_H7LD9V": {
-            "type": "gifts",
-            "settings": {
-              "title": "Unlock Free Gifts! 🎁",
-              "description": "Add a 4th Pouch, Get an Electric Nectar Frother",
-              "products": [
-                "free-shipping",
-                "energy-sampler",
-                "nectar-bottle",
-                "nectar-frother"
-              ]
-            }
-          },
-          "quantity_GEHxUA": {
-            "type": "quantity",
-            "settings": {
-              "title": "Select Quantity",
-              "related_pouches": [
-                "4-pouches",
-                "3-pouches",
-                "2-pouches",
-                "1-pouch"
-              ]
-            }
-          },
-          "flavors_9jkGB6": {
-            "type": "flavors",
-            "settings": {
-              "title": "Select Flavors"
-            }
-          },
-          "frequency_p7Ei8A": {
-            "type": "frequency",
-            "disabled": true,
-            "settings": {
-              "title": "Select Frequency"
-            }
+{
+  "sections": {
+    "main": {
+      "type": "main-checkout",
+      "blocks": {
+        "gifts_H7LD9V": {
+          "type": "gifts",
+          "settings": {
+            "title": "Unlock Free Gifts! 🎁",
+            "description": "Add a 4th Pouch, Get an Electric Nectar Frother",
+            "products": [
+              "free-shipping",
+              "energy-sampler",
+              "nectar-bottle",
+              "nectar-frother"
+            ]
           }
         },
-        "block_order": [
-          "gifts_H7LD9V",
-          "quantity_GEHxUA",
-          "flavors_9jkGB6",
-          "frequency_p7Ei8A"
-        ],
-        "settings": {
-          "cart_flow": "go-to-checkout",
-          "products": [
-            "energy-sampler",
-            "essential-daily-calm",
-            "essential-daily-calm-gift",
-            "essential-daily-energy",
-            "essential-daily-hydration-4-gift",
-            "essential-daily-hydration-1",
-            "essential-daily-energy-2",
-            "essential-daily-hydration-2",
-            "essential-daily-hydration-new",
-            "nectar-frother",
-            "tropical-variety-pack"
-          ],
-          "label_one_time": "One-time Purchase",
-          "label_subscription": "Subscribe and Save 50%",
-          "label_delivery": "Delivery Every",
-          "label_subscription_description": "<ul><li><em><strong>Free Expedited Shipping*</strong></em></li><li><em><strong>Free $35.99 Mystery Gift</strong></em> on Order #3</li><li>Easily Pause, Cancel or Adjust Flavors <em><strong>Any Time</strong></em></li></ul>",
-          "cta_label": "Go to checkout",
-          "gurantee_text": "<p>Less than 1% of customers claim our <br/><strong>90 Day Money Back Guarantee*</strong></p>",
-          "subscription_details": "<p>Refill ships in <em>3</em> months. Change or cancel easily. Free shipping & Gifts with 1st purchase.</p>"
+        "quantity_GEHxUA": {
+          "type": "quantity",
+          "settings": {
+            "title": "Select Quantity",
+            "related_pouches": [
+              "4-pouches",
+              "3-pouches",
+              "2-pouches",
+              "1-pouch"
+            ]
+          }
+        },
+        "flavors_9jkGB6": {
+          "type": "flavors",
+          "settings": {
+            "title": "Select Flavors",
+            "additional_description": "",
+            "additional_selling_label": "",
+            "guarantee_badge_text": ""
+          }
+        },
+        "frequency_p7Ei8A": {
+          "type": "frequency",
+          "disabled": true,
+          "settings": {
+            "title": "Select Frequency"
+          }
         }
+      },
+      "block_order": [
+        "gifts_H7LD9V",
+        "quantity_GEHxUA",
+        "flavors_9jkGB6",
+        "frequency_p7Ei8A"
+      ],
+      "settings": {
+        "use_separated_quantity_flow": false,
+        "cart_flow": "go-to-checkout",
+        "products": [
+          "energy-sampler",
+          "essential-daily-calm",
+          "essential-daily-calm-gift",
+          "essential-daily-energy",
+          "essential-daily-hydration-4-gift",
+          "essential-daily-hydration-1",
+          "essential-daily-energy-2",
+          "essential-daily-hydration-2",
+          "essential-daily-hydration-new",
+          "nectar-frother",
+          "tropical-variety-pack",
+          "essential-daily-hydration-copy"
+        ],
+        "label_one_time": "One-time Purchase",
+        "label_subscription": "Subscribe and Save 50%",
+        "label_delivery": "Delivery Every",
+        "label_subscription_description": "<ul><li><em><strong>Free Expedited Shipping*</strong></em></li><li><em><strong>Free $35.99 Mystery Gift</strong></em> on Order #3</li><li>Easily Pause, Cancel or Adjust Flavors <em><strong>Any Time</strong></em></li></ul>",
+        "cta_label": "Go to checkout",
+        "gurantee_text": "<p>Less than 1% of customers claim our <br/><strong>90 Day Money Back Guarantee*</strong></p>",
+        "subscription_details": "<p>Refill ships in <em>3</em> months. Change or cancel easily. Free shipping & Gifts with 1st purchase.</p>"
       }
-    },
-    "order": [
-      "main"
-    ]
-  }
-  
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
