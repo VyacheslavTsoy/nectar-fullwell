@@ -208,24 +208,18 @@
             },
 
             countAmountOfChoosedFlavors() {
-                const windowUrl = new URLSearchParams(window.location.search);
-                const minQtyFromUrl = windowUrl.get('minQty') ? +windowUrl.get('minQty') : null;
-
                 this.currentQty = this.currentProduct.variants.reduce((acc, variant) => acc + variant.quantity, 0);
                 let minQty = this.minQty;
 
-                if (this.currentQty > this.maxQty) {
-                    minQty = this.maxQty;
-                } else{
-                    minQty = this.currentQty;
-                }
-                
-                this.updateCurrentPouch(minQty);
-
                 if (this.currentQty > this.minQty) {
-                    
+                    if (this.currentQty > this.maxQty) {
+                        minQty = this.maxQty;
+                    } else{
+                        minQty = this.currentQty;
+                    }  
+                    this.updateCurrentPouch(minQty);
                 } 
-
+                
                 this.setupCurrentDiscount();
             },
 
