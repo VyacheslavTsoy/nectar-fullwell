@@ -16,7 +16,7 @@
       "essential-daily-hydration-1",
       "essential-daily-energy-2",
       "essential-daily-energy",
-      "essential-daily-calm-gift",
+      "essential-daily-calm-gift-v2",
       "essential-daily-calm",
       "energy-sampler"
     ],
@@ -110,7 +110,7 @@
           "products_list": [
             "essential-daily-hydration-2",
             "essential-daily-energy-2",
-            "essential-daily-calm-gift"
+            "essential-daily-calm-gift-v2"
           ],
           "reviews": [],
           "guarantee_text": "<p>Try Nectar with no risk! If you’re not 100% satisfied, you can trust in our 90-day money back gaurantee.*</p>",
@@ -166,7 +166,7 @@
           "additional_text": "1,000,000+ Happy Customers",
           "upsell_products": [
             "essential-daily-hydration-1",
-            "essential-daily-calm-gift"
+            "essential-daily-calm-gift-v2"
           ],
           "free_shipping_amount": 4599,
           "shipping_success_message": "<p>Congrats! You've unlocked FREE SHIPPING!</p>"
