@@ -1,33 +1,215 @@
 {% assign featuredReviews = product.metafields.custom.featured_reviews.value %}
 {% assign discountsMetaobjects = metaobjects.discounts.values %}
 {% assign bst = block.settings %}
+{% assign product = bst.related_product %}
+{% assign productFaq = product.metafields.custom.product_section_faq.value %}
 
-<div class="product" x-data="product">
-    <div class="flex gap-4 md:gap-[3rem] flex-col md:flex-row">
-        <div class="product__gallery flex-shrink-0 md:w-[50%] lg:w-[54rem]">
-            {% render 'product-gallery' %}
+<style>
+    #announcement-bar,
+    .shopify-section-group-header-group,
+    .shopify-section-group-footer-group {
+        display: none !important;
+    }
 
-            <div class="buttons-group hidden md:flex flex-col md:flex-row justify-center items-center mt-8">
-    
-                <button class="btn btn--aqua" x-data @click="Alpine.store('ingredients').openModal = !Alpine.store('ingredients').openModal">
-                    See Ingredients &amp; Nutrition Facts
-                </button>
+    .ingredients__modal-cta {
+        display: none !important;
+    }
+</style>
+
+<div x-data="product">
+    <div class="product">
+        <div class="flex items-start gap-4 md:gap-[1.6rem] flex-col md:flex-row">
+            <div class="product__gallery flex-shrink-0 w-full md:w-[50%] lg:w-[56rem] md:sticky md:top-[2rem]">
+
+                <div class="text-center py-3 block md:hidden">
+                    <h2 class="font-family-poppins text-[2.2rem] leading-[1.2] font-bold">Save up to 60% + 4 Free Gifts</h2>
+                
+
+                    <div class="text-[1.8rem] leading-[1.2] mt-1">with today’s Limited-Time TV Offer</div>
+                </div>
+
+                <div class="mx-[-2rem] md:mx-0">
+                    {% render 'product-gallery-tv', auto_on_mobile: true, product: product %}
+                </div>
+
+                {% if bst.related_doctor_review != blank %}
+                    <div class="hidden md:block">
+                        {% render 'doctor-review', review: bst.related_doctor_review %}
+                    </div>
+                {% endif %}
+
+                <div class="buttons-group hidden md:flex flex-col md:flex-row justify-center items-center mt-8">
+        
+                    <button class="btn btn--aqua" @click="Alpine.store('ingredients').openModal = !Alpine.store('ingredients').openModal">
+                        See Ingredients &amp; Nutrition Facts
+                    </button>
+                </div>
             </div>
-        </div>
-        <div class="product__info md:w-[50%]">
-            {% content_for 'blocks' %}
+            <div class="product__info md:w-[40rem]">
+                {% content_for 'blocks' %}
 
-            <div class="buttons-group flex flex-col md:hidden md:flex-row justify-center items-center mt-8">
-    
-                <button class="btn btn--aqua" x-data @click="Alpine.store('ingredients').openModal = !Alpine.store('ingredients').openModal">
-                    See Ingredients &amp; Nutrition Facts
-                </button>
+                <div class="product__faq mt-4" style="border-top: 0.1rem solid #E9EAEB;" x-data="{ open: false, activeItem: null }" :class="{ 'product__faq--open': open }">
+                    {% for i in (1..10) %}
+                        {% assign q_key = 'question_' | append: i %}
+                        {% assign a_key = 'answer_' | append: i %}
+                        {% assign open_by_default = false %}
+                    
+                        {% if productFaq[q_key] %}
+                            {% assign question = productFaq[q_key] %}
+                            {% assign answer = productFaq[a_key] | metafield_tag %}
+                            {% render 'accordion-item', question: question, answer: answer, open_by_default: open_by_default %}
+                        {% endif %}
+                    {% endfor %}
+
+                    <div class="product__faq-button hidden md:block mt-6 text-[#181D27] text-center font-medium">
+                        <button class="underline underline-offset-4" @click="open = !open" x-text="open ? 'See Less FAQs' : 'See More FAQs'"></button>
+                    </div>
+                </div>
+
+                <div class="buttons-group flex flex-col md:hidden md:flex-row justify-center items-center mt-8">
+        
+                    <button class="btn btn--aqua" @click="Alpine.store('ingredients').openModal = !Alpine.store('ingredients').openModal">
+                        See Ingredients &amp; Nutrition Facts
+                    </button>
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="sticky-cta pt-3 pb-5 px-8 bg-[#F5FFF6] border-t-2 border-[#0D3063] fixed bottom-0 z-[80] w-full left-0">
+        <div class="sticky-cta__inner w-full max-w-[38.4rem] mx-auto">
+            
+                <div class="sticky-cta__labels flex items-center gap-2 justify-between mb-1 text-xs md:text-sm flex">
+                
+                    <div class="sticky-cta__label-icon">
+                        🎉 You’re Saving <b x-text="currentPouch?.saving_percent.replace('Save ', '') + ' OFF'"></b>
+                    </div>
+                    <div class="product__cta-shipping-label flex items-center gap-2">
+                        <svg width="22" height="20" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4.09277H0V20.0929H24V4.09277Z" fill="white"></path>
+                            <path d="M24 6.09253H0V8.09236H24V6.09253Z" fill="#D80027"></path>
+                            <path d="M24 10.0928H0V12.0926H24V10.0928Z" fill="#D80027"></path>
+                            <path d="M24 14.0923H0V16.0921H24V14.0923Z" fill="#D80027"></path>
+                            <path d="M24 18.0925H0V20.0924H24V18.0925Z" fill="#D80027"></path>
+                            <path d="M12 4.09277H0V12.7083H12V4.09277Z" fill="#2E52B2"></path>
+                            <path d="M4.67923 7.62207L4.48596 8.21663H3.86084L4.36667 8.5839L4.1734 9.17841L4.67923 8.81115L5.18473 9.17841L4.99151 8.5839L5.49734 8.21663H4.87217L4.67923 7.62207Z" fill="white"></path>
+                            <path d="M4.87217 10.3621L4.67923 9.76758L4.48596 10.3621H3.86084L4.36667 10.7294L4.1734 11.3239L4.67923 10.9566L5.18473 11.3239L4.99151 10.7294L5.49734 10.3621H4.87217Z" fill="white"></path>
+                            <path d="M2.23012 10.3621L2.03714 9.76758L1.84388 10.3621H1.21875L1.72458 10.7294L1.53131 11.3239L2.03714 10.9566L2.54269 11.3239L2.34947 10.7294L2.8552 10.3621H2.23012Z" fill="white"></path>
+                            <path d="M2.03714 7.62207L1.84388 8.21663H1.21875L1.72458 8.5839L1.53131 9.17841L2.03714 8.81115L2.54269 9.17841L2.34947 8.5839L2.8552 8.21663H2.23012L2.03714 7.62207Z" fill="white"></path>
+                            <path d="M4.67923 5.47632L4.48596 6.07093H3.86084L4.36667 6.43824L4.1734 7.03276L4.67923 6.66544L5.18473 7.03276L4.99151 6.43824L5.49734 6.07093H4.87217L4.67923 5.47632Z" fill="white"></path>
+                            <path d="M2.03714 5.47632L1.84388 6.07093H1.21875L1.72458 6.43824L1.53131 7.03276L2.03714 6.66544L2.54269 7.03276L2.34947 6.43824L2.8552 6.07093H2.23012L2.03714 5.47632Z" fill="white"></path>
+                            <path d="M7.32127 7.62207L7.12805 8.21663H6.50293L7.00871 8.5839L6.81554 9.17841L7.32127 8.81115L7.82687 9.17841L7.6336 8.5839L8.13943 8.21663H7.5143L7.32127 7.62207Z" fill="white"></path>
+                            <path d="M7.5143 10.3621L7.32127 9.76758L7.12805 10.3621H6.50293L7.00871 10.7294L6.81554 11.3239L7.32127 10.9566L7.82687 11.3239L7.6336 10.7294L8.13943 10.3621H7.5143Z" fill="white"></path>
+                            <path d="M10.1559 10.3621L9.96288 9.76758L9.76961 10.3621H9.14453L9.65027 10.7294L9.45705 11.3239L9.96288 10.9566L10.4684 11.3239L10.2752 10.7294L10.781 10.3621H10.1559Z" fill="white"></path>
+                            <path d="M9.96288 7.62207L9.76961 8.21663H9.14453L9.65027 8.5839L9.45705 9.17841L9.96288 8.81115L10.4684 9.17841L10.2752 8.5839L10.781 8.21663H10.1559L9.96288 7.62207Z" fill="white"></path>
+                            <path d="M7.32127 5.47632L7.12805 6.07093H6.50293L7.00871 6.43824L6.81554 7.03276L7.32127 6.66544L7.82687 7.03276L7.6336 6.43824L8.13943 6.07093H7.5143L7.32127 5.47632Z" fill="white"></path>
+                            <path d="M9.96288 5.47632L9.76961 6.07093H9.14453L9.65027 6.43824L9.45705 7.03276L9.96288 6.66544L10.4684 7.03276L10.2752 6.43824L10.781 6.07093H10.1559L9.96288 5.47632Z" fill="white"></path>
+                        </svg>
+                
+                        <p>Fast <strong>Tracked USPS</strong> Shipping</p>
+                    </div>
+                </div>
+            
+                <div class="sticky-cta__button">
+                    <button class="flex items-center justify-center gap-4 text-[1.6rem] md:text-[2rem] font-bold bg-[#21A600] border-[.2rem] h-[6.6rem] border-[#037C2B] hover:bg-[#037C2B] rounded-[1rem] text-white w-full checkout__cta-btn" id="scroll-to-top">
+                        Select Your Flavors Now
+
+                        <svg width="28px" height="28px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15 11L12 8M12 8L9 11M12 8V16M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    </button>
+                </div>
+            
+        </div>
+    </div>
 </div>
+{% style %}
+    .sticky-cta {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .sticky-cta--visible {
+        opacity: 1;
+        visibility: visible;
+    }
+{% endstyle %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const stickyCta = document.querySelector('.sticky-cta');
+        const addToCartBtn = document.getElementById('add-to-cart');
+        const scrollToTopBtn = document.getElementById('scroll-to-top');
+        const targetElement = document.querySelector('.checkout__sizes');
+        const productSection = document.querySelector('.product');
+        const ingredientsModalBtn = document.querySelectorAll('[data-ingredients-modal-btn]');
+
+        ingredientsModalBtn.forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelector('.ts-ingredients__popup').classList.toggle('open');
+            });
+        });
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: (targetElement.offsetTop - 20),
+                behavior: 'smooth'
+            });
+        });
+
+        if (!stickyCta || !addToCartBtn || !productSection) return;
+
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function checkScroll() {
+            const productSectionRect = productSection.getBoundingClientRect();
+            const productSectionTop = productSectionRect.top + window.scrollY;
+            const productSectionHeight = productSection.offsetHeight;
+            const productSectionBottom = productSectionTop + productSectionHeight;
+
+            if (window.scrollY > productSectionBottom && !isElementInViewport(addToCartBtn)) {
+                stickyCta.classList.add('sticky-cta--visible');
+            } else {
+                stickyCta.classList.remove('sticky-cta--visible');
+            }
+        }
+
+        checkScroll();
+
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('resize', checkScroll);
+    });
+</script>
 
 {% style %}
+    .product__faq:not(.product__faq--open) .accordion-item:nth-child(n+6) {
+        display: none;
+    }
+
+    .product__faq:not(.product__faq--open) .accordion-item:nth-child(n+6) {
+        display: none;
+    }
+
+    @media (min-width: 768px) {   
+        .accordion-item__summary {
+            font-size: 1.8rem;
+        }
+    }
+
+    .accordion-item__content {
+        line-height: 1.5;
+        font-size: 1.6rem;
+        padding-top: 0.6rem;
+        color: #000;
+    }
+
     .checkout__flavor {
         border-radius: 0.6rem;
         border: 1px solid #ccc;
@@ -71,14 +253,12 @@
     }
 
     .checkout__size-inner {
-        font-family: 'Poppins', sans-serif;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: .4rem;
-        padding: .9rem 1.2rem .6rem;
-        border-radius: 0.6rem;
+        padding: 1.4rem 0.6rem .6rem;
         border: 1px solid #ccc;
         background-color: #fff;
         text-align: center;
@@ -107,19 +287,19 @@
     [data-yellow-label]::before {
         content: attr(data-blue-label);
         position: absolute;
-        top: -0.8rem;
-        left: 50%;
+        top: -1rem;
+        left: 0.8rem;
+        right: 0.8rem;
         text-align: center;
         background: linear-gradient(90deg, #0D3063 0%, #1A61C9 100%);
         display: block;
-        transform: translateX(-50%);
-        font-size: 1rem;
-        font-weight: 700;
+        font-size: 1.2rem;
+        font-weight: 600;
         font-family: 'Poppins', sans-serif;
         color: #fff;
         border-radius: 0.3rem;
-        padding: 0 1.6rem;
-        line-height: 1.6rem;
+        padding: 0 0.6rem;
+        line-height: 2rem;
         white-space: nowrap;
         display: block;
     }
@@ -178,23 +358,9 @@
         padding: 0.6rem 1rem 1.1rem;
     }
 
-    .checkout__cta-btn {
-        line-height: 5.4rem;
-        font-size: 1.6rem;
-        font-weight: 700;
-        color: #fff;
-        background-color: #0D3063;
-        border-radius: 0.6rem;
-        padding: 0 1.6rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        width: 100%;
-    }
-
     .checkout__cta-btn:disabled {
         background-color: #6E6E6E;
+        border-color:rgb(37, 37, 37);
         color: #fff;
         cursor: not-allowed;
     }
@@ -233,6 +399,57 @@
         font-family: var(--font-family-poppins);
         padding: 0.5rem 0.4rem;
     }
+
+    .thumbnail-gallery .swiper-slide {
+        width: 4.6rem;
+        height: 4.6rem;
+    }
+
+    @media (min-width: 1024px) {
+        .thumbnail-gallery {
+            height: 50rem;
+        }
+    }
+
+    .thumbnail-gallery__item--active {
+        border-width: 0.3rem;
+        overflow: hidden;
+        border-color: #0D3063 !important;
+    }
+
+    .thumbnail-gallery__item   {
+        border-radius: 0.6rem;
+    }
+
+    @media (max-width: 768px) {
+        .thumbnail-gallery {
+            margin-left: 1rem;
+            margin-right: 1rem;
+            justify-content: center;
+        }
+
+        .thumbnail-gallery .swiper-wrapper {
+            justify-content: center;
+        }
+
+        .thumbnail-gallery .swiper-slide {
+            width: 3.3rem;
+            height: 3.3rem;
+        }
+
+        .product__info .block-heading,
+        .product__info .block-text {
+            display: none;
+        }
+
+        .inline-review  {
+            display: none;
+        }
+
+        .ts-timer__title   {
+            font-size: 13px;
+        }
+    }
 {% endstyle %}
 
 {% assign amountInPouch = 30 %}
@@ -240,11 +457,26 @@
 <script>
     document.addEventListener('alpine:init', () => {
         Alpine.data('product', () => ({
-            minQty: 3,
+            minQty: 2,
+            maxQty: 0,
+            sellingPlan: null,
+            currentQty: 0,
+            currentTotal: 0,
             currentProduct: {
                 id: {{ product.id }},
                 handle: '{{ product.handle }}',
-                variants: {{ product.variants | json }},
+                variants: [
+                    {%- for variant in product.variants -%}
+                        {
+                            id: {{ variant.id }},
+                            title: '{{ variant.title }}',
+                            description: '{{ variant.metafields.custom.variant_description }}',
+                            image: '{{ variant.metafields.custom.variant_image | image_url: width: 120 | default: variant.image | image_url: width: 120 }}',
+                            price: {{ variant.price }},
+                            quantity: 0,
+                        }{%- unless forloop.last -%},{%- endunless -%}
+                    {%- endfor -%}
+                ],
                 price: {{ product.price }},
             },
             price: {
@@ -298,64 +530,137 @@
                 {%- endfor -%}
             ],
             {% endif %}
-            {% if bst.related_pouches != blank %}
             pouches: [
-                {%- for pouch in bst.related_pouches -%}
-                    {% assign badge_text = pouch.badge_text | downcase %}
-                    {
-                        minQty: {{ pouch.title | split: ' ' | first }},
-                        relatedPoucheSellingPlan: '{{ pouch.related_subscription_plan_name }}',
-                        title: '{{ pouch.title }}',
-                        quantity: '{{ pouch.quantity }}',
-                        saving_percent_subscription: '{{ pouch.saving_percent_optionally_offer_page }}',
-                        saving_percent_one_time: '{{ pouch.saving_percent_one_time }}',
-                        compare_price_subscription: {{ pouch.crossed_out_price_subscription | default: 0 }},
-                        price_per_item: '',
-                        {%- if badge_text contains 'best' -%}
-                            blue_badge: '{{ pouch.badge_text }}',
-                        {%- endif -%}
-    
-                        {%- if badge_text contains 'most' -%}
-                            yellow_badge: '{{ pouch.badge_text }}',
-                        {% endif %}
-                    } {% unless forloop.last %},{% endunless %}
-                {% endfor %}
+                {
+                    minQty: 3,
+                    title: '3 Bags',
+                    price_per_packet: 2495,
+                    saving_percent: 'Save 60%',
+                    blue_badge: 'Best Value',
+                    price: 7485,
+                    compare_at_price: 19470,
+                    compare_price_per_packet: 6490,
+                    discount_amount: 4190,
+                    sellingPlan: 1657176123
+                },
+                {
+                    minQty: 2,
+                    title: '2 Bags',
+                    price_per_packet: 2795,
+                    saving_percent: 'Save 50%',
+                    yellow_badge: 'Most Popular',
+                    price: 5590,
+                    compare_at_price: 15375,
+                    compare_price_per_packet: 7687.5,
+                    discount_amount: 3200,
+                    sellingPlan: 1657143355
+                },
+                {
+                    minQty: 1,
+                    title: '1 Bag',
+                    price_per_packet: 3495,
+                    saving_percent: 'Save 34%',
+                    price: 3495,
+                    compare_at_price: 10680,
+                    compare_price_per_packet: 10680,
+                    discount_amount: 900,
+                    sellingPlan: 1657110587
+                }
             ],
-            {% endif %}
-            updatePrices() {
-                const relatedSicountAmount = this.relatedDiscounts.find(item => item.quantity == this.minQty)?.discountAmount;
-
-                this.price.compareAtPrice = this.currentPouch?.compare_price_subscription;
-                this.price.actualPrice = (this.currentProduct.price * this.minQty) - relatedSicountAmount;
-
-                this.pouches.forEach(pouch => {
-                    pouch.price_per_item = this.currentProduct.price / (pouch.minQty * {{amountInPouch}});
+            resetQty() {
+                this.currentProduct.variants.forEach(v => {
+                    v.quantity = 0;
                 });
-            },
-            updateCurrentPouch(minQty) {
-                this.minQty = minQty ? minQty : this.pouches[1]?.minQty;
-                this.currentPouch = this.pouches.find(pouch => pouch.minQty === this.minQty);
+                this.currentTotal = 0;
+                this.currentQty = 0;
 
-                this.updatePrices();
+                this.recalculateTotal();
+            },
+            recalculateTotal() {
+                let total = 0;
+                let qty = 0;
+
+                this.currentProduct.variants.forEach(v => {
+                    total += v.price * v.quantity;
+                    qty += v.quantity;
+                });
+
+                this.currentTotal = total;
+                this.currentQty = qty;
+
+                if (this.currentQty > this.minQty) {
+                    if (this.pouches.find(pouch => pouch.minQty == this.currentQty)) {
+                        this.minQty = this.currentQty;
+                    } else {
+                        this.minQty = this.pouches.reduce((max, pouch) => Math.max(max, pouch.minQty), 0);
+                    }
+                }
+            },
+            updateCurrentPouch() {
+                if (this.currentQty > this.minQty) {
+                    this.resetQty();
+                }
+
+                this.minQty = this.minQty || this.pouches[0]?.minQty;
+                this.currentPouch = this.pouches.find(pouch => pouch.minQty == this.minQty) || this.pouches[0];
+                this.sellingPlan = this.currentPouch?.sellingPlan;
+
+                this.maxQty = this.pouches.reduce((max, pouch) => Math.max(max, pouch.minQty), 0);
             },
             formatMoney(price) {
                 const newPrice = (price / 100).toFixed(2);
                 return `$${newPrice}`;
-            }, 
-            setupRelatedDiscounts() {
-                const currentProduct = this.currentProduct;
-                const relatedDiscounts = this.discounts.find(discount => discount.relatedProducts.includes(currentProduct.id));
+            },
+            addToCart() {
+                const itemsForCart = [];
 
-                this.relatedDiscounts = relatedDiscounts?.subscriptionPrices;
+                this.currentProduct.variants.forEach(v => {
+                    if (v.quantity > 0) {
+                        itemsForCart.push({
+                            id: v.id,
+                            quantity: v.quantity,
+                            selling_plan: this.sellingPlan
+                        });
+                    }
+                });
+
+                if (this.giftsProducts) {
+                    this.giftsProducts.forEach(product => {
+                        const ifItemInCart = Alpine.store('miniCart').cart.items.some(item => item.id === product.variant_id);
+                        if (!ifItemInCart) {
+                            itemsForCart.push({
+                                id: product.variant_id,
+                                quantity: 1
+                            });
+                        }
+                    });
+                }
+
+                if (itemsForCart.length > 0) {
+                    Alpine.store('miniCart').clearAndAdd(itemsForCart, true);
+                }
             },
             init() {
-                this.setupRelatedDiscounts();
-                this.updateCurrentPouch(this.minQty);
-                this.updatePrices();
-                console.log(this.currentProduct, 2222)
+                this.updateCurrentPouch();
+
+                this.$watch('minQty', () => {
+                    this.updateCurrentPouch();
+                });
+
             }
         }))
     })
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.2/lottie.min.js"></script>
+<script>
+  lottie.loadAnimation({
+    container: document.getElementById('lottie'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://cdn.shopify.com/s/files/1/0309/2257/1835/files/cZmto8MLwK.json?v=1759358382'
+  });
 </script>
 
 {% stylesheet %}
@@ -397,7 +702,7 @@
 
 {% schema %}
 {
-  "name": "Product + Gifts",
+  "name": "Product Gifts",
   "blocks": [
     {
         "type": "heading",
@@ -412,19 +717,18 @@
         "type": "features-list",
     },
     {
-        "type": "_pdp-cta",
-    },
-    {
         "type": "_pdp-faq",
     },
     {
-        "type": "_pdp-gifts",
-    },
-    {
-        "type": "_pdp-pouches",
+        "type": "_pdp-onestep-cta",
     }
   ],
   "settings": [
+    {
+        "type": "product",
+        "id": "related_product",
+        "label": "Related Product"
+    },
     {
         "type": "metaobject_list",
         "id": "related_pouches",
@@ -436,13 +740,20 @@
         "id": "products",
         "label": "Products",
         "info": "Sort the gift products according to the number of flavors (1,2,3,4)"
+    },
+    {
+        "type": "metaobject",
+        "id": "related_doctor_review",
+        "label": "Related Doctor Review",
+        "metaobject_type": "doctor_review"
     }
   ],
   "presets": [
     {
-      "name": "Product + Gifts"
+      "name": "Product Gifts"
     }
   ]
 }
 {% endschema %}
+
 
