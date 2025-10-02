@@ -139,7 +139,6 @@
       "block_order": [
         "pdp_3PWPGC"
       ],
-      "disabled": true,
       "name": "Product Section",
       "settings": {
         "desktop_padding_top": 50,
@@ -238,6 +237,7 @@
       "block_order": [
         "pdp_gifts_onestep_nUNMcE"
       ],
+      "disabled": true,
       "name": "Product Section",
       "settings": {
         "desktop_padding_top": 50,
