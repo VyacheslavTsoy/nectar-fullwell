@@ -150,105 +150,6 @@
         "mobile_gap_between_blocks": 10
       }
     },
-    "blank_section_jPUenJ": {
-      "type": "blank-section",
-      "blocks": {
-        "pdp_gifts_onestep_nUNMcE": {
-          "type": "pdp_gifts-onestep",
-          "name": "Product + Gifts Onestep",
-          "settings": {
-            "related_product": "essential-daily-hydration-copy",
-            "related_pouches": [
-              "3-bags",
-              "2-bags",
-              "1-bag"
-            ],
-            "products": [
-              "free-shipping",
-              "energy-sampler",
-              "nectar-bottle",
-              "nectar-frother"
-            ],
-            "related_doctor_review": "experience-what-proper-hydration-actually-feels-like"
-          },
-          "blocks": {
-            "inline_review_rA66fq": {
-              "type": "inline-review",
-              "name": "Inline Review",
-              "settings": {
-                "title": "<p>Excellent <strong>4.8</strong> | 12,000+ Trusted Reviews</p>"
-              },
-              "blocks": {}
-            },
-            "heading_VUagnd": {
-              "type": "heading",
-              "name": "Heading",
-              "settings": {
-                "title": "<p>Save up to 60% + 4 Free Gifts</p>",
-                "text_color": "#123456",
-                "text_alignment": "left",
-                "heading_size": "xl",
-                "font_weight": "bold",
-                "font_family": "values-sans",
-                "use_mobile_settings": true,
-                "text_alignment_mobile": "left",
-                "heading_size_mobile": "lg",
-                "font_weight_mobile": "bold"
-              },
-              "blocks": {}
-            },
-            "text_QtFxw9": {
-              "type": "text",
-              "name": "Text",
-              "settings": {
-                "title": "<p>With Today’s Limited-Time Offer</p>",
-                "text_alignment": "left",
-                "font_family": "values-sans",
-                "font_weight": "normal",
-                "text_color": "#0d3063",
-                "font_size": 20,
-                "font_size_mobile": 18,
-                "text_alignment_mobile": "left"
-              },
-              "blocks": {}
-            },
-            "pdp_onestep_cta_Ret6rT": {
-              "type": "_pdp-onestep-cta",
-              "name": "Gift Onestep Flow",
-              "settings": {
-                "related_pouches": [
-                  "1-bag",
-                  "2-bags",
-                  "3-bags"
-                ],
-                "gifts_title": "$75.00 of Gifts With Your First Order!"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "inline_review_rA66fq",
-            "heading_VUagnd",
-            "text_QtFxw9",
-            "pdp_onestep_cta_Ret6rT"
-          ]
-        }
-      },
-      "block_order": [
-        "pdp_gifts_onestep_nUNMcE"
-      ],
-      "disabled": true,
-      "name": "Product Section",
-      "settings": {
-        "desktop_padding_top": 50,
-        "desktop_gap_between_blocks": 20,
-        "bg_color": "#ffffff",
-        "desktop_max_width": 1140,
-        "hide_on_mobile": false,
-        "mobile_padding_top": 0,
-        "mobile_gap_between_blocks": 10
-      }
-    },
     "blank_section_aWFeiL": {
       "type": "blank-section",
       "blocks": {
@@ -1551,7 +1452,6 @@
   "order": [
     "announcement_bar_xyNgJw",
     "blank_section_rNAFgq",
-    "blank_section_jPUenJ",
     "blank_section_aWFeiL",
     "blank_section_LcRX3d",
     "blank_section_t7rBTB",
