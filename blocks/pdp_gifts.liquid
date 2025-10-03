@@ -636,9 +636,12 @@
                     });
                 }
 
-                if (Array.isArray(itemsForCart) && itemsForCart.length > 0) {
+                Alpine.store('miniCart').clearAndAdd(itemsForCart, true);
+
+                {% comment %} if (Array.isArray(itemsForCart)) {
+                    
                     Alpine.store('miniCart').clearAndAdd(itemsForCart, true);
-                }
+                } {% endcomment %}
             },
             init() {
                 this.updateCurrentPouch();
