@@ -641,7 +641,7 @@
 
                 console.log(itemsForCart, 333);
 
-                if (Array.isArray(itemsForCart) && itemsForCart.length > 0) {
+                if (Array.isArray(itemsForCart)) {
                     Alpine.store('miniCart').clearAndAdd(itemsForCart, true);
                 }
             },
