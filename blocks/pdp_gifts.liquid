@@ -636,7 +636,7 @@
                     });
                 }
 
-                if (itemsForCart.length > 0) {
+                if (Array.isArray(itemsForCart) && itemsForCart.length > 0) {
                     Alpine.store('miniCart').clearAndAdd(itemsForCart, true);
                 }
             },
