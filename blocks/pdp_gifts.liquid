@@ -621,8 +621,6 @@
                             quantity: v.quantity,
                             selling_plan: this.sellingPlan
                         });
-
-                        console.log(1);
                     }
                 });
 
@@ -635,13 +633,10 @@
                                 quantity: 1
                             });
                         }
-                        console.log(2);
                     });
                 }
 
-                console.log(itemsForCart, 333);
-
-                if (Array.isArray(itemsForCart)) {
+                if (Array.isArray(itemsForCart) && itemsForCart.length > 0) {
                     Alpine.store('miniCart').clearAndAdd(itemsForCart, true);
                 }
             },
