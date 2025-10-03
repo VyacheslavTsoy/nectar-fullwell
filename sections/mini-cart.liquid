@@ -309,6 +309,7 @@
             },
 
             clearCart() {
+                console.log(321);
                 fetch(window.Shopify.routes.root + 'cart/clear.js', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' }
