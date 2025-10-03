@@ -378,18 +378,16 @@
             },
 
             async clearAndAdd(items, redirectToCheckout = false) {
-                console.log(1);
                 if (!items.length) return;
                 
-                console.log(2);
                 if (this.cart?.items?.length) {
                     await fetch(window.Shopify.routes.root + 'cart/clear.js', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' }
                     });
-
-                    console.log(3);
                 }
+
+                console.log(items);
               
                 const addResponse = await fetch(window.Shopify.routes.root + 'cart/add.js', {
                   method: 'POST',
