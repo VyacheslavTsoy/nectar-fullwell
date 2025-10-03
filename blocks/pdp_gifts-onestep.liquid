@@ -621,13 +621,10 @@
 
                 if (this.giftsProducts) {
                     this.giftsProducts.forEach(product => {
-                        const ifItemInCart = Alpine.store('miniCart').cart.items.some(item => item.id === product.variant_id);
-                        if (!ifItemInCart) {
-                            itemsForCart.push({
-                                id: product.variant_id,
-                                quantity: 1
-                            });
-                        }
+                        itemsForCart.push({
+                            id: product.variant_id,
+                            quantity: 1
+                        });
                     });
                 }
 
@@ -641,6 +638,8 @@
                 this.$watch('minQty', () => {
                     this.updateCurrentPouch();
                 });
+
+                Alpine.store('miniCart').clearCart();
 
             }
         }))
