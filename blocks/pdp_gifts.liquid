@@ -626,22 +626,20 @@
 
                 if (this.giftsProducts) {
                     this.giftsProducts.forEach(product => {
+                        itemsForCart.push({
+                            id: product.variant_id,
+                            quantity: 1
+                        });
                         const ifItemInCart = Alpine.store('miniCart').cart.items.some(item => item.id === product.variant_id);
                         if (!ifItemInCart) {
-                            itemsForCart.push({
-                                id: product.variant_id,
-                                quantity: 1
-                            });
+                            
                         }
                     });
                 }
 
-                Alpine.store('miniCart').clearAndAdd(itemsForCart, true);
-
-                {% comment %} if (Array.isArray(itemsForCart)) {
-                    
+                if (Array.isArray(itemsForCart)) {
                     Alpine.store('miniCart').clearAndAdd(itemsForCart, true);
-                } {% endcomment %}
+                }
             },
             init() {
                 this.updateCurrentPouch();
