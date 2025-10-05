@@ -620,11 +620,15 @@
                 });
 
                 if (this.giftsProducts) {
-                    this.giftsProducts.forEach(product => {
-                        itemsForCart.push({
-                            id: product.variant_id,
-                            quantity: 1
-                        });
+                   this.giftsProducts.forEach(product => {
+                        const exists = itemsForCart.some(item => item.id === product.variant_id);
+                        
+                        if (!exists) {
+                            itemsForCart.push({
+                                id: product.variant_id,
+                                quantity: 1
+                            });
+                        }
                     });
                 }
 
