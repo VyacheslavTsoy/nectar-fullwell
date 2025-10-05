@@ -386,8 +386,6 @@
                         headers: { 'Content-Type': 'application/json' }
                     });
                 }
-
-                console.log(items, 222);
               
                 const addResponse = await fetch(window.Shopify.routes.root + 'cart/add.js', {
                   method: 'POST',
