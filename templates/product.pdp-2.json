@@ -377,6 +377,9 @@
         "text_6gXUtB",
         "ingredients_mfWAjV"
       ],
+      "custom_css": [
+        ".ingredients__modal-cta {display: none;}"
+      ],
       "name": "Ingredients Section",
       "settings": {
         "desktop_padding_top": 50,
