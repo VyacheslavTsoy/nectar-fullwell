@@ -309,7 +309,6 @@
             },
 
             clearCart() {
-                console.log(321);
                 fetch(window.Shopify.routes.root + 'cart/clear.js', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' }
@@ -367,7 +366,6 @@
                 const itemCount = this.cart.item_count || 0;
                 if (itemCount === 0) return this.cart.original_total_price;
 
-                // Найти нужный порог
                 let discount = 0;
                 if (itemCount <= this.discountThresholds.length) {
                     discount = this.discountThresholds[itemCount - 1]?.value || 0;
@@ -487,8 +485,6 @@
                 await this.loadCart();
 
                 this.filterUpsellProducts();
-
-                console.log(this.discountThresholds, 111111)
 
                 if (this.cart?.items?.some(item => item.discounts?.some(discount => discount.title == 'GIFT'))) {
                     this.clearCart();
