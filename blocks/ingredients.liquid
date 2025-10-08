@@ -65,14 +65,9 @@
             </div>
 
             {% if ingredient_modal.ingredients_description != blank %}
-                <div class="grid md:grid-cols-[var(--desktop-layout)] pt-3 md:pt-6 gap-4 md:gap-[2.4rem]" style="--desktop-layout: 1fr 28rem;">
+                <div class="pt-3 md:pt-6">
                     <div class="ingredients__modal-caption font-family-poppins text-[1.5rem]  md:text-base">
                         {{ ingredient_modal.ingredients_description | metafield_tag }}
-                    </div>
-                    <div class="ingredients__modal-cta flex flex-col text-center gap-3">
-                        <a href="{{ checkout_url }}" class="btn w-full btn-lg max-w-[28rem]">
-                            Choose Your Package
-                        </a>
                     </div>
                 </div>
             {% endif %}
