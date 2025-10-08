@@ -110,30 +110,29 @@
             <p class="font-family-poppins text-[#7F7F7F]">Shipped every month. No commitment. Cancel anytime</p>
         </label>
 
-        <button id="add-to-cart" @click="addToCart" class="product__cta-btn flex justify-center text-[2rem] font-bold bg-[#21A600] border-[.2rem] h-[6.6rem] border-[#037C2B] hover:bg-[#037C2B] rounded-[1rem] text-white w-full checkout__cta-btn mt-[.8rem]" :disabled="currentQty == 0">
+        <button id="add-to-cart" @click="addToCart" class="product__cta-btn justify-center text-[2rem] font-bold bg-[#21A600] border-[.2rem] h-[6.6rem] border-[#037C2B] hover:bg-[#037C2B] rounded-[1rem] text-white w-full mt-[.8rem] flex items-center gap-4" :disabled="currentQty == 0">
 
-            <span class="flex items-center justify-center gap-3 md:gap-[1.2rem]" x-show="currentQty < 1">
-                Select At Least 1 Bag
+            <span x-text="currentQty == 0 ? 'Select At Least 1 Bag' : 'Add to cart'"></span>
+
+            <div class="inline-flex items-center justify-center font-medium h-[2.4rem] bg-[#0D3063] text-white text-base rounded-full px-[1.2rem] gap-[.8rem] font-family-poppins" x-show="currentQty > 0">
+                <span class="line-through text-[#D8D8D8]" x-text="formatMoney(finalPrice.compare_at_price)" x-show="finalPrice.compare_at_price > finalPrice.price"></span>
+
+                <span x-text="formatMoney(finalPrice.price)"></span>
+            </div>
+
+            <span x-show="currentQty == 0">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.99995 3.828L6.99995 16H8.99995L8.99995 3.828L14.364 9.192L15.778 7.778L7.99995 0L0.221954 7.778L1.63595 9.192L6.99995 3.828Z" fill="white"/>
                 </svg>
             </span>
 
-            <span x-show="currentQty > 0" class="flex items-center justify-center gap-3 md:gap-[1.2rem]">
-                Add to cart
-
-                <div class="inline-flex items-center justify-center font-medium h-[2.4rem] bg-[#0D3063] text-white text-base rounded-full px-[1.2rem] gap-[.8rem] font-family-poppins">
-                    <span class="line-through text-[#D8D8D8]" x-text="formatMoney(finalPrice.compare_at_price)" x-show="finalPrice.compare_at_price > finalPrice.price"></span>
-    
-                    <span x-text="formatMoney(finalPrice.price)"></span>
-                </div>
-
-                <span class="ml-[.6rem]">
-                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.672 7.70302L0.5 7.70302V9.70302H12.672L7.308 15.067L8.722 16.481L16.5 8.70302L8.722 0.925018L7.308 2.33902L12.672 7.70302Z" fill="white"></path>
-                    </svg>
-                </span>
+            <span x-show="currentQty > 0">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.879 8.70711C19.2695 8.31658 19.2695 7.68342 18.879 7.29289L12.515 0.928932C12.1245 0.538408 11.4913 0.538408 11.1008 0.928932C10.7103 1.31946 10.7103 1.95262 11.1008 2.34315L16.7577 8L11.1008 13.6569C10.7103 14.0474 10.7103 14.6805 11.1008 15.0711C11.4913 15.4616 12.1245 15.4616 12.515 15.0711L18.879 8.70711ZM0.171875 8V9H18.1719V8V7H0.171875V8Z" fill="white"/>
+                </svg>
             </span>
+                
+
         </button>
         
         <div class="product__cta-guarantee mt-4">
