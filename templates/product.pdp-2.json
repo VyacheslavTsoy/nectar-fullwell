@@ -442,45 +442,11 @@
                     "font_weight_mobile": "bold"
                   },
                   "blocks": {}
-                },
-                "buttons_group_8y3bxJ": {
-                  "type": "buttons-group",
-                  "name": "Buttons Group",
-                  "settings": {
-                    "hide_on_desktop": false,
-                    "gap_between_buttons_desktop": 10,
-                    "buttons_alignment": "flex-start",
-                    "top_padding_desktop": 10,
-                    "bottom_padding_desktop": 0,
-                    "hide_on_mobile": true,
-                    "gap_between_buttons_mobile": 0,
-                    "buttons_alignment_mobile": "center",
-                    "top_padding_mobile": 0,
-                    "bottom_padding_mobile": 0
-                  },
-                  "blocks": {
-                    "button_zfL7Et": {
-                      "type": "button",
-                      "name": "Button",
-                      "settings": {
-                        "button_text": "Choose Your Package",
-                        "button_link": "",
-                        "related_product": "{{ closest.product }}",
-                        "button_type": "primary",
-                        "hide_on_mobile": false
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "button_zfL7Et"
-                  ]
                 }
               },
               "block_order": [
                 "review_badge_bK8Nxi",
-                "heading_P9e9CR",
-                "buttons_group_8y3bxJ"
+                "heading_P9e9CR"
               ]
             },
             "layout_item_H7qFfY": {
@@ -498,44 +464,10 @@
                     "table_items": "{{ closest.product.metafields.custom.comparison_table_items.value }}"
                   },
                   "blocks": {}
-                },
-                "buttons_group_w8C783": {
-                  "type": "buttons-group",
-                  "name": "Buttons Group",
-                  "settings": {
-                    "hide_on_desktop": true,
-                    "gap_between_buttons_desktop": 10,
-                    "buttons_alignment": "flex-start",
-                    "top_padding_desktop": 10,
-                    "bottom_padding_desktop": 0,
-                    "hide_on_mobile": false,
-                    "gap_between_buttons_mobile": 0,
-                    "buttons_alignment_mobile": "center",
-                    "top_padding_mobile": 0,
-                    "bottom_padding_mobile": 0
-                  },
-                  "blocks": {
-                    "button_rTpQWG": {
-                      "type": "button",
-                      "name": "Button",
-                      "settings": {
-                        "button_text": "Choose Your Package",
-                        "button_link": "",
-                        "related_product": "",
-                        "button_type": "primary",
-                        "hide_on_mobile": false
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "button_rTpQWG"
-                  ]
                 }
               },
               "block_order": [
-                "table_FqD7MQ",
-                "buttons_group_w8C783"
+                "table_FqD7MQ"
               ]
             }
           },
