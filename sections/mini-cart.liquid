@@ -262,7 +262,7 @@
     
         Alpine.store('miniCart', {
             isOpen: false,
-            cart: null,
+            cart: JSON.parse('{{ cart | json }}'),
             subscriptionItemsInCart: false,
             freeShippingCost: 4000,
             defaultSellingPlanID: 1657143355,
@@ -386,9 +386,9 @@
                 }
               
                 const addResponse = await fetch(window.Shopify.routes.root + 'cart/add.js', {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify({ items })
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ items })
                 });
               
                 if (addResponse.ok) {
@@ -458,7 +458,6 @@
                 this.cart?.items?.forEach(item => {
                     updates[item.key] = 0;
                 });
-                
     
                 await fetch(window.Shopify.routes.root + 'cart/update.js', {
                     method: 'POST',
@@ -481,14 +480,16 @@
                 this.loadCart();
             },
       
-            init: async function() {
+            async init() {
                 await this.loadCart();
-
-                this.filterUpsellProducts();
-
-                if (this.cart?.items?.some(item => item.discounts?.some(discount => discount.title == 'GIFT'))) {
-                    this.clearCart();
+            
+                if (this.cart?.items?.some(item =>
+                    item.discounts?.some(discount => discount.title === 'GIFT')
+                )) {
+                    await this.clearCart();
                 }
+            
+                this.filterUpsellProducts();
             }
         });
       });

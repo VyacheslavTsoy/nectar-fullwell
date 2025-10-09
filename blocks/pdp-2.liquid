@@ -2,8 +2,8 @@
 {% assign bst = block.settings %}
 
 <div class="product" x-data="product">
-    <div class="flex gap-4 md:gap-[3rem] flex-col md:flex-row">
-        <div class="product__gallery flex-shrink-0 mx-[-2rem] md:mx-0 md:w-[50%] lg:w-[54rem]">
+    <div class="flex items-start gap-4 md:gap-[3rem] flex-col md:flex-row">
+        <div class="product__gallery w-[calc(100%+4rem)] flex-shrink-0 mx-[-2rem] md:mx-0 md:w-[50%] lg:w-[54rem]  md:sticky md:top-[6.8rem]">
             {% render 'product-gallery-2' %}
 
             {% if bst.related_doctor_review != blank %}
@@ -500,7 +500,6 @@
                 });
 
                 if (Array.isArray(itemsForCart)) {
-                    console.log(itemsForCart, 123);
                     Alpine.store('miniCart').addItem(itemsForCart);
                 }
             },
@@ -518,8 +517,6 @@
                     const oneBase = oneCompare - oneDiscount;
                     pouch.one_time.price_per_packet = oneBase > 0 ? oneBase / minQty : 0;
                 });
-            
-                console.log(this.pouches, 123);
             },
             init() {
                 this.setUpPerItemPrice();
@@ -528,8 +525,6 @@
                 this.$watch('minQty', () => {
                     this.updateCurrentPouch();
                 });
-
-                console.log(Alpine.store('miniCart'), 123);
 
             }
         }))
