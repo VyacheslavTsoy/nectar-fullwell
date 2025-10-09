@@ -13,9 +13,13 @@
       "type": "main-404",
       "disabled": true,
       "settings": {
-        "heading": "404 Page Not Found",
-        "text": "The page you are looking for does not exist.",
-        "button_label": "Go to Home"
+        "desktop_padding_top": 40,
+        "desktop_gap_between_blocks": 20,
+        "bg_color": "#ffffff",
+        "desktop_max_width": 1140,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 30,
+        "mobile_gap_between_blocks": 10
       }
     },
     "blank_section_nmbUaA": {
@@ -42,7 +46,7 @@
           "type": "text",
           "name": "Text",
           "settings": {
-            "title": "<p><strong>Summer Sale - Up to 42% Off</strong></p>",
+            "title": "<p>Bundle and Save Up to 50% Off</p>",
             "text_alignment": "center",
             "font_family": "poppins",
             "font_weight": "bold",
