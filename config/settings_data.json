@@ -132,21 +132,21 @@
             "type": "discount_threshold",
             "settings": {
               "title": 2,
-              "value": 1895
+              "value": 2000
             }
           },
           "discount_threshold_Agfbrt": {
             "type": "discount_threshold",
             "settings": {
               "title": 3,
-              "value": 4190
+              "value": 4200
             }
           },
           "discount_threshold_dNqU3D": {
             "type": "discount_threshold",
             "settings": {
               "title": 4,
-              "value": 7085
+              "value": 7600
             }
           }
         },
