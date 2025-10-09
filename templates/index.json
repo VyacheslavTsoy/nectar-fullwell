@@ -523,27 +523,14 @@
                         "button_text": "See More Details",
                         "button_link": "https://drinknectar.co/products/essential-daily-calm",
                         "related_product": "",
-                        "button_type": "secondary",
-                        "hide_on_mobile": false
-                      },
-                      "blocks": {}
-                    },
-                    "button_gAPPkA": {
-                      "type": "button",
-                      "name": "Button",
-                      "settings": {
-                        "button_text": "Choose Package",
-                        "button_link": "",
-                        "related_product": "essential-daily-calm-gift-v2",
                         "button_type": "primary",
-                        "hide_on_mobile": true
+                        "hide_on_mobile": false
                       },
                       "blocks": {}
                     }
                   },
                   "block_order": [
-                    "button_cPhYPM",
-                    "button_gAPPkA"
+                    "button_cPhYPM"
                   ]
                 }
               },
@@ -600,27 +587,14 @@
                         "button_text": "See More Details",
                         "button_link": "https://drinknectar.co/products/essential-daily-hydration-1",
                         "related_product": "",
-                        "button_type": "secondary",
-                        "hide_on_mobile": false
-                      },
-                      "blocks": {}
-                    },
-                    "button_FMEeLf": {
-                      "type": "button",
-                      "name": "Button",
-                      "settings": {
-                        "button_text": "Choose Package",
-                        "button_link": "",
-                        "related_product": "essential-daily-hydration-1",
                         "button_type": "primary",
-                        "hide_on_mobile": true
+                        "hide_on_mobile": false
                       },
                       "blocks": {}
                     }
                   },
                   "block_order": [
-                    "button_RReE9H",
-                    "button_FMEeLf"
+                    "button_RReE9H"
                   ]
                 }
               },
@@ -677,27 +651,14 @@
                         "button_text": "See More Details",
                         "button_link": "shopify://products/essential-daily-energy",
                         "related_product": "",
-                        "button_type": "secondary",
-                        "hide_on_mobile": false
-                      },
-                      "blocks": {}
-                    },
-                    "button_JDL7Xj": {
-                      "type": "button",
-                      "name": "Button",
-                      "settings": {
-                        "button_text": "Choose Package",
-                        "button_link": "",
-                        "related_product": "essential-daily-energy",
                         "button_type": "primary",
-                        "hide_on_mobile": true
+                        "hide_on_mobile": false
                       },
                       "blocks": {}
                     }
                   },
                   "block_order": [
-                    "button_fHeWdL",
-                    "button_JDL7Xj"
+                    "button_fHeWdL"
                   ]
                 }
               },
