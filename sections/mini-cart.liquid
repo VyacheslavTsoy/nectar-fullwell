@@ -308,28 +308,22 @@
                 }
             },
 
-            clearCart() {
-                fetch(window.Shopify.routes.root + 'cart/clear.js', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' }
-                })
-                .then(response => {
-                    this.loadCart();
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
+            async clearCart() {
+                await fetch(window.Shopify.routes.root + 'cart/clear.js', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' }
                 });
+                await this.loadCart();
             },
     
-            loadCart() {
-                return fetch(window.Shopify.routes.root + 'cart.js')
-                .then(response => response.json())
-                .then(data => {
-                    this.cart = data;
-                    this.subscriptionDiscountPrice = this.getSubscriptionDiscountedTotal();
-
-                    this.subscriptionItemsInCart = this.cart?.items?.some(item => item.selling_plan_allocation);
-                });
+            async loadCart() {
+                const response = await fetch(window.Shopify.routes.root + 'cart.js');
+                const data = await response.json();
+                this.cart = data;
+                this.subscriptionDiscountPrice = this.getSubscriptionDiscountedTotal();
+                this.subscriptionItemsInCart = this.cart?.items?.some(item => item.selling_plan_allocation);
+                
+                return data;
             },
           
             updateItem: debounce((item) => {
@@ -378,10 +372,10 @@
             async clearAndAdd(items, redirectToCheckout = false) {
                 if (!items.length) return;
                 
-                if (this.cart?.items?.length) {
+                if (this.cart?.items?.length > 0) {
                     await fetch(window.Shopify.routes.root + 'cart/clear.js', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' }
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' }
                     });
                 }
               
@@ -481,15 +475,29 @@
             },
       
             async init() {
-                await this.loadCart();
-            
-                if (this.cart?.items?.some(item =>
-                    item.discounts?.some(discount => discount.title === 'GIFT')
+                const cartData = await this.loadCart();
+          
+                if (cartData?.items?.some(item =>
+                  item.discounts?.some(discount => discount.title === 'GIFT')
                 )) {
-                    await this.clearCart();
+                  await this.clearCart();
                 }
-            
+
                 this.filterUpsellProducts();
+          
+                window.addEventListener('pageshow', async (event) => {
+                  if (event.persisted) {
+                    const restoredCart = await this.loadCart();
+          
+                    if (restoredCart?.items?.some(item =>
+                      item.discounts?.some(discount => discount.title === 'GIFT')
+                    )) {
+                      await this.clearCart();
+                    }
+
+                    this.filterUpsellProducts();
+                  }
+                });
             }
         });
       });
