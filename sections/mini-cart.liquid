@@ -322,7 +322,7 @@
                 this.cart = data;
                 this.subscriptionDiscountPrice = this.getSubscriptionDiscountedTotal();
                 this.subscriptionItemsInCart = this.cart?.items?.some(item => item.selling_plan_allocation);
-                
+
                 return data;
             },
           
@@ -371,29 +371,41 @@
 
             async clearAndAdd(items, redirectToCheckout = false) {
                 if (!items.length) return;
-                
-                if (this.cart?.items?.length > 0) {
-                    await fetch(window.Shopify.routes.root + 'cart/clear.js', {
-                      method: 'POST',
-                      headers: { 'Content-Type': 'application/json' }
+
+                try {
+                    if (this.cart?.items?.length > 0) {
+                        const clearResponse = await fetch(`${window.Shopify.routes.root}cart/clear.js`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' }
+                        });
+
+                        if (!clearResponse.ok) {
+                            console.error('error clearing cart');
+                            return;
+                        }
+                    }
+
+                    const addResponse = await fetch(`${window.Shopify.routes.root}cart/add.js`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ items })
                     });
-                }
-              
-                const addResponse = await fetch(window.Shopify.routes.root + 'cart/add.js', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ items })
-                });
-              
-                if (addResponse.ok) {
-                  await this.loadCart();
-                  if (redirectToCheckout) {
-                    window.location.href = '/checkout';
-                  } else {
-                    this.isOpen = true;
-                  }
-                } else {
-                  console.error('Error adding items', await addResponse.json());
+
+                    if (!addResponse.ok) {
+                        console.error('error adding items', await addResponse.json());
+                        return;
+                    }
+
+                    await this.loadCart();
+
+                    if (redirectToCheckout) {
+                        await new Promise(resolve => setTimeout(resolve, 150));
+                        window.location.href = '/checkout';
+                    } else {
+                        this.isOpen = true;
+                    }
+                } catch (error) {
+                    console.error('error in clearAndAdd:', error);
                 }
             },
     
