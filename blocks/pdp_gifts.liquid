@@ -459,6 +459,7 @@
         Alpine.data('product', () => ({
             minQty: 2,
             maxQty: 0,
+            isProcessing: false,
             cartItems: null,
             sellingPlan: null,
             currentQty: 0,
@@ -613,6 +614,9 @@
                 return `$${newPrice}`;
             },
             addToCart() {
+                if(this.isProcessing) return;
+                this.isProcessing = true;
+
                 const itemsForCart = [];
 
                 this.currentProduct.variants.forEach(v => {

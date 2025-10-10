@@ -262,6 +262,7 @@
     
         Alpine.store('miniCart', {
             isOpen: false,
+            isProcessing: false,
             cart: JSON.parse('{{ cart | json }}'),
             subscriptionItemsInCart: false,
             freeShippingCost: 4000,

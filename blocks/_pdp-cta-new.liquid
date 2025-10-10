@@ -112,7 +112,7 @@
 
         <button id="add-to-cart" @click="addToCart" class="product__cta-btn justify-center text-[2rem] font-bold bg-[#21A600] border-[.2rem] h-[6.6rem] border-[#037C2B] hover:bg-[#037C2B] rounded-[1rem] text-white w-full mt-[.8rem] flex items-center gap-4" :disabled="currentQty == 0">
 
-            <span x-text="currentQty == 0 ? 'Select At Least 1 Bag' : 'Add to cart'"></span>
+            <span x-text="currentQty == 0 ? 'Select At Least 1 Bag' : isProcessing ? 'Adding to cart...' : 'Add to cart'"></span>
 
             <div class="inline-flex items-center justify-center font-medium h-[2.4rem] bg-[#0D3063] text-white text-base rounded-full px-[1.2rem] gap-[.8rem] font-family-poppins" x-show="currentQty > 0">
                 <span class="line-through text-[#D8D8D8]" x-text="formatMoney(finalPrice.compare_at_price)" x-show="finalPrice.compare_at_price > finalPrice.price"></span>

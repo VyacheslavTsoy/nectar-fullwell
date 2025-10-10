@@ -457,6 +457,7 @@
             sellingPlan: null,
             currentQty: 0,
             currentTotal: 0,
+            isProcessing: false,
             currentProduct: {
                 id: {{ product.id }},
                 handle: '{{ product.handle }}',
@@ -607,6 +608,9 @@
                 return `$${newPrice}`;
             },
             addToCart() {
+                if(this.isProcessing) return;
+                this.isProcessing = true;
+                
                 const itemsForCart = [];
 
                 this.currentProduct.variants.forEach(v => {
