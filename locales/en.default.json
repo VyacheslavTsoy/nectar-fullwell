@@ -547,7 +547,10 @@
   "shopify": {
     "checkout": {
       "order_summary": {
-        "recurring_subtotal_label": " "
+        "recurring_subtotal_label": " ",
+        "recurring_total_label": " ",
+        "recurring_total_tooltip": " ",
+        "recurring_payments": " "
       }
     }
   }
