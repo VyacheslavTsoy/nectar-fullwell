@@ -551,6 +551,41 @@
         "recurring_total_label": " ",
         "recurring_total_tooltip": " ",
         "recurring_payments": " "
+      },
+      "subscriptions": {
+        "recurring_total_intervals": {
+          "day": {
+            "one": " ",
+            "other": " "
+          },
+          "week": {
+            "one": " ",
+            "other": " "
+          },
+          "month": {
+            "one": " ",
+            "other": " "
+          },
+          "year": {
+            "one": " ",
+            "other": " "
+          }
+        },
+        "recurring_totals": " ",
+        "recurring_totals_with_initial_order_shipping_discount": " ",
+        "recurring_totals_with_policies": {
+          "first_cycles": {
+            "one": " ",
+            "other": " "
+          },
+          "following_cycles": " "
+        },
+        "recurring_totals_with_initial_order_shipping_discount_with_policies": {
+          "first_cycles": {
+            "one": " ",
+            "other": " "
+          }
+        }
       }
     }
   }
