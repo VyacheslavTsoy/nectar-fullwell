@@ -587,8 +587,8 @@
           }
         }
       },
-      "field_errors": {
-        "address_suggestion_did_you_mean_html": " "
+      "thank_you": {
+        "login_not_customer_html": " "
       }
     }
   }
