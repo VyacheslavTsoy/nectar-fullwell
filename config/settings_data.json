@@ -58,7 +58,8 @@
           "timer_FKrgTq"
         ],
         "custom_css": [
-          ".announcement-bar__badge {white-space: nowrap;}"
+          ".announcement-bar__badge {white-space: nowrap;}",
+          "@media (max-width: 768px) {.announcement-bar__text {font-size: 1.4rem; }}"
         ],
         "settings": {
           "background_color": "#0d3063",
