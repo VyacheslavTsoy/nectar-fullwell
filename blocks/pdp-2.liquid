@@ -486,7 +486,7 @@
                 const newPrice = (price / 100).toFixed(2);
                 return `$${newPrice}`;
             },
-            addToCart() {
+            addToCart(redirect = false) {
                 const itemsForCart = [];
 
                 this.currentProduct.variants.forEach(v => {
@@ -500,7 +500,7 @@
                 });
 
                 if (Array.isArray(itemsForCart)) {
-                    Alpine.store('miniCart').addItem(itemsForCart);
+                    Alpine.store('miniCart').addItem(itemsForCart, redirect);
                 }
             },
             setUpPerItemPrice() {
