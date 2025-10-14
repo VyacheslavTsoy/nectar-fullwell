@@ -57,6 +57,9 @@
           "badge_hnKpYh",
           "timer_FKrgTq"
         ],
+        "custom_css": [
+          ".announcement-bar__badge {white-space: nowrap;}"
+        ],
         "settings": {
           "background_color": "#0d3063",
           "text_color": "#ffffff",
