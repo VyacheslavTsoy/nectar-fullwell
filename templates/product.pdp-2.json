@@ -81,6 +81,7 @@
               "settings": {
                 "shipping_label_1": "Ships by",
                 "shipping_label_2": "<p>Fast <strong>FREE</strong> Shipping</p>",
+                "button_behavior": "go-to-checkout",
                 "cta_button_text": "Choose Your Package",
                 "cta_button_url": "",
                 "guarantee_text": "<p><em><strong>Less than 1%</strong></em> of customers claim our <strong>90 Day Money Back Guarantee*</strong></p>"
