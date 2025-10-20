@@ -57,6 +57,7 @@
           "type": "pdp_gifts",
           "name": "Product Gifts",
           "settings": {
+            "unlock_all_gifts_if_more_than_one_pouch": true,
             "related_product": "{{ product }}",
             "related_pouches": [],
             "products": [
