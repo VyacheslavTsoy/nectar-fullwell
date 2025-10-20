@@ -134,6 +134,7 @@
     }
 {% endstyle %}
 
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const stickyCta = document.querySelector('.sticky-cta');
@@ -464,6 +465,7 @@
             sellingPlan: null,
             currentQty: 0,
             currentTotal: 0,
+            allGiftsAvailableMoreThanOne: {{ block.settings.unlock_all_gifts_if_more_than_one_pouch }},
             currentProduct: {
                 id: {{ product.id }},
                 handle: '{{ product.handle }}',
@@ -630,10 +632,15 @@
                 });
 
                 if (this.giftsProducts) {
-                   this.giftsProducts.forEach(product => {
+                   this.giftsProducts.forEach((product, index) => {
                         const exists = itemsForCart.some(item => item.id === product.variant_id);
-                        
+
                         if (!exists) {
+
+                            if (this.allGiftsAvailableMoreThanOne) {
+                                if (this.minQty == 1 && index >= 2) return;
+                            }
+
                             itemsForCart.push({
                                 id: product.variant_id,
                                 quantity: 1
@@ -652,7 +659,6 @@
                 this.$watch('minQty', () => {
                     this.updateCurrentPouch();
                 });
-
             }
         }))
     })
@@ -727,6 +733,12 @@
     }
   ],
   "settings": [
+    {
+        "type": "checkbox",
+        "id": "unlock_all_gifts_if_more_than_one_pouch",
+        "label": "Unlock All Gifts If > 1 Pouch",
+        "default": false
+    },
     {
         "type": "product",
         "id": "related_product",
