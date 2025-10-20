@@ -73,9 +73,13 @@
 <div class="mt-4 text-center">
     <div class="checkout__gifts-header mb-3">
         <h2 class="checkout__gifts-title bg-[#e2f0ff] px-[0.6rem] text-center rounded-[.6rem] font-bold border-[1px] border-[#75bdff] border-dashed flex items-center justify-center gap-2 h-[2.4rem]"> 
-            <div class="mt-1">
+            <div class="mt-1" x-show="!allGiftsAvailableMoreThanOne">
                 {{ block.settings.gifts_title }}
             </div>
+
+            
+            <div class="mt-1" x-show="allGiftsAvailableMoreThanOne" x-text="minQty == 1 ? '$22.99 of Gifts With Your First Order!' : '{{ block.settings.gifts_title }}' "></div>
+
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_1415_5723)">
                 <path d="M14.2449 15.9894H1.75635C1.4292 15.9894 1.16406 15.7242 1.16406 15.3971V5.84741H14.8373V15.3971C14.8373 15.7242 14.572 15.9894 14.2449 15.9894Z" fill="#FFC73B"/>
@@ -115,7 +119,7 @@
             >
                 <div class="checkout__gifts-product-inner rounded-[.8rem] overflow-hidden">
                     <div class="checkout__gifts-product-price uppercase text-[1.1rem] md:text-xs text-white bg-coolBlack px-[.4rem] py-[.3rem]">
-                        free <span class="line-through" x-text="formatMoney(product.price)"></span>
+                        free <span class="line-through" x-text="allGiftsAvailableMoreThanOne && index == 1 ? '$15.99' : formatMoney(product.price)"></span>
                     </div>
                     
                     <div class="checkout__gifts-product-image h-[6rem] p-[.2rem] relative">
