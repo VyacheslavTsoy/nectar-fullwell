@@ -1,8 +1,8 @@
 {% assign featuredReviews = product.metafields.custom.featured_reviews.value %}
-{% assign discountsMetaobjects = metaobjects.discounts.values %}
 {% assign bst = block.settings %}
 {% assign product = bst.related_product %}
 {% assign productFaq = product.metafields.custom.product_section_faq.value %}
+{% assign relatedBags = product.metafields.custom.related_pouches.value %}
 
 <style>
     #announcement-bar,
@@ -489,37 +489,6 @@
             },
             currentPouch: null,
             relatedDiscounts: null,
-            {% if discountsMetaobjects != blank %}
-                discounts: [
-                    {%- for discount in discountsMetaobjects -%}
-                        {
-                            relatedProducts: {%- if discount.related_products and discount.related_products.value -%}{{ discount.related_products.value | map: 'id' | json }}{%- else -%}null{%- endif -%},
-                            oneTimePrices: [
-                                {%- if discount.discounts_thresholds_one_time_purchase and discount.discounts_thresholds_one_time_purchase.value -%}
-                                    {%- for oneTimePrice in discount.discounts_thresholds_one_time_purchase.value -%}
-                                        {% assign priceArray = oneTimePrice | split: '-' %}
-                                        {
-                                            quantity: {%- if priceArray.size > 0 -%}{{ priceArray[0] }}{%- else -%}0{%- endif -%},
-                                            discountAmount: {%- if priceArray.size > 1 -%}{{ priceArray[1] }}{%- else -%}0{%- endif -%},
-                                        }{%- unless forloop.last -%},{%- endunless -%}
-                                    {%- endfor -%}
-                                {% endif %}
-                            ],
-                            subscriptionPrices: [
-                                {%- if discount.discounts_thresholds_subscription_purchase and discount.discounts_thresholds_subscription_purchase.value -%}
-                                    {%- for subscriptionPrice in discount.discounts_thresholds_subscription_purchase.value -%}
-                                        {% assign priceArray = subscriptionPrice | split: '-' %}
-                                        {
-                                            quantity: {%- if priceArray.size > 0 -%}{{ priceArray[0] }}{%- else -%}0{%- endif -%},
-                                            discountAmount: {%- if priceArray.size > 1 -%}{{ priceArray[1] }}{%- else -%}0{%- endif -%}
-                                        }{%- unless forloop.last -%},{%- endunless -%}
-                                    {%- endfor -%}
-                                {%- endif -%}
-                            ]
-                        }{%- unless forloop.last -%},{%- endunless -%}
-                    {%- endfor -%}
-                ],
-            {% endif %}
             {% if bst.products != blank %}
             giftsProducts: [
                 {%- for product in bst.products -%}
@@ -535,41 +504,22 @@
             ],
             {% endif %}
             pouches: [
+                {%- for bag in relatedBags -%}
                 {
-                    minQty: 3,
-                    title: '3 Bags',
-                    price_per_packet: 2495,
-                    saving_percent: 'Save 60%',
-                    blue_badge: 'Best Value',
-                    price: 7485,
-                    compare_at_price: 19470,
-                    compare_price_per_packet: 6490,
-                    discount_amount: 4190,
-                    sellingPlan: 1657176123
-                },
-                {
-                    minQty: 2,
-                    title: '2 Bags',
-                    price_per_packet: 2795,
-                    saving_percent: 'Save 50%',
-                    yellow_badge: 'Most Popular',
-                    price: 5590,
-                    compare_at_price: 15375,
-                    compare_price_per_packet: 7687.5,
-                    discount_amount: 3200,
-                    sellingPlan: 1657143355
-                },
-                {
-                    minQty: 1,
-                    title: '1 Bag',
-                    price_per_packet: 3495,
-                    saving_percent: 'Save 34%',
-                    price: 3495,
-                    compare_at_price: 10680,
-                    compare_price_per_packet: 10680,
-                    discount_amount: 900,
-                    sellingPlan: 1657110587
+                    minQty: {{ bag.min_quantity }},
+                    title: '{{ bag.title }}',
+                    price_per_packet: {{ bag.price_per_item_in_cents }},
+                    saving_percent: '{{ bag.saving_label_text }}',
+                    price: {{ bag.price }},
+                    blue_badge: '{{ bag.blue_badge_text | default: '' }}',
+                    yellow_badge: '{{ bag.yellow_badge_text | default: '' }}',
+                    compare_at_price: {{ bag.compare_at_price }},
+                    compare_price_per_packet: {{ bag.compare_price_per_item }},
+                    discount_amount: {{ bag.discount_amount }},
+                    sellingPlan: {{ bag.selling_plan_id }}
                 }
+                {%- unless forloop.last -%},{%- endunless -%}
+                {%- endfor -%}
             ],
             resetQty() {
                 this.currentProduct.variants.forEach(v => {
