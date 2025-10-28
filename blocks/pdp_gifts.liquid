@@ -111,10 +111,41 @@
                 </div>
             
                 <div class="sticky-cta__button">
-                    <button class="flex items-center justify-center gap-4 text-[1.6rem] md:text-[2rem] font-bold bg-[#21A600] border-[.2rem] h-[6.6rem] border-[#037C2B] hover:bg-[#037C2B] rounded-[1rem] text-white w-full checkout__cta-btn" id="scroll-to-top">
+                    <button class="flex items-center justify-center gap-4 text-[1.6rem] md:text-[2rem] font-bold bg-[#21A600] border-[.2rem] h-[6.6rem] border-[#037C2B] hover:bg-[#037C2B] rounded-[1rem] text-white w-full checkout__cta-btn" id="scroll-to-top" x-show="currentQty < currentPouch?.minQty">
                         Select Your Flavors Now
 
                         <svg width="28px" height="28px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15 11L12 8M12 8L9 11M12 8V16M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    </button>
+
+                    <button @click="addToCart" class="flex items-center justify-center gap-3 md:gap-[1.2rem] text-[1.6rem] md:text-[2rem] font-bold bg-[#21A600] border-[.2rem] h-[6.6rem] border-[#037C2B] hover:bg-[#037C2B] rounded-[1rem] text-white w-full checkout__cta-btn" x-show="currentQty >= currentPouch?.minQty"
+                    >
+                        <span x-show="currentQty < currentPouch?.minQty">Select <span x-text="currentPouch?.minQty - currentQty"></span> More Bag<span x-show="currentPouch?.minQty - currentQty > 1">s</span></span>
+                        
+                        <span x-show="currentQty >= currentPouch?.minQty" x-text="isProcessing ? 'Adding to cart...' : 'Checkout Now'"></span>
+                    
+                        <span class="inline-flex items-center justify-center font-medium h-[2.4rem] bg-[#0D3063] text-white text-base rounded-full px-[1.2rem] gap-[.8rem]">
+                            <template x-if="currentQty <= maxQty">
+                                <div>
+                                    <span class="line-through text-[#D8D8D8]" x-text="formatMoney(currentPouch?.compare_at_price)"></span>
+                    
+                                    <span x-text="formatMoney(currentPouch?.price)"></span>
+                                </div>
+                            </template>
+                    
+                            <template x-if="currentQty > maxQty">
+                                <div>
+                                    <span class="line-through text-[#D8D8D8]" x-text="formatMoney(currentPouch?.compare_price_per_packet * currentQty)"></span>
+                    
+                                    <span x-text="formatMoney(currentPouch?.price_per_packet * currentQty)"></span>
+                                </div>
+                            </template>
+                        </span>
+                    
+                        <span class="ml-[.6rem]">
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.672 7.70302L0.5 7.70302V9.70302H12.672L7.308 15.067L8.722 16.481L16.5 8.70302L8.722 0.925018L7.308 2.33902L12.672 7.70302Z" fill="white"></path>
+                            </svg>
+                        </span>
                     </button>
                 </div>
             
@@ -605,9 +636,15 @@
             },
             init() {
                 this.updateCurrentPouch();
-
+                
                 this.$watch('minQty', () => {
                     this.updateCurrentPouch();
+                });
+                
+                window.addEventListener('pageshow', (event) => {
+                    if (event.persisted) {
+                        this.isProcessing = false;
+                    }
                 });
             }
         }))

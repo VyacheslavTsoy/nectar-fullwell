@@ -648,6 +648,12 @@
                     this.updateCurrentPouch();
                 });
 
+                window.addEventListener('pageshow', (event) => {
+                    if (event.persisted) {
+                        this.isProcessing = false;
+                    }
+                });
+
             }
         }))
     })
