@@ -1,0 +1,508 @@
+{% assign shipping_date = 'now' | date: '%s' %}
+
+<div class="bundle" x-data="bundle" x-cloak>
+
+    <div class="bundle__sidebar-header mx-[-2rem] flex md:hidden items-center justify-between h-[5rem] bg-[#0D3063] text-white text-base font-black px-8 sticky top-[5.4rem] left-0 right-0 z-[89]" @click="isOpen = !isOpen, scrollToStart()">
+        <div>
+            Customize Your Bundle (<span x-text="currentSlotsCount">0</span>/<span x-text="totalSlots"></span>)
+        </div>
+
+        <div class="w-8 h-8 flex items-center justify-center transition-all duration-300" :class="{ 'rotate-180': isOpen }">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.63556 5.29301C1.82309 5.10554 2.0774 5.00023 2.34256 5.00023C2.60772 5.00023 2.86203 5.10554 3.04956 5.29301L7.99956 10.243L12.9496 5.29301C13.1382 5.11086 13.3908 5.01006 13.653 5.01234C13.9152 5.01462 14.166 5.11979 14.3514 5.30519C14.5368 5.4906 14.642 5.74142 14.6442 6.00361C14.6465 6.26581 14.5457 6.51841 14.3636 6.70701L8.70656 12.364C8.51903 12.5515 8.26472 12.6568 7.99956 12.6568C7.7344 12.6568 7.48009 12.5515 7.29256 12.364L1.63556 6.70701C1.44809 6.51948 1.34277 6.26518 1.34277 6.00001C1.34277 5.73485 1.44809 5.48054 1.63556 5.29301Z" fill="white"/>
+            </svg>
+        </div>
+
+    </div>
+
+    <div class="bundle__desktop flex flex-col-reverse md:grid md:grid-cols-[1fr_44.6rem] gap-4">
+
+        <div class="bundle__desktop-main md:border-l md:border-r border-solid border-[#CCCCCC] md:px-4">
+            <div class="bundle__filter flex gap-3 justify-stretch mt-6 md:mt-0 mb-6 md:mb-[2.4rem]">
+                <button class="bundle__filter-btn btn btn-blue--outline w-1/4" @click="activeProduct = null" :class="{ 'state-active': activeProduct == null }">All</button>
+    
+                <template x-for="product in products">
+                    <button class="bundle__filter-btn btn btn-blue--outline w-1/4" x-text="product.label" @click="setActiveProduct(product.id)" :class="{ 'state-active': activeProduct && activeProduct.id == product.id }"></button>
+                </template>
+            </div>
+
+            <template x-for="product in products">
+                <div x-show="!activeProduct || activeProduct.id == product.id">
+                    <div class="bundle__desktop-product pb-8">
+                        <header class="bundle__products-header font-bold text-center rounded-[.5rem] px-6 bg-[#D3F0FF] leading-[3.4rem] mb-4 md:mb-8" x-text="product.title"></header>
+
+                        <div class="bundle__products-description font-bold leading-[1.3] mb-4 md:mb-8" x-html="product?.description"></div>
+
+                        <div class="bundle__products-variants grid grid-cols-3 md:grid-cols-4 gap-3 gap-y-6 md:gap-[1.4rem]">
+                            <template x-for="variant in product.variants">
+                                <figure class="bundle__product-variant cursor-pointer" :class="{ ' cursor-not-allowed': currentSlotsCount == totalSlots }">
+                                    <div @click="currentSlotsCount < totalSlots && variant.quantity++" class="bundle__product-variant-image flex items-center relative justify-center md:w-[12rem] md:h-[12rem] mx-auto">
+                                        <img :src="variant.image" :alt="variant.title" class="w-full h-full object-cover rounded-[.5rem]">
+                                    </div>
+
+                                    <div class="bundle__product-cta my-1 flex items-center justify-center h-[2.6rem]">
+                                        <button :disabled="currentSlotsCount == totalSlots" @click="variant.quantity++" class="disabled:opacity-50" x-show="variant.quantity == 0">
+                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="21.8941" height="21.8941" rx="10.9471" fill="#0D3063"/>
+                                                <path d="M10.9472 2.05261C6.04294 2.05261 2.05273 6.04281 2.05273 10.9471C2.05273 15.8514 6.04294 19.8416 10.9472 19.8416C15.8515 19.8416 19.8417 15.8514 19.8417 10.9471C19.8417 6.04281 15.8515 2.05261 10.9472 2.05261ZM10.9472 3.42099C15.1119 3.42099 18.4733 6.78243 18.4733 10.9471C18.4733 15.1118 15.1119 18.4732 10.9472 18.4732C6.78255 18.4732 3.42112 15.1118 3.42112 10.9471C3.42112 6.78243 6.78255 3.42099 10.9472 3.42099ZM10.263 6.84195V10.2629H6.84207V11.6313H10.263V15.0522H11.6314V11.6313H15.0524V10.2629H11.6314V6.84195H10.263Z" fill="white"/>
+                                            </svg>                                                
+                                        </button>
+                                        
+                                        <div class="bundle__product-qty-picker flex items-center gap-[.4rem]" x-show="variant.quantity > 0">
+                                            <button class="rounded-[.4rem] border border-solid border-[#DFE3E8] h-[2.6rem] w-1/3 md:w-[3.8rem] flex items-center justify-center text-[#999999] hover:border-[#0D3063] hover:text-[#0D3063]" @click="variant.quantity--">
+                                                <svg width="11" height="1" viewBox="0 0 11 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10.5 1H0V0H10.5V1Z" fill="currentColor"/>
+                                                </svg>                                                    
+                                            </button>
+                                            <input type="number" class="bundle__product-qty-picker-quantity h-[2.6rem] w-1/3 md:w-[3.8rem] text-center border border-solid border-[#0D3063] rounded-[.4rem] bg-[#0D3063] text-[#fff]" :value="variant.quantity" readonly>
+                                            <button :disabled="currentSlotsCount == totalSlots" @click="currentSlotsCount < totalSlots && variant.quantity++" class="disabled:opacity-50 rounded-[.4rem] border border-solid border-[#DFE3E8] h-[2.6rem] w-1/3 md:w-[3.8rem] flex items-center justify-center text-[#999999] hover:border-[#0D3063] hover:text-[#0D3063]">
+                                                <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7 3H4V0H3V3H0V4H3V7H4V4H7V3Z" fill="currentColor"/>
+                                                </svg>                                                    
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <figcaption class="bundle__product-variant-title font-family-poppins font-medium leading-[1.1] text-center pt-2 text-[#000] text-sm" x-text="variant.title"></figcaption>
+                                </figure>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+
+        <aside class="bundle__sidebar bg-[#fff] pt-8 md:bg-[#D7F0FF] md:py-[3rem] md:px-[2.2rem] md:rounded-[1rem] md:mx-0 sticky z-[88] top-[10.4rem] left-0 w-full max-md:h-[calc(100vh-10.4rem)] md:top-0 md:relative" x-show="isOpen">
+            <div class="bundle__sidebar-inner md:sticky md:top-[9rem]">
+
+                <div class="bundle__sidebar-content flex flex-col md:block max-h-[calc(100vh-24rem)] overflow-y-auto md:h-auto">
+
+                    <h3 class="bundle__sidebar-title hidden md:block text-[#0D3063] text-[2.8rem] font-black leading-[1.2] mb-4 text-center">Customize Your Bundle</h3>
+
+                    <div class="bundle__sidebar-slots flex flex-col gap-[0.7rem]" x-data="{ labels: ['Add Your First Bag', 'Add Your Second Bag', 'Add Your Third Bag', 'Your 4th Bag Free'] }">
+                        <template x-for="(slot, index) in slots">
+                            <div class="bundle__sidebar-slot rounded-[1rem] bg-[#EEF7FF] flex items-center  text-sm font-medium font-family-poppins cursor-pointer text-[#0D3063] relative" @click="removeSlot(slot)" :id="slot.id">
+                                <div class="bundle__sidebar-slot-image flex flex-shrink-0 items-center justify-center overflow-hidden min-w-[5rem] min-h-[5rem] relative">
+                                    <div x-show="slot.empty">
+                                        <svg width="23" height="30" viewBox="0 0 23 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2.8242 29.3717C2.04754 29.3717 1.38292 29.098 0.830314 28.5507C0.276771 28.0024 0 27.3436 0 26.5744V12.5879C0 11.8186 0.276771 11.1598 0.830314 10.6116C1.38292 10.0642 2.04754 9.79055 2.8242 9.79055H4.2363V6.99325C4.2363 5.05845 4.92493 3.40898 6.3022 2.04483C7.67852 0.681609 9.34339 0 11.2968 0C13.2502 0 14.9155 0.681609 16.2928 2.04483C17.6691 3.40898 18.3573 5.05845 18.3573 6.99325V9.79055H19.7694C20.546 9.79055 21.2111 10.0642 21.7647 10.6116C22.3173 11.1598 22.5936 11.8186 22.5936 12.5879V26.5744C22.5936 27.3436 22.3173 28.0024 21.7647 28.5507C21.2111 29.098 20.546 29.3717 19.7694 29.3717H2.8242ZM7.0605 9.79055H15.5331V6.99325C15.5331 5.82771 15.1212 4.837 14.2975 4.02112C13.4738 3.20524 12.4735 2.7973 11.2968 2.7973C10.12 2.7973 9.11981 3.20524 8.29608 4.02112C7.47236 4.837 7.0605 5.82771 7.0605 6.99325V9.79055ZM11.2968 22.3784C12.0734 22.3784 12.7385 22.1047 13.2921 21.5574C13.8447 21.0091 14.121 20.3504 14.121 19.5811C14.121 18.8118 13.8447 18.1531 13.2921 17.6048C12.7385 17.0575 12.0734 16.7838 11.2968 16.7838C10.5201 16.7838 9.85551 17.0575 9.30291 17.6048C8.74937 18.1531 8.4726 18.8118 8.4726 19.5811C8.4726 20.3504 8.74937 21.0091 9.30291 21.5574C9.85551 22.1047 10.5201 22.3784 11.2968 22.3784Z" fill="#0D3063"/>
+                                        </svg>                                        
+                                    </div>
+
+                                    <img :src="slot.image" :alt="slot.title" class="md:w-[8.4rem] md:h-[8.4rem] w-[6.4rem] h-[6.4rem] object-contain rounded-[1rem_0_0_1rem]" x-show="!slot.empty">
+                                </div>
+
+                                <div class="w-full px-4">
+                                    
+                                    <template x-if="!slot.empty">
+                                        <div>
+                                            <div class="bundle__sidebar-slot-title font-bold text-base" x-text="slot.title"></div>
+                                            <div class="bundle__sidebar-slot-name font-medium test-sm" x-text="slot.product_title"></div>
+                                        </div>
+                                    </template>
+                                    
+                                    <div x-show="(index + 1 ) < labels.length && slot.empty" class="text-center text-base font-bold" x-text="labels[index]"></div>
+
+                                    <div x-show="(index + 1 ) == labels.length && slot.empty" class="text-center text-base font-bold">
+                                        <span class="inline-block leading-[3rem] text-white font-bold bg-[#21A600] px-[2.4rem] rounded-[3rem]" x-text="labels[index]"></span>
+                                    </div>
+                                </div>
+
+                                <button class="bundle__item-remove absolute top-1/2 -translate-y-1/2 right-4 w-[2rem] h-[2rem] flex items-center justify-center rounded-full" @click="removeSlot(item)" x-show="!slot.empty">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1661_591)">
+                                            <rect width="20" height="20" rx="10" fill="#0D3063"></rect>
+                                            <path d="M15.7452 4.25473C12.5774 1.0869 7.4226 1.0869 4.25476 4.25473C1.08692 7.42257 1.08692 12.5774 4.25476 15.7452C7.4226 18.9131 12.5774 18.9131 15.7452 15.7452C18.9131 12.5774 18.9131 7.42257 15.7452 4.25473ZM14.8614 5.13862C17.5515 7.82872 17.5515 12.1712 14.8614 14.8613C12.1713 17.5514 7.82874 17.5514 5.13864 14.8613C2.44854 12.1712 2.44854 7.82872 5.13864 5.13862C7.82874 2.44852 12.1713 2.44852 14.8614 5.13862ZM12.2097 6.90638L10 9.11609L7.79029 6.90638L6.90641 7.79027L9.11612 9.99998L6.90641 12.2097L7.79029 13.0936L10 10.8839L12.2097 13.0936L13.0936 12.2097L10.8839 9.99998L13.0936 7.79027L12.2097 6.90638Z" fill="white"></path>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_1661_591">
+                                            <rect width="20" height="20" rx="10" fill="white"></rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </button>
+                            </div>
+                        </template>
+                    </div>
+
+                    <div class="bundle__cta absolute bottom-0 left-0 right-0 p-2 pb-8 bg-[#fff] md:bg-[transparent] md:relative md:p-0">
+                        
+                        <label class="product__subscription block mt-[.8rem] border-dashed border rounded-[.5rem] border-[#0D3063] py-[0.6rem] px-[1rem] my-2 text-xs bg-[#EEF7FF]">
+                            <input type="checkbox" class="hidden" x-model="isSubscription" value="subscription" :checked="isSubscription">
+                            
+                            <h4 class="font-bold block text-sm">SAVE 20% with automatic refills</h4>
+                            <p class="font-family-poppins text-[#7F7F7F]">Shipped every month. No commitment. Cancel anytime</p>
+                        </label>
+
+                        <div class="product__cta-shipping bg-[#F3F9FF] flex items-center justify-between rounded-[3rem] px-2 py-0.5 md:py-[.5rem] md:px-[1.5rem] text-xs md:text-sm">
+                            <div class="product__cta-shipping-label">
+                                <div class="flex items-center gap-1">
+                                    <div class="w-[2rem] h-[2rem] mr-1 bg-[#7FB190] rounded-full blink-animation"></div>
+                                    Ships by
+                    
+                                    <b><em>{{ shipping_date | date: '%a, %b %d' }}</em></b>
+                                </div>
+                            </div>
+                            <div class="product__cta-shipping-label flex items-center gap-2">
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24 4.09277H0V20.0929H24V4.09277Z" fill="white"/>
+                                    <path d="M24 6.09253H0V8.09236H24V6.09253Z" fill="#D80027"/>
+                                    <path d="M24 10.0928H0V12.0926H24V10.0928Z" fill="#D80027"/>
+                                    <path d="M24 14.0923H0V16.0921H24V14.0923Z" fill="#D80027"/>
+                                    <path d="M24 18.0925H0V20.0924H24V18.0925Z" fill="#D80027"/>
+                                    <path d="M12 4.09277H0V12.7083H12V4.09277Z" fill="#2E52B2"/>
+                                    <path d="M4.67923 7.62207L4.48596 8.21663H3.86084L4.36667 8.5839L4.1734 9.17841L4.67923 8.81115L5.18473 9.17841L4.99151 8.5839L5.49734 8.21663H4.87217L4.67923 7.62207Z" fill="white"/>
+                                    <path d="M4.87217 10.3621L4.67923 9.76758L4.48596 10.3621H3.86084L4.36667 10.7294L4.1734 11.3239L4.67923 10.9566L5.18473 11.3239L4.99151 10.7294L5.49734 10.3621H4.87217Z" fill="white"/>
+                                    <path d="M2.23012 10.3621L2.03714 9.76758L1.84388 10.3621H1.21875L1.72458 10.7294L1.53131 11.3239L2.03714 10.9566L2.54269 11.3239L2.34947 10.7294L2.8552 10.3621H2.23012Z" fill="white"/>
+                                    <path d="M2.03714 7.62207L1.84388 8.21663H1.21875L1.72458 8.5839L1.53131 9.17841L2.03714 8.81115L2.54269 9.17841L2.34947 8.5839L2.8552 8.21663H2.23012L2.03714 7.62207Z" fill="white"/>
+                                    <path d="M4.67923 5.47632L4.48596 6.07093H3.86084L4.36667 6.43824L4.1734 7.03276L4.67923 6.66544L5.18473 7.03276L4.99151 6.43824L5.49734 6.07093H4.87217L4.67923 5.47632Z" fill="white"/>
+                                    <path d="M2.03714 5.47632L1.84388 6.07093H1.21875L1.72458 6.43824L1.53131 7.03276L2.03714 6.66544L2.54269 7.03276L2.34947 6.43824L2.8552 6.07093H2.23012L2.03714 5.47632Z" fill="white"/>
+                                    <path d="M7.32127 7.62207L7.12805 8.21663H6.50293L7.00871 8.5839L6.81554 9.17841L7.32127 8.81115L7.82687 9.17841L7.6336 8.5839L8.13943 8.21663H7.5143L7.32127 7.62207Z" fill="white"/>
+                                    <path d="M7.5143 10.3621L7.32127 9.76758L7.12805 10.3621H6.50293L7.00871 10.7294L6.81554 11.3239L7.32127 10.9566L7.82687 11.3239L7.6336 10.7294L8.13943 10.3621H7.5143Z" fill="white"/>
+                                    <path d="M10.1559 10.3621L9.96288 9.76758L9.76961 10.3621H9.14453L9.65027 10.7294L9.45705 11.3239L9.96288 10.9566L10.4684 11.3239L10.2752 10.7294L10.781 10.3621H10.1559Z" fill="white"/>
+                                    <path d="M9.96288 7.62207L9.76961 8.21663H9.14453L9.65027 8.5839L9.45705 9.17841L9.96288 8.81115L10.4684 9.17841L10.2752 8.5839L10.781 8.21663H10.1559L9.96288 7.62207Z" fill="white"/>
+                                    <path d="M7.32127 5.47632L7.12805 6.07093H6.50293L7.00871 6.43824L6.81554 7.03276L7.32127 6.66544L7.82687 7.03276L7.6336 6.43824L8.13943 6.07093H7.5143L7.32127 5.47632Z" fill="white"/>
+                                    <path d="M9.96288 5.47632L9.76961 6.07093H9.14453L9.65027 6.43824L9.45705 7.03276L9.96288 6.66544L10.4684 7.03276L10.2752 6.43824L10.781 6.07093H10.1559L9.96288 5.47632Z" fill="white"/>
+                                    </svg>
+                    
+                                    Fast <b>FREE</b> Shipping
+                            </div>
+                        </div>
+
+                        <button @click="addToCart" class="product__cta-btn justify-center text-[2rem] font-bold bg-[#21A600] border-[.2rem] h-[6.6rem] border-[#037C2B] hover:bg-[#037C2B] rounded-[1rem] text-white w-full mt-[.8rem] flex items-center gap-4 disabled:bg-[#6E6E6E] disabled:border-[#252525]" :disabled="slots.filter(slot => !slot.empty).length != totalSlots" x-data="{ labels: ['Add 4 More Bags', 'Add 3 More Bags', 'Add 2 More Bags', 'Add Your Free Bag', 'Add To Cart', 'Adding to cart...'] }">
+
+                            <span x-text="labels[currentSlotsCount]" x-show="!addingToCart"></span>
+                            <span x-text="labels[5]" x-show="addingToCart"></span>
+
+                            <div class="inline-flex items-center justify-center font-medium h-[2.4rem] bg-[#0D3063] text-white text-base rounded-full px-[1.2rem] gap-[.8rem] font-family-poppins" x-show="currentSlotsCount > 0">
+                                <span class="line-through text-[#D8D8D8]" x-text="formatMoney(totalPrice?.compare_at_price)"></span>
+                
+                                <span x-text="formatMoney(isSubscription ? totalPrice?.subscription_price : totalPrice?.one_time_price)"></span>
+                            </div>
+
+                            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.879 8.70711C19.2695 8.31658 19.2695 7.68342 18.879 7.29289L12.515 0.928932C12.1245 0.538408 11.4913 0.538408 11.1008 0.928932C10.7103 1.31946 10.7103 1.95262 11.1008 2.34315L16.7577 8L11.1008 13.6569C10.7103 14.0474 10.7103 14.6805 11.1008 15.0711C11.4913 15.4616 12.1245 15.4616 12.515 15.0711L18.879 8.70711ZM0.171875 8V9H18.1719V8V7H0.171875V8Z" fill="white"></path>
+                            </svg>
+                        </button>
+
+                        <div class="bg-[#FFFBE2] rounded-[0.3rem] mt-[0.6rem] flex items-center">
+                            <div class="w-[5.8rem] h-[5.8rem] flex-shrink-0 flex items-center justify-center">
+                                <img src="https://cdn.shopify.com/s/files/1/0309/2257/1835/files/guarantee_image.png?v=1753573319" alt="Guarantee Badge" class="w-full h-full object-contain" width="58" height="58">
+                            </div>
+                            <div class="text-[1.3rem] md:text-sm font-family-poppins font-medium text-left text-[#222222] p-[0.6rem_2.6rem_.6rem_1rem] md:leading-[1.1]">
+                                <b>Less than 1%</b> of our customers use our <br><b>90-day money back guarantee.*</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <div class="bundle__mobile mx-auto hidden">
+
+        {% content_for "blocks" %}
+
+    </div>
+
+</div>
+
+
+<style>
+    .bundle__offer:first-child .bundle__offer-content {
+        background-color: #E30000;
+    }
+
+    .bundle__nav-button:hover,
+    .bundle__nav-button--active {
+        background-color: #75BDFF;
+        border-color: #4B8ECB;
+        border-width: 2px;
+        color: #fff;
+    }
+
+    .checkout__frequency input{
+        display: none;
+    }
+
+    .checkout__frequency-item {
+        border-radius: 0.8rem;
+        border: 1px solid #D5D7DA;
+        padding: 1rem 1.4rem;
+        background-color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+    
+      .checkout__frequency-item:hover,
+      .checkout__frequency-item--active {
+        border-color: #0D3063;
+        background-color: #E2F0FF;
+      }
+    
+      .checkout__frequency-title::before {
+        content: '';
+        display: block;
+        width: 1.6rem;
+        height: 1.6rem;
+        background-color: #fff;
+        border: 1px solid #D5D7DA;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+      }
+    
+      .checkout__frequency-item--active .checkout__frequency-title::before {
+        box-shadow: inset 0 0 0 3px #0D3063;
+        border-color: #0D3063;
+      }
+    
+      .checkout__frequency-features li {
+        background-image: url("data:image/svg+xml,%3Csvg width='21' height='20' viewBox='0 0 21 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_72_5199)'%3E%3Crect x='0.5' width='20' height='20' rx='10' fill='%2375BDFF'/%3E%3Cg clip-path='url(%23clip1_72_5199)'%3E%3Cpath d='M1.15785 5.23144C-1.68864 7.66793 -4.04783 11.1516 -5.80025 14.9236C-5.8471 15.0266 -5.99235 15.0243 -6.03921 14.9236C-7.09581 12.5761 -8.19927 10.8518 -9.44564 9.94981C-9.55575 9.87019 -9.48547 9.69677 -9.35192 9.71318C-7.99778 9.8842 -6.51715 10.7627 -5.91973 11.6647C-4.28211 8.81121 -1.99554 6.691 1.00792 5.01821C1.14614 4.94091 1.27733 5.12834 1.15785 5.23144Z' fill='white'/%3E%3Cpath d='M16.1578 5.23144C13.3114 7.66793 10.9522 11.1516 9.19975 14.9236C9.1529 15.0266 9.00765 15.0243 8.96079 14.9236C7.90419 12.5761 6.80073 10.8518 5.55436 9.94981C5.44425 9.87019 5.51453 9.69677 5.64808 9.71318C7.00222 9.8842 8.48285 10.7627 9.08027 11.6647C10.7179 8.81121 13.0045 6.691 16.0079 5.01821C16.1461 4.94091 16.2773 5.12834 16.1578 5.23144Z' fill='white'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_72_5199'%3E%3Crect x='0.5' width='20' height='20' rx='10' fill='white'/%3E%3C/clipPath%3E%3CclipPath id='clip1_72_5199'%3E%3Crect width='20' height='20' fill='white' transform='translate(0.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+        background-size: 2rem;
+        background-repeat: no-repeat;
+        background-position: left 0;
+        padding-left: 2.6rem;
+        padding-top: .3rem;
+        min-height: 2.4rem;
+        white-space: nowrap;
+      }
+
+      .product__subscription {
+        position: relative;
+        padding-left: 3.8rem;
+        cursor: pointer;
+    }
+
+    .product__subscription:has(input:checked)::before {
+        background-color: #0D3063;
+        border-color: #0D3063;
+    }
+
+    .product__subscription::before {
+        content: '';
+        display: block`;
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        width: 1.8rem;
+        height: 1.8rem;
+        margin-top: -.9rem;
+        background-color: #fff;
+        border-radius: .5rem;
+        background-image: url("data:image/svg+xml,%3Csvg width='11' height='10' viewBox='0 0 11 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.23182 1.15587L3.27032 6.90921L1.68836 5.21901C1.39695 4.94425 0.939012 4.9276 0.605967 5.16073C0.281248 5.40219 0.189661 5.82682 0.389488 6.16819L2.26286 9.21555C2.44604 9.49864 2.76243 9.67349 3.12045 9.67349C3.46182 9.67349 3.78654 9.49864 3.96972 9.21555C4.26946 8.82422 9.9895 2.00513 9.9895 2.00513C10.7389 1.23913 9.83131 0.564713 9.23182 1.14754V1.15587Z' fill='white'/%3E%3C/svg%3E%0A");
+        background-size: 1.2rem auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 1px solid #0D3063;
+    }
+
+    @media (max-width: 768px) { 
+        .bundle__filter-btn {
+            font-size: 1.4rem;
+            padding-left: 0.6rem; 
+            padding-right: 0.6rem;
+            line-height: 4rem;
+        }
+    }
+</style>
+
+
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('bundle', () => ({
+            isOpen: false,
+            isSubscription: true,
+            addingToCart: false,
+            sellingPlanId: 1657110587,
+            products: [],
+            activeProduct: null,
+            totalSlots: 4,  
+            currentSlotsCount: 0,
+            productPrice: 2249,
+            formatMoney(price) {
+                const newPrice = (price / 100).toFixed(2);
+                return `$${newPrice}`;
+            },
+            resetQuantity() {
+                this.products.forEach(product => {
+                    product.variants.forEach(variant => {
+                        variant.quantity = 0;
+                    });
+                });
+            },
+            get totalPrice() {
+                const priceObj = {
+                    compare_at_price: 18175,
+                    subscription_price: 9980,
+                    one_time_price: 11580,
+                }
+                return priceObj;
+            },
+            get filledSlots() {
+                return this.products
+                    .flatMap(p => p.variants)
+                    .flatMap(v => Array(Number(v.quantity) || 0).fill(v))
+                    .slice(0, this.totalSlots)
+            },
+            get currentSlotsCount() {
+                if(this.filledSlots.length == this.totalSlots) { 
+                    this.isOpen = true;
+
+                    if (!this.isDesktop()) {
+                        this.scrollToStart();
+                    }
+                }
+                return this.filledSlots.length
+            },
+            addToCart() {
+                if (this.addingToCart) return;
+                const itemsForCart = [];
+
+                this.filledSlots.forEach(slot => {
+                    if (itemsForCart.some(item => item.id == slot.id)) return;
+                    itemsForCart.push({
+                        id: slot.id,
+                        quantity: slot.quantity,
+                        selling_plan: this.isSubscription ? this.sellingPlanId : null
+                    });
+                });
+                
+                if (itemsForCart.length > 0) {
+                    this.addingToCart = true;
+                    Alpine.store('miniCart').clearAndAdd(itemsForCart, true);
+                }
+            },
+            scrollToStart(behavior = 'instant') {
+                const el = document.querySelector('.bundle');
+                
+                let offset = this.isDesktop() ? 70 : 50;
+                
+                if (el) {
+                    const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({
+                        top: y,
+                        behavior: behavior
+                    });
+                }
+            },
+            removeSlot(slot) {
+                if (!slot || slot.empty) return
+                const variant = this.products
+                    .flatMap(p => p.variants)
+                    .find(v => v.id === slot.id)
+                if (variant && variant.quantity > 0) {
+                    variant.quantity--
+                }
+            },
+            get slots() {
+                const filled = this.filledSlots
+                const emptyCount = this.totalSlots - filled.length
+                const emptySlots = Array(emptyCount).fill({ empty: true })
+                return [...filled, ...emptySlots]
+            },
+            collectProducts() {
+                this.$root.querySelectorAll('.bundle-product').forEach((el, i) => {
+                    const raw = el.textContent.trim()
+                    try {
+                        const parsed = JSON.parse(raw)
+                        this.products.push(parsed)
+                    } catch (e) {
+                        console.error(`Parsing JSON in bundle-product #${i}:`, e)
+                    }
+                })
+            },
+            setActiveProduct(id) {
+                const product = this.products.find(product => product.id === id);
+                if (product) {
+                    this.products.forEach(product => {
+                        product.active = false;
+                    });
+                    product.active = true;
+                    this.activeProduct = product;
+                }
+            },
+            isDesktop() {
+                return window.innerWidth > 768;
+            },
+            init() {
+                this.collectProducts();
+
+                if (this.isDesktop()) {
+                    this.isOpen = true;
+                }
+
+                this.$watch('isOpen', (value) => {
+                    if (!this.isDesktop()) {
+                        document.body.classList.toggle('hold', value);
+                    }
+                });
+
+                document.querySelectorAll('[data-scroll-to-start]').forEach(el => {
+                    el.addEventListener('click', () => {
+                        this.scrollToStart('smooth');
+                    });
+                });
+
+                window.addEventListener('pageshow', (event) => {
+                    if (event.persisted) {
+                        this.isOpen = false;
+                        this.addingToCart = false;
+                        this.resetQuantity();
+                    }
+                });
+            }
+        }))
+    })
+</script>
+
+<style>
+    #ps__widget_container {
+        display: none !important;
+    }
+</style>
+{% schema %}
+{
+  "name": "Bundle",
+  "settings": [
+    {
+        "type": "header",
+        "content": "Banner"
+    },
+    {
+      "type": "image_picker",
+      "label": "Banner Image",
+      "id": "banner_image"
+    },
+    {
+      "type": "text",
+      "label": "Banner Title",
+      "id": "banner_title"
+    },
+    {
+      "type": "text",
+      "label": "Banner Button Label",
+      "id": "banner_button_label"
+    }
+  ],
+  "blocks": [
+    {
+        "type": "_bundle-offers"
+    },
+    {
+        "type": "_bundle-steps"
+    },
+    {
+        "type": "_bundle-products"
+    },
+    {
+        "type": "_bundle-checkout"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bundle"
+    }
+  ]
+}
+{% endschema %}

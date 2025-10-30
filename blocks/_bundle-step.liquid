@@ -1,0 +1,30 @@
+
+<div class="flex font-family-poppins items-center border border-dashed border-[#0D3063] rounded-[1rem] p-2 gap-4 text-sm">
+  <span class="flex items-center justify-center w-[3.4rem] h-[3.4rem] rounded-full bg-[#0D3063] text-white font-bold">{{ block.settings.number }}</span>
+  <span class="font-[600] text-black">{{ block.settings.title }}</span>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Bundle Step",
+  "settings": [
+    {
+      "type": "number",
+      "label": "Number",
+      "id": "number"
+    },
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bundle Step"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,106 @@
+<div class="bundle__checkout py-6" x-show="slots.filter(slot => !slot.empty).length == totalSlots">
+    <h3 class="bundle__checkout-title text-[#0D3063] text-[2.8rem] font-black leading-[1.2] mb-4 text-center">
+        {{ block.settings.title }}
+    </h3>
+
+    <div class="bundle__items grid gap-3 mb-4">
+        <template x-for="item in slots">
+            <template x-if="!item.empty">
+            <div class="bundle__item bg-[#EEF7FF] rounded-[1rem] p-4 flex items-center gap-4 relative">
+                <div class="bundle__item-image w-[5rem] h-[5rem] rounded-[.25rem] overflow-hidden flex-shrink-0 relative">
+                    <img :src="item.image" :alt="item.product_title" class="w-full h-full object-contain" x-show="item.image">
+                </div>
+                <div class="bundle__item-content text-[#000] font-family-poppins leading-[1.2] text-sm ">
+                    <div class="bundle__item-title font-bold mb-1" x-text="item.product_title"></div>
+                    <div class="bundle__item-quantity font-medium" x-text="item.title"></div>
+                    
+                    <button class="bundle__item-remove absolute top-1/2 -translate-y-1/2 right-4 w-[2rem] h-[2rem] flex items-center justify-center rounded-full" @click="removeSlot(item)">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1661_591)">
+                            <rect width="20" height="20" rx="10" fill="#0D3063"/>
+                            <path d="M15.7452 4.25473C12.5774 1.0869 7.4226 1.0869 4.25476 4.25473C1.08692 7.42257 1.08692 12.5774 4.25476 15.7452C7.4226 18.9131 12.5774 18.9131 15.7452 15.7452C18.9131 12.5774 18.9131 7.42257 15.7452 4.25473ZM14.8614 5.13862C17.5515 7.82872 17.5515 12.1712 14.8614 14.8613C12.1713 17.5514 7.82874 17.5514 5.13864 14.8613C2.44854 12.1712 2.44854 7.82872 5.13864 5.13862C7.82874 2.44852 12.1713 2.44852 14.8614 5.13862ZM12.2097 6.90638L10 9.11609L7.79029 6.90638L6.90641 7.79027L9.11612 9.99998L6.90641 12.2097L7.79029 13.0936L10 10.8839L12.2097 13.0936L13.0936 12.2097L10.8839 9.99998L13.0936 7.79027L12.2097 6.90638Z" fill="white"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_1661_591">
+                            <rect width="20" height="20" rx="10" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            </template>
+        </template>
+    </div>
+
+    <div class="checkout__frequency text-sm flex flex-col font-family-poppins gap-4">
+        <label class="checkout__frequency-item block checkout__frequency-item--active">
+            <input type="radio" name="purchaseType" value="subscription" checked>
+            <div class="checkout__frequency-header flex items-start justify-between gap-4">
+                <div class="checkout__frequency-title items-center font-medium flex gap-3 text-[#333333]">
+                    <span>Subscribe and <span>Save 42%</span></span>
+                </div>
+                <div class="checkout__frequency-price" data-compare-price="$151.80">
+                    <div class="price" data-compare-price="$181.75">$104.95</div>
+                    <div class="text-xs font-medium text-[#333333]">
+                        (<span>$0.87</span> / packet)
+                    </div>
+                </div>
+            </div>
+            <div class="checkout__frequency-content mt-[.6rem]">
+                <div class="flex items-center justify-between gap-3 mb-[.6rem]">
+                    <div class="text-sm text-[#222222] flex items-center gap-3 flex-shrink-0">
+                        Delivery Every
+                    </div>
+                    <select class="text-sm font-medium text-[#333333] w-[80%]">
+                        <option value="1657110587">Every 4 Weeks</option>
+                        <option value="1956347963">Every 4 Weeks</option>
+                        <option value="1657143355">Every 2 Months</option>
+                        <option value="1956380731">Every 2 Months</option>
+                        <option value="1657176123">Every 3 Months</option>
+                        <option value="1956413499">Every 3 Months</option>
+                        <option value="1657208891" selected>Every 4 Months</option>
+                        <option value="1956446267">Every 4 Months</option>
+                    </select>
+                </div>
+                <div class="checkout__frequency-features text-xs flex flex-col gap-1 text-[#333333]">
+                    <ul>
+                        <li><em><strong>Free Expedited Shipping*</strong></em></li>
+                        <li><em><strong>Free $35.99  Mystery Gift</strong></em> on Order #3</li>
+                        <li><em><strong>Free $19.95  Mystery Gift</strong></em> on Order #3</li>
+                        <li>Easily Pause, Cancel or Adjust Flavors <em><strong>Any Time</strong></em></li>
+                    </ul>
+                </div>
+            </div>
+        </label>
+        <label class="checkout__frequency-item block">
+            <input type="radio" name="purchaseType" value="one-time">
+            <div class="checkout__frequency-header flex items-start justify-between gap-4">
+                <div class="checkout__frequency-title items-center font-medium flex gap-3 text-[#333333]">
+                    One-time Purchase
+                </div>
+                <div class="checkout__frequency-price text-right">
+                    <div class="price price--dark" data-compare-price="$175.80">$118.95</div>
+                </div>
+            </div>
+        </label>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Bundle Checkout",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bundle Checkout"
+    }
+  ]
+}
+{% endschema %}

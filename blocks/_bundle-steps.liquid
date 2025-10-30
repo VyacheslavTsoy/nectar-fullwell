@@ -1,0 +1,36 @@
+<div class="bundle__steps pt-[2rem]" x-show="slots.filter(slot => !slot.empty).length < totalSlots">
+    {% if block.settings.title != blank %}
+        <h3 class="bundle__steps-title text-[#000] text-[2rem] font-bold mb-4 text-center">
+            {{ block.settings.title }}
+        </h3>
+    {% endif 
+    %}
+    <div class="flex flex-col gap-4">
+        {% content_for "blocks" %}
+    </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Bundle Steps",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title",
+      "default": "How to Get This Offer!"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "_bundle-step"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bundle Steps"
+    }
+  ]
+}
+{% endschema %}

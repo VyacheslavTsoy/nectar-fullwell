@@ -1,0 +1,106 @@
+{% assign sst = section.settings %}
+
+<div class="banner pt-[4rem] pb-[3rem] md:h-[32rem] relative flex items-center">
+    <div class="banner__image absolute top-0 left-0 w-full h-full">
+        <picture>
+            <source srcset="{{ sst.image | image_url: width: 2020 }}" media="(min-width: 768px)">
+            <source srcset="{{ sst.mobile_image | image_url: width: 768 }}" media="(max-width: 768px)">
+            {{ sst.image | image_url: width: 2020 | image_tag: class: 'w-full h-full object-cover' }}
+        </picture>
+    </div>
+
+    <div class="container relative z-10">
+        <div class="banner__content flex flex-col md:flex-row justify-between items-center">
+            <div class="banner__text w-full md:max-w-[54rem]">
+                <h1 class="banner__title font-black text-[3.4rem] md:text-[5rem] text-[#0D3063] md:text-white leading-[1.15] mb-4 text-center md:text-left bg-[rgba(255,255,255,0.85)] md:bg-[transparent] p-4 md:p-0 rounded-[1rem]">{{ sst.title | newline_to_br }}</h1>
+
+                <button data-scroll-to-start class="banner__button md:inline-flex hidden justify-center items-center gap-4 text-white text-baseLg font-bold font-family-poppins leading-[5.4rem] min-w-[26.8rem] bg-[#0D3063] px-[3.2rem] rounded-[60px] hover:bg-[#21A600] transition-all duration-300">
+                    <span>{{ sst.button_label }}</span>
+
+                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.8839 10.0888C21.372 9.60068 21.372 8.80923 20.8839 8.32107L12.9289 0.366121C12.4408 -0.122034 11.6493 -0.122034 11.1612 0.366121C10.673 0.854277 10.673 1.64573 11.1612 2.13389L18.2322 9.20496L11.1612 16.276C10.673 16.7642 10.673 17.5556 11.1612 18.0438C11.6493 18.5319 12.4408 18.5319 12.9289 18.0438L20.8839 10.0888ZM0 9.20496V10.455H20V9.20496V7.95496H0V9.20496Z" fill="white"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="banner__steps flex flex-col gap-4 font-family-poppins w-full max-w-[44rem]">
+                {% for block in section.blocks %}
+                    <div class="banner__step flex items-center gap-4 bg-[rgba(255,255,255,0.85)] md:bg-white rounded-[1rem] py-[.8rem] px-4 border border-solid border-[#0D3063]">
+                        <div class="banner__step-icon w-[3.4rem] h-[3.4rem] rounded-full bg-[#0D3063] text-white font-medium text-sm  leading-[1.2] flex items-center justify-center flex-shrink-0">
+                            {{ forloop.index }}
+                        </div>
+                        <div class="banner__step-content">
+                            <h3 class="banner__step-title font-[600] leading-[1.2]">{{ block.settings.title }}</h3>
+                            <div class="banner__step-description text-sm">{{ block.settings.description }}</div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <button data-scroll-to-start class="banner__button inline-flex md:hidden justify-center items-center gap-4 text-white text-baseLg font-bold font-family-poppins leading-[5.4rem] w-full min-w-[26.8rem] bg-[#0D3063] px-[3.2rem] rounded-[60px] hover:bg-[#21A600] transition-all duration-300 mt-6">
+                <span>{{ sst.button_label }}</span>
+
+                <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.8839 10.0888C21.372 9.60068 21.372 8.80923 20.8839 8.32107L12.9289 0.366121C12.4408 -0.122034 11.6493 -0.122034 11.1612 0.366121C10.673 0.854277 10.673 1.64573 11.1612 2.13389L18.2322 9.20496L11.1612 16.276C10.673 16.7642 10.673 17.5556 11.1612 18.0438C11.6493 18.5319 12.4408 18.5319 12.9289 18.0438L20.8839 10.0888ZM0 9.20496V10.455H20V9.20496V7.95496H0V9.20496Z" fill="white"/>
+                </svg>
+            </button>
+
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Banner",
+  "settings": [
+    {
+      "type": "textarea",
+      "label": "Title",
+      "id": "title"
+    },
+    {
+      "type": "image_picker",
+      "label": "Image",
+      "id": "image"
+    },
+    {
+      "type": "image_picker",
+      "label": "Mobile Image",
+      "id": "mobile_image"
+    },
+    {
+      "type": "url",
+      "label": "Button Link",
+      "id": "button_link"
+    },
+    {
+      "type": "text",
+      "label": "Button Label",
+      "id": "button_label"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Step",
+      "type": "step",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title"
+        },
+        {
+          "type": "textarea",
+          "label": "Description",
+          "id": "description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner"
+    }
+  ]
+}
+{% endschema %}

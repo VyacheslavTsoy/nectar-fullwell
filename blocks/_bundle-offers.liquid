@@ -1,0 +1,32 @@
+<div class="bundle__offers" x-show="slots.filter(slot => !slot.empty).length < totalSlots">
+    <h3 class="bundle__checkout-title text-[#0D3063] text-[2.8rem] font-black leading-[1.2] mb-7 text-center">
+        Bundle & Save
+    </h3>
+    <div class="grid grid-cols-2 gap-4">
+        {% content_for "blocks" %}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Bundle Offers",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "_bundle-offer"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bundle Offers"
+    }
+  ]
+}
+{% endschema %}

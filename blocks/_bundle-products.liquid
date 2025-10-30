@@ -1,0 +1,51 @@
+<div class="bundle__products md:pt-7" x-show="slots.filter(slot => !slot.empty).length < totalSlots">
+    {% if block.settings.title != blank %}
+        <h3 class="bundle__products-title text-[#000] text-[2rem] font-bold mb-2 text-center">
+            {{ block.settings.title }}
+        </h3>
+    {% endif %}
+    
+    <div class="bundle__nav grid grid-cols-3 gap-3">
+        <template x-for="product in products">
+            <button @click="setActiveProduct(product.id)" class="bundle__nav-button transition-all duration-300 inline-flex h-[4.1rem] items-center justify-center w-full bg-white border border-[#0D3063] rounded-full p-2 text-base font-bold" x-text="product.title" :class="{ 'bundle__nav-button--active': product.active }"></button>
+        </template>
+    </div>
+
+    <div class="bundle__product-description text-center text-sm font-bold py-8" x-html="activeProduct?.description"></div>
+
+    <div class="bundle__product-variants grid grid-cols-3 gap-7">
+        <template x-for="variant in activeProduct?.variants">
+            <figure class="bundle__product-variant cursor-pointer" @click="variant.quantity++">
+                <div class="bundle__product-variant-image flex items-center relative justify-center w-[11rem] h-[11rem]">
+                    <img :src="variant?.image" :alt="variant?.title" class="w-full h-full object-contain rounded-[.6rem]">
+
+                    <span class="left-1/2 -translate-x-1/2 -bottom-2 absolute flex">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="20" height="20" rx="10" fill="#0D3063"/>
+                            <path d="M10 1.875C5.52 1.875 1.875 5.52 1.875 10C1.875 14.48 5.52 18.125 10 18.125C14.48 18.125 18.125 14.48 18.125 10C18.125 5.52 14.48 1.875 10 1.875ZM10 3.125C13.8044 3.125 16.875 6.19563 16.875 10C16.875 13.8044 13.8044 16.875 10 16.875C6.19563 16.875 3.125 13.8044 3.125 10C3.125 6.19563 6.19563 3.125 10 3.125ZM9.375 6.25V9.375H6.25V10.625H9.375V13.75H10.625V10.625H13.75V9.375H10.625V6.25H9.375Z" fill="white"/>
+                        </svg>
+                    </span>
+                </div>
+                <figcaption class="pt-2 font-family-poppins text-center text-[#000] text-sm font-medium leading-[1.2] mt-1" x-text="variant?.title"></figcaption>
+            </figure>
+        </template>
+    </div>
+
+    {% content_for "blocks" %}
+</div>
+
+{% schema %}
+{
+  "name": "Bundle Products",
+  "blocks": [
+    {
+      "type": "_bundle-product"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bundle Products"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,35 @@
+<figure class="bundle__offer border border-dashed border-[#0D3063] rounded-xl overflow-hidden">
+    {% if block.settings.image != blank %}
+        <div class="bundle-offer__image flex items-end justify-center h-[10rem] bg-[#F1FFEE]">
+            {% render 'img', image: block.settings.image, max_width: 500, class: 'w-full h-full max-h-[9.2rem] max-w-[15.3rem] object-contain' %}
+        </div>
+    {% endif %}
+
+    <figcaption class="bundle__offer-content text-center text-[#fff] text-[2rem] font-bold bg-[#0D3063] leading-[3rem] rounded-t-sm">
+        {{ block.settings.title }}
+    </figcaption>
+</figure>
+
+{% schema %}
+{
+  "name": "Bundle Offer",
+  "tag": null,
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Image",
+      "id": "image"
+    },
+    {
+      "type": "text",
+      "label": "Title",
+      "id": "title"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bundle Offer"
+    }
+  ]
+}
+{% endschema %}
