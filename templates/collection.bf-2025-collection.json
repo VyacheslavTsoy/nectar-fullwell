@@ -48,6 +48,185 @@
         "button_label": "Get Started"
       }
     },
+    "blank_section_tzEUYC": {
+      "type": "blank-section",
+      "blocks": {
+        "heading_XK8C9r": {
+          "type": "heading",
+          "name": "Heading",
+          "disabled": true,
+          "settings": {
+            "title": "<h2>Bundle & Save</h2>",
+            "text_color": "#123456",
+            "text_alignment": "center",
+            "heading_size": "2xl",
+            "font_weight": "black",
+            "font_family": "values-sans",
+            "use_mobile_settings": true,
+            "text_alignment_mobile": "center",
+            "heading_size_mobile": "lg",
+            "font_weight_mobile": "black"
+          },
+          "blocks": {}
+        },
+        "bundle_WmWbq3": {
+          "type": "bundle",
+          "name": "Bundle",
+          "settings": {
+            "banner_image": "shopify://shop_images/bundle-banner.png",
+            "banner_title": "Build Your OwnBundle & Save",
+            "banner_button_label": "Get Started"
+          },
+          "blocks": {
+            "bundle_offers_NfWc7k": {
+              "type": "_bundle-offers",
+              "name": "Bundle Offers",
+              "settings": {
+                "title": ""
+              },
+              "blocks": {
+                "bundle_offer_tqq9iJ": {
+                  "type": "_bundle-offer",
+                  "name": "Bundle Offer",
+                  "settings": {
+                    "image": "shopify://shop_images/bundle-offer-1.png",
+                    "title": "Buy 3 Get 1 Free"
+                  },
+                  "blocks": {}
+                },
+                "bundle_offer_g7BLF4": {
+                  "type": "_bundle-offer",
+                  "name": "Bundle Offer",
+                  "settings": {
+                    "image": "shopify://shop_images/bundle-offer-2.png",
+                    "title": "120 total Packets"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "bundle_offer_tqq9iJ",
+                "bundle_offer_g7BLF4"
+              ]
+            },
+            "bundle_steps_KUHL48": {
+              "type": "_bundle-steps",
+              "name": "Bundle Steps",
+              "settings": {
+                "title": "How to Get This Offer!"
+              },
+              "blocks": {
+                "bundle_step_XGQGfY": {
+                  "type": "_bundle-step",
+                  "name": "Bundle Step",
+                  "settings": {
+                    "number": 1,
+                    "title": "Select 4  Pouches (You can Mix & Match)"
+                  },
+                  "blocks": {}
+                },
+                "bundle_step_qKiqQ8": {
+                  "type": "_bundle-step",
+                  "name": "Bundle Step",
+                  "settings": {
+                    "number": 2,
+                    "title": "Choose a one-time or subscription order"
+                  },
+                  "blocks": {}
+                },
+                "bundle_step_wBJFYx": {
+                  "type": "_bundle-step",
+                  "name": "Bundle Step",
+                  "settings": {
+                    "number": 3,
+                    "title": "Add To Cart & Checkout"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "bundle_step_XGQGfY",
+                "bundle_step_qKiqQ8",
+                "bundle_step_wBJFYx"
+              ]
+            },
+            "bundle_products_zx7HN4": {
+              "type": "_bundle-products",
+              "name": "Bundle Products",
+              "settings": {},
+              "blocks": {
+                "bundle_product_9xMUPj": {
+                  "type": "_bundle-product",
+                  "name": "Bundle Product",
+                  "settings": {
+                    "title": "Essential Daily Hydration",
+                    "label": "Hydration",
+                    "description": "<p>A clean, daily hydration mix optimized to hydrate you faster and more efficiently than water alone. No Sugar. No Calories. Simply Refreshing.</p>",
+                    "product": "essential-daily-hydration-1"
+                  },
+                  "blocks": {}
+                },
+                "bundle_product_d3M67n": {
+                  "type": "_bundle-product",
+                  "name": "Bundle Product",
+                  "settings": {
+                    "title": "Essential Daily Calm",
+                    "label": "Calm",
+                    "description": "<p>A clean, daily magnesium & adaptogen mix optimized to help you relax and escape into a deep calm. No Sugar. No Calories. Refreshingly Simple.</p>",
+                    "product": "essential-daily-calm"
+                  },
+                  "blocks": {}
+                },
+                "bundle_product_WRcdin": {
+                  "type": "_bundle-product",
+                  "name": "Bundle Product",
+                  "settings": {
+                    "title": "Essential Daily Energy",
+                    "label": "Energy",
+                    "description": "<p>A clean, daily energy booster made with 75mg of Organic Caffeine, L-Theanine, Vitamin B12 and Pure Electrolytes. No Sugar. No Calories. Simply Refreshing.</p>",
+                    "product": "essential-daily-energy"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "bundle_product_9xMUPj",
+                "bundle_product_d3M67n",
+                "bundle_product_WRcdin"
+              ]
+            },
+            "bundle_checkout_UMtNhX": {
+              "type": "_bundle-checkout",
+              "name": "Bundle Checkout",
+              "settings": {
+                "title": "Finalize Your Bundle"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "bundle_offers_NfWc7k",
+            "bundle_steps_KUHL48",
+            "bundle_products_zx7HN4",
+            "bundle_checkout_UMtNhX"
+          ]
+        }
+      },
+      "block_order": [
+        "heading_XK8C9r",
+        "bundle_WmWbq3"
+      ],
+      "name": "Bundle Section",
+      "settings": {
+        "desktop_padding_top": 40,
+        "desktop_gap_between_blocks": 20,
+        "bg_color": "#ffffff",
+        "desktop_max_width": 1140,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 0,
+        "mobile_gap_between_blocks": 10
+      }
+    },
     "main": {
       "type": "main-404",
       "disabled": true,
@@ -237,6 +416,7 @@
   },
   "order": [
     "banner_4E68zi",
+    "blank_section_tzEUYC",
     "main",
     "blank_section_nmbUaA"
   ]
