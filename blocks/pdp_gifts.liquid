@@ -540,7 +540,11 @@
                     minQty: {{ bag.min_quantity }},
                     title: '{{ bag.title }}',
                     price_per_packet: {{ bag.price_per_item_in_cents }},
-                    saving_percent: '{{ bag.saving_label_text }}',
+                    {% if bst.test_percent and bag.min_quantity == 1 %}
+                    saving_percent: 'Save 28%',
+                    {% else %}
+                        saving_percent: '{{ bag.saving_label_text }}',
+                    {% endif %}
                     price: {{ bag.price }},
                     blue_badge: '{{ bag.blue_badge_text | default: '' }}',
                     yellow_badge: '{{ bag.yellow_badge_text | default: '' }}',
