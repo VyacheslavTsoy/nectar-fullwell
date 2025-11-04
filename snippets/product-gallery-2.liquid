@@ -6,7 +6,7 @@
             {% for image in product_images %}
             <div class="swiper-slide">
                 <div class="thumbnail-gallery__item overflow-hidden rounded-[0.8rem]">
-                    {% render 'img', image: image, max_width: 240 %}
+                    {% render 'img', image: image, max_width: 96, lazy: true %}
                 </div>
             </div>
             {% endfor %}
@@ -17,7 +17,7 @@
         <div class="swiper-wrapper">
             {% for image in product_images %}
             <div class="swiper-slide">
-                {% render 'img', image: image, max_width: 1400 %}
+                {% render 'img', image: image, max_width: 1000, preload: forloop.first %}
             </div>
             {% endfor %}
         </div>

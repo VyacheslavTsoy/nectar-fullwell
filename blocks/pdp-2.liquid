@@ -19,7 +19,7 @@
                 </button>
             </div>
         </div>
-        <div class="product__info md:w-[50%]">
+        <div class="product__info w-full md:w-[50%]">
             {% content_for 'blocks' %}
 
             <div class="buttons-group flex flex-col md:hidden md:flex-row justify-center items-center mt-8">
@@ -278,6 +278,13 @@
 
     .features-list ul {
         gap: .6rem;
+    }
+
+    @media (max-width: 1024px) { 
+        .product__info {
+            max-width: 100%;
+            padding-bottom: 2.4rem;
+        }
     }
 
     @media (max-width: 480px) {

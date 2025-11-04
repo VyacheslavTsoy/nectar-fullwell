@@ -19,7 +19,7 @@
                     <div class="ingredients__item-description text-base">{{ ingredient.description | metafield_tag }}</div>
                 </div>
                 <div class="ingredients__item-image w-[8rem] md:w-[12rem] flex-shrink-0">
-                    {% render 'img', image: ingredient.image, max_width: 240, class: 'w-full h-full object-cover' %}
+                    {% render 'img', image: ingredient.image, max_width: 200, class: 'w-full h-full object-cover', lazy: true %}
                 </div>
             </div>
         {% endfor %}
@@ -54,11 +54,11 @@
                 {% for image in ingredient_modal.table_images.value %}
                     {% if forloop.first %}
                         <div class="ingredients__modal-image-desktop hidden md:block">
-                            {% render 'img', image: image, max_width: 1400 %}
+                            {% render 'img', image: image, max_width: 1400, lazy: true %}
                         </div>
                     {% else %}
                         <div class="ingredients__modal-image-mobile block md:hidden">
-                            {% render 'img', image: image, max_width: 800 %}
+                            {% render 'img', image: image, max_width: 800, lazy: true %}
                         </div>
                     {% endif %}
                 {% endfor %}

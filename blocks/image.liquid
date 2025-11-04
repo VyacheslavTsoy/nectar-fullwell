@@ -20,7 +20,7 @@
     --border-radius: {{ bst.border_radius }}px;
     ">
     <a class="block-image__link block h-full w-full" href="{{ bst.image_url }}">
-        {% render 'img', image: bst.image, max_width: 800 %}    
+        {% render 'img', image: bst.image, max_width: 400, lazy: true %}    
     </a>
 </div>
 

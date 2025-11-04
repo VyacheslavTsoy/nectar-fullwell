@@ -2,10 +2,10 @@
 
 <div class="banner py-[var(--vertical-padding-mobile)] md:py-[var(--vertical-padding-desktop)]" style="--vertical-padding-desktop: {{ bst.vertical_padding_desktop | times: 0.1 }}rem; --vertical-padding-mobile: {{ bst.vertical_padding_mobile | times: 0.1 }}rem;">
     <div class="banner__image hidden md:block">
-        {% render 'img', image: bst.image, max_width: 1920 %}
+        {% render 'img', image: bst.image, max_width: 1920, lazy: true %}
     </div>
     <div class="banner__image md:hidden">
-        {% render 'img', image: bst.image_mobile, max_width: 768 %}
+        {% render 'img', image: bst.image_mobile, max_width: 768, lazy: true %}
     </div>
 </div>
 
