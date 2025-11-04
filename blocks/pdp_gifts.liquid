@@ -505,6 +505,7 @@
             currentQty: 0,
             currentTotal: 0,
             allGiftsAvailableMoreThanOne: {{ block.settings.unlock_all_gifts_if_more_than_one_pouch }},
+            allGiftsAvailableEqual3: {{ block.settings.unlock_all_gifts_if_equal_3 }},
             currentProduct: {
                 id: {{ product.id }},
                 handle: '{{ product.handle }}',
@@ -634,6 +635,10 @@
                                 if (this.minQty == 1 && index >= 2) return;
                             }
 
+                            if (this.allGiftsAvailableEqual3) {
+                                if ((index) > this.minQty) return;
+                            }
+
                             itemsForCart.push({
                                 id: product.variant_id,
                                 quantity: 1
@@ -742,6 +747,12 @@
         "type": "checkbox",
         "id": "unlock_all_gifts_if_more_than_one_pouch",
         "label": "Unlock All Gifts If > 1 Pouch",
+        "default": false
+    },
+    {
+        "type": "checkbox",
+        "id": "unlock_all_gifts_if_equal_3",
+        "label": "Unlock All Gifts If Equal 3 Pouch",
         "default": false
     },
     {
