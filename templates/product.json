@@ -12,9 +12,103 @@
     "blank_section_rNAFgq": {
       "type": "blank-section",
       "blocks": {
+        "pdp_2_7ePjCJ": {
+          "type": "pdp-2",
+          "name": "Product 2",
+          "settings": {
+            "related_doctor_review": "{{ closest.product.metafields.custom.related_doctor_review.value }}"
+          },
+          "blocks": {
+            "inline_review_8AFGD6": {
+              "type": "inline-review",
+              "name": "Inline Review",
+              "settings": {
+                "title": "<p>Excellent <strong>4.8</strong> | 12,000+ Trusted Reviews</p>"
+              },
+              "blocks": {}
+            },
+            "heading_DjNVpC": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "title": "<h1>{{ closest.product.title }}</h1>",
+                "text_color": "#123456",
+                "text_alignment": "left",
+                "heading_size": "2xl",
+                "font_weight": "bold",
+                "font_family": "values-sans",
+                "use_mobile_settings": true,
+                "text_alignment_mobile": "left",
+                "heading_size_mobile": "md",
+                "font_weight_mobile": "bold"
+              },
+              "blocks": {}
+            },
+            "text_BpC6wU": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "title": "<p><strong>{{ closest.product.metafields.custom.product_subtitle.value }}</strong></p>",
+                "text_alignment": "left",
+                "font_family": "values-sans",
+                "font_weight": "normal",
+                "text_color": "#42a4ff",
+                "font_size": 20,
+                "font_size_mobile": 18,
+                "text_alignment_mobile": "left"
+              },
+              "blocks": {}
+            },
+            "pdp_items_per_bag_mG6j3W": {
+              "type": "_pdp-items-per-bag",
+              "name": "Items Per Bag",
+              "settings": {
+                "title": "🍒 1 Bag Contains 30 Delicious Packets  🍉"
+              },
+              "blocks": {}
+            },
+            "features_list_kkUfed": {
+              "type": "features-list",
+              "name": "Features List",
+              "settings": {
+                "title": "{{ closest.product.metafields.custom.features_list | metafield_tag }}"
+              },
+              "blocks": {}
+            },
+            "pdp_cta_new_RMtnrM": {
+              "type": "_pdp-cta-new",
+              "name": "CTA New",
+              "settings": {
+                "shipping_label_1": "Ships by",
+                "shipping_label_2": "<p>Fast <strong>FREE</strong> Shipping</p>",
+                "button_behavior": "add-to-cart",
+                "cta_button_text": "Choose Your Package",
+                "cta_button_url": "",
+                "guarantee_text": "<p><em><strong>Less than 1%</strong></em> of customers claim our <strong>90 Day Money Back Guarantee*</strong></p>"
+              },
+              "blocks": {}
+            },
+            "pdp_faq_aPN477": {
+              "type": "_pdp-faq",
+              "name": "FAQ",
+              "settings": {},
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "inline_review_8AFGD6",
+            "heading_DjNVpC",
+            "text_BpC6wU",
+            "pdp_items_per_bag_mG6j3W",
+            "features_list_kkUfed",
+            "pdp_cta_new_RMtnrM",
+            "pdp_faq_aPN477"
+          ]
+        },
         "pdp_3PWPGC": {
           "type": "pdp",
           "name": "Product",
+          "disabled": true,
           "settings": {},
           "blocks": {
             "inline_review_3bbgCM": {
@@ -73,6 +167,7 @@
                 "shipping_label_2": "<p>Expedited <strong>USPS</strong> Shipping</p>",
                 "cta_button_text": "Choose Your Package",
                 "cta_button_url": "shopify://pages/checkout",
+                "select_flavors_flow": false,
                 "guarantee_text": "<p><em><strong>Less than 1%</strong></em> of customers claim our <strong>90 Day Money Back Guarantee*</strong></p>"
               },
               "blocks": {}
@@ -95,6 +190,7 @@
         }
       },
       "block_order": [
+        "pdp_2_7ePjCJ",
         "pdp_3PWPGC"
       ],
       "name": "Product Section",
