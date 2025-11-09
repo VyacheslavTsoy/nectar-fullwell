@@ -58,7 +58,8 @@
           "name": "Product Gifts",
           "settings": {
             "test_percent": false,
-            "unlock_all_gifts_if_more_than_one_pouch": true,
+            "unlock_all_gifts_if_more_than_one_pouch": false,
+            "unlock_all_gifts_if_equal_3": true,
             "related_product": "{{ product }}",
             "related_pouches": [],
             "products": [
