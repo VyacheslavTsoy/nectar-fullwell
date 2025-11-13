@@ -33,14 +33,14 @@
             "settings": {
               "font_size": 12,
               "icon": "",
-              "title": "<p>🎁  <strong>Black Friday Sale</strong></p>"
+              "title": "<p>🎁  <strong>Black Friday</strong></p>"
             }
           },
           "badge_hnKpYh": {
             "type": "badge",
             "settings": {
               "background_color": "#e30000",
-              "text": "UP TO 50% OFF",
+              "text": "Buy 3 Get 1 Free!",
               "link": "shopify://pages/bundle"
             }
           },
