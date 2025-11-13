@@ -43,7 +43,7 @@
       ],
       "name": "Announcement Bar",
       "settings": {
-        "background_color": "#0d3063",
+        "background_color": "#e30000",
         "text_color": "#ffffff",
         "vertical_indent": 6,
         "gap": 10,
@@ -57,7 +57,9 @@
           "type": "pdp_gifts",
           "name": "Product Gifts",
           "settings": {
+            "test_percent": false,
             "unlock_all_gifts_if_more_than_one_pouch": true,
+            "unlock_all_gifts_if_equal_3": false,
             "related_product": "{{ product }}",
             "related_pouches": [],
             "products": [
