@@ -23,7 +23,7 @@
         "badge_TdUxyk": {
           "type": "badge",
           "settings": {
-            "background_color": "#e30000",
+            "background_color": "#0d3063",
             "text": "UP TO 60% OFF",
             "link": ""
           }
@@ -43,7 +43,7 @@
       ],
       "name": "Announcement Bar",
       "settings": {
-        "background_color": "#0d3063",
+        "background_color": "#e30000",
         "text_color": "#ffffff",
         "vertical_indent": 6,
         "gap": 10,
@@ -59,6 +59,7 @@
           "settings": {
             "test_percent": true,
             "unlock_all_gifts_if_more_than_one_pouch": true,
+            "unlock_all_gifts_if_equal_3": false,
             "related_product": "{{ product }}",
             "related_pouches": [],
             "products": [
