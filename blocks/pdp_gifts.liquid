@@ -504,6 +504,10 @@
             sellingPlan: null,
             currentQty: 0,
             currentTotal: 0,
+            multistepFlow: {{ block.settings.use_multistep_flow }},
+            {% if block.settings.use_multistep_flow %}
+                currentStep: 1,
+            {% endif %}
             allGiftsAvailableMoreThanOne: {{ block.settings.unlock_all_gifts_if_more_than_one_pouch }},
             allGiftsAvailableEqual3: {{ block.settings.unlock_all_gifts_if_equal_3 }},
             currentProduct: {
@@ -734,6 +738,9 @@
     },
     {
         "type": "_pdp-onestep-cta",
+    },
+    {
+        "type": "_pdp-multistep-cta",
     }
   ],
   "settings": [
@@ -753,6 +760,12 @@
         "type": "checkbox",
         "id": "unlock_all_gifts_if_equal_3",
         "label": "Unlock All Gifts If Equal 3 Pouch",
+        "default": false
+    },
+    {
+        "type": "checkbox",
+        "id": "use_multistep_flow",
+        "label": "Use Multistep Flow",
         "default": false
     },
     {

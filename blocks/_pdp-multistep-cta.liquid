@@ -13,7 +13,7 @@
 </div>
 
 <div>
-    <div class="checkout__sizes grid grid-cols-3 gap-4 mt-[1.6rem] mb-[1rem]">
+    <div class="checkout__sizes grid grid-cols-3 gap-4 mt-[1.6rem] mb-[1rem]" x-show="multistepFlow && currentStep == 1">
         <template x-for="pouch in pouches">
             <label class="checkout__size block">
                 <input type="radio" name="pouches" x-model="minQty" :checked="pouch.minQty === minQty" :value="pouch.minQty">
@@ -30,7 +30,16 @@
     </div>
 </div>
 
-<div class="product__flavors flex flex-col gap-[.8rem]" x-show="currentProduct.variants.length > 0">
+<div class="my-[1.6rem] relative text-center text-baseLg font-bold" x-show="currentStep == 2">
+    <button class="flex items-center justify-center mr-[.6rem] w-[2.8rem] h-[2.8rem] rounded-full bg-[#0D3063] text-white p-[.6rem] absolute left-0 top-[50%] translate-y-[-50%] py-[1.4rem]" @click="currentStep = 1">
+        <svg class="rotate-180" width="12" height="12" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.672 7.70302L0.5 7.70302V9.70302H12.672L7.308 15.067L8.722 16.481L16.5 8.70302L8.722 0.925018L7.308 2.33902L12.672 7.70302Z" fill="white"></path>
+        </svg>
+    </button> 
+    <span>Select at least <span x-text="minQty"></span> bags</span>
+</div>
+
+<div class="product__flavors flex flex-col gap-[.8rem]" x-show="multistepFlow && currentProduct.variants.length > 0 && currentStep == 2">
         
     <template x-for="variant in currentProduct.variants" :key="variant.id">
         <div class="checkout__flavor flex items-center">
@@ -195,36 +204,15 @@
     </div>
 </div>
 
-<button id="add-to-cart" @click="addToCart" class="flex items-center justify-center gap-3 md:gap-[1.2rem] text-[1.6rem] md:text-[2rem] font-bold bg-[#21A600] border-[.2rem] h-[6.6rem] border-[#037C2B] hover:bg-[#037C2B] rounded-[1rem] text-white w-full checkout__cta-btn" :disabled="currentQty < currentPouch?.minQty"
->
-    <span x-show="currentQty < currentPouch?.minQty">Select <span x-text="currentPouch?.minQty - currentQty"></span> More Bag<span x-show="currentPouch?.minQty - currentQty > 1">s</span></span>
-    
-    <span x-show="currentQty >= currentPouch?.minQty" x-text="isProcessing ? 'Adding to cart...' : 'Checkout Now'"></span>
-
-    <span class="inline-flex items-center justify-center font-medium h-[2.4rem] bg-[#0D3063] text-white text-base rounded-full px-[1.2rem] gap-[.8rem]">
-        <template x-if="currentQty <= maxQty">
-            <div>
-                <span class="line-through text-[#D8D8D8]" x-text="formatMoney(currentPouch?.compare_at_price)"></span>
-
-                <span x-text="formatMoney(currentPouch?.price)"></span>
-            </div>
-        </template>
-
-        <template x-if="currentQty > maxQty">
-            <div>
-                <span class="line-through text-[#D8D8D8]" x-text="formatMoney(currentPouch?.compare_price_per_packet * currentQty)"></span>
-
-                <span x-text="formatMoney(currentPouch?.price_per_packet * currentQty)"></span>
-            </div>
-        </template>
-    </span>
+<a :href="`/pages/offer?view=offer-only-flavors&minQty=${minQty}&product-handle={{ product.handle }}`" class="flex items-center justify-center gap-3 md:gap-[1.2rem] text-[1.6rem] md:text-[2rem] font-bold bg-[#21A600] border-[.2rem] h-[6.6rem] border-[#037C2B] hover:bg-[#037C2B] rounded-[1rem] text-white w-full">
+    <span>Select Flavors</span>
 
     <span class="ml-[.6rem]">
         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12.672 7.70302L0.5 7.70302V9.70302H12.672L7.308 15.067L8.722 16.481L16.5 8.70302L8.722 0.925018L7.308 2.33902L12.672 7.70302Z" fill="white"></path>
         </svg>
     </span>
-</button>
+</a>
 
 <div class="bg-[#FFFBE2] rounded-[0.3rem] mt-[0.6rem] flex items-center">
     <div class="w-[5.8rem] h-[5.8rem] flex-shrink-0 flex items-center justify-center">
@@ -268,7 +256,7 @@
 
 {% schema %}
 {
-  "name": "Gift Onestep Flow",
+  "name": "Gift Multistep Flow",
   "settings": [
     {
         "type": "header",
@@ -293,7 +281,7 @@
 
   "presets": [
     {
-      "name": "Gift Onestep Flow"
+      "name": "Gift Multistep Flow"
     }
   ]
 }

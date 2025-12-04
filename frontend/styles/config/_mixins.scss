@@ -7,7 +7,7 @@ $breakpoints: (
   lg: 1100px,
   md: 767px,
   sm: 575px,
-  xs: 480px
+  xs: 375px
 );
 
 @mixin down($breakpoint) {
