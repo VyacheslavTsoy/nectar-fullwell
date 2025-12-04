@@ -21,7 +21,6 @@
         #{{ block.id }} {
             font-size: var(--font-size-{{ bst.heading_size_mobile }});
             font-weight: var(--font-weight-{{ bst.font_weight_mobile }});
-            font-family: var(--font-family-{{ bst.font_family_mobile }});
             text-align: {{ bst.text_alignment_mobile }};
         }
     }
@@ -127,6 +126,10 @@
           "label": "Bold"
         },
         {
+            "value": "extra_bold",
+            "label": "Extra Bold"
+        },
+        {
           "value": "black",
           "label": "Black"
         }
@@ -145,6 +148,10 @@
         {
           "value": "values-sans",
           "label": "Values Sans"
+        },
+        {
+          "value": "inter",
+          "label": "Inter"
         }
       ],
       "default": "poppins"
@@ -235,6 +242,10 @@
             "value": "bold",
             "label": "Bold"
           },
+          {
+            "value": "extra_bold",
+            "label": "Extra Bold"
+        },
           {
             "value": "black",
             "label": "Black"

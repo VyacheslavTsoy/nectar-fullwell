@@ -40,7 +40,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     {% render 'entry' with 'main.theme.js' %}
     {% render 'entry' with 'main.scss', preload_stylesheet: true %}
@@ -136,5 +136,86 @@
         });
     </script>
     {% endif %}
-  {%- render "ecom_footer"-%}</body>
+  {%- render "ecom_footer"-%}
+
+    {% if template contains 'reasons' %}
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            const scrollLinks = document.querySelectorAll('[href="#to-product-section"]');
+            const productSection = document.querySelector('.product')?.closest('.blank-section');
+            const stickyCta = document.querySelector('.shopify-section > .sticky-cta.fixed');
+            
+            if (!stickyCta) return;
+            
+            const isMobile = window.innerWidth < 768;
+            const mobileOffset = -175;
+            
+            if (scrollLinks.length > 0 && productSection) {
+                scrollLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+            
+                    const rectTop = productSection.getBoundingClientRect().top + window.scrollY;
+            
+                    // Смещение только на мобильных
+                    const targetScroll = isMobile
+                    ? rectTop - mobileOffset
+                    : rectTop;
+            
+                    window.scrollTo({
+                    top: targetScroll,
+                    behavior: 'smooth'
+                    });
+                });
+                });
+            }
+            
+            function isProductSectionVisible() {
+                if (!productSection) return false;
+            
+                const rect = productSection.getBoundingClientRect();
+                const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+            
+                return rect.top < windowHeight && rect.bottom > 0;
+            }
+            
+            function handleStickyCta() {
+                const scrolledEnough = window.scrollY > 200;
+                const sectionVisible = isProductSectionVisible();
+            
+                if (sectionVisible) {
+                stickyCta.classList.remove('sticky-cta--visible');
+                return;
+                }
+            
+                if (scrolledEnough) {
+                stickyCta.classList.add('sticky-cta--visible');
+                } else {
+                stickyCta.classList.remove('sticky-cta--visible');
+                }
+            }
+            
+            handleStickyCta();
+            window.addEventListener('scroll', handleStickyCta);
+            window.addEventListener('resize', handleStickyCta);
+            });
+        </script>
+
+        {% style %}
+        .product + .sticky-cta {
+            display: none !important;
+        }
+
+            .junip-review-section,
+            .junip-product-review-container {
+                background-color: #ffffff !important;
+            }
+
+            .junip-review-section {
+                padding-bottom: 10rem !important;
+            }
+        {% endstyle %}
+    {% endif %}
+
+</body>
 </html>

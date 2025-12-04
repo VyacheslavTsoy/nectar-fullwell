@@ -22,6 +22,7 @@ export default {
       normal: 400,
       medium: 500,
       bold: 700,
+      extra_bold: 800,
       black: 900,
     },
     screens: {
@@ -46,6 +47,7 @@ export default {
         ValuesSans: ['Values Sans', 'sans-serif'],
         Poppins: ['Poppins', 'sans-serif'],
         Atkinson: ['Atkinson', 'sans-serif'],
+        Inter: ['Inter', 'sans-serif'],
       },
       container: {
         center: true,
@@ -154,10 +156,12 @@ export default {
           '--font-weight-normal': String(theme('fontWeight.normal')),
           '--font-weight-medium': String(theme('fontWeight.medium')),
           '--font-weight-bold': String(theme('fontWeight.bold')),
+          '--font-weight-extra_bold': String(theme('fontWeight.extra_bold')),
           '--font-weight-black': String(theme('fontWeight.black')),
           '--font-family-poppins': String(theme('fontFamily.Poppins')),
           '--font-family-values-sans': String(theme('fontFamily.ValuesSans')),
           '--font-family-atkinson': String(theme('fontFamily.Atkinson')),
+          '--font-family-inter': String(theme('fontFamily.Inter')),
         },
       });
     },

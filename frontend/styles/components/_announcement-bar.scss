@@ -69,4 +69,45 @@
             border-radius: 5px;
         }
     }
+
+    &__timer {
+        &--white-skin {
+            background-color: $white;
+            border-radius: .5rem;
+        }
+
+        &--white-skin .timer-block {
+            gap: .2rem;
+            padding: .7rem .6rem;
+
+            &__cell {
+                font-size: 1rem !important;
+                width: 3.6rem;
+                text-transform: uppercase;
+                background-color: transparent;
+                font-family: 'Poppins', sans-serif;
+
+                [data-cell] {
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 900 !important;
+                    font-size: 2rem !important;
+                }
+            }
+
+            &__divider {
+                align-self: flex-start;
+                padding-top: .4rem;
+
+                &::after,
+                &::before {
+                    content: "";
+                    width: 3px;
+                    height: 3px;
+                    display: block;
+                    background-color: #0D3063;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
 }
