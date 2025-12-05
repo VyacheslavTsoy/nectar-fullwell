@@ -8,7 +8,7 @@
      {% for image in altGallery %}
             <div class="swiper-slide">
                 <div class="thumbnail-gallery__item overflow-hidden rounded-[0.8rem]">
-                {{ image }}
+                {{ image.value }}
                     {% render 'img', image: image, max_width: 96, lazy: true %}
                 </div>
             </div>
