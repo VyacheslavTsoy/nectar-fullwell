@@ -2,6 +2,7 @@
 
 {%  if alternate_images %}
     {% assign altGallery = alternate_images.images.value %}
+    {{ alternate_images | json }}
      <!--
      {% for image in altGallery %}
             <div class="swiper-slide">
