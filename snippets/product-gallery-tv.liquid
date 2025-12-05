@@ -1,7 +1,7 @@
 {% assign product_images = product.images | where: 'attached_to_variant?', false %}
 
 {%  if alternate_images %}
-    {% comment %} {% assign product_images = alternate_images.value %} {% endcomment %}
+    {% assign product_images = alternate_images %}
      <!--
      {{ alternate_images | json }}
      -->
