@@ -7,17 +7,14 @@
 <div class="product__gallery-inner flex flex-col-reverse lg:flex-row gap-4">
     <div class="swiper thumbnail-gallery swiper-vertical overflow-hidden flex-shrink-0">
         <div class="swiper-wrapper">
-            {% if alt_title_image != blank %}
-            <div class="swiper-slide">
-                <div class="thumbnail-gallery__item overflow-hidden rounded-[0.8rem]">
-                    {% render 'img', image: alt_title_image, max_width: 1000, preload: forloop.first %}
-                </div>
-            </div>    
-            {% endif %}
             {% for image in product_images %}
             <div class="swiper-slide">
                 <div class="thumbnail-gallery__item overflow-hidden rounded-[0.8rem]">
-                    {% render 'img', image: image, max_width: 96, lazy: true %}
+                    {% if alt_title_image != blank and forloop.first %}
+                            {% render 'img', image: alt_title_image, max_width: 1000, preload: forloop.first %}
+                    {% else %}
+                        {% render 'img', image: image, max_width: 96, lazy: true %}
+                    {% endif %}
                 </div>
             </div>
             {% endfor %}
