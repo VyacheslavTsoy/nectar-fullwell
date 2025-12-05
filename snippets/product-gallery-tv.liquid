@@ -2,6 +2,9 @@
 
 {%  if alternate_images %}
     {% comment %} {% assign product_images = alternate_images.value %} {% endcomment %}
+     <!--
+     {{ alternate_images | json }}
+     -->
 {% endif %}
 
 <div class="product__gallery-inner flex flex-col-reverse lg:flex-row gap-4">
