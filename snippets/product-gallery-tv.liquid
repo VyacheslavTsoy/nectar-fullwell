@@ -1,13 +1,14 @@
 {% assign product_images = product.images | where: 'attached_to_variant?', false %}
 
 {%  if alternate_images %}
-    {% assign altGallery = alternate_images.values %}
+    {% assign altGallery = alternate_images %}
     
      <!--
      {{ altGallery | json }}
      {% for image in altGallery %}
             <div class="swiper-slide">
                 <div class="thumbnail-gallery__item overflow-hidden rounded-[0.8rem]">
+                {{ image.url }}
                     {% render 'img', image: image, max_width: 96, lazy: true %}
                 </div>
             </div>
