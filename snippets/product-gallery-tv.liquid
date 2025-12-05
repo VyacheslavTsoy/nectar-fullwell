@@ -4,7 +4,7 @@
     {% assign altGallery = alternate_images.images.value %}
     
      <!--
-     {{ alternate_images.images | json }}
+     {{ alternate_images.value.images | json }}
      {% for image in altGallery %}
             <div class="swiper-slide">
                 <div class="thumbnail-gallery__item overflow-hidden rounded-[0.8rem]">
