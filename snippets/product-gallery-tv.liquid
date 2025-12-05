@@ -24,15 +24,13 @@
     <div class="swiper main-gallery w-full overflow-hidden relative">
         <div class="swiper-wrapper">
             {% for image in product_images %}
-                {% if alt_title_image != blank and forloop.first %}
                 <div class="swiper-slide">
-                    {% render 'img', image: alt_title_image, max_width: 1000, preload: forloop.first %}
-                </div>
-                {% else %}
-                    <div class="swiper-slide">
+                    {% if alt_title_image != blank and forloop.first %}
+                        {% render 'img', image: alt_title_image, max_width: 1000, preload: forloop.first %}
+                    {% else %}
                         {% render 'img', image: image, max_width: 1000, preload: forloop.first %}
-                    </div>
-                {% endif %}
+                    {% endif %}
+                </div>
             {% endfor %}
         </div>
     </div>
