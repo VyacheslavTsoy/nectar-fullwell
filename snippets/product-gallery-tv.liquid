@@ -1,5 +1,9 @@
 {% assign product_images = product.images | where: 'attached_to_variant?', false %}
 
+{%  if alternate_images %}
+    1
+{% endif %}
+
 <div class="product__gallery-inner flex flex-col-reverse lg:flex-row gap-4">
     <div class="swiper thumbnail-gallery swiper-vertical overflow-hidden flex-shrink-0">
         <div class="swiper-wrapper">
