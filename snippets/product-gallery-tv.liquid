@@ -1,6 +1,6 @@
 {% assign product_images = product.images | where: 'attached_to_variant?', false %}
 
-{% if alternate_images and alternate_images.value.size > 0 %}
+{% if alternate_images %}
   {% assign altGallery = alternate_images.value %}
 
   <!---{% for image in altGallery %}
