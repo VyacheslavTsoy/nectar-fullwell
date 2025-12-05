@@ -3,13 +3,13 @@
 {% if alternate_images and alternate_images.value.size > 0 %}
   {% assign altGallery = alternate_images.value %}
 
-  {% for image in altGallery %}
+  <!---{% for image in altGallery %}
     <div class="swiper-slide">
       <div class="thumbnail-gallery__item overflow-hidden rounded-[0.8rem]">
         {% render 'img', image: image, max_width: 96, lazy: true %}
       </div>
     </div>
-  {% endfor %}
+  {% endfor %} -->
 {% endif %}
 
 <div class="product__gallery-inner flex flex-col-reverse lg:flex-row gap-4">
