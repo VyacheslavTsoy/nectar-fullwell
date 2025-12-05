@@ -148,7 +148,7 @@
             "text_alignment": "left",
             "font_family": "inter",
             "font_weight": "medium",
-            "text_color": "#000000",
+            "text_color": "#021a3d",
             "font_size": 18,
             "font_size_mobile": 13,
             "text_alignment_mobile": "left"
@@ -192,7 +192,7 @@
             "font_family": "inter",
             "font_weight": "normal",
             "text_color": "#0d3063",
-            "font_size": 18,
+            "font_size": 20,
             "font_size_mobile": 16,
             "text_alignment_mobile": "left",
             "hide_on_mobile": false
