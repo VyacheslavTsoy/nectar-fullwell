@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="mx-[-2rem] md:mx-0">
-                    {% render 'product-gallery-tv', auto_on_mobile: true, product: product, alternate_images: bst.alt_gallery | default: false %}
+                    {% render 'product-gallery-tv', auto_on_mobile: true, product: product, alternate_images: bst.alt_gallery | default: false, alt_title_image: bst.alt_title_image %}
                 </div>
 
                 {% if bst.related_doctor_review != blank %}
