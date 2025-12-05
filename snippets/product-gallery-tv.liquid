@@ -1,7 +1,7 @@
 {% assign product_images = product.images | where: 'attached_to_variant?', false %}
 
 {%  if alternate_images %}
-    {% comment %} {% assign product_images = alternate_images.images %} {% endcomment %}
+    {% assign product_images = alternate_images.images %}
      <!--
      {% for image in alternate_images %}
             <div class="swiper-slide">
