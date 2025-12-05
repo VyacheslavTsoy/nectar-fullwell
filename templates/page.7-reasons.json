@@ -983,7 +983,7 @@
                 "text_alignment": "left",
                 "heading_size": "xl",
                 "font_weight": "bold",
-                "font_family": "values-sans",
+                "font_family": "inter",
                 "use_mobile_settings": true,
                 "text_alignment_mobile": "left",
                 "heading_size_mobile": "lg",
