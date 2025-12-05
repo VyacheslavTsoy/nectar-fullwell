@@ -3,7 +3,13 @@
 {%  if alternate_images %}
     {% comment %} {% assign product_images = alternate_images.value %} {% endcomment %}
      <!--
-     {{ alternate_images | json }}
+     {% for image in alternate_images %}
+            <div class="swiper-slide">
+                <div class="thumbnail-gallery__item overflow-hidden rounded-[0.8rem]">
+                    {% render 'img', image: image, max_width: 96, lazy: true %}
+                </div>
+            </div>
+    {% endfor %}
      -->
 {% endif %}
 
