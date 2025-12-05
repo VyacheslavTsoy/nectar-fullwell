@@ -1038,7 +1038,7 @@
         "pdp_gifts_H47L3P"
       ],
       "custom_css": [
-        "@media (min-width: 1024px) {.thumbnail-gallery .swiper-slide {width: 4.2rem !important; height: 4rem !important; }}",
+        "@media (min-width: 1024px) {.thumbnail-gallery .swiper-slide {width: 4.8rem !important; height: 4.2rem !important; }}",
         ".product__gallery .font-family-poppins + div {display: none;}",
         "@media (max-width: 1024px) {.product .buttons-group {display: none; } .product__info {padding-bottom: 0 !important; } .product__gallery .font-family-poppins {font-family: var(--font-family-inter); }}"
       ],
@@ -1107,7 +1107,7 @@
         "ingredients_k9trft"
       ],
       "custom_css": [
-        ".blank-section {display: none;}"
+        ".blank-section {height: 0; overflow: hidden;}"
       ],
       "name": "Ingredients Section",
       "settings": {
