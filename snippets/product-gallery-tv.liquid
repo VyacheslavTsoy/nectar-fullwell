@@ -1,6 +1,6 @@
 {% assign product_images = product.images | where: 'attached_to_variant?', false %}
 
-{% if alternate_images %}
+{% if alternate_images != blank %}
   {% assign product_images = alternate_images.images.value %}
 {% endif %}
 
