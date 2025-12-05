@@ -26,7 +26,7 @@
 
     <div class="swiper main-gallery w-full overflow-hidden relative">
         <div class="swiper-wrapper">
-            {% if alt_title_image != blank %}
+            {% if alt_title_image != blank and forloop.first %}
             <div class="swiper-slide">
                 {% render 'img', image: alt_title_image, max_width: 1000, preload: forloop.first %}
             </div>    
