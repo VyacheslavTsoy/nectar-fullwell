@@ -150,7 +150,7 @@
             "font_weight": "medium",
             "text_color": "#000000",
             "font_size": 18,
-            "font_size_mobile": 14,
+            "font_size_mobile": 13,
             "text_alignment_mobile": "left"
           },
           "blocks": {}
