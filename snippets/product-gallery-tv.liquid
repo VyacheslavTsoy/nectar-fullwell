@@ -1,7 +1,7 @@
 {% assign product_images = product.images | where: 'attached_to_variant?', false %}
 
 {%  if alternate_images %}
-    1
+    {% assign product_images = alternate_images.value %}
 {% endif %}
 
 <div class="product__gallery-inner flex flex-col-reverse lg:flex-row gap-4">
