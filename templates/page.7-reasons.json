@@ -1107,7 +1107,7 @@
         "ingredients_k9trft"
       ],
       "custom_css": [
-        ".blank-section {height: 0; overflow: hidden;}"
+        ".blank-section {height: 0; overflow: hidden; }"
       ],
       "name": "Ingredients Section",
       "settings": {
