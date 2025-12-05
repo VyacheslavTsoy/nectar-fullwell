@@ -1,19 +1,15 @@
 {% assign product_images = product.images | where: 'attached_to_variant?', false %}
 
-{%  if alternate_images %}
-    {% assign altGallery = alternate_images | metafield_tag %}
-    
-     <!--
-     {{ altGallery | json }}
-     {% for image in altGallery %}
-            <div class="swiper-slide">
-                <div class="thumbnail-gallery__item overflow-hidden rounded-[0.8rem]">
-                {{ image }}
-                    {% render 'img', image: image, max_width: 96, lazy: true %}
-                </div>
-            </div>
-    {% endfor %}
-     -->
+{% if alternate_images and alternate_images.value.size > 0 %}
+  {% assign altGallery = alternate_images.value %}
+
+  {% for image in altGallery %}
+    <div class="swiper-slide">
+      <div class="thumbnail-gallery__item overflow-hidden rounded-[0.8rem]">
+        {% render 'img', image: image, max_width: 96, lazy: true %}
+      </div>
+    </div>
+  {% endfor %}
 {% endif %}
 
 <div class="product__gallery-inner flex flex-col-reverse lg:flex-row gap-4">
