@@ -765,7 +765,7 @@
       ],
       "custom_css": [
         "#AaEljUGJqMHdiZkR6e__image_xPHwxW img,#AWUZzOHkyMERkbUlYZ__layout_9zkY8h img {border-radius: 50%;}",
-        "#Ab04rTjVkbnEvdURnT__layout_9zkY8h .block-layout__content,#AWUZzOHkyMERkbUlYZ__layout_9zkY8h .block-layout__content,#AYTNEcDBvaVZra1lHb__layout_9zkY8h .block-layout__content,#{grid-template-columns: 50px 1fr;}",
+        "#Ab04rTjVkbnEvdURnT__layout_9zkY8h .block-layout__content,#AWUZzOHkyMERkbUlYZ__layout_9zkY8h .block-layout__content,#AVUFpM0FpczNUMTEre__layout_9zkY8h .block-layout__content{grid-template-columns: 50px 1fr;}",
         "p:not(:last-child) {margin-bottom: 20px;}",
         ".blank-section {padding-bottom: 0;}"
       ],
