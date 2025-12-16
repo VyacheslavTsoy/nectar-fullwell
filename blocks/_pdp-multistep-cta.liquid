@@ -1,6 +1,6 @@
 {% assign shipping_date = 'now' | date: '%s' %}
 {% assign bst = block.settings %}
-222
+
 <div class="text-center mt-[0.6rem] mb-[1.6rem] font-bold bg-[#E9F7FE] italic leading-[3.4rem] px-[1.6rem]">
     🍒  1 Bag Contains 30 Delicious Packets  🍉
 </div>
@@ -204,7 +204,7 @@
     </div>
 </div>
 
-<a :href="`/pages/offer?view=offer-only-flavors&minQty=${minQty}&product-handle={{ product.handle }}`" class="flex items-center justify-center gap-3 md:gap-[1.2rem] text-[1.6rem] md:text-[2rem] font-bold bg-[#21A600] border-[.2rem] h-[6.6rem] border-[#037C2B] hover:bg-[#037C2B] rounded-[1rem] text-white w-full">
+<a :href="`/pages/offer?view=offer-only-flavors&minQty=${minQty}&product-handle=${currentProduct.handle}`" class="flex items-center justify-center gap-3 md:gap-[1.2rem] text-[1.6rem] md:text-[2rem] font-bold bg-[#21A600] border-[.2rem] h-[6.6rem] border-[#037C2B] hover:bg-[#037C2B] rounded-[1rem] text-white w-full">
     <span>Select Flavors</span>
 
     <span class="ml-[.6rem]">
