@@ -1015,6 +1015,7 @@
       "block_order": [
         "pdp_gifts_jb3fBY"
       ],
+      "disabled": true,
       "name": "Product Section",
       "settings": {
         "desktop_padding_top": 50,
@@ -1069,7 +1070,7 @@
             "test_percent": false,
             "unlock_all_gifts_if_more_than_one_pouch": false,
             "unlock_all_gifts_if_equal_3": true,
-            "use_multistep_flow": false,
+            "use_multistep_flow": true,
             "related_product": "essential-daily-hydration-4-gift-v2",
             "related_pouches": [],
             "products": [
@@ -1152,7 +1153,6 @@
         "text_QFmtWz",
         "pdp_gifts_H47L3P"
       ],
-      "disabled": true,
       "custom_css": [
         "@media (min-width: 1024px) {.thumbnail-gallery .swiper-slide {width: 4.8rem !important; height: 4.2rem !important; }}",
         ".product__gallery .font-family-poppins + div {display: none;}",
