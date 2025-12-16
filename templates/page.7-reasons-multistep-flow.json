@@ -1129,11 +1129,25 @@
             "pdp_onestep_cta_aBBHMg": {
               "type": "_pdp-onestep-cta",
               "name": "Gift Onestep Flow",
+              "disabled": true,
               "settings": {
                 "related_pouches": [
                   "1-bag",
                   "2-bags",
                   "3-bags"
+                ],
+                "gifts_title": "$75.00 of Gifts With Your First Order!"
+              },
+              "blocks": {}
+            },
+            "pdp_multistep_cta_rXFRz8": {
+              "type": "_pdp-multistep-cta",
+              "name": "Gift Multistep Flow",
+              "settings": {
+                "related_pouches": [
+                  "3-bags",
+                  "2-bags",
+                  "1-bag"
                 ],
                 "gifts_title": "$75.00 of Gifts With Your First Order!"
               },
@@ -1144,7 +1158,8 @@
             "inline_review_68q7p8",
             "heading_WqWqR8",
             "text_qMrMMt",
-            "pdp_onestep_cta_aBBHMg"
+            "pdp_onestep_cta_aBBHMg",
+            "pdp_multistep_cta_rXFRz8"
           ]
         }
       },
