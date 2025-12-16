@@ -47,6 +47,7 @@
     
     {{ content_for_header }}
 
+    
     <style>
       :root {
         {% if settings.primary_font == 'poppins' %}
@@ -64,7 +65,8 @@
 
   </head>
   <body>
-    {% unless template contains 'gift'  %}
+
+    {% unless template contains 'gift' or template contains 'offer-only-flavors' %}
         {% comment %} Announcement bar {% endcomment %}
         {% unless template contains 'reasons' %}
             {% section 'announcement-bar' %}

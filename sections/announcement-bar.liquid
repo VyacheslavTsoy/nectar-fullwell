@@ -15,7 +15,7 @@
 
 {% assign is_reasons_page = false %}
 
-{% if template contains 'reasons' %}
+{% if template contains 'reasons' or template contains 'offer-only-flavors' %}
     {% assign is_reasons_page = true %}
 {% endif %}
 
@@ -193,6 +193,7 @@
 {% schema %}
 {
   "name": "Announcement Bar",
+  "tag": "div",
   "settings": [
     {
       "type": "color",

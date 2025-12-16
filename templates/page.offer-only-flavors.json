@@ -9,84 +9,39 @@
  */
  {
     "sections": {
-      "main": {
-        "type": "main-checkout",
-        "blocks": {
-          "gifts_H7LD9V": {
-            "type": "gifts",
-            "settings": {
-              "title": "Unlock Free Gifts! 🎁",
-              "description": "Add a 4th Pouch, Get an Electric Nectar Frother",
-              "products": [
-                "free-shipping",
-                "energy-sampler",
-                "nectar-bottle",
-                "nectar-frother"
-              ]
-            }
-          },
-          "quantity_GEHxUA": {
-            "type": "quantity",
-            "settings": {
-              "title": "Select Quantity",
-              "related_pouches": [
-                "4-pouches",
-                "3-pouches",
-                "2-pouches",
-                "1-pouch"
-              ]
-            }
-          },
-          "flavors_9jkGB6": {
-            "type": "flavors",
-            "settings": {
-              "title": "Select Flavors",
-              "additional_description": "",
-              "additional_selling_label": "",
-              "guarantee_badge_text": ""
-            }
-          },
-          "frequency_p7Ei8A": {
-            "type": "frequency",
-            "disabled": true,
-            "settings": {
-              "title": "Select Frequency"
-            }
+      "announcement_bar_bzgxdf": {
+      "type": "announcement-bar",
+      "blocks": {
+        "text_arV38V": {
+          "type": "text",
+          "settings": {
+            "font_size": 16,
+            "icon": "",
+            "title": "<p><strong>NEW YEARS SPECIAL</strong></p><p>UP TO 60% OFF</p>"
           }
         },
-        "block_order": [
-          "gifts_H7LD9V",
-          "quantity_GEHxUA",
-          "flavors_9jkGB6",
-          "frequency_p7Ei8A"
-        ],
-        "disabled": true,
-        "settings": {
-          "use_separated_quantity_flow": true,
-          "cart_flow": "go-to-checkout",
-          "products": [
-            "energy-sampler",
-            "essential-daily-calm",
-            "essential-daily-calm-gift-v2",
-            "essential-daily-energy",
-            "essential-daily-hydration-4-gift-v2",
-            "essential-daily-hydration-1",
-            "essential-daily-energy-2",
-            "essential-daily-hydration-2",
-            "essential-daily-hydration-new",
-            "nectar-frother",
-            "tropical-variety-pack",
-            "essential-daily-hydration-copy"
-          ],
-          "label_one_time": "One-time Purchase",
-          "label_subscription": "Subscribe and Save 50%",
-          "label_delivery": "Delivery Every",
-          "label_subscription_description": "<ul><li><em><strong>Free Expedited Shipping*</strong></em></li><li><em><strong>Free $35.99 Mystery Gift</strong></em> on Order #3</li><li>Easily Pause, Cancel or Adjust Flavors <em><strong>Any Time</strong></em></li></ul>",
-          "cta_label": "Go to checkout",
-          "gurantee_text": "<p>Less than 1% of customers claim our <br/><strong>90 Day Money Back Guarantee*</strong></p>",
-          "subscription_details": "<p>Refill ships in <em>3</em> months. Change or cancel easily. Free shipping & Gifts with 1st purchase.</p>"
+        "timer_VmF7RY": {
+          "type": "timer",
+          "settings": {
+            "white_skin": true,
+            "hide_days": true,
+            "end_date": "23-07-2027 12:00"
+          }
         }
       },
+      "block_order": [
+        "text_arV38V",
+        "timer_VmF7RY"
+      ],
+      "name": "Announcement Bar",
+      "settings": {
+        "background_color": "#0d3063",
+        "text_color": "#ffffff",
+        "vertical_indent": 8,
+        "gap": 10,
+        "text_alignment": "center"
+      }
+    },
       "blank_section_G3FrKX": {
         "type": "blank-section",
         "blocks": {
@@ -95,11 +50,11 @@
             "name": "Layout",
             "settings": {
               "desktop_padding": 0,
-              "desktop_gap": 16,
+              "desktop_gap": 40,
               "desktop_columns_per_row": 2,
               "align_items": "start",
-              "custom_column_width": false,
-              "column_width": "1fr 1fr",
+              "custom_column_width": true,
+              "column_width": "50vw 39rem",
               "mobile_padding": 0,
               "mobile_gap": 14,
               "mobile_columns_per_row": 1
@@ -121,7 +76,9 @@
                       "image_url": "",
                       "border_radius": 0,
                       "image_ratio": "1/1",
-                      "image_width": 100
+                      "image_width": 100,
+                      "hidden_on_mobile": false,
+                      "hidden_on_desktop": false
                     },
                     "blocks": {}
                   }
@@ -175,20 +132,23 @@
         "block_order": [
           "layout_JDTHMm"
         ],
+        "custom_css": [
+          ".blank-section {position: relative;}"
+        ],
         "name": "Default Section",
         "settings": {
-          "desktop_padding_top": 40,
+          "desktop_padding_top": 60,
           "desktop_gap_between_blocks": 20,
           "bg_color": "#ffffff",
           "desktop_max_width": 1140,
           "hide_on_mobile": false,
-          "mobile_padding_top": 25,
+          "mobile_padding_top": 0,
           "mobile_gap_between_blocks": 10
         }
       }
     },
     "order": [
-      "main",
+      "announcement_bar_bzgxdf",
       "blank_section_G3FrKX"
     ]
   }

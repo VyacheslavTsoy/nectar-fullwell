@@ -5,7 +5,7 @@
     🍒  1 Bag Contains 30 Delicious Packets  🍉
 </div>
 
-<div class="font-medium flex items-center justify-center bg-[#fff] border-[1px] border-dashed border-[#0D3063] rounded-[.5rem] h-[3.4rem] p-[.73rem] mb-2 text-[1.5rem] md:text-base">
+<div class="font-medium flex items-center justify-center bg-[#fff] border-[1px] border-dashed border-[#0D3063] rounded-[.5rem] h-[3.4rem] p-[.73rem] mb-2 text-[1.5rem] md:text-base hidden">
     <div class="w-[4.4rem] h-[4.4rem] ml-[-1rem]" id="lottie"></div>
     <div class="ml-[-.5rem]">
         Order by {{ shipping_date  | date: '%b %d' }} for guaranteed FREE Gifts
@@ -79,43 +79,24 @@
     </template>
 </div>
 
-<div class="mt-4 text-center">
-    <div class="checkout__gifts-header mb-3">
-        <h2 class="checkout__gifts-title bg-[#e2f0ff] px-[0.6rem] text-center rounded-[.6rem] font-bold border-[1px] border-[#75bdff] border-dashed flex items-center justify-center gap-2 h-[2.4rem]"> 
-            <div class="mt-1" x-show="!allGiftsAvailableMoreThanOne">
-                {{ block.settings.gifts_title }}
-            </div>
+<div class="mt-4 text-center checkout__gifts text-center bg-[#E2F0FF] py-[0.8rem] px-[1.2rem] rounded-[1.2rem] border-[1px] border-dashed border-[#75BDFE]">
+    <div class="checkout__gifts-header">
+        <h2 class="checkout__gifts-title text-[1.8rem] p-[.35rem] bg-white text-center rounded-[.6rem] font-bold"> Unlock $75.00 of Free Gifts! 🎁</h2>
+    </div>
 
-            
-            <div class="mt-1" x-show="allGiftsAvailableMoreThanOne" x-text="minQty == 1 ? '$22.99 of Gifts With Your First Order!' : '{{ block.settings.gifts_title }}' "></div>
-
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_1415_5723)">
-                <path d="M14.2449 15.9894H1.75635C1.4292 15.9894 1.16406 15.7242 1.16406 15.3971V5.84741H14.8373V15.3971C14.8373 15.7242 14.572 15.9894 14.2449 15.9894Z" fill="#FFC73B"/>
-                <path d="M1.16406 5.84741H14.8373V7.83459H1.16406V5.84741Z" fill="#EFB025"/>
-                <path d="M16 3.77576V6.23767C16 6.50061 15.7866 6.71362 15.5237 6.71362H0.475952C0.213013 6.71362 0 6.50061 0 6.23767V3.77576C0 3.51282 0.213013 3.2998 0.475952 3.2998H15.5237C15.7866 3.2998 16 3.51282 16 3.77576Z" fill="#FFC73B"/>
-                <path d="M7.45422 4.43164C7.35034 4.55261 7.24841 4.67529 7.14893 4.79932C6.7782 5.26062 6.43884 5.74402 6.13208 6.24573C6.03772 6.40002 5.94666 6.55591 5.85828 6.71362H2.61328C2.80286 6.28345 3.01074 5.86121 3.23596 5.44849C3.64441 4.69971 4.11047 3.9812 4.63123 3.2998C4.75562 3.13708 4.88293 2.97632 5.01343 2.81799C5.09155 2.72253 5.17102 2.62842 5.25159 2.53467C5.54773 2.78979 5.84363 3.04468 6.13989 3.2998C6.18579 3.33911 6.23169 3.37891 6.27747 3.41833C6.62708 3.71936 6.97668 4.02026 7.32617 4.32166C7.36902 4.35803 7.4115 4.39502 7.45422 4.43164Z" fill="#EFB025"/>
-                <path d="M12.2987 6.71362H9.05347C8.96545 6.55591 8.87402 6.40002 8.77966 6.24573C8.4729 5.74402 8.13318 5.26062 7.76282 4.79932C7.66296 4.67529 7.56104 4.55261 7.45703 4.43164C7.49988 4.39502 7.54236 4.35828 7.58521 4.32166C7.93506 4.02026 8.28467 3.71899 8.63416 3.41833C8.68005 3.37891 8.72595 3.33911 8.77185 3.2998C9.06799 3.04468 9.36426 2.78979 9.66016 2.53467C9.74072 2.62817 9.82019 2.72253 9.89832 2.81775C10.0291 2.97632 10.1565 3.13708 10.2805 3.2998C10.8013 3.9812 11.2673 4.69971 11.676 5.44849C11.9012 5.86121 12.1091 6.28345 12.2987 6.71362Z" fill="#EFB025"/>
-                <path d="M7.99878 4.43188C7.89478 4.55273 7.79285 4.67542 7.69336 4.79944C7.32275 5.26074 6.98328 5.74414 6.67651 6.24597C5.70264 7.83789 5.05579 9.61621 4.78296 11.4775C4.37293 10.9337 3.99451 10.3453 3.65405 9.71619C3.05518 10.1068 2.46985 10.5536 1.90625 11.0563C2.19568 9.08191 2.83337 7.1842 3.78052 5.44861C4.28638 4.52112 4.88086 3.63989 5.55786 2.81812C5.63599 2.72266 5.71545 2.62866 5.79602 2.53479C6.13806 2.82935 6.47986 3.1239 6.82202 3.41846C7.17151 3.71948 7.52112 4.02039 7.87073 4.32178C7.91345 4.35815 7.95593 4.39514 7.99878 4.43188Z" fill="#FF4440"/>
-                <path d="M14.0928 11.0563C13.5292 10.5536 12.9438 10.1068 12.345 9.71619C12.0045 10.3453 11.6261 10.9337 11.2161 11.4775C10.9432 9.61621 10.2965 7.83789 9.32251 6.24597C9.01575 5.74414 8.67603 5.26074 8.30566 4.79944C8.20581 4.67542 8.10388 4.55273 8 4.43188C8.04272 4.39514 8.08521 4.3584 8.12805 4.32178C8.47791 4.02039 8.82751 3.71912 9.17712 3.41846C9.51917 3.12354 9.86133 2.82935 10.203 2.53479C10.2836 2.6283 10.363 2.72266 10.4412 2.81787C11.1183 3.63965 11.7128 4.52087 12.2189 5.44861C13.1658 7.1842 13.8033 9.08191 14.0928 11.0563Z" fill="#FF4440"/>
-                <path d="M6.72656 4.43188H9.27429V6.71362H6.72656V4.43188Z" fill="#FF4440"/>
-                <path d="M12.2189 5.44861L9.32251 6.24597C9.01575 5.74414 8.67603 5.26074 8.30566 4.79944L8.12805 4.32178L8 3.9773L9.17712 3.41846L10.4412 2.81787C11.1183 3.63965 11.7128 4.52087 12.2189 5.44861Z" fill="#EA2F2F"/>
-                <path d="M7.99976 3.9773L7.8717 4.32178L7.69434 4.79944C7.32373 5.26074 6.98425 5.74414 6.67749 6.24597L3.78149 5.44861C4.28735 4.52112 4.88184 3.63989 5.55884 2.81812L6.823 3.41846L7.99976 3.9773Z" fill="#EA2F2F"/>
-                <path d="M12.6223 0.110754L7.99988 2.30594L8.88782 4.69401L13.8217 3.33597C14.4669 3.15836 14.8214 2.46586 14.5881 1.83854L14.1809 0.743567C13.9478 0.116247 13.2269 -0.176355 12.6223 0.110754Z" fill="#FF4440"/>
-                <path d="M3.3775 0.110754L7.99993 2.30594L7.11199 4.69401L2.17828 3.33597C1.53301 3.15836 1.17852 2.46586 1.4118 1.83854L1.8189 0.743567C2.05218 0.116247 2.77288 -0.176355 3.3775 0.110754Z" fill="#FF4440"/>
-                <path d="M9.1027 3.26561C9.01871 3.26561 8.93631 3.2241 8.88785 3.14805C8.81205 3.02952 8.84659 2.87205 8.96512 2.79625C9.00016 2.77391 9.83268 2.24412 10.7885 1.85753C12.1664 1.30015 13.0866 1.33006 13.5231 1.94639C13.6045 2.06126 13.5773 2.22032 13.4624 2.30162C13.3476 2.38292 13.1886 2.35582 13.1073 2.24095C12.5155 1.4055 10.055 2.70457 9.23966 3.22557C9.19718 3.25267 9.14969 3.26561 9.1027 3.26561Z" fill="#EA2F2F"/>
-                <path d="M6.8697 3.26561C6.8227 3.26561 6.77521 3.25267 6.73273 3.22557C5.91743 2.70457 3.45685 1.4055 2.86506 2.24095C2.78364 2.35582 2.6247 2.38292 2.50983 2.30162C2.39509 2.2202 2.36786 2.06126 2.44929 1.94639C2.88581 1.33006 3.80585 1.30015 5.1839 1.85753C6.13972 2.244 6.97223 2.77391 7.00727 2.79625C7.1258 2.87205 7.16035 3.02952 7.08466 3.14805C7.03596 3.2241 6.95368 3.26561 6.8697 3.26561Z" fill="#EA2F2F"/>
-                <path d="M8.72278 1.48511H7.27307C6.87634 1.48511 6.55469 1.80676 6.55469 2.20361V4.30969C6.55469 4.70654 6.87634 5.0282 7.27307 5.0282H8.72278C9.11951 5.0282 9.44116 4.70654 9.44116 4.30969V2.20361C9.44116 1.80676 9.11951 1.48511 8.72278 1.48511Z" fill="#EA2F2F"/>
-                <path d="M6.72656 6.71362H9.27429V15.9894H6.72656V6.71362Z" fill="#FF4440"/>
-                <path d="M6.72656 6.71362H9.27429V7.83459H6.72656V6.71362Z" fill="#EA2F2F"/>
-                </g>
-                <defs>
-                <clipPath id="clip0_1415_5723">
-                <rect width="16" height="16" fill="white"/>
-                </clipPath>
-                </defs>
-            </svg>
-        </h2>
+    <div class="checkout__gifts-description text-sm leading-[1.2] mt-2 mb-2 font-bold">
+        <span x-show="currentQty == 1 || minQty == 1">
+            Add a 2nd Pouch, Get a Nectar Bottle
+        </span>
+        <span x-show="minQty == 2">
+            Add a 3nd Pouch, Get a Nectar Frother
+        </span>
+        {% comment %} <span x-show="currentQty == 3">
+            Add a 4th Pouch, Get a Nectar Frother
+        </span> {% endcomment %}
+        <span x-show="minQty >= 3">
+            Congratulations! All Gifts Unlocked!
+        </span>
     </div>
 
     <div class="checkout__gifts-products grid grid-cols-4 gap-4">
@@ -124,7 +105,7 @@
                 x-data="{ 
                     currentIndex: index+1,
                     message: `2+ Bags`,
-                    labels: ['2+ Bags', '2+ Bags', '3+ Bags', 'Unlock At 3 Bags']
+                    labels: ['2+ Bags', '2+ Bags', 'Unlock at 2 Bags', 'Unlock At 3 Bags']
                 }"
             >
                 <div class="checkout__gifts-product-inner rounded-[.8rem] overflow-hidden">
@@ -134,17 +115,6 @@
                     
                     <div class="checkout__gifts-product-image h-[6rem] p-[.2rem] relative">
                         <img :src="product.image" :alt="product.title" class="w-full h-full object-contain" width="100" height="100">
-
-                        <template x-if="index >= 2 && allGiftsAvailableMoreThanOne">
-                            <div class="checkout__gifts-product-locked" x-show="minQty == 1">
-                                <svg width="25" height="33" viewBox="0 0 25 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M3.11098 32.3333C2.2707 32.3333 1.55162 32.0372 0.953753 31.4451C0.354864 30.8519 0.0554199 30.1391 0.0554199 29.3069V14.1746C0.0554199 13.3423 0.354864 12.6296 0.953753 12.0364C1.55162 11.4442 2.2707 11.1481 3.11098 11.1481H4.63875V8.12168C4.63875 6.02838 5.3838 4.24378 6.87389 2.76788C8.36297 1.29299 10.1642 0.555542 12.2776 0.555542C14.3911 0.555542 16.1928 1.29299 17.6829 2.76788C19.172 4.24378 19.9165 6.02838 19.9165 8.12168V11.1481H21.4443C22.2846 11.1481 23.0042 11.4442 23.6031 12.0364C24.2009 12.6296 24.4999 13.3423 24.4999 14.1746V29.3069C24.4999 30.1391 24.2009 30.8519 23.6031 31.4451C23.0042 32.0372 22.2846 32.3333 21.4443 32.3333H3.11098ZM7.69431 11.1481H16.861V8.12168C16.861 6.86066 16.4154 5.78879 15.5242 4.90607C14.633 4.02336 13.5508 3.582 12.2776 3.582C11.0045 3.582 9.92232 4.02336 9.03111 4.90607C8.13991 5.78879 7.69431 6.86066 7.69431 8.12168V11.1481ZM12.2776 24.7672C13.1179 24.7672 13.8375 24.4711 14.4364 23.8789C15.0343 23.2857 15.3332 22.573 15.3332 21.7407C15.3332 20.9085 15.0343 20.1957 14.4364 19.6025C13.8375 19.0104 13.1179 18.7143 12.2776 18.7143C11.4374 18.7143 10.7183 19.0104 10.1204 19.6025C9.52153 20.1957 9.22209 20.9085 9.22209 21.7407C9.22209 22.573 9.52153 23.2857 10.1204 23.8789C10.7183 24.4711 11.4374 24.7672 12.2776 24.7672Z" fill="currentColor"></path>
-                                    </svg>
-                                <div class="checkout__gifts-product-locked-text">
-                                    <span x-text="message"></span>
-                                </div>
-                            </div>
-                        </template>
 
                         <template x-if="allGiftsAvailableEqual3">
                             <div class="checkout__gifts-product-locked" x-show="index > minQty">
@@ -206,6 +176,24 @@
 
 <a :href="`/pages/offer?view=offer-only-flavors&minQty=${minQty}&product-handle=${currentProduct.handle}`" class="flex items-center justify-center gap-3 md:gap-[1.2rem] text-[1.6rem] md:text-[2rem] font-bold bg-[#21A600] border-[.2rem] h-[6.6rem] border-[#037C2B] hover:bg-[#037C2B] rounded-[1rem] text-white w-full">
     <span>Select Flavors</span>
+
+    <span class="inline-flex items-center justify-center font-medium h-[2.4rem] bg-[#0D3063] text-white text-base rounded-full px-[1.2rem] gap-[.8rem]">
+        <template x-if="currentQty <= maxQty">
+            <div>
+                <span class="line-through text-[#D8D8D8]" x-text="formatMoney(currentPouch?.compare_at_price)"></span>
+
+                <span x-text="formatMoney(currentPouch?.price)"></span>
+            </div>
+        </template>
+
+        <template x-if="currentQty > maxQty">
+            <div>
+                <span class="line-through text-[#D8D8D8]" x-text="formatMoney(currentPouch?.compare_price_per_packet * currentQty)"></span>
+
+                <span x-text="formatMoney(currentPouch?.price_per_packet * currentQty)"></span>
+            </div>
+        </template>
+    </span>
 
     <span class="ml-[.6rem]">
         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
