@@ -1,0 +1,1253 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "announcement_bar_bzgxdf": {
+      "type": "announcement-bar",
+      "blocks": {
+        "text_arV38V": {
+          "type": "text",
+          "settings": {
+            "font_size": 16,
+            "icon": "",
+            "title": "<p><strong>NEW YEARS SPECIAL</strong></p><p>UP TO 60% OFF</p>"
+          }
+        },
+        "timer_VmF7RY": {
+          "type": "timer",
+          "settings": {
+            "white_skin": true,
+            "hide_days": true,
+            "end_date": "23-07-2027 12:00"
+          }
+        }
+      },
+      "block_order": [
+        "text_arV38V",
+        "timer_VmF7RY"
+      ],
+      "name": "Announcement Bar",
+      "settings": {
+        "background_color": "#0d3063",
+        "text_color": "#ffffff",
+        "vertical_indent": 8,
+        "gap": 10,
+        "text_alignment": "center"
+      }
+    },
+    "blank_section_jhpeEr": {
+      "type": "blank-section",
+      "blocks": {
+        "heading_WGD7E3": {
+          "type": "heading",
+          "name": "Heading",
+          "settings": {
+            "title": "<p>7 Reasons Why This Electrolyte Mix Is The Best On The Market - Despite Being The Cheapest</p>",
+            "text_color": "#021a3d",
+            "text_alignment": "left",
+            "heading_size": "3xl",
+            "font_weight": "extra_bold",
+            "font_family": "inter",
+            "use_mobile_settings": true,
+            "text_alignment_mobile": "left",
+            "heading_size_mobile": "lg",
+            "font_weight_mobile": "extra_bold"
+          },
+          "blocks": {}
+        },
+        "layout_9zkY8h": {
+          "type": "layout",
+          "name": "Layout",
+          "settings": {
+            "desktop_padding": 0,
+            "desktop_gap": 10,
+            "desktop_columns_per_row": 3,
+            "align_items": "center",
+            "custom_column_width": true,
+            "column_width": "50px 1fr",
+            "mobile_padding": 0,
+            "mobile_gap": 14,
+            "mobile_columns_per_row": 1
+          },
+          "blocks": {
+            "layout_item_z8Ti94": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 0,
+                "gap_mobile": 0
+              },
+              "blocks": {
+                "image_xPHwxW": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/leslie_alexander.png",
+                    "image_url": "",
+                    "border_radius": 100,
+                    "image_ratio": "1/1",
+                    "image_width": 100,
+                    "hidden_on_mobile": false,
+                    "hidden_on_desktop": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_xPHwxW"
+              ]
+            },
+            "layout_item_jc3eEa": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 0,
+                "gap_mobile": 0
+              },
+              "blocks": {
+                "text_k6b9nL": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p>By <strong>Leslie A.</strong><br/>Last Updated [yesterday_date]</p>",
+                    "text_alignment": "left",
+                    "font_family": "inter",
+                    "font_weight": "medium",
+                    "text_color": "#021a3d",
+                    "font_size": 14,
+                    "font_size_mobile": 16,
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_k6b9nL"
+              ]
+            }
+          },
+          "block_order": [
+            "layout_item_z8Ti94",
+            "layout_item_jc3eEa"
+          ]
+        },
+        "blockquote_dEPQ7b": {
+          "type": "blockquote",
+          "name": "Blockquote",
+          "settings": {
+            "title": "<p>“<strong>Read this</strong> BEFORE you overpay for electrolytes!”</p>",
+            "background_color": "#fff8f1",
+            "text_alignment": "left",
+            "font_family": "inter",
+            "font_weight": "medium",
+            "text_color": "#021a3d",
+            "font_size": 18,
+            "font_size_mobile": 13,
+            "text_alignment_mobile": "left"
+          },
+          "blocks": {}
+        },
+        "image_pbbNQx": {
+          "type": "image",
+          "name": "Image",
+          "settings": {
+            "image": "shopify://shop_images/compare-table-mobile.png",
+            "image_url": "",
+            "border_radius": 0,
+            "image_ratio": "16/ы9",
+            "image_width": 100,
+            "hidden_on_mobile": false,
+            "hidden_on_desktop": true
+          },
+          "blocks": {}
+        },
+        "image_Bg333n": {
+          "type": "image",
+          "name": "Image",
+          "settings": {
+            "image": "shopify://shop_images/compare-desktop-table.jpg",
+            "image_url": "",
+            "border_radius": 0,
+            "image_ratio": "16/ы9",
+            "image_width": 100,
+            "hidden_on_mobile": true,
+            "hidden_on_desktop": false
+          },
+          "blocks": {}
+        },
+        "text_gcibJq": {
+          "type": "text",
+          "name": "Text",
+          "settings": {
+            "title": "<p><strong>TLDR:</strong> Finally, an electrolyte mix you can drink every single day 👇 </p>",
+            "text_alignment": "left",
+            "font_family": "inter",
+            "font_weight": "normal",
+            "text_color": "#021a3d",
+            "font_size": 20,
+            "font_size_mobile": 16,
+            "text_alignment_mobile": "left",
+            "hide_on_mobile": false
+          },
+          "blocks": {}
+        },
+        "layout_BafYTz": {
+          "type": "layout",
+          "name": "Layout",
+          "settings": {
+            "desktop_padding": 10,
+            "desktop_gap": 20,
+            "desktop_columns_per_row": 2,
+            "align_items": "center",
+            "custom_column_width": true,
+            "column_width": "30.6rem 1fr",
+            "mobile_padding": 0,
+            "mobile_gap": 14,
+            "mobile_columns_per_row": 1
+          },
+          "blocks": {
+            "layout_item_Vc8C9y": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 0,
+                "gap_mobile": 0
+              },
+              "blocks": {
+                "image_D6bPGB": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/makinggif21-ezgif.com-optimize.gif",
+                    "image_url": "",
+                    "border_radius": 12,
+                    "image_ratio": "1/1",
+                    "image_width": 100,
+                    "hidden_on_mobile": true,
+                    "hidden_on_desktop": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_D6bPGB"
+              ]
+            },
+            "layout_item_DLbTWf": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 20,
+                "gap_mobile": 16
+              },
+              "blocks": {
+                "heading_6tkjR9": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "title": "<h3>1. It's the Only Electrolyte Mix Designed for Daily Use (Safe Sodium Levels)</h3>",
+                    "text_color": "#021a3d",
+                    "text_alignment": "left",
+                    "heading_size": "md",
+                    "font_weight": "black",
+                    "font_family": "inter",
+                    "use_mobile_settings": true,
+                    "text_alignment_mobile": "left",
+                    "heading_size_mobile": "lg",
+                    "font_weight_mobile": "bold"
+                  },
+                  "blocks": {}
+                },
+                "image_YncQfx": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/makinggif21-ezgif.com-optimize.gif",
+                    "image_url": "",
+                    "border_radius": 12,
+                    "image_ratio": "1/1",
+                    "image_width": 100,
+                    "hidden_on_mobile": false,
+                    "hidden_on_desktop": true
+                  },
+                  "blocks": {}
+                },
+                "text_iYBhNk": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p>1000mg’s of sodium per serving might sound impressive, but unless you're severely dehydrated, <strong>it’s actually harmful</strong>. Most electrolyte powders are built for emergencies, not daily hydration.<br/><br/>Nectar's 100mg of pink Himalayan salt and bio-available potassium gives you real hydration without the sodium health risks. The perfect drink to sip on all day long.</p>",
+                    "text_alignment": "left",
+                    "font_family": "inter",
+                    "font_weight": "medium",
+                    "text_color": "#021a3d",
+                    "font_size": 16,
+                    "font_size_mobile": 18,
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_6tkjR9",
+                "image_YncQfx",
+                "text_iYBhNk"
+              ]
+            }
+          },
+          "block_order": [
+            "layout_item_Vc8C9y",
+            "layout_item_DLbTWf"
+          ]
+        },
+        "layout_XFEWrA": {
+          "type": "layout",
+          "name": "Layout",
+          "settings": {
+            "desktop_padding": 10,
+            "desktop_gap": 20,
+            "desktop_columns_per_row": 2,
+            "align_items": "center",
+            "custom_column_width": true,
+            "column_width": "30.6rem 1fr",
+            "mobile_padding": 0,
+            "mobile_gap": 14,
+            "mobile_columns_per_row": 1
+          },
+          "blocks": {
+            "layout_item_7Yb6pR": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 0,
+                "gap_mobile": 0
+              },
+              "blocks": {
+                "image_niRfUL": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/Stick_Gif.gif",
+                    "image_url": "",
+                    "border_radius": 12,
+                    "image_ratio": "1/1",
+                    "image_width": 100,
+                    "hidden_on_mobile": true,
+                    "hidden_on_desktop": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_niRfUL"
+              ]
+            },
+            "layout_item_gXdjra": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 20,
+                "gap_mobile": 16
+              },
+              "blocks": {
+                "heading_En4HMi": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "title": "<h3>2. Your 'Health Drink' Has More Sugar Than a Donut</h3>",
+                    "text_color": "#021a3d",
+                    "text_alignment": "left",
+                    "heading_size": "md",
+                    "font_weight": "black",
+                    "font_family": "inter",
+                    "use_mobile_settings": true,
+                    "text_alignment_mobile": "left",
+                    "heading_size_mobile": "lg",
+                    "font_weight_mobile": "bold"
+                  },
+                  "blocks": {}
+                },
+                "image_Y4aXJR": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/Stick_Gif.gif",
+                    "image_url": "",
+                    "border_radius": 12,
+                    "image_ratio": "1/1",
+                    "image_width": 100,
+                    "hidden_on_mobile": false,
+                    "hidden_on_desktop": true
+                  },
+                  "blocks": {}
+                },
+                "text_rAQUgB": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p>One serving of Liquid IV has 11g of sugar—50% of your daily limit. Drink it twice and you've exceeded the American Heart Association's recommendation before lunch. Nectar has zero sugar, zero calories, and zero crashes. Just clean hydration all day long.</p>",
+                    "text_alignment": "left",
+                    "font_family": "inter",
+                    "font_weight": "medium",
+                    "text_color": "#021a3d",
+                    "font_size": 16,
+                    "font_size_mobile": 18,
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_En4HMi",
+                "image_Y4aXJR",
+                "text_rAQUgB"
+              ]
+            }
+          },
+          "block_order": [
+            "layout_item_7Yb6pR",
+            "layout_item_gXdjra"
+          ]
+        },
+        "layout_YCfjwr": {
+          "type": "layout",
+          "name": "Layout",
+          "settings": {
+            "desktop_padding": 10,
+            "desktop_gap": 20,
+            "desktop_columns_per_row": 2,
+            "align_items": "center",
+            "custom_column_width": true,
+            "column_width": "30.6rem 1fr",
+            "mobile_padding": 0,
+            "mobile_gap": 14,
+            "mobile_columns_per_row": 1
+          },
+          "blocks": {
+            "layout_item_BmpdeD": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 0,
+                "gap_mobile": 0
+              },
+              "blocks": {
+                "image_d4pqNW": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/ezgif.com-gif-maker_1.gif",
+                    "image_url": "",
+                    "border_radius": 12,
+                    "image_ratio": "1/1",
+                    "image_width": 100,
+                    "hidden_on_mobile": true,
+                    "hidden_on_desktop": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_d4pqNW"
+              ]
+            },
+            "layout_item_yytbJL": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 20,
+                "gap_mobile": 16
+              },
+              "blocks": {
+                "heading_xrQtqm": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "title": "<h3>3. It Tastes So Good, You'll Want To Drink More  Water</h3>",
+                    "text_color": "#021a3d",
+                    "text_alignment": "left",
+                    "heading_size": "md",
+                    "font_weight": "black",
+                    "font_family": "inter",
+                    "use_mobile_settings": true,
+                    "text_alignment_mobile": "left",
+                    "heading_size_mobile": "lg",
+                    "font_weight_mobile": "bold"
+                  },
+                  "blocks": {}
+                },
+                "image_aqYyii": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/ezgif.com-gif-maker_1.gif",
+                    "image_url": "",
+                    "border_radius": 12,
+                    "image_ratio": "1/1",
+                    "image_width": 100,
+                    "hidden_on_mobile": false,
+                    "hidden_on_desktop": true
+                  },
+                  "blocks": {}
+                },
+                "text_mgHieg": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p>Most electrolyte powders taste like you're chugging ocean water or candy syrup. Too salty, too sweet, or chalky and artificial. Nectar's light, organically-flavored taste is refreshing enough to make you actually want to drink more water. Hydration shouldn't be a chore.</p><p>👉 <a href=\"#to-product-section\" title=\"#to-product-section\"><span style=\"text-decoration:underline\"><strong>Taste Clean Hydration Today</strong></span></a></p>",
+                    "text_alignment": "left",
+                    "font_family": "inter",
+                    "font_weight": "medium",
+                    "text_color": "#021a3d",
+                    "font_size": 16,
+                    "font_size_mobile": 18,
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_xrQtqm",
+                "image_aqYyii",
+                "text_mgHieg"
+              ]
+            }
+          },
+          "block_order": [
+            "layout_item_BmpdeD",
+            "layout_item_yytbJL"
+          ]
+        },
+        "layout_mHKpax": {
+          "type": "layout",
+          "name": "Layout",
+          "settings": {
+            "desktop_padding": 10,
+            "desktop_gap": 20,
+            "desktop_columns_per_row": 2,
+            "align_items": "center",
+            "custom_column_width": true,
+            "column_width": "30.6rem 1fr",
+            "mobile_padding": 0,
+            "mobile_gap": 14,
+            "mobile_columns_per_row": 1
+          },
+          "blocks": {
+            "layout_item_qDKKHb": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 0,
+                "gap_mobile": 0
+              },
+              "blocks": {
+                "image_VppRrA": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/Nectar-Hydration81209_3.png",
+                    "image_url": "",
+                    "border_radius": 12,
+                    "image_ratio": "1/1",
+                    "image_width": 100,
+                    "hidden_on_mobile": true,
+                    "hidden_on_desktop": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_VppRrA"
+              ]
+            },
+            "layout_item_KztGhG": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 20,
+                "gap_mobile": 16
+              },
+              "blocks": {
+                "heading_QMU8mh": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "title": "<h3>4. Premium Quality Without the Premium Price Tag </h3>",
+                    "text_color": "#021a3d",
+                    "text_alignment": "left",
+                    "heading_size": "md",
+                    "font_weight": "black",
+                    "font_family": "inter",
+                    "use_mobile_settings": true,
+                    "text_alignment_mobile": "left",
+                    "heading_size_mobile": "lg",
+                    "font_weight_mobile": "bold"
+                  },
+                  "blocks": {}
+                },
+                "image_Vmijdm": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/Nectar-Hydration81209_3.png",
+                    "image_url": "",
+                    "border_radius": 12,
+                    "image_ratio": "1/1",
+                    "image_width": 100,
+                    "hidden_on_mobile": false,
+                    "hidden_on_desktop": true
+                  },
+                  "blocks": {}
+                },
+                "text_fPHWcn": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p>Liquid IV costs $1.50+ per serving. LMNT is $2+ per packet. Nectar delivers cleaner ingredients and better daily hydration for under $1 per serving. That's hundreds of dollars saved per year without compromising quality. Better shouldn't cost more - it just usually does.</p><p>👉 <a href=\"#to-product-section\" title=\"#to-product-section\"><span style=\"text-decoration:underline\"><strong>Start Saving on Better Hydration</strong></span></a></p>",
+                    "text_alignment": "left",
+                    "font_family": "inter",
+                    "font_weight": "medium",
+                    "text_color": "#021a3d",
+                    "font_size": 16,
+                    "font_size_mobile": 18,
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_QMU8mh",
+                "image_Vmijdm",
+                "text_fPHWcn"
+              ]
+            }
+          },
+          "block_order": [
+            "layout_item_qDKKHb",
+            "layout_item_KztGhG"
+          ]
+        },
+        "layout_NzqUL3": {
+          "type": "layout",
+          "name": "Layout",
+          "settings": {
+            "desktop_padding": 10,
+            "desktop_gap": 20,
+            "desktop_columns_per_row": 2,
+            "align_items": "center",
+            "custom_column_width": true,
+            "column_width": "30.6rem 1fr",
+            "mobile_padding": 0,
+            "mobile_gap": 14,
+            "mobile_columns_per_row": 1
+          },
+          "blocks": {
+            "layout_item_taLDzH": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 0,
+                "gap_mobile": 0
+              },
+              "blocks": {
+                "image_aLpqwR": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/NECTAR_092524-3479_2_e61f6033-7ae7-4d72-8cae-fe8424b56490.png",
+                    "image_url": "",
+                    "border_radius": 12,
+                    "image_ratio": "1/1",
+                    "image_width": 100,
+                    "hidden_on_mobile": true,
+                    "hidden_on_desktop": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_aLpqwR"
+              ]
+            },
+            "layout_item_dyCQ3E": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 20,
+                "gap_mobile": 16
+              },
+              "blocks": {
+                "heading_97tUKq": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "title": "<h3>5. It Uses Electrolytes Your Body Can Actually Absorb (Not Just Pass Through You)</h3>",
+                    "text_color": "#021a3d",
+                    "text_alignment": "left",
+                    "heading_size": "md",
+                    "font_weight": "black",
+                    "font_family": "inter",
+                    "use_mobile_settings": true,
+                    "text_alignment_mobile": "left",
+                    "heading_size_mobile": "lg",
+                    "font_weight_mobile": "bold"
+                  },
+                  "blocks": {}
+                },
+                "image_cjDF48": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/NECTAR_092524-3479_2_e61f6033-7ae7-4d72-8cae-fe8424b56490.png",
+                    "image_url": "",
+                    "border_radius": 12,
+                    "image_ratio": "1/1",
+                    "image_width": 100,
+                    "hidden_on_mobile": false,
+                    "hidden_on_desktop": true
+                  },
+                  "blocks": {}
+                },
+                "text_ntUB6Q": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p>Not all electrolytes are created equal. Cheap forms pass right through you. Nectar uses premium bio-available forms like magnesium citrate and potassium citrate that your body recognizes and absorbs. Real hydration happens at the cellular level, not on a label.</p><p>👉 <a href=\"#to-product-section\" title=\"#to-product-section\"><span style=\"text-decoration:underline\"><strong>Experience Cellular Hydration</strong></span></a></p>",
+                    "text_alignment": "left",
+                    "font_family": "inter",
+                    "font_weight": "medium",
+                    "text_color": "#021a3d",
+                    "font_size": 16,
+                    "font_size_mobile": 18,
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_97tUKq",
+                "image_cjDF48",
+                "text_ntUB6Q"
+              ]
+            }
+          },
+          "block_order": [
+            "layout_item_taLDzH",
+            "layout_item_dyCQ3E"
+          ]
+        }
+      },
+      "block_order": [
+        "heading_WGD7E3",
+        "layout_9zkY8h",
+        "blockquote_dEPQ7b",
+        "image_pbbNQx",
+        "image_Bg333n",
+        "text_gcibJq",
+        "layout_BafYTz",
+        "layout_XFEWrA",
+        "layout_YCfjwr",
+        "layout_mHKpax",
+        "layout_NzqUL3"
+      ],
+      "custom_css": [
+        "#AaEljUGJqMHdiZkR6e__image_xPHwxW img,#AWUZzOHkyMERkbUlYZ__layout_9zkY8h img {border-radius: 50%;}",
+        "#Ab04rTjVkbnEvdURnT__layout_9zkY8h .block-layout__content,#AWUZzOHkyMERkbUlYZ__layout_9zkY8h .block-layout__content {grid-template-columns: 50px 1fr;}",
+        "p:not(:last-child) {margin-bottom: 20px;}",
+        ".blank-section {padding-bottom: 0;}"
+      ],
+      "name": "Text and image",
+      "settings": {
+        "desktop_padding_top": 40,
+        "desktop_gap_between_blocks": 20,
+        "bg_color": "#ffffff",
+        "desktop_max_width": 840,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 20,
+        "mobile_gap_between_blocks": 20
+      }
+    },
+    "blank_section_4V6VD7": {
+      "type": "blank-section",
+      "blocks": {
+        "layout_JCnf6E": {
+          "type": "layout",
+          "name": "Layout",
+          "settings": {
+            "desktop_padding": 10,
+            "desktop_gap": 20,
+            "desktop_columns_per_row": 2,
+            "align_items": "center",
+            "custom_column_width": true,
+            "column_width": "30.6rem 1fr",
+            "mobile_padding": 10,
+            "mobile_gap": 14,
+            "mobile_columns_per_row": 1
+          },
+          "blocks": {
+            "layout_item_zcACmb": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 0,
+                "gap_mobile": 0
+              },
+              "blocks": {
+                "image_w8yqkY": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/Image_17.png",
+                    "image_url": "",
+                    "border_radius": 12,
+                    "image_ratio": "1/1",
+                    "image_width": 100,
+                    "hidden_on_mobile": true,
+                    "hidden_on_desktop": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_w8yqkY"
+              ]
+            },
+            "layout_item_xFX3GR": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 20,
+                "gap_mobile": 16
+              },
+              "blocks": {
+                "heading_XUUKdA": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "title": "<h3>6. Great reviews and 90-Day Money-Back Guarantee</h3>",
+                    "text_color": "#021a3d",
+                    "text_alignment": "left",
+                    "heading_size": "md",
+                    "font_weight": "black",
+                    "font_family": "inter",
+                    "use_mobile_settings": true,
+                    "text_alignment_mobile": "left",
+                    "heading_size_mobile": "lg",
+                    "font_weight_mobile": "bold"
+                  },
+                  "blocks": {}
+                },
+                "image_VM66hV": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "shopify://shop_images/Image_17.png",
+                    "image_url": "",
+                    "border_radius": 12,
+                    "image_ratio": "1/1",
+                    "image_width": 100,
+                    "hidden_on_mobile": false,
+                    "hidden_on_desktop": true
+                  },
+                  "blocks": {}
+                },
+                "text_zyyeji": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p>It's hard to switch electrolyte brands, but we're so confident you'll love Nectar that we back it with a 90-day money-back guarantee. Once you experience zero sugar, clean ingredients, and hydration that actually tastes good, you won't go back to overpriced sugar water. If for any reason you're not satisfied, simply let us know and we'll happily refund your purchase!</p><p>👉 <a href=\"#to-product-section\" title=\"#to-product-section\"><span style=\"text-decoration:underline\"><strong>Make the Switch Without Risk</strong></span></a></p>",
+                    "text_alignment": "left",
+                    "font_family": "inter",
+                    "font_weight": "medium",
+                    "text_color": "#021a3d",
+                    "font_size": 16,
+                    "font_size_mobile": 18,
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_XUUKdA",
+                "image_VM66hV",
+                "text_zyyeji"
+              ]
+            }
+          },
+          "block_order": [
+            "layout_item_zcACmb",
+            "layout_item_xFX3GR"
+          ]
+        }
+      },
+      "block_order": [
+        "layout_JCnf6E"
+      ],
+      "custom_css": [
+        "p:not(:last-child) {margin-bottom: 20px;}"
+      ],
+      "name": "Text and image",
+      "settings": {
+        "desktop_padding_top": 30,
+        "desktop_gap_between_blocks": 20,
+        "bg_color": "#ffffff",
+        "desktop_max_width": 840,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 0,
+        "mobile_gap_between_blocks": 20
+      }
+    },
+    "blank_section_x6biKm": {
+      "type": "blank-section",
+      "blocks": {
+        "heading_BmAqyr": {
+          "type": "heading",
+          "name": "Heading",
+          "settings": {
+            "title": "<h3>Reaching #7 means one thing: you're truly <br/>serious about better daily hydration.</h3>",
+            "text_color": "#021a3d",
+            "text_alignment": "center",
+            "heading_size": "lg",
+            "font_weight": "bold",
+            "font_family": "inter",
+            "use_mobile_settings": true,
+            "text_alignment_mobile": "center",
+            "heading_size_mobile": "md",
+            "font_weight_mobile": "bold"
+          },
+          "blocks": {}
+        },
+        "text_QFmtWz": {
+          "type": "text",
+          "name": "Text",
+          "settings": {
+            "title": "<p>✨ We don't hand these out every day... consider this an <br/>exclusive Nectar hookup, just for you.</p>",
+            "text_alignment": "center",
+            "font_family": "poppins",
+            "font_weight": "medium",
+            "text_color": "#021a3d",
+            "font_size": 16,
+            "font_size_mobile": 16,
+            "text_alignment_mobile": "center",
+            "hide_on_mobile": true
+          },
+          "blocks": {}
+        },
+        "pdp_gifts_H47L3P": {
+          "type": "pdp_gifts",
+          "name": "Product Gifts",
+          "settings": {
+            "test_percent": false,
+            "unlock_all_gifts_if_more_than_one_pouch": false,
+            "unlock_all_gifts_if_equal_3": true,
+            "use_multistep_flow": false,
+            "related_product": "essential-daily-hydration-4-gift-v2",
+            "related_pouches": [],
+            "products": [
+              "free-shipping",
+              "energy-sampler",
+              "nectar-bottle",
+              "nectar-frother"
+            ],
+            "related_doctor_review": "donna-b",
+            "alt_gallery": "",
+            "alt_title_image": "shopify://shop_images/alt-title-image.jpg"
+          },
+          "blocks": {
+            "inline_review_68q7p8": {
+              "type": "inline-review",
+              "name": "Inline Review",
+              "settings": {
+                "title": "<p>Excellent <strong>4.8</strong> | 12,000+ Trusted Reviews</p>"
+              },
+              "blocks": {}
+            },
+            "heading_WqWqR8": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "title": "<p>Save up to 60% + 4 Free Gifts</p>",
+                "text_color": "#021a3d",
+                "text_alignment": "left",
+                "heading_size": "lg",
+                "font_weight": "bold",
+                "font_family": "inter",
+                "use_mobile_settings": true,
+                "text_alignment_mobile": "left",
+                "heading_size_mobile": "lg",
+                "font_weight_mobile": "bold"
+              },
+              "blocks": {}
+            },
+            "text_qMrMMt": {
+              "type": "text",
+              "name": "Text",
+              "disabled": true,
+              "settings": {
+                "title": "<p>With Today’s Limited-Time Offer</p>",
+                "text_alignment": "left",
+                "font_family": "values-sans",
+                "font_weight": "normal",
+                "text_color": "#021a3d",
+                "font_size": 20,
+                "font_size_mobile": 18,
+                "text_alignment_mobile": "left",
+                "hide_on_mobile": false
+              },
+              "blocks": {}
+            },
+            "pdp_onestep_cta_aBBHMg": {
+              "type": "_pdp-onestep-cta",
+              "name": "Gift Onestep Flow",
+              "settings": {
+                "related_pouches": [
+                  "1-bag",
+                  "2-bags",
+                  "3-bags"
+                ],
+                "gifts_title": "$75.00 of Gifts With Your First Order!"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "inline_review_68q7p8",
+            "heading_WqWqR8",
+            "text_qMrMMt",
+            "pdp_onestep_cta_aBBHMg"
+          ]
+        }
+      },
+      "block_order": [
+        "heading_BmAqyr",
+        "text_QFmtWz",
+        "pdp_gifts_H47L3P"
+      ],
+      "custom_css": [
+        "@media (min-width: 1024px) {.thumbnail-gallery .swiper-slide {width: 4.8rem !important; height: 4.2rem !important; }}",
+        ".product__gallery .font-family-poppins + div {display: none;}",
+        "@media (max-width: 1024px) {.product .buttons-group {display: none; } .product__info {padding-bottom: 0 !important; } .product__gallery .font-family-poppins {font-family: var(--font-family-inter); }}"
+      ],
+      "name": "Product Section",
+      "settings": {
+        "desktop_padding_top": 50,
+        "desktop_gap_between_blocks": 20,
+        "bg_color": "#f4faff",
+        "desktop_max_width": 1000,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 40,
+        "mobile_gap_between_blocks": 10
+      }
+    },
+    "blank_section_Fj7qGF": {
+      "type": "blank-section",
+      "blocks": {
+        "heading_fnt4wT": {
+          "type": "heading",
+          "name": "Heading",
+          "settings": {
+            "title": "<h2>The Science Behind Nectar's Daily Hydration Formula</h2>",
+            "text_color": "#123456",
+            "text_alignment": "center",
+            "heading_size": "2xl",
+            "font_weight": "bold",
+            "font_family": "values-sans",
+            "use_mobile_settings": true,
+            "text_alignment_mobile": "center",
+            "heading_size_mobile": "lg",
+            "font_weight_mobile": "bold"
+          },
+          "blocks": {}
+        },
+        "text_BgeFwg": {
+          "type": "text",
+          "name": "Text",
+          "settings": {
+            "title": "<p>Clean, research-backed ingredients delivered at the perfect ratio for all-day hydration and energy.</p>",
+            "text_alignment": "center",
+            "font_family": "poppins",
+            "font_weight": "normal",
+            "text_color": "#000000",
+            "font_size": 16,
+            "font_size_mobile": 16,
+            "text_alignment_mobile": "center",
+            "hide_on_mobile": false
+          },
+          "blocks": {}
+        },
+        "ingredients_k9trft": {
+          "type": "ingredients",
+          "name": "Ingredients",
+          "settings": {
+            "related_ingredients": [],
+            "btn_text": "See Ingredients & Nutrition Facts",
+            "ingredient_modal_logo": "<svg width=\"144\" height=\"31\" viewbox=\"0 0 144 31\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M21.0874 17.3617V5.65214C21.0874 4.39922 21.0874 3.13458 21.0874 1.88166V1.17908C21.0874 1.05028 21.1266 0.921472 21.192 0.804375C21.2837 0.605313 21.4406 0.488217 21.6759 0.441379C21.8067 0.441379 21.9115 0.40625 22.0423 0.40625H26.4632C26.5809 0.40625 26.6985 0.40625 26.8163 0.429669C27.1695 0.464798 27.4048 0.640442 27.4703 1.00344C27.4965 1.15566 27.4965 1.30789 27.4965 1.47182V1.65917C27.4965 2.50226 27.4965 3.33364 27.4965 4.18844V28.9308C27.4965 29.2703 27.1433 29.5983 26.7508 29.61C26.5939 29.61 26.4502 29.61 26.2931 29.61H23.1932C22.9316 29.61 22.6569 29.61 22.4084 29.61C22.1207 29.61 21.8854 29.4811 21.7021 29.3055C21.5322 29.1298 21.4274 28.9425 21.4144 28.6965C21.3751 28.2165 21.2314 27.7482 21.0742 27.2797C20.8389 26.6239 20.5119 26.0034 20.1719 25.4062C19.8711 24.8793 19.5309 24.3758 19.1648 23.8839C18.8901 23.5092 18.6022 23.1346 18.3145 22.7832C18.0268 22.4319 17.726 22.0689 17.4251 21.7294C17.1766 21.425 16.9019 21.1556 16.6272 20.8629C16.3134 20.5351 15.9864 20.2071 15.6724 19.8793C15.3977 19.5866 15.0968 19.3172 14.8091 19.0362C14.5738 18.802 14.3252 18.5912 14.0767 18.3687C13.9066 18.2165 13.7497 18.0643 13.5666 17.9355C13.0172 17.4788 12.481 17.0338 11.9446 16.5655C11.513 16.2142 11.0946 15.8512 10.6759 15.4882C10.4012 15.2423 10.1136 14.9964 9.83886 14.7388C9.52504 14.446 9.2242 14.2001 8.93632 13.9308C8.75326 13.7669 8.59634 13.6146 8.41307 13.4507C8.2955 13.3453 8.19089 13.2282 8.0731 13.1346C7.81159 12.8769 7.53689 12.6311 7.3145 12.35C7.28835 12.3149 7.24901 12.2915 7.22286 12.268C7.17056 12.2915 7.18374 12.3266 7.18374 12.3617V19.1533C7.18374 20.0432 7.18374 20.9098 7.18374 21.7997C7.18374 22.6896 7.18374 23.5795 7.18374 24.4694C7.18374 25.3593 7.18374 26.2142 7.18374 27.0924V29.1884C7.18374 29.4344 6.97431 29.5983 6.7128 29.6216C6.63434 29.6216 6.55589 29.6216 6.4904 29.6216C5.4571 29.6216 4.43698 29.6216 3.40367 29.6216C2.74967 29.6216 2.10864 29.6216 1.45485 29.6216H0.996882C0.787668 29.6216 0.617578 29.4694 0.604607 29.2703C0.578455 29.2117 0.578455 29.1298 0.578455 29.0478V26.4834C0.5 18.5444 0.5 10.617 0.5 2.70132C0.5 2.15098 0.5 1.60063 0.5 1.03857C0.5 0.9566 0.5 0.862924 0.5 0.769247C0.539123 0.617023 0.630759 0.511636 0.800849 0.476507C0.879304 0.476507 0.957759 0.441379 1.02303 0.441379C1.70319 0.441379 2.38334 0.453088 3.05052 0.464798C3.37752 0.464798 3.70452 0.464798 4.03152 0.464798C4.64619 0.464798 5.23471 0.464798 5.84959 0.464798C6.15043 0.464798 6.4381 0.546765 6.67347 0.710699C6.96134 0.921472 7.10528 1.19079 7.17056 1.53037C7.24901 1.97533 7.37977 2.43202 7.54986 2.86525C7.77226 3.43902 8.05992 3.98938 8.37395 4.52801C8.68777 5.06667 9.04093 5.58189 9.42023 6.08539C9.74723 6.53037 10.0874 6.9636 10.4535 7.38516C10.99 8.01748 11.5523 8.62637 12.154 9.22357C12.5595 9.63339 12.9779 10.0432 13.3965 10.4414C13.789 10.8043 14.1813 11.1556 14.5868 11.4952C14.8876 11.7528 15.1884 12.0104 15.4893 12.2798C15.764 12.5257 16.0648 12.7599 16.3395 13.0175C16.7711 13.3922 17.1896 13.7786 17.6214 14.1416C18.0398 14.5046 18.4714 14.891 18.8769 15.2657C19.4395 15.7809 19.9757 16.2962 20.5251 16.8114C20.6949 16.9636 20.8259 17.1275 20.9828 17.2915C21.009 17.3149 21.0351 17.3383 21.0613 17.3617C21.0613 17.3617 21.0613 17.3383 21.0874 17.3383V17.3617Z\" fill=\"#0D3063\"></path>\n<path d=\"M122.913 19.3992V29.5866C122.913 29.7155 122.834 29.7739 122.69 29.7856H117.118C116.883 29.7856 116.752 29.7272 116.765 29.4578C116.765 29.13 116.765 28.7903 116.765 28.4624C116.765 28.404 116.765 28.3454 116.765 28.2985C116.739 28.1698 116.595 28.1112 116.478 28.1698C116.425 28.1932 116.386 28.2282 116.347 28.2634C115.98 28.5679 115.588 28.8254 115.183 29.0714C114.659 29.3758 114.123 29.6217 113.548 29.8208C113.09 29.973 112.632 30.0902 112.148 30.1721C111.076 30.3829 109.99 30.4179 108.891 30.3829C108.211 30.3594 107.544 30.2424 106.89 30.0783C106.118 29.891 105.373 29.6333 104.653 29.2939C104.196 29.0714 103.751 28.8372 103.319 28.5562C102.783 28.2165 102.286 27.8302 101.828 27.4202C101.514 27.1275 101.2 26.8231 100.926 26.507C100.599 26.1323 100.285 25.7224 100.023 25.301C99.8009 24.973 99.6177 24.61 99.4346 24.2587C99.2645 23.9309 99.1338 23.5795 99.003 23.2282C98.8852 22.9238 98.8067 22.631 98.7283 22.3266C98.4145 21.1673 98.3228 19.9964 98.3751 18.8138C98.4013 18.1815 98.4929 17.5491 98.6367 16.9285C98.7806 16.3782 98.9507 15.8395 99.1731 15.3009C99.4085 14.7623 99.6831 14.2353 99.997 13.7318C100.429 13.0409 100.952 12.3969 101.541 11.8114C101.959 11.4016 102.404 11.0035 102.888 10.6639C103.332 10.3477 103.803 10.055 104.287 9.79741C104.797 9.52808 105.334 9.3056 105.87 9.10654C106.105 9.01286 106.367 8.94259 106.615 8.87234C107.361 8.64987 108.133 8.53277 108.931 8.47422C109.715 8.40395 110.513 8.41567 111.311 8.52105C111.756 8.5796 112.214 8.63815 112.645 8.74353C113.508 8.94259 114.345 9.23533 115.104 9.64517C115.523 9.87937 115.915 10.137 116.268 10.4531C116.307 10.4883 116.347 10.5234 116.386 10.5585C116.451 10.6171 116.53 10.6405 116.608 10.5937C116.7 10.5585 116.726 10.4883 116.726 10.4063V9.35243C116.726 9.0831 116.778 9.04799 117.066 9.04799H122.638C122.795 9.04799 122.847 9.11824 122.86 9.25875V9.49294C122.9 12.8068 122.9 16.1206 122.9 19.4344L122.913 19.3992ZM110.631 13.5562C110.461 13.5562 110.16 13.5796 109.872 13.6147C109.532 13.6498 109.205 13.7084 108.865 13.8021C108.46 13.9192 108.067 14.048 107.701 14.2236C107.4 14.3758 107.112 14.5281 106.851 14.7271C106.419 15.0316 106.04 15.4063 105.726 15.8044C105.334 16.2962 105.059 16.8349 104.85 17.4086C104.732 17.7131 104.667 18.0409 104.614 18.3571C104.536 18.7084 104.523 19.0831 104.523 19.4344C104.523 19.7857 104.562 20.1604 104.627 20.5116C104.797 21.3898 105.137 22.1861 105.7 22.9238C106.223 23.6148 106.89 24.1533 107.701 24.5397C108.342 24.8441 109.022 25.0433 109.728 25.1369C110.605 25.2541 111.481 25.2424 112.344 25.0433C112.619 24.9847 112.907 24.9144 113.168 24.8208C113.691 24.6333 114.189 24.3992 114.633 24.0948C115.091 23.7903 115.497 23.404 115.824 22.9941C116.294 22.4086 116.608 21.7645 116.818 21.0737C116.961 20.6287 117.027 20.1721 117.053 19.7155C117.092 18.8606 116.988 18.0409 116.687 17.233C116.451 16.6124 116.098 16.0386 115.653 15.5117C115.392 15.2072 115.078 14.9262 114.738 14.6803C114.45 14.4695 114.123 14.2939 113.783 14.1299C113.404 13.9426 112.998 13.8255 112.58 13.7201C111.991 13.5796 111.389 13.5327 110.644 13.521L110.631 13.5562Z\" fill=\"#0D3063\"></path>\n<path d=\"M46.4621 20.8758H38.1172C38.0258 20.8758 37.9341 20.8758 37.8557 20.8758C37.7249 20.8991 37.6595 20.9811 37.6856 21.0864C37.7118 21.2153 37.7511 21.3324 37.7904 21.4377C37.8295 21.5666 37.895 21.7071 37.9341 21.8241C38.1436 22.3512 38.4181 22.8429 38.7712 23.2995C39.2683 23.9085 39.87 24.4002 40.6025 24.7751C41.1387 25.056 41.7012 25.2434 42.3027 25.3839C43.1007 25.5829 43.9116 25.6531 44.7357 25.665C45.5073 25.665 46.2661 25.6298 47.0376 25.5009C47.6132 25.4073 48.1756 25.2784 48.725 25.1145C49.1566 24.974 49.5752 24.8335 49.9807 24.6696C50.53 24.4354 51.0401 24.1777 51.5372 23.8733C51.9688 23.6041 52.3872 23.323 52.7797 23.0186C52.8711 22.9484 52.9628 22.9131 53.0674 22.9248H53.2898C53.4467 22.9248 53.5251 23.0068 53.5251 23.1473V23.2294C53.499 23.8969 53.4728 24.5643 53.4337 25.2434C53.4076 25.7117 53.3814 26.1802 53.3553 26.6602C53.3291 27.1052 53.3159 27.5501 53.303 27.9951C53.303 28.159 53.2375 28.2645 53.0806 28.323C52.832 28.44 52.5703 28.5806 52.322 28.6861C51.8904 28.885 51.4585 29.0491 51.0269 29.213C50.3206 29.4821 49.5752 29.6813 48.8296 29.8687C48.254 30.0092 47.6917 30.1029 47.1031 30.1848C46.1744 30.337 45.2196 30.3956 44.2909 30.3956C43.5584 30.3956 42.826 30.3487 42.1067 30.2317C41.6096 30.1498 41.1125 30.0676 40.6156 29.939C39.9616 29.7632 39.3206 29.5643 38.6928 29.3066C37.8557 28.9552 37.0709 28.522 36.3253 28.0186C35.8807 27.714 35.4753 27.3629 35.0828 27.0115C34.625 26.5899 34.2196 26.1333 33.8532 25.6531C33.6702 25.419 33.5133 25.1848 33.3564 24.939C33.1078 24.5524 32.8724 24.1427 32.6892 23.7328C32.5193 23.3698 32.3753 22.9951 32.2446 22.6204C32.0222 21.9529 31.8783 21.2738 31.7866 20.5947C31.6952 19.974 31.682 19.3535 31.7082 18.7328C31.7475 17.8897 31.8914 17.0818 32.1268 16.2621C32.336 15.583 32.5846 14.9155 32.9509 14.2949C33.1078 14.0256 33.2517 13.7563 33.4348 13.4987C33.6179 13.2293 33.8009 12.9834 34.0104 12.7258C34.3242 12.316 34.6905 11.9413 35.0828 11.59C35.3968 11.2973 35.7368 11.0279 36.1031 10.7703C36.4954 10.4776 36.9008 10.2317 37.3324 9.9975C37.6856 9.79844 38.0519 9.63451 38.4312 9.47056C39.1114 9.17784 39.8307 8.95534 40.5631 8.7797C41.0734 8.6509 41.5835 8.58063 42.0935 8.51039C42.6429 8.40501 43.1923 8.38157 43.7547 8.36987C44.2386 8.36987 44.7225 8.36987 45.2066 8.44012C45.5989 8.48697 45.9914 8.54552 46.3836 8.60407C47.0376 8.70945 47.6787 8.88509 48.2933 9.10757C48.5942 9.22467 48.895 9.34177 49.1827 9.45886C49.7451 9.71647 50.2683 10.0209 50.7654 10.3605C51.2493 10.6884 51.6941 11.0631 52.0996 11.4612C52.4134 11.7656 52.7013 12.0935 52.9628 12.4331C53.2636 12.8312 53.5513 13.2528 53.7869 13.6743C54.0222 14.0959 54.2315 14.5408 54.4147 14.9975C54.7156 15.7703 54.9378 16.5666 55.0687 17.3745C55.1601 17.96 55.2256 18.5572 55.2256 19.1544V20.4892C55.2256 20.7586 55.134 20.8055 54.8725 20.8055C52.0602 20.8055 49.2612 20.8055 46.4359 20.8055L46.4621 20.8758ZM43.4409 17.0818H48.8689C48.9997 17.0818 49.0651 16.9998 49.0651 16.8827C49.0651 16.8125 49.0651 16.7422 49.0388 16.672C48.9212 16.2387 48.7904 15.8054 48.5549 15.419C48.398 15.1497 48.2149 14.9038 47.9925 14.6696C47.6262 14.2832 47.1946 13.967 46.7106 13.7211C46.1613 13.4284 45.5727 13.2528 44.9449 13.1591C43.9771 12.9951 43.0222 13.0069 42.0674 13.2293C41.4265 13.3699 40.851 13.5806 40.3016 13.8851C39.87 14.131 39.4907 14.412 39.1637 14.7516C38.5752 15.3371 38.1565 16.0162 37.895 16.7656C37.895 16.8008 37.8689 16.8359 37.8689 16.871C37.8427 16.9998 37.9212 17.0935 38.0649 17.1052C38.1304 17.1052 38.2088 17.1052 38.2743 17.1052C39.9878 17.1052 41.7274 17.1052 43.4538 17.1052L43.4409 17.0818Z\" fill=\"#0D3063\"></path>\n<path d=\"M77.1079 12.9591C77.1079 13.4275 77.1472 13.8959 77.1602 14.376C77.1602 14.7975 77.1995 15.2308 77.2125 15.6523V15.7577C77.2125 15.8514 77.1341 15.9099 77.0295 15.9217C76.8855 15.9217 76.7679 15.9217 76.624 15.9217C76.5455 15.9217 76.4932 15.8748 76.4409 15.8397C76.2577 15.7109 76.0878 15.5821 75.9045 15.4533C75.3422 15.0551 74.7666 14.6922 74.1258 14.4111C73.6419 14.1769 73.1316 14.013 72.6086 13.8725C71.719 13.6383 70.8167 13.568 69.9009 13.5914C69.4432 13.5914 68.9986 13.6617 68.5538 13.7554C67.8213 13.931 67.128 14.1886 66.5004 14.5985C65.8725 14.9966 65.3754 15.4884 64.983 16.0622C64.5122 16.7413 64.2243 17.4907 64.0674 18.2636C63.8973 19.2003 63.9235 20.1488 64.1852 21.0621C64.3551 21.6828 64.6298 22.28 65.0223 22.8186C65.3361 23.2518 65.7024 23.6499 66.1472 23.9779C66.5788 24.294 67.0496 24.5634 67.5728 24.7625C68.423 25.0786 69.2992 25.2308 70.215 25.2425C70.6334 25.2425 71.0388 25.2425 71.4575 25.1722C72.033 25.0903 72.5954 24.9731 73.1448 24.7975C73.5502 24.657 73.9427 24.4931 74.3088 24.3173C74.5704 24.177 74.8451 24.0248 75.0936 23.8842C75.5645 23.6149 75.983 23.2988 76.4148 22.9825C76.5062 22.9122 76.5978 22.8772 76.7025 22.8888H76.951C77.1079 22.8888 77.1734 22.9591 77.1864 23.0996V23.1816C77.1602 23.8842 77.1341 24.575 77.0949 25.2777C77.0688 25.9216 77.0295 26.5773 77.0033 27.2214C77.0033 27.6547 76.964 28.0996 76.951 28.5329V28.6149C76.951 28.7202 76.8987 28.7904 76.8202 28.849C76.7156 28.9076 76.6108 28.9779 76.5194 29.0365C75.8915 29.3759 75.2505 29.657 74.5574 29.8795C73.8379 30.1019 73.0925 30.2191 72.3468 30.3127C71.5491 30.4064 70.7512 30.4299 69.9532 30.418C69.3779 30.418 68.8153 30.3713 68.2398 30.2894C67.586 30.1956 66.932 30.0786 66.2909 29.9028C65.7547 29.7506 65.2447 29.5867 64.7476 29.3876C64.0545 29.1067 63.3873 28.7671 62.7594 28.3807C61.9355 27.8655 61.1899 27.2564 60.5359 26.554C60.1173 26.109 59.738 25.6288 59.4242 25.1136C59.1626 24.7039 58.9271 24.2706 58.731 23.8257C58.3779 23.0527 58.1423 22.2683 57.9984 21.4485C57.8285 20.5586 57.7891 19.6687 57.8285 18.7671C57.8546 18.3338 57.8938 17.8889 57.9854 17.4673C58.0638 17.1394 58.1293 16.7999 58.2078 16.472C58.3515 15.9451 58.5348 15.4416 58.7701 14.9498C58.9925 14.4462 59.2934 13.9662 59.6072 13.4978C59.9081 13.0528 60.2482 12.6196 60.6537 12.2331C61.033 11.8467 61.4514 11.472 61.8962 11.1324C62.5502 10.6406 63.2565 10.2074 64.0151 9.84438C64.8654 9.44626 65.7547 9.11838 66.6834 8.90762C67.3374 8.74367 68.0044 8.63829 68.6846 8.56803C69.1946 8.50948 69.7179 8.47437 70.215 8.47437C70.8428 8.47437 71.4445 8.47437 72.0721 8.55633C72.5301 8.60316 72.9879 8.66171 73.4456 8.74367C73.9557 8.83736 74.4528 8.96617 74.9235 9.11838C75.4729 9.30575 76.0091 9.52822 76.4932 9.83267C76.5847 9.89121 76.6893 9.94976 76.7809 9.99661C76.9117 10.0669 76.9901 10.1605 76.9771 10.3011V10.4064C77.0033 11.0856 77.0295 11.7765 77.0556 12.4556C77.0818 12.6547 77.0949 12.8303 77.1079 13.0294V12.9591Z\" fill=\"#0D3063\"></path>\n<path d=\"M83.8567 18.9544V13.931C83.8567 13.7905 83.7783 13.7319 83.6343 13.7202H80.2467C80.1421 13.7202 80.0767 13.65 80.0635 13.5563C80.0635 13.5095 80.0635 13.4626 80.0635 13.4158V9.17692C80.0635 9.08324 80.1421 9.02469 80.2467 9.01298C80.3252 9.01298 80.4037 9.01298 80.4821 9.01298H83.6998C83.8044 9.01298 83.8697 8.94273 83.8829 8.84905C83.8829 8.7905 83.8829 8.72025 83.8829 8.6617V5.87482C83.8829 5.53524 83.922 5.55866 84.1837 5.45328C84.7461 5.21908 85.3085 4.99661 85.871 4.76241C86.6296 4.45795 87.3882 4.14179 88.1337 3.83735C88.6046 3.63829 89.0756 3.45094 89.5333 3.26358C89.5986 3.24016 89.6641 3.20503 89.7295 3.19333C89.8865 3.14648 90.0172 3.22845 90.0304 3.38068C90.0304 3.43922 90.0304 3.50949 90.0304 3.56804V8.84905C90.0304 8.95445 90.1089 9.01298 90.2135 9.03641C90.2787 9.03641 90.3574 9.03641 90.4227 9.03641H96.047C96.1777 9.03641 96.2432 9.10666 96.2562 9.22375V13.568C96.2562 13.6851 96.1777 13.7436 96.047 13.7554H90.2658C90.0957 13.7554 90.0434 13.8256 90.0434 13.9778V23.2752C90.0434 23.7085 90.1218 24.1534 90.3049 24.5517C90.4882 24.9028 90.7497 25.1955 91.116 25.418C91.4821 25.6288 91.8746 25.7226 92.293 25.7343C92.947 25.7693 93.5881 25.6874 94.2159 25.4766C94.8436 25.2658 95.393 24.9614 95.9292 24.6102C96.034 24.54 96.1386 24.5047 96.2562 24.5164H96.4917C96.688 24.5164 96.7533 24.5984 96.7533 24.7624C96.7533 24.8092 96.7533 24.8561 96.7533 24.9028C96.701 25.4766 96.6355 26.0504 96.5832 26.6125C96.544 27.0458 96.5179 27.4908 96.4786 27.924C96.4394 28.3338 96.4133 28.7437 96.3739 29.1534C96.3739 29.1886 96.3739 29.2237 96.3739 29.2589C96.3739 29.3292 96.3216 29.3876 96.2432 29.4228C96.2432 29.4228 96.217 29.4228 96.2039 29.4462C95.5369 29.7272 94.8436 29.9731 94.1243 30.1488C93.5487 30.2893 92.9732 30.3713 92.3847 30.4063C91.8091 30.4416 91.2597 30.4532 90.6842 30.4299C90.148 30.4299 89.6249 30.3596 89.1279 30.2308C88.8923 30.1605 88.6308 30.1136 88.3954 30.0316C87.7805 29.8325 87.2313 29.575 86.6949 29.2237C86.211 28.9076 85.7926 28.5329 85.4394 28.1113C85.23 27.8655 85.0469 27.6077 84.8768 27.3386C84.6676 27.0106 84.5107 26.6593 84.38 26.3081C84.2751 26.0387 84.1967 25.7693 84.1444 25.5001C83.9481 24.7858 83.909 24.0481 83.909 23.3338C83.909 21.8467 83.909 20.4182 83.909 18.9778L83.8567 18.9544Z\" fill=\"#0D3063\"></path>\n<path d=\"M127.817 19.3994V9.21202C127.817 9.0715 127.882 9.01296 128.039 9.00124H133.611C133.611 9.00124 133.716 9.00124 133.768 9.00124C133.873 9.00124 133.938 9.05979 133.951 9.16517C133.951 9.22372 133.951 9.27057 133.951 9.32911V10.4181C133.951 10.4181 133.951 10.5469 133.951 10.6055C133.99 10.746 134.16 10.7928 134.265 10.6874C134.37 10.5938 134.475 10.5001 134.566 10.4064C134.958 10.0551 135.403 9.73894 135.874 9.46963C136.371 9.17688 136.907 8.95441 137.457 8.77876C137.823 8.64995 138.202 8.5797 138.595 8.50943C138.987 8.43919 139.366 8.40405 139.759 8.40405C140.151 8.40405 140.57 8.40405 140.975 8.4626C141.367 8.52115 141.747 8.5797 142.113 8.6968C142.571 8.83731 142.989 9.03637 143.382 9.28226C143.486 9.35253 143.539 9.42278 143.539 9.53988C143.578 10.1136 143.617 10.6991 143.669 11.2729C143.709 11.8233 143.748 12.3736 143.787 12.9239C143.826 13.4743 143.866 14.0247 143.918 14.575C143.918 14.7155 143.944 14.856 143.944 14.9848C143.944 15.02 143.944 15.0668 143.918 15.1019C143.879 15.1839 143.8 15.2073 143.709 15.219H143.186C143.081 15.219 143.002 15.1839 142.95 15.1136C142.715 14.8443 142.414 14.6336 142.113 14.4345C141.812 14.2354 141.485 14.0832 141.145 13.9427C140.295 13.6148 139.419 13.486 138.49 13.5563C138.15 13.5797 137.823 13.6265 137.483 13.7085C136.789 13.8841 136.149 14.1652 135.586 14.6101C135.168 14.9263 134.841 15.3244 134.566 15.7577C134.226 16.3431 134.017 16.9755 133.938 17.6312C133.899 17.9474 133.886 18.2869 133.886 18.6031V29.5984C133.886 29.7039 133.807 29.7623 133.69 29.7741C133.637 29.7741 133.585 29.7741 133.533 29.7741H128.105C128.105 29.7741 127.974 29.7741 127.922 29.7741C127.804 29.7506 127.751 29.692 127.738 29.5867V19.4111L127.817 19.3994Z\" fill=\"#0D3063\"></path>\n</svg>",
+            "ingredient_modal_metaobject": "ingredients-modal-yi1jwk7h"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_fnt4wT",
+        "text_BgeFwg",
+        "ingredients_k9trft"
+      ],
+      "custom_css": [
+        ".blank-section {height: 0 !important; overflow: hidden; padding: 0;}"
+      ],
+      "name": "Ingredients Section",
+      "settings": {
+        "desktop_padding_top": 50,
+        "desktop_gap_between_blocks": 10,
+        "bg_color": "#ffffff",
+        "desktop_max_width": 980,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 30,
+        "mobile_gap_between_blocks": 5
+      }
+    },
+    "blank_section_Vy8LNG": {
+      "type": "blank-section",
+      "blocks": {
+        "heading_zcknrL": {
+          "type": "heading",
+          "name": "Heading",
+          "settings": {
+            "title": "<h2>Real, Verified Relief - See Why <strong>Millions Have Switched To Nectar</strong></h2>",
+            "text_color": "#123456",
+            "text_alignment": "center",
+            "heading_size": "3xl",
+            "font_weight": "bold",
+            "font_family": "values-sans",
+            "use_mobile_settings": true,
+            "text_alignment_mobile": "center",
+            "heading_size_mobile": "lg",
+            "font_weight_mobile": "bold"
+          },
+          "blocks": {}
+        },
+        "text_KHx3yi": {
+          "type": "text",
+          "name": "Text",
+          "settings": {
+            "title": "<p>Note: All reviews below are from actual paying customers. They have been authenticated and verified.</p>",
+            "text_alignment": "center",
+            "font_family": "poppins",
+            "font_weight": "normal",
+            "text_color": "#0d3063",
+            "font_size": 14,
+            "font_size_mobile": 12,
+            "text_alignment_mobile": "left",
+            "hide_on_mobile": false
+          },
+          "blocks": {}
+        },
+        "banner_YDUjr3": {
+          "type": "banner",
+          "name": "Banner",
+          "settings": {
+            "vertical_padding_desktop": 10,
+            "image": "shopify://shop_images/image-banner.png",
+            "vertical_padding_mobile": 0,
+            "image_mobile": "shopify://shop_images/image-banner-mobile.png"
+          },
+          "blocks": {}
+        },
+        "reviews_total_QNb8NA": {
+          "type": "reviews-total",
+          "name": "Reviews Total",
+          "settings": {
+            "score_1": "4.9",
+            "text_1": "<p>Based on 14,802 reviews</p>",
+            "score_2": "99%",
+            "text_2": "<p>Of reviewers would recommend this product to a friend</p>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_zcknrL",
+        "text_KHx3yi",
+        "banner_YDUjr3",
+        "reviews_total_QNb8NA"
+      ],
+      "custom_css": [],
+      "name": "Gallery",
+      "settings": {
+        "desktop_padding_top": 50,
+        "desktop_gap_between_blocks": 10,
+        "bg_color": "#ffffff",
+        "desktop_max_width": 840,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 30,
+        "mobile_gap_between_blocks": 10
+      }
+    },
+    "apps_fEXbjx": {
+      "type": "apps",
+      "blocks": {
+        "junip_junip_reviews_p3WYcJ": {
+          "type": "shopify://apps/junip/blocks/junip-reviews/dc14f5a8-ed15-41b1-ad08-cfba23f9789b",
+          "settings": {
+            "layout": "list",
+            "reviewsType": "all",
+            "showSummary": false,
+            "showMediaGallery": false,
+            "reviewsCount": 5,
+            "containerClass": ""
+          }
+        }
+      },
+      "block_order": [
+        "junip_junip_reviews_p3WYcJ"
+      ],
+      "custom_css": [
+        ".junip-review-section {background-color: #ffffff !important;}"
+      ],
+      "settings": {}
+    },
+    "sticky_cta_mb9jfL": {
+      "type": "sticky-cta",
+      "blocks": {
+        "button_KYcX7B": {
+          "type": "button",
+          "settings": {
+            "use_custom_url": true,
+            "button_flow": "Hydration",
+            "button_text": "Save Up To 60% Now",
+            "button_url": "#to-product-section"
+          }
+        }
+      },
+      "block_order": [
+        "button_KYcX7B"
+      ],
+      "name": "Sticky CTA",
+      "settings": {}
+    }
+  },
+  "order": [
+    "announcement_bar_bzgxdf",
+    "blank_section_jhpeEr",
+    "blank_section_4V6VD7",
+    "blank_section_x6biKm",
+    "blank_section_Fj7qGF",
+    "blank_section_Vy8LNG",
+    "apps_fEXbjx",
+    "sticky_cta_mb9jfL"
+  ]
+}
