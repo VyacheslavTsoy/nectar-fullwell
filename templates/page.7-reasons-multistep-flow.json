@@ -911,6 +911,121 @@
         "mobile_gap_between_blocks": 20
       }
     },
+    "blank_section_jypxam": {
+      "type": "blank-section",
+      "blocks": {
+        "pdp_gifts_jb3fBY": {
+          "type": "pdp_gifts",
+          "name": "Product Gifts",
+          "settings": {
+            "test_percent": false,
+            "unlock_all_gifts_if_more_than_one_pouch": false,
+            "unlock_all_gifts_if_equal_3": true,
+            "use_multistep_flow": true,
+            "related_product": "essential-daily-calm-gift-v2",
+            "related_pouches": [],
+            "products": [
+              "free-shipping",
+              "energy-sampler",
+              "nectar-bottle",
+              "nectar-frother"
+            ],
+            "related_doctor_review": "donna-b",
+            "alt_gallery": ""
+          },
+          "blocks": {
+            "inline_review_HxBbtc": {
+              "type": "inline-review",
+              "name": "Inline Review",
+              "settings": {
+                "title": "<p>Excellent <strong>4.8</strong> | 12,000+ Trusted Reviews</p>"
+              },
+              "blocks": {}
+            },
+            "heading_jDXWf9": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "title": "<p>Save up to 60% + 4 Free Gifts</p>",
+                "text_color": "#123456",
+                "text_alignment": "left",
+                "heading_size": "xl",
+                "font_weight": "bold",
+                "font_family": "values-sans",
+                "use_mobile_settings": true,
+                "text_alignment_mobile": "left",
+                "heading_size_mobile": "lg",
+                "font_weight_mobile": "bold"
+              },
+              "blocks": {}
+            },
+            "text_EdXpah": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "title": "<p>With Today’s Limited-Time Offer</p>",
+                "text_alignment": "left",
+                "font_family": "values-sans",
+                "font_weight": "normal",
+                "text_color": "#0d3063",
+                "font_size": 20,
+                "font_size_mobile": 18,
+                "text_alignment_mobile": "left",
+                "hide_on_mobile": false
+              },
+              "blocks": {}
+            },
+            "pdp_onestep_cta_zz3kCa": {
+              "type": "_pdp-onestep-cta",
+              "name": "Gift Onestep Flow",
+              "disabled": true,
+              "settings": {
+                "related_pouches": [
+                  "1-bag",
+                  "2-bags",
+                  "3-bags"
+                ],
+                "gifts_title": "$75.00 of Gifts With Your First Order!"
+              },
+              "blocks": {}
+            },
+            "pdp_multistep_cta_jgDqVD": {
+              "type": "_pdp-multistep-cta",
+              "name": "Gift Multistep Flow",
+              "settings": {
+                "related_pouches": [
+                  "3-bags",
+                  "2-bags",
+                  "1-bag"
+                ],
+                "gifts_title": "$75.00 of Gifts With Your First Order!"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "inline_review_HxBbtc",
+            "heading_jDXWf9",
+            "text_EdXpah",
+            "pdp_onestep_cta_zz3kCa",
+            "pdp_multistep_cta_jgDqVD"
+          ]
+        }
+      },
+      "block_order": [
+        "pdp_gifts_jb3fBY"
+      ],
+      "name": "Product Section",
+      "settings": {
+        "desktop_padding_top": 50,
+        "desktop_gap_between_blocks": 20,
+        "bg_color": "#ffffff",
+        "desktop_max_width": 1140,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 0,
+        "mobile_gap_between_blocks": 10
+      }
+    },
     "blank_section_x6biKm": {
       "type": "blank-section",
       "blocks": {
@@ -1037,6 +1152,7 @@
         "text_QFmtWz",
         "pdp_gifts_H47L3P"
       ],
+      "disabled": true,
       "custom_css": [
         "@media (min-width: 1024px) {.thumbnail-gallery .swiper-slide {width: 4.8rem !important; height: 4.2rem !important; }}",
         ".product__gallery .font-family-poppins + div {display: none;}",
@@ -1244,6 +1360,7 @@
     "announcement_bar_bzgxdf",
     "blank_section_jhpeEr",
     "blank_section_4V6VD7",
+    "blank_section_jypxam",
     "blank_section_x6biKm",
     "blank_section_Fj7qGF",
     "blank_section_Vy8LNG",
