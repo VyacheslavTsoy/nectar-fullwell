@@ -58,10 +58,10 @@
                     "heading_size": "4xl",
                     "font_weight": "bold",
                     "font_family": "values-sans",
-                    "use_mobile_settings": false,
-                    "text_alignment_mobile": "left",
-                    "heading_size_mobile": "xl",
-                    "font_weight_mobile": "normal"
+                    "use_mobile_settings": true,
+                    "text_alignment_mobile": "center",
+                    "heading_size_mobile": "md",
+                    "font_weight_mobile": "bold"
                   },
                   "blocks": {}
                 },
