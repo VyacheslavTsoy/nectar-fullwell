@@ -778,14 +778,14 @@
                   "type": "text",
                   "name": "Text",
                   "settings": {
-                    "title": "<p>Coming Soon</p>",
-                    "text_alignment": "left",
+                    "title": "<p><strong>Coming Soon...</strong></p>",
+                    "text_alignment": "center",
                     "font_family": "values-sans",
                     "font_weight": "normal",
                     "text_color": "#181d27",
                     "font_size": 22,
                     "font_size_mobile": 16,
-                    "text_alignment_mobile": "left",
+                    "text_alignment_mobile": "center",
                     "hide_on_mobile": false
                   },
                   "blocks": {}
