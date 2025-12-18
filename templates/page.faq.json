@@ -442,6 +442,86 @@
                 "mobile_gap_between_blocks": 10
               },
               "blocks": {
+                "text_DRGpwB": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p><strong>Commonly Asked</strong></p>",
+                    "text_alignment": "left",
+                    "font_family": "values-sans",
+                    "font_weight": "normal",
+                    "text_color": "#181d27",
+                    "font_size": 22,
+                    "font_size_mobile": 16,
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
+                  },
+                  "blocks": {}
+                },
+                "accordion_xrQEjM": {
+                  "type": "accordion",
+                  "name": "Accordion",
+                  "settings": {},
+                  "blocks": {
+                    "accordion_item_B43Yeh": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "What is Essential Daily Hydration?",
+                        "answer": "<p>Essential Daily Hydration is a clean, rapid hydration mix designed to be taken daily. The product is made with medical-grade electrolytes to boost the absorption of your water in order to hydrate you as quickly and efficiently as possible.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_bPecWf": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "What makes Essential Daily Hydration different?",
+                        "answer": "<p>1) It's Sugar Free and Low Sodium<br/>2) It's designed for Daily Use<br/>3) It has a light, refreshing taste (no syrup here)<br/>4) It's affordable<br/>5) It uses only the highest quality ingredients possible (Organic & Non-GMO)</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_NLzBgn": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "How can I tell if I need Essential Daily Hydration?",
+                        "answer": "<p>Studies show that 3 out of 4 people suffer from chronic dehydration. Many of the symptoms of dehydration we overlook as byproducts of our busy lifestyles - fatigue, brain fog, feeling down. If you're experiencing any of these symptoms, it's highly likely you're dehydrated - even if you think you are drinking enough fluids. Adding Essential Daily Hydration to your daily routine helps you make the most of the water you drink, keeping you hydrated and feeling your best.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_g6ijaF": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "When should I drink Essential Daily Hydration?",
+                        "answer": "<p>We recommend drinking Essential Daily Hydration first thing in the morning to help replenish the electrolytes lost during sleep and start your day energized. However, many customers enjoy Nectar through out the day and drink more than one packet daily.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_xM8Pqm": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "How long will it take me to feel a difference?",
+                        "answer": "<p>Essential Daily Hydration starts working immediately after consumption to hydrate you as efficiently as possible. Depending on how chronically dehydrated you are, it can take up to a week of daily use to start fully feeling the benefits - increased energy levels, mental clarity and improved mood.</p>"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "accordion_item_B43Yeh",
+                    "accordion_item_bPecWf",
+                    "accordion_item_NLzBgn",
+                    "accordion_item_g6ijaF",
+                    "accordion_item_xM8Pqm"
+                  ]
+                },
                 "text_7ArWjx": {
                   "type": "text",
                   "name": "Text",
@@ -491,6 +571,8 @@
                 }
               },
               "block_order": [
+                "text_DRGpwB",
+                "accordion_xrQEjM",
                 "text_7ArWjx",
                 "accordion_kLWAQK"
               ]
