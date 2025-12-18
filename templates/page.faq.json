@@ -103,7 +103,7 @@
               "type": "_tab-item",
               "settings": {
                 "default": false,
-                "title": "Calm",
+                "title": "Energy",
                 "desktop_padding": 10,
                 "gap_between_blocks": 20,
                 "mobile_padding": 20,
@@ -499,7 +499,7 @@
               "type": "_tab-item",
               "settings": {
                 "default": false,
-                "title": "Energy",
+                "title": "Calm",
                 "desktop_padding": 10,
                 "gap_between_blocks": 20,
                 "mobile_padding": 20,
