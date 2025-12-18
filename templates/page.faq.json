@@ -13,41 +13,97 @@
       "type": "main-404",
       "disabled": true,
       "settings": {
-        "heading": "404 Page Not Found",
-        "text": "The page you are looking for does not exist.",
-        "button_label": "Go to Home"
+        "desktop_padding_top": 40,
+        "desktop_gap_between_blocks": 20,
+        "bg_color": "#ffffff",
+        "desktop_max_width": 1140,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 30,
+        "mobile_gap_between_blocks": 10
       }
     },
     "blank_section_ykCxJM": {
       "type": "blank-section",
       "blocks": {
-        "heading_nYJWnh": {
-          "type": "heading",
-          "name": "Heading",
+        "layout_zddqL3": {
+          "type": "layout",
+          "name": "Layout",
           "settings": {
-            "title": "<p>You’ve Got Questions, <br/>We’ve got Answers</p>",
-            "text_color": "#123456",
-            "text_alignment": "center",
-            "heading_size": "4xl",
-            "font_weight": "bold",
-            "font_family": "values-sans",
-            "use_mobile_settings": false,
-            "text_alignment_mobile": "left",
-            "heading_size_mobile": "xl",
-            "font_weight_mobile": "normal"
+            "desktop_padding": 20,
+            "desktop_gap": 16,
+            "desktop_columns_per_row": 1,
+            "align_items": "center",
+            "custom_column_width": false,
+            "column_width": "1fr 1fr",
+            "mobile_padding": 0,
+            "mobile_gap": 14,
+            "mobile_columns_per_row": 1
           },
-          "blocks": {}
+          "blocks": {
+            "layout_item_JncWxU": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 24,
+                "gap_mobile": 16
+              },
+              "blocks": {
+                "heading_Y6epTL": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "title": "<p>You’ve Got Questions, <br/>We’ve got Answers</p>",
+                    "text_color": "#123456",
+                    "text_alignment": "center",
+                    "heading_size": "4xl",
+                    "font_weight": "bold",
+                    "font_family": "values-sans",
+                    "use_mobile_settings": false,
+                    "text_alignment_mobile": "left",
+                    "heading_size_mobile": "xl",
+                    "font_weight_mobile": "normal"
+                  },
+                  "blocks": {}
+                },
+                "text_gYAnQJ": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p>We get it. You should know what you're putting into your body. Ask away. Our team of experts is here to help.</p>",
+                    "text_alignment": "center",
+                    "font_family": "values-sans",
+                    "font_weight": "normal",
+                    "text_color": "#0d3063",
+                    "font_size": 16,
+                    "font_size_mobile": 16,
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_Y6epTL",
+                "text_gYAnQJ"
+              ]
+            }
+          },
+          "block_order": [
+            "layout_item_JncWxU"
+          ]
         },
         "tabs_wGYCiJ": {
           "type": "tabs",
           "name": "Tabs",
-          "settings": {},
+          "settings": {
+            "hide_nav": false
+          },
           "blocks": {
             "tab_item_yMMCJc": {
               "type": "_tab-item",
               "settings": {
                 "default": false,
-                "title": "Calm",
+                "title": "Energy",
                 "desktop_padding": 10,
                 "gap_between_blocks": 20,
                 "mobile_padding": 20,
@@ -65,7 +121,8 @@
                     "text_color": "#181d27",
                     "font_size": 22,
                     "font_size_mobile": 16,
-                    "text_alignment_mobile": "left"
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
                   },
                   "blocks": {}
                 },
@@ -79,8 +136,8 @@
                       "name": "Accordion Item",
                       "settings": {
                         "open_by_default": false,
-                        "question": "Who Needs Nectar?",
-                        "answer": ""
+                        "question": "What is Essential Daily Energy?",
+                        "answer": "<p>Essential Daily Energy is our popular clean, rapid hydration mix with the addition of 75mg Organic Green Caffeine, L-Theanine, Vitamin B12 and or Organic Mushroom Extract. The product is made with medical-grade electrolytes to boost the absorption of your water in order to hydrate you as quickly and efficiently as possible while also giving you an instant boost in your energy and focus.</p>"
                       },
                       "blocks": {}
                     },
@@ -89,15 +146,48 @@
                       "name": "Accordion Item",
                       "settings": {
                         "open_by_default": false,
-                        "question": "Ingredients & Nutrition",
-                        "answer": ""
+                        "question": "What makes Essential Daily Energy different?",
+                        "answer": "<p>1) It's Sugar Free and Low Sodium<br/>2) It's designed for Daily Use<br/>3) It has a light, refreshing taste (no syrup here)<br/>4) It's affordable<br/>5) It uses only the highest quality ingredients possible (Organic & Non-GMO)</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_YBhitb": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "How can I tell if I need Essential Daily Energy?",
+                        "answer": "<p>Studies show that 3 out of 4 people suffer from chronic dehydration. Many of the symptoms of dehydration we overlook as byproducts of our busy lifestyles - fatigue, brain fog, feeling down. If you're experiencing any of these symptoms, it's highly likely you're dehydrated - even if you think you are drinking enough fluids. Adding Essential Daily Energy to your daily routine helps you make the most of the water you drink, keeping you hydrated and feeling your best.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_fzyxqU": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "When should I drink Essential Daily Energy?",
+                        "answer": "<p>We recommend drinking Essential Daily Energy first thing in the morning to help replenish the electrolytes lost during sleep and start your day energized. However, many customers enjoy Nectar through out the day and drink more than one packet daily.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_JfeVRy": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "How long will it take me to feel a difference?",
+                        "answer": "<p>Essential Daily Energy starts working immediately after consumption to hydrate and energize you as efficiently as possible. Depending on how chronically dehydrated you are, it can take up to a week of daily use to start fully feeling the benefits - increased energy levels, mental clarity and improved mood.</p>"
                       },
                       "blocks": {}
                     }
                   },
                   "block_order": [
                     "accordion_item_nBnGNh",
-                    "accordion_item_khVfyV"
+                    "accordion_item_khVfyV",
+                    "accordion_item_YBhitb",
+                    "accordion_item_fzyxqU",
+                    "accordion_item_JfeVRy"
                   ]
                 },
                 "text_zicDrY": {
@@ -111,7 +201,8 @@
                     "text_color": "#181d27",
                     "font_size": 22,
                     "font_size_mobile": 16,
-                    "text_alignment_mobile": "left"
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
                   },
                   "blocks": {}
                 },
@@ -125,8 +216,8 @@
                       "name": "Accordion Item",
                       "settings": {
                         "open_by_default": false,
-                        "question": "Who Needs Nectar?",
-                        "answer": ""
+                        "question": "How do I use Essential Daily Energy?",
+                        "answer": "<p>To enjoy Essential Daily Energy, simply mix one packet with 8 to 16 oz of water (adjust based on your flavor strength preference), stir or shake and enjoy.The product can be enjoyed any time throughout the day and it is safe to consume up to 5 packets daily. Many of our customers report their best results are when they add a packet of Nectar to their water two to three times per day.</p>"
                       },
                       "blocks": {}
                     },
@@ -135,15 +226,139 @@
                       "name": "Accordion Item",
                       "settings": {
                         "open_by_default": false,
-                        "question": "Ingredients & Nutrition",
-                        "answer": ""
+                        "question": "Does Essential Daily Energy contain any sugar,sugar, artificial sweeteners or flavors, colorants or fillers?",
+                        "answer": "<p>No - and it never will! Essential Daily Energy contains only what you need, in bioavailable forms your body can actually use.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_TCqmgJ": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "What is Organic Stevia?",
+                        "answer": "<p>Stevia is a plant that produces an extract that is nearly 350 times sweeter than sugar. Stevia is NOT an artificial sweetener - it is a plant! Essential Daily Energy uses only ethically sourced Organic Stevia. The leaves are picked by hand, then dried naturally using sunlight and fresh air to yield a deliciously sweet and smooth-tasting zero-calorie sweetener. Nectar uses only a small amount of Stevia to flavor it's products to acheive a light refreshing taste.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_NAxxYF": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "What is Organic Fruit?",
+                        "answer": "<p>Our Organic Fruit Flavor is made from a patented recipe that crystallizes the fruits' oils and juices, locking in a fresh-squeezed taste. No “natural flavors” here!</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_BaCUyb": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Is Essential Daily Energy good for Keto and low carb diets?",
+                        "answer": "<p>If you’re low carb, you know that sugary drinks won’t cut it. Essential Daily Energy not only has zero carbs, but is the perfect replenisher for the electrolytes lost from keto.</p>"
                       },
                       "blocks": {}
                     }
                   },
                   "block_order": [
                     "accordion_item_qWUKtT",
-                    "accordion_item_8DjBjL"
+                    "accordion_item_8DjBjL",
+                    "accordion_item_TCqmgJ",
+                    "accordion_item_NAxxYF",
+                    "accordion_item_BaCUyb"
+                  ]
+                },
+                "text_LChJqz": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p><strong>Behind The Science</strong></p>",
+                    "text_alignment": "left",
+                    "font_family": "values-sans",
+                    "font_weight": "normal",
+                    "text_color": "#181d27",
+                    "font_size": 22,
+                    "font_size_mobile": 16,
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
+                  },
+                  "blocks": {}
+                },
+                "accordion_ax8xCQ": {
+                  "type": "accordion",
+                  "name": "Accordion",
+                  "settings": {},
+                  "blocks": {
+                    "accordion_item_yQydgq": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "How do I know if I'm dehydrated?",
+                        "answer": "<p>The symptoms of dehydration include fatigue, thirst, depressed mood, dry skin, headaches, cramping, anxiety and decreased urine output. Oftentimes, thirst is confused with hunger - but your body is actually craving fluids, not food.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_YhP9Yz": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "What causes dehydration?",
+                        "answer": "<p>Dehydration occurs when your body is lacking the fluids and electrolytes essential to perform its normal functions. Dehydration can be caused by your normal daily habits including caffeine, work, exercise, alcohol, medications and even sleep. You do NOT need to be very active or in hot temperatures to be dehydrated.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_hUN88L": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Why is staying hydrated important?",
+                        "answer": "<p>Over half of your body is made of water and studies show that even a 1% fluid loss causes a number of dehydration symptoms. Simply put, every cell, tissue, and organ in your body needs electrolytes and water to work properly. When you're dehydrated, you're not performing at your best.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_7LidzQ": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "What are electrolytes and why do I need them?",
+                        "answer": "<p>Electrolytes are electrically charged minerals that conduct electrical impulses throughout the body. Electrolytes are found in the bloodstream and are vital to many key functions in the body such as maintaining fluid balance, creating energy, preventing muscle cramps, regulating heart rhythm and rebuilding damaged tissue. The primary electrolytes found in Essential Daily Energy are potassium and magnesium. These two electrolytes are the key to why Essential Daily Energy is so effective at helping your body absorb water.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_bxicBj": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Does rapid hydration require sugar?",
+                        "answer": "<p>Most other hydration powder companies developed their formula based on the World Health Organization’s “Oral Rehydration Solution.” This formula was developed for individuals suffering “life threatening diarrhoeal dehydration.” Odds are, if you’re on a computer, you’re not experiencing this level of near-death dehydration and malnourishment, and you likely never will. Sugar is one of the most prevalent ingredients in the average diet. Nectar’s proprietary formula relies on replenishing what we are not getting on a daily basis from the food we already eat. Don’t let companies who aren’t willing to spend the money on organic stevia fool you with their “science” - they’re just looking to save money.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_9BWADB": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Why does Essential Daily Energy have lower sodium and higher potassium and magnesium?",
+                        "answer": "<p>When it comes to hydration, potassium and magnesium are both essential electrolytes. Through your body’s Sodium-Potassium Pump, your cells are constantly pumping out sodium and pumping in potassium, maintaining fluid balance. In your kidneys, the organs responsible for maintaining electrolyte concentrations, magnesium is essential to storing potassium. When magnesium levels are optimal, your kidneys are able to retain higher levels of electrolytes, keeping you hydrated. Unless you’re running a marathon and losing a substantial amount of sodium through sweat, you don’t need all of the sodium found in other hydration products.</p>"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "accordion_item_yQydgq",
+                    "accordion_item_YhP9Yz",
+                    "accordion_item_hUN88L",
+                    "accordion_item_7LidzQ",
+                    "accordion_item_bxicBj",
+                    "accordion_item_9BWADB"
                   ]
                 },
                 "text_7GnDrL": {
@@ -157,7 +372,8 @@
                     "text_color": "#181d27",
                     "font_size": 22,
                     "font_size_mobile": 16,
-                    "text_alignment_mobile": "left"
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
                   },
                   "blocks": {}
                 },
@@ -171,8 +387,8 @@
                       "name": "Accordion Item",
                       "settings": {
                         "open_by_default": false,
-                        "question": "Who Needs Nectar?",
-                        "answer": ""
+                        "question": "How does my subscription work?",
+                        "answer": "<p>We started Nectar to make hydration simple and easy. When you subscribe, we will send you a new supply (30 sticks) of Nectar each month. In the case you want to change your delivery date, pause or cancel your subscription, update your flavor choice or anything else, these changes can be made at any time through your <a href=\"https://drinknectar.co/a/account/login\">account page</a>.</p>"
                       },
                       "blocks": {}
                     },
@@ -181,15 +397,26 @@
                       "name": "Accordion Item",
                       "settings": {
                         "open_by_default": false,
-                        "question": "Ingredients & Nutrition",
-                        "answer": ""
+                        "question": "What is your return and refund policy?",
+                        "answer": "<p>Nectar accepts returns on any first orders for unopened pouches (top of bag seal not broken). If multiple pouches are ordered on the first order, Nectar will provide a refund for one (1) 30 stick pouch.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_6mhHah": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Where do I adjust my subscription settings?",
+                        "answer": "<p>You are able to change your subscription settings right from your <a href=\"https://drinknectar.co/a/account/login\">account page</a>. You can rush or delay an order, adjust your quantity, change your shipping address or payment method and cancel your subscription all in one place.</p>"
                       },
                       "blocks": {}
                     }
                   },
                   "block_order": [
                     "accordion_item_fkEKr3",
-                    "accordion_item_CLEg6C"
+                    "accordion_item_CLEg6C",
+                    "accordion_item_6mhHah"
                   ]
                 }
               },
@@ -198,6 +425,8 @@
                 "accordion_D9GKAd",
                 "text_zicDrY",
                 "accordion_mUKFAe",
+                "text_LChJqz",
+                "accordion_ax8xCQ",
                 "text_7GnDrL",
                 "accordion_yhBJNM"
               ]
@@ -213,6 +442,86 @@
                 "mobile_gap_between_blocks": 10
               },
               "blocks": {
+                "text_DRGpwB": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p><strong>Commonly Asked</strong></p>",
+                    "text_alignment": "left",
+                    "font_family": "values-sans",
+                    "font_weight": "normal",
+                    "text_color": "#181d27",
+                    "font_size": 22,
+                    "font_size_mobile": 16,
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
+                  },
+                  "blocks": {}
+                },
+                "accordion_xrQEjM": {
+                  "type": "accordion",
+                  "name": "Accordion",
+                  "settings": {},
+                  "blocks": {
+                    "accordion_item_B43Yeh": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "What is Essential Daily Hydration?",
+                        "answer": "<p>Essential Daily Hydration is a clean, rapid hydration mix designed to be taken daily. The product is made with medical-grade electrolytes to boost the absorption of your water in order to hydrate you as quickly and efficiently as possible.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_bPecWf": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "What makes Essential Daily Hydration different?",
+                        "answer": "<p>1) It's Sugar Free and Low Sodium<br/>2) It's designed for Daily Use<br/>3) It has a light, refreshing taste (no syrup here)<br/>4) It's affordable<br/>5) It uses only the highest quality ingredients possible (Organic & Non-GMO)</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_NLzBgn": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "How can I tell if I need Essential Daily Hydration?",
+                        "answer": "<p>Studies show that 3 out of 4 people suffer from chronic dehydration. Many of the symptoms of dehydration we overlook as byproducts of our busy lifestyles - fatigue, brain fog, feeling down. If you're experiencing any of these symptoms, it's highly likely you're dehydrated - even if you think you are drinking enough fluids. Adding Essential Daily Hydration to your daily routine helps you make the most of the water you drink, keeping you hydrated and feeling your best.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_g6ijaF": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "When should I drink Essential Daily Hydration?",
+                        "answer": "<p>We recommend drinking Essential Daily Hydration first thing in the morning to help replenish the electrolytes lost during sleep and start your day energized. However, many customers enjoy Nectar through out the day and drink more than one packet daily.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_xM8Pqm": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "How long will it take me to feel a difference?",
+                        "answer": "<p>Essential Daily Hydration starts working immediately after consumption to hydrate you as efficiently as possible. Depending on how chronically dehydrated you are, it can take up to a week of daily use to start fully feeling the benefits - increased energy levels, mental clarity and improved mood.</p>"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "accordion_item_B43Yeh",
+                    "accordion_item_bPecWf",
+                    "accordion_item_NLzBgn",
+                    "accordion_item_g6ijaF",
+                    "accordion_item_xM8Pqm"
+                  ]
+                },
                 "text_7ArWjx": {
                   "type": "text",
                   "name": "Text",
@@ -224,7 +533,8 @@
                     "text_color": "#181d27",
                     "font_size": 22,
                     "font_size_mobile": 16,
-                    "text_alignment_mobile": "left"
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
                   },
                   "blocks": {}
                 },
@@ -238,8 +548,8 @@
                       "name": "Accordion Item",
                       "settings": {
                         "open_by_default": false,
-                        "question": "Who Needs Nectar?",
-                        "answer": ""
+                        "question": "How do I use Essential Daily Hydration?",
+                        "answer": "<p>To enjoy Essential Daily Hydration, simply mix one packet with 8 to 16 oz of water (adjust based on your flavor strength preference), stir or shake and enjoy.The product can be enjoyed any time throughout the day and it is safe to consume up to 5 packets daily. Many of our customers report their best results are when they add a packet of Nectar to their water two to three times per day.</p>"
                       },
                       "blocks": {}
                     },
@@ -248,35 +558,142 @@
                       "name": "Accordion Item",
                       "settings": {
                         "open_by_default": false,
-                        "question": "Ingredients & Nutrition",
-                        "answer": ""
+                        "question": "Does Essential Daily Hydration contain any sugar, caffeine, stimulants, artificial sweeteners, colorants or fillers?",
+                        "answer": "<p>No - and it never will! Essential Daily Hydration contains only what you need, in bioavailable forms your body can actually use.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_JzzFEL": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "What is Organic Stevia?",
+                        "answer": "<p>Stevia is a plant that produces an extract that is nearly 350 times sweeter than sugar. Stevia is NOT an artificial sweetener - it is a plant! Essential Daily Hydration uses only ethically sourced Organic Stevia. The leaves are picked by hand, then dried naturally using sunlight and fresh air to yield a deliciously sweet and smooth-tasting zero-calorie sweetener. Nectar uses only a small amount of Stevia to flavor it's products to acheive a light refreshing taste.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_z3xhWz": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "What is Organic Fruit?",
+                        "answer": "<p>Our Organic Fruit Flavor is made from a patented recipe that crystallizes the fruits' oils and juices, locking in a fresh-squeezed taste. No “natural flavors” here!</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_g8VmXd": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Is Essential Daily Hydration good for Keto and low carb diets?",
+                        "answer": "<p>If you’re low carb, you know that sugary drinks won’t cut it. Essential Daily Hydration not only has zero carbs, but is the perfect replenisher for the electrolytes lost from keto.</p>"
                       },
                       "blocks": {}
                     }
                   },
                   "block_order": [
                     "accordion_item_fNCDtD",
-                    "accordion_item_Mb79WD"
+                    "accordion_item_Mb79WD",
+                    "accordion_item_JzzFEL",
+                    "accordion_item_z3xhWz",
+                    "accordion_item_g8VmXd"
                   ]
-                }
-              },
-              "block_order": [
-                "text_7ArWjx",
-                "accordion_kLWAQK"
-              ]
-            },
-            "tab_item_NNCJzc": {
-              "type": "_tab-item",
-              "settings": {
-                "default": false,
-                "title": "Energy",
-                "desktop_padding": 10,
-                "gap_between_blocks": 20,
-                "mobile_padding": 20,
-                "mobile_gap_between_blocks": 10
-              },
-              "blocks": {
-                "text_eq7R3R": {
+                },
+                "text_9iQYkx": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p><strong>Behind The Science</strong></p>",
+                    "text_alignment": "left",
+                    "font_family": "values-sans",
+                    "font_weight": "normal",
+                    "text_color": "#181d27",
+                    "font_size": 22,
+                    "font_size_mobile": 16,
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
+                  },
+                  "blocks": {}
+                },
+                "accordion_RkxXXz": {
+                  "type": "accordion",
+                  "name": "Accordion",
+                  "settings": {},
+                  "blocks": {
+                    "accordion_item_wQLVxN": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "How do I know if I'm dehydrated?",
+                        "answer": "<p>The symptoms of dehydration include fatigue, thirst, depressed mood, dry skin, headaches, cramping, anxiety and decreased urine output. Oftentimes, thirst is confused with hunger - but your body is actually craving fluids, not food.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_iFtbgr": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "What causes dehydration?",
+                        "answer": "<p>Dehydration occurs when your body is lacking the fluids and electrolytes essential to perform its normal functions. Dehydration can be caused by your normal daily habits including caffeine, work, exercise, alcohol, medications and even sleep. You do NOT need to be very active or in hot temperatures to be dehydrated.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_iRY3Jz": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Why is staying hydrated important?",
+                        "answer": "<p>Over half of your body is made of water and studies show that even a 1% fluid loss causes a number of dehydration symptoms. Simply put, every cell, tissue, and organ in your body needs electrolytes and water to work properly. When you're dehydrated, you're not performing at your best.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_PTR4mJ": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "What are electrolytes and why do I need them?",
+                        "answer": "<p>Electrolytes are electrically charged minerals that conduct electrical impulses throughout the body. Electrolytes are found in the bloodstream and are vital to many key functions in the body such as maintaining fluid balance, creating energy, preventing muscle cramps, regulating heart rhythm and rebuilding damaged tissue. The primary electrolytes found in Essential Daily Energy are potassium and magnesium. These two electrolytes are the key to why Essential Daily Energy is so effective at helping your body absorb water.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_bQ9Wbp": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Does rapid hydration require sugar?",
+                        "answer": "<p>Most other hydration powder companies developed their formula based on the World Health Organization’s “Oral Rehydration Solution.” This formula was developed for individuals suffering “life threatening diarrhoeal dehydration.” Odds are, if you’re on a computer, you’re not experiencing this level of near-death dehydration and malnourishment, and you likely never will. Sugar is one of the most prevalent ingredients in the average diet. Nectar’s proprietary formula relies on replenishing what we are not getting on a daily basis from the food we already eat. Don’t let companies who aren’t willing to spend the money on organic stevia fool you with their “science” - they’re just looking to save money.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_yifwJw": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Why does Essential Daily Energy have lower sodium and higher potassium and magnesium?",
+                        "answer": "<p>When it comes to hydration, potassium and magnesium are both essential electrolytes. Through your body’s Sodium-Potassium Pump, your cells are constantly pumping out sodium and pumping in potassium, maintaining fluid balance. In your kidneys, the organs responsible for maintaining electrolyte concentrations, magnesium is essential to storing potassium. When magnesium levels are optimal, your kidneys are able to retain higher levels of electrolytes, keeping you hydrated. Unless you’re running a marathon and losing a substantial amount of sodium through sweat, you don’t need all of the sodium found in other hydration products.</p>"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "accordion_item_wQLVxN",
+                    "accordion_item_iFtbgr",
+                    "accordion_item_iRY3Jz",
+                    "accordion_item_PTR4mJ",
+                    "accordion_item_bQ9Wbp",
+                    "accordion_item_yifwJw"
+                  ]
+                },
+                "text_mwECLa": {
                   "type": "text",
                   "name": "Text",
                   "settings": {
@@ -287,63 +704,423 @@
                     "text_color": "#181d27",
                     "font_size": 22,
                     "font_size_mobile": 16,
-                    "text_alignment_mobile": "left"
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
                   },
                   "blocks": {}
                 },
-                "accordion_zgcm9d": {
+                "accordion_Pz9zPx": {
                   "type": "accordion",
                   "name": "Accordion",
                   "settings": {},
                   "blocks": {
-                    "accordion_item_LDVQ3b": {
+                    "accordion_item_yxAjg6": {
                       "type": "_accordion-item",
                       "name": "Accordion Item",
                       "settings": {
                         "open_by_default": false,
-                        "question": "Who Needs Nectar?",
-                        "answer": ""
+                        "question": "How does my subscription work?",
+                        "answer": "<p>We started Nectar to make hydration simple and easy. When you subscribe, we will send you a new supply (30 sticks) of Nectar each month. In the case you want to change your delivery date, pause or cancel your subscription, update your flavor choice or anything else, these changes can be made at any time through your <a href=\"https://drinknectar.co/a/account/login\">account page</a>.</p>"
                       },
                       "blocks": {}
                     },
-                    "accordion_item_LxyNHb": {
+                    "accordion_item_cprqii": {
                       "type": "_accordion-item",
                       "name": "Accordion Item",
                       "settings": {
                         "open_by_default": false,
-                        "question": "Ingredients & Nutrition",
-                        "answer": ""
+                        "question": "What is your return and refund policy?",
+                        "answer": "<p>Nectar accepts returns on any first orders for unopened pouches (top of bag seal not broken). If multiple pouches are ordered on the first order, Nectar will provide a refund for one (1) 30 stick pouch.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_AQNLxb": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Where do I adjust my subscription settings?",
+                        "answer": "<p>You are able to change your subscription settings right from your <a href=\"https://drinknectar.co/a/account/login\">account page</a>. You can rush or delay an order, adjust your quantity, change your shipping address or payment method and cancel your subscription all in one place.</p>"
                       },
                       "blocks": {}
                     }
                   },
                   "block_order": [
-                    "accordion_item_LDVQ3b",
-                    "accordion_item_LxyNHb"
+                    "accordion_item_yxAjg6",
+                    "accordion_item_cprqii",
+                    "accordion_item_AQNLxb"
                   ]
                 }
               },
               "block_order": [
-                "text_eq7R3R",
-                "accordion_zgcm9d"
+                "text_DRGpwB",
+                "accordion_xrQEjM",
+                "text_7ArWjx",
+                "accordion_kLWAQK",
+                "text_9iQYkx",
+                "accordion_RkxXXz",
+                "text_mwECLa",
+                "accordion_Pz9zPx"
+              ]
+            },
+            "tab_item_rNHwhX": {
+              "type": "_tab-item",
+              "settings": {
+                "default": false,
+                "title": "Calm",
+                "desktop_padding": 10,
+                "gap_between_blocks": 20,
+                "mobile_padding": 20,
+                "mobile_gap_between_blocks": 10
+              },
+              "blocks": {
+                "text_gExDUD": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p><strong>Coming Soon...</strong></p>",
+                    "text_alignment": "center",
+                    "font_family": "values-sans",
+                    "font_weight": "normal",
+                    "text_color": "#181d27",
+                    "font_size": 22,
+                    "font_size_mobile": 16,
+                    "text_alignment_mobile": "center",
+                    "hide_on_mobile": false
+                  },
+                  "blocks": {}
+                },
+                "accordion_YfJxXC": {
+                  "type": "accordion",
+                  "name": "Accordion",
+                  "disabled": true,
+                  "settings": {},
+                  "blocks": {
+                    "accordion_item_wai4YN": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "What is Essential Daily Hydration?",
+                        "answer": "<p>Essential Daily Hydration is a clean, rapid hydration mix designed to be taken daily. The product is made with medical-grade electrolytes to boost the absorption of your water in order to hydrate you as quickly and efficiently as possible.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_3pMfQy": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "What makes Essential Daily Hydration different?",
+                        "answer": "<p>1) It's Sugar Free and Low Sodium<br/>2) It's designed for Daily Use<br/>3) It has a light, refreshing taste (no syrup here)<br/>4) It's affordable<br/>5) It uses only the highest quality ingredients possible (Organic & Non-GMO)</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_WJPgiA": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "How can I tell if I need Essential Daily Hydration?",
+                        "answer": "<p>Studies show that 3 out of 4 people suffer from chronic dehydration. Many of the symptoms of dehydration we overlook as byproducts of our busy lifestyles - fatigue, brain fog, feeling down. If you're experiencing any of these symptoms, it's highly likely you're dehydrated - even if you think you are drinking enough fluids. Adding Essential Daily Hydration to your daily routine helps you make the most of the water you drink, keeping you hydrated and feeling your best.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_rx9F6E": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "When should I drink Essential Daily Hydration?",
+                        "answer": "<p>We recommend drinking Essential Daily Hydration first thing in the morning to help replenish the electrolytes lost during sleep and start your day energized. However, many customers enjoy Nectar through out the day and drink more than one packet daily.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_Nah9xn": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "How long will it take me to feel a difference?",
+                        "answer": "<p>Essential Daily Hydration starts working immediately after consumption to hydrate you as efficiently as possible. Depending on how chronically dehydrated you are, it can take up to a week of daily use to start fully feeling the benefits - increased energy levels, mental clarity and improved mood.</p>"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "accordion_item_wai4YN",
+                    "accordion_item_3pMfQy",
+                    "accordion_item_WJPgiA",
+                    "accordion_item_rx9F6E",
+                    "accordion_item_Nah9xn"
+                  ]
+                },
+                "text_3LUReh": {
+                  "type": "text",
+                  "name": "Text",
+                  "disabled": true,
+                  "settings": {
+                    "title": "<p><strong>Product</strong></p>",
+                    "text_alignment": "left",
+                    "font_family": "values-sans",
+                    "font_weight": "normal",
+                    "text_color": "#181d27",
+                    "font_size": 22,
+                    "font_size_mobile": 16,
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
+                  },
+                  "blocks": {}
+                },
+                "accordion_78TQrY": {
+                  "type": "accordion",
+                  "name": "Accordion",
+                  "disabled": true,
+                  "settings": {},
+                  "blocks": {
+                    "accordion_item_xFkycC": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "How do I use Essential Daily Hydration?",
+                        "answer": "<p>To enjoy Essential Daily Hydration, simply mix one packet with 8 to 16 oz of water (adjust based on your flavor strength preference), stir or shake and enjoy.The product can be enjoyed any time throughout the day and it is safe to consume up to 5 packets daily. Many of our customers report their best results are when they add a packet of Nectar to their water two to three times per day.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_8pP3tf": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Does Essential Daily Hydration contain any sugar, caffeine, stimulants, artificial sweeteners, colorants or fillers?",
+                        "answer": "<p>No - and it never will! Essential Daily Hydration contains only what you need, in bioavailable forms your body can actually use.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_MhRz6W": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "What is Organic Stevia?",
+                        "answer": "<p>Stevia is a plant that produces an extract that is nearly 350 times sweeter than sugar. Stevia is NOT an artificial sweetener - it is a plant! Essential Daily Hydration uses only ethically sourced Organic Stevia. The leaves are picked by hand, then dried naturally using sunlight and fresh air to yield a deliciously sweet and smooth-tasting zero-calorie sweetener. Nectar uses only a small amount of Stevia to flavor it's products to acheive a light refreshing taste.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_eieXQR": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "What is Organic Fruit?",
+                        "answer": "<p>Our Organic Fruit Flavor is made from a patented recipe that crystallizes the fruits' oils and juices, locking in a fresh-squeezed taste. No “natural flavors” here!</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_CNMPYC": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Is Essential Daily Hydration good for Keto and low carb diets?",
+                        "answer": "<p>If you’re low carb, you know that sugary drinks won’t cut it. Essential Daily Hydration not only has zero carbs, but is the perfect replenisher for the electrolytes lost from keto.</p>"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "accordion_item_xFkycC",
+                    "accordion_item_8pP3tf",
+                    "accordion_item_MhRz6W",
+                    "accordion_item_eieXQR",
+                    "accordion_item_CNMPYC"
+                  ]
+                },
+                "text_8B3Hdn": {
+                  "type": "text",
+                  "name": "Text",
+                  "disabled": true,
+                  "settings": {
+                    "title": "<p><strong>Behind The Science</strong></p>",
+                    "text_alignment": "left",
+                    "font_family": "values-sans",
+                    "font_weight": "normal",
+                    "text_color": "#181d27",
+                    "font_size": 22,
+                    "font_size_mobile": 16,
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
+                  },
+                  "blocks": {}
+                },
+                "accordion_pxCYz8": {
+                  "type": "accordion",
+                  "name": "Accordion",
+                  "disabled": true,
+                  "settings": {},
+                  "blocks": {
+                    "accordion_item_hXQ3U7": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "How do I know if I'm dehydrated?",
+                        "answer": "<p>The symptoms of dehydration include fatigue, thirst, depressed mood, dry skin, headaches, cramping, anxiety and decreased urine output. Oftentimes, thirst is confused with hunger - but your body is actually craving fluids, not food.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_ADQWzF": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "What causes dehydration?",
+                        "answer": "<p>Dehydration occurs when your body is lacking the fluids and electrolytes essential to perform its normal functions. Dehydration can be caused by your normal daily habits including caffeine, work, exercise, alcohol, medications and even sleep. You do NOT need to be very active or in hot temperatures to be dehydrated.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_njRAF4": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Why is staying hydrated important?",
+                        "answer": "<p>Over half of your body is made of water and studies show that even a 1% fluid loss causes a number of dehydration symptoms. Simply put, every cell, tissue, and organ in your body needs electrolytes and water to work properly. When you're dehydrated, you're not performing at your best.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_fqtcMd": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "What are electrolytes and why do I need them?",
+                        "answer": "<p>Electrolytes are electrically charged minerals that conduct electrical impulses throughout the body. Electrolytes are found in the bloodstream and are vital to many key functions in the body such as maintaining fluid balance, creating energy, preventing muscle cramps, regulating heart rhythm and rebuilding damaged tissue. The primary electrolytes found in Essential Daily Energy are potassium and magnesium. These two electrolytes are the key to why Essential Daily Energy is so effective at helping your body absorb water.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_NhygQE": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Does rapid hydration require sugar?",
+                        "answer": "<p>Most other hydration powder companies developed their formula based on the World Health Organization’s “Oral Rehydration Solution.” This formula was developed for individuals suffering “life threatening diarrhoeal dehydration.” Odds are, if you’re on a computer, you’re not experiencing this level of near-death dehydration and malnourishment, and you likely never will. Sugar is one of the most prevalent ingredients in the average diet. Nectar’s proprietary formula relies on replenishing what we are not getting on a daily basis from the food we already eat. Don’t let companies who aren’t willing to spend the money on organic stevia fool you with their “science” - they’re just looking to save money.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_a4feWR": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Why does Essential Daily Energy have lower sodium and higher potassium and magnesium?",
+                        "answer": "<p>When it comes to hydration, potassium and magnesium are both essential electrolytes. Through your body’s Sodium-Potassium Pump, your cells are constantly pumping out sodium and pumping in potassium, maintaining fluid balance. In your kidneys, the organs responsible for maintaining electrolyte concentrations, magnesium is essential to storing potassium. When magnesium levels are optimal, your kidneys are able to retain higher levels of electrolytes, keeping you hydrated. Unless you’re running a marathon and losing a substantial amount of sodium through sweat, you don’t need all of the sodium found in other hydration products.</p>"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "accordion_item_hXQ3U7",
+                    "accordion_item_ADQWzF",
+                    "accordion_item_njRAF4",
+                    "accordion_item_fqtcMd",
+                    "accordion_item_NhygQE",
+                    "accordion_item_a4feWR"
+                  ]
+                },
+                "text_B3TBmF": {
+                  "type": "text",
+                  "name": "Text",
+                  "disabled": true,
+                  "settings": {
+                    "title": "<p><strong>Subscription</strong></p>",
+                    "text_alignment": "left",
+                    "font_family": "values-sans",
+                    "font_weight": "normal",
+                    "text_color": "#181d27",
+                    "font_size": 22,
+                    "font_size_mobile": 16,
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
+                  },
+                  "blocks": {}
+                },
+                "accordion_VQbpin": {
+                  "type": "accordion",
+                  "name": "Accordion",
+                  "disabled": true,
+                  "settings": {},
+                  "blocks": {
+                    "accordion_item_zPdzNi": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "How does my subscription work?",
+                        "answer": "<p>We started Nectar to make hydration simple and easy. When you subscribe, we will send you a new supply (30 sticks) of Nectar each month. In the case you want to change your delivery date, pause or cancel your subscription, update your flavor choice or anything else, these changes can be made at any time through your <a href=\"https://drinknectar.co/a/account/login\">account page</a>.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_HapaCX": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "What is your return and refund policy?",
+                        "answer": "<p>Nectar accepts returns on any first orders for unopened pouches (top of bag seal not broken). If multiple pouches are ordered on the first order, Nectar will provide a refund for one (1) 30 stick pouch.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_JpJWgt": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Where do I adjust my subscription settings?",
+                        "answer": "<p>You are able to change your subscription settings right from your <a href=\"https://drinknectar.co/a/account/login\">account page</a>. You can rush or delay an order, adjust your quantity, change your shipping address or payment method and cancel your subscription all in one place.</p>"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "accordion_item_zPdzNi",
+                    "accordion_item_HapaCX",
+                    "accordion_item_JpJWgt"
+                  ]
+                }
+              },
+              "block_order": [
+                "text_gExDUD",
+                "accordion_YfJxXC",
+                "text_3LUReh",
+                "accordion_78TQrY",
+                "text_8B3Hdn",
+                "accordion_pxCYz8",
+                "text_B3TBmF",
+                "accordion_VQbpin"
               ]
             }
           },
           "block_order": [
             "tab_item_yMMCJc",
             "tab_item_pUkhpP",
-            "tab_item_NNCJzc"
+            "tab_item_rNHwhX"
           ]
         }
       },
       "block_order": [
-        "heading_nYJWnh",
+        "layout_zddqL3",
         "tabs_wGYCiJ"
+      ],
+      "custom_css": [
+        "a:not([class]) {text-decoration: underline;}"
       ],
       "name": "Default Section",
       "settings": {
-        "desktop_padding_top": 40,
-        "desktop_gap_between_blocks": 20,
+        "desktop_padding_top": 25,
+        "desktop_gap_between_blocks": 30,
         "bg_color": "#ffffff",
         "desktop_max_width": 1140,
         "hide_on_mobile": false,
