@@ -793,7 +793,6 @@
                 "accordion_YfJxXC": {
                   "type": "accordion",
                   "name": "Accordion",
-                  "disabled": true,
                   "settings": {},
                   "blocks": {
                     "accordion_item_wai4YN": {
@@ -801,7 +800,7 @@
                       "name": "Accordion Item",
                       "settings": {
                         "open_by_default": false,
-                        "question": "What is Essential Daily Hydration?",
+                        "question": "Test",
                         "answer": "<p>Essential Daily Hydration is a clean, rapid hydration mix designed to be taken daily. The product is made with medical-grade electrolytes to boost the absorption of your water in order to hydrate you as quickly and efficiently as possible.</p>"
                       },
                       "blocks": {}
@@ -858,7 +857,6 @@
                 "text_3LUReh": {
                   "type": "text",
                   "name": "Text",
-                  "disabled": true,
                   "settings": {
                     "title": "<p><strong>Product</strong></p>",
                     "text_alignment": "left",
@@ -875,7 +873,6 @@
                 "accordion_78TQrY": {
                   "type": "accordion",
                   "name": "Accordion",
-                  "disabled": true,
                   "settings": {},
                   "blocks": {
                     "accordion_item_xFkycC": {
