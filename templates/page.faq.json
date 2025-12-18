@@ -13,35 +13,91 @@
       "type": "main-404",
       "disabled": true,
       "settings": {
-        "heading": "404 Page Not Found",
-        "text": "The page you are looking for does not exist.",
-        "button_label": "Go to Home"
+        "desktop_padding_top": 40,
+        "desktop_gap_between_blocks": 20,
+        "bg_color": "#ffffff",
+        "desktop_max_width": 1140,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 30,
+        "mobile_gap_between_blocks": 10
       }
     },
     "blank_section_ykCxJM": {
       "type": "blank-section",
       "blocks": {
-        "heading_nYJWnh": {
-          "type": "heading",
-          "name": "Heading",
+        "layout_zddqL3": {
+          "type": "layout",
+          "name": "Layout",
           "settings": {
-            "title": "<p>You’ve Got Questions, <br/>We’ve got Answers</p>",
-            "text_color": "#123456",
-            "text_alignment": "center",
-            "heading_size": "4xl",
-            "font_weight": "bold",
-            "font_family": "values-sans",
-            "use_mobile_settings": false,
-            "text_alignment_mobile": "left",
-            "heading_size_mobile": "xl",
-            "font_weight_mobile": "normal"
+            "desktop_padding": 20,
+            "desktop_gap": 16,
+            "desktop_columns_per_row": 1,
+            "align_items": "center",
+            "custom_column_width": false,
+            "column_width": "1fr 1fr",
+            "mobile_padding": 0,
+            "mobile_gap": 14,
+            "mobile_columns_per_row": 1
           },
-          "blocks": {}
+          "blocks": {
+            "layout_item_JncWxU": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 24,
+                "gap_mobile": 16
+              },
+              "blocks": {
+                "heading_Y6epTL": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "title": "<p>You’ve Got Questions, <br/>We’ve got Answers</p>",
+                    "text_color": "#123456",
+                    "text_alignment": "center",
+                    "heading_size": "4xl",
+                    "font_weight": "bold",
+                    "font_family": "values-sans",
+                    "use_mobile_settings": false,
+                    "text_alignment_mobile": "left",
+                    "heading_size_mobile": "xl",
+                    "font_weight_mobile": "normal"
+                  },
+                  "blocks": {}
+                },
+                "text_gYAnQJ": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p>We get it. You should know what you're putting into your body. Ask away. Our team of experts is here to help.</p>",
+                    "text_alignment": "center",
+                    "font_family": "values-sans",
+                    "font_weight": "normal",
+                    "text_color": "#0d3063",
+                    "font_size": 16,
+                    "font_size_mobile": 16,
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_Y6epTL",
+                "text_gYAnQJ"
+              ]
+            }
+          },
+          "block_order": [
+            "layout_item_JncWxU"
+          ]
         },
         "tabs_wGYCiJ": {
           "type": "tabs",
           "name": "Tabs",
-          "settings": {},
+          "settings": {
+            "hide_nav": false
+          },
           "blocks": {
             "tab_item_yMMCJc": {
               "type": "_tab-item",
@@ -65,7 +121,8 @@
                     "text_color": "#181d27",
                     "font_size": 22,
                     "font_size_mobile": 16,
-                    "text_alignment_mobile": "left"
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
                   },
                   "blocks": {}
                 },
@@ -111,7 +168,8 @@
                     "text_color": "#181d27",
                     "font_size": 22,
                     "font_size_mobile": 16,
-                    "text_alignment_mobile": "left"
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
                   },
                   "blocks": {}
                 },
@@ -157,7 +215,8 @@
                     "text_color": "#181d27",
                     "font_size": 22,
                     "font_size_mobile": 16,
-                    "text_alignment_mobile": "left"
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
                   },
                   "blocks": {}
                 },
@@ -224,7 +283,8 @@
                     "text_color": "#181d27",
                     "font_size": 22,
                     "font_size_mobile": 16,
-                    "text_alignment_mobile": "left"
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
                   },
                   "blocks": {}
                 },
@@ -287,7 +347,8 @@
                     "text_color": "#181d27",
                     "font_size": 22,
                     "font_size_mobile": 16,
-                    "text_alignment_mobile": "left"
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
                   },
                   "blocks": {}
                 },
@@ -337,13 +398,13 @@
         }
       },
       "block_order": [
-        "heading_nYJWnh",
+        "layout_zddqL3",
         "tabs_wGYCiJ"
       ],
       "name": "Default Section",
       "settings": {
-        "desktop_padding_top": 40,
-        "desktop_gap_between_blocks": 20,
+        "desktop_padding_top": 25,
+        "desktop_gap_between_blocks": 30,
         "bg_color": "#ffffff",
         "desktop_max_width": 1140,
         "hide_on_mobile": false,
