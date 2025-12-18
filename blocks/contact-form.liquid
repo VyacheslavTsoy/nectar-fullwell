@@ -1,0 +1,117 @@
+{% form 'contact', class: 'max-w-2xl mx-auto' %}
+    {%  if block.settings.title != blank %}
+        <h2 class="text-2xl font-bold text-center mb-6">{{ block.settings.title }}</h2>
+    {% endif %}
+
+    {% if block.settings.description != blank %}
+        <div class="text-center mb-6">{{ block.settings.description }}</div>
+    {% endif %}
+
+    {% if form.errors %}
+        <div class="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+            {{ form.errors | default_errors }}
+        </div>
+    {% endif %}
+  
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="first-name">
+            <label for="first-name" class="block text-sm font-medium text-gray-700 mb-2">First name</label>
+            <input 
+                type="text" 
+                name="contact[first_name]" 
+                id="first-name" 
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+                required
+            />
+        </div>
+    
+        <div class="last-name">
+            <label for="last-name" class="block text-sm font-medium text-gray-700 mb-2">Last name</label>
+            <input 
+                type="text" 
+                name="contact[last_name]" 
+                id="last-name" 
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+                required
+            />
+        </div>
+    </div>
+  
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="phone">
+            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+            <input 
+                type="tel" 
+                name="contact[phone]" 
+                id="phone" 
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+            />
+        </div>
+    
+        <div class="email">
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+            <input 
+                type="email" 
+                name="contact[email]" 
+                id="email" 
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+                required
+            />
+        </div>
+    </div>
+  
+    <div class="order-number mb-6">
+        <label for="order-number" class="block text-sm font-medium text-gray-700 mb-2">Order number</label>
+        <input 
+            type="text" 
+            name="contact[order_number]" 
+            id="order-number" 
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+        />
+    </div>
+  
+    <div class="message mb-6">
+        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+        <textarea 
+            name="contact[body]" 
+            id="message" 
+            rows="6"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors resize-y"
+            required
+        ></textarea>
+    </div>
+  
+    <div class="flex justify-center">
+        <button 
+            type="submit" 
+            class="btn btn--primary min-w-[200px]"
+        >
+            Submit
+        </button>
+    </div>
+{% endform %}
+
+{% schema %}
+{
+  "name": "Contact Form",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Title ",
+      "id": "title",
+      "default": "Get in touch"
+    },
+    {
+      "type": "richtext",
+      "label": "Description",
+      "id": "description",
+      "default": "<p>We're here to help you with any questions you have. Please fill out the form below and we'll get back to you as soon as possible.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Contact Form"
+    }
+  ]
+}
+{% endschema %}
