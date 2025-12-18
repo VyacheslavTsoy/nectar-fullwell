@@ -571,6 +571,9 @@
         "layout_zddqL3",
         "tabs_wGYCiJ"
       ],
+      "custom_css": [
+        "a:not([class]) {text-decoration: underline;}"
+      ],
       "name": "Default Section",
       "settings": {
         "desktop_padding_top": 25,
