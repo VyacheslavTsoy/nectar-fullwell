@@ -601,13 +601,166 @@
                     "accordion_item_z3xhWz",
                     "accordion_item_g8VmXd"
                   ]
+                },
+                "text_9iQYkx": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p><strong>Behind The Science</strong></p>",
+                    "text_alignment": "left",
+                    "font_family": "values-sans",
+                    "font_weight": "normal",
+                    "text_color": "#181d27",
+                    "font_size": 22,
+                    "font_size_mobile": 16,
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
+                  },
+                  "blocks": {}
+                },
+                "accordion_RkxXXz": {
+                  "type": "accordion",
+                  "name": "Accordion",
+                  "settings": {},
+                  "blocks": {
+                    "accordion_item_wQLVxN": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "How do I know if I'm dehydrated?",
+                        "answer": "<p>The symptoms of dehydration include fatigue, thirst, depressed mood, dry skin, headaches, cramping, anxiety and decreased urine output. Oftentimes, thirst is confused with hunger - but your body is actually craving fluids, not food.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_iFtbgr": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "What causes dehydration?",
+                        "answer": "<p>Dehydration occurs when your body is lacking the fluids and electrolytes essential to perform its normal functions. Dehydration can be caused by your normal daily habits including caffeine, work, exercise, alcohol, medications and even sleep. You do NOT need to be very active or in hot temperatures to be dehydrated.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_iRY3Jz": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Why is staying hydrated important?",
+                        "answer": "<p>Over half of your body is made of water and studies show that even a 1% fluid loss causes a number of dehydration symptoms. Simply put, every cell, tissue, and organ in your body needs electrolytes and water to work properly. When you're dehydrated, you're not performing at your best.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_PTR4mJ": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "What are electrolytes and why do I need them?",
+                        "answer": "<p>Electrolytes are electrically charged minerals that conduct electrical impulses throughout the body. Electrolytes are found in the bloodstream and are vital to many key functions in the body such as maintaining fluid balance, creating energy, preventing muscle cramps, regulating heart rhythm and rebuilding damaged tissue. The primary electrolytes found in Essential Daily Energy are potassium and magnesium. These two electrolytes are the key to why Essential Daily Energy is so effective at helping your body absorb water.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_bQ9Wbp": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Does rapid hydration require sugar?",
+                        "answer": "<p>Most other hydration powder companies developed their formula based on the World Health Organization’s “Oral Rehydration Solution.” This formula was developed for individuals suffering “life threatening diarrhoeal dehydration.” Odds are, if you’re on a computer, you’re not experiencing this level of near-death dehydration and malnourishment, and you likely never will. Sugar is one of the most prevalent ingredients in the average diet. Nectar’s proprietary formula relies on replenishing what we are not getting on a daily basis from the food we already eat. Don’t let companies who aren’t willing to spend the money on organic stevia fool you with their “science” - they’re just looking to save money.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_yifwJw": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Why does Essential Daily Energy have lower sodium and higher potassium and magnesium?",
+                        "answer": "<p>When it comes to hydration, potassium and magnesium are both essential electrolytes. Through your body’s Sodium-Potassium Pump, your cells are constantly pumping out sodium and pumping in potassium, maintaining fluid balance. In your kidneys, the organs responsible for maintaining electrolyte concentrations, magnesium is essential to storing potassium. When magnesium levels are optimal, your kidneys are able to retain higher levels of electrolytes, keeping you hydrated. Unless you’re running a marathon and losing a substantial amount of sodium through sweat, you don’t need all of the sodium found in other hydration products.</p>"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "accordion_item_wQLVxN",
+                    "accordion_item_iFtbgr",
+                    "accordion_item_iRY3Jz",
+                    "accordion_item_PTR4mJ",
+                    "accordion_item_bQ9Wbp",
+                    "accordion_item_yifwJw"
+                  ]
+                },
+                "text_mwECLa": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p><strong>Subscription</strong></p>",
+                    "text_alignment": "left",
+                    "font_family": "values-sans",
+                    "font_weight": "normal",
+                    "text_color": "#181d27",
+                    "font_size": 22,
+                    "font_size_mobile": 16,
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
+                  },
+                  "blocks": {}
+                },
+                "accordion_Pz9zPx": {
+                  "type": "accordion",
+                  "name": "Accordion",
+                  "settings": {},
+                  "blocks": {
+                    "accordion_item_yxAjg6": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "How does my subscription work?",
+                        "answer": "<p>We started Nectar to make hydration simple and easy. When you subscribe, we will send you a new supply (30 sticks) of Nectar each month. In the case you want to change your delivery date, pause or cancel your subscription, update your flavor choice or anything else, these changes can be made at any time through your <a href=\"https://drinknectar.co/a/account/login\">account page</a>.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_cprqii": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "What is your return and refund policy?",
+                        "answer": "<p>Nectar accepts returns on any first orders for unopened pouches (top of bag seal not broken). If multiple pouches are ordered on the first order, Nectar will provide a refund for one (1) 30 stick pouch.</p>"
+                      },
+                      "blocks": {}
+                    },
+                    "accordion_item_AQNLxb": {
+                      "type": "_accordion-item",
+                      "name": "Accordion Item",
+                      "settings": {
+                        "open_by_default": false,
+                        "question": "Where do I adjust my subscription settings?",
+                        "answer": "<p>You are able to change your subscription settings right from your <a href=\"https://drinknectar.co/a/account/login\">account page</a>. You can rush or delay an order, adjust your quantity, change your shipping address or payment method and cancel your subscription all in one place.</p>"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "accordion_item_yxAjg6",
+                    "accordion_item_cprqii",
+                    "accordion_item_AQNLxb"
+                  ]
                 }
               },
               "block_order": [
                 "text_DRGpwB",
                 "accordion_xrQEjM",
                 "text_7ArWjx",
-                "accordion_kLWAQK"
+                "accordion_kLWAQK",
+                "text_9iQYkx",
+                "accordion_RkxXXz",
+                "text_mwECLa",
+                "accordion_Pz9zPx"
               ]
             },
             "tab_item_NNCJzc": {
