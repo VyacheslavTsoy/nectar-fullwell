@@ -774,9 +774,26 @@
                 "mobile_gap_between_blocks": 10
               },
               "blocks": {
+                "text_VpHcqy": {
+                  "type": "text",
+                  "name": "Text",
+                  "settings": {
+                    "title": "<p><strong>Commonly Asked</strong></p>",
+                    "text_alignment": "left",
+                    "font_family": "values-sans",
+                    "font_weight": "normal",
+                    "text_color": "#181d27",
+                    "font_size": 22,
+                    "font_size_mobile": 16,
+                    "text_alignment_mobile": "left",
+                    "hide_on_mobile": false
+                  },
+                  "blocks": {}
+                },
                 "text_gExDUD": {
                   "type": "text",
                   "name": "Text",
+                  "disabled": true,
                   "settings": {
                     "title": "<p><strong>Coming Soon...</strong></p>",
                     "text_alignment": "center",
@@ -795,16 +812,6 @@
                   "name": "Accordion",
                   "settings": {},
                   "blocks": {
-                    "accordion_item_wai4YN": {
-                      "type": "_accordion-item",
-                      "name": "Accordion Item",
-                      "settings": {
-                        "open_by_default": false,
-                        "question": "Test",
-                        "answer": "<p>Essential Daily Hydration is a clean, rapid hydration mix designed to be taken daily. The product is made with medical-grade electrolytes to boost the absorption of your water in order to hydrate you as quickly and efficiently as possible.</p>"
-                      },
-                      "blocks": {}
-                    },
                     "accordion_item_3pMfQy": {
                       "type": "_accordion-item",
                       "name": "Accordion Item",
@@ -847,7 +854,6 @@
                     }
                   },
                   "block_order": [
-                    "accordion_item_wai4YN",
                     "accordion_item_3pMfQy",
                     "accordion_item_WJPgiA",
                     "accordion_item_rx9F6E",
@@ -1089,6 +1095,7 @@
                 }
               },
               "block_order": [
+                "text_VpHcqy",
                 "text_gExDUD",
                 "accordion_YfJxXC",
                 "text_3LUReh",
