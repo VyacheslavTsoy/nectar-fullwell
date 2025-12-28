@@ -636,10 +636,10 @@
                 });
 
                 // cancel if no main items
-                {% comment %} if (!mainItems.length) {
+                if (!mainItems.length) {
                     this.isProcessing = false;
                     return;
-                } {% endcomment %}
+                }
 
                 // Adding of gift products
                 if (this.giftsProducts) {
