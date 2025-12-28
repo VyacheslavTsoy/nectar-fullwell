@@ -618,14 +618,16 @@
                 return `$${newPrice}`;
             },
             addToCart() {
-                if(this.isProcessing) return;
+                if (this.isProcessing) return;
                 this.isProcessing = true;
 
-                const itemsForCart = [];
+                const mainItems = [];
+                const giftItems = [];
 
+                // main items
                 this.currentProduct.variants.forEach(v => {
                     if (v.quantity > 0) {
-                        itemsForCart.push({
+                        mainItems.push({
                             id: v.id,
                             quantity: v.quantity,
                             selling_plan: this.sellingPlan
@@ -633,31 +635,38 @@
                     }
                 });
 
+                // cancel if no main items
+                if (!mainItems.length) {
+                    this.isProcessing = false;
+                    return;
+                }
+
+                // Adding of gift products
                 if (this.giftsProducts) {
-                   this.giftsProducts.forEach((product, index) => {
-                        const exists = itemsForCart.some(item => item.id === product.variant_id);
+                    this.giftsProducts.forEach((product, index) => {
+                        const exists = mainItems.some(item => item.id === product.variant_id);
+                        if (exists) return;
 
-                        if (!exists) {
-
-                            if (this.allGiftsAvailableMoreThanOne) {
-                                if (this.minQty == 1 && index >= 2) return;
-                            }
-
-                            if (this.allGiftsAvailableEqual3) {
-                                if ((index) > this.minQty) return;
-                            }
-
-                            itemsForCart.push({
-                                id: product.variant_id,
-                                quantity: 1
-                            });
+                        if (this.allGiftsAvailableMoreThanOne) {
+                            if (this.minQty === 1 && index >= 2) return;
                         }
+
+                        if (this.allGiftsAvailableEqual3) {
+                            if (index > this.minQty) return;
+                        }
+
+                        giftItems.push({
+                            id: product.variant_id,
+                            quantity: 1
+                        });
                     });
                 }
 
-                if (Array.isArray(itemsForCart)) {
-                    Alpine.store('miniCart').clearAndAdd(itemsForCart, true);
-                }
+                // final items for the cart
+                const itemsForCart = [...mainItems, ...giftItems];
+
+                // adding to the cart
+                Alpine.store('miniCart').clearAndAdd(itemsForCart, true);
             },
             init() {
                 this.updateCurrentPouch();
