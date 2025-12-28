@@ -665,8 +665,6 @@
                 // final items for the cart
                 const itemsForCart = [...mainItems, ...giftItems];
 
-                console.log('additional check');
-
                 // adding to the cart
                 Alpine.store('miniCart').clearAndAdd(itemsForCart, true);
             },
