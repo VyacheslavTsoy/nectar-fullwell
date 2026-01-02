@@ -111,20 +111,87 @@
     "blank_section_fKKrkD": {
       "type": "blank-section",
       "blocks": {
-        "banner_4tJCqm": {
-          "type": "banner",
-          "name": "Banner",
+        "layout_i7DmiG": {
+          "type": "layout",
+          "name": "Layout",
           "settings": {
-            "vertical_padding_desktop": 0,
-            "image": "{{ closest.product.featured_image }}",
-            "vertical_padding_mobile": 0,
-            "image_mobile": "{{ closest.product.featured_image }}"
+            "desktop_padding": 0,
+            "desktop_gap": 16,
+            "desktop_columns_per_row": 3,
+            "align_items": "center",
+            "custom_column_width": false,
+            "column_width": "1fr 1fr",
+            "mobile_padding": 0,
+            "mobile_gap": 14,
+            "mobile_columns_per_row": 1
           },
-          "blocks": {}
+          "blocks": {
+            "layout_item_eMwqMc": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 0,
+                "gap_mobile": 0
+              },
+              "blocks": {
+                "image_AQ4aGP": {
+                  "type": "image",
+                  "name": "Image",
+                  "settings": {
+                    "image": "{{ closest.product.featured_image }}",
+                    "image_url": "",
+                    "border_radius": 5,
+                    "image_ratio": "1/1",
+                    "image_width": 100,
+                    "hidden_on_mobile": false,
+                    "hidden_on_desktop": false
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "image_AQ4aGP"
+              ]
+            },
+            "layout_item_DcitGT": {
+              "type": "_layout-item",
+              "name": "Column",
+              "settings": {
+                "gap_desktop": 0,
+                "gap_mobile": 0
+              },
+              "blocks": {
+                "heading_8QrX6a": {
+                  "type": "heading",
+                  "name": "Heading",
+                  "settings": {
+                    "title": "<p>{{ closest.product.title }}</p>",
+                    "text_color": "#123456",
+                    "text_alignment": "left",
+                    "heading_size": "xl",
+                    "font_weight": "normal",
+                    "font_family": "values-sans",
+                    "use_mobile_settings": false,
+                    "text_alignment_mobile": "left",
+                    "heading_size_mobile": "xl",
+                    "font_weight_mobile": "normal"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_8QrX6a"
+              ]
+            }
+          },
+          "block_order": [
+            "layout_item_eMwqMc",
+            "layout_item_DcitGT"
+          ]
         }
       },
       "block_order": [
-        "banner_4tJCqm"
+        "layout_i7DmiG"
       ],
       "name": "Default Section",
       "settings": {
