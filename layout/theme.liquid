@@ -64,9 +64,11 @@
     </style>
 
     {% if request.path contains '/a/account' %}
-      <script>
-        
-      </script>
+      <style>
+        .shopify-section-group-header-group {
+          position: static;
+        }
+      </style>
     {% endif %}
 
   </head>
