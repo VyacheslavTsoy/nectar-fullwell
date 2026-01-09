@@ -63,6 +63,12 @@
     }
     </style>
 
+    {% if request.path contains '/a/account' %}
+      <script>
+        
+      </script>
+    {% endif %}
+
   </head>
   <body data-template="{{ template }}">
 
