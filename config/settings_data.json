@@ -233,7 +233,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "#skio-root .product-image-gallery-fullscreen-container {z-index: 99 !important;}"
+      "#skio-root [data-skio-name=\"product-image-gallery-fullscreen-container\"] {z-index: 99 !important;}"
     ]
   }
 }
