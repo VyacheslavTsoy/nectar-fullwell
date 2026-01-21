@@ -519,6 +519,7 @@
                 handle: '{{ product.handle }}',
                 variants: [
                     {%- for variant in product.variants -%}
+                        {% assign hide_variant = variant.metafields.custom.hide_variant | default: false%}
                         {
                             id: {{ variant.id }},
                             title: '{{ variant.title }}',
