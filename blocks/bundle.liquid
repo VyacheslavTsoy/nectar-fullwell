@@ -446,7 +446,7 @@
 
                 window.addEventListener('pageshow', (event) => {
                     if (event.persisted) {
-                        this.isOpen = false;
+                        this.isOpen = this.isDesktop();
                         this.addingToCart = false;
                         this.resetQuantity();
                     }
