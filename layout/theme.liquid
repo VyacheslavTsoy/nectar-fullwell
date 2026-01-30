@@ -63,8 +63,16 @@
     }
     </style>
 
+    {% if request.path contains '/a/account' %}
+      <style>
+        .shopify-section-group-header-group {
+          position: static !important;
+        }
+      </style>
+    {% endif %}
+
   </head>
-  <body>
+  <body data-template="{{ template }}">
 
     {% unless template contains 'gift' or template contains 'offer-only-flavors' %}
         {% comment %} Announcement bar {% endcomment %}
@@ -219,5 +227,6 @@
         {% endstyle %}
     {% endif %}
 
+    
 </body>
 </html>

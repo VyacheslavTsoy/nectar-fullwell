@@ -101,7 +101,7 @@
                 "type": "text",
                 "name": "Text",
                 "settings": {
-                  "title": "<p>With Today’s Limited-Time Offer</p>",
+                  "title": "<p>With Today’s Subscribe & Save Offer</p>",
                   "text_alignment": "left",
                   "font_family": "values-sans",
                   "font_weight": "normal",

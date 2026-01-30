@@ -25,10 +25,10 @@
                 
                     {% if template.name == 'product' %}
                         <h2 class="font-family-poppins text-[2.2rem] leading-[1.2] font-bold">Save up to 60% + 4 Free Gifts</h2>
-                        <div class="text-[1.8rem] leading-[1.2] mt-1">With Today’s Limited-Time Offer</div>
+                        <div class="text-[1.8rem] leading-[1.2] mt-1">With Today’s Subscribe & Save Offer</div>
 
                         {% else %}
-                        {% comment %} <div class="text-[1.8rem] leading-[1.2] mt-1">with today’s Limited-Time TV Offer</div> {% endcomment %}
+                        {% comment %} <div class="text-[1.8rem] leading-[1.2] mt-1">With Today’s Subscribe & Save Offer</div> {% endcomment %}
                     {% endif %}
                 </div>
 
@@ -519,6 +519,9 @@
                 handle: '{{ product.handle }}',
                 variants: [
                     {%- for variant in product.variants -%}
+                        {% assign hide_variant = variant.metafields.custom.hide_variant | default: false %}
+
+                        {% unless hide_variant %}
                         {
                             id: {{ variant.id }},
                             title: '{{ variant.title }}',
@@ -527,6 +530,7 @@
                             price: {{ variant.price }},
                             quantity: 0,
                         }{%- unless forloop.last -%},{%- endunless -%}
+                        {%- endunless -%}
                     {%- endfor -%}
                 ],
                 price: {{ product.price }},
@@ -618,14 +622,16 @@
                 return `$${newPrice}`;
             },
             addToCart() {
-                if(this.isProcessing) return;
+                if (this.isProcessing) return;
                 this.isProcessing = true;
 
-                const itemsForCart = [];
+                const mainItems = [];
+                const giftItems = [];
 
+                // main items
                 this.currentProduct.variants.forEach(v => {
                     if (v.quantity > 0) {
-                        itemsForCart.push({
+                        mainItems.push({
                             id: v.id,
                             quantity: v.quantity,
                             selling_plan: this.sellingPlan
@@ -633,31 +639,38 @@
                     }
                 });
 
+                // cancel if no main items
+                if (!mainItems.length) {
+                    this.isProcessing = false;
+                    return;
+                }
+
+                // Adding of gift products
                 if (this.giftsProducts) {
-                   this.giftsProducts.forEach((product, index) => {
-                        const exists = itemsForCart.some(item => item.id === product.variant_id);
+                    this.giftsProducts.forEach((product, index) => {
+                        const exists = mainItems.some(item => item.id === product.variant_id);
+                        if (exists) return;
 
-                        if (!exists) {
-
-                            if (this.allGiftsAvailableMoreThanOne) {
-                                if (this.minQty == 1 && index >= 2) return;
-                            }
-
-                            if (this.allGiftsAvailableEqual3) {
-                                if ((index) > this.minQty) return;
-                            }
-
-                            itemsForCart.push({
-                                id: product.variant_id,
-                                quantity: 1
-                            });
+                        if (this.allGiftsAvailableMoreThanOne) {
+                            if (this.minQty === 1 && index >= 2) return;
                         }
+
+                        if (this.allGiftsAvailableEqual3) {
+                            if (index > this.minQty) return;
+                        }
+
+                        giftItems.push({
+                            id: product.variant_id,
+                            quantity: 1
+                        });
                     });
                 }
 
-                if (Array.isArray(itemsForCart)) {
-                    Alpine.store('miniCart').clearAndAdd(itemsForCart, true);
-                }
+                // final items for the cart
+                const itemsForCart = [...mainItems, ...giftItems];
+
+                // adding to the cart
+                Alpine.store('miniCart').clearAndAdd(itemsForCart, true);
             },
             init() {
                 this.updateCurrentPouch();

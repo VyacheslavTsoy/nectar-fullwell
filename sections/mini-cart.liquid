@@ -263,7 +263,7 @@
         Alpine.store('miniCart', {
             isOpen: false,
             isProcessing: false,
-            cart: JSON.parse('{{ cart | json }}'),
+            cart: {{ cart | json }},
             subscriptionItemsInCart: false,
             freeShippingCost: 4000,
             defaultSellingPlanID: 1657143355,

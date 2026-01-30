@@ -17,7 +17,7 @@
           "settings": {
             "font_size": 14,
             "icon": "",
-            "title": "<p>🎁<strong>Black Friday Sale</strong></p>"
+            "title": "<p>🎁 <strong>New Year's Sale</strong></p>"
           }
         },
         "badge_TdUxyk": {
@@ -31,6 +31,7 @@
         "timer_YeYRQF": {
           "type": "timer",
           "settings": {
+            "white_skin": false,
             "hide_days": true,
             "end_date": "23-07-2027 12:00"
           }
@@ -60,6 +61,7 @@
             "test_percent": false,
             "unlock_all_gifts_if_more_than_one_pouch": false,
             "unlock_all_gifts_if_equal_3": true,
+            "use_multistep_flow": false,
             "related_product": "{{ product }}",
             "related_pouches": [],
             "products": [
@@ -68,7 +70,8 @@
               "nectar-bottle",
               "nectar-frother"
             ],
-            "related_doctor_review": "donna-b"
+            "related_doctor_review": "donna-b",
+            "alt_gallery": ""
           },
           "blocks": {
             "inline_review_z9bQ8b": {
@@ -100,14 +103,15 @@
               "type": "text",
               "name": "Text",
               "settings": {
-                "title": "<p>With Today’s Limited-Time Offer</p>",
+                "title": "<p>With Today’s Subscribe & Save Offer</p>",
                 "text_alignment": "left",
                 "font_family": "values-sans",
                 "font_weight": "normal",
                 "text_color": "#0d3063",
                 "font_size": 20,
                 "font_size_mobile": 18,
-                "text_alignment_mobile": "left"
+                "text_alignment_mobile": "left",
+                "hide_on_mobile": false
               },
               "blocks": {}
             },
@@ -191,7 +195,8 @@
                 "text_color": "#42a4ff",
                 "font_size": 24,
                 "font_size_mobile": 18,
-                "text_alignment_mobile": "left"
+                "text_alignment_mobile": "left",
+                "hide_on_mobile": false
               },
               "blocks": {}
             },
@@ -302,7 +307,8 @@
                     "text_color": "#000000",
                     "font_size": 16,
                     "font_size_mobile": 16,
-                    "text_alignment_mobile": "center"
+                    "text_alignment_mobile": "center",
+                    "hide_on_mobile": false
                   },
                   "blocks": {}
                 },
@@ -485,7 +491,8 @@
             "text_color": "#000000",
             "font_size": 16,
             "font_size_mobile": 16,
-            "text_alignment_mobile": "center"
+            "text_alignment_mobile": "center",
+            "hide_on_mobile": false
           },
           "blocks": {}
         },
@@ -841,7 +848,8 @@
             "text_color": "#222222",
             "font_size": 18,
             "font_size_mobile": 16,
-            "text_alignment_mobile": "center"
+            "text_alignment_mobile": "center",
+            "hide_on_mobile": false
           },
           "blocks": {}
         },
@@ -876,7 +884,9 @@
                     "image_url": "",
                     "border_radius": 16,
                     "image_ratio": "1/1",
-                    "image_width": 100
+                    "image_width": 100,
+                    "hidden_on_mobile": false,
+                    "hidden_on_desktop": false
                   },
                   "blocks": {}
                 }
@@ -901,7 +911,9 @@
                     "image_url": "",
                     "border_radius": 0,
                     "image_ratio": "1/1",
-                    "image_width": 100
+                    "image_width": 100,
+                    "hidden_on_mobile": false,
+                    "hidden_on_desktop": false
                   },
                   "blocks": {}
                 }
@@ -926,7 +938,9 @@
                     "image_url": "",
                     "border_radius": 0,
                     "image_ratio": "1/1",
-                    "image_width": 100
+                    "image_width": 100,
+                    "hidden_on_mobile": false,
+                    "hidden_on_desktop": false
                   },
                   "blocks": {}
                 }
@@ -951,7 +965,9 @@
                     "image_url": "",
                     "border_radius": 0,
                     "image_ratio": "1/1",
-                    "image_width": 100
+                    "image_width": 100,
+                    "hidden_on_mobile": false,
+                    "hidden_on_desktop": false
                   },
                   "blocks": {}
                 }
@@ -976,7 +992,9 @@
                     "image_url": "",
                     "border_radius": 0,
                     "image_ratio": "1/1",
-                    "image_width": 100
+                    "image_width": 100,
+                    "hidden_on_mobile": false,
+                    "hidden_on_desktop": false
                   },
                   "blocks": {}
                 }
@@ -1001,7 +1019,9 @@
                     "image_url": "",
                     "border_radius": 0,
                     "image_ratio": "1/1",
-                    "image_width": 100
+                    "image_width": 100,
+                    "hidden_on_mobile": false,
+                    "hidden_on_desktop": false
                   },
                   "blocks": {}
                 }
@@ -1363,7 +1383,8 @@
             "text_color": "#0d3063",
             "font_size": 14,
             "font_size_mobile": 12,
-            "text_alignment_mobile": "left"
+            "text_alignment_mobile": "left",
+            "hide_on_mobile": false
           },
           "blocks": {}
         },
