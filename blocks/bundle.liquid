@@ -169,10 +169,10 @@
                             </div>
                         </div>
 
-                        <button @click="addToCart" class="product__cta-btn justify-center text-[2rem] font-bold bg-[#21A600] border-[.2rem] h-[6.6rem] border-[#037C2B] hover:bg-[#037C2B] rounded-[1rem] text-white w-full mt-[.8rem] flex items-center gap-4 disabled:bg-[#6E6E6E] disabled:border-[#252525]" :disabled="currentSlotsCount == 0">
+                        <button @click="addToCart" class="product__cta-btn justify-center text-[2rem] font-bold bg-[#21A600] border-[.2rem] h-[6.6rem] border-[#037C2B] hover:bg-[#037C2B] rounded-[1rem] text-white w-full mt-[.8rem] flex items-center gap-4 disabled:bg-[#6E6E6E] disabled:border-[#252525]" :disabled="slots.filter(slot => !slot.empty).length != totalSlots" x-data="{ labels: ['Add 4 More Bags', 'Add 3 More Bags', 'Add 2 More Bags', 'Add Your Free Bag', 'Add To Cart', 'Adding to cart...'] }">
 
-                            <span x-text="currentSlotsCount == 0 ? 'Select At Least 1 Bag' : 'Add To Cart'" x-show="!addingToCart"></span>
-                            <span x-text="'Adding to cart...'" x-show="addingToCart"></span>
+                            <span x-text="labels[currentSlotsCount]" x-show="!addingToCart"></span>
+                            <span x-text="labels[5]" x-show="addingToCart"></span>
 
                             <div class="inline-flex items-center justify-center font-medium h-[2.4rem] bg-[#0D3063] text-white text-base rounded-full px-[1.2rem] gap-[.8rem] font-family-poppins" x-show="currentSlotsCount > 0">
                                 <span class="line-through text-[#D8D8D8]" x-text="formatMoney(totalPrice?.compare_at_price)"></span>
