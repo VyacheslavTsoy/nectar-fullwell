@@ -238,8 +238,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "#skio-root [data-skio-name=\"product-image-gallery-fullscreen-container\"] {z-index: 99 !important;}",
-      ".junip-review-list-item-container .junip-stars-filled {width: 100% !important;}"
+      "#skio-root [data-skio-name=\"product-image-gallery-fullscreen-container\"] {z-index: 99 !important;}"
     ]
   }
 }
