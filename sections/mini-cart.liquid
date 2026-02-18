@@ -239,14 +239,18 @@
 
     document.addEventListener('alpine:init', () => {
 
-        const swiper = new Swiper('.mini-cart__upsell.swiper', {
-            slidesPerView: 'auto',
-            spaceBetween: 6,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            }
-        });
+        let swiper = null;
+        const upsellEl = document.querySelector('.mini-cart__upsell.swiper');
+        if (upsellEl) {
+            swiper = new Swiper(upsellEl, {
+                slidesPerView: 'auto',
+                spaceBetween: 6,
+                pagination: {
+                    el: upsellEl.querySelector('.swiper-pagination'),
+                    clickable: true,
+                }
+            });
+        }
 
         const debounce = (func, wait) => {
             let timeout;
@@ -267,6 +271,7 @@
             subscriptionItemsInCart: false,
             freeShippingCost: 4000,
             defaultSellingPlanID: 1657143355,
+            productCache: {},
             {% if section.blocks != blank %}
             subscriptionDiscountPrice: 0,
             discountThresholds: [
@@ -327,12 +332,46 @@
                 return data;
             },
           
-            updateItem: debounce((item) => {
-                
-                let updates = {
-                    [item.id]: item.quantity
+            updateItem: debounce(async (item) => {
+                const cartItems = this.cart?.items || [];
+                const quantity = Math.max(0, parseInt(item.quantity, 10) || 0);
+                const hasSubscriptionItems = cartItems.some(cartItem => Boolean(cartItem?.selling_plan_allocation?.selling_plan?.id));
+
+                if (hasSubscriptionItems) {
+                    const rebuiltItems = cartItems.reduce((acc, cartItem) => {
+                        const nextQuantity = cartItem.key === item.id
+                            ? quantity
+                            : cartItem.quantity;
+
+                        if (nextQuantity <= 0) return acc;
+
+                        const nextItem = {
+                            id: cartItem.variant_id,
+                            quantity: nextQuantity
+                        };
+
+                        const sellingPlanId = cartItem?.selling_plan_allocation?.selling_plan?.id;
+                        if (sellingPlanId) {
+                            nextItem.selling_plan = sellingPlanId;
+                        }
+
+                        acc.push(nextItem);
+                        return acc;
+                    }, []);
+
+                    if (!rebuiltItems.length) {
+                        await this.clearCart();
+                        return;
+                    }
+
+                    await this.clearAndAdd(rebuiltItems, false);
+                    return;
+                }
+
+                const updates = {
+                    [item.id]: quantity
                 };
-                
+
                 fetch(window.Shopify.routes.root + 'cart/update.js', {
                     method: 'POST',
                     headers: {
@@ -365,9 +404,12 @@
                 if (itemCount <= this.discountThresholds.length) {
                     discount = this.discountThresholds[itemCount - 1]?.value || 0;
                 } else {
-                    discount = this.discountThresholds[this.discountThresholds.length - 1]?.value || 0;
+                    const maxTier = this.discountThresholds[this.discountThresholds.length - 1];
+                    const maxQty = Number(maxTier?.title) || this.discountThresholds.length;
+                    const perItemDiscount = maxQty > 0 ? (Number(maxTier?.value) || 0) / maxQty : 0;
+                    discount = perItemDiscount * itemCount;
                 }
-                return this.cart.original_total_price - discount;
+                return Math.max(0, this.cart.original_total_price - discount);
             },
 
             async clearAndAdd(items, redirectToCheckout = false) {
@@ -449,18 +491,80 @@
                 }
 
                 setTimeout(() => {
-                    swiper.update();
+                    if (swiper) {
+                        swiper.update();
+                    }
                 }, 100);
                 
+            },
+            getPlanMonthsForQty(qty) {
+                if (qty >= 4) return 4;
+                if (qty === 3) return 3;
+                if (qty === 2) return 2;
+                return 1;
+            },
+            extractMonthsFromPlan(plan) {
+                if (!plan) return null;
+                const parts = [];
+                if (Array.isArray(plan.options)) {
+                    plan.options.forEach(opt => {
+                        if (opt && Array.isArray(opt.values)) parts.push(...opt.values);
+                        if (opt && typeof opt.name === "string") parts.push(opt.name);
+                    });
+                }
+                if (plan.name) parts.push(plan.name);
+                const text = parts.join(" ").toLowerCase();
+                let match = text.match(/(\d+)\s*(month|months|mo)\b/);
+                if (match) return parseInt(match[1], 10);
+                match = text.match(/(\d+)\s*(day|days)\b/);
+                if (match) {
+                    const days = parseInt(match[1], 10);
+                    return Math.max(1, Math.round(days / 30));
+                }
+                return null;
+            },
+            getSellingPlanIdForVariant(variant, desiredMonths) {
+                const allocations = Array.isArray(variant?.selling_plan_allocations)
+                  ? variant.selling_plan_allocations.filter(a => a && a.selling_plan)
+                  : [];
+                if (!allocations.length) return null;
+                const match = allocations.find(allocation => {
+                    return this.extractMonthsFromPlan(allocation?.selling_plan) === desiredMonths;
+                });
+                return match ? match.selling_plan.id : allocations[0].selling_plan.id;
+            },
+            async fetchProductByHandle(handle) {
+                if (!handle) return null;
+                if (this.productCache[handle]) return this.productCache[handle];
+                const res = await fetch(`${window.Shopify.routes.root}products/${handle}?view=ecom_product_json`);
+                if (!res.ok) return null;
+                const text = await res.text();
+                let product = null;
+                try {
+                    product = JSON.parse(text);
+                } catch (error) {
+                    console.error("Failed to parse product JSON for selling plans:", error);
+                    return null;
+                }
+                this.productCache[handle] = product;
+                return product;
             },
     
             async upgrateItemsToSubscription() {
                 const updates = {};
-                const itemsToAdd = this.cart?.items?.map(item => ({
-                    id: item.variant_id,
-                    quantity: item.quantity,
-                    selling_plan: this.defaultSellingPlanID
-                }));
+                const desiredMonths = this.getPlanMonthsForQty(this.cart?.item_count || 0);
+                const itemsToAdd = [];
+
+                for (const item of (this.cart?.items || [])) {
+                    const product = await this.fetchProductByHandle(item.handle);
+                    const variant = product?.variants?.find(v => v.id === item.variant_id);
+                    const sellingPlanId = this.getSellingPlanIdForVariant(variant, desiredMonths);
+                    itemsToAdd.push({
+                        id: item.variant_id,
+                        quantity: item.quantity,
+                        selling_plan: sellingPlanId || null
+                    });
+                }
     
                 this.cart?.items?.forEach(item => {
                     updates[item.key] = 0;

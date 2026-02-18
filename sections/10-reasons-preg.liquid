@@ -430,7 +430,10 @@
         const section = document.querySelector(`[id="shopify-section-template--15943232159803__swiper_testimonial_HrGNMY"]`);
         let swiper_slider = null;
         function sliderInit() {
-            if (!swiper_slider) swiper_slider = new Swiper(section.querySelector('.swiper'),{   
+            if (!section) return;
+            const swiperEl = section.querySelector('.swiper');
+            if (!swiperEl) return;
+            if (!swiper_slider) swiper_slider = new Swiper(swiperEl,{   
                             slidesPerView: 1,
                             spaceBetween: 10,                     
                              grid: {

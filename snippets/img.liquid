@@ -32,9 +32,10 @@
       lazy: true %}
  {% endfor %} {% endcomment %}
 
-{% assign widths = "100,200,300,400,600,800,1000" | split: "," %}
-{% assign srcset_values = " " %}
-{% assign max_width = max_width | plus: 0 | default: 1000 %}
+{% if image != blank %}
+  {% assign widths = "100,200,300,400,600,800,1000" | split: "," %}
+  {% assign srcset_values = " " %}
+  {% assign max_width = max_width | plus: 0 | default: 1000 %}
 
 {% for width in widths %}
   {% assign width_num = width | plus: 0 %}
@@ -47,21 +48,22 @@
   {% endif %}
 {% endfor %}
 
-<img src="{{ image | image_url: width: max_width }}" 
-    srcset="{{ srcset_values }}"
-    sizes="
-           (max-width: 480px) 400px,
-           (max-width: 768px) 600px,
-           (max-width: 992px) 600px,
-           (max-width: 1200px) 800px,
-           {{ max_width }}px"
-    width="{{ max_width }}" height="{{ max_width }}" 
-    alt="{{ alt }}" 
-    class="{{ class }}"
-    {% if preload == true %}
-      fetchpriority="high"
-    {% endif %}
-    {% if lazy == true %}
-      loading="lazy"
-    {% endif %}
-/>
+  <img src="{{ image | image_url: width: max_width }}" 
+      srcset="{{ srcset_values }}"
+      sizes="
+             (max-width: 480px) 400px,
+             (max-width: 768px) 600px,
+             (max-width: 992px) 600px,
+             (max-width: 1200px) 800px,
+             {{ max_width }}px"
+      width="{{ max_width }}" height="{{ max_width }}" 
+      alt="{{ alt }}" 
+      class="{{ class }}"
+      {% if preload == true %}
+        fetchpriority="high"
+      {% endif %}
+      {% if lazy == true %}
+        loading="lazy"
+      {% endif %}
+  />
+{% endif %}

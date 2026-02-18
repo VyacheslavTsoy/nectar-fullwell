@@ -314,7 +314,7 @@
             isOpen: false,
             isSubscription: true,
             addingToCart: false,
-            sellingPlanId: 1657110587,
+            subscriptionMonths: 1,
             products: [],
             activeProduct: null,
             totalSlots: 4,  
@@ -355,16 +355,49 @@
                 }
                 return this.filledSlots.length
             },
+            extractMonthsFromPlan(plan) {
+                if (!plan) return null;
+                const parts = [];
+                if (Array.isArray(plan.options)) parts.push(...plan.options);
+                if (plan.name) parts.push(plan.name);
+                const text = parts.join(" ").toLowerCase();
+
+                let match = text.match(/(\d+)\s*(month|months|mo)\b/);
+                if (match) return parseInt(match[1], 10);
+
+                match = text.match(/(\d+)\s*(week|weeks|wk|wks)\b/);
+                if (match) {
+                    const weeks = parseInt(match[1], 10);
+                    return Math.max(1, Math.round(weeks / 4));
+                }
+
+                match = text.match(/(\d+)\s*(day|days)\b/);
+                if (match) {
+                    const days = parseInt(match[1], 10);
+                    return Math.max(1, Math.round(days / 30));
+                }
+
+                return null;
+            },
+            getSellingPlanIdForVariant(variant, desiredMonths = 1) {
+                const plans = Array.isArray(variant?.selling_plans) ? variant.selling_plans : [];
+                if (!plans.length) return null;
+                const match = plans.find(plan => this.extractMonthsFromPlan(plan) === desiredMonths);
+                return match ? match.id : plans[0].id;
+            },
             addToCart() {
                 if (this.addingToCart) return;
                 const itemsForCart = [];
 
                 this.filledSlots.forEach(slot => {
                     if (itemsForCart.some(item => item.id == slot.id)) return;
+                    const sellingPlanId = this.isSubscription
+                        ? this.getSellingPlanIdForVariant(slot, this.subscriptionMonths)
+                        : null;
                     itemsForCart.push({
                         id: slot.id,
                         quantity: slot.quantity,
-                        selling_plan: this.isSubscription ? this.sellingPlanId : null
+                        selling_plan: sellingPlanId
                     });
                 });
                 
@@ -446,7 +479,7 @@
 
                 window.addEventListener('pageshow', (event) => {
                     if (event.persisted) {
-                        this.isOpen = this.isDesktop();
+                        this.isOpen = false;
                         this.addingToCart = false;
                         this.resetQuantity();
                     }

@@ -388,7 +388,7 @@
                       "settings": {
                         "open_by_default": false,
                         "question": "How does my subscription work?",
-                        "answer": "<p>We started Nectar to make hydration simple and easy. When you subscribe, we will send you a new supply (30 sticks) of Nectar each month. In the case you want to change your delivery date, pause or cancel your subscription, update your flavor choice or anything else, these changes can be made at any time through your <a href=\"https://drinknectar.co/a/account/login\">account page</a>.</p>"
+                        "answer": "<p>We started Nectar to make hydration simple and easy. When you subscribe, we will send you a new supply (30 sticks) of Nectar each month. In the case you want to change your delivery date, pause or cancel your subscription, update your flavor choice or anything else, these changes can be made at any time through your <a href='https://www.drinknectar.co/tools/recurring/login'>account page</a>.</p>"
                       },
                       "blocks": {}
                     },
@@ -408,7 +408,7 @@
                       "settings": {
                         "open_by_default": false,
                         "question": "Where do I adjust my subscription settings?",
-                        "answer": "<p>You are able to change your subscription settings right from your <a href=\"https://drinknectar.co/a/account/login\">account page</a>. You can rush or delay an order, adjust your quantity, change your shipping address or payment method and cancel your subscription all in one place.</p>"
+                        "answer": "<p>You are able to change your subscription settings right from your <a href='https://www.drinknectar.co/tools/recurring/login/'>account page</a>. You can rush or delay an order, adjust your quantity, change your shipping address or payment method and cancel your subscription all in one place.</p>"
                       },
                       "blocks": {}
                     }
@@ -720,7 +720,7 @@
                       "settings": {
                         "open_by_default": false,
                         "question": "How does my subscription work?",
-                        "answer": "<p>We started Nectar to make hydration simple and easy. When you subscribe, we will send you a new supply (30 sticks) of Nectar each month. In the case you want to change your delivery date, pause or cancel your subscription, update your flavor choice or anything else, these changes can be made at any time through your <a href=\"https://drinknectar.co/a/account/login\">account page</a>.</p>"
+                        "answer": "<p>We started Nectar to make hydration simple and easy. When you subscribe, we will send you a new supply (30 sticks) of Nectar each month. In the case you want to change your delivery date, pause or cancel your subscription, update your flavor choice or anything else, these changes can be made at any time through your <a href='https://www.drinknectar.co/tools/recurring/login/'>account page</a>.</p>"
                       },
                       "blocks": {}
                     },
@@ -740,7 +740,7 @@
                       "settings": {
                         "open_by_default": false,
                         "question": "Where do I adjust my subscription settings?",
-                        "answer": "<p>You are able to change your subscription settings right from your <a href=\"https://drinknectar.co/a/account/login\">account page</a>. You can rush or delay an order, adjust your quantity, change your shipping address or payment method and cancel your subscription all in one place.</p>"
+                        "answer": "<p>You are able to change your subscription settings right from your <a href='https://www.drinknectar.co/tools/recurring/login/'>account page</a>. You can rush or delay an order, adjust your quantity, change your shipping address or payment method and cancel your subscription all in one place.</p>"
                       },
                       "blocks": {}
                     }
@@ -1062,7 +1062,7 @@
                       "settings": {
                         "open_by_default": false,
                         "question": "How does my subscription work?",
-                        "answer": "<p>We started Nectar to make hydration simple and easy. When you subscribe, we will send you a new supply (30 sticks) of Nectar each month. In the case you want to change your delivery date, pause or cancel your subscription, update your flavor choice or anything else, these changes can be made at any time through your <a href=\"https://drinknectar.co/a/account/login\">account page</a>.</p>"
+                        "answer": "<p>We started Nectar to make hydration simple and easy. When you subscribe, we will send you a new supply (30 sticks) of Nectar each month. In the case you want to change your delivery date, pause or cancel your subscription, update your flavor choice or anything else, these changes can be made at any time through your <a href='https://www.drinknectar.co/tools/recurring/login/'>account page</a>.</p>"
                       },
                       "blocks": {}
                     },
@@ -1082,7 +1082,7 @@
                       "settings": {
                         "open_by_default": false,
                         "question": "Where do I adjust my subscription settings?",
-                        "answer": "<p>You are able to change your subscription settings right from your <a href=\"https://drinknectar.co/a/account/login\">account page</a>. You can rush or delay an order, adjust your quantity, change your shipping address or payment method and cancel your subscription all in one place.</p>"
+                        "answer": "<p>You are able to change your subscription settings right from your <a href='https://www.drinknectar.co/tools/recurring/login/'>account page</a>. You can rush or delay an order, adjust your quantity, change your shipping address or payment method and cancel your subscription all in one place.</p>"
                       },
                       "blocks": {}
                     }

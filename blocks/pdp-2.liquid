@@ -38,7 +38,7 @@
                 
                     <div class="sticky-cta__label-icon">
                         <div x-show="currentQty > 0">
-                            🎉 You’re Saving <b x-text="getPriceData(currentPouch).saving_percent.replace('Save ', '') + ' OFF'"></b>
+                            🎉 You’re Saving <b x-show="getPriceData(currentPouch).saving_percent" x-text="(getPriceData(currentPouch).saving_percent || '').replace('Save ', '') + ' OFF'"></b>
                         </div>
                         
                         <div x-show="currentQty == 0">
@@ -326,8 +326,19 @@
                             id: {{ variant.id }},
                             title: '{{ variant.title }}',
                             description: '{{ variant.metafields.custom.variant_description }}',
-                            image: '{{ variant.metafields.custom.variant_image | image_url: width: 120 | default: variant.image | image_url: width: 120 }}',
+                            image: '{% if variant.metafields.custom.variant_image != blank %}{{ variant.metafields.custom.variant_image | image_url: width: 120 }}{% elsif variant.image %}{{ variant.image | image_url: width: 120 }}{% else %}{{ "" }}{% endif %}',
                             price: {{ variant.price }},
+                            selling_plans: [
+                                {%- if variant.selling_plan_allocations and variant.selling_plan_allocations.size > 0 -%}
+                                  {%- for allocation in variant.selling_plan_allocations -%}
+                                    {
+                                      id: {{ allocation.selling_plan.id }},
+                                      name: {{ allocation.selling_plan.name | json }},
+                                      options: {{ allocation.selling_plan.options | json }}
+                                    }{%- unless forloop.last -%},{%- endunless -%}
+                                  {%- endfor -%}
+                                {%- endif -%}
+                            ],
                             quantity: 0,
                         }{%- unless forloop.last -%},{%- endunless -%}
                     {%- endfor -%}
@@ -421,9 +432,48 @@
             getPriceData(pouch) {
                 return this.isSubscription === true ? pouch.subscription : pouch.one_time;
             },
+            getPlanMonthsForQty(qty) {
+                if (qty >= 4) return 4;
+                if (qty === 3) return 3;
+                if (qty === 2) return 2;
+                return 1;
+            },
+            extractMonthsFromPlan(plan) {
+                if (!plan) return null;
+                const parts = [];
+                if (Array.isArray(plan.options)) parts.push(...plan.options);
+                if (plan.name) parts.push(plan.name);
+                const text = parts.join(" ").toLowerCase();
+                let match = text.match(/(\d+)\s*(month|months|mo)\b/);
+                if (match) return parseInt(match[1], 10);
+                match = text.match(/(\d+)\s*(day|days)\b/);
+                if (match) {
+                    const days = parseInt(match[1], 10);
+                    return Math.max(1, Math.round(days / 30));
+                }
+                return null;
+            },
+            getSellingPlanIdForVariant(variant, desiredMonths) {
+                const plans = Array.isArray(variant?.selling_plans) ? variant.selling_plans : [];
+                if (!plans.length) return null;
+                const match = plans.find(plan => this.extractMonthsFromPlan(plan) === desiredMonths);
+                return match ? match.id : plans[0].id;
+            },
             updateFinalPrice() {
-                this.finalPrice.compare_at_price = this.getPriceData(this.currentPouch).compare_at_price || 0;
-                this.finalPrice.price = this.getPriceData(this.currentPouch).price - (this.getPriceData(this.currentPouch).discount || 0);
+                const priceData = this.getPriceData(this.currentPouch) || {};
+                const minQty = Number(this.currentPouch?.minQty) || 1;
+                const qty = Number(this.currentQty) || 0;
+
+                const perItemCompare = Number(priceData.compare_at_price) > 0
+                  ? Number(priceData.compare_at_price) / minQty
+                  : 0;
+                const base = Number(priceData.price) - (Number(priceData.discount) || 0);
+                const perItemPrice = Number(priceData.price_per_packet) > 0
+                  ? Number(priceData.price_per_packet)
+                  : (minQty > 0 ? base / minQty : 0);
+
+                this.finalPrice.compare_at_price = Math.round(perItemCompare * qty);
+                this.finalPrice.price = Math.round(perItemPrice * qty);
             },
             resetQty() {
                 this.currentProduct.variants.forEach(v => {
@@ -479,12 +529,11 @@
                 }
 
                 this.updateProgressBar();
+                this.updateFinalPrice();
             },
             updateCurrentPouch() {
                 this.minQty = this.minQty || this.pouches[0]?.minQty;
                 this.currentPouch = this.pouches.find(pouch => pouch.minQty == this.minQty) || this.pouches[0];
-                this.sellingPlan = this.getPriceData(this.currentPouch)?.selling_plan || null;
-
                 this.maxQty = this.pouches.reduce((max, pouch) => Math.max(max, pouch.minQty), 0);
                 
                 this.updateFinalPrice();
@@ -495,13 +544,17 @@
             },
             addToCart(redirect = false) {
                 const itemsForCart = [];
+                const desiredMonths = this.getPlanMonthsForQty(this.currentQty);
 
                 this.currentProduct.variants.forEach(v => {
                     if (v.quantity > 0) {
+                        const sellingPlanId = this.isSubscription
+                          ? this.getSellingPlanIdForVariant(v, desiredMonths)
+                          : null;
                         itemsForCart.push({
                             id: v.id,
                             quantity: v.quantity,
-                            selling_plan: this.sellingPlan || null
+                            selling_plan: sellingPlanId
                         });
                     }
                 });
@@ -579,4 +632,3 @@
   ]
 }
 {% endschema %}
-

@@ -519,18 +519,25 @@
                 handle: '{{ product.handle }}',
                 variants: [
                     {%- for variant in product.variants -%}
-                        {% assign hide_variant = variant.metafields.custom.hide_variant | default: false %}
-
-                        {% unless hide_variant %}
                         {
                             id: {{ variant.id }},
                             title: '{{ variant.title }}',
                             description: '{{ variant.metafields.custom.variant_description }}',
                             image: '{{ variant.metafields.custom.variant_image | image_url: width: 120 | default: variant.image | image_url: width: 120 }}',
                             price: {{ variant.price }},
+                            selling_plans: [
+                                {%- if variant.selling_plan_allocations and variant.selling_plan_allocations.size > 0 -%}
+                                  {%- for allocation in variant.selling_plan_allocations -%}
+                                    {
+                                      id: {{ allocation.selling_plan.id }},
+                                      name: {{ allocation.selling_plan.name | json }},
+                                      options: {{ allocation.selling_plan.options | json }}
+                                    }{%- unless forloop.last -%},{%- endunless -%}
+                                  {%- endfor -%}
+                                {%- endif -%}
+                            ],
                             quantity: 0,
                         }{%- unless forloop.last -%},{%- endunless -%}
-                        {%- endunless -%}
                     {%- endfor -%}
                 ],
                 price: {{ product.price }},
@@ -571,12 +578,32 @@
                     yellow_badge: '{{ bag.yellow_badge_text | default: '' }}',
                     compare_at_price: {{ bag.compare_at_price }},
                     compare_price_per_packet: {{ bag.compare_price_per_item }},
-                    discount_amount: {{ bag.discount_amount }},
-                    sellingPlan: {{ bag.selling_plan_id }}
+                    discount_amount: {{ bag.discount_amount }}
                 }
                 {%- unless forloop.last -%},{%- endunless -%}
                 {%- endfor -%}
             ],
+            getSellingPlanIdForMonths(months) {
+                const plans = this.currentProduct?.variants?.[0]?.selling_plans || [];
+                const monthStr = String(months).toLowerCase();
+
+                const byName = plans.find(plan => {
+                    const name = (plan?.name || '').toLowerCase();
+                    return name.includes(`${monthStr} month`) || name.includes(`${monthStr}-month`) || name.includes(`${monthStr} months`);
+                });
+
+                if (byName?.id) return byName.id;
+
+                const byOption = plans.find(plan => {
+                    const options = Array.isArray(plan?.options) ? plan.options : [];
+                    return options.some(option => {
+                        const value = (option?.value || '').toString().toLowerCase();
+                        return value.includes(monthStr) && value.includes('month');
+                    });
+                });
+
+                return byOption?.id || null;
+            },
             resetQty() {
                 this.currentProduct.variants.forEach(v => {
                     v.quantity = 0;
@@ -613,7 +640,8 @@
 
                 this.minQty = this.minQty || this.pouches[0]?.minQty;
                 this.currentPouch = this.pouches.find(pouch => pouch.minQty == this.minQty) || this.pouches[0];
-                this.sellingPlan = this.currentPouch?.sellingPlan;
+                const desiredMonths = this.minQty >= 3 ? 3 : this.minQty === 2 ? 2 : 1;
+                this.sellingPlan = this.getSellingPlanIdForMonths(desiredMonths);
 
                 this.maxQty = this.pouches.reduce((max, pouch) => Math.max(max, pouch.minQty), 0);
             },
@@ -827,5 +855,4 @@
   ]
 }
 {% endschema %}
-
 

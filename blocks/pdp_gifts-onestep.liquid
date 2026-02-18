@@ -476,6 +476,17 @@
                             description: '{{ variant.metafields.custom.variant_description }}',
                             image: '{{ variant.metafields.custom.variant_image | image_url: width: 120 | default: variant.image | image_url: width: 120 }}',
                             price: {{ variant.price }},
+                            selling_plans: [
+                                {%- if variant.selling_plan_allocations and variant.selling_plan_allocations.size > 0 -%}
+                                  {%- for allocation in variant.selling_plan_allocations -%}
+                                    {
+                                      id: {{ allocation.selling_plan.id }},
+                                      name: {{ allocation.selling_plan.name | json }},
+                                      options: {{ allocation.selling_plan.options | json }}
+                                    }{%- unless forloop.last -%},{%- endunless -%}
+                                  {%- endfor -%}
+                                {%- endif -%}
+                            ],
                             quantity: 0,
                         }{%- unless forloop.last -%},{%- endunless -%}
                     {%- endfor -%}
@@ -543,8 +554,7 @@
                     price: 7485,
                     compare_at_price: 19470,
                     compare_price_per_packet: 6490,
-                    discount_amount: 4190,
-                    sellingPlan: 1956413499
+                    discount_amount: 4190
                 },
                 {
                     minQty: 2,
@@ -555,8 +565,7 @@
                     price: 5590,
                     compare_at_price: 15375,
                     compare_price_per_packet: 7687.5,
-                    discount_amount: 3200,
-                    sellingPlan: 1956380731
+                    discount_amount: 3200
                 },
                 {
                     minQty: 1,
@@ -566,10 +575,30 @@
                     price: 3495,
                     compare_at_price: 10680,
                     compare_price_per_packet: 10680,
-                    discount_amount: 900,
-                    sellingPlan: 1956347963
+                    discount_amount: 900
                 }
             ],
+            getSellingPlanIdForMonths(months) {
+                const plans = this.currentProduct?.variants?.[0]?.selling_plans || [];
+                const monthStr = String(months).toLowerCase();
+
+                const byName = plans.find(plan => {
+                    const name = (plan?.name || '').toLowerCase();
+                    return name.includes(`${monthStr} month`) || name.includes(`${monthStr}-month`) || name.includes(`${monthStr} months`);
+                });
+
+                if (byName?.id) return byName.id;
+
+                const byOption = plans.find(plan => {
+                    const options = Array.isArray(plan?.options) ? plan.options : [];
+                    return options.some(option => {
+                        const value = (option?.value || '').toString().toLowerCase();
+                        return value.includes(monthStr) && value.includes('month');
+                    });
+                });
+
+                return byOption?.id || null;
+            },
             resetQty() {
                 this.currentProduct.variants.forEach(v => {
                     v.quantity = 0;
@@ -606,7 +635,8 @@
 
                 this.minQty = this.minQty || this.pouches[0]?.minQty;
                 this.currentPouch = this.pouches.find(pouch => pouch.minQty == this.minQty) || this.pouches[0];
-                this.sellingPlan = this.currentPouch?.sellingPlan;
+                const desiredMonths = this.minQty >= 3 ? 3 : this.minQty === 2 ? 2 : 1;
+                this.sellingPlan = this.getSellingPlanIdForMonths(desiredMonths);
 
                 this.maxQty = this.pouches.reduce((max, pouch) => Math.max(max, pouch.minQty), 0);
             },
@@ -771,5 +801,4 @@
   ]
 }
 {% endschema %}
-
 

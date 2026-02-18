@@ -91,60 +91,61 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-   
-    const thumbnailSwiper = new Swiper('.thumbnail-gallery', {
-        {%  if auto_on_mobile %}
-            slidesPerView: 'auto',
-        {% else %}
-            slidesPerView: 5,
-        {% endif %}
-        spaceBetween: 6,
-        freeMode: true,
-        watchSlidesProgress: true,
-        speed: 1000,
-        breakpoints: {
-            1024: {
+    const galleries = document.querySelectorAll('.product__gallery-inner');
+    if (!galleries.length) return;
+
+    galleries.forEach((gallery) => {
+        const thumbnailEl = gallery.querySelector('.thumbnail-gallery');
+        const mainEl = gallery.querySelector('.main-gallery');
+        if (!thumbnailEl || !mainEl) return;
+
+        const thumbnailSwiper = new Swiper(thumbnailEl, {
+            {%  if auto_on_mobile %}
                 slidesPerView: 'auto',
-                spaceBetween: 0,
-                direction: 'vertical'
-            }
-        },
-    });
-
- 
-    const mainSwiper = new Swiper('.main-gallery', {
-        spaceBetween: 10,
-        slidesPerView: 1,
-        thumbs: {
-            swiper: thumbnailSwiper
-        }
-    });
-
-    
-    const thumbnailItems = document.querySelectorAll('.thumbnail-gallery__item');
-    
-    thumbnailItems.forEach((item, index) => {
-        item.addEventListener('click', () => {
-            mainSwiper.slideTo(index);
-            
-            thumbnailItems.forEach(thumb => thumb.classList.remove('thumbnail-gallery__item--active'));
-            item.classList.add('thumbnail-gallery__item--active');
+            {% else %}
+                slidesPerView: 5,
+            {% endif %}
+            spaceBetween: 6,
+            freeMode: true,
+            watchSlidesProgress: true,
+            speed: 1000,
+            breakpoints: {
+                1024: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 0,
+                    direction: 'vertical'
+                }
+            },
         });
-    });
 
-    
-    mainSwiper.on('slideChange', function () {
-        const activeIndex = mainSwiper.activeIndex;
-        
-        thumbnailItems.forEach(thumb => thumb.classList.remove('thumbnail-gallery__item--active'));
-        
-        if (thumbnailItems[activeIndex]) {
-            thumbnailItems[activeIndex].classList.add('thumbnail-gallery__item--active');
+        const mainSwiper = new Swiper(mainEl, {
+            spaceBetween: 10,
+            slidesPerView: 1,
+            thumbs: {
+                swiper: thumbnailSwiper
+            }
+        });
+
+        const thumbnailItems = gallery.querySelectorAll('.thumbnail-gallery__item');
+        thumbnailItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                mainSwiper.slideTo(index);
+                thumbnailItems.forEach(thumb => thumb.classList.remove('thumbnail-gallery__item--active'));
+                item.classList.add('thumbnail-gallery__item--active');
+            });
+        });
+
+        mainSwiper.on('slideChange', function () {
+            const activeIndex = mainSwiper.activeIndex;
+            thumbnailItems.forEach(thumb => thumb.classList.remove('thumbnail-gallery__item--active'));
+            if (thumbnailItems[activeIndex]) {
+                thumbnailItems[activeIndex].classList.add('thumbnail-gallery__item--active');
+            }
+        });
+
+        if (thumbnailItems[0]) {
+            thumbnailItems[0].classList.add('thumbnail-gallery__item--active');
         }
     });
-
-    if (thumbnailItems[0]) {
-        thumbnailItems[0].classList.add('thumbnail-gallery__item--active');
-    }
 });
 </script>

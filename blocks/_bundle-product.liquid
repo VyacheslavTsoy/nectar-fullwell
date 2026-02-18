@@ -16,7 +16,18 @@
                 "price": {{ variant.price | json }},
                 "quantity": "0",
                 "product_title": {{ relProduct.title | json }},
-                "image": {{ variant.metafields.custom.variant_image | image_url: width: 460 | json }}
+                "image": {{ variant.metafields.custom.variant_image | image_url: width: 460 | json }},
+                "selling_plans": [
+                    {%- if variant.selling_plan_allocations and variant.selling_plan_allocations.size > 0 -%}
+                      {%- for allocation in variant.selling_plan_allocations -%}
+                        {
+                          "id": {{ allocation.selling_plan.id }},
+                          "name": {{ allocation.selling_plan.name | json }},
+                          "options": {{ allocation.selling_plan.options | json }}
+                        }{%- unless forloop.last -%},{%- endunless -%}
+                      {%- endfor -%}
+                    {%- endif -%}
+                ]
             }{% unless forloop.last %},{% endunless %}
             {% endfor %}
         ]

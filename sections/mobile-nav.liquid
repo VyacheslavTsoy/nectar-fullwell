@@ -86,12 +86,14 @@
 
             <script>
                 document.addEventListener('DOMContentLoaded', () => {
-                    const swiper = new Swiper('#mobile-nav-reviews .swiper', {
+                    const reviewsEl = document.querySelector('#mobile-nav-reviews .swiper');
+                    if (!reviewsEl) return;
+                    const swiper = new Swiper(reviewsEl, {
                         slidesPerView: 1,
                         spaceBetween: 12,
                         autoHeight: true,
                         pagination: {
-                            el: '.swiper-pagination',
+                            el: reviewsEl.querySelector('.swiper-pagination'),
                             clickable: true,
                         }
                     });

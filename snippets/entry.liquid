@@ -4,9 +4,9 @@
 {% endcomment %}
 {% assign path = entry | replace: '~/', '../../' | replace: '@/', '../' %}
 {% if path == "/frontend/entrypoints/main.scss" or path == "main.scss" %}
-  {{ 'main-BTNCdjcI.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
+  {{ 'main-Esc0AJBO.css' | asset_url | split: '?' | first | stylesheet_tag: preload: preload_stylesheet }}
 {% elsif path == "/frontend/entrypoints/main.theme.js" or path == "main.theme.js" %}
-  <script src="{{ 'main.theme-DcmbDIjF.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
+  <script src="{{ 'main.theme-CxxW8cza.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
 {% elsif path == "/frontend/scripts/sections/ts-bundle.js" or path == "../scripts/sections/ts-bundle.js" %}
   <script src="{{ 'ts-bundle-CHEdxzo0.js' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>
 {% elsif path == "/frontend/styles/sections/hero.scss" or path == "../styles/sections/hero.scss" %}

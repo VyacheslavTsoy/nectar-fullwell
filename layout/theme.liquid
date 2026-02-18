@@ -37,6 +37,35 @@
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
     </script>
 
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var selector = 'a[href="/account/login?checkout_url=/tools/recurring/login"]';
+        document.querySelectorAll(selector).forEach(function (a) {
+          a.setAttribute('href', '/tools/recurring/login');
+        });
+      });
+    </script>
+
+    <script>
+      (function () {
+        var selector = '#customer_tab_content .rc_header-settings__title.rc_title-bar__title h2';
+
+        function updateHeading() {
+          var heading = document.querySelector(selector);
+          if (!heading) return;
+          if (heading.textContent.trim() !== 'Subscription Management Access') {
+            heading.textContent = 'Subscription Management Access';
+          }
+        }
+
+        document.addEventListener('DOMContentLoaded', updateHeading);
+        new MutationObserver(updateHeading).observe(document.body, {
+          childList: true,
+          subtree: true
+        });
+      })();
+    </script>
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,7 +89,68 @@
       }
       body {
         font-family: var(--font-family-primary);
-    }
+      }
+
+      #not_verified > div.rc_header-settings.rc_title-bar > div > p:nth-child(3) > a, #not_verified > div:nth-child(2) > div > p:nth-child(3) > a{
+        line-height: 3rem;
+        white-space: nowrap;
+        border-radius: .8rem;
+        background-color: #0d3063;
+        border-color: #0d3063;
+        color: #fff;
+        font-size: 1.4rem;
+        font-weight: 500;
+        padding: 0 1.2rem;
+        display: block;
+        width: 12em;
+        margin: auto;
+      }
+
+      #not_verified > div.rc_header-settings.rc_title-bar, #not_verified > div:nth-child(2) > div > h4{
+      display: none !important;
+      }
+
+      #not_verified > div:nth-child(2) > div > p:nth-child(3){
+      margin: 1em;
+      }
+
+      #not_verified > div:nth-child(2){
+      height: 20em
+      }
+
+      #customer_tab_content > div > div > img, body > main > div.section-header.text-center, #customer_tab_content > div > div > div > div.rc_header-settings__description, #login_verification > p > a{
+      display: none !important;
+      }
+
+      #customer_email{
+        border: 2px solid lightgrey;
+        border-radius: 5px;
+        margin: 10px;
+        text-align: center;
+        width: 250px;
+        height: 40px;
+      }
+
+      #customer_tab_content > div{
+        border: 2px solid black;
+        padding: 25px;
+        border-radius: 5px;
+      }
+
+      #login_verification > div:nth-child(4) > button{
+        line-height: 3rem;
+        white-space: nowrap;
+        border-radius: .8rem;
+        background-color: #0d3063;
+        border-color: #0d3063;
+        color: #fff;
+        font-size: 1.4rem;
+        font-weight: 500;
+        padding: 0 1.2rem;
+        display: block;
+        width: 250px;
+        margin: auto;
+      }
     </style>
 
     {% if request.path contains '/a/account' %}
@@ -227,5 +317,6 @@
         {% endstyle %}
     {% endif %}
 
+    {{ template.name }}
 </body>
 </html>

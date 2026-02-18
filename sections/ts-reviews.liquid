@@ -115,8 +115,8 @@
     const categories = section.querySelector(".ts-reviews__categories");
     const blocks = section.querySelector(".ts-reviews__blocks");
 
-    if (window.innerWidth < 990) {    
-      const swiper = new Swiper(videosCarousell,           {
+    if (videosCarousell && window.innerWidth < 990) {    
+      const swiper = new Swiper(videosCarousell, {
         loop: true,
         slidesPerView: 1,
         pagination: {

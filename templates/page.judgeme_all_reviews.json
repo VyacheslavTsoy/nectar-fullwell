@@ -12,11 +12,7 @@
     "main": {
       "type": "main-404",
       "disabled": true,
-      "settings": {
-        "heading": "404 Page Not Found",
-        "text": "The page you are looking for does not exist.",
-        "button_label": "Go to Home"
-      }
+      "settings": {}
     },
     "blank_section_CJAGTG": {
       "type": "blank-section",
