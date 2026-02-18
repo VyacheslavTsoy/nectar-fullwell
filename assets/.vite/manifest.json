@@ -1,6 +1,6 @@
 {
   "frontend/entrypoints/main.scss": {
-    "file": "main-BTNCdjcI.css",
+    "file": "main-IQdq3PA4.css",
     "src": "frontend/entrypoints/main.scss",
     "isEntry": true
   },
@@ -17,7 +17,7 @@
     "isEntry": true
   },
   "frontend/styles/sections/hero.scss": {
-    "file": "hero-ZkYbngJR.css",
+    "file": "hero-swGRyA_w.css",
     "src": "frontend/styles/sections/hero.scss",
     "isEntry": true
   },
@@ -27,7 +27,7 @@
     "isEntry": true
   },
   "frontend/styles/sections/mobile-nav.scss": {
-    "file": "mobile-nav-YlcBdx4T.css",
+    "file": "mobile-nav-DXOKm0T0.css",
     "src": "frontend/styles/sections/mobile-nav.scss",
     "isEntry": true
   },
