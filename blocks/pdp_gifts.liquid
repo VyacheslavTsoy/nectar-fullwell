@@ -697,9 +697,29 @@
                 // final items for the cart
                 const itemsForCart = [...mainItems, ...giftItems];
 
-                // adding to the cart
+                // adding to the cart - MT/John/Iopa
                 Alpine.store('miniCart').clearAndAdd(itemsForCart, true);
-            },
+                //apply discount code
+               fetch('/cart/update.js', {
+                    method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json',
+                        },
+                    body: JSON.stringify({
+                        // Single code as a string OR an array, depending on API shape for your theme version
+                        discount: 'KHSDK5K0C3JC'
+                    }),
+                })
+                .then((res) => res.json())
+                .then((cart) => {
+                    console.log('Cart updated with discount:', cart);
+                })
+                .catch((err) => {
+                    console.error('Error applying discount:', err);
+                });
+            }, //end snippet
+
             init() {
                 this.updateCurrentPouch();
                 
