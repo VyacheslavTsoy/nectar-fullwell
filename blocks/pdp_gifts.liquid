@@ -700,7 +700,7 @@
                 // adding to the cart
                 Alpine.store('miniCart').clearAndAdd(itemsForCart, true);
 
-                {% comment %} //apply discount code - MT/John/Iopa
+               //apply discount code - MT/John/Iopa
                fetch('/cart/update.js', {
                     method: 'POST',
                         headers: {
@@ -718,7 +718,7 @@
                 })
                 .catch((err) => {
                     console.error('Error applying discount:', err);
-                }); {% endcomment %}
+                });
             }, //end snippet
 
             init() {
