@@ -697,9 +697,10 @@
                 // final items for the cart
                 const itemsForCart = [...mainItems, ...giftItems];
 
-                // adding to the cart - MT/John/Iopa
+                // adding to the cart
                 Alpine.store('miniCart').clearAndAdd(itemsForCart, true);
-                //apply discount code
+
+                {% comment %} //apply discount code - MT/John/Iopa
                fetch('/cart/update.js', {
                     method: 'POST',
                         headers: {
@@ -717,7 +718,7 @@
                 })
                 .catch((err) => {
                     console.error('Error applying discount:', err);
-                });
+                }); {% endcomment %}
             }, //end snippet
 
             init() {
