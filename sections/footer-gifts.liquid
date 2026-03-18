@@ -8,13 +8,21 @@
         <div class="flex flex-col gap-2 text-[1rem] leading-[1.2]">
 
             <ul class="footer__policies flex items-center gap-4">
-                {%- for policy in shop.policies -%}
-                    {%- if policy != blank -%}
-                      <li>
-                        <a href="{{ policy.url }}">{{ policy.title | escape }}</a>
-                      </li>
-                    {%- endif -%}
-                  {%- endfor -%}
+                {%- if sst.footer_policy_menu != blank -%}
+                    {%- for link in sst.footer_policy_menu.links -%}
+                        <li>
+                            <a href="{{ link.url }}">{{ link.title | escape }}</a>
+                        </li>
+                    {%- endfor -%}
+                {%- else -%}
+                    {%- for policy in shop.policies -%}
+                        {%- if policy != blank -%}
+                            <li>
+                                <a href="{{ policy.url }}">{{ policy.title | escape }}</a>
+                            </li>
+                        {%- endif -%}
+                    {%- endfor -%}
+                {%- endif -%}
             </ul>
 
             <div class="footer__content-item]">
@@ -38,6 +46,11 @@
       "type": "link_list",
       "label": "Footer menu 2",
       "id": "footer_menu_2"
+    },
+    {
+      "type": "link_list",
+      "label": "Footer policy menu",
+      "id": "footer_policy_menu"
     },
     {
         "type": "color",
