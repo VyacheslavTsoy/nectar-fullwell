@@ -19,6 +19,7 @@
       "settings": {
         "footer_menu_1": "footer-shop",
         "footer_menu_2": "footer-about",
+        "footer_policy_menu": "footer-privacy",
         "foter_logo": "shopify://shop_images/logo.svg",
         "background_color": "#153164",
         "text_color": "#ffffff",
@@ -32,6 +33,7 @@
       "settings": {
         "footer_menu_1": "footer-shop",
         "footer_menu_2": "footer-about",
+        "footer_policy_menu": "footer-privacy",
         "background_color": "#153164",
         "text_color": "#ffffff",
         "text_1": "<p>*Special discount is valid only on the first delivery of a new Nectar subscription and includes the price of free gifts & shipping. Nectar subscriptions renews every 28-93 days at the non-discounted price. Max one offer per customer.‡ The '100% Money Back Guarantee' applies to first time product orders only. Customers have 90 days after receiving your item to request a return for one (1) unopened pouch of Nectar (30 sticks). Unopened means the top seal of the bag has not been torn.  Shipping costs to return the item are not included. <br/><a href=\"#\" target=\"_blank\" title=\"#\">COOKIE POLICY</a></p>",
