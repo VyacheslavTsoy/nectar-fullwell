@@ -1,0 +1,563 @@
+<script src="https://static.rechargecdn.com/assets/storefront/recharge-client-1.71.0.min.js"></script>
+
+<style>
+  .recharge-modal {
+    --modal-color: #0d3063;
+    --modal-primary-bg: #20a601;
+    --modal-primary-bg-hover: #037c2b;
+    --modal-primary-text: #fff;
+    --modal-link: #20a601;
+  }
+  .recharge-modal__dialog {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+  }
+  .recharge-modal__dialog[open] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  @media (max-width: 768px) {
+    .recharge-modal__dialog[open] {
+      align-items: flex-end;
+    }
+  }
+  .recharge-modal__dialog::backdrop {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.1);
+    inset: 0px;
+  }
+  .recharge-modal__dialog-inner {
+    position: relative;
+    display: grid;
+    max-width: 1024px;
+    width: 100%;
+    grid-template-columns: 12fr 10fr;
+    gap: 40px;
+    padding: 40px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16), 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  @media (min-width: 769px) {
+    .recharge-modal__dialog-inner {
+      max-height: 95vh;
+    }
+  }
+  @media (max-width: 768px) {
+    .recharge-modal__dialog-inner {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 20px;
+      padding-top: 42px;
+      overflow: auto;
+    }
+  }
+
+  .recharge-modal__image img {
+    display: none;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+  }
+
+  @media (min-width: 769px) {
+    .recharge-modal__image img {
+      display: block;
+    }
+  }
+
+  .recharge-modal__image img[hidden] {
+    display: none;
+  }
+  .recharge-modal__content {
+    overflow: auto;
+    color: var(--modal-color);
+    display: flex;
+    flex-direction: column;
+  }
+  @media (min-width: 769px) {
+    .recharge-modal__content {
+      padding-bottom: 32px;
+    }
+  }
+  .recharge-modal__close-wrap {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 32px;
+  }
+  @media (max-width: 768px) {
+    .recharge-modal__close-wrap {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      z-index: 1;
+    }
+  }
+  .recharge-modal__close {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: none;
+    background: none;
+    color: #566e92;
+    border-radius: 50%;
+    cursor: pointer;
+    line-height: 0;
+    transition: color 0.3s ease;
+  }
+  .recharge-modal__close:hover {
+    color: #0d3063;
+  }
+  .recharge-modal__close svg {
+    display: block;
+    width: 32px;
+    height: 32px;
+  }
+  .recharge-modal__close svg path {
+    stroke: currentColor;
+  }
+  .recharge-modal__title {
+    margin: 0 0 12px 0;
+    color: var(--modal-color);
+
+    /* Heading/XL */
+    font-size: 40px;
+    line-height: 120%;
+    font-weight: 600;
+  }
+  .recharge-modal__description {
+    margin: 0;
+    color: var(--modal-color);
+
+    /* Body/M emphasis */
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .recharge-modal__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 32px;
+    margin-bottom: 0;
+  }
+  .recharge-modal__btn-primary {
+    overflow: hidden;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px;
+    background: var(--modal-primary-bg);
+    color: var(--modal-primary-text);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    /* Heading/M */
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .recharge-modal__btn-primary-content {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: opacity 0.3s ease;
+  }
+  .recharge-modal__btn-secondary-content {
+    transition: opacity 0.3s ease;
+  }
+  .recharge-modal__btn-primary:hover {
+    background: var(--modal-primary-bg-hover);
+  }
+  .recharge-modal__btn-primary-loading,
+  .recharge-modal__btn-secondary-loading {
+    opacity: 0;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    position: absolute;
+    top: calc(50% - 12px);
+    left: calc(50% - 12px);
+    transform-origin: center;
+    animation: recharge-spin 900ms linear infinite;
+    transition: opacity 0.3s ease;
+  }
+  .recharge-modal__btn-primary.is-loading .recharge-modal__btn-primary-content,
+  .recharge-modal__btn-link.is-loading .recharge-modal__btn-secondary-content {
+    opacity: 0;
+  }
+  .recharge-modal__btn-primary.is-loading .recharge-modal__btn-primary-loading,
+  .recharge-modal__btn-link.is-loading .recharge-modal__btn-secondary-loading {
+    opacity: 1;
+  }
+  .recharge-modal__btn-primary:disabled,
+  .recharge-modal__btn-link:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  @keyframes recharge-spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .recharge-modal__btn-link {
+    overflow: hidden;
+    position: relative;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--modal-link);
+    cursor: pointer;
+    text-decoration: underline;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    /* Body/M */
+    font-size: 16px;
+    line-height: 24px;
+  }
+</style>
+
+<recharge-modal id="recharge-modal"></recharge-modal>
+
+<script>
+  (() => {
+    {%- comment -%}
+      Configuration
+      - STOREFRONT_ACCESS_TOKEN: Replace with your recharge storefront access token
+      - MY_SHOP_DOMAIN: Replace with your shop domain
+      - EXTENSION_EXTERNAL_PRODUCT_IDS: List of product IDs for which the extension will be enabled. Use '*' for all products.
+      https://storefront.rechargepayments.com/client/docs/getting_started/package_setup/
+    {%- endcomment -%}
+    const STOREFRONT_ACCESS_TOKEN = 'strfnt_d81506be6a2f4fa3038cc7ba6d2450b231aca9479d57986e124f20aa778496ab';
+    const MY_SHOP_DOMAIN = 'nectar-fullwell.myshopify.com';
+    const EXTENSION_EXTERNAL_PRODUCT_IDS = ['*'];
+
+
+    {%- comment -%}
+      Initialize the Recharge client
+    {%- endcomment -%}
+    recharge.init({
+      storeIdentifier: MY_SHOP_DOMAIN,
+      storefrontAccessToken: STOREFRONT_ACCESS_TOKEN,
+      appName: 'nectar-fullwell-affinity-extension',
+      appVersion: '1.0.0',
+      loginRetryFn: () => recharge.auth.loginShopifyAppProxy(),
+    });
+
+    {%- comment -%}
+      RechargeModal web component
+    {%- endcomment -%}
+    const MODAL_CONTENT = {
+      1: {
+        image: "{{ 'recharge-image-03.jpg' | asset_url }}",
+        title: "Don't stop before you start",
+        description:
+          "Not seeing any results yet? Don't panic - Rome wasn't built in a day. Stick with it to see lasting improvements to your day to day life.\n\n<strong>Not ready for more?</strong> Why not skip your next shipment. Keep your subscriber discount while giving your body the time it needs.",
+        buttonPrimary: 'Skip and keep my savings',
+        buttonSecondary: 'Cancel and lose my discount',
+        next: 2,
+      },
+      2: {
+        image: "{{ 'recharge-image-02.jpg' | asset_url }}",
+        title: 'Clean ingredients. Half the price. Better results.',
+        description:
+          "Nectar has changed the lives of 1,000,000+ others. Join them and feel the benefits.\n\n<strong>Right now, your body is still adapting.</strong> Stop too soon and you'll never know what you missed.",
+        buttonPrimary: 'Skip & keep building',
+        buttonSecondary: 'Cancel and lose your progress',
+        next: null,
+      },
+      3: {
+        image: "{{ 'recharge-image-05.jpg' | asset_url }}",
+        title: 'You might just need a little more time',
+        description:
+          'You might already feel Nectar working, but the best is yet to come - most people see big changes after around 3 months.\n\n<strong>Not feeling it yet?</strong> Why not skip your next shipment. Keep your subscriber discount while giving your body the time it needs.',
+        buttonPrimary: 'Skip and keep my savings',
+        buttonSecondary: 'Cancel and lose my discount',
+        next: 4,
+      },
+      4: {
+        image: "{{ 'recharge-image-02.jpg' | asset_url }}",
+        title: "You're not alone — and you're not there yet",
+        description:
+          "8 out of 10 customers say month 2 and 3 changed everything: better sleep, calmer nerves, energy that lasts.\n\n<strong>Right now, your body is still adapting.</strong> Stop too soon and you'll never know what you missed.",
+        buttonPrimary: 'Skip and keep my savings',
+        buttonSecondary: 'Cancel and lose your progress',
+        next: null,
+      },
+    5: {
+        image: "{{ 'recharge-image-07.jpg' | asset_url }}",
+        title: "Don't go back to the old you",
+        description:
+          'Nectar only keeps working to balance your cortisol for as long as you keep taking it. Do you really want to go back to worse sleep, higher stress and lower energy?\n\n<strong>Want to take a break?</strong> Why not skip your next shipment. Keep your subscriber discount while giving your body the time it needs.',
+        buttonPrimary: 'Skip and keep my savings',
+        buttonSecondary: 'Cancel and lose my discount',
+        next: 6,
+      },
+      6: {
+        image: "{{ 'recharge-image-08.jpg' | asset_url }}",
+        title: "We're confident you won't find better, cleaner hydration",
+        description:
+          "Nectar's zero calorie, sugar free hydration has changed the lives of 1,000,000+ others.\n\n<strong>You're already feeling the benefits.</strong> Stop now and you'll miss out on lower stress, higher energy and better sleep.",
+        buttonPrimary: 'Skip & keep benefits',
+        buttonSecondary: 'Cancel and lose your progress',
+        next: null,
+      },
+    };
+
+    class RechargeModal extends HTMLElement {
+      static get modalContent() {
+        return MODAL_CONTENT;
+      }
+
+      constructor() {
+        super();
+        this.flowContext = null;
+        this._dialog = null;
+        this._btnPrimary = null;
+        this._btnSecondary = null;
+      }
+
+      connectedCallback() {
+        this.innerHTML = `
+          <dialog
+            class="recharge-modal recharge-modal__dialog"
+            aria-labelledby="recharge-modal-title"
+            aria-describedby="recharge-modal-description"
+          >
+            <div class="recharge-modal__dialog-inner">
+              <div class="recharge-modal__image">
+                <img id="recharge-modal-image" src="" alt="" width="492" height="508">
+              </div>
+              <div class="recharge-modal__content">
+                <div class="recharge-modal__close-wrap">
+                  <button type="button" class="recharge-modal__close" data-modal-close aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="m8 8 16 16M8 24 24 8"/>
+                    </svg>
+                  </button>
+                </div>
+                <h2 class="recharge-modal__title" id="recharge-modal-title"></h2>
+                <p class="recharge-modal__description" id="recharge-modal-description"></p>
+                <div class="recharge-modal__actions">
+                  <button type="button" class="recharge-modal__btn-primary" data-skip id="recharge-modal-btn-primary">
+                    <span class="recharge-modal__btn-primary-content">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M8.03 15.457A7.429 7.429 0 1 0 8.03.6a7.429 7.429 0 0 0 0 14.857Z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="m10.745 6.029-4 4.571-1.714-1.714"/>
+                      </svg>
+                      <span id="recharge-modal-btn-primary-text"></span>
+                    </span>
+                    <svg class="recharge-modal__btn-primary-loading" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14.807 4.506a8 8 0 1 0 4.291 3.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                    </svg>
+                  </button>
+                  <button type="button" class="recharge-modal__btn-link" id="recharge-modal-btn-secondary" data-cancel>
+                    <span class="recharge-modal__btn-secondary-content" id="recharge-modal-btn-secondary-text"></span>
+                    <svg class="recharge-modal__btn-secondary-loading" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14.807 4.506a8 8 0 1 0 4.291 3.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </dialog>
+        `;
+        this._dialog = this.querySelector('.recharge-modal__dialog');
+        this._btnPrimary = this.querySelector('#recharge-modal-btn-primary');
+        this._btnSecondary = this.querySelector('#recharge-modal-btn-secondary');
+        this.addEventListener('click', this._onClick.bind(this));
+      }
+
+      setFlowContext(ctx) {
+        this.flowContext = ctx;
+      }
+
+      open(modalId) {
+        const data = MODAL_CONTENT[String(modalId)];
+        if (!data || !this._dialog) return;
+
+        this.querySelector('#recharge-modal-title').textContent = data.title;
+        this.querySelector('#recharge-modal-description').innerHTML = data.description
+          .replace(/\n\n/g, '<br><br>')
+          .replace(/\n/g, '<br>');
+        this.querySelector('#recharge-modal-btn-primary-text').textContent = data.buttonPrimary;
+        this.querySelector('#recharge-modal-btn-secondary-text').textContent = data.buttonSecondary;
+
+        const imageEl = this.querySelector('#recharge-modal-image');
+        if (data.image) {
+          imageEl.src = data.image;
+          imageEl.alt = data.title;
+          imageEl.removeAttribute('hidden');
+        } else {
+          imageEl.removeAttribute('src');
+          imageEl.alt = '';
+          imageEl.setAttribute('hidden', '');
+        }
+
+        if (this._btnPrimary) {
+          if (this.flowContext?.nextCharge != null) {
+            this._btnPrimary.removeAttribute('hidden');
+          } else {
+            this._btnPrimary.setAttribute('hidden', '');
+          }
+        }
+
+        if (!this._dialog.open) this._dialog.showModal();
+      }
+
+      close() {
+        if (this._dialog) this._dialog.close();
+      }
+
+      _setLoading(btn) {
+        this._btnPrimary.disabled = true;
+        this._btnSecondary.disabled = true;
+        btn.classList.add('is-loading');
+      }
+
+      _clearLoading() {
+        this._btnPrimary.disabled = false;
+        this._btnSecondary.disabled = false;
+        this._btnPrimary.classList.remove('is-loading');
+        this._btnSecondary.classList.remove('is-loading');
+      }
+
+      _onClick(e) {
+        if (e.target.closest('[data-modal-close]')) {
+          this.close();
+          return;
+        }
+        if (e.target === this._dialog) {
+          this.close();
+          return;
+        }
+        if (e.target.closest('[data-skip]')) {
+          const ctx = this.flowContext;
+          this._setLoading(this._btnPrimary);
+          (async () => {
+            try {
+              if (ctx?.nextCharge) {
+                await recharge.charge.skipCharge(ctx.session, ctx.nextCharge.id, [ctx.subscription.id]);
+                document.dispatchEvent(new CustomEvent('Affinity:refresh'));
+              } 
+            } catch (err) {
+              console.error('Skip charge failed', err);
+              ctx?.onError?.();
+            } finally {
+              this._clearLoading();
+              this.flowContext = null;
+              this.close();
+            }
+          })();
+          return;
+        }
+        if (e.target.closest('[data-cancel]')) {
+          const ctx = this.flowContext;
+          const data = ctx?.currentModalId != null ? MODAL_CONTENT[String(ctx.currentModalId)] : null;
+          const nextId = data?.next;
+
+          if (nextId != null && ctx) {
+            ctx.currentModalId = nextId;
+            this.open(nextId);
+          } else {
+            if (ctx?.cancellationUrl) {
+              window.location.href = ctx.cancellationUrl;
+            } else {
+              ctx?.onError?.();
+              this.close();
+            }
+            this.flowContext = null;
+          }
+        }
+      }
+    }
+
+    customElements.define('recharge-modal', RechargeModal);
+
+    const extension = async (session, event) => {
+      const { subscription, onSuccess, onError } = event.detail;
+
+      if (
+        subscription.status.toLowerCase() !== 'active' ||
+        (!EXTENSION_EXTERNAL_PRODUCT_IDS.includes('*') &&
+          !EXTENSION_EXTERNAL_PRODUCT_IDS.includes(subscription.external_product_id))
+      ) {
+        // Continue with the default cancellation flow
+        return;
+      }
+
+      // Prevent the default cancellation flow
+      event.preventDefault();
+
+      const [chargesResult, ordersResult, cancellationUrl] = await Promise.all([
+        recharge.charge.listCharges(session, {
+          status: 'queued',
+          sort_by: 'scheduled_at-asc',
+          limit: 1,
+          purchase_item_id: subscription.id,
+        }),
+        recharge.order.listOrders(session, {
+          status: 'success',
+          sort_by: 'processed_at-asc',
+          purchase_item_id: subscription.id,
+          created_at_min: new Date(Date.now() - 90 * 24 * 60 * 60 * 1000).toISOString(), // last 90 days
+        }),
+        recharge.customer.getActiveChurnLandingPageURL(session, subscription.id, window.location.href),
+      ]);
+      const { charges } = chargesResult;
+      const { orders } = ordersResult;
+      const nextCharge = charges[0];
+      const numberOfProcessOrders = orders.length;
+
+      let initialModalId = 1;
+      if (numberOfProcessOrders < 2) initialModalId = 1;
+      else if (numberOfProcessOrders === 2 || numberOfProcessOrders === 3) initialModalId = 3;
+      else initialModalId = 5;
+      console.log({initialModalId, numberOfProcessOrders})
+
+      const modal = document.getElementById('recharge-modal');
+      if (modal && modal.open) {
+        modal.setFlowContext({
+          session,
+          subscription,
+          nextCharge,
+          onSuccess,
+          onError,
+          cancellationUrl: cancellationUrl || '',
+          currentModalId: initialModalId,
+        });
+        modal.open(initialModalId);
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const session = await recharge.auth.loginCustomerPortal();
+      document.addEventListener('Recharge::extension::cancellation_flow', (event) => extension(session, event));
+    });
+  })();
+</script>

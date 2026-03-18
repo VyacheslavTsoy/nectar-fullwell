@@ -7,8 +7,12 @@
 <style>
     #announcement-bar,
     .shopify-section-group-header-group,
-    .shopify-section-group-footer-group {
+    #footer {
         display: none !important;
+    }
+
+    #footer-gifts {
+        display: block !important;
     }
 </style>
 <div x-data="product">
@@ -680,6 +684,8 @@
             init() {
                 this.updateCurrentPouch();
 
+                
+
                 this.$watch('minQty', () => {
                     this.updateCurrentPouch();
                 });
@@ -801,4 +807,3 @@
   ]
 }
 {% endschema %}
-

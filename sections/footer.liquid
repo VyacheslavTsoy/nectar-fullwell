@@ -1,41 +1,14 @@
 {% assign sst = section.settings %}
-<footer class="footer text-base pt-[3rem] md:pt-[5rem] pb-[2rem]" style="background-color: {{ sst.background_color }}; color: {{ sst.text_color }}">
+<footer class="footer text-base pt-[3rem] md:pt-[5rem] pb-[2rem]" style="background-color: {{ sst.background_color }}; color: {{ sst.text_color }}" id="footer">
     <div class="container">
-        <div class="footer__main mb-[3rem]">
+        <div class="footer__main mb-[1.4rem] grid md:grid-cols-[69rem_1fr] gap-8 max-md:mb-8">
             <div class="flex flex-row flex-wrap md:items-end">
-                <div class="w-[50%] md:w-[25%] order-2 md:order-1 font-family-poppins ">
-                    {% if sst.footer_menu_1 != blank %}
-                        <h3 class="md:text-[2.6rem] font-bold mb-6 md:mb-[2rem] text-[#469AFF]">
-                            Shop
-                        </h3>
-                        <ul class="footer__menu text-sm md:text-[2.2rem] font-medium flex flex-col gap-y-[1rem] md:gap-y-[1.5rem]">
-                            {% for link in sst.footer_menu_1.links %}
-                                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
-                </div>
 
-                <div class="w-full md:w-[50%] order-1 md:order-2 text-center flex flex-col items-center mb-8 md:mb-4">
-                    {% if sst.foter_logo != blank %}
-                        <div class="w-[15rem] md:w-[24rem] text-center">
-                            {% render 'img', image: sst.foter_logo, max_width: 300, class: 'w-full h-full object-contain' %}
-                        </div>
-                    {% endif %}
+                <div class="w-full md:max-w-[44rem] text-center flex flex-col mb-8 md:mb-4">
+                    <h2 class="md:text-[2.6rem] text-[2rem] font-bold mb-8">
+                        Save up to 50% off your first order!
+                    </h2>
 
-                    <ul class="icon_ul mb-6 md:mb-8 mt-6 md:mt-[5rem]" style="display:flex; gap:15px; list-style:none; align-items: center; justify-content:center; padding:0px;"><li style="display:flex; gap:9px; align-items: center;"> <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 7.5C15 11.6421 11.6421 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5ZM11.2784 4.65907C11.0038 4.38448 10.5586 4.38448 10.2841 4.65907C10.2774 4.6657 10.2712 4.67272 10.2654 4.6801L7.01006 8.8282L5.04738 6.86552C4.7728 6.59093 4.3276 6.59093 4.05302 6.86552C3.77843 7.14011 3.77843 7.5853 4.05302 7.85989L6.53406 10.3409C6.80865 10.6155 7.25384 10.6155 7.52843 10.3409C7.53454 10.3348 7.54032 10.3284 7.54572 10.3216L11.2884 5.64326C11.553 5.36795 11.5496 4.93029 11.2784 4.65907Z" fill="#469AFF"></path>
-                        </svg>
-                        <p>No Spam Ever</p></li>
-                                                 
-                        <li style="display:flex; gap:9px; align-items: center;"> <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 7.5C15 11.6421 11.6421 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5ZM11.2784 4.65907C11.0038 4.38448 10.5586 4.38448 10.2841 4.65907C10.2774 4.6657 10.2712 4.67272 10.2654 4.6801L7.01006 8.8282L5.04738 6.86552C4.7728 6.59093 4.3276 6.59093 4.05302 6.86552C3.77843 7.14011 3.77843 7.5853 4.05302 7.85989L6.53406 10.3409C6.80865 10.6155 7.25384 10.6155 7.52843 10.3409C7.53454 10.3348 7.54032 10.3284 7.54572 10.3216L11.2884 5.64326C11.553 5.36795 11.5496 4.93029 11.2784 4.65907Z" fill="#469AFF"></path>
-                        </svg>
-                         <p>Best Deals Only</p></li>
-                                                 
-                        
-                    </ul>
-                    
                     {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
                         <input type="hidden" name="contact[tags]" value="newsletter">
                         <div class="newsletter-form__field-wrapper">
@@ -44,7 +17,7 @@
                               id="NewsletterForm--{{ section.id }}"
                               type="email"
                               name="contact[email]"
-                              class="field__input h-[5.6rem] md:h-[6.3rem] w-full max-w-[52rem] pl-[2.6rem] pr-[17rem] rounded-[4rem] bg-white text-sm md:text-[2.2rem] font-medium leading-[3.3rem] text-left text-[#000000] placeholder:text-[#8E8E8E] placeholder:opacity-100 placeholder:font-family-Poppins md:placeholder:text-[2.2rem] placeholder:font-medium placeholder:leading-[3.3rem] placeholder:text-left"
+                              class="field__input h-[4.8rem] w-full max-w-[52rem] pl-[2.4rem] pr-[17rem] rounded-[4rem] bg-white text-sm md:text-[2rem] font-bold leading-[3.3rem] text-left text-[#000000] placeholder:text-[#8E8E8E] placeholder:opacity-100 placeholder:font-family-Poppins md:placeholder:text-[2rem] placeholder:font-bold placeholder:leading-[3.3rem] placeholder:text-left"
                               value="{{ form.email }}"
                               aria-required="true"
                               autocorrect="off"
@@ -60,12 +33,10 @@
                               placeholder="Enter Your Email"
                               required
                             >
-                            <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                             
-                            </label>
+                            <label class="field__label" for="NewsletterForm--{{ section.id }}"></label>
                             <button
                               type="submit"
-                              class="newsletter-form__button block md:w-[15rem] px-8 absolute right-[.8rem] bg-[#0D3063] text-sm md:text-baseLg font-bold rounded-[4rem] text-white top-[50%] translate-y-[-50%] h-[4.2rem] md:h-[5rem] z-2"
+                              class="newsletter-form__button block md:w-[11.5rem] px-8 absolute right-[.4rem] bg-[#0D3063] text-[1.8rem] rounded-[4rem] text-white top-[50%] translate-y-[-50%] h-[4rem] z-2"
                               name="commit"
                               id="Subscribe"
                               aria-label="{{ 'newsletter.button_label' | t }}"
@@ -101,34 +72,91 @@
                       {%- endform -%}
                 </div>
 
-                <div class="w-[50%] md:w-[25%] order-3 md:order-3 font-family-poppins">
-                    <h3 class="md:text-[2.6rem] font-bold mb-6 md:mb-[2rem] text-[#469AFF]">
-                        About
-                    </h3>
-                    {% if sst.footer_menu_2 != blank %}
-                        <ul class="footer__menu text-sm md:text-[2.2rem] font-medium flex flex-col gap-y-[1rem] gap-y-[1.5rem]">
-                            {% for link in sst.footer_menu_2.links %}
-                                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
+                <div class="max-md:grid grid-cols-2 gap-8 hidden">
+                
+                    <div>
+                        {% if sst.footer_menu_1 != blank %}
+                            <h3 class="md:text-[1.8rem] font-bold mb-4 text-[#469AFF]">
+                                Shop
+                            </h3>
+                            <ul class="footer__menu text-[1.4rem] font-bold flex flex-col gap-y-[1rem] md:gap-y-[0.8rem]">
+                                {% for link in sst.footer_menu_1.links %}
+                                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </div>
+
+                    <div>
+                        <h3 class="md:text-[1.8rem] font-bold mb-4 text-[#469AFF]">
+                            Help
+                        </h3>
+                        {% if sst.footer_menu_2 != blank %}
+                            <ul class="footer__menu text-[1.4rem] font-bold flex flex-col gap-y-[1rem] gap-y-[0.8rem]">
+                                {% for link in sst.footer_menu_2.links %}
+                                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </div>
                 </div>
+
+                {% if sst.foter_logo != blank %}
+                    <div class="w-[15rem] md:w-[27.4rem] md:mt-[5rem] md:mb-[4rem] mb-[3.3rem] mt-[2rem]">
+                        {% render 'img', image: sst.foter_logo, max_width: 300, class: 'w-full h-full object-contain' %}
+                    </div>
+                {% endif %}
+
+                <div class="grid grid-cols-2 gap-8 text-[.8rem] text-white leading-[1]">
+                    <div class="border border-white p-4">
+                        {{ sst.text_1 }}
+                    </div>
+                    <div class="border border-white p-4">
+                        {{ sst.text_2 }}
+                    </div>
+                </div>
+
             </div>
+
+            <aside class="footer__aside  max-md:hidden">
+                <div class="grid grid-cols-2 gap-8">
+                
+                    <div>
+                        {% if sst.footer_menu_1 != blank %}
+                            <h3 class="md:text-[1.8rem] font-bold mb-4 text-[#469AFF]">
+                                Shop
+                            </h3>
+                            <ul class="footer__menu text-[1.4rem] font-bold flex flex-col gap-y-[1rem] md:gap-y-[0.8rem]">
+                                {% for link in sst.footer_menu_1.links %}
+                                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </div>
+
+                    <div>
+                        <h3 class="md:text-[1.8rem] font-bold mb-4 text-[#469AFF]">
+                            Help
+                        </h3>
+                        {% if sst.footer_menu_2 != blank %}
+                            <ul class="footer__menu text-[1.4rem] font-bold flex flex-col gap-y-[1rem] gap-y-[0.8rem]">
+                                {% for link in sst.footer_menu_2.links %}
+                                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </div>
+                </div>
+            </aside>
         </div>
 
-        <div class="footer__content flex flex-col gap-y-5 md:gap-y-7">
-            <div class="footer__content-item p-4 text-sm" style="border-radius: 1.2rem; border: 1px solid #FFFFFF;">
-                {{ sst.text_1 }}
-            </div>
-            <div class="footer__content-item text-sm">
-                {{ sst.text_2 }}
-            </div>
+        <div class="grid md:grid-cols-[69rem_1fr] gap-8 text-[1rem] font-bold max-md:flex max-md:flex-col-reverse max-md:items-center max-md:justify-between max-md:gap-6 max-md:leading-[1.4]">
 
-            <div class="footer__content-item text-center pt-2 md:pt-4">
+            <div class="footer__content-item">
                 {{ sst.copyright }}
             </div>
 
-            <ul class="footer__policies flex justify-center gap-x-4 text-sm md:text-base">
+            <ul class="footer__policies flex items-center gap-4">
                 {%- for policy in shop.policies -%}
                     {%- if policy != blank -%}
                       <li>

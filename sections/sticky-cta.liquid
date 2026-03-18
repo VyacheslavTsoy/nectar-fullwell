@@ -3,7 +3,7 @@
 {% assign buttons = section.blocks | where: 'type', 'button' %}
 {% assign sectionId = section.id | handleize %}
 
-<div class="sticky-cta pt-3 pb-5 px-8 bg-[#F5FFF6] border-t-2 border-[#0D3063] fixed bottom-0 z-[80] w-full" id="{{ sectionId }}">
+<div class="sticky-cta pt-3 pb-5 px-8 bg-[#F5FFF6] border-t-2 border-[#0D3063] w-full" id="{{ sectionId }}">
     <div class="sticky-cta__inner w-full max-w-[61.2rem] mx-auto">
         {% if labels.size > 0 %}
             <div class="sticky-cta__labels flex items-center gap-2 justify-between mb-1 font-bold text-xs md:text-sm flex">
@@ -44,6 +44,12 @@
 </div>
 
 {% style %}
+    #shopify-section-{{ section.id }} {
+        position: sticky;
+        bottom: 0;
+        z-index: 80;
+    }
+
     .sticky-cta {
         opacity: 0;
         visibility: hidden;
@@ -59,13 +65,17 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const stickyCta = document.getElementById('{{ sectionId }}');
-    if (!stickyCta) return;
+    const stickyCtaSection = document.getElementById('shopify-section-{{ section.id }}');
+
+    if (!stickyCta || !stickyCtaSection) return;
 
     function checkScroll() {
         if (window.scrollY > (window.innerHeight / 2)) {
             stickyCta.classList.add('sticky-cta--visible');
+            stickyCtaSection.classList.add('sticky-cta--visible');
         } else {
             stickyCta.classList.remove('sticky-cta--visible');
+            stickyCtaSection.classList.remove('sticky-cta--visible');
         }
     }
     

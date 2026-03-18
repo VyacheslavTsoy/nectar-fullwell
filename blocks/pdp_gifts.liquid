@@ -7,8 +7,12 @@
 <style>
     #announcement-bar,
     .shopify-section-group-header-group,
-    .shopify-section-group-footer-group {
+    #footer {
         display: none !important;
+    }
+
+    #footer-gifts {
+        display: block !important;
     }
 
     .ingredients__modal-cta {
@@ -519,25 +523,27 @@
                 handle: '{{ product.handle }}',
                 variants: [
                     {%- for variant in product.variants -%}
-                        {
-                            id: {{ variant.id }},
-                            title: '{{ variant.title }}',
-                            description: '{{ variant.metafields.custom.variant_description }}',
-                            image: '{{ variant.metafields.custom.variant_image | image_url: width: 120 | default: variant.image | image_url: width: 120 }}',
-                            price: {{ variant.price }},
-                            selling_plans: [
-                                {%- if variant.selling_plan_allocations and variant.selling_plan_allocations.size > 0 -%}
-                                  {%- for allocation in variant.selling_plan_allocations -%}
-                                    {
-                                      id: {{ allocation.selling_plan.id }},
-                                      name: {{ allocation.selling_plan.name | json }},
-                                      options: {{ allocation.selling_plan.options | json }}
-                                    }{%- unless forloop.last -%},{%- endunless -%}
-                                  {%- endfor -%}
-                                {%- endif -%}
-                            ],
-                            quantity: 0,
-                        }{%- unless forloop.last -%},{%- endunless -%}
+                        {% unless variant.metafields.custom.hide_variant %}
+                            {
+                                id: {{ variant.id }},
+                                title: '{{ variant.title }}',
+                                description: '{{ variant.metafields.custom.variant_description }}',
+                                image: '{{ variant.metafields.custom.variant_image | image_url: width: 120 | default: variant.image | image_url: width: 120 }}',
+                                price: {{ variant.price }},
+                                selling_plans: [
+                                    {%- if variant.selling_plan_allocations and variant.selling_plan_allocations.size > 0 -%}
+                                    {%- for allocation in variant.selling_plan_allocations -%}
+                                        {
+                                        id: {{ allocation.selling_plan.id }},
+                                        name: {{ allocation.selling_plan.name | json }},
+                                        options: {{ allocation.selling_plan.options | json }}
+                                        }{%- unless forloop.last -%},{%- endunless -%}
+                                    {%- endfor -%}
+                                    {%- endif -%}
+                                ],
+                                quantity: 0,
+                            }{%- unless forloop.last -%},{%- endunless -%}
+                        {%- endunless -%}
                     {%- endfor -%}
                 ],
                 price: {{ product.price }},
@@ -876,4 +882,3 @@
   ]
 }
 {% endschema %}
-
