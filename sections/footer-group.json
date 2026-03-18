@@ -13,6 +13,9 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "custom_css": [
+        ".footer__menu a {line-height: 1.2; display: inline-block;}"
+      ],
       "settings": {
         "footer_menu_1": "footer-shop",
         "footer_menu_2": "footer-about",
