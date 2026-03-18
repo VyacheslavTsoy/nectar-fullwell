@@ -11,10 +11,72 @@
   "sections": {
     "main": {
       "type": "main-404",
-      "settings": {}
+      "disabled": true,
+      "settings": {
+        "desktop_padding_top": 40,
+        "desktop_gap_between_blocks": 20,
+        "bg_color": "#ffffff",
+        "desktop_max_width": 1140,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 30,
+        "mobile_gap_between_blocks": 10
+      }
+    },
+    "blank_section_AQrRXd": {
+      "type": "blank-section",
+      "blocks": {
+        "heading_gtFHry": {
+          "type": "heading",
+          "name": "Heading",
+          "settings": {
+            "title": "<h2>{{ closest.page.title }}</h2>",
+            "text_color": "#123456",
+            "text_alignment": "left",
+            "heading_size": "xl",
+            "font_weight": "normal",
+            "font_family": "poppins",
+            "use_mobile_settings": false,
+            "text_alignment_mobile": "left",
+            "heading_size_mobile": "xl",
+            "font_weight_mobile": "normal"
+          },
+          "blocks": {}
+        },
+        "text_HnFGxt": {
+          "type": "text",
+          "name": "Text",
+          "settings": {
+            "title": "{{ closest.page.content }}",
+            "text_alignment": "left",
+            "font_family": "values-sans",
+            "font_weight": "normal",
+            "text_color": "#0d3063",
+            "font_size": 16,
+            "font_size_mobile": 16,
+            "text_alignment_mobile": "left",
+            "hide_on_mobile": false
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_gtFHry",
+        "text_HnFGxt"
+      ],
+      "name": "Default Section",
+      "settings": {
+        "desktop_padding_top": 40,
+        "desktop_gap_between_blocks": 20,
+        "bg_color": "#ffffff",
+        "desktop_max_width": 1140,
+        "hide_on_mobile": false,
+        "mobile_padding_top": 30,
+        "mobile_gap_between_blocks": 10
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "blank_section_AQrRXd"
   ]
 }
