@@ -33,7 +33,7 @@
             "text_color": "#123456",
             "text_alignment": "left",
             "heading_size": "xl",
-            "font_weight": "normal",
+            "font_weight": "bold",
             "font_family": "poppins",
             "use_mobile_settings": false,
             "text_alignment_mobile": "left",
