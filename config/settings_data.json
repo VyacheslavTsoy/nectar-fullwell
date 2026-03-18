@@ -216,6 +216,16 @@
         "type": "shopify://apps/alia/blocks/customer-app-frame/51f1d398-3e41-44da-b81e-defd5804b292",
         "disabled": false,
         "settings": {}
+      },
+      "15048993943116965467": {
+        "type": "shopify://apps/consentmo-gdpr/blocks/ada_compliance/4fbe573f-a377-4fea-9801-3ee0858cae41",
+        "disabled": false,
+        "settings": {}
+      },
+      "2153490007123654574": {
+        "type": "shopify://apps/consentmo-gdpr/blocks/gdpr_cookie_consent/4fbe573f-a377-4fea-9801-3ee0858cae41",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
@@ -239,7 +249,7 @@
   "platform_customizations": {
     "custom_css": [
       "#skio-root [data-skio-name=\"product-image-gallery-fullscreen-container\"] {z-index: 99 !important;}",
-      ".junip-review-vote-container {display: none}"
+      ".junip-review-vote-container {display: none;}"
     ]
   }
 }
