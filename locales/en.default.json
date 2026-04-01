@@ -586,6 +586,9 @@
             "other": " "
           }
         }
+      },
+      "payment": {
+        "purchase_options_agreement_label": "By clicking \"Pay Now\" or \"Place Order\" you agree to Nectar's Terms of Service and Privacy Policy. You also agree that you will be enrolled in replenishment. You will be billed on a recurring basis at the price and frequency specified in the order summary excluding the first month's discount. Change, cancel or update any time by logging into your portal or by emailing <a href=\"mailto:hi@drinknectar.co\">hi@drinknectar.co</a>"
       }
     }
   }
