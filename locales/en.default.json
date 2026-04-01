@@ -586,6 +586,9 @@
             "other": " "
           }
         }
+      },
+      "payment": {
+        "purchase_options_agreement_label": "1"
       }
     }
   }
