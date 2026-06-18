@@ -33,10 +33,37 @@
                 "font_weight_mobile": "normal"
               },
               "blocks": {}
+            },
+            "text_y8nHLx": {
+              "type": "text",
+              "name": "Text",
+              "settings": {
+                "title": "{{ closest.product.description }}",
+                "text_alignment": "left",
+                "font_family": "values-sans",
+                "font_weight": "normal",
+                "text_color": "transparent",
+                "font_size": 16,
+                "font_size_mobile": 16,
+                "text_alignment_mobile": "left",
+                "hide_on_mobile": false
+              },
+              "blocks": {}
+            },
+            "pdp_cta_LEwUKt": {
+              "type": "_pdp-cta",
+              "name": "CTA",
+              "settings": {
+                "cta_button_text": "Buy Now",
+                "select_flavors_flow": false
+              },
+              "blocks": {}
             }
           },
           "block_order": [
-            "heading_nwfg8m"
+            "heading_nwfg8m",
+            "text_y8nHLx",
+            "pdp_cta_LEwUKt"
           ]
         },
         "pdp_2_dHU6fK": {
