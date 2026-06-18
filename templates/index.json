@@ -61,7 +61,8 @@
                 "text_color": "rgba(0,0,0,0)",
                 "font_size": 22,
                 "font_size_mobile": 16,
-                "text_alignment_mobile": "left"
+                "text_alignment_mobile": "left",
+                "hide_on_mobile": false
               },
               "blocks": {}
             },
@@ -455,7 +456,7 @@
           "type": "heading",
           "name": "Heading",
           "settings": {
-            "title": "<h3>Clean Ingredients. Half The <br/>Price. Better Results.</h3>",
+            "title": "<h3>Clean Ingredients. Half The <br/>Price. Great Results.</h3>",
             "text_color": "rgba(0,0,0,0)",
             "text_alignment": "center",
             "heading_size": "4xl",
@@ -1075,7 +1076,8 @@
             "text_color": "#222222",
             "font_size": 18,
             "font_size_mobile": 16,
-            "text_alignment_mobile": "center"
+            "text_alignment_mobile": "center",
+            "hide_on_mobile": false
           },
           "blocks": {}
         },
@@ -1128,7 +1130,9 @@
                             "image_url": "https://drinknectar.co/products/essential-daily-calm",
                             "border_radius": 0,
                             "image_ratio": "1/1",
-                            "image_width": 100
+                            "image_width": 100,
+                            "hidden_on_mobile": false,
+                            "hidden_on_desktop": false
                           },
                           "blocks": {}
                         }
@@ -1153,7 +1157,9 @@
                             "image_url": "https://drinknectar.co/products/essential-daily-calm",
                             "border_radius": 0,
                             "image_ratio": "1/1",
-                            "image_width": 100
+                            "image_width": 100,
+                            "hidden_on_mobile": false,
+                            "hidden_on_desktop": false
                           },
                           "blocks": {}
                         }
@@ -1178,7 +1184,9 @@
                             "image_url": "https://drinknectar.co/products/essential-daily-calm",
                             "border_radius": 0,
                             "image_ratio": "1/1",
-                            "image_width": 100
+                            "image_width": 100,
+                            "hidden_on_mobile": false,
+                            "hidden_on_desktop": false
                           },
                           "blocks": {}
                         }
@@ -1203,7 +1211,9 @@
                             "image_url": "https://drinknectar.co/products/essential-daily-calm",
                             "border_radius": 0,
                             "image_ratio": "1/1",
-                            "image_width": 100
+                            "image_width": 100,
+                            "hidden_on_mobile": false,
+                            "hidden_on_desktop": false
                           },
                           "blocks": {}
                         }
@@ -1228,7 +1238,9 @@
                             "image_url": "https://drinknectar.co/products/essential-daily-calm",
                             "border_radius": 0,
                             "image_ratio": "1/1",
-                            "image_width": 100
+                            "image_width": 100,
+                            "hidden_on_mobile": false,
+                            "hidden_on_desktop": false
                           },
                           "blocks": {}
                         }
@@ -1253,7 +1265,9 @@
                             "image_url": "https://drinknectar.co/products/essential-daily-calm",
                             "border_radius": 0,
                             "image_ratio": "1/1",
-                            "image_width": 100
+                            "image_width": 100,
+                            "hidden_on_mobile": false,
+                            "hidden_on_desktop": false
                           },
                           "blocks": {}
                         }
@@ -1319,7 +1333,9 @@
                             "image_url": "https://drinknectar.co/products/essential-daily-hydration-1",
                             "border_radius": 0,
                             "image_ratio": "1/1",
-                            "image_width": 100
+                            "image_width": 100,
+                            "hidden_on_mobile": false,
+                            "hidden_on_desktop": false
                           },
                           "blocks": {}
                         }
@@ -1344,7 +1360,9 @@
                             "image_url": "https://drinknectar.co/products/essential-daily-hydration-1",
                             "border_radius": 0,
                             "image_ratio": "1/1",
-                            "image_width": 100
+                            "image_width": 100,
+                            "hidden_on_mobile": false,
+                            "hidden_on_desktop": false
                           },
                           "blocks": {}
                         }
@@ -1369,7 +1387,9 @@
                             "image_url": "https://drinknectar.co/products/essential-daily-hydration-1",
                             "border_radius": 0,
                             "image_ratio": "1/1",
-                            "image_width": 100
+                            "image_width": 100,
+                            "hidden_on_mobile": false,
+                            "hidden_on_desktop": false
                           },
                           "blocks": {}
                         }
@@ -1394,7 +1414,9 @@
                             "image_url": "https://drinknectar.co/products/essential-daily-hydration-1",
                             "border_radius": 0,
                             "image_ratio": "1/1",
-                            "image_width": 100
+                            "image_width": 100,
+                            "hidden_on_mobile": false,
+                            "hidden_on_desktop": false
                           },
                           "blocks": {}
                         }
@@ -1419,7 +1441,9 @@
                             "image_url": "https://drinknectar.co/products/essential-daily-hydration-1",
                             "border_radius": 0,
                             "image_ratio": "1/1",
-                            "image_width": 100
+                            "image_width": 100,
+                            "hidden_on_mobile": false,
+                            "hidden_on_desktop": false
                           },
                           "blocks": {}
                         }
@@ -1444,7 +1468,9 @@
                             "image_url": "https://drinknectar.co/products/essential-daily-hydration-1",
                             "border_radius": 0,
                             "image_ratio": "1/1",
-                            "image_width": 100
+                            "image_width": 100,
+                            "hidden_on_mobile": false,
+                            "hidden_on_desktop": false
                           },
                           "blocks": {}
                         }
@@ -1510,7 +1536,9 @@
                             "image_url": "https://drinknectar.co/products/essential-daily-energy",
                             "border_radius": 0,
                             "image_ratio": "1/1",
-                            "image_width": 100
+                            "image_width": 100,
+                            "hidden_on_mobile": false,
+                            "hidden_on_desktop": false
                           },
                           "blocks": {}
                         }
@@ -1535,7 +1563,9 @@
                             "image_url": "https://drinknectar.co/products/essential-daily-energy",
                             "border_radius": 0,
                             "image_ratio": "1/1",
-                            "image_width": 100
+                            "image_width": 100,
+                            "hidden_on_mobile": false,
+                            "hidden_on_desktop": false
                           },
                           "blocks": {}
                         }
@@ -1560,7 +1590,9 @@
                             "image_url": "https://drinknectar.co/products/essential-daily-energy",
                             "border_radius": 0,
                             "image_ratio": "1/1",
-                            "image_width": 100
+                            "image_width": 100,
+                            "hidden_on_mobile": false,
+                            "hidden_on_desktop": false
                           },
                           "blocks": {}
                         }
@@ -1585,7 +1617,9 @@
                             "image_url": "https://drinknectar.co/products/essential-daily-energy",
                             "border_radius": 0,
                             "image_ratio": "1/1",
-                            "image_width": 100
+                            "image_width": 100,
+                            "hidden_on_mobile": false,
+                            "hidden_on_desktop": false
                           },
                           "blocks": {}
                         }
@@ -1610,7 +1644,9 @@
                             "image_url": "https://drinknectar.co/products/essential-daily-energy",
                             "border_radius": 0,
                             "image_ratio": "1/1",
-                            "image_width": 100
+                            "image_width": 100,
+                            "hidden_on_mobile": false,
+                            "hidden_on_desktop": false
                           },
                           "blocks": {}
                         }
@@ -1635,7 +1671,9 @@
                             "image_url": "https://drinknectar.co/products/essential-daily-energy",
                             "border_radius": 0,
                             "image_ratio": "1/1",
-                            "image_width": 100
+                            "image_width": 100,
+                            "hidden_on_mobile": false,
+                            "hidden_on_desktop": false
                           },
                           "blocks": {}
                         }
@@ -1871,7 +1909,8 @@
             "text_color": "#0d3063",
             "font_size": 14,
             "font_size_mobile": 12,
-            "text_alignment_mobile": "center"
+            "text_alignment_mobile": "center",
+            "hide_on_mobile": false
           },
           "blocks": {}
         },

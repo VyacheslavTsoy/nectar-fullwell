@@ -33,7 +33,7 @@
             "settings": {
               "font_size": 14,
               "icon": "",
-              "title": "<p>🎁  <strong>Spring Sale</strong></p>"
+              "title": "<p>🎁  <strong>Summer Sale</strong></p>"
             }
           },
           "badge_hnKpYh": {
@@ -224,6 +224,11 @@
       },
       "2153490007123654574": {
         "type": "shopify://apps/consentmo-gdpr/blocks/gdpr_cookie_consent/4fbe573f-a377-4fea-9801-3ee0858cae41",
+        "disabled": false,
+        "settings": {}
+      },
+      "2786716548061469553": {
+        "type": "shopify://apps/axon/blocks/app-embed/baa0f014-62ea-462f-a8aa-a94befb1cbad",
         "disabled": false,
         "settings": {}
       }

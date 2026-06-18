@@ -1,0 +1,92 @@
+{% assign featuredReviews = product.metafields.custom.featured_reviews.value %}
+
+<div class="product">
+    <div class="flex gap-4 md:gap-[3rem] flex-col md:flex-row">
+        <div class="product__gallery flex-shrink-0 md:w-[50%] lg:w-[54rem]">
+            {% render 'product-gallery' %}
+
+            <div class="buttons-group hidden md:flex flex-col md:flex-row justify-center items-center mt-8">
+    
+                <button class="btn btn--aqua" x-data @click="Alpine.store('ingredients').openModal = !Alpine.store('ingredients').openModal">
+                    See Ingredients &amp; Nutrition Facts
+                </button>
+            </div>
+        </div>
+        <div class="product__info md:w-[50%]">
+            {% content_for 'blocks' %}
+
+            <div class="buttons-group flex flex-col md:hidden md:flex-row justify-center items-center mt-8">
+    
+                <button class="btn btn--aqua" x-data @click="Alpine.store('ingredients').openModal = !Alpine.store('ingredients').openModal">
+                    See Ingredients &amp; Nutrition Facts
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% stylesheet %}
+    .product .swiper-pagination  {
+        padding-top: 1.6rem !important;
+    }
+
+    .product__feature-review-image img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .product__cta-button .btn   {
+        font-size: 2rem;
+    }
+
+    @media (min-width: 768px) {
+        .product__cta-button .btn {
+            font-size: 2.6rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .product__info h1 {
+            font-size: 7.4vw;
+        }
+
+        .product .inline-review svg{
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+    }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Product Simple",
+  "blocks": [
+    {
+        "type": "heading",
+    },
+    {
+        "type": "inline-review",
+    },
+    {
+        "type": "text",
+    },
+    {
+        "type": "features-list",
+    },
+    {
+        "type": "_pdp-cta",
+    },
+    {
+        "type": "_pdp-faq",
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Simple"
+    }
+  ]
+}
+{% endschema %}

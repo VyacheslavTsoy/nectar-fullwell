@@ -322,6 +322,7 @@
                 handle: '{{ product.handle }}',
                 variants: [
                     {%- for variant in product.variants -%}
+                        {%- unless variant.metafields.custom.hide_variant -%}
                         {
                             id: {{ variant.id }},
                             title: '{{ variant.title }}',
@@ -341,6 +342,7 @@
                             ],
                             quantity: 0,
                         }{%- unless forloop.last -%},{%- endunless -%}
+                        {%- endunless -%}
                     {%- endfor -%}
                 ],
                 price: {{ product.price }},
