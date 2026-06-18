@@ -12,9 +12,37 @@
     "blank_section_rNAFgq": {
       "type": "blank-section",
       "blocks": {
+        "pdp_simple_iz37XE": {
+          "type": "pdp-simple",
+          "name": "Product Simple",
+          "settings": {},
+          "blocks": {
+            "heading_nwfg8m": {
+              "type": "heading",
+              "name": "Heading",
+              "settings": {
+                "title": "<p>{{ closest.product.title }}</p>",
+                "text_color": "#123456",
+                "text_alignment": "left",
+                "heading_size": "xl",
+                "font_weight": "medium",
+                "font_family": "values-sans",
+                "use_mobile_settings": false,
+                "text_alignment_mobile": "left",
+                "heading_size_mobile": "xl",
+                "font_weight_mobile": "normal"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_nwfg8m"
+          ]
+        },
         "pdp_2_dHU6fK": {
           "type": "pdp-2",
           "name": "Product 2",
+          "disabled": true,
           "settings": {
             "related_doctor_review": "{{ closest.product.metafields.custom.related_doctor_review.value }}"
           },
@@ -108,6 +136,7 @@
         }
       },
       "block_order": [
+        "pdp_simple_iz37XE",
         "pdp_2_dHU6fK"
       ],
       "name": "Product Section",
@@ -317,6 +346,7 @@
       "block_order": [
         "layout_N4pqKn"
       ],
+      "disabled": true,
       "name": "Benefits",
       "settings": {
         "desktop_padding_top": 25,
@@ -381,6 +411,7 @@
         "text_6gXUtB",
         "ingredients_mfWAjV"
       ],
+      "disabled": true,
       "custom_css": [
         ".ingredients__modal-cta {display: none;}"
       ],
@@ -487,6 +518,7 @@
       "block_order": [
         "layout_WzXJWh"
       ],
+      "disabled": true,
       "custom_css": [
         "@media (min-width: 768px) {.table-block td:first-child {width: 13rem; min-width: 13rem; }}"
       ],
