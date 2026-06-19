@@ -671,6 +671,7 @@
         "reviews_BNGXFX",
         "carousel_WdwEig"
       ],
+      "disabled": true,
       "name": "Testimonials",
       "settings": {
         "desktop_padding_top": 40,
@@ -1206,6 +1207,7 @@
       "block_order": [
         "layout_a89W7E"
       ],
+      "disabled": true,
       "name": "FAQ",
       "settings": {
         "desktop_padding_top": 50,
@@ -1311,6 +1313,7 @@
       "block_order": [
         "junip_junip_reviews_aNkBnH"
       ],
+      "disabled": true,
       "settings": {}
     },
     "blank_section_G9Cdxg": {
