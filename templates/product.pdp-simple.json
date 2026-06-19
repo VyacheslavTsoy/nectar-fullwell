@@ -167,7 +167,8 @@
         "pdp_2_dHU6fK"
       ],
       "custom_css": [
-        ".product > .flex {align-items: center}"
+        ".product > .flex {align-items: center;}",
+        ".product__info {display: flex; flex-direction: column; gap: 1.6rem;}"
       ],
       "name": "Product Section",
       "settings": {
