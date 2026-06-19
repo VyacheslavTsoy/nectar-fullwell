@@ -42,7 +42,7 @@
                 "text_alignment": "left",
                 "font_family": "values-sans",
                 "font_weight": "normal",
-                "text_color": "transparent",
+                "text_color": "#123456",
                 "font_size": 16,
                 "font_size_mobile": 16,
                 "text_alignment_mobile": "left",
