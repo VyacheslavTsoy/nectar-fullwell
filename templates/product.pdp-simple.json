@@ -175,7 +175,7 @@
       "settings": {
         "desktop_padding_top": 50,
         "desktop_gap_between_blocks": 20,
-        "bg_color": "#ffffff",
+        "bg_color": "#F4F9FF",
         "desktop_max_width": 1140,
         "hide_on_mobile": false,
         "mobile_padding_top": 0,
