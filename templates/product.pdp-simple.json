@@ -166,6 +166,9 @@
         "pdp_simple_iz37XE",
         "pdp_2_dHU6fK"
       ],
+      "custom_css": [
+        ".product > .flex {align-items: center}"
+      ],
       "name": "Product Section",
       "settings": {
         "desktop_padding_top": 50,
