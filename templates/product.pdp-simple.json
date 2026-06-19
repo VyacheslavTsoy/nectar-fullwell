@@ -912,6 +912,7 @@
         "text_pdjG6E",
         "layout_Gh6Myh"
       ],
+      "disabled": true,
       "name": "Flavors",
       "settings": {
         "desktop_padding_top": 40,
