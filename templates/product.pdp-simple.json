@@ -170,7 +170,7 @@
         ".product > .flex {align-items: center;}",
         ".product__info {display: flex; flex-direction: column; gap: 1.6rem;}",
         ".product__gallery .buttons-group {display: none;}",
-        "@media screen and (max-width: 768px) {.main-gallery {max-width: 100vw; } .thumbnail-gallery {display: none; }}"
+        "@media screen and (max-width: 768px) {.main-gallery {max-width: 100vw; } .thumbnail-gallery, .buttons-group{display: none; }}"
       ],
       "name": "Product Section",
       "settings": {
