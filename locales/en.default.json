@@ -589,7 +589,7 @@
       },
       "payment": {
         "purchase_options_agreement_label": " ",
-        "purchase_options_subscription_agreement_label": "     "
+        "purchase_options_subscription_agreement_label": "--------------------------"
       }
     }
   }
